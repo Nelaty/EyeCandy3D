@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{1f08cd1f-f70b-44ae-88dd-235767fbb173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{b615108e-d164-483a-a660-cb171ef56a11}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="include\EC3D\Core\ResourceRegistry.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\EC3D\Common\Common.h" />
+    <ClInclude Include="include\EC3D\Common\Config.h" />
+    <ClInclude Include="include\EC3D\Core\Shader\Shader.h" />
+    <ClInclude Include="include\EC3D\Core\Shader\ShaderManager.h" />
+    <ClInclude Include="include\EC3D\Core\Camera.h" />
+    <ClInclude Include="include\EC3D\Core\CameraController.h" />
+    <ClInclude Include="include\EC3D\Core\CubeMesh.h" />
+    <ClInclude Include="include\EC3D\Core\Drawable.h" />
+    <ClInclude Include="include\EC3D\Core\FontCharacter.h" />
+    <ClInclude Include="include\EC3D\Core\FontTextureAtlas.h" />
+    <ClInclude Include="include\EC3D\Core\Freetype.h" />
+    <ClInclude Include="include\EC3D\Core\Geometry.h" />
+    <ClInclude Include="include\EC3D\Core\GeometryRoot.h" />
+    <ClInclude Include="include\EC3D\Core\InputEvent.h" />
+    <ClInclude Include="include\EC3D\Core\InputObservable.h" />
+    <ClInclude Include="include\EC3D\Core\Material.h" />
+    <ClInclude Include="include\EC3D\Core\Node.h" />
+    <ClInclude Include="include\EC3D\Core\RectangleMesh.h" />
+    <ClInclude Include="include\EC3D\Core\Scene.h" />
+    <ClInclude Include="include\EC3D\Core\SceneController.h" />
+    <ClInclude Include="include\EC3D\Core\SceneRenderer.h" />
+    <ClInclude Include="include\EC3D\Core\SceneSystem.h" />
+    <ClInclude Include="include\EC3D\Core\Texture.h" />
+    <ClInclude Include="include\EC3D\Core\Vertex.h" />
+    <ClInclude Include="include\EC3D\Core\Window.h" />
+    <ClInclude Include="include\EC3D\GUI\Bounds2D.h" />
+    <ClInclude Include="include\EC3D\GUI\Button.h" />
+    <ClInclude Include="include\EC3D\GUI\Checkbox.h" />
+    <ClInclude Include="include\EC3D\GUI\GUI.h" />
+    <ClInclude Include="include\EC3D\GUI\GUIController.h" />
+    <ClInclude Include="include\EC3D\GUI\GUIFwd.h" />
+    <ClInclude Include="include\EC3D\GUI\GUIRenderer.h" />
+    <ClInclude Include="include\EC3D\GUI\GUIRoot.h" />
+    <ClInclude Include="include\EC3D\GUI\GUISystem.h" />
+    <ClInclude Include="include\EC3D\GUI\HorizontalList.h" />
+    <ClInclude Include="include\EC3D\GUI\RadioButton.h" />
+    <ClInclude Include="include\EC3D\GUI\Screen.h" />
+    <ClInclude Include="include\EC3D\GUI\Slot.h" />
+    <ClInclude Include="include\EC3D\GUI\SlotPair.h" />
+    <ClInclude Include="include\EC3D\GUI\Text.h" />
+    <ClInclude Include="include\EC3D\GUI\TextField.h" />
+    <ClInclude Include="include\EC3D\GUI\Theme.h" />
+    <ClInclude Include="include\EC3D\GUI\VerticalList.h" />
+    <ClInclude Include="include\EC3D\GUI\Widget.h" />
+    <ClInclude Include="include\EC3D\GUI\Window.h" />
+    <ClInclude Include="include\EC3D\Utilities\FileLogger.h" />
+    <ClInclude Include="include\EC3D\Utilities\Profiler.h" />
+    <ClInclude Include="include\EC3D\Utilities\Timer.h" />
+    <ClInclude Include="include\EC3D\Utilities\UtilitiesFile.h" />
+    <ClInclude Include="include\EC3D\Utilities\UtilitiesMath.h" />
+    <ClInclude Include="include\EC3D\Core\SphereMesh.h" />
+    <ClInclude Include="include\EC3D\Core\InputListener.h" />
+    <ClInclude Include="include\EC3D\Core\Frame.h" />
+    <ClInclude Include="include\EC3D\Core\Viewport.h" />
+    <ClInclude Include="include\EC3D\Core\Renderer.h" />
+    <ClInclude Include="include\EC3D\Core\ResourceRegistry.h" />
+    <ClInclude Include="include\EC3D\Core\ResourceType.h" />
+    <ClInclude Include="include\EC3D\Core\CameraType.h" />
+    <ClInclude Include="include\EC3D\Core\Transform3D.h" />
+    <ClInclude Include="include\EC3D\GUI\GUIModel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Core\Shader\Shader.cpp" />
+    <ClCompile Include="src\Core\Shader\ShaderManager.cpp" />
+    <ClCompile Include="src\Core\Camera.cpp" />
+    <ClCompile Include="src\Core\CameraController.cpp" />
+    <ClCompile Include="src\Core\CubeMesh.cpp" />
+    <ClCompile Include="src\Core\Drawable.cpp" />
+    <ClCompile Include="src\Core\FontTextureAtlas.cpp" />
+    <ClCompile Include="src\Core\Freetype.cpp" />
+    <ClCompile Include="src\Core\Geometry.cpp" />
+    <ClCompile Include="src\Core\InputEvent.cpp" />
+    <ClCompile Include="src\Core\InputObservable.cpp" />
+    <ClCompile Include="src\Core\Material.cpp" />
+    <ClCompile Include="src\Core\Node.cpp" />
+    <ClCompile Include="src\Core\RectangleMesh.cpp" />
+    <ClCompile Include="src\Core\Scene.cpp" />
+    <ClCompile Include="src\Core\SceneController.cpp" />
+    <ClCompile Include="src\Core\SceneRenderer.cpp" />
+    <ClCompile Include="src\Core\SceneSystem.cpp" />
+    <ClCompile Include="src\Core\Texture.cpp" />
+    <ClCompile Include="src\Core\Window.cpp" />
+    <ClCompile Include="src\GUI\Bounds2D.cpp" />
+    <ClCompile Include="src\GUI\Button.cpp" />
+    <ClCompile Include="src\GUI\Checkbox.cpp" />
+    <ClCompile Include="src\GUI\GUI.cpp" />
+    <ClCompile Include="src\GUI\GUIController.cpp" />
+    <ClCompile Include="src\GUI\GUIRenderer.cpp" />
+    <ClCompile Include="src\GUI\GUISystem.cpp" />
+    <ClCompile Include="src\GUI\HorizontalList.cpp" />
+    <ClCompile Include="src\GUI\RadioButton.cpp" />
+    <ClCompile Include="src\GUI\Screen.cpp" />
+    <ClCompile Include="src\GUI\Text.cpp" />
+    <ClCompile Include="src\GUI\TextField.cpp" />
+    <ClCompile Include="src\GUI\Theme.cpp" />
+    <ClCompile Include="src\GUI\VerticalList.cpp" />
+    <ClCompile Include="src\GUI\Widget.cpp" />
+    <ClCompile Include="src\GUI\Window.cpp" />
+    <ClCompile Include="src\Utilities\FileLogger.cpp" />
+    <ClCompile Include="src\Utilities\Profiler.cpp" />
+    <ClCompile Include="src\Utilities\Timer.cpp" />
+    <ClCompile Include="src\Utilities\UtilitiesFile.cpp" />
+    <ClCompile Include="src\Core\SphereMesh.cpp" />
+    <ClCompile Include="src\Core\InputListener.cpp" />
+    <ClCompile Include="src\Core\Frame.cpp" />
+    <ClCompile Include="src\Core\Viewport.cpp" />
+    <ClCompile Include="src\Core\Renderer.cpp" />
+    <ClCompile Include="src\Core\Transform3D.cpp" />
+    <ClCompile Include="src\GUI\GUIModel.cpp" />
+  </ItemGroup>
+</Project>

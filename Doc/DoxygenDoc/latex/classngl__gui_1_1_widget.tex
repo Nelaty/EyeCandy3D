@@ -1,0 +1,560 @@
+\hypertarget{classngl__gui_1_1_widget}{}\section{ngl\+\_\+gui\+:\+:Widget Class Reference}
+\label{classngl__gui_1_1_widget}\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+
+
+{\ttfamily \#include $<$Widget.\+h$>$}
+
+
+
+Inheritance diagram for ngl\+\_\+gui\+:\+:Widget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classngl__gui_1_1_widget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ngl\+\_\+gui\+:\+:Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classngl__gui_1_1_widget__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl__gui_1_1_widget_a6c94eedacd5b5be0fd989d31f07e75fe}{Widget}} (\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$parent)
+\item 
+virtual \mbox{\hyperlink{classngl__gui_1_1_widget_a014c3b016418bd51cd5770ae0e52ae39}{$\sim$\+Widget}} ()
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_ac62483b01680572a40125f9208a86392}{Render}} (\mbox{\hyperlink{classngl__gui_1_1_g_u_i_renderer}{G\+U\+I\+Renderer}} \&renderer, \mbox{\hyperlink{classngl__gui_1_1_g_u_i_rendering_context}{G\+U\+I\+Rendering\+Context}} \&context)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_a9c58db403326c6317b61bc2f32262a3c}{Set\+Drawable}} (\mbox{\hyperlink{classec_1_1_drawable}{ec\+::\+Drawable}} $\ast$drawable)
+\item 
+virtual \mbox{\hyperlink{classec_1_1_drawable}{ec\+::\+Drawable}} $\ast$ \mbox{\hyperlink{classngl__gui_1_1_widget_ad0ff31f602ec55a5f94bc37a48fe312f}{Get\+Drawable}} ()
+\item 
+virtual const \mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$ \mbox{\hyperlink{classngl__gui_1_1_widget_ae1b1c7de610600c9326a1fad87cf1250}{Get\+Parent}} () const
+\item 
+virtual \mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$ \mbox{\hyperlink{classngl__gui_1_1_widget_a2c8bf3340abae632270d071affda1bf7}{Get\+Parent}} ()
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_a3cdf55b21704618f4d6f915abdb65e8f}{Set\+Parent}} (\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$widget)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_a37128e55931fa4fe2f99556d4a45607a}{Add\+Child}} (\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$widget)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_ad41034ddf29536888ea7e1fdbc37df4e}{Remove\+Child}} (\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$widget)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_a8edf589d7a17f12398855f783b8d6c91}{Remove\+Child\+At\+Index}} (unsigned int index)
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$ $>$ \& \mbox{\hyperlink{classngl__gui_1_1_widget_a1ab5c80ee91b7d15e1c23197946abf7c}{Get\+Children}} () const
+\item 
+virtual unsigned int \mbox{\hyperlink{classngl__gui_1_1_widget_aee880f1cad57109b5c850fe5bc4980e2}{Get\+Index\+Of\+Child}} (\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$widget)
+\item 
+virtual const \mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$ \mbox{\hyperlink{classngl__gui_1_1_widget_a4b68cbec4ac4ad3437e61a02ad03aa91}{Get\+Child\+At\+Index}} (const unsigned int index) const
+\item 
+virtual \mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$ \mbox{\hyperlink{classngl__gui_1_1_widget_a3817d437db47f680f168652f2dd2815b}{Get\+Child\+At\+Index}} (const unsigned int index)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_a1de9607838c7e50775e5311be7a3809f}{Is\+Enabled}} () const
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_a68032269b8c0f1dcce8e43a6c887b104}{Enable}} (const bool enable)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_ac18d5bc5d1c266dcc7ff1daf361a59cf}{Is\+Visible}} () const
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_af5ee4fc6ee3299c552dc84bf27f436b1}{Set\+Visible}} (const bool visible)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_a4199c5d671b55c1de6bcdd4ab2772080}{Contains}} (const glm\+::ivec2 \&position) const
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_af7a939c7989342dc68adec31e55286a0}{Is\+Focused}} () const
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_a5b4d8cd7dc8a1b10264800563b56a4bb}{Set\+Focus}} (const bool focused)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_a0e06194379a4760b149d5cf2ba26b360}{Move\+Focus}} ()
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_aa3b991da4a52ef2bfd752b1b94e0594c}{Is\+Dragged}} () const
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_ada4143b1aeafac782113a27abeab1145}{Set\+Dragged}} (const bool dragged)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_acdc4ede81f89c4f5a22a6f372e6a34d7}{Set\+Position}} (const glm\+::ivec2 \&position)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_ae93bf12ee5a55bce3519ea8ac888b73c}{Set\+Position}} (const int x, const int y)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_a7b1cbd77bb35297b20048a68bd385f6f}{Set\+PositionX}} (const int x)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_a9f2d5df091e4b012ba95f296e14dc720}{Set\+PositionY}} (const int y)
+\item 
+virtual const glm\+::ivec2 \& \mbox{\hyperlink{classngl__gui_1_1_widget_ac4f06cebc7d48d43774926da1e994281}{Get\+Position}} () const
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_ac86121806bd92e3097d8f58212510bbb}{Set\+Size}} (const glm\+::ivec2 \&size)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_aaf58999336d157fc651e328d594dbe37}{Set\+Size}} (const int sx, const int sy)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_a9c49a781241d314841f455abf4c88983}{Set\+SizeX}} (const int sx)
+\item 
+virtual void \mbox{\hyperlink{classngl__gui_1_1_widget_acae81cd9e22ed62e665a48aceb3ddda1}{Set\+SizeY}} (const int sy)
+\item 
+virtual const glm\+::ivec2 \& \mbox{\hyperlink{classngl__gui_1_1_widget_acc8ec6c7cdc2ceef6f0523308131a974}{Get\+Size}} () const
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_a721b18dc7a09b0b7b4ff0c02162409b8}{On\+Mouse\+Button}} (const glm\+::ivec2 \&position, int button, int mods, bool pressed)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_ac5d4927cc0bd0300d0b2e00d9f64d176}{On\+Mouse\+Move}} (const glm\+::ivec2 \&position)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_aac19447b726ccec8ea22992b19edc676}{On\+Mouse\+Drag}} (const glm\+::ivec2 \&position, const glm\+::ivec2 \&offset, int button, int mods)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_a754155677479020794938b90229aba58}{On\+Mouse\+Scroll}} (const glm\+::ivec2 \&position, const glm\+::vec2 \&offset)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_a3ea889d10cb2e1d0241dabbefdce5dc7}{On\+Focus}} (bool focused)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_a5e2315b912f87414def29b4bdbba9205}{On\+Key}} (int key, int scancode, int mods, bool pressed)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_ab991bcac876f5652190a81beece5f0f1}{On\+Text}} (unsigned int codepoint, int mods)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_a244384eb10f734be4bbd90b440817592}{On\+Drop}} (const glm\+::ivec2 \&position, int count, const char $\ast$$\ast$paths)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_widget_ab360115cc08879ea3f9b301bdccc05ce}{On\+Resize}} (const glm\+::ivec2 \&size)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classngl__gui_1_1_widget_a89d5ed0cb6340f32524fdaca4721fb6a}{Set\+Theme}} (\mbox{\hyperlink{classngl__gui_1_1_theme}{Theme}} $\ast$theme)
+\item 
+static \mbox{\hyperlink{classngl__gui_1_1_theme}{Theme}} $\ast$ \mbox{\hyperlink{classngl__gui_1_1_widget_a4b78d39f4d5092bce3f2454ad1df3d9f}{Get\+Theme}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$ \mbox{\hyperlink{classngl__gui_1_1_widget_a09ffb9283908093bcef73ba9fc2061a4}{m\+\_\+parent}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$ $>$ \mbox{\hyperlink{classngl__gui_1_1_widget_ac841b8e18f17432767be5711e38999f0}{m\+\_\+children}}
+\item 
+\mbox{\hyperlink{classec_1_1_drawable}{ec\+::\+Drawable}} $\ast$ \mbox{\hyperlink{classngl__gui_1_1_widget_af12a3b7766959c8753dcd6c46116a81c}{m\+\_\+drawable}}
+\item 
+glm\+::ivec2 \mbox{\hyperlink{classngl__gui_1_1_widget_a70faaab294ca368962d5841de2669f1d}{m\+\_\+position}}
+\item 
+glm\+::ivec2 \mbox{\hyperlink{classngl__gui_1_1_widget_a3ccc83d7b5e7df098f85a484088fae7e}{m\+\_\+size}}
+\item 
+std\+::string \mbox{\hyperlink{classngl__gui_1_1_widget_a547515f4345391f1ae1c0fecc1354806}{m\+\_\+tooltip}}
+\item 
+bool \mbox{\hyperlink{classngl__gui_1_1_widget_a3604b9c01a61aa3fe8883ee04b848c6c}{m\+\_\+enabled}}
+\item 
+bool \mbox{\hyperlink{classngl__gui_1_1_widget_a61c829e05729c4eb38f5f1db7c59d2fa}{m\+\_\+visible}}
+\item 
+bool \mbox{\hyperlink{classngl__gui_1_1_widget_a6c71f5f5617b9974fbc4a871adb60edb}{m\+\_\+focused}}
+\item 
+bool \mbox{\hyperlink{classngl__gui_1_1_widget_ad5fbd226a8dc5df1cd38f3392950c37d}{m\+\_\+drag}}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classngl__gui_1_1_theme}{Theme}} $\ast$ \mbox{\hyperlink{classngl__gui_1_1_widget_a3def3b84db75a90cf5462c87bd687cc9}{s\+\_\+theme}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a6c94eedacd5b5be0fd989d31f07e75fe}\label{classngl__gui_1_1_widget_a6c94eedacd5b5be0fd989d31f07e75fe}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Widget@{Widget}}
+\index{Widget@{Widget}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Widget()}{Widget()}}
+{\footnotesize\ttfamily ngl\+\_\+gui\+::\+Widget\+::\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a014c3b016418bd51cd5770ae0e52ae39}\label{classngl__gui_1_1_widget_a014c3b016418bd51cd5770ae0e52ae39}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!````~Widget@{$\sim$\+Widget}}
+\index{````~Widget@{$\sim$\+Widget}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{$\sim$\+Widget()}{~Widget()}}
+{\footnotesize\ttfamily ngl\+\_\+gui\+::\+Widget\+::$\sim$\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a37128e55931fa4fe2f99556d4a45607a}\label{classngl__gui_1_1_widget_a37128e55931fa4fe2f99556d4a45607a}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Add\+Child@{Add\+Child}}
+\index{Add\+Child@{Add\+Child}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Add\+Child()}{AddChild()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_horizontal_list_a3dcb8fc4e780268899d12ecc3980bc16}{ngl\+\_\+gui\+::\+Horizontal\+List}}, and \mbox{\hyperlink{classngl__gui_1_1_vertical_list_ae8bd79a7e0e91778acb2d93085763138}{ngl\+\_\+gui\+::\+Vertical\+List}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a4199c5d671b55c1de6bcdd4ab2772080}\label{classngl__gui_1_1_widget_a4199c5d671b55c1de6bcdd4ab2772080}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Contains@{Contains}}
+\index{Contains@{Contains}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+Contains (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_ac9e4f72e9a02a0df46f279076cfcef31}{ngl\+\_\+gui\+::\+Screen}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a68032269b8c0f1dcce8e43a6c887b104}\label{classngl__gui_1_1_widget_a68032269b8c0f1dcce8e43a6c887b104}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Enable@{Enable}}
+\index{Enable@{Enable}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Enable (\begin{DoxyParamCaption}\item[{const bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a4b68cbec4ac4ad3437e61a02ad03aa91}\label{classngl__gui_1_1_widget_a4b68cbec4ac4ad3437e61a02ad03aa91}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Get\+Child\+At\+Index@{Get\+Child\+At\+Index}}
+\index{Get\+Child\+At\+Index@{Get\+Child\+At\+Index}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Get\+Child\+At\+Index()}{GetChildAtIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classngl__gui_1_1_widget}{ngl\+\_\+gui\+::\+Widget}} $\ast$ ngl\+\_\+gui\+::\+Widget\+::\+Get\+Child\+At\+Index (\begin{DoxyParamCaption}\item[{const unsigned int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a3817d437db47f680f168652f2dd2815b}\label{classngl__gui_1_1_widget_a3817d437db47f680f168652f2dd2815b}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Get\+Child\+At\+Index@{Get\+Child\+At\+Index}}
+\index{Get\+Child\+At\+Index@{Get\+Child\+At\+Index}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Get\+Child\+At\+Index()}{GetChildAtIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl__gui_1_1_widget}{ngl\+\_\+gui\+::\+Widget}} $\ast$ ngl\+\_\+gui\+::\+Widget\+::\+Get\+Child\+At\+Index (\begin{DoxyParamCaption}\item[{const unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a1ab5c80ee91b7d15e1c23197946abf7c}\label{classngl__gui_1_1_widget_a1ab5c80ee91b7d15e1c23197946abf7c}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Get\+Children@{Get\+Children}}
+\index{Get\+Children@{Get\+Children}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Get\+Children()}{GetChildren()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$ $>$ \& ngl\+\_\+gui\+::\+Widget\+::\+Get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ad0ff31f602ec55a5f94bc37a48fe312f}\label{classngl__gui_1_1_widget_ad0ff31f602ec55a5f94bc37a48fe312f}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Get\+Drawable@{Get\+Drawable}}
+\index{Get\+Drawable@{Get\+Drawable}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Get\+Drawable()}{GetDrawable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_drawable}{ec\+::\+Drawable}} $\ast$ ngl\+\_\+gui\+::\+Widget\+::\+Get\+Drawable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_aee880f1cad57109b5c850fe5bc4980e2}\label{classngl__gui_1_1_widget_aee880f1cad57109b5c850fe5bc4980e2}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Get\+Index\+Of\+Child@{Get\+Index\+Of\+Child}}
+\index{Get\+Index\+Of\+Child@{Get\+Index\+Of\+Child}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Get\+Index\+Of\+Child()}{GetIndexOfChild()}}
+{\footnotesize\ttfamily unsigned int ngl\+\_\+gui\+::\+Widget\+::\+Get\+Index\+Of\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ae1b1c7de610600c9326a1fad87cf1250}\label{classngl__gui_1_1_widget_ae1b1c7de610600c9326a1fad87cf1250}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Get\+Parent@{Get\+Parent}}
+\index{Get\+Parent@{Get\+Parent}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Get\+Parent()}{GetParent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classngl__gui_1_1_widget}{ngl\+\_\+gui\+::\+Widget}} $\ast$ ngl\+\_\+gui\+::\+Widget\+::\+Get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a2c8bf3340abae632270d071affda1bf7}\label{classngl__gui_1_1_widget_a2c8bf3340abae632270d071affda1bf7}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Get\+Parent@{Get\+Parent}}
+\index{Get\+Parent@{Get\+Parent}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Get\+Parent()}{GetParent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl__gui_1_1_widget}{ngl\+\_\+gui\+::\+Widget}} $\ast$ ngl\+\_\+gui\+::\+Widget\+::\+Get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ac4f06cebc7d48d43774926da1e994281}\label{classngl__gui_1_1_widget_ac4f06cebc7d48d43774926da1e994281}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Get\+Position@{Get\+Position}}
+\index{Get\+Position@{Get\+Position}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Get\+Position()}{GetPosition()}}
+{\footnotesize\ttfamily const glm\+::ivec2 \& ngl\+\_\+gui\+::\+Widget\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_acc8ec6c7cdc2ceef6f0523308131a974}\label{classngl__gui_1_1_widget_acc8ec6c7cdc2ceef6f0523308131a974}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Get\+Size()}{GetSize()}}
+{\footnotesize\ttfamily const glm\+::ivec2 \& ngl\+\_\+gui\+::\+Widget\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a4b78d39f4d5092bce3f2454ad1df3d9f}\label{classngl__gui_1_1_widget_a4b78d39f4d5092bce3f2454ad1df3d9f}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Get\+Theme@{Get\+Theme}}
+\index{Get\+Theme@{Get\+Theme}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Get\+Theme()}{GetTheme()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl__gui_1_1_theme}{ngl\+\_\+gui\+::\+Theme}} $\ast$ ngl\+\_\+gui\+::\+Widget\+::\+Get\+Theme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_aa3b991da4a52ef2bfd752b1b94e0594c}\label{classngl__gui_1_1_widget_aa3b991da4a52ef2bfd752b1b94e0594c}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Is\+Dragged@{Is\+Dragged}}
+\index{Is\+Dragged@{Is\+Dragged}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Is\+Dragged()}{IsDragged()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+Is\+Dragged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a1de9607838c7e50775e5311be7a3809f}\label{classngl__gui_1_1_widget_a1de9607838c7e50775e5311be7a3809f}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Is\+Enabled@{Is\+Enabled}}
+\index{Is\+Enabled@{Is\+Enabled}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Is\+Enabled()}{IsEnabled()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+Is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_af7a939c7989342dc68adec31e55286a0}\label{classngl__gui_1_1_widget_af7a939c7989342dc68adec31e55286a0}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Is\+Focused@{Is\+Focused}}
+\index{Is\+Focused@{Is\+Focused}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Is\+Focused()}{IsFocused()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+Is\+Focused (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ac18d5bc5d1c266dcc7ff1daf361a59cf}\label{classngl__gui_1_1_widget_ac18d5bc5d1c266dcc7ff1daf361a59cf}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Is\+Visible@{Is\+Visible}}
+\index{Is\+Visible@{Is\+Visible}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Is\+Visible()}{IsVisible()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+Is\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a0e06194379a4760b149d5cf2ba26b360}\label{classngl__gui_1_1_widget_a0e06194379a4760b149d5cf2ba26b360}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Move\+Focus@{Move\+Focus}}
+\index{Move\+Focus@{Move\+Focus}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Move\+Focus()}{MoveFocus()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Move\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_a1a74a47ad88de9f75cc87c053eb7d00e}{ngl\+\_\+gui\+::\+Screen}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a244384eb10f734be4bbd90b440817592}\label{classngl__gui_1_1_widget_a244384eb10f734be4bbd90b440817592}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!On\+Drop@{On\+Drop}}
+\index{On\+Drop@{On\+Drop}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{On\+Drop()}{OnDrop()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+On\+Drop (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{int}]{count,  }\item[{const char $\ast$$\ast$}]{paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_a72094220b06b22f1a301295ce4bcfed6}{ngl\+\_\+gui\+::\+Screen}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a3ea889d10cb2e1d0241dabbefdce5dc7}\label{classngl__gui_1_1_widget_a3ea889d10cb2e1d0241dabbefdce5dc7}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!On\+Focus@{On\+Focus}}
+\index{On\+Focus@{On\+Focus}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{On\+Focus()}{OnFocus()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+On\+Focus (\begin{DoxyParamCaption}\item[{bool}]{focused }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_adaf24551542f162fa02e79ad7f4c9b8d}{ngl\+\_\+gui\+::\+Screen}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a5e2315b912f87414def29b4bdbba9205}\label{classngl__gui_1_1_widget_a5e2315b912f87414def29b4bdbba9205}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!On\+Key@{On\+Key}}
+\index{On\+Key@{On\+Key}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{On\+Key()}{OnKey()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+On\+Key (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{mods,  }\item[{bool}]{pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_a2f5b915a62f13cbac4d3b838f355c6c7}{ngl\+\_\+gui\+::\+Screen}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a721b18dc7a09b0b7b4ff0c02162409b8}\label{classngl__gui_1_1_widget_a721b18dc7a09b0b7b4ff0c02162409b8}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!On\+Mouse\+Button@{On\+Mouse\+Button}}
+\index{On\+Mouse\+Button@{On\+Mouse\+Button}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Button()}{OnMouseButton()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+On\+Mouse\+Button (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{int}]{button,  }\item[{int}]{mods,  }\item[{bool}]{pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_ad0caca6d76fd28cde657bdf2ee25f8dc}{ngl\+\_\+gui\+::\+Screen}}, \mbox{\hyperlink{classngl__gui_1_1_radio_button_ab1593ae6fbd370c89c6c862a4ee58a92}{ngl\+\_\+gui\+::\+Radio\+Button}}, \mbox{\hyperlink{classngl__gui_1_1_checkbox_a2616e2e230decef2a526e6fcfd59809e}{ngl\+\_\+gui\+::\+Checkbox}}, and \mbox{\hyperlink{classngl__gui_1_1_button_a1022c031cb9bb6658d8a6bb22295508d}{ngl\+\_\+gui\+::\+Button}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_aac19447b726ccec8ea22992b19edc676}\label{classngl__gui_1_1_widget_aac19447b726ccec8ea22992b19edc676}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!On\+Mouse\+Drag@{On\+Mouse\+Drag}}
+\index{On\+Mouse\+Drag@{On\+Mouse\+Drag}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Drag()}{OnMouseDrag()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+On\+Mouse\+Drag (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{const glm\+::ivec2 \&}]{offset,  }\item[{int}]{button,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_a532892ea85fdc456ef7d891a1a21694e}{ngl\+\_\+gui\+::\+Screen}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ac5d4927cc0bd0300d0b2e00d9f64d176}\label{classngl__gui_1_1_widget_ac5d4927cc0bd0300d0b2e00d9f64d176}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!On\+Mouse\+Move@{On\+Mouse\+Move}}
+\index{On\+Mouse\+Move@{On\+Mouse\+Move}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Move()}{OnMouseMove()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+On\+Mouse\+Move (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_a2f56b25db5dbde69c8c80404a55aa2fd}{ngl\+\_\+gui\+::\+Screen}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a754155677479020794938b90229aba58}\label{classngl__gui_1_1_widget_a754155677479020794938b90229aba58}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!On\+Mouse\+Scroll@{On\+Mouse\+Scroll}}
+\index{On\+Mouse\+Scroll@{On\+Mouse\+Scroll}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Scroll()}{OnMouseScroll()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+On\+Mouse\+Scroll (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{const glm\+::vec2 \&}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_a9aca448e61f50b24bfa2a5782424b910}{ngl\+\_\+gui\+::\+Screen}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ab360115cc08879ea3f9b301bdccc05ce}\label{classngl__gui_1_1_widget_ab360115cc08879ea3f9b301bdccc05ce}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!On\+Resize@{On\+Resize}}
+\index{On\+Resize@{On\+Resize}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{On\+Resize()}{OnResize()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+On\+Resize (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_aa217aa70046107e5626e865c3bd4b385}{ngl\+\_\+gui\+::\+Screen}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ab991bcac876f5652190a81beece5f0f1}\label{classngl__gui_1_1_widget_ab991bcac876f5652190a81beece5f0f1}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!On\+Text@{On\+Text}}
+\index{On\+Text@{On\+Text}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{On\+Text()}{OnText()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::\+On\+Text (\begin{DoxyParamCaption}\item[{unsigned int}]{codepoint,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_screen_ab80fea511f7af195b1f5352c9a04a86e}{ngl\+\_\+gui\+::\+Screen}}, and \mbox{\hyperlink{classngl__gui_1_1_text_field_a4da976e8cb8e376b3063322d72bdcbe6}{ngl\+\_\+gui\+::\+Text\+Field}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ad41034ddf29536888ea7e1fdbc37df4e}\label{classngl__gui_1_1_widget_ad41034ddf29536888ea7e1fdbc37df4e}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Remove\+Child@{Remove\+Child}}
+\index{Remove\+Child@{Remove\+Child}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Remove\+Child()}{RemoveChild()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Remove\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a8edf589d7a17f12398855f783b8d6c91}\label{classngl__gui_1_1_widget_a8edf589d7a17f12398855f783b8d6c91}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Remove\+Child\+At\+Index@{Remove\+Child\+At\+Index}}
+\index{Remove\+Child\+At\+Index@{Remove\+Child\+At\+Index}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Remove\+Child\+At\+Index()}{RemoveChildAtIndex()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Remove\+Child\+At\+Index (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ac62483b01680572a40125f9208a86392}\label{classngl__gui_1_1_widget_ac62483b01680572a40125f9208a86392}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Render@{Render}}
+\index{Render@{Render}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl__gui_1_1_g_u_i_renderer}{G\+U\+I\+Renderer}} \&}]{renderer,  }\item[{\mbox{\hyperlink{classngl__gui_1_1_g_u_i_rendering_context}{G\+U\+I\+Rendering\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl__gui_1_1_text_aa2dbe996a42ec05d5027ff972028ddf4}{ngl\+\_\+gui\+::\+Text}}, \mbox{\hyperlink{classngl__gui_1_1_screen_ad020aeab5832bc6b4de6e4d6b73534da}{ngl\+\_\+gui\+::\+Screen}}, and \mbox{\hyperlink{classngl__gui_1_1_window_ad79a7c2a639f6bb245540fa8a932f4b1}{ngl\+\_\+gui\+::\+Window}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ada4143b1aeafac782113a27abeab1145}\label{classngl__gui_1_1_widget_ada4143b1aeafac782113a27abeab1145}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+Dragged@{Set\+Dragged}}
+\index{Set\+Dragged@{Set\+Dragged}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Dragged()}{SetDragged()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+Dragged (\begin{DoxyParamCaption}\item[{const bool}]{dragged }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a9c58db403326c6317b61bc2f32262a3c}\label{classngl__gui_1_1_widget_a9c58db403326c6317b61bc2f32262a3c}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+Drawable@{Set\+Drawable}}
+\index{Set\+Drawable@{Set\+Drawable}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Drawable()}{SetDrawable()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+Drawable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_drawable}{ec\+::\+Drawable}} $\ast$}]{drawable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a5b4d8cd7dc8a1b10264800563b56a4bb}\label{classngl__gui_1_1_widget_a5b4d8cd7dc8a1b10264800563b56a4bb}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+Focus@{Set\+Focus}}
+\index{Set\+Focus@{Set\+Focus}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Focus()}{SetFocus()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+Focus (\begin{DoxyParamCaption}\item[{const bool}]{focused }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a3cdf55b21704618f4d6f915abdb65e8f}\label{classngl__gui_1_1_widget_a3cdf55b21704618f4d6f915abdb65e8f}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+Parent@{Set\+Parent}}
+\index{Set\+Parent@{Set\+Parent}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Parent()}{SetParent()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_acdc4ede81f89c4f5a22a6f372e6a34d7}\label{classngl__gui_1_1_widget_acdc4ede81f89c4f5a22a6f372e6a34d7}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+Position@{Set\+Position}}
+\index{Set\+Position@{Set\+Position}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Position()}{SetPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ae93bf12ee5a55bce3519ea8ac888b73c}\label{classngl__gui_1_1_widget_ae93bf12ee5a55bce3519ea8ac888b73c}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+Position@{Set\+Position}}
+\index{Set\+Position@{Set\+Position}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Position()}{SetPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a7b1cbd77bb35297b20048a68bd385f6f}\label{classngl__gui_1_1_widget_a7b1cbd77bb35297b20048a68bd385f6f}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+PositionX@{Set\+PositionX}}
+\index{Set\+PositionX@{Set\+PositionX}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Position\+X()}{SetPositionX()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+PositionX (\begin{DoxyParamCaption}\item[{const int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a9f2d5df091e4b012ba95f296e14dc720}\label{classngl__gui_1_1_widget_a9f2d5df091e4b012ba95f296e14dc720}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+PositionY@{Set\+PositionY}}
+\index{Set\+PositionY@{Set\+PositionY}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Position\+Y()}{SetPositionY()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+PositionY (\begin{DoxyParamCaption}\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ac86121806bd92e3097d8f58212510bbb}\label{classngl__gui_1_1_widget_ac86121806bd92e3097d8f58212510bbb}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+Size@{Set\+Size}}
+\index{Set\+Size@{Set\+Size}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Size()}{SetSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+Size (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_aaf58999336d157fc651e328d594dbe37}\label{classngl__gui_1_1_widget_aaf58999336d157fc651e328d594dbe37}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+Size@{Set\+Size}}
+\index{Set\+Size@{Set\+Size}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Size()}{SetSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+Size (\begin{DoxyParamCaption}\item[{const int}]{sx,  }\item[{const int}]{sy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a9c49a781241d314841f455abf4c88983}\label{classngl__gui_1_1_widget_a9c49a781241d314841f455abf4c88983}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+SizeX@{Set\+SizeX}}
+\index{Set\+SizeX@{Set\+SizeX}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Size\+X()}{SetSizeX()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+SizeX (\begin{DoxyParamCaption}\item[{const int}]{sx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_acae81cd9e22ed62e665a48aceb3ddda1}\label{classngl__gui_1_1_widget_acae81cd9e22ed62e665a48aceb3ddda1}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+SizeY@{Set\+SizeY}}
+\index{Set\+SizeY@{Set\+SizeY}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Size\+Y()}{SetSizeY()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+SizeY (\begin{DoxyParamCaption}\item[{const int}]{sy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a89d5ed0cb6340f32524fdaca4721fb6a}\label{classngl__gui_1_1_widget_a89d5ed0cb6340f32524fdaca4721fb6a}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+Theme@{Set\+Theme}}
+\index{Set\+Theme@{Set\+Theme}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Theme()}{SetTheme()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+Theme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl__gui_1_1_theme}{Theme}} $\ast$}]{theme }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_af5ee4fc6ee3299c552dc84bf27f436b1}\label{classngl__gui_1_1_widget_af5ee4fc6ee3299c552dc84bf27f436b1}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!Set\+Visible@{Set\+Visible}}
+\index{Set\+Visible@{Set\+Visible}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{Set\+Visible()}{SetVisible()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Widget\+::\+Set\+Visible (\begin{DoxyParamCaption}\item[{const bool}]{visible }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ac841b8e18f17432767be5711e38999f0}\label{classngl__gui_1_1_widget_ac841b8e18f17432767be5711e38999f0}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!m\+\_\+children@{m\+\_\+children}}
+\index{m\+\_\+children@{m\+\_\+children}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{m\+\_\+children}{m\_children}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}}$\ast$$>$ ngl\+\_\+gui\+::\+Widget\+::m\+\_\+children\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_ad5fbd226a8dc5df1cd38f3392950c37d}\label{classngl__gui_1_1_widget_ad5fbd226a8dc5df1cd38f3392950c37d}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!m\+\_\+drag@{m\+\_\+drag}}
+\index{m\+\_\+drag@{m\+\_\+drag}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{m\+\_\+drag}{m\_drag}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::m\+\_\+drag\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_af12a3b7766959c8753dcd6c46116a81c}\label{classngl__gui_1_1_widget_af12a3b7766959c8753dcd6c46116a81c}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!m\+\_\+drawable@{m\+\_\+drawable}}
+\index{m\+\_\+drawable@{m\+\_\+drawable}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{m\+\_\+drawable}{m\_drawable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_drawable}{ec\+::\+Drawable}}$\ast$ ngl\+\_\+gui\+::\+Widget\+::m\+\_\+drawable\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a3604b9c01a61aa3fe8883ee04b848c6c}\label{classngl__gui_1_1_widget_a3604b9c01a61aa3fe8883ee04b848c6c}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!m\+\_\+enabled@{m\+\_\+enabled}}
+\index{m\+\_\+enabled@{m\+\_\+enabled}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{m\+\_\+enabled}{m\_enabled}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::m\+\_\+enabled\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a6c71f5f5617b9974fbc4a871adb60edb}\label{classngl__gui_1_1_widget_a6c71f5f5617b9974fbc4a871adb60edb}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!m\+\_\+focused@{m\+\_\+focused}}
+\index{m\+\_\+focused@{m\+\_\+focused}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{m\+\_\+focused}{m\_focused}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::m\+\_\+focused\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a09ffb9283908093bcef73ba9fc2061a4}\label{classngl__gui_1_1_widget_a09ffb9283908093bcef73ba9fc2061a4}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!m\+\_\+parent@{m\+\_\+parent}}
+\index{m\+\_\+parent@{m\+\_\+parent}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{m\+\_\+parent}{m\_parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}}$\ast$ ngl\+\_\+gui\+::\+Widget\+::m\+\_\+parent\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a70faaab294ca368962d5841de2669f1d}\label{classngl__gui_1_1_widget_a70faaab294ca368962d5841de2669f1d}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!m\+\_\+position@{m\+\_\+position}}
+\index{m\+\_\+position@{m\+\_\+position}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{m\+\_\+position}{m\_position}}
+{\footnotesize\ttfamily glm\+::ivec2 ngl\+\_\+gui\+::\+Widget\+::m\+\_\+position\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a3ccc83d7b5e7df098f85a484088fae7e}\label{classngl__gui_1_1_widget_a3ccc83d7b5e7df098f85a484088fae7e}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!m\+\_\+size@{m\+\_\+size}}
+\index{m\+\_\+size@{m\+\_\+size}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{m\+\_\+size}{m\_size}}
+{\footnotesize\ttfamily glm\+::ivec2 ngl\+\_\+gui\+::\+Widget\+::m\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a547515f4345391f1ae1c0fecc1354806}\label{classngl__gui_1_1_widget_a547515f4345391f1ae1c0fecc1354806}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!m\+\_\+tooltip@{m\+\_\+tooltip}}
+\index{m\+\_\+tooltip@{m\+\_\+tooltip}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{m\+\_\+tooltip}{m\_tooltip}}
+{\footnotesize\ttfamily std\+::string ngl\+\_\+gui\+::\+Widget\+::m\+\_\+tooltip\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a61c829e05729c4eb38f5f1db7c59d2fa}\label{classngl__gui_1_1_widget_a61c829e05729c4eb38f5f1db7c59d2fa}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!m\+\_\+visible@{m\+\_\+visible}}
+\index{m\+\_\+visible@{m\+\_\+visible}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{m\+\_\+visible}{m\_visible}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Widget\+::m\+\_\+visible\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_widget_a3def3b84db75a90cf5462c87bd687cc9}\label{classngl__gui_1_1_widget_a3def3b84db75a90cf5462c87bd687cc9}} 
+\index{ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}!s\+\_\+theme@{s\+\_\+theme}}
+\index{s\+\_\+theme@{s\+\_\+theme}!ngl\+\_\+gui\+::\+Widget@{ngl\+\_\+gui\+::\+Widget}}
+\subsubsection{\texorpdfstring{s\+\_\+theme}{s\_theme}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl__gui_1_1_theme}{ngl\+\_\+gui\+::\+Theme}} $\ast$ ngl\+\_\+gui\+::\+Widget\+::s\+\_\+theme = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\mbox{\hyperlink{_widget_8h}{Widget.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\mbox{\hyperlink{_widget_8cpp}{Widget.\+cpp}}\end{DoxyCompactItemize}

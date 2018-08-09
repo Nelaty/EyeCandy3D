@@ -1,0 +1,5 @@
+<map id="ec::Drawable" name="ec::Drawable">
+<area shape="rect" id="node2" href="$classec_1_1_material.html" title="{ec::Material\n||+ Material()\l+ ~Material()\l+ AddTexture()\l+ RemoveTexture()\l+ GetTexture()\l+ GetTextures()\l+ SetHasTexture()\l+ HasTexture()\l+ AddDiffuseTextureFromPath()\l+ AddSpecularTextureFromPath()\land 15 more...\l}" alt="" coords="5,175,221,399"/>
+<area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ Render()\l+ RecalculateNormals()\l+ GetVAO()\l+ GetVBO()\l+ GetEBO()\l# SetupMesh()\l# Geometry()\l}" alt="" coords="246,197,405,377"/>
+<area shape="rect" id="node7" href="$classec_1_1_shader.html" title="{ec::Shader\n||+ Shader()\l+ ~Shader()\l+ Bind()\l+ Unbind()\l+ SetBool()\l+ SetInt()\l+ SetFloat()\l+ SetDouble()\l+ SetVec2()\l+ SetVec3()\land 6 more...\l}" alt="" coords="429,175,531,399"/>
+</map>

@@ -1,0 +1,118 @@
+\hypertarget{classec_1_1_resource_registry}{}\section{ec\+:\+:Resource\+Registry$<$ Resource $>$ Class Template Reference}
+\label{classec_1_1_resource_registry}\index{ec\+::\+Resource\+Registry$<$ Resource $>$@{ec\+::\+Resource\+Registry$<$ Resource $>$}}
+
+
+{\ttfamily \#include $<$Resource\+Registry.\+h$>$}
+
+
+
+Collaboration diagram for ec\+:\+:Resource\+Registry$<$ Resource $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classec_1_1_resource_registry__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_resource_registry_a77cf5381229bff47d251603c783115fe}{Resource\+\_\+\+Ptr}} = Resource $\ast$
+\item 
+using \mbox{\hyperlink{classec_1_1_resource_registry_a0a2b5090a2bbc638a04a2c283812b956}{Resource\+\_\+\+Container}} = std\+::map$<$ std\+::string, \mbox{\hyperlink{classec_1_1_resource_registry_a77cf5381229bff47d251603c783115fe}{Resource\+\_\+\+Ptr}} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_resource_registry_a9e0fdc82b578be6f0477f61116d5b361}{Resource\+Registry}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_resource_registry_aa3153d0d76d45905833bafab53341731}{$\sim$\+Resource\+Registry}} ()
+\item 
+bool \mbox{\hyperlink{classec_1_1_resource_registry_acfe1e9c8129f0f5a9ac76cd2eb1ddd62}{Register\+Resource}} (\mbox{\hyperlink{classec_1_1_resource_registry_a77cf5381229bff47d251603c783115fe}{Resource\+\_\+\+Ptr}} resource, const std\+::string \&key)
+\item 
+Resource $\ast$ \mbox{\hyperlink{classec_1_1_resource_registry_a8abf828823a168161be907d1e867d993}{Unregister\+Resource}} (const std\+::string \&key)
+\item 
+Resource $\ast$ \mbox{\hyperlink{classec_1_1_resource_registry_a8893154d25333cbf0feeb14f06bede67}{Get\+Resource}} (const std\+::string \&key)
+\item 
+bool \mbox{\hyperlink{classec_1_1_resource_registry_a9a56b5a31fb90469eabb372bf3327188}{Is\+Registered}} (const std\+::string \&key)
+\item 
+bool \mbox{\hyperlink{classec_1_1_resource_registry_a4e1ce3971ba11bf0ebf3e447bb8a3ce7}{Is\+Registered}} (\mbox{\hyperlink{classec_1_1_resource_registry_a77cf5381229bff47d251603c783115fe}{Resource\+\_\+\+Ptr}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_resource_registry_a0a2b5090a2bbc638a04a2c283812b956}\label{classec_1_1_resource_registry_a0a2b5090a2bbc638a04a2c283812b956}} 
+\index{ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}!Resource\+\_\+\+Container@{Resource\+\_\+\+Container}}
+\index{Resource\+\_\+\+Container@{Resource\+\_\+\+Container}!ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}}
+\subsubsection{\texorpdfstring{Resource\+\_\+\+Container}{Resource\_Container}}
+{\footnotesize\ttfamily template$<$class Resource $>$ \\
+using \mbox{\hyperlink{classec_1_1_resource_registry}{ec\+::\+Resource\+Registry}}$<$ Resource $>$\+::\mbox{\hyperlink{classec_1_1_resource_registry_a0a2b5090a2bbc638a04a2c283812b956}{Resource\+\_\+\+Container}} =  std\+::map$<$std\+::string, \mbox{\hyperlink{classec_1_1_resource_registry_a77cf5381229bff47d251603c783115fe}{Resource\+\_\+\+Ptr}}$>$}
+
+\mbox{\Hypertarget{classec_1_1_resource_registry_a77cf5381229bff47d251603c783115fe}\label{classec_1_1_resource_registry_a77cf5381229bff47d251603c783115fe}} 
+\index{ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}!Resource\+\_\+\+Ptr@{Resource\+\_\+\+Ptr}}
+\index{Resource\+\_\+\+Ptr@{Resource\+\_\+\+Ptr}!ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}}
+\subsubsection{\texorpdfstring{Resource\+\_\+\+Ptr}{Resource\_Ptr}}
+{\footnotesize\ttfamily template$<$class Resource $>$ \\
+using \mbox{\hyperlink{classec_1_1_resource_registry}{ec\+::\+Resource\+Registry}}$<$ Resource $>$\+::\mbox{\hyperlink{classec_1_1_resource_registry_a77cf5381229bff47d251603c783115fe}{Resource\+\_\+\+Ptr}} =  Resource$\ast$}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_resource_registry_a9e0fdc82b578be6f0477f61116d5b361}\label{classec_1_1_resource_registry_a9e0fdc82b578be6f0477f61116d5b361}} 
+\index{ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}!Resource\+Registry@{Resource\+Registry}}
+\index{Resource\+Registry@{Resource\+Registry}!ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}}
+\subsubsection{\texorpdfstring{Resource\+Registry()}{ResourceRegistry()}}
+{\footnotesize\ttfamily template$<$class Resource $>$ \\
+\mbox{\hyperlink{classec_1_1_resource_registry}{ec\+::\+Resource\+Registry}}$<$ Resource $>$\+::\mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_resource_registry_aa3153d0d76d45905833bafab53341731}\label{classec_1_1_resource_registry_aa3153d0d76d45905833bafab53341731}} 
+\index{ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}!````~Resource\+Registry@{$\sim$\+Resource\+Registry}}
+\index{````~Resource\+Registry@{$\sim$\+Resource\+Registry}!ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}}
+\subsubsection{\texorpdfstring{$\sim$\+Resource\+Registry()}{~ResourceRegistry()}}
+{\footnotesize\ttfamily template$<$class Resource $>$ \\
+\mbox{\hyperlink{classec_1_1_resource_registry}{ec\+::\+Resource\+Registry}}$<$ Resource $>$\+::$\sim$\mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_resource_registry_a8893154d25333cbf0feeb14f06bede67}\label{classec_1_1_resource_registry_a8893154d25333cbf0feeb14f06bede67}} 
+\index{ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}!Get\+Resource@{Get\+Resource}}
+\index{Get\+Resource@{Get\+Resource}!ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}}
+\subsubsection{\texorpdfstring{Get\+Resource()}{GetResource()}}
+{\footnotesize\ttfamily template$<$class Resource $>$ \\
+Resource $\ast$ \mbox{\hyperlink{classec_1_1_resource_registry}{ec\+::\+Resource\+Registry}}$<$ Resource $>$\+::Get\+Resource (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_resource_registry_a9a56b5a31fb90469eabb372bf3327188}\label{classec_1_1_resource_registry_a9a56b5a31fb90469eabb372bf3327188}} 
+\index{ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}!Is\+Registered@{Is\+Registered}}
+\index{Is\+Registered@{Is\+Registered}!ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}}
+\subsubsection{\texorpdfstring{Is\+Registered()}{IsRegistered()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Resource $>$ \\
+bool \mbox{\hyperlink{classec_1_1_resource_registry}{ec\+::\+Resource\+Registry}}$<$ Resource $>$\+::Is\+Registered (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_resource_registry_a4e1ce3971ba11bf0ebf3e447bb8a3ce7}\label{classec_1_1_resource_registry_a4e1ce3971ba11bf0ebf3e447bb8a3ce7}} 
+\index{ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}!Is\+Registered@{Is\+Registered}}
+\index{Is\+Registered@{Is\+Registered}!ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}}
+\subsubsection{\texorpdfstring{Is\+Registered()}{IsRegistered()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Resource $>$ \\
+bool \mbox{\hyperlink{classec_1_1_resource_registry}{ec\+::\+Resource\+Registry}}$<$ Resource $>$\+::Is\+Registered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_resource_registry_a77cf5381229bff47d251603c783115fe}{Resource\+\_\+\+Ptr}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_resource_registry_acfe1e9c8129f0f5a9ac76cd2eb1ddd62}\label{classec_1_1_resource_registry_acfe1e9c8129f0f5a9ac76cd2eb1ddd62}} 
+\index{ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}!Register\+Resource@{Register\+Resource}}
+\index{Register\+Resource@{Register\+Resource}!ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}}
+\subsubsection{\texorpdfstring{Register\+Resource()}{RegisterResource()}}
+{\footnotesize\ttfamily template$<$class Resource $>$ \\
+bool \mbox{\hyperlink{classec_1_1_resource_registry}{ec\+::\+Resource\+Registry}}$<$ Resource $>$\+::Register\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_resource_registry_a77cf5381229bff47d251603c783115fe}{Resource\+\_\+\+Ptr}}}]{resource,  }\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_resource_registry_a8abf828823a168161be907d1e867d993}\label{classec_1_1_resource_registry_a8abf828823a168161be907d1e867d993}} 
+\index{ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}!Unregister\+Resource@{Unregister\+Resource}}
+\index{Unregister\+Resource@{Unregister\+Resource}!ec\+::\+Resource\+Registry@{ec\+::\+Resource\+Registry}}
+\subsubsection{\texorpdfstring{Unregister\+Resource()}{UnregisterResource()}}
+{\footnotesize\ttfamily template$<$class Resource $>$ \\
+Resource $\ast$ \mbox{\hyperlink{classec_1_1_resource_registry}{ec\+::\+Resource\+Registry}}$<$ Resource $>$\+::Unregister\+Resource (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_resource_registry_8h}{Resource\+Registry.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_resource_registry_8inl}{Resource\+Registry.\+inl}}\end{DoxyCompactItemize}

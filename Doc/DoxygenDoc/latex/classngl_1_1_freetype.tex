@@ -1,0 +1,79 @@
+\hypertarget{classngl_1_1_freetype}{}\section{ngl\+:\+:Freetype Class Reference}
+\label{classngl_1_1_freetype}\index{ngl\+::\+Freetype@{ngl\+::\+Freetype}}
+
+
+{\ttfamily \#include $<$Freetype.\+h$>$}
+
+
+
+Collaboration diagram for ngl\+:\+:Freetype\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classngl_1_1_freetype__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl_1_1_freetype_ae4d2dae4184f7f3d6db679978c5330a3}{Freetype}} (\mbox{\hyperlink{classngl_1_1_shader}{Shader}} $\ast$shader)
+\item 
+\mbox{\hyperlink{classngl_1_1_freetype_a969f170d5006a1a7ee51f307806038ff}{$\sim$\+Freetype}} ()
+\item 
+void \mbox{\hyperlink{classngl_1_1_freetype_aaf698f09e19fccd8ada0e50262b4ddf2}{Render\+Text}} (const char $\ast$\mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497a1cb251ec0d568de6a929b520c4aed8d1}{text}}, \mbox{\hyperlink{classngl_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} $\ast$atlas, float x, float y, float sx, float sy, const glm\+::vec4 \&color=glm\+::vec4(0.\+0f, 0.\+0f, 0.\+0f, 1.\+0f))
+\item 
+void \mbox{\hyperlink{classngl_1_1_freetype_a18bd827a8b3fbb169ea4dc7544083851}{Add\+Font\+Face}} (const std\+::string \&name, const std\+::string \&filepath)
+\item 
+void \mbox{\hyperlink{classngl_1_1_freetype_a8758d36b4ca895fb3f98c38e40443ad6}{Add\+Font\+Texture\+Atlas}} (const std\+::string \&face, unsigned int size)
+\item 
+\mbox{\hyperlink{classngl_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} $\ast$ \mbox{\hyperlink{classngl_1_1_freetype_a8e740af5ce9a17c8b39482eb57b46fba}{Get\+Font\+Texture\+Atlas}} (const std\+::string \&name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classngl_1_1_freetype_ae4d2dae4184f7f3d6db679978c5330a3}\label{classngl_1_1_freetype_ae4d2dae4184f7f3d6db679978c5330a3}} 
+\index{ngl\+::\+Freetype@{ngl\+::\+Freetype}!Freetype@{Freetype}}
+\index{Freetype@{Freetype}!ngl\+::\+Freetype@{ngl\+::\+Freetype}}
+\subsubsection{\texorpdfstring{Freetype()}{Freetype()}}
+{\footnotesize\ttfamily ngl\+::\+Freetype\+::\+Freetype (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl_1_1_shader}{Shader}} $\ast$}]{shader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classngl_1_1_freetype_a969f170d5006a1a7ee51f307806038ff}\label{classngl_1_1_freetype_a969f170d5006a1a7ee51f307806038ff}} 
+\index{ngl\+::\+Freetype@{ngl\+::\+Freetype}!````~Freetype@{$\sim$\+Freetype}}
+\index{````~Freetype@{$\sim$\+Freetype}!ngl\+::\+Freetype@{ngl\+::\+Freetype}}
+\subsubsection{\texorpdfstring{$\sim$\+Freetype()}{~Freetype()}}
+{\footnotesize\ttfamily ngl\+::\+Freetype\+::$\sim$\+Freetype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classngl_1_1_freetype_a18bd827a8b3fbb169ea4dc7544083851}\label{classngl_1_1_freetype_a18bd827a8b3fbb169ea4dc7544083851}} 
+\index{ngl\+::\+Freetype@{ngl\+::\+Freetype}!Add\+Font\+Face@{Add\+Font\+Face}}
+\index{Add\+Font\+Face@{Add\+Font\+Face}!ngl\+::\+Freetype@{ngl\+::\+Freetype}}
+\subsubsection{\texorpdfstring{Add\+Font\+Face()}{AddFontFace()}}
+{\footnotesize\ttfamily void ngl\+::\+Freetype\+::\+Add\+Font\+Face (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_freetype_a8758d36b4ca895fb3f98c38e40443ad6}\label{classngl_1_1_freetype_a8758d36b4ca895fb3f98c38e40443ad6}} 
+\index{ngl\+::\+Freetype@{ngl\+::\+Freetype}!Add\+Font\+Texture\+Atlas@{Add\+Font\+Texture\+Atlas}}
+\index{Add\+Font\+Texture\+Atlas@{Add\+Font\+Texture\+Atlas}!ngl\+::\+Freetype@{ngl\+::\+Freetype}}
+\subsubsection{\texorpdfstring{Add\+Font\+Texture\+Atlas()}{AddFontTextureAtlas()}}
+{\footnotesize\ttfamily void ngl\+::\+Freetype\+::\+Add\+Font\+Texture\+Atlas (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{face,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_freetype_a8e740af5ce9a17c8b39482eb57b46fba}\label{classngl_1_1_freetype_a8e740af5ce9a17c8b39482eb57b46fba}} 
+\index{ngl\+::\+Freetype@{ngl\+::\+Freetype}!Get\+Font\+Texture\+Atlas@{Get\+Font\+Texture\+Atlas}}
+\index{Get\+Font\+Texture\+Atlas@{Get\+Font\+Texture\+Atlas}!ngl\+::\+Freetype@{ngl\+::\+Freetype}}
+\subsubsection{\texorpdfstring{Get\+Font\+Texture\+Atlas()}{GetFontTextureAtlas()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} $\ast$ ngl\+::\+Freetype\+::\+Get\+Font\+Texture\+Atlas (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_freetype_aaf698f09e19fccd8ada0e50262b4ddf2}\label{classngl_1_1_freetype_aaf698f09e19fccd8ada0e50262b4ddf2}} 
+\index{ngl\+::\+Freetype@{ngl\+::\+Freetype}!Render\+Text@{Render\+Text}}
+\index{Render\+Text@{Render\+Text}!ngl\+::\+Freetype@{ngl\+::\+Freetype}}
+\subsubsection{\texorpdfstring{Render\+Text()}{RenderText()}}
+{\footnotesize\ttfamily void ngl\+::\+Freetype\+::\+Render\+Text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{\mbox{\hyperlink{classngl_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} $\ast$}]{atlas,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{sx,  }\item[{float}]{sy,  }\item[{const glm\+::vec4 \&}]{color = {\ttfamily glm\+:\+:vec4(0.0f,~0.0f,~0.0f,~1.0f)} }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+Core/\mbox{\hyperlink{_freetype_8h}{Freetype.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_freetype_8cpp}{Freetype.\+cpp}}\end{DoxyCompactItemize}

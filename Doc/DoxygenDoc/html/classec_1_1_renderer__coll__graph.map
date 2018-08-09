@@ -1,0 +1,3 @@
+<map id="ec::Renderer" name="ec::Renderer">
+<area shape="rect" id="node3" href="$classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ Render()\l+ SetScene()\l+ GetScene()\l+ GetFrame()\l+ GetFrame()\l+ SetFrame()\l+ AddRenderingTarget()\l# OnBeginRender()\l# OnRender()\l# OnEndRender()\l}" alt="" coords="169,5,328,244"/>
+</map>

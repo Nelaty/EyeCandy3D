@@ -1,0 +1,133 @@
+\hypertarget{classngl_1_1_terrain_mesh}{}\section{ngl\+:\+:Terrain\+Mesh Class Reference}
+\label{classngl_1_1_terrain_mesh}\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+
+
+{\ttfamily \#include $<$Terrain\+Mesh.\+h$>$}
+
+
+
+Inheritance diagram for ngl\+:\+:Terrain\+Mesh\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classngl_1_1_terrain_mesh__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ngl\+:\+:Terrain\+Mesh\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classngl_1_1_terrain_mesh__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl_1_1_terrain_mesh_ae2f5614f9eb2e2814b2c3cd382ffea75}{Terrain\+Mesh}} ()
+\item 
+\mbox{\hyperlink{classngl_1_1_terrain_mesh_a5ec5826f5900678f960f08607c9d9c97}{$\sim$\+Terrain\+Mesh}} ()
+\item 
+void \mbox{\hyperlink{classngl_1_1_terrain_mesh_adcbd87afe29c47b1d1edf5e893dfb95d}{Init}} ()
+\item 
+void \mbox{\hyperlink{classngl_1_1_terrain_mesh_a23945d3a6905069b02b95684ef965447}{Init}} (unsigned int width, unsigned int depth, float x\+Offset, float y\+Offset, float height=0.\+0f)
+\item 
+void \mbox{\hyperlink{classngl_1_1_terrain_mesh_a8b9883d7d25727fc6ab0b2ecc7ec7848}{Add\+Vertex}} (const glm\+::vec3 \&vertex)
+\item 
+void \mbox{\hyperlink{classngl_1_1_terrain_mesh_a62a2491c6d088268e87fc8d7fa0e2528}{Add\+Vertex}} (const \mbox{\hyperlink{structngl_1_1_vertex}{Vertex}} \&vertex)
+\item 
+void \mbox{\hyperlink{classngl_1_1_terrain_mesh_a16c7081209ef67763ff85de630c17b59}{Add\+Index}} (const unsigned int index)
+\item 
+void \mbox{\hyperlink{classngl_1_1_terrain_mesh_ada9c72a7f96566d634af9e3e20eb0376}{Flip\+Normals}} ()
+\item 
+virtual \mbox{\hyperlink{classngl_1_1_ray_hit}{Ray\+Hit}} \mbox{\hyperlink{classngl_1_1_terrain_mesh_ace57d898dc60e94330ef4f46e54abe2e}{Intersects}} (const \mbox{\hyperlink{classngl_1_1_ray}{Ray}} \&ray) override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classngl_1_1_terrain_mesh_aa473949dcd4dca706fbb04363ef075ed}{Setup\+Mesh}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classngl_1_1_terrain_mesh_ae2f5614f9eb2e2814b2c3cd382ffea75}\label{classngl_1_1_terrain_mesh_ae2f5614f9eb2e2814b2c3cd382ffea75}} 
+\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}!Terrain\+Mesh@{Terrain\+Mesh}}
+\index{Terrain\+Mesh@{Terrain\+Mesh}!ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+\subsubsection{\texorpdfstring{Terrain\+Mesh()}{TerrainMesh()}}
+{\footnotesize\ttfamily ngl\+::\+Terrain\+Mesh\+::\+Terrain\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classngl_1_1_terrain_mesh_a5ec5826f5900678f960f08607c9d9c97}\label{classngl_1_1_terrain_mesh_a5ec5826f5900678f960f08607c9d9c97}} 
+\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}!````~Terrain\+Mesh@{$\sim$\+Terrain\+Mesh}}
+\index{````~Terrain\+Mesh@{$\sim$\+Terrain\+Mesh}!ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+\subsubsection{\texorpdfstring{$\sim$\+Terrain\+Mesh()}{~TerrainMesh()}}
+{\footnotesize\ttfamily ngl\+::\+Terrain\+Mesh\+::$\sim$\+Terrain\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classngl_1_1_terrain_mesh_a16c7081209ef67763ff85de630c17b59}\label{classngl_1_1_terrain_mesh_a16c7081209ef67763ff85de630c17b59}} 
+\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}!Add\+Index@{Add\+Index}}
+\index{Add\+Index@{Add\+Index}!ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+\subsubsection{\texorpdfstring{Add\+Index()}{AddIndex()}}
+{\footnotesize\ttfamily void ngl\+::\+Terrain\+Mesh\+::\+Add\+Index (\begin{DoxyParamCaption}\item[{const unsigned int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_terrain_mesh_a8b9883d7d25727fc6ab0b2ecc7ec7848}\label{classngl_1_1_terrain_mesh_a8b9883d7d25727fc6ab0b2ecc7ec7848}} 
+\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}!Add\+Vertex@{Add\+Vertex}}
+\index{Add\+Vertex@{Add\+Vertex}!ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+\subsubsection{\texorpdfstring{Add\+Vertex()}{AddVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Terrain\+Mesh\+::\+Add\+Vertex (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{vertex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_terrain_mesh_a62a2491c6d088268e87fc8d7fa0e2528}\label{classngl_1_1_terrain_mesh_a62a2491c6d088268e87fc8d7fa0e2528}} 
+\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}!Add\+Vertex@{Add\+Vertex}}
+\index{Add\+Vertex@{Add\+Vertex}!ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+\subsubsection{\texorpdfstring{Add\+Vertex()}{AddVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Terrain\+Mesh\+::\+Add\+Vertex (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structngl_1_1_vertex}{Vertex}} \&}]{vertex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_terrain_mesh_ada9c72a7f96566d634af9e3e20eb0376}\label{classngl_1_1_terrain_mesh_ada9c72a7f96566d634af9e3e20eb0376}} 
+\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}!Flip\+Normals@{Flip\+Normals}}
+\index{Flip\+Normals@{Flip\+Normals}!ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+\subsubsection{\texorpdfstring{Flip\+Normals()}{FlipNormals()}}
+{\footnotesize\ttfamily void ngl\+::\+Terrain\+Mesh\+::\+Flip\+Normals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_terrain_mesh_adcbd87afe29c47b1d1edf5e893dfb95d}\label{classngl_1_1_terrain_mesh_adcbd87afe29c47b1d1edf5e893dfb95d}} 
+\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}!Init@{Init}}
+\index{Init@{Init}!ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+\subsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Terrain\+Mesh\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_terrain_mesh_a23945d3a6905069b02b95684ef965447}\label{classngl_1_1_terrain_mesh_a23945d3a6905069b02b95684ef965447}} 
+\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}!Init@{Init}}
+\index{Init@{Init}!ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+\subsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Terrain\+Mesh\+::\+Init (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{depth,  }\item[{float}]{x\+Offset,  }\item[{float}]{y\+Offset,  }\item[{float}]{height = {\ttfamily 0.0f} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_terrain_mesh_ace57d898dc60e94330ef4f46e54abe2e}\label{classngl_1_1_terrain_mesh_ace57d898dc60e94330ef4f46e54abe2e}} 
+\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}!Intersects@{Intersects}}
+\index{Intersects@{Intersects}!ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+\subsubsection{\texorpdfstring{Intersects()}{Intersects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl_1_1_ray_hit}{ngl\+::\+Ray\+Hit}} ngl\+::\+Terrain\+Mesh\+::\+Intersects (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classngl_1_1_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classngl_1_1_geometry_a494c5a8210176ae8cf02c5398e4f4bde}{ngl\+::\+Geometry}}.
+
+\mbox{\Hypertarget{classngl_1_1_terrain_mesh_aa473949dcd4dca706fbb04363ef075ed}\label{classngl_1_1_terrain_mesh_aa473949dcd4dca706fbb04363ef075ed}} 
+\index{ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}!Setup\+Mesh@{Setup\+Mesh}}
+\index{Setup\+Mesh@{Setup\+Mesh}!ngl\+::\+Terrain\+Mesh@{ngl\+::\+Terrain\+Mesh}}
+\subsubsection{\texorpdfstring{Setup\+Mesh()}{SetupMesh()}}
+{\footnotesize\ttfamily void ngl\+::\+Terrain\+Mesh\+::\+Setup\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classngl_1_1_geometry_a4da93f38cd1dd53dad93bbb7b998f1c3}{ngl\+::\+Geometry}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+Core/\mbox{\hyperlink{_terrain_mesh_8h}{Terrain\+Mesh.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_terrain_mesh_8cpp}{Terrain\+Mesh.\+cpp}}\end{DoxyCompactItemize}

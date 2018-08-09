@@ -1,0 +1,3 @@
+<map id="ngl::CameraController" name="ngl::CameraController">
+<area shape="rect" id="node2" href="$classngl_1_1_input_observer.html" title="{ngl::InputObserver\n|# m_eventCallbacks\l# m_enabled\l|+ ~InputObserver()\l+ Inform()\l+ Enable()\l+ IsEnabled()\l+ AddCallback()\l+ RemoveCallback()\l+ RemoveCallbacksOfType()\l+ RemoveAllCallbacks()\l+ IsCallbackRegistered()\l# InputObserver()\l# ProcessEvent()\l}" alt="" coords="11,5,198,244"/>
+</map>

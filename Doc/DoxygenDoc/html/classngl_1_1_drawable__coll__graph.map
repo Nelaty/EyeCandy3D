@@ -1,0 +1,5 @@
+<map id="ngl::Drawable" name="ngl::Drawable">
+<area shape="rect" id="node2" href="$classngl_1_1_shader.html" title="{ngl::Shader\n||+ Shader()\l+ ~Shader()\l+ Bind()\l+ Unbind()\l+ SetBool()\l+ SetInt()\l+ SetFloat()\l+ SetDouble()\l+ SetVec2()\l+ SetVec3()\land 6 more...\l}" alt="" coords="5,175,108,399"/>
+<area shape="rect" id="node3" href="$classngl_1_1_material.html" title="{ngl::Material\n||+ Material()\l+ ~Material()\l+ AddTexture()\l+ RemoveTexture()\l+ GetTexture()\l+ GetTextures()\l+ SetHasTexture()\l+ HasTexture()\l+ AddDiffuseTextureFromPath()\l+ AddSpecularTextureFromPath()\land 15 more...\l}" alt="" coords="133,175,349,399"/>
+<area shape="rect" id="node4" href="$classngl_1_1_geometry.html" title="{ngl::Geometry\n||+ ~Geometry()\l+ Render()\l+ RecalculateNormals()\l+ GetVAO()\l+ GetVBO()\l+ GetEBO()\l+ Intersects()\l# SetupMesh()\l# Geometry()\l}" alt="" coords="373,189,532,384"/>
+</map>

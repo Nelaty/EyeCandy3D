@@ -1,0 +1,135 @@
+\hypertarget{classngl_1_1_scene_system}{}\section{ngl\+:\+:Scene\+System Class Reference}
+\label{classngl_1_1_scene_system}\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+
+
+{\ttfamily \#include $<$Scene\+System.\+h$>$}
+
+
+
+Collaboration diagram for ngl\+:\+:Scene\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classngl_1_1_scene_system__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl_1_1_scene_system_a95860dbe4267edf52fa59c8606e9b35c}{Scene\+System}} (\mbox{\hyperlink{classngl_1_1_window}{Window}} $\ast$window)
+\item 
+\mbox{\hyperlink{classngl_1_1_scene_system_a6310af7c9c8223995b5bf2c771f459e4}{$\sim$\+Scene\+System}} ()
+\item 
+void \mbox{\hyperlink{classngl_1_1_scene_system_a30e02fe751cc8ef861460a843879e09d}{Render}} ()
+\item 
+void \mbox{\hyperlink{classngl_1_1_scene_system_aea13b1a75ea4c635ee61207df97f0635}{Tick}} (const float time\+Delta)
+\item 
+\mbox{\hyperlink{classngl_1_1_scene}{Scene}} $\ast$ \mbox{\hyperlink{classngl_1_1_scene_system_a6af397314087b88f0f46b6f9d09ffe87}{Get\+Scene}} (const char $\ast$scene\+Name) const
+\item 
+\mbox{\hyperlink{classngl_1_1_scene}{Scene}} $\ast$ \mbox{\hyperlink{classngl_1_1_scene_system_a8557a162247356925b470b6451df4bb3}{Get\+Previous\+Scene}} () const
+\item 
+\mbox{\hyperlink{classngl_1_1_scene}{Scene}} $\ast$ \mbox{\hyperlink{classngl_1_1_scene_system_a6c171f2b13aacbff3b158015c9eed94e}{Get\+Current\+Scene}} () const
+\item 
+void \mbox{\hyperlink{classngl_1_1_scene_system_ae3b08ac9812fdc43af044e6b8831688d}{Add\+Scene}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classngl_1_1_scene}{Scene}} $>$ scene)
+\item 
+void \mbox{\hyperlink{classngl_1_1_scene_system_a48b2f6c39b6bbf02ac5aec5c45bb20d8}{Request\+Scene\+Change}} (const char $\ast$scene\+Name)
+\item 
+void \mbox{\hyperlink{classngl_1_1_scene_system_a2f825af6f86a8db98dd57a15c812c083}{Add\+Scene\+Controller}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classngl_1_1_scene_controller}{Scene\+Controller}} $>$ scene\+Controller)
+\item 
+bool \mbox{\hyperlink{classngl_1_1_scene_system_a09a6a48b38e7da328520cc63854f16ea}{Remove\+Scene\+Controller}} (\mbox{\hyperlink{classngl_1_1_scene_controller}{Scene\+Controller}} $\ast$controller)
+\item 
+\mbox{\hyperlink{classngl_1_1_scene_controller}{Scene\+Controller}} $\ast$ \mbox{\hyperlink{classngl_1_1_scene_system_a92b4a89cd1afb9002cef4320a5a4d304}{Get\+Scene\+Controller}} (const char $\ast$controller\+Name)
+\item 
+\mbox{\hyperlink{classngl_1_1_window}{Window}} $\ast$ \mbox{\hyperlink{classngl_1_1_scene_system_a2af987ef6bc67cbc58f71e5b28acb141}{Get\+Window}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classngl_1_1_scene_system_a95860dbe4267edf52fa59c8606e9b35c}\label{classngl_1_1_scene_system_a95860dbe4267edf52fa59c8606e9b35c}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Scene\+System@{Scene\+System}}
+\index{Scene\+System@{Scene\+System}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Scene\+System()}{SceneSystem()}}
+{\footnotesize\ttfamily ngl\+::\+Scene\+System\+::\+Scene\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl_1_1_window}{Window}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_a6310af7c9c8223995b5bf2c771f459e4}\label{classngl_1_1_scene_system_a6310af7c9c8223995b5bf2c771f459e4}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!````~Scene\+System@{$\sim$\+Scene\+System}}
+\index{````~Scene\+System@{$\sim$\+Scene\+System}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{$\sim$\+Scene\+System()}{~SceneSystem()}}
+{\footnotesize\ttfamily ngl\+::\+Scene\+System\+::$\sim$\+Scene\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classngl_1_1_scene_system_ae3b08ac9812fdc43af044e6b8831688d}\label{classngl_1_1_scene_system_ae3b08ac9812fdc43af044e6b8831688d}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Add\+Scene@{Add\+Scene}}
+\index{Add\+Scene@{Add\+Scene}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Add\+Scene()}{AddScene()}}
+{\footnotesize\ttfamily void ngl\+::\+Scene\+System\+::\+Add\+Scene (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classngl_1_1_scene}{Scene}} $>$}]{scene }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_a2f825af6f86a8db98dd57a15c812c083}\label{classngl_1_1_scene_system_a2f825af6f86a8db98dd57a15c812c083}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Add\+Scene\+Controller@{Add\+Scene\+Controller}}
+\index{Add\+Scene\+Controller@{Add\+Scene\+Controller}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Add\+Scene\+Controller()}{AddSceneController()}}
+{\footnotesize\ttfamily void ngl\+::\+Scene\+System\+::\+Add\+Scene\+Controller (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classngl_1_1_scene_controller}{Scene\+Controller}} $>$}]{scene\+Controller }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_a6c171f2b13aacbff3b158015c9eed94e}\label{classngl_1_1_scene_system_a6c171f2b13aacbff3b158015c9eed94e}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Get\+Current\+Scene@{Get\+Current\+Scene}}
+\index{Get\+Current\+Scene@{Get\+Current\+Scene}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Get\+Current\+Scene()}{GetCurrentScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl_1_1_scene}{ngl\+::\+Scene}} $\ast$ ngl\+::\+Scene\+System\+::\+Get\+Current\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_a8557a162247356925b470b6451df4bb3}\label{classngl_1_1_scene_system_a8557a162247356925b470b6451df4bb3}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Get\+Previous\+Scene@{Get\+Previous\+Scene}}
+\index{Get\+Previous\+Scene@{Get\+Previous\+Scene}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Get\+Previous\+Scene()}{GetPreviousScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl_1_1_scene}{ngl\+::\+Scene}} $\ast$ ngl\+::\+Scene\+System\+::\+Get\+Previous\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_a6af397314087b88f0f46b6f9d09ffe87}\label{classngl_1_1_scene_system_a6af397314087b88f0f46b6f9d09ffe87}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Get\+Scene@{Get\+Scene}}
+\index{Get\+Scene@{Get\+Scene}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Get\+Scene()}{GetScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl_1_1_scene}{ngl\+::\+Scene}} $\ast$ ngl\+::\+Scene\+System\+::\+Get\+Scene (\begin{DoxyParamCaption}\item[{const char $\ast$}]{scene\+Name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_a92b4a89cd1afb9002cef4320a5a4d304}\label{classngl_1_1_scene_system_a92b4a89cd1afb9002cef4320a5a4d304}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Get\+Scene\+Controller@{Get\+Scene\+Controller}}
+\index{Get\+Scene\+Controller@{Get\+Scene\+Controller}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Get\+Scene\+Controller()}{GetSceneController()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl_1_1_scene_controller}{ngl\+::\+Scene\+Controller}} $\ast$ ngl\+::\+Scene\+System\+::\+Get\+Scene\+Controller (\begin{DoxyParamCaption}\item[{const char $\ast$}]{controller\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_a2af987ef6bc67cbc58f71e5b28acb141}\label{classngl_1_1_scene_system_a2af987ef6bc67cbc58f71e5b28acb141}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Get\+Window@{Get\+Window}}
+\index{Get\+Window@{Get\+Window}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Get\+Window()}{GetWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl_1_1_window}{ngl\+::\+Window}} $\ast$ ngl\+::\+Scene\+System\+::\+Get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_a09a6a48b38e7da328520cc63854f16ea}\label{classngl_1_1_scene_system_a09a6a48b38e7da328520cc63854f16ea}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Remove\+Scene\+Controller@{Remove\+Scene\+Controller}}
+\index{Remove\+Scene\+Controller@{Remove\+Scene\+Controller}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Remove\+Scene\+Controller()}{RemoveSceneController()}}
+{\footnotesize\ttfamily bool ngl\+::\+Scene\+System\+::\+Remove\+Scene\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl_1_1_scene_controller}{Scene\+Controller}} $\ast$}]{controller }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_a30e02fe751cc8ef861460a843879e09d}\label{classngl_1_1_scene_system_a30e02fe751cc8ef861460a843879e09d}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Render@{Render}}
+\index{Render@{Render}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void ngl\+::\+Scene\+System\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_a48b2f6c39b6bbf02ac5aec5c45bb20d8}\label{classngl_1_1_scene_system_a48b2f6c39b6bbf02ac5aec5c45bb20d8}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Request\+Scene\+Change@{Request\+Scene\+Change}}
+\index{Request\+Scene\+Change@{Request\+Scene\+Change}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Request\+Scene\+Change()}{RequestSceneChange()}}
+{\footnotesize\ttfamily void ngl\+::\+Scene\+System\+::\+Request\+Scene\+Change (\begin{DoxyParamCaption}\item[{const char $\ast$}]{scene\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_scene_system_aea13b1a75ea4c635ee61207df97f0635}\label{classngl_1_1_scene_system_aea13b1a75ea4c635ee61207df97f0635}} 
+\index{ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}!Tick@{Tick}}
+\index{Tick@{Tick}!ngl\+::\+Scene\+System@{ngl\+::\+Scene\+System}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void ngl\+::\+Scene\+System\+::\+Tick (\begin{DoxyParamCaption}\item[{const float}]{time\+Delta }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+Core/\mbox{\hyperlink{_scene_system_8h}{Scene\+System.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_scene_system_8cpp}{Scene\+System.\+cpp}}\end{DoxyCompactItemize}

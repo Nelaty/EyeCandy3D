@@ -1,0 +1,3 @@
+<map id="ngl_gui::Slot&lt; WidgetType &gt;" name="ngl_gui::Slot&lt; WidgetType &gt;">
+<area shape="rect" id="node2" href="$classngl__gui_1_1_widget.html" title="{ngl_gui::Widget\n|# m_parent\l# m_children\l# m_drawable\l# m_position\l# m_size\l# m_tooltip\l# m_enabled\l# m_visible\l# m_focused\l# m_drag\l# s_theme\l|+ Widget()\l+ ~Widget()\l+ Render()\l+ SetDrawable()\l+ GetDrawable()\l+ GetParent()\l+ GetParent()\l+ SetParent()\l+ AddChild()\l+ RemoveChild()\land 34 more...\l+ SetTheme()\l+ GetTheme()\l}" alt="" coords="40,5,157,405"/>
+</map>

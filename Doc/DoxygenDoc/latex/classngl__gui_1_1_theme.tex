@@ -1,0 +1,137 @@
+\hypertarget{classngl__gui_1_1_theme}{}\section{ngl\+\_\+gui\+:\+:Theme Class Reference}
+\label{classngl__gui_1_1_theme}\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+
+
+{\ttfamily \#include $<$Theme.\+h$>$}
+
+
+
+Collaboration diagram for ngl\+\_\+gui\+:\+:Theme\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classngl__gui_1_1_theme__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Drawable\+\_\+\+TP}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_drawable}{ec\+::\+Drawable}} $>$
+\item 
+using \mbox{\hyperlink{classngl__gui_1_1_theme_a036278e436de3fbf75bce9d5a6743b9b}{Material\+\_\+\+TP}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_material}{ec\+::\+Material}} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl__gui_1_1_theme_a402ddc15ec480f0f0a4f0ab9a459d51d}{Theme}} (\mbox{\hyperlink{classec_1_1_shader}{ec\+::\+Shader}} $\ast$shader)
+\item 
+virtual \mbox{\hyperlink{classngl__gui_1_1_theme_a7663964103c6d039cc8e6b49259667b9}{$\sim$\+Theme}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Drawable\+\_\+\+TP}} \mbox{\hyperlink{classngl__gui_1_1_theme_a604c0933d4676666dc312f0a108267e5}{m\+\_\+radio\+Button\+On}}
+\item 
+\mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Drawable\+\_\+\+TP}} \mbox{\hyperlink{classngl__gui_1_1_theme_a90a227c59aeb62fd64aaed7427911d95}{m\+\_\+radio\+Button\+Off}}
+\item 
+\mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Drawable\+\_\+\+TP}} \mbox{\hyperlink{classngl__gui_1_1_theme_a84f594991535796bf6f33a8bb91b1b26}{m\+\_\+checkbox\+On}}
+\item 
+\mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Drawable\+\_\+\+TP}} \mbox{\hyperlink{classngl__gui_1_1_theme_a684d50f27d853f91c17f6b2ba4b23614}{m\+\_\+checkbox\+Off}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classngl__gui_1_1_theme_a6b46d8c368e7112e64e5ff764766b9f0}{Add\+New\+Material}} (const std\+::string \&key, const std\+::string \&texture\+Path)
+\item 
+\mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Drawable\+\_\+\+TP}} \mbox{\hyperlink{classngl__gui_1_1_theme_a6a425e30c7a2183edc9155f7821bec63}{Create\+Drawable}} (const std\+::string \&material\+Key)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classngl__gui_1_1_theme_a036278e436de3fbf75bce9d5a6743b9b}{Material\+\_\+\+TP}} $>$ \mbox{\hyperlink{classngl__gui_1_1_theme_a63fc68b7dca52d444dcbecc0317ce038}{m\+\_\+materials}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}\label{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!Drawable\+\_\+\+TP@{Drawable\+\_\+\+TP}}
+\index{Drawable\+\_\+\+TP@{Drawable\+\_\+\+TP}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{Drawable\+\_\+\+TP}{Drawable\_TP}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{ngl\+\_\+gui\+::\+Theme\+::\+Drawable\+\_\+\+TP}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_drawable}{ec\+::\+Drawable}}$>$}
+
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a036278e436de3fbf75bce9d5a6743b9b}\label{classngl__gui_1_1_theme_a036278e436de3fbf75bce9d5a6743b9b}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!Material\+\_\+\+TP@{Material\+\_\+\+TP}}
+\index{Material\+\_\+\+TP@{Material\+\_\+\+TP}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{Material\+\_\+\+TP}{Material\_TP}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classngl__gui_1_1_theme_a036278e436de3fbf75bce9d5a6743b9b}{ngl\+\_\+gui\+::\+Theme\+::\+Material\+\_\+\+TP}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_material}{ec\+::\+Material}}$>$}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a402ddc15ec480f0f0a4f0ab9a459d51d}\label{classngl__gui_1_1_theme_a402ddc15ec480f0f0a4f0ab9a459d51d}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!Theme@{Theme}}
+\index{Theme@{Theme}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{Theme()}{Theme()}}
+{\footnotesize\ttfamily ngl\+\_\+gui\+::\+Theme\+::\+Theme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_shader}{ec\+::\+Shader}} $\ast$}]{shader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a7663964103c6d039cc8e6b49259667b9}\label{classngl__gui_1_1_theme_a7663964103c6d039cc8e6b49259667b9}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!````~Theme@{$\sim$\+Theme}}
+\index{````~Theme@{$\sim$\+Theme}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{$\sim$\+Theme()}{~Theme()}}
+{\footnotesize\ttfamily ngl\+\_\+gui\+::\+Theme\+::$\sim$\+Theme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a6b46d8c368e7112e64e5ff764766b9f0}\label{classngl__gui_1_1_theme_a6b46d8c368e7112e64e5ff764766b9f0}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!Add\+New\+Material@{Add\+New\+Material}}
+\index{Add\+New\+Material@{Add\+New\+Material}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{Add\+New\+Material()}{AddNewMaterial()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Theme\+::\+Add\+New\+Material (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{texture\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a6a425e30c7a2183edc9155f7821bec63}\label{classngl__gui_1_1_theme_a6a425e30c7a2183edc9155f7821bec63}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!Create\+Drawable@{Create\+Drawable}}
+\index{Create\+Drawable@{Create\+Drawable}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{Create\+Drawable()}{CreateDrawable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Theme\+::\+Drawable\+\_\+\+TP}} ngl\+\_\+gui\+::\+Theme\+::\+Create\+Drawable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{material\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a684d50f27d853f91c17f6b2ba4b23614}\label{classngl__gui_1_1_theme_a684d50f27d853f91c17f6b2ba4b23614}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!m\+\_\+checkbox\+Off@{m\+\_\+checkbox\+Off}}
+\index{m\+\_\+checkbox\+Off@{m\+\_\+checkbox\+Off}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{m\+\_\+checkbox\+Off}{m\_checkboxOff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Drawable\+\_\+\+TP}} ngl\+\_\+gui\+::\+Theme\+::m\+\_\+checkbox\+Off}
+
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a84f594991535796bf6f33a8bb91b1b26}\label{classngl__gui_1_1_theme_a84f594991535796bf6f33a8bb91b1b26}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!m\+\_\+checkbox\+On@{m\+\_\+checkbox\+On}}
+\index{m\+\_\+checkbox\+On@{m\+\_\+checkbox\+On}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{m\+\_\+checkbox\+On}{m\_checkboxOn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Drawable\+\_\+\+TP}} ngl\+\_\+gui\+::\+Theme\+::m\+\_\+checkbox\+On}
+
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a63fc68b7dca52d444dcbecc0317ce038}\label{classngl__gui_1_1_theme_a63fc68b7dca52d444dcbecc0317ce038}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!m\+\_\+materials@{m\+\_\+materials}}
+\index{m\+\_\+materials@{m\+\_\+materials}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{m\+\_\+materials}{m\_materials}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classngl__gui_1_1_theme_a036278e436de3fbf75bce9d5a6743b9b}{Material\+\_\+\+TP}}$>$ ngl\+\_\+gui\+::\+Theme\+::m\+\_\+materials\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a90a227c59aeb62fd64aaed7427911d95}\label{classngl__gui_1_1_theme_a90a227c59aeb62fd64aaed7427911d95}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!m\+\_\+radio\+Button\+Off@{m\+\_\+radio\+Button\+Off}}
+\index{m\+\_\+radio\+Button\+Off@{m\+\_\+radio\+Button\+Off}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{m\+\_\+radio\+Button\+Off}{m\_radioButtonOff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Drawable\+\_\+\+TP}} ngl\+\_\+gui\+::\+Theme\+::m\+\_\+radio\+Button\+Off}
+
+\mbox{\Hypertarget{classngl__gui_1_1_theme_a604c0933d4676666dc312f0a108267e5}\label{classngl__gui_1_1_theme_a604c0933d4676666dc312f0a108267e5}} 
+\index{ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}!m\+\_\+radio\+Button\+On@{m\+\_\+radio\+Button\+On}}
+\index{m\+\_\+radio\+Button\+On@{m\+\_\+radio\+Button\+On}!ngl\+\_\+gui\+::\+Theme@{ngl\+\_\+gui\+::\+Theme}}
+\subsubsection{\texorpdfstring{m\+\_\+radio\+Button\+On}{m\_radioButtonOn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl__gui_1_1_theme_a43741a39898ef4b14443b980a2e6d67c}{Drawable\+\_\+\+TP}} ngl\+\_\+gui\+::\+Theme\+::m\+\_\+radio\+Button\+On}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\mbox{\hyperlink{_theme_8h}{Theme.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\mbox{\hyperlink{_theme_8cpp}{Theme.\+cpp}}\end{DoxyCompactItemize}

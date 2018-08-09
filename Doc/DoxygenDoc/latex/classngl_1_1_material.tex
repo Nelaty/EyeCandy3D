@@ -1,0 +1,231 @@
+\hypertarget{classngl_1_1_material}{}\section{ngl\+:\+:Material Class Reference}
+\label{classngl_1_1_material}\index{ngl\+::\+Material@{ngl\+::\+Material}}
+
+
+{\ttfamily \#include $<$Material.\+h$>$}
+
+
+
+Collaboration diagram for ngl\+:\+:Material\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classngl_1_1_material__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl_1_1_material_a3a1d6baa46095dec622f60884bd8bcf3}{Material}} ()
+\item 
+virtual \mbox{\hyperlink{classngl_1_1_material_aedc30baa2578a4e3c2bc9bdd04fdc3cd}{$\sim$\+Material}} ()
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_aecd00cc584fe10e3204a9188b7c7d0bc}{Add\+Texture}} (const \mbox{\hyperlink{classngl_1_1_texture}{Texture}} \&texture)
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_a25af0f7899542fa17650f8c09b7f779b}{Remove\+Texture}} (const \mbox{\hyperlink{classngl_1_1_texture}{Texture}} \&texture)
+\item 
+\mbox{\hyperlink{classngl_1_1_texture}{Texture}} $\ast$ \mbox{\hyperlink{classngl_1_1_material_aa689d2ee9df223df1a8382aa88df4830}{Get\+Texture}} (const unsigned int index)
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classngl_1_1_texture}{Texture}} $>$ \& \mbox{\hyperlink{classngl_1_1_material_af4168533e1895702d02c923e333fa5fc}{Get\+Textures}} () const
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_a2d82dd4a9fd64d43c49fb1f28eff369c}{Set\+Has\+Texture}} (const bool has\+Texture)
+\item 
+bool \mbox{\hyperlink{classngl_1_1_material_abb9647254e15312d5640b705cbd36720}{Has\+Texture}} () const
+\item 
+bool \mbox{\hyperlink{classngl_1_1_material_a2bc319dc62d9d48b974edfb456271a85}{Add\+Diffuse\+Texture\+From\+Path}} (const char $\ast$path)
+\item 
+bool \mbox{\hyperlink{classngl_1_1_material_a59601e6f88d72d364ea4b6a4c51bb85a}{Add\+Specular\+Texture\+From\+Path}} (const char $\ast$path)
+\item 
+bool \mbox{\hyperlink{classngl_1_1_material_aa965616a454c9f7e403adf5fda91111c}{Add\+Bump\+Texture\+From\+Path}} (const char $\ast$path)
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_a70b0d53070310c583f02bb9a51cbb60e}{Set\+Color\+Ambient}} (const glm\+::vec4 \&color)
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_a5957c666d8203687ac9d07b9f58f13de}{Set\+Color\+Ambient}} (const float r, const float g, const float b, const float a)
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_a8086acfca809cb74fee5cef4348e6f97}{Set\+Color\+Diffuse}} (const glm\+::vec4 \&color)
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_aa0fbefc39b5a90677aef7b13362687d0}{Set\+Color\+Diffuse}} (const float r, const float g, const float b, const float a)
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_a548c2f56f44e0f762a87a0c2c50117f6}{Set\+Color\+Specular}} (const glm\+::vec4 \&color)
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_a3915a8e436cb8231ac44f8368a7a8013}{Set\+Color\+Specular}} (const float r, const float g, const float b, const float a)
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_af2299da5c55bb6c8650b255ac3677062}{Set\+Color\+Emissive}} (const glm\+::vec4 \&color)
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_ad1e67b68a859bd6978151124b5e6db57}{Set\+Color\+Emissive}} (const float r, const float g, const float b, const float a)
+\item 
+const glm\+::vec4 \& \mbox{\hyperlink{classngl_1_1_material_a56f725cae9319ced376fa7dc5019a265}{Get\+Color\+Ambient}} () const
+\item 
+const glm\+::vec4 \& \mbox{\hyperlink{classngl_1_1_material_a816843cb74cd2cfd3d08f9c6c8640818}{Get\+Color\+Diffuse}} () const
+\item 
+const glm\+::vec4 \& \mbox{\hyperlink{classngl_1_1_material_aeebd1ebcfd6254bb9a71dd4fb561a94b}{Get\+Color\+Specular}} () const
+\item 
+const glm\+::vec4 \& \mbox{\hyperlink{classngl_1_1_material_aa2ab47664318d52d179ba2cdbbe19bfe}{Get\+Color\+Emissive}} () const
+\item 
+void \mbox{\hyperlink{classngl_1_1_material_a45ac582dba49a57f1824145fb80d472b}{Set\+Shininess}} (const float shininess)
+\item 
+float \mbox{\hyperlink{classngl_1_1_material_acbb0be410c02db29c096e078ea3d94a1}{Get\+Shininess}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classngl_1_1_material_a3a1d6baa46095dec622f60884bd8bcf3}\label{classngl_1_1_material_a3a1d6baa46095dec622f60884bd8bcf3}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Material@{Material}}
+\index{Material@{Material}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Material()}{Material()}}
+{\footnotesize\ttfamily ngl\+::\+Material\+::\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classngl_1_1_material_aedc30baa2578a4e3c2bc9bdd04fdc3cd}\label{classngl_1_1_material_aedc30baa2578a4e3c2bc9bdd04fdc3cd}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!````~Material@{$\sim$\+Material}}
+\index{````~Material@{$\sim$\+Material}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{$\sim$\+Material()}{~Material()}}
+{\footnotesize\ttfamily ngl\+::\+Material\+::$\sim$\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classngl_1_1_material_aa965616a454c9f7e403adf5fda91111c}\label{classngl_1_1_material_aa965616a454c9f7e403adf5fda91111c}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Add\+Bump\+Texture\+From\+Path@{Add\+Bump\+Texture\+From\+Path}}
+\index{Add\+Bump\+Texture\+From\+Path@{Add\+Bump\+Texture\+From\+Path}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Add\+Bump\+Texture\+From\+Path()}{AddBumpTextureFromPath()}}
+{\footnotesize\ttfamily bool ngl\+::\+Material\+::\+Add\+Bump\+Texture\+From\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_a2bc319dc62d9d48b974edfb456271a85}\label{classngl_1_1_material_a2bc319dc62d9d48b974edfb456271a85}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Add\+Diffuse\+Texture\+From\+Path@{Add\+Diffuse\+Texture\+From\+Path}}
+\index{Add\+Diffuse\+Texture\+From\+Path@{Add\+Diffuse\+Texture\+From\+Path}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Add\+Diffuse\+Texture\+From\+Path()}{AddDiffuseTextureFromPath()}}
+{\footnotesize\ttfamily bool ngl\+::\+Material\+::\+Add\+Diffuse\+Texture\+From\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_a59601e6f88d72d364ea4b6a4c51bb85a}\label{classngl_1_1_material_a59601e6f88d72d364ea4b6a4c51bb85a}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Add\+Specular\+Texture\+From\+Path@{Add\+Specular\+Texture\+From\+Path}}
+\index{Add\+Specular\+Texture\+From\+Path@{Add\+Specular\+Texture\+From\+Path}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Add\+Specular\+Texture\+From\+Path()}{AddSpecularTextureFromPath()}}
+{\footnotesize\ttfamily bool ngl\+::\+Material\+::\+Add\+Specular\+Texture\+From\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_aecd00cc584fe10e3204a9188b7c7d0bc}\label{classngl_1_1_material_aecd00cc584fe10e3204a9188b7c7d0bc}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Add\+Texture@{Add\+Texture}}
+\index{Add\+Texture@{Add\+Texture}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Add\+Texture()}{AddTexture()}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Add\+Texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classngl_1_1_texture}{Texture}} \&}]{texture }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_a56f725cae9319ced376fa7dc5019a265}\label{classngl_1_1_material_a56f725cae9319ced376fa7dc5019a265}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Get\+Color\+Ambient@{Get\+Color\+Ambient}}
+\index{Get\+Color\+Ambient@{Get\+Color\+Ambient}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Get\+Color\+Ambient()}{GetColorAmbient()}}
+{\footnotesize\ttfamily const glm\+::vec4 \& ngl\+::\+Material\+::\+Get\+Color\+Ambient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classngl_1_1_material_a816843cb74cd2cfd3d08f9c6c8640818}\label{classngl_1_1_material_a816843cb74cd2cfd3d08f9c6c8640818}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Get\+Color\+Diffuse@{Get\+Color\+Diffuse}}
+\index{Get\+Color\+Diffuse@{Get\+Color\+Diffuse}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Get\+Color\+Diffuse()}{GetColorDiffuse()}}
+{\footnotesize\ttfamily const glm\+::vec4 \& ngl\+::\+Material\+::\+Get\+Color\+Diffuse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classngl_1_1_material_aa2ab47664318d52d179ba2cdbbe19bfe}\label{classngl_1_1_material_aa2ab47664318d52d179ba2cdbbe19bfe}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Get\+Color\+Emissive@{Get\+Color\+Emissive}}
+\index{Get\+Color\+Emissive@{Get\+Color\+Emissive}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Get\+Color\+Emissive()}{GetColorEmissive()}}
+{\footnotesize\ttfamily const glm\+::vec4 \& ngl\+::\+Material\+::\+Get\+Color\+Emissive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classngl_1_1_material_aeebd1ebcfd6254bb9a71dd4fb561a94b}\label{classngl_1_1_material_aeebd1ebcfd6254bb9a71dd4fb561a94b}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Get\+Color\+Specular@{Get\+Color\+Specular}}
+\index{Get\+Color\+Specular@{Get\+Color\+Specular}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Get\+Color\+Specular()}{GetColorSpecular()}}
+{\footnotesize\ttfamily const glm\+::vec4 \& ngl\+::\+Material\+::\+Get\+Color\+Specular (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classngl_1_1_material_acbb0be410c02db29c096e078ea3d94a1}\label{classngl_1_1_material_acbb0be410c02db29c096e078ea3d94a1}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Get\+Shininess@{Get\+Shininess}}
+\index{Get\+Shininess@{Get\+Shininess}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Get\+Shininess()}{GetShininess()}}
+{\footnotesize\ttfamily float ngl\+::\+Material\+::\+Get\+Shininess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classngl_1_1_material_aa689d2ee9df223df1a8382aa88df4830}\label{classngl_1_1_material_aa689d2ee9df223df1a8382aa88df4830}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Get\+Texture@{Get\+Texture}}
+\index{Get\+Texture@{Get\+Texture}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Get\+Texture()}{GetTexture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl_1_1_texture}{ngl\+::\+Texture}} $\ast$ ngl\+::\+Material\+::\+Get\+Texture (\begin{DoxyParamCaption}\item[{const unsigned int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_af4168533e1895702d02c923e333fa5fc}\label{classngl_1_1_material_af4168533e1895702d02c923e333fa5fc}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Get\+Textures@{Get\+Textures}}
+\index{Get\+Textures@{Get\+Textures}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Get\+Textures()}{GetTextures()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classngl_1_1_texture}{Texture}} $>$ \& ngl\+::\+Material\+::\+Get\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classngl_1_1_material_abb9647254e15312d5640b705cbd36720}\label{classngl_1_1_material_abb9647254e15312d5640b705cbd36720}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Has\+Texture@{Has\+Texture}}
+\index{Has\+Texture@{Has\+Texture}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Has\+Texture()}{HasTexture()}}
+{\footnotesize\ttfamily bool ngl\+::\+Material\+::\+Has\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classngl_1_1_material_a25af0f7899542fa17650f8c09b7f779b}\label{classngl_1_1_material_a25af0f7899542fa17650f8c09b7f779b}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Remove\+Texture@{Remove\+Texture}}
+\index{Remove\+Texture@{Remove\+Texture}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Remove\+Texture()}{RemoveTexture()}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Remove\+Texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classngl_1_1_texture}{Texture}} \&}]{texture }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_a70b0d53070310c583f02bb9a51cbb60e}\label{classngl_1_1_material_a70b0d53070310c583f02bb9a51cbb60e}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Set\+Color\+Ambient@{Set\+Color\+Ambient}}
+\index{Set\+Color\+Ambient@{Set\+Color\+Ambient}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Set\+Color\+Ambient()}{SetColorAmbient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Set\+Color\+Ambient (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_a5957c666d8203687ac9d07b9f58f13de}\label{classngl_1_1_material_a5957c666d8203687ac9d07b9f58f13de}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Set\+Color\+Ambient@{Set\+Color\+Ambient}}
+\index{Set\+Color\+Ambient@{Set\+Color\+Ambient}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Set\+Color\+Ambient()}{SetColorAmbient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Set\+Color\+Ambient (\begin{DoxyParamCaption}\item[{const float}]{r,  }\item[{const float}]{g,  }\item[{const float}]{b,  }\item[{const float}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_a8086acfca809cb74fee5cef4348e6f97}\label{classngl_1_1_material_a8086acfca809cb74fee5cef4348e6f97}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Set\+Color\+Diffuse@{Set\+Color\+Diffuse}}
+\index{Set\+Color\+Diffuse@{Set\+Color\+Diffuse}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Set\+Color\+Diffuse()}{SetColorDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Set\+Color\+Diffuse (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_aa0fbefc39b5a90677aef7b13362687d0}\label{classngl_1_1_material_aa0fbefc39b5a90677aef7b13362687d0}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Set\+Color\+Diffuse@{Set\+Color\+Diffuse}}
+\index{Set\+Color\+Diffuse@{Set\+Color\+Diffuse}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Set\+Color\+Diffuse()}{SetColorDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Set\+Color\+Diffuse (\begin{DoxyParamCaption}\item[{const float}]{r,  }\item[{const float}]{g,  }\item[{const float}]{b,  }\item[{const float}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_af2299da5c55bb6c8650b255ac3677062}\label{classngl_1_1_material_af2299da5c55bb6c8650b255ac3677062}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Set\+Color\+Emissive@{Set\+Color\+Emissive}}
+\index{Set\+Color\+Emissive@{Set\+Color\+Emissive}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Set\+Color\+Emissive()}{SetColorEmissive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Set\+Color\+Emissive (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_ad1e67b68a859bd6978151124b5e6db57}\label{classngl_1_1_material_ad1e67b68a859bd6978151124b5e6db57}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Set\+Color\+Emissive@{Set\+Color\+Emissive}}
+\index{Set\+Color\+Emissive@{Set\+Color\+Emissive}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Set\+Color\+Emissive()}{SetColorEmissive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Set\+Color\+Emissive (\begin{DoxyParamCaption}\item[{const float}]{r,  }\item[{const float}]{g,  }\item[{const float}]{b,  }\item[{const float}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_a548c2f56f44e0f762a87a0c2c50117f6}\label{classngl_1_1_material_a548c2f56f44e0f762a87a0c2c50117f6}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Set\+Color\+Specular@{Set\+Color\+Specular}}
+\index{Set\+Color\+Specular@{Set\+Color\+Specular}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Set\+Color\+Specular()}{SetColorSpecular()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Set\+Color\+Specular (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_a3915a8e436cb8231ac44f8368a7a8013}\label{classngl_1_1_material_a3915a8e436cb8231ac44f8368a7a8013}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Set\+Color\+Specular@{Set\+Color\+Specular}}
+\index{Set\+Color\+Specular@{Set\+Color\+Specular}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Set\+Color\+Specular()}{SetColorSpecular()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Set\+Color\+Specular (\begin{DoxyParamCaption}\item[{const float}]{r,  }\item[{const float}]{g,  }\item[{const float}]{b,  }\item[{const float}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_a2d82dd4a9fd64d43c49fb1f28eff369c}\label{classngl_1_1_material_a2d82dd4a9fd64d43c49fb1f28eff369c}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Set\+Has\+Texture@{Set\+Has\+Texture}}
+\index{Set\+Has\+Texture@{Set\+Has\+Texture}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Set\+Has\+Texture()}{SetHasTexture()}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Set\+Has\+Texture (\begin{DoxyParamCaption}\item[{const bool}]{has\+Texture }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_material_a45ac582dba49a57f1824145fb80d472b}\label{classngl_1_1_material_a45ac582dba49a57f1824145fb80d472b}} 
+\index{ngl\+::\+Material@{ngl\+::\+Material}!Set\+Shininess@{Set\+Shininess}}
+\index{Set\+Shininess@{Set\+Shininess}!ngl\+::\+Material@{ngl\+::\+Material}}
+\subsubsection{\texorpdfstring{Set\+Shininess()}{SetShininess()}}
+{\footnotesize\ttfamily void ngl\+::\+Material\+::\+Set\+Shininess (\begin{DoxyParamCaption}\item[{const float}]{shininess }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+Core/\mbox{\hyperlink{_material_8h}{Material.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_material_8cpp}{Material.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,267 @@
+\hypertarget{classutl_1_1_file_logger}{}\section{utl\+:\+:File\+Logger Class Reference}
+\label{classutl_1_1_file_logger}\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+
+
+{\ttfamily \#include $<$File\+Logger.\+h$>$}
+
+
+
+Collaboration diagram for utl\+:\+:File\+Logger\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classutl_1_1_file_logger__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classutl_1_1_file_logger_af863c2a6176181b6c252ff91a46760fa}{File\+Logger}} ()
+\item 
+\mbox{\hyperlink{classutl_1_1_file_logger_a2bbc4a7a41145e14efaafb9563a8a869}{$\sim$\+File\+Logger}} ()
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_affe578f56cb67c168db89edf6b93497f}{Open}} (const char $\ast$filepath)
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_a1df768e7a0615fdbb6bf8d3a9b459c75}{Close}} ()
+\item 
+{\footnotesize template$<$class T , class... Args$>$ }\\void \mbox{\hyperlink{classutl_1_1_file_logger_aafcfaedf7477ef92fa0bfc9153b06fdb}{Append}} (T arg, Args... args)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{classutl_1_1_file_logger_a04df8807b424079163a1f6780ea339ef}{Append}} (T arg)
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_a27f64e20da2b923600fd3fda9b1ebf44}{Apply\+Indentation}} ()
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_ae4a25d385148ae2ebb310e779a23c4aa}{New\+Line}} ()
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_a286c8ae460735757b7948cf99d418ed5}{Indent\+Tab}} (const unsigned int steps)
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_ab714a77af672c562512044198be30885}{Indent\+Space}} (const unsigned int spaces)
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_aec7cd859010754605ecbcded93815eca}{Set\+Indentation\+Fill}} (const char fill\+Char)
+\item 
+char \mbox{\hyperlink{classutl_1_1_file_logger_a1352f5759c245eec3650271dd7b10459}{Get\+Indentation\+Fill}} () const
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_a8ee37650826800cf02719c2e67d1bc16}{Indent\+Reverse\+Tab}} (const unsigned int steps)
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_aae921d2a4b24dd2639575208f101ac4a}{Indent\+Reverse\+Space}} (const unsigned int spaces)
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_a5cc294f87e85875a5ec420bf4b60f944}{Reset\+Indentation}} ()
+\item 
+unsigned int \mbox{\hyperlink{classutl_1_1_file_logger_ad9a89d0c4453cff4d48253d09020daf8}{Get\+Current\+Indentation}} () const
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_ae8ce6a73b455cf5b865121ded27813d7}{Set\+Indentation}} (const unsigned int indentation)
+\item 
+unsigned int \mbox{\hyperlink{classutl_1_1_file_logger_a309e5f94ba4c5ea6e41bb7c600682e38}{Get\+Indentation\+Step}} () const
+\item 
+void \mbox{\hyperlink{classutl_1_1_file_logger_a69d64f348cae396095f6b4cff1955636}{Set\+Indentation\+Step}} (const unsigned int step)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classutl_1_1_file_logger_a05b05806b51da47772c9af14c4dabf41}{Write\+To\+File}} (const char $\ast$filepath, const char $\ast$data)
+\item 
+static std\+::string \mbox{\hyperlink{classutl_1_1_file_logger_a1346d06e73a06269bc75dd8a7f007f7a}{Get\+System\+Date\+Formatted}} ()
+\item 
+static std\+::string \mbox{\hyperlink{classutl_1_1_file_logger_a6d86887d521a139f467cd8a68170a56b}{Get\+System\+Date\+Formatted}} (const char divider)
+\item 
+static std\+::string \mbox{\hyperlink{classutl_1_1_file_logger_a5333d4596df47edfe4e625aca913d89b}{Get\+System\+Time\+Formatted}} ()
+\item 
+static std\+::string \mbox{\hyperlink{classutl_1_1_file_logger_ac5bee0b767adbe81ad20ce93b750c971}{Get\+System\+Time\+Formatted}} (const char divider)
+\item 
+static tm \mbox{\hyperlink{classutl_1_1_file_logger_ac22f71f18b679450b591edc05baa8956}{Get\+System\+Date\+Time}} ()
+\item 
+static std\+::string \mbox{\hyperlink{classutl_1_1_file_logger_a3287f373cc5a9766637eaad183d7eb88}{Get\+System\+Date\+Time\+Formatted}} ()
+\item 
+static std\+::string \mbox{\hyperlink{classutl_1_1_file_logger_a6819ec578b8a8605d3b3f47d91a30a3f}{Get\+System\+Date\+Time\+Formatted}} (const char date\+Divider, const char date\+Time\+Divider, const char time\+Divider)
+\item 
+static void \mbox{\hyperlink{classutl_1_1_file_logger_a273c189bbb9dc395462c01a63e318b7c}{Set\+Date\+Divisor}} (const char divider)
+\item 
+static void \mbox{\hyperlink{classutl_1_1_file_logger_a4a683c7f8d2a08e42be4688f8f117a05}{Set\+Time\+Divisor}} (const char divider)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classutl_1_1_file_logger_af863c2a6176181b6c252ff91a46760fa}\label{classutl_1_1_file_logger_af863c2a6176181b6c252ff91a46760fa}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!File\+Logger@{File\+Logger}}
+\index{File\+Logger@{File\+Logger}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{File\+Logger()}{FileLogger()}}
+{\footnotesize\ttfamily utl\+::\+File\+Logger\+::\+File\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a2bbc4a7a41145e14efaafb9563a8a869}\label{classutl_1_1_file_logger_a2bbc4a7a41145e14efaafb9563a8a869}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!````~File\+Logger@{$\sim$\+File\+Logger}}
+\index{````~File\+Logger@{$\sim$\+File\+Logger}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{$\sim$\+File\+Logger()}{~FileLogger()}}
+{\footnotesize\ttfamily utl\+::\+File\+Logger\+::$\sim$\+File\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classutl_1_1_file_logger_aafcfaedf7477ef92fa0bfc9153b06fdb}\label{classutl_1_1_file_logger_aafcfaedf7477ef92fa0bfc9153b06fdb}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Append@{Append}}
+\index{Append@{Append}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Append()}{Append()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class... Args$>$ \\
+void utl\+::\+File\+Logger\+::\+Append (\begin{DoxyParamCaption}\item[{T}]{arg,  }\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a04df8807b424079163a1f6780ea339ef}\label{classutl_1_1_file_logger_a04df8807b424079163a1f6780ea339ef}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Append@{Append}}
+\index{Append@{Append}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Append()}{Append()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void utl\+::\+File\+Logger\+::\+Append (\begin{DoxyParamCaption}\item[{T}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a27f64e20da2b923600fd3fda9b1ebf44}\label{classutl_1_1_file_logger_a27f64e20da2b923600fd3fda9b1ebf44}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Apply\+Indentation@{Apply\+Indentation}}
+\index{Apply\+Indentation@{Apply\+Indentation}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Apply\+Indentation()}{ApplyIndentation()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Apply\+Indentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a1df768e7a0615fdbb6bf8d3a9b459c75}\label{classutl_1_1_file_logger_a1df768e7a0615fdbb6bf8d3a9b459c75}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Close@{Close}}
+\index{Close@{Close}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_ad9a89d0c4453cff4d48253d09020daf8}\label{classutl_1_1_file_logger_ad9a89d0c4453cff4d48253d09020daf8}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Get\+Current\+Indentation@{Get\+Current\+Indentation}}
+\index{Get\+Current\+Indentation@{Get\+Current\+Indentation}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Get\+Current\+Indentation()}{GetCurrentIndentation()}}
+{\footnotesize\ttfamily unsigned int utl\+::\+File\+Logger\+::\+Get\+Current\+Indentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a1352f5759c245eec3650271dd7b10459}\label{classutl_1_1_file_logger_a1352f5759c245eec3650271dd7b10459}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Get\+Indentation\+Fill@{Get\+Indentation\+Fill}}
+\index{Get\+Indentation\+Fill@{Get\+Indentation\+Fill}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Get\+Indentation\+Fill()}{GetIndentationFill()}}
+{\footnotesize\ttfamily char utl\+::\+File\+Logger\+::\+Get\+Indentation\+Fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a309e5f94ba4c5ea6e41bb7c600682e38}\label{classutl_1_1_file_logger_a309e5f94ba4c5ea6e41bb7c600682e38}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Get\+Indentation\+Step@{Get\+Indentation\+Step}}
+\index{Get\+Indentation\+Step@{Get\+Indentation\+Step}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Get\+Indentation\+Step()}{GetIndentationStep()}}
+{\footnotesize\ttfamily unsigned int utl\+::\+File\+Logger\+::\+Get\+Indentation\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a1346d06e73a06269bc75dd8a7f007f7a}\label{classutl_1_1_file_logger_a1346d06e73a06269bc75dd8a7f007f7a}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Get\+System\+Date\+Formatted@{Get\+System\+Date\+Formatted}}
+\index{Get\+System\+Date\+Formatted@{Get\+System\+Date\+Formatted}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Get\+System\+Date\+Formatted()}{GetSystemDateFormatted()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string utl\+::\+File\+Logger\+::\+Get\+System\+Date\+Formatted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a6d86887d521a139f467cd8a68170a56b}\label{classutl_1_1_file_logger_a6d86887d521a139f467cd8a68170a56b}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Get\+System\+Date\+Formatted@{Get\+System\+Date\+Formatted}}
+\index{Get\+System\+Date\+Formatted@{Get\+System\+Date\+Formatted}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Get\+System\+Date\+Formatted()}{GetSystemDateFormatted()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string utl\+::\+File\+Logger\+::\+Get\+System\+Date\+Formatted (\begin{DoxyParamCaption}\item[{const char}]{divider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_ac22f71f18b679450b591edc05baa8956}\label{classutl_1_1_file_logger_ac22f71f18b679450b591edc05baa8956}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Get\+System\+Date\+Time@{Get\+System\+Date\+Time}}
+\index{Get\+System\+Date\+Time@{Get\+System\+Date\+Time}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Get\+System\+Date\+Time()}{GetSystemDateTime()}}
+{\footnotesize\ttfamily tm utl\+::\+File\+Logger\+::\+Get\+System\+Date\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a3287f373cc5a9766637eaad183d7eb88}\label{classutl_1_1_file_logger_a3287f373cc5a9766637eaad183d7eb88}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Get\+System\+Date\+Time\+Formatted@{Get\+System\+Date\+Time\+Formatted}}
+\index{Get\+System\+Date\+Time\+Formatted@{Get\+System\+Date\+Time\+Formatted}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Get\+System\+Date\+Time\+Formatted()}{GetSystemDateTimeFormatted()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string utl\+::\+File\+Logger\+::\+Get\+System\+Date\+Time\+Formatted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a6819ec578b8a8605d3b3f47d91a30a3f}\label{classutl_1_1_file_logger_a6819ec578b8a8605d3b3f47d91a30a3f}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Get\+System\+Date\+Time\+Formatted@{Get\+System\+Date\+Time\+Formatted}}
+\index{Get\+System\+Date\+Time\+Formatted@{Get\+System\+Date\+Time\+Formatted}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Get\+System\+Date\+Time\+Formatted()}{GetSystemDateTimeFormatted()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string utl\+::\+File\+Logger\+::\+Get\+System\+Date\+Time\+Formatted (\begin{DoxyParamCaption}\item[{const char}]{date\+Divider,  }\item[{const char}]{date\+Time\+Divider,  }\item[{const char}]{time\+Divider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a5333d4596df47edfe4e625aca913d89b}\label{classutl_1_1_file_logger_a5333d4596df47edfe4e625aca913d89b}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Get\+System\+Time\+Formatted@{Get\+System\+Time\+Formatted}}
+\index{Get\+System\+Time\+Formatted@{Get\+System\+Time\+Formatted}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Get\+System\+Time\+Formatted()}{GetSystemTimeFormatted()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string utl\+::\+File\+Logger\+::\+Get\+System\+Time\+Formatted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_ac5bee0b767adbe81ad20ce93b750c971}\label{classutl_1_1_file_logger_ac5bee0b767adbe81ad20ce93b750c971}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Get\+System\+Time\+Formatted@{Get\+System\+Time\+Formatted}}
+\index{Get\+System\+Time\+Formatted@{Get\+System\+Time\+Formatted}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Get\+System\+Time\+Formatted()}{GetSystemTimeFormatted()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string utl\+::\+File\+Logger\+::\+Get\+System\+Time\+Formatted (\begin{DoxyParamCaption}\item[{const char}]{divider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_aae921d2a4b24dd2639575208f101ac4a}\label{classutl_1_1_file_logger_aae921d2a4b24dd2639575208f101ac4a}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Indent\+Reverse\+Space@{Indent\+Reverse\+Space}}
+\index{Indent\+Reverse\+Space@{Indent\+Reverse\+Space}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Indent\+Reverse\+Space()}{IndentReverseSpace()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Indent\+Reverse\+Space (\begin{DoxyParamCaption}\item[{const unsigned int}]{spaces }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a8ee37650826800cf02719c2e67d1bc16}\label{classutl_1_1_file_logger_a8ee37650826800cf02719c2e67d1bc16}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Indent\+Reverse\+Tab@{Indent\+Reverse\+Tab}}
+\index{Indent\+Reverse\+Tab@{Indent\+Reverse\+Tab}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Indent\+Reverse\+Tab()}{IndentReverseTab()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Indent\+Reverse\+Tab (\begin{DoxyParamCaption}\item[{const unsigned int}]{steps }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_ab714a77af672c562512044198be30885}\label{classutl_1_1_file_logger_ab714a77af672c562512044198be30885}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Indent\+Space@{Indent\+Space}}
+\index{Indent\+Space@{Indent\+Space}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Indent\+Space()}{IndentSpace()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Indent\+Space (\begin{DoxyParamCaption}\item[{const unsigned int}]{spaces }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a286c8ae460735757b7948cf99d418ed5}\label{classutl_1_1_file_logger_a286c8ae460735757b7948cf99d418ed5}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Indent\+Tab@{Indent\+Tab}}
+\index{Indent\+Tab@{Indent\+Tab}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Indent\+Tab()}{IndentTab()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Indent\+Tab (\begin{DoxyParamCaption}\item[{const unsigned int}]{steps }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_ae4a25d385148ae2ebb310e779a23c4aa}\label{classutl_1_1_file_logger_ae4a25d385148ae2ebb310e779a23c4aa}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!New\+Line@{New\+Line}}
+\index{New\+Line@{New\+Line}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{New\+Line()}{NewLine()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+New\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_affe578f56cb67c168db89edf6b93497f}\label{classutl_1_1_file_logger_affe578f56cb67c168db89edf6b93497f}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Open@{Open}}
+\index{Open@{Open}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filepath }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a5cc294f87e85875a5ec420bf4b60f944}\label{classutl_1_1_file_logger_a5cc294f87e85875a5ec420bf4b60f944}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Reset\+Indentation@{Reset\+Indentation}}
+\index{Reset\+Indentation@{Reset\+Indentation}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Reset\+Indentation()}{ResetIndentation()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Reset\+Indentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a273c189bbb9dc395462c01a63e318b7c}\label{classutl_1_1_file_logger_a273c189bbb9dc395462c01a63e318b7c}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Set\+Date\+Divisor@{Set\+Date\+Divisor}}
+\index{Set\+Date\+Divisor@{Set\+Date\+Divisor}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Set\+Date\+Divisor()}{SetDateDivisor()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Set\+Date\+Divisor (\begin{DoxyParamCaption}\item[{const char}]{divider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_ae8ce6a73b455cf5b865121ded27813d7}\label{classutl_1_1_file_logger_ae8ce6a73b455cf5b865121ded27813d7}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Set\+Indentation@{Set\+Indentation}}
+\index{Set\+Indentation@{Set\+Indentation}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Set\+Indentation()}{SetIndentation()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Set\+Indentation (\begin{DoxyParamCaption}\item[{const unsigned int}]{indentation }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_aec7cd859010754605ecbcded93815eca}\label{classutl_1_1_file_logger_aec7cd859010754605ecbcded93815eca}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Set\+Indentation\+Fill@{Set\+Indentation\+Fill}}
+\index{Set\+Indentation\+Fill@{Set\+Indentation\+Fill}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Set\+Indentation\+Fill()}{SetIndentationFill()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Set\+Indentation\+Fill (\begin{DoxyParamCaption}\item[{const char}]{fill\+Char }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a69d64f348cae396095f6b4cff1955636}\label{classutl_1_1_file_logger_a69d64f348cae396095f6b4cff1955636}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Set\+Indentation\+Step@{Set\+Indentation\+Step}}
+\index{Set\+Indentation\+Step@{Set\+Indentation\+Step}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Set\+Indentation\+Step()}{SetIndentationStep()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Set\+Indentation\+Step (\begin{DoxyParamCaption}\item[{const unsigned int}]{step }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a4a683c7f8d2a08e42be4688f8f117a05}\label{classutl_1_1_file_logger_a4a683c7f8d2a08e42be4688f8f117a05}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Set\+Time\+Divisor@{Set\+Time\+Divisor}}
+\index{Set\+Time\+Divisor@{Set\+Time\+Divisor}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Set\+Time\+Divisor()}{SetTimeDivisor()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Set\+Time\+Divisor (\begin{DoxyParamCaption}\item[{const char}]{divider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classutl_1_1_file_logger_a05b05806b51da47772c9af14c4dabf41}\label{classutl_1_1_file_logger_a05b05806b51da47772c9af14c4dabf41}} 
+\index{utl\+::\+File\+Logger@{utl\+::\+File\+Logger}!Write\+To\+File@{Write\+To\+File}}
+\index{Write\+To\+File@{Write\+To\+File}!utl\+::\+File\+Logger@{utl\+::\+File\+Logger}}
+\subsubsection{\texorpdfstring{Write\+To\+File()}{WriteToFile()}}
+{\footnotesize\ttfamily void utl\+::\+File\+Logger\+::\+Write\+To\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filepath,  }\item[{const char $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\mbox{\hyperlink{_file_logger_8h}{File\+Logger.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Utilities/\mbox{\hyperlink{_file_logger_8cpp}{File\+Logger.\+cpp}}\end{DoxyCompactItemize}

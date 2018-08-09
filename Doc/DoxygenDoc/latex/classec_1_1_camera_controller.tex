@@ -1,0 +1,153 @@
+\hypertarget{classec_1_1_camera_controller}{}\section{ec\+:\+:Camera\+Controller Class Reference}
+\label{classec_1_1_camera_controller}\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+
+
+{\ttfamily \#include $<$Camera\+Controller.\+h$>$}
+
+
+
+Inheritance diagram for ec\+:\+:Camera\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classec_1_1_camera_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+:\+:Camera\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_camera_controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_camera_controller_a53fd061c49374fd8f1194cecac1e35aa}{Camera\+Controller}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_camera_controller_a9edd8fff13533c84c7ea8f7f10f16580}{Camera\+Controller}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera)
+\item 
+\mbox{\hyperlink{classec_1_1_camera_controller_a3229bd664f0d7d00b90fc3c9a852768c}{$\sim$\+Camera\+Controller}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_a0f9378014e5501eec0af79fd7006a4d7}{Tick}} (const float time\+Delta)
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_a3cbf6829af7035fa648ef9283f1f6b34}{Set\+Camera}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera)
+\item 
+\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$ \mbox{\hyperlink{classec_1_1_camera_controller_a25865e00f787b3e086167e455cbfc3d7}{Get\+Camera}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_camera_controller_a0e2d455602581a484daf81bdb60a01bc}{Process\+Event}} (const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&event) override
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_a955335b57959a45bf2b67c02ed939dad}{Process\+Mouse\+Movement}} (const \mbox{\hyperlink{structec_1_1_mouse_move_event}{Mouse\+Move\+Event}} \&event)
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_ac96fb273f1f776558ec24a8cbdb2e476}{Process\+Mouse\+Button\+Down}} (const \mbox{\hyperlink{structec_1_1_mouse_button_event}{Mouse\+Button\+Event}} \&event)
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_af5c214b7775bca49f2b6e2acee2cd703}{Process\+Mouse\+Button\+Up}} (const \mbox{\hyperlink{structec_1_1_mouse_button_event}{Mouse\+Button\+Event}} \&event)
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_ab6057133b85ca670fa594d1d1cbadf0c}{Process\+Key\+Down\+Input}} (const \mbox{\hyperlink{structec_1_1_key_event}{Key\+Event}} \&event)
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_af205398ddb5e79bd64302e676ced3051}{Process\+Key\+Up\+Input}} (const \mbox{\hyperlink{structec_1_1_key_event}{Key\+Event}} \&event)
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_a5aef7fbf580d98ea998bb0f31d3f53aa}{Process\+Scroll\+Input}} (const \mbox{\hyperlink{structec_1_1_mouse_scroll_event}{Mouse\+Scroll\+Event}} \&event)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_camera_controller_a53fd061c49374fd8f1194cecac1e35aa}\label{classec_1_1_camera_controller_a53fd061c49374fd8f1194cecac1e35aa}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Camera\+Controller@{Camera\+Controller}}
+\index{Camera\+Controller@{Camera\+Controller}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Camera\+Controller()}{CameraController()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ec\+::\+Camera\+Controller\+::\+Camera\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a9edd8fff13533c84c7ea8f7f10f16580}\label{classec_1_1_camera_controller_a9edd8fff13533c84c7ea8f7f10f16580}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Camera\+Controller@{Camera\+Controller}}
+\index{Camera\+Controller@{Camera\+Controller}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Camera\+Controller()}{CameraController()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ec\+::\+Camera\+Controller\+::\+Camera\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a3229bd664f0d7d00b90fc3c9a852768c}\label{classec_1_1_camera_controller_a3229bd664f0d7d00b90fc3c9a852768c}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!````~Camera\+Controller@{$\sim$\+Camera\+Controller}}
+\index{````~Camera\+Controller@{$\sim$\+Camera\+Controller}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{$\sim$\+Camera\+Controller()}{~CameraController()}}
+{\footnotesize\ttfamily ec\+::\+Camera\+Controller\+::$\sim$\+Camera\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_camera_controller_a25865e00f787b3e086167e455cbfc3d7}\label{classec_1_1_camera_controller_a25865e00f787b3e086167e455cbfc3d7}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Get\+Camera@{Get\+Camera}}
+\index{Get\+Camera@{Get\+Camera}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Get\+Camera()}{GetCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_camera}{ec\+::\+Camera}} $\ast$ ec\+::\+Camera\+Controller\+::\+Get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a0e2d455602581a484daf81bdb60a01bc}\label{classec_1_1_camera_controller_a0e2d455602581a484daf81bdb60a01bc}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Process\+Event@{Process\+Event}}
+\index{Process\+Event@{Process\+Event}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Process\+Event()}{ProcessEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::\+Process\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec_1_1_input_listener_a25ef07efb72ac5c880cbca876ddfe66a}{ec\+::\+Input\+Listener}}.
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_ab6057133b85ca670fa594d1d1cbadf0c}\label{classec_1_1_camera_controller_ab6057133b85ca670fa594d1d1cbadf0c}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Process\+Key\+Down\+Input@{Process\+Key\+Down\+Input}}
+\index{Process\+Key\+Down\+Input@{Process\+Key\+Down\+Input}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Process\+Key\+Down\+Input()}{ProcessKeyDownInput()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::\+Process\+Key\+Down\+Input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_key_event}{Key\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_af205398ddb5e79bd64302e676ced3051}\label{classec_1_1_camera_controller_af205398ddb5e79bd64302e676ced3051}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Process\+Key\+Up\+Input@{Process\+Key\+Up\+Input}}
+\index{Process\+Key\+Up\+Input@{Process\+Key\+Up\+Input}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Process\+Key\+Up\+Input()}{ProcessKeyUpInput()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::\+Process\+Key\+Up\+Input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_key_event}{Key\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_ac96fb273f1f776558ec24a8cbdb2e476}\label{classec_1_1_camera_controller_ac96fb273f1f776558ec24a8cbdb2e476}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Process\+Mouse\+Button\+Down@{Process\+Mouse\+Button\+Down}}
+\index{Process\+Mouse\+Button\+Down@{Process\+Mouse\+Button\+Down}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Process\+Mouse\+Button\+Down()}{ProcessMouseButtonDown()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::\+Process\+Mouse\+Button\+Down (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_button_event}{Mouse\+Button\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_af5c214b7775bca49f2b6e2acee2cd703}\label{classec_1_1_camera_controller_af5c214b7775bca49f2b6e2acee2cd703}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Process\+Mouse\+Button\+Up@{Process\+Mouse\+Button\+Up}}
+\index{Process\+Mouse\+Button\+Up@{Process\+Mouse\+Button\+Up}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Process\+Mouse\+Button\+Up()}{ProcessMouseButtonUp()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::\+Process\+Mouse\+Button\+Up (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_button_event}{Mouse\+Button\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a955335b57959a45bf2b67c02ed939dad}\label{classec_1_1_camera_controller_a955335b57959a45bf2b67c02ed939dad}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Process\+Mouse\+Movement@{Process\+Mouse\+Movement}}
+\index{Process\+Mouse\+Movement@{Process\+Mouse\+Movement}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Process\+Mouse\+Movement()}{ProcessMouseMovement()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::\+Process\+Mouse\+Movement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_move_event}{Mouse\+Move\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a5aef7fbf580d98ea998bb0f31d3f53aa}\label{classec_1_1_camera_controller_a5aef7fbf580d98ea998bb0f31d3f53aa}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Process\+Scroll\+Input@{Process\+Scroll\+Input}}
+\index{Process\+Scroll\+Input@{Process\+Scroll\+Input}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Process\+Scroll\+Input()}{ProcessScrollInput()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::\+Process\+Scroll\+Input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_scroll_event}{Mouse\+Scroll\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a3cbf6829af7035fa648ef9283f1f6b34}\label{classec_1_1_camera_controller_a3cbf6829af7035fa648ef9283f1f6b34}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Set\+Camera@{Set\+Camera}}
+\index{Set\+Camera@{Set\+Camera}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Set\+Camera()}{SetCamera()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::\+Set\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a0f9378014e5501eec0af79fd7006a4d7}\label{classec_1_1_camera_controller_a0f9378014e5501eec0af79fd7006a4d7}} 
+\index{ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}!Tick@{Tick}}
+\index{Tick@{Tick}!ec\+::\+Camera\+Controller@{ec\+::\+Camera\+Controller}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::\+Tick (\begin{DoxyParamCaption}\item[{const float}]{time\+Delta }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_camera_controller_8h}{Camera\+Controller.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_camera_controller_8cpp}{Camera\+Controller.\+cpp}}\end{DoxyCompactItemize}

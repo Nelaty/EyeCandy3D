@@ -1,0 +1,130 @@
+\hypertarget{classec_1_1_scene_renderer}{}\section{ec\+:\+:Scene\+Renderer Class Reference}
+\label{classec_1_1_scene_renderer}\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+
+
+{\ttfamily \#include $<$Scene\+Renderer.\+h$>$}
+
+
+
+Collaboration diagram for ec\+:\+:Scene\+Renderer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classec_1_1_scene_renderer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_scene_renderer_a7759ceff361e2d9b90ffe35ee61dc8c2}{Scene\+Renderer}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_scene_renderer_ae8350e90e64b53e3dfb121c11a9d3283}{$\sim$\+Scene\+Renderer}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_scene_renderer_a87796739420a581ec2c5f0f80b7a8e1f}{Render}} (\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$window)
+\item 
+void \mbox{\hyperlink{classec_1_1_scene_renderer_a207e0e7112e94172615228838a34818d}{Set\+Scene}} (\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$scene)
+\item 
+\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_renderer_ac7e6d95f7f81896b3dc263edc638e0e8}{Get\+Scene}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_frame}{Frame}} \& \mbox{\hyperlink{classec_1_1_scene_renderer_a8c3935204b987c155e68372207822b62}{Get\+Frame}} ()
+\item 
+const \mbox{\hyperlink{classec_1_1_frame}{Frame}} \& \mbox{\hyperlink{classec_1_1_scene_renderer_a5b99b9830416ff17758286983cb66f5b}{Get\+Frame}} () const
+\item 
+void \mbox{\hyperlink{classec_1_1_scene_renderer_a925d9f915b47ea29d30e9db97c82ec80}{Set\+Frame}} (const \mbox{\hyperlink{classec_1_1_frame}{Frame}} \&frame)
+\item 
+void \mbox{\hyperlink{classec_1_1_scene_renderer_a8f3412dc907f3425d4e1004873946e21}{Add\+Rendering\+Target}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$node)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_scene_renderer_ad74b9887e310e44acb92ead803fba56c}{On\+Begin\+Render}} (Render\+Context \&context)
+\item 
+void \mbox{\hyperlink{classec_1_1_scene_renderer_ae940eac2b75972449c024ca7da729d67}{On\+Render}} (Render\+Context \&context)
+\item 
+void \mbox{\hyperlink{classec_1_1_scene_renderer_a3e30cac2058462afdab997ec6a5ff884}{On\+End\+Render}} (Render\+Context \&context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_scene_renderer_a7759ceff361e2d9b90ffe35ee61dc8c2}\label{classec_1_1_scene_renderer_a7759ceff361e2d9b90ffe35ee61dc8c2}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!Scene\+Renderer@{Scene\+Renderer}}
+\index{Scene\+Renderer@{Scene\+Renderer}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{Scene\+Renderer()}{SceneRenderer()}}
+{\footnotesize\ttfamily ec\+::\+Scene\+Renderer\+::\+Scene\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_scene_renderer_ae8350e90e64b53e3dfb121c11a9d3283}\label{classec_1_1_scene_renderer_ae8350e90e64b53e3dfb121c11a9d3283}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!````~Scene\+Renderer@{$\sim$\+Scene\+Renderer}}
+\index{````~Scene\+Renderer@{$\sim$\+Scene\+Renderer}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{$\sim$\+Scene\+Renderer()}{~SceneRenderer()}}
+{\footnotesize\ttfamily ec\+::\+Scene\+Renderer\+::$\sim$\+Scene\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_scene_renderer_a8f3412dc907f3425d4e1004873946e21}\label{classec_1_1_scene_renderer_a8f3412dc907f3425d4e1004873946e21}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!Add\+Rendering\+Target@{Add\+Rendering\+Target}}
+\index{Add\+Rendering\+Target@{Add\+Rendering\+Target}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{Add\+Rendering\+Target()}{AddRenderingTarget()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::\+Add\+Rendering\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_scene_renderer_a8c3935204b987c155e68372207822b62}\label{classec_1_1_scene_renderer_a8c3935204b987c155e68372207822b62}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!Get\+Frame@{Get\+Frame}}
+\index{Get\+Frame@{Get\+Frame}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{Get\+Frame()}{GetFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_frame}{ec\+::\+Frame}} \& ec\+::\+Scene\+Renderer\+::\+Get\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_scene_renderer_a5b99b9830416ff17758286983cb66f5b}\label{classec_1_1_scene_renderer_a5b99b9830416ff17758286983cb66f5b}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!Get\+Frame@{Get\+Frame}}
+\index{Get\+Frame@{Get\+Frame}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{Get\+Frame()}{GetFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classec_1_1_frame}{ec\+::\+Frame}} \& ec\+::\+Scene\+Renderer\+::\+Get\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_scene_renderer_ac7e6d95f7f81896b3dc263edc638e0e8}\label{classec_1_1_scene_renderer_ac7e6d95f7f81896b3dc263edc638e0e8}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!Get\+Scene@{Get\+Scene}}
+\index{Get\+Scene@{Get\+Scene}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{Get\+Scene()}{GetScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene}{ec\+::\+Scene}} $\ast$ ec\+::\+Scene\+Renderer\+::\+Get\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_scene_renderer_ad74b9887e310e44acb92ead803fba56c}\label{classec_1_1_scene_renderer_ad74b9887e310e44acb92ead803fba56c}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!On\+Begin\+Render@{On\+Begin\+Render}}
+\index{On\+Begin\+Render@{On\+Begin\+Render}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{On\+Begin\+Render()}{OnBeginRender()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::\+On\+Begin\+Render (\begin{DoxyParamCaption}\item[{Render\+Context \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_scene_renderer_a3e30cac2058462afdab997ec6a5ff884}\label{classec_1_1_scene_renderer_a3e30cac2058462afdab997ec6a5ff884}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!On\+End\+Render@{On\+End\+Render}}
+\index{On\+End\+Render@{On\+End\+Render}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{On\+End\+Render()}{OnEndRender()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::\+On\+End\+Render (\begin{DoxyParamCaption}\item[{Render\+Context \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_scene_renderer_ae940eac2b75972449c024ca7da729d67}\label{classec_1_1_scene_renderer_ae940eac2b75972449c024ca7da729d67}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!On\+Render@{On\+Render}}
+\index{On\+Render@{On\+Render}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{On\+Render()}{OnRender()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::\+On\+Render (\begin{DoxyParamCaption}\item[{Render\+Context \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_scene_renderer_a87796739420a581ec2c5f0f80b7a8e1f}\label{classec_1_1_scene_renderer_a87796739420a581ec2c5f0f80b7a8e1f}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!Render@{Render}}
+\index{Render@{Render}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_scene_renderer_a925d9f915b47ea29d30e9db97c82ec80}\label{classec_1_1_scene_renderer_a925d9f915b47ea29d30e9db97c82ec80}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!Set\+Frame@{Set\+Frame}}
+\index{Set\+Frame@{Set\+Frame}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{Set\+Frame()}{SetFrame()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::\+Set\+Frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_frame}{Frame}} \&}]{frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_scene_renderer_a207e0e7112e94172615228838a34818d}\label{classec_1_1_scene_renderer_a207e0e7112e94172615228838a34818d}} 
+\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!Set\+Scene@{Set\+Scene}}
+\index{Set\+Scene@{Set\+Scene}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
+\subsubsection{\texorpdfstring{Set\+Scene()}{SetScene()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::\+Set\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_scene_renderer_8h}{Scene\+Renderer.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_scene_renderer_8cpp}{Scene\+Renderer.\+cpp}}\end{DoxyCompactItemize}

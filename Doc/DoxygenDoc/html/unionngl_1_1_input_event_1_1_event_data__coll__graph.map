@@ -1,0 +1,14 @@
+<map id="ngl::InputEvent::EventData" name="ngl::InputEvent::EventData">
+<area shape="rect" id="node2" href="$structngl_1_1_mouse_button_event.html" title="{ngl::MouseButtonEvent\n||+ MouseButtonEvent()\l+ ~MouseButtonEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="1033,189,1192,355"/>
+<area shape="rect" id="node6" href="$structngl_1_1_resize_event.html" title="{ngl::ResizeEvent\n||+ ResizeEvent()\l+ ~ResizeEvent()\l+ Print()\l}" alt="" coords="871,219,994,325"/>
+<area shape="rect" id="node7" href="$structngl_1_1_drop_event.html" title="{ngl::DropEvent\n||+ DropEvent()\l+ ~DropEvent()\l+ Print()\l}" alt="" coords="171,219,281,325"/>
+<area shape="rect" id="node9" href="$structngl_1_1_focus_event.html" title="{ngl::FocusEvent\n||+ FocusEvent()\l+ ~FocusEvent()\l+ Print()\l}" alt="" coords="2033,219,2152,325"/>
+<area shape="rect" id="node10" href="$structngl_1_1_text_event.html" title="{ngl::TextEvent\n||+ TextEvent()\l+ ~TextEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="470,189,601,355"/>
+<area shape="rect" id="node11" href="$structngl_1_1_mouse_drag_event.html" title="{ngl::MouseDragEvent\n||+ MouseDragEvent()\l+ ~MouseDragEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="1424,189,1572,355"/>
+<area shape="rect" id="node13" href="$structngl_1_1_joystick_event.html" title="{ngl::JoystickEvent\n||+ JoystickEvent()\l+ ~JoystickEvent()\l+ Print()\l}" alt="" coords="666,219,797,325"/>
+<area shape="rect" id="node14" href="$structngl_1_1_mouse_scroll_event.html" title="{ngl::MouseScrollEvent\n||+ MouseScrollEvent()\l+ ~MouseScrollEvent()\l+ Print()\l}" alt="" coords="2226,219,2381,325"/>
+<area shape="rect" id="node15" href="$structngl_1_1_closed_event.html" title="{ngl::ClosedEvent\n||+ ClosedEvent()\l+ ~ClosedEvent()\l+ Print()\l}" alt="" coords="1630,219,1753,325"/>
+<area shape="rect" id="node16" href="$structngl_1_1_mouse_move_event.html" title="{ngl::MouseMoveEvent\n||+ MouseMoveEvent()\l+ ~MouseMoveEvent()\l+ Print()\l}" alt="" coords="2432,219,2583,325"/>
+<area shape="rect" id="node17" href="$structngl_1_1_mouse_enter_event.html" title="{ngl::MouseEnterEvent\n||+ MouseEnterEvent()\l+ ~MouseEnterEvent()\l+ Print()\l}" alt="" coords="1809,219,1961,325"/>
+<area shape="rect" id="node18" href="$structngl_1_1_key_event.html" title="{ngl::KeyEvent\n||+ KeyEvent()\l+ ~KeyEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="1223,189,1354,355"/>
+</map>

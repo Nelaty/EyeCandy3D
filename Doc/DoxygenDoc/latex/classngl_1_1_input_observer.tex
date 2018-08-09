@@ -1,0 +1,196 @@
+\hypertarget{classngl_1_1_input_observer}{}\section{ngl\+:\+:Input\+Observer Class Reference}
+\label{classngl_1_1_input_observer}\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+
+
+{\ttfamily \#include $<$Input\+Observer.\+h$>$}
+
+
+
+Inheritance diagram for ngl\+:\+:Input\+Observer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classngl_1_1_input_observer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ngl\+:\+:Input\+Observer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classngl_1_1_input_observer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classngl_1_1_input_observer_a1bf696a9f5570f16f2b2b19411eeae29}{Event\+Key\+\_\+T}} = \mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Input\+Type}}
+\item 
+using \mbox{\hyperlink{classngl_1_1_input_observer_aa4a14e946d8ea4c4195b5668b1fe1815}{Event\+Callback\+\_\+T}} = std\+::pair$<$ std\+::string, std\+::function$<$ void()$>$ $>$
+\item 
+using \mbox{\hyperlink{classngl_1_1_input_observer_a42a0cd74782142e52f888e27aacef6f9}{Event\+Callback\+Container\+\_\+T}} = std\+::vector$<$ \mbox{\hyperlink{classngl_1_1_input_observer_aa4a14e946d8ea4c4195b5668b1fe1815}{Event\+Callback\+\_\+T}} $>$
+\item 
+using \mbox{\hyperlink{classngl_1_1_input_observer_af68ba9cdd29ed56f5f7aa85a36a45258}{Event\+Callback\+Map\+\_\+T}} = std\+::map$<$ \mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Event\+Key\+\_\+T}}, \mbox{\hyperlink{classngl_1_1_input_observer_a42a0cd74782142e52f888e27aacef6f9}{Event\+Callback\+Container\+\_\+T}} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classngl_1_1_input_observer_a0a1424516ca191ec125d99c7b49eea89}{$\sim$\+Input\+Observer}} ()
+\item 
+void \mbox{\hyperlink{classngl_1_1_input_observer_ae3952d18e310683a24be067ab6789dc1}{Inform}} (const \mbox{\hyperlink{structngl_1_1_input_event}{Input\+Event}} \&event)
+\item 
+virtual void \mbox{\hyperlink{classngl_1_1_input_observer_a2223a29f34421893ba40304cbdc5d1cf}{Enable}} (const bool enabled)
+\item 
+virtual bool \mbox{\hyperlink{classngl_1_1_input_observer_abef3ad4239a2d189d92997455be5aa35}{Is\+Enabled}} () const
+\item 
+void \mbox{\hyperlink{classngl_1_1_input_observer_ab6ebe897b73c426665ccd58548933135}{Add\+Callback}} (const std\+::string \&id, \mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Event\+Key\+\_\+T}} key, std\+::function$<$ void()$>$ callback)
+\item 
+bool \mbox{\hyperlink{classngl_1_1_input_observer_a8b5d0b434a01c53f460a81f87537e943}{Remove\+Callback}} (const std\+::string \&, \mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Event\+Key\+\_\+T}} key)
+\item 
+void \mbox{\hyperlink{classngl_1_1_input_observer_a482e5ecaaba3a05adbf5156ef2bcdc36}{Remove\+Callbacks\+Of\+Type}} (\mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Event\+Key\+\_\+T}} key)
+\item 
+void \mbox{\hyperlink{classngl_1_1_input_observer_af8452d08dab25ef2cb042165769fcc34}{Remove\+All\+Callbacks}} ()
+\item 
+bool \mbox{\hyperlink{classngl_1_1_input_observer_a2e1e9c403c0acd2b1c60ad35019605c5}{Is\+Callback\+Registered}} (const std\+::string \&id, \mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Event\+Key\+\_\+T}} key)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl_1_1_input_observer_a51f0ac967cb709eae136014bd1d5173f}{Input\+Observer}} ()
+\item 
+virtual void \mbox{\hyperlink{classngl_1_1_input_observer_a10b36e303875ce065b3091a8fd805da1}{Process\+Event}} (const \mbox{\hyperlink{structngl_1_1_input_event}{Input\+Event}} \&event)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl_1_1_input_observer_af68ba9cdd29ed56f5f7aa85a36a45258}{Event\+Callback\+Map\+\_\+T}} \mbox{\hyperlink{classngl_1_1_input_observer_a1e5cc9f657f57237ccab542c3efc62b1}{m\+\_\+event\+Callbacks}}
+\item 
+bool \mbox{\hyperlink{classngl_1_1_input_observer_a04400ab36bc2ad26f7aa3d8553ff5c46}{m\+\_\+enabled}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classngl_1_1_input_observer_aa4a14e946d8ea4c4195b5668b1fe1815}\label{classngl_1_1_input_observer_aa4a14e946d8ea4c4195b5668b1fe1815}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Event\+Callback\+\_\+T@{Event\+Callback\+\_\+T}}
+\index{Event\+Callback\+\_\+T@{Event\+Callback\+\_\+T}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Event\+Callback\+\_\+T}{EventCallback\_T}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classngl_1_1_input_observer_aa4a14e946d8ea4c4195b5668b1fe1815}{ngl\+::\+Input\+Observer\+::\+Event\+Callback\+\_\+T}} =  std\+::pair$<$std\+::string, std\+::function$<$void()$>$ $>$}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_a42a0cd74782142e52f888e27aacef6f9}\label{classngl_1_1_input_observer_a42a0cd74782142e52f888e27aacef6f9}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Event\+Callback\+Container\+\_\+T@{Event\+Callback\+Container\+\_\+T}}
+\index{Event\+Callback\+Container\+\_\+T@{Event\+Callback\+Container\+\_\+T}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Event\+Callback\+Container\+\_\+T}{EventCallbackContainer\_T}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classngl_1_1_input_observer_a42a0cd74782142e52f888e27aacef6f9}{ngl\+::\+Input\+Observer\+::\+Event\+Callback\+Container\+\_\+T}} =  std\+::vector$<$\mbox{\hyperlink{classngl_1_1_input_observer_aa4a14e946d8ea4c4195b5668b1fe1815}{Event\+Callback\+\_\+T}}$>$}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_af68ba9cdd29ed56f5f7aa85a36a45258}\label{classngl_1_1_input_observer_af68ba9cdd29ed56f5f7aa85a36a45258}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Event\+Callback\+Map\+\_\+T@{Event\+Callback\+Map\+\_\+T}}
+\index{Event\+Callback\+Map\+\_\+T@{Event\+Callback\+Map\+\_\+T}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Event\+Callback\+Map\+\_\+T}{EventCallbackMap\_T}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classngl_1_1_input_observer_af68ba9cdd29ed56f5f7aa85a36a45258}{ngl\+::\+Input\+Observer\+::\+Event\+Callback\+Map\+\_\+T}} =  std\+::map$<$\mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Event\+Key\+\_\+T}}, \mbox{\hyperlink{classngl_1_1_input_observer_a42a0cd74782142e52f888e27aacef6f9}{Event\+Callback\+Container\+\_\+T}}$>$}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_a1bf696a9f5570f16f2b2b19411eeae29}\label{classngl_1_1_input_observer_a1bf696a9f5570f16f2b2b19411eeae29}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Event\+Key\+\_\+T@{Event\+Key\+\_\+T}}
+\index{Event\+Key\+\_\+T@{Event\+Key\+\_\+T}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Event\+Key\+\_\+T}{EventKey\_T}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{ngl\+::\+Input\+Observer\+::\+Event\+Key\+\_\+T}} =  \mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Input\+Type}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classngl_1_1_input_observer_a0a1424516ca191ec125d99c7b49eea89}\label{classngl_1_1_input_observer_a0a1424516ca191ec125d99c7b49eea89}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!````~Input\+Observer@{$\sim$\+Input\+Observer}}
+\index{````~Input\+Observer@{$\sim$\+Input\+Observer}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{$\sim$\+Input\+Observer()}{~InputObserver()}}
+{\footnotesize\ttfamily ngl\+::\+Input\+Observer\+::$\sim$\+Input\+Observer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_a51f0ac967cb709eae136014bd1d5173f}\label{classngl_1_1_input_observer_a51f0ac967cb709eae136014bd1d5173f}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Input\+Observer@{Input\+Observer}}
+\index{Input\+Observer@{Input\+Observer}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Input\+Observer()}{InputObserver()}}
+{\footnotesize\ttfamily ngl\+::\+Input\+Observer\+::\+Input\+Observer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classngl_1_1_input_observer_ab6ebe897b73c426665ccd58548933135}\label{classngl_1_1_input_observer_ab6ebe897b73c426665ccd58548933135}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Add\+Callback@{Add\+Callback}}
+\index{Add\+Callback@{Add\+Callback}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Add\+Callback()}{AddCallback()}}
+{\footnotesize\ttfamily void ngl\+::\+Input\+Observer\+::\+Add\+Callback (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{\mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Event\+Key\+\_\+T}}}]{key,  }\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_a2223a29f34421893ba40304cbdc5d1cf}\label{classngl_1_1_input_observer_a2223a29f34421893ba40304cbdc5d1cf}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Enable@{Enable}}
+\index{Enable@{Enable}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily void ngl\+::\+Input\+Observer\+::\+Enable (\begin{DoxyParamCaption}\item[{const bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_ae3952d18e310683a24be067ab6789dc1}\label{classngl_1_1_input_observer_ae3952d18e310683a24be067ab6789dc1}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Inform@{Inform}}
+\index{Inform@{Inform}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Inform()}{Inform()}}
+{\footnotesize\ttfamily void ngl\+::\+Input\+Observer\+::\+Inform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structngl_1_1_input_event}{Input\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_a2e1e9c403c0acd2b1c60ad35019605c5}\label{classngl_1_1_input_observer_a2e1e9c403c0acd2b1c60ad35019605c5}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Is\+Callback\+Registered@{Is\+Callback\+Registered}}
+\index{Is\+Callback\+Registered@{Is\+Callback\+Registered}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Is\+Callback\+Registered()}{IsCallbackRegistered()}}
+{\footnotesize\ttfamily bool ngl\+::\+Input\+Observer\+::\+Is\+Callback\+Registered (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{\mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Event\+Key\+\_\+T}}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_abef3ad4239a2d189d92997455be5aa35}\label{classngl_1_1_input_observer_abef3ad4239a2d189d92997455be5aa35}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Is\+Enabled@{Is\+Enabled}}
+\index{Is\+Enabled@{Is\+Enabled}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Is\+Enabled()}{IsEnabled()}}
+{\footnotesize\ttfamily bool ngl\+::\+Input\+Observer\+::\+Is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_a10b36e303875ce065b3091a8fd805da1}\label{classngl_1_1_input_observer_a10b36e303875ce065b3091a8fd805da1}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Process\+Event@{Process\+Event}}
+\index{Process\+Event@{Process\+Event}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Process\+Event()}{ProcessEvent()}}
+{\footnotesize\ttfamily void ngl\+::\+Input\+Observer\+::\+Process\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structngl_1_1_input_event}{Input\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classngl_1_1_camera_controller_ab7dc975eba1a28e8ade7da84ba0ddc86}{ngl\+::\+Camera\+Controller}}, and \mbox{\hyperlink{classngl__gui_1_1_g_u_i_controller_aadbc0790314a254e62a78524bca5e482}{ngl\+\_\+gui\+::\+G\+U\+I\+Controller}}.
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_af8452d08dab25ef2cb042165769fcc34}\label{classngl_1_1_input_observer_af8452d08dab25ef2cb042165769fcc34}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Remove\+All\+Callbacks@{Remove\+All\+Callbacks}}
+\index{Remove\+All\+Callbacks@{Remove\+All\+Callbacks}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Remove\+All\+Callbacks()}{RemoveAllCallbacks()}}
+{\footnotesize\ttfamily void ngl\+::\+Input\+Observer\+::\+Remove\+All\+Callbacks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_a8b5d0b434a01c53f460a81f87537e943}\label{classngl_1_1_input_observer_a8b5d0b434a01c53f460a81f87537e943}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Remove\+Callback@{Remove\+Callback}}
+\index{Remove\+Callback@{Remove\+Callback}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Remove\+Callback()}{RemoveCallback()}}
+{\footnotesize\ttfamily bool ngl\+::\+Input\+Observer\+::\+Remove\+Callback (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{\mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Event\+Key\+\_\+T}}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_a482e5ecaaba3a05adbf5156ef2bcdc36}\label{classngl_1_1_input_observer_a482e5ecaaba3a05adbf5156ef2bcdc36}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!Remove\+Callbacks\+Of\+Type@{Remove\+Callbacks\+Of\+Type}}
+\index{Remove\+Callbacks\+Of\+Type@{Remove\+Callbacks\+Of\+Type}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{Remove\+Callbacks\+Of\+Type()}{RemoveCallbacksOfType()}}
+{\footnotesize\ttfamily void ngl\+::\+Input\+Observer\+::\+Remove\+Callbacks\+Of\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacengl_a5b20ff50635da5e3adb6bec00c062497}{Event\+Key\+\_\+T}}}]{key }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classngl_1_1_input_observer_a04400ab36bc2ad26f7aa3d8553ff5c46}\label{classngl_1_1_input_observer_a04400ab36bc2ad26f7aa3d8553ff5c46}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!m\+\_\+enabled@{m\+\_\+enabled}}
+\index{m\+\_\+enabled@{m\+\_\+enabled}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{m\+\_\+enabled}{m\_enabled}}
+{\footnotesize\ttfamily bool ngl\+::\+Input\+Observer\+::m\+\_\+enabled\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl_1_1_input_observer_a1e5cc9f657f57237ccab542c3efc62b1}\label{classngl_1_1_input_observer_a1e5cc9f657f57237ccab542c3efc62b1}} 
+\index{ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}!m\+\_\+event\+Callbacks@{m\+\_\+event\+Callbacks}}
+\index{m\+\_\+event\+Callbacks@{m\+\_\+event\+Callbacks}!ngl\+::\+Input\+Observer@{ngl\+::\+Input\+Observer}}
+\subsubsection{\texorpdfstring{m\+\_\+event\+Callbacks}{m\_eventCallbacks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl_1_1_input_observer_af68ba9cdd29ed56f5f7aa85a36a45258}{Event\+Callback\+Map\+\_\+T}} ngl\+::\+Input\+Observer\+::m\+\_\+event\+Callbacks\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+Core/\mbox{\hyperlink{_input_observer_8h}{Input\+Observer.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_input_observer_8cpp}{Input\+Observer.\+cpp}}\end{DoxyCompactItemize}

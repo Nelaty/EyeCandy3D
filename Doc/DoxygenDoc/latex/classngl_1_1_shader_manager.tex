@@ -1,0 +1,79 @@
+\hypertarget{classngl_1_1_shader_manager}{}\section{ngl\+:\+:Shader\+Manager Class Reference}
+\label{classngl_1_1_shader_manager}\index{ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}}
+
+
+{\ttfamily \#include $<$Shader\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for ngl\+:\+:Shader\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classngl_1_1_shader_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl_1_1_shader_manager_aca25f81fd10a02b3e97e9c459b864186}{Shader\+Manager}} ()
+\item 
+\mbox{\hyperlink{classngl_1_1_shader_manager_a7603399f16432b94223b9fa78f74fb87}{$\sim$\+Shader\+Manager}} ()
+\item 
+bool \mbox{\hyperlink{classngl_1_1_shader_manager_ab44df7caa233d5a797211ed852c7728a}{Add\+Shader}} (const std\+::string \&shader\+Name, const std\+::string \&vert\+Path, const std\+::string \&frag\+Path, const std\+::string \&geom\+Path=\char`\"{}\char`\"{}, const std\+::string \&tess\+Ctrl\+Path=\char`\"{}\char`\"{}, const std\+::string \&tess\+Eval\+Path=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{classngl_1_1_shader}{Shader}} $\ast$ \mbox{\hyperlink{classngl_1_1_shader_manager_a49683cb281bbc3e3fa86cccc6ba081ed}{Get\+Shader}} (const char $\ast$shader\+Name)
+\item 
+const std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classngl_1_1_shader}{Shader}} $>$ $>$ \& \mbox{\hyperlink{classngl_1_1_shader_manager_a27db6fcf60854158dc8e8ab6bab98999}{Get\+All\+Shader}} ()
+\item 
+bool \mbox{\hyperlink{classngl_1_1_shader_manager_a54765d52e0c26eea3677037a291252ea}{Switch\+Shader\+Program}} (const char $\ast$shader\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classngl_1_1_shader_manager_aca25f81fd10a02b3e97e9c459b864186}\label{classngl_1_1_shader_manager_aca25f81fd10a02b3e97e9c459b864186}} 
+\index{ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}!Shader\+Manager@{Shader\+Manager}}
+\index{Shader\+Manager@{Shader\+Manager}!ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}}
+\subsubsection{\texorpdfstring{Shader\+Manager()}{ShaderManager()}}
+{\footnotesize\ttfamily Shader\+Manager\+::\+Shader\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_shader_manager_a7603399f16432b94223b9fa78f74fb87}\label{classngl_1_1_shader_manager_a7603399f16432b94223b9fa78f74fb87}} 
+\index{ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}!````~Shader\+Manager@{$\sim$\+Shader\+Manager}}
+\index{````~Shader\+Manager@{$\sim$\+Shader\+Manager}!ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Shader\+Manager()}{~ShaderManager()}}
+{\footnotesize\ttfamily Shader\+Manager\+::$\sim$\+Shader\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classngl_1_1_shader_manager_ab44df7caa233d5a797211ed852c7728a}\label{classngl_1_1_shader_manager_ab44df7caa233d5a797211ed852c7728a}} 
+\index{ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}!Add\+Shader@{Add\+Shader}}
+\index{Add\+Shader@{Add\+Shader}!ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Shader()}{AddShader()}}
+{\footnotesize\ttfamily bool Shader\+Manager\+::\+Add\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{shader\+Name,  }\item[{const std\+::string \&}]{vert\+Path,  }\item[{const std\+::string \&}]{frag\+Path,  }\item[{const std\+::string \&}]{geom\+Path = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{tess\+Ctrl\+Path = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{tess\+Eval\+Path = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_shader_manager_a27db6fcf60854158dc8e8ab6bab98999}\label{classngl_1_1_shader_manager_a27db6fcf60854158dc8e8ab6bab98999}} 
+\index{ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}!Get\+All\+Shader@{Get\+All\+Shader}}
+\index{Get\+All\+Shader@{Get\+All\+Shader}!ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}}
+\subsubsection{\texorpdfstring{Get\+All\+Shader()}{GetAllShader()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classngl_1_1_shader}{ngl\+::\+Shader}} $>$ $>$ \& ngl\+::\+Shader\+Manager\+::\+Get\+All\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_shader_manager_a49683cb281bbc3e3fa86cccc6ba081ed}\label{classngl_1_1_shader_manager_a49683cb281bbc3e3fa86cccc6ba081ed}} 
+\index{ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}!Get\+Shader@{Get\+Shader}}
+\index{Get\+Shader@{Get\+Shader}!ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Shader()}{GetShader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classngl_1_1_shader}{Shader}} $\ast$ Shader\+Manager\+::\+Get\+Shader (\begin{DoxyParamCaption}\item[{const char $\ast$}]{shader\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl_1_1_shader_manager_a54765d52e0c26eea3677037a291252ea}\label{classngl_1_1_shader_manager_a54765d52e0c26eea3677037a291252ea}} 
+\index{ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}!Switch\+Shader\+Program@{Switch\+Shader\+Program}}
+\index{Switch\+Shader\+Program@{Switch\+Shader\+Program}!ngl\+::\+Shader\+Manager@{ngl\+::\+Shader\+Manager}}
+\subsubsection{\texorpdfstring{Switch\+Shader\+Program()}{SwitchShaderProgram()}}
+{\footnotesize\ttfamily bool Shader\+Manager\+::\+Switch\+Shader\+Program (\begin{DoxyParamCaption}\item[{const char $\ast$}]{shader\+Name }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+Core/\+Shader/\mbox{\hyperlink{_shader_manager_8h}{Shader\+Manager.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\+Shader/\mbox{\hyperlink{_shader_manager_8cpp}{Shader\+Manager.\+cpp}}\end{DoxyCompactItemize}

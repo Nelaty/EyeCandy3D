@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\EC3D\Core\ResourceRegistry.inl" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\EC3D\Common\Common.h" />
+    <ClInclude Include="include\EC3D\Common\Config.h" />
+    <ClInclude Include="include\EC3D\Core\Camera.h" />
+    <ClInclude Include="include\EC3D\Core\CameraController.h" />
+    <ClInclude Include="include\EC3D\Core\CameraType.h" />
+    <ClInclude Include="include\EC3D\Core\CubeMesh.h" />
+    <ClInclude Include="include\EC3D\Core\Drawable.h" />
+    <ClInclude Include="include\EC3D\Core\FontCharacter.h" />
+    <ClInclude Include="include\EC3D\Core\FontTextureAtlas.h" />
+    <ClInclude Include="include\EC3D\Core\Frame.h" />
+    <ClInclude Include="include\EC3D\Core\Freetype.h" />
+    <ClInclude Include="include\EC3D\Core\Geometry.h" />
+    <ClInclude Include="include\EC3D\Core\GeometryRoot.h" />
+    <ClInclude Include="include\EC3D\Core\InputEvent.h" />
+    <ClInclude Include="include\EC3D\Core\InputObservable.h" />
+    <ClInclude Include="include\EC3D\Core\InputListener.h" />
+    <ClInclude Include="include\EC3D\Core\Material.h" />
+    <ClInclude Include="include\EC3D\Core\Node.h" />
+    <ClInclude Include="include\EC3D\Core\RectangleMesh.h" />
+    <ClInclude Include="include\EC3D\Core\Renderer.h" />
+    <ClInclude Include="include\EC3D\Core\ResourceRegistry.h" />
+    <ClInclude Include="include\EC3D\Core\ResourceType.h" />
+    <ClInclude Include="include\EC3D\Core\Scene.h" />
+    <ClInclude Include="include\EC3D\Core\SceneController.h" />
+    <ClInclude Include="include\EC3D\Core\SceneRenderer.h" />
+    <ClInclude Include="include\EC3D\Core\SceneSystem.h" />
+    <ClInclude Include="include\EC3D\Core\Shader\Shader.h" />
+    <ClInclude Include="include\EC3D\Core\Shader\ShaderManager.h" />
+    <ClInclude Include="include\EC3D\Core\SphereMesh.h" />
+    <ClInclude Include="include\EC3D\Core\Texture.h" />
+    <ClInclude Include="include\EC3D\Core\Transform3D.h" />
+    <ClInclude Include="include\EC3D\Core\Vertex.h" />
+    <ClInclude Include="include\EC3D\Core\Viewport.h" />
+    <ClInclude Include="include\EC3D\Core\Window.h" />
+    <ClInclude Include="include\EC3D\GUI\Bounds2D.h" />
+    <ClInclude Include="include\EC3D\GUI\Button.h" />
+    <ClInclude Include="include\EC3D\GUI\Checkbox.h" />
+    <ClInclude Include="include\EC3D\GUI\GUI.h" />
+    <ClInclude Include="include\EC3D\GUI\GUIController.h" />
+    <ClInclude Include="include\EC3D\GUI\GUIFwd.h" />
+    <ClInclude Include="include\EC3D\GUI\GUIModel.h" />
+    <ClInclude Include="include\EC3D\GUI\GUIRenderer.h" />
+    <ClInclude Include="include\EC3D\GUI\GUIRoot.h" />
+    <ClInclude Include="include\EC3D\GUI\GUISystem.h" />
+    <ClInclude Include="include\EC3D\GUI\HorizontalList.h" />
+    <ClInclude Include="include\EC3D\GUI\RadioButton.h" />
+    <ClInclude Include="include\EC3D\GUI\Screen.h" />
+    <ClInclude Include="include\EC3D\GUI\Slot.h" />
+    <ClInclude Include="include\EC3D\GUI\SlotPair.h" />
+    <ClInclude Include="include\EC3D\GUI\Text.h" />
+    <ClInclude Include="include\EC3D\GUI\TextField.h" />
+    <ClInclude Include="include\EC3D\GUI\Theme.h" />
+    <ClInclude Include="include\EC3D\GUI\VerticalList.h" />
+    <ClInclude Include="include\EC3D\GUI\Widget.h" />
+    <ClInclude Include="include\EC3D\GUI\Window.h" />
+    <ClInclude Include="include\EC3D\Utilities\FileLogger.h" />
+    <ClInclude Include="include\EC3D\Utilities\Profiler.h" />
+    <ClInclude Include="include\EC3D\Utilities\Timer.h" />
+    <ClInclude Include="include\EC3D\Utilities\UtilitiesFile.h" />
+    <ClInclude Include="include\EC3D\Utilities\UtilitiesMath.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Core\Camera.cpp" />
+    <ClCompile Include="src\Core\CameraController.cpp" />
+    <ClCompile Include="src\Core\CubeMesh.cpp" />
+    <ClCompile Include="src\Core\Drawable.cpp" />
+    <ClCompile Include="src\Core\FontTextureAtlas.cpp" />
+    <ClCompile Include="src\Core\Frame.cpp" />
+    <ClCompile Include="src\Core\Freetype.cpp" />
+    <ClCompile Include="src\Core\Geometry.cpp" />
+    <ClCompile Include="src\Core\InputEvent.cpp" />
+    <ClCompile Include="src\Core\InputObservable.cpp" />
+    <ClCompile Include="src\Core\InputListener.cpp" />
+    <ClCompile Include="src\Core\Material.cpp" />
+    <ClCompile Include="src\Core\Node.cpp" />
+    <ClCompile Include="src\Core\RectangleMesh.cpp" />
+    <ClCompile Include="src\Core\Renderer.cpp" />
+    <ClCompile Include="src\Core\Scene.cpp" />
+    <ClCompile Include="src\Core\SceneController.cpp" />
+    <ClCompile Include="src\Core\SceneRenderer.cpp" />
+    <ClCompile Include="src\Core\SceneSystem.cpp" />
+    <ClCompile Include="src\Core\Shader\Shader.cpp" />
+    <ClCompile Include="src\Core\Shader\ShaderManager.cpp" />
+    <ClCompile Include="src\Core\SphereMesh.cpp" />
+    <ClCompile Include="src\Core\Texture.cpp" />
+    <ClCompile Include="src\Core\Transform3D.cpp" />
+    <ClCompile Include="src\Core\Viewport.cpp" />
+    <ClCompile Include="src\Core\Window.cpp" />
+    <ClCompile Include="src\GUI\Bounds2D.cpp" />
+    <ClCompile Include="src\GUI\Button.cpp" />
+    <ClCompile Include="src\GUI\Checkbox.cpp" />
+    <ClCompile Include="src\GUI\GUI.cpp" />
+    <ClCompile Include="src\GUI\GUIController.cpp" />
+    <ClCompile Include="src\GUI\GUIModel.cpp" />
+    <ClCompile Include="src\GUI\GUIRenderer.cpp" />
+    <ClCompile Include="src\GUI\GUISystem.cpp" />
+    <ClCompile Include="src\GUI\HorizontalList.cpp" />
+    <ClCompile Include="src\GUI\RadioButton.cpp" />
+    <ClCompile Include="src\GUI\Screen.cpp" />
+    <ClCompile Include="src\GUI\Text.cpp" />
+    <ClCompile Include="src\GUI\TextField.cpp" />
+    <ClCompile Include="src\GUI\Theme.cpp" />
+    <ClCompile Include="src\GUI\VerticalList.cpp" />
+    <ClCompile Include="src\GUI\Widget.cpp" />
+    <ClCompile Include="src\GUI\Window.cpp" />
+    <ClCompile Include="src\Utilities\FileLogger.cpp" />
+    <ClCompile Include="src\Utilities\Profiler.cpp" />
+    <ClCompile Include="src\Utilities\Timer.cpp" />
+    <ClCompile Include="src\Utilities\UtilitiesFile.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{21192E47-E599-4B31-BAD1-2C555B79ABCA}</ProjectGuid>
+    <RootNamespace>EyeCandy3D</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)\External\include;</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)\External\include;</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)\External\include;</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)\External\include;</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)\External\include;</AdditionalIncludeDirectories>
+      <ObjectFileName>%(RelativeDir)\$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\External\lib;</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)\External\include;</AdditionalIncludeDirectories>
+      <ObjectFileName>%(RelativeDir)\$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\External\lib;</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)\External\include;</AdditionalIncludeDirectories>
+      <ObjectFileName>%(RelativeDir)\$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\External\lib;</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)\External\include;</AdditionalIncludeDirectories>
+      <ObjectFileName>%(RelativeDir)\$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\External\lib;</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\glm.0.9.9\build\native\glm.targets" Condition="Exists('..\packages\glm.0.9.9\build\native\glm.targets')" />
+    <Import Project="..\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets" Condition="Exists('..\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets')" />
+    <Import Project="..\packages\glfw.3.2.1.5\build\native\glfw.targets" Condition="Exists('..\packages\glfw.3.2.1.5\build\native\glfw.targets')" />
+    <Import Project="..\packages\glew.v140.1.12.0\build\native\glew.v140.targets" Condition="Exists('..\packages\glew.v140.1.12.0\build\native\glew.v140.targets')" />
+    <Import Project="..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets" Condition="Exists('..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets')" />
+    <Import Project="..\packages\freetype.2.8.0.1\build\native\freetype.targets" Condition="Exists('..\packages\freetype.2.8.0.1\build\native\freetype.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\glm.0.9.9\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glm.0.9.9\build\native\glm.targets'))" />
+    <Error Condition="!Exists('..\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\glfw.3.2.1.5\build\native\glfw.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glfw.3.2.1.5\build\native\glfw.targets'))" />
+    <Error Condition="!Exists('..\packages\glew.v140.1.12.0\build\native\glew.v140.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glew.v140.1.12.0\build\native\glew.v140.targets'))" />
+    <Error Condition="!Exists('..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\freetype.2.8.0.1\build\native\freetype.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\freetype.2.8.0.1\build\native\freetype.targets'))" />
+  </Target>
+</Project>

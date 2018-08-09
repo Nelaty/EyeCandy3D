@@ -1,0 +1,154 @@
+\hypertarget{classec_1_1_geometry}{}\section{ec\+:\+:Geometry Class Reference}
+\label{classec_1_1_geometry}\index{ec\+::\+Geometry@{ec\+::\+Geometry}}
+
+
+{\ttfamily \#include $<$Geometry.\+h$>$}
+
+
+
+Inheritance diagram for ec\+:\+:Geometry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec_1_1_geometry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+:\+:Geometry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec_1_1_geometry__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classec_1_1_geometry_a964c581313da2be51a3c78d3be7f48b3}{$\sim$\+Geometry}} ()
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_geometry_a8de70c6fd7391ec0555b2df57912b177}{Render}} (\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$shader, const glm\+::mat4 \&model)
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_geometry_a660f620c773555a6f9b4f2ad38384450}{Recalculate\+Normals}} ()
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_geometry_a904043350205cd33d95a4242a32bb2f4}{Get\+V\+AO}} () const
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_geometry_a4c97679ded851fbcfd82c4dc9a7c9911}{Get\+V\+BO}} () const
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_geometry_a5a4267fdce08b8b71a7cd7956b865064}{Get\+E\+BO}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_geometry_aec31f79de7f0afb78d4e3eb77b43574e}{Setup\+Mesh}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_geometry_a409c80ac243a5eb27c2a98b17cc8b3e9}{Geometry}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_geometry_af2451c093d0483611160531ac2a4f01e}{m\+\_\+\+V\+AO}}
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_geometry_a418696e77f43a62bd8f78b8005ce7adf}{m\+\_\+\+V\+BO}}
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_geometry_a5d57590449314c09c6950324f5da4f74}{m\+\_\+\+E\+BO}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structec_1_1_vertex}{Vertex}} $>$ \mbox{\hyperlink{classec_1_1_geometry_a501c19ed82548d9a8ff628f55e750af3}{m\+\_\+vertices}}
+\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classec_1_1_geometry_ae6cf4719dfeee134a33a1272865f50a5}{m\+\_\+indices}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_geometry_a964c581313da2be51a3c78d3be7f48b3}\label{classec_1_1_geometry_a964c581313da2be51a3c78d3be7f48b3}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!````~Geometry@{$\sim$\+Geometry}}
+\index{````~Geometry@{$\sim$\+Geometry}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{$\sim$\+Geometry()}{~Geometry()}}
+{\footnotesize\ttfamily ec\+::\+Geometry\+::$\sim$\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classec_1_1_geometry_a409c80ac243a5eb27c2a98b17cc8b3e9}\label{classec_1_1_geometry_a409c80ac243a5eb27c2a98b17cc8b3e9}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!Geometry@{Geometry}}
+\index{Geometry@{Geometry}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{Geometry()}{Geometry()}}
+{\footnotesize\ttfamily ec\+::\+Geometry\+::\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_geometry_a5a4267fdce08b8b71a7cd7956b865064}\label{classec_1_1_geometry_a5a4267fdce08b8b71a7cd7956b865064}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!Get\+E\+BO@{Get\+E\+BO}}
+\index{Get\+E\+BO@{Get\+E\+BO}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+E\+B\+O()}{GetEBO()}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::\+Get\+E\+BO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_geometry_a904043350205cd33d95a4242a32bb2f4}\label{classec_1_1_geometry_a904043350205cd33d95a4242a32bb2f4}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!Get\+V\+AO@{Get\+V\+AO}}
+\index{Get\+V\+AO@{Get\+V\+AO}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+V\+A\+O()}{GetVAO()}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::\+Get\+V\+AO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_geometry_a4c97679ded851fbcfd82c4dc9a7c9911}\label{classec_1_1_geometry_a4c97679ded851fbcfd82c4dc9a7c9911}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!Get\+V\+BO@{Get\+V\+BO}}
+\index{Get\+V\+BO@{Get\+V\+BO}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+V\+B\+O()}{GetVBO()}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::\+Get\+V\+BO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_geometry_a660f620c773555a6f9b4f2ad38384450}\label{classec_1_1_geometry_a660f620c773555a6f9b4f2ad38384450}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!Recalculate\+Normals@{Recalculate\+Normals}}
+\index{Recalculate\+Normals@{Recalculate\+Normals}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{Recalculate\+Normals()}{RecalculateNormals()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+::\+Recalculate\+Normals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classec_1_1_geometry_a8de70c6fd7391ec0555b2df57912b177}\label{classec_1_1_geometry_a8de70c6fd7391ec0555b2df57912b177}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!Render@{Render}}
+\index{Render@{Render}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+::\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{shader,  }\item[{const glm\+::mat4 \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classec_1_1_geometry_aec31f79de7f0afb78d4e3eb77b43574e}\label{classec_1_1_geometry_aec31f79de7f0afb78d4e3eb77b43574e}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!Setup\+Mesh@{Setup\+Mesh}}
+\index{Setup\+Mesh@{Setup\+Mesh}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{Setup\+Mesh()}{SetupMesh()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+::\+Setup\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_geometry_a5d57590449314c09c6950324f5da4f74}\label{classec_1_1_geometry_a5d57590449314c09c6950324f5da4f74}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!m\+\_\+\+E\+BO@{m\+\_\+\+E\+BO}}
+\index{m\+\_\+\+E\+BO@{m\+\_\+\+E\+BO}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+\+E\+BO}{m\_EBO}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::m\+\_\+\+E\+BO\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_geometry_ae6cf4719dfeee134a33a1272865f50a5}\label{classec_1_1_geometry_ae6cf4719dfeee134a33a1272865f50a5}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!m\+\_\+indices@{m\+\_\+indices}}
+\index{m\+\_\+indices@{m\+\_\+indices}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+indices}{m\_indices}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned int$>$ ec\+::\+Geometry\+::m\+\_\+indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_geometry_af2451c093d0483611160531ac2a4f01e}\label{classec_1_1_geometry_af2451c093d0483611160531ac2a4f01e}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}}
+\index{m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+\+V\+AO}{m\_VAO}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::m\+\_\+\+V\+AO\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_geometry_a418696e77f43a62bd8f78b8005ce7adf}\label{classec_1_1_geometry_a418696e77f43a62bd8f78b8005ce7adf}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!m\+\_\+\+V\+BO@{m\+\_\+\+V\+BO}}
+\index{m\+\_\+\+V\+BO@{m\+\_\+\+V\+BO}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+\+V\+BO}{m\_VBO}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::m\+\_\+\+V\+BO\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_geometry_a501c19ed82548d9a8ff628f55e750af3}\label{classec_1_1_geometry_a501c19ed82548d9a8ff628f55e750af3}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!m\+\_\+vertices@{m\+\_\+vertices}}
+\index{m\+\_\+vertices@{m\+\_\+vertices}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+vertices}{m\_vertices}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structec_1_1_vertex}{Vertex}}$>$ ec\+::\+Geometry\+::m\+\_\+vertices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_geometry_8h}{Geometry.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_geometry_8cpp}{Geometry.\+cpp}}\end{DoxyCompactItemize}

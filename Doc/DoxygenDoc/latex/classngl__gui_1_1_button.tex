@@ -1,0 +1,123 @@
+\hypertarget{classngl__gui_1_1_button}{}\section{ngl\+\_\+gui\+:\+:Button Class Reference}
+\label{classngl__gui_1_1_button}\index{ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}}
+
+
+{\ttfamily \#include $<$Button.\+h$>$}
+
+
+
+Inheritance diagram for ngl\+\_\+gui\+:\+:Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classngl__gui_1_1_button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ngl\+\_\+gui\+:\+:Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classngl__gui_1_1_button__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classngl__gui_1_1_button_ac153b6ad7d4656c9a66699fe91fb0529}{Button}} (\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$parent)
+\item 
+virtual \mbox{\hyperlink{classngl__gui_1_1_button_ae33e1e09f1f50ddc5f5820dbc90ff43f}{$\sim$\+Button}} ()
+\item 
+void \mbox{\hyperlink{classngl__gui_1_1_button_a604ffbd593690a3f4e044b357f678fdb}{Set\+On\+Pressed\+Callback}} (std\+::function$<$ void()$>$ callback)
+\item 
+void \mbox{\hyperlink{classngl__gui_1_1_button_a739337d2d66c43de5c0c6a7d0bc3552b}{Set\+On\+Button\+Down\+Callback}} (std\+::function$<$ void()$>$ callback)
+\item 
+void \mbox{\hyperlink{classngl__gui_1_1_button_ab1b47991bb39a0d905235fb185c3dd0a}{Set\+On\+Button\+Up\+Callback}} (std\+::function$<$ void()$>$ callback)
+\item 
+virtual bool \mbox{\hyperlink{classngl__gui_1_1_button_a1022c031cb9bb6658d8a6bb22295508d}{On\+Mouse\+Button}} (const glm\+::ivec2 \&position, int button, int mods, bool pressed) override
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classngl__gui_1_1_button_af090b33093b5b400f3f28e22f82d7fd2}{m\+\_\+on\+Pressed\+Callback}}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classngl__gui_1_1_button_a87f1bdc19a384c649c0e299e8d0842a4}{m\+\_\+on\+Button\+Down\+Callback}}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classngl__gui_1_1_button_a12f95fd476017194b064040fe071f4f7}{m\+\_\+on\+Button\+Up\+Callback}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classngl__gui_1_1_button_ac153b6ad7d4656c9a66699fe91fb0529}\label{classngl__gui_1_1_button_ac153b6ad7d4656c9a66699fe91fb0529}} 
+\index{ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}!Button@{Button}}
+\index{Button@{Button}!ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily ngl\+\_\+gui\+::\+Button\+::\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classngl__gui_1_1_widget}{Widget}} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_button_ae33e1e09f1f50ddc5f5820dbc90ff43f}\label{classngl__gui_1_1_button_ae33e1e09f1f50ddc5f5820dbc90ff43f}} 
+\index{ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}!````~Button@{$\sim$\+Button}}
+\index{````~Button@{$\sim$\+Button}!ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{$\sim$\+Button()}{~Button()}}
+{\footnotesize\ttfamily ngl\+\_\+gui\+::\+Button\+::$\sim$\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classngl__gui_1_1_button_a1022c031cb9bb6658d8a6bb22295508d}\label{classngl__gui_1_1_button_a1022c031cb9bb6658d8a6bb22295508d}} 
+\index{ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}!On\+Mouse\+Button@{On\+Mouse\+Button}}
+\index{On\+Mouse\+Button@{On\+Mouse\+Button}!ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Button()}{OnMouseButton()}}
+{\footnotesize\ttfamily bool ngl\+\_\+gui\+::\+Button\+::\+On\+Mouse\+Button (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{int}]{button,  }\item[{int}]{mods,  }\item[{bool}]{pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classngl__gui_1_1_widget_a721b18dc7a09b0b7b4ff0c02162409b8}{ngl\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classngl__gui_1_1_button_a739337d2d66c43de5c0c6a7d0bc3552b}\label{classngl__gui_1_1_button_a739337d2d66c43de5c0c6a7d0bc3552b}} 
+\index{ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}!Set\+On\+Button\+Down\+Callback@{Set\+On\+Button\+Down\+Callback}}
+\index{Set\+On\+Button\+Down\+Callback@{Set\+On\+Button\+Down\+Callback}!ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Set\+On\+Button\+Down\+Callback()}{SetOnButtonDownCallback()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Button\+::\+Set\+On\+Button\+Down\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl__gui_1_1_button_ab1b47991bb39a0d905235fb185c3dd0a}\label{classngl__gui_1_1_button_ab1b47991bb39a0d905235fb185c3dd0a}} 
+\index{ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}!Set\+On\+Button\+Up\+Callback@{Set\+On\+Button\+Up\+Callback}}
+\index{Set\+On\+Button\+Up\+Callback@{Set\+On\+Button\+Up\+Callback}!ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Set\+On\+Button\+Up\+Callback()}{SetOnButtonUpCallback()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Button\+::\+Set\+On\+Button\+Up\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classngl__gui_1_1_button_a604ffbd593690a3f4e044b357f678fdb}\label{classngl__gui_1_1_button_a604ffbd593690a3f4e044b357f678fdb}} 
+\index{ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}!Set\+On\+Pressed\+Callback@{Set\+On\+Pressed\+Callback}}
+\index{Set\+On\+Pressed\+Callback@{Set\+On\+Pressed\+Callback}!ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{Set\+On\+Pressed\+Callback()}{SetOnPressedCallback()}}
+{\footnotesize\ttfamily void ngl\+\_\+gui\+::\+Button\+::\+Set\+On\+Pressed\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classngl__gui_1_1_button_a87f1bdc19a384c649c0e299e8d0842a4}\label{classngl__gui_1_1_button_a87f1bdc19a384c649c0e299e8d0842a4}} 
+\index{ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}!m\+\_\+on\+Button\+Down\+Callback@{m\+\_\+on\+Button\+Down\+Callback}}
+\index{m\+\_\+on\+Button\+Down\+Callback@{m\+\_\+on\+Button\+Down\+Callback}!ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{m\+\_\+on\+Button\+Down\+Callback}{m\_onButtonDownCallback}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ ngl\+\_\+gui\+::\+Button\+::m\+\_\+on\+Button\+Down\+Callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_button_a12f95fd476017194b064040fe071f4f7}\label{classngl__gui_1_1_button_a12f95fd476017194b064040fe071f4f7}} 
+\index{ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}!m\+\_\+on\+Button\+Up\+Callback@{m\+\_\+on\+Button\+Up\+Callback}}
+\index{m\+\_\+on\+Button\+Up\+Callback@{m\+\_\+on\+Button\+Up\+Callback}!ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{m\+\_\+on\+Button\+Up\+Callback}{m\_onButtonUpCallback}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ ngl\+\_\+gui\+::\+Button\+::m\+\_\+on\+Button\+Up\+Callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classngl__gui_1_1_button_af090b33093b5b400f3f28e22f82d7fd2}\label{classngl__gui_1_1_button_af090b33093b5b400f3f28e22f82d7fd2}} 
+\index{ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}!m\+\_\+on\+Pressed\+Callback@{m\+\_\+on\+Pressed\+Callback}}
+\index{m\+\_\+on\+Pressed\+Callback@{m\+\_\+on\+Pressed\+Callback}!ngl\+\_\+gui\+::\+Button@{ngl\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{m\+\_\+on\+Pressed\+Callback}{m\_onPressedCallback}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ ngl\+\_\+gui\+::\+Button\+::m\+\_\+on\+Pressed\+Callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\mbox{\hyperlink{_button_8h}{Button.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\mbox{\hyperlink{_button_8cpp}{Button.\+cpp}}\end{DoxyCompactItemize}

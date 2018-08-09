@@ -1,0 +1,156 @@
+\hypertarget{namespaceutl}{}\section{utl Namespace Reference}
+\label{namespaceutl}\index{utl@{utl}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classutl_1_1_file_logger}{File\+Logger}}
+\item 
+struct \mbox{\hyperlink{structutl_1_1_profiling_data}{Profiling\+Data}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707}{Profiling\+Precision}} \{ \mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707aa9f0e61a137d86aa9db53465e0801612}{Profiling\+Precision\+::second}}, 
+\mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707a407aa8403e413c457b081a9dc095a285}{Profiling\+Precision\+::millisecond}}, 
+\mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707af4b6d59819445e05b152c708db4ede10}{Profiling\+Precision\+::microsecond}}, 
+\mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707a0d7938bf86d4dc7a82f872433a9e1a1c}{Profiling\+Precision\+::nanosecond}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structutl_1_1_profiling_data}{Profiling\+Data}} \mbox{\hyperlink{namespaceutl_a414d8db340d2163b038d367b84747435}{Profile\+Function}} (std\+::function$<$ void(void)$>$ f, const unsigned int loops=1, \mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707}{Profiling\+Precision}} precision=\mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707a407aa8403e413c457b081a9dc095a285}{Profiling\+Precision\+::millisecond}})
+\item 
+std\+::string \mbox{\hyperlink{namespaceutl_ae679726d5c99421e9628a5f8e29197de}{Get\+File\+Content\+String}} (const char $\ast$filepath)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespaceutl_a43da5b11cd73ebbd81588991b1971a42}{Get\+File\+Content\+Separated\+String}} (const char $\ast$filepath)
+\item 
+void \mbox{\hyperlink{namespaceutl_a32ce5d71ca3cd937dab875e706f48a6a}{Write\+To\+File\+Local}} (const std\+::string \&input\+Str, const char $\ast$filename)
+\item 
+void \mbox{\hyperlink{namespaceutl_adf4c2376b83a6713eaceb14c89b53f6a}{Create\+File\+In\+Working\+Directory}} (const char $\ast$filename)
+\item 
+void \mbox{\hyperlink{namespaceutl_a46d596900fabb65e6281dd634065dbf8}{Create\+Directory\+In\+Working\+Directory}} (const char $\ast$dirname)
+\item 
+bool \mbox{\hyperlink{namespaceutl_a4885b4fd5be2d785d8afa24b8dec7a65}{Is\+File\+In\+Working\+Dir}} (const char $\ast$filename)
+\item 
+bool \mbox{\hyperlink{namespaceutl_a08653a6121d035c63a92c85dd6c4a7cb}{Is\+Directory\+In\+Working\+Dir}} (const char $\ast$dirname)
+\item 
+void \mbox{\hyperlink{namespaceutl_abf27aab9016dc2fb9f8b8049644276d7}{Create\+File\+Path}} (const char $\ast$filename, const char $\ast$filepath)
+\item 
+void \mbox{\hyperlink{namespaceutl_a3815036b0f9a13c874992104948198f6}{Create\+Directory\+Path}} (const char $\ast$filename, const char $\ast$filepath)
+\item 
+bool \mbox{\hyperlink{namespaceutl_adfea5967bd695c054be448927fc5cdf3}{Is\+File\+In\+Path}} (const char $\ast$filename, const char $\ast$filepath)
+\item 
+bool \mbox{\hyperlink{namespaceutl_a57a0860162f815b9ca54137b8f92f051}{Is\+Directory\+In\+Path}} (const char $\ast$filename, const char $\ast$filepath)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{namespaceutl_ad20146756b17b6333c436922702f26b6}{Is\+Prime}} (T number)
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceutl_ad221bb3fac593651670bdc0263b92707}\label{namespaceutl_ad221bb3fac593651670bdc0263b92707}} 
+\index{utl@{utl}!Profiling\+Precision@{Profiling\+Precision}}
+\index{Profiling\+Precision@{Profiling\+Precision}!utl@{utl}}
+\subsubsection{\texorpdfstring{Profiling\+Precision}{ProfilingPrecision}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707}{utl\+::\+Profiling\+Precision}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{second@{second}!utl@{utl}}\index{utl@{utl}!second@{second}}}\mbox{\Hypertarget{namespaceutl_ad221bb3fac593651670bdc0263b92707aa9f0e61a137d86aa9db53465e0801612}\label{namespaceutl_ad221bb3fac593651670bdc0263b92707aa9f0e61a137d86aa9db53465e0801612}} 
+second&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{millisecond@{millisecond}!utl@{utl}}\index{utl@{utl}!millisecond@{millisecond}}}\mbox{\Hypertarget{namespaceutl_ad221bb3fac593651670bdc0263b92707a407aa8403e413c457b081a9dc095a285}\label{namespaceutl_ad221bb3fac593651670bdc0263b92707a407aa8403e413c457b081a9dc095a285}} 
+millisecond&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{microsecond@{microsecond}!utl@{utl}}\index{utl@{utl}!microsecond@{microsecond}}}\mbox{\Hypertarget{namespaceutl_ad221bb3fac593651670bdc0263b92707af4b6d59819445e05b152c708db4ede10}\label{namespaceutl_ad221bb3fac593651670bdc0263b92707af4b6d59819445e05b152c708db4ede10}} 
+microsecond&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nanosecond@{nanosecond}!utl@{utl}}\index{utl@{utl}!nanosecond@{nanosecond}}}\mbox{\Hypertarget{namespaceutl_ad221bb3fac593651670bdc0263b92707a0d7938bf86d4dc7a82f872433a9e1a1c}\label{namespaceutl_ad221bb3fac593651670bdc0263b92707a0d7938bf86d4dc7a82f872433a9e1a1c}} 
+nanosecond&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceutl_a46d596900fabb65e6281dd634065dbf8}\label{namespaceutl_a46d596900fabb65e6281dd634065dbf8}} 
+\index{utl@{utl}!Create\+Directory\+In\+Working\+Directory@{Create\+Directory\+In\+Working\+Directory}}
+\index{Create\+Directory\+In\+Working\+Directory@{Create\+Directory\+In\+Working\+Directory}!utl@{utl}}
+\subsubsection{\texorpdfstring{Create\+Directory\+In\+Working\+Directory()}{CreateDirectoryInWorkingDirectory()}}
+{\footnotesize\ttfamily void utl\+::\+Create\+Directory\+In\+Working\+Directory (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dirname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_a3815036b0f9a13c874992104948198f6}\label{namespaceutl_a3815036b0f9a13c874992104948198f6}} 
+\index{utl@{utl}!Create\+Directory\+Path@{Create\+Directory\+Path}}
+\index{Create\+Directory\+Path@{Create\+Directory\+Path}!utl@{utl}}
+\subsubsection{\texorpdfstring{Create\+Directory\+Path()}{CreateDirectoryPath()}}
+{\footnotesize\ttfamily void utl\+::\+Create\+Directory\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{filepath }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_adf4c2376b83a6713eaceb14c89b53f6a}\label{namespaceutl_adf4c2376b83a6713eaceb14c89b53f6a}} 
+\index{utl@{utl}!Create\+File\+In\+Working\+Directory@{Create\+File\+In\+Working\+Directory}}
+\index{Create\+File\+In\+Working\+Directory@{Create\+File\+In\+Working\+Directory}!utl@{utl}}
+\subsubsection{\texorpdfstring{Create\+File\+In\+Working\+Directory()}{CreateFileInWorkingDirectory()}}
+{\footnotesize\ttfamily void utl\+::\+Create\+File\+In\+Working\+Directory (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_abf27aab9016dc2fb9f8b8049644276d7}\label{namespaceutl_abf27aab9016dc2fb9f8b8049644276d7}} 
+\index{utl@{utl}!Create\+File\+Path@{Create\+File\+Path}}
+\index{Create\+File\+Path@{Create\+File\+Path}!utl@{utl}}
+\subsubsection{\texorpdfstring{Create\+File\+Path()}{CreateFilePath()}}
+{\footnotesize\ttfamily void utl\+::\+Create\+File\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{filepath }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_a43da5b11cd73ebbd81588991b1971a42}\label{namespaceutl_a43da5b11cd73ebbd81588991b1971a42}} 
+\index{utl@{utl}!Get\+File\+Content\+Separated\+String@{Get\+File\+Content\+Separated\+String}}
+\index{Get\+File\+Content\+Separated\+String@{Get\+File\+Content\+Separated\+String}!utl@{utl}}
+\subsubsection{\texorpdfstring{Get\+File\+Content\+Separated\+String()}{GetFileContentSeparatedString()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ utl\+::\+Get\+File\+Content\+Separated\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filepath }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_ae679726d5c99421e9628a5f8e29197de}\label{namespaceutl_ae679726d5c99421e9628a5f8e29197de}} 
+\index{utl@{utl}!Get\+File\+Content\+String@{Get\+File\+Content\+String}}
+\index{Get\+File\+Content\+String@{Get\+File\+Content\+String}!utl@{utl}}
+\subsubsection{\texorpdfstring{Get\+File\+Content\+String()}{GetFileContentString()}}
+{\footnotesize\ttfamily std\+::string utl\+::\+Get\+File\+Content\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filepath }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_a57a0860162f815b9ca54137b8f92f051}\label{namespaceutl_a57a0860162f815b9ca54137b8f92f051}} 
+\index{utl@{utl}!Is\+Directory\+In\+Path@{Is\+Directory\+In\+Path}}
+\index{Is\+Directory\+In\+Path@{Is\+Directory\+In\+Path}!utl@{utl}}
+\subsubsection{\texorpdfstring{Is\+Directory\+In\+Path()}{IsDirectoryInPath()}}
+{\footnotesize\ttfamily bool utl\+::\+Is\+Directory\+In\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{filepath }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_a08653a6121d035c63a92c85dd6c4a7cb}\label{namespaceutl_a08653a6121d035c63a92c85dd6c4a7cb}} 
+\index{utl@{utl}!Is\+Directory\+In\+Working\+Dir@{Is\+Directory\+In\+Working\+Dir}}
+\index{Is\+Directory\+In\+Working\+Dir@{Is\+Directory\+In\+Working\+Dir}!utl@{utl}}
+\subsubsection{\texorpdfstring{Is\+Directory\+In\+Working\+Dir()}{IsDirectoryInWorkingDir()}}
+{\footnotesize\ttfamily bool utl\+::\+Is\+Directory\+In\+Working\+Dir (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dirname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_adfea5967bd695c054be448927fc5cdf3}\label{namespaceutl_adfea5967bd695c054be448927fc5cdf3}} 
+\index{utl@{utl}!Is\+File\+In\+Path@{Is\+File\+In\+Path}}
+\index{Is\+File\+In\+Path@{Is\+File\+In\+Path}!utl@{utl}}
+\subsubsection{\texorpdfstring{Is\+File\+In\+Path()}{IsFileInPath()}}
+{\footnotesize\ttfamily bool utl\+::\+Is\+File\+In\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{filepath }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_a4885b4fd5be2d785d8afa24b8dec7a65}\label{namespaceutl_a4885b4fd5be2d785d8afa24b8dec7a65}} 
+\index{utl@{utl}!Is\+File\+In\+Working\+Dir@{Is\+File\+In\+Working\+Dir}}
+\index{Is\+File\+In\+Working\+Dir@{Is\+File\+In\+Working\+Dir}!utl@{utl}}
+\subsubsection{\texorpdfstring{Is\+File\+In\+Working\+Dir()}{IsFileInWorkingDir()}}
+{\footnotesize\ttfamily bool utl\+::\+Is\+File\+In\+Working\+Dir (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_ad20146756b17b6333c436922702f26b6}\label{namespaceutl_ad20146756b17b6333c436922702f26b6}} 
+\index{utl@{utl}!Is\+Prime@{Is\+Prime}}
+\index{Is\+Prime@{Is\+Prime}!utl@{utl}}
+\subsubsection{\texorpdfstring{Is\+Prime()}{IsPrime()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool utl\+::\+Is\+Prime (\begin{DoxyParamCaption}\item[{T}]{number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_a414d8db340d2163b038d367b84747435}\label{namespaceutl_a414d8db340d2163b038d367b84747435}} 
+\index{utl@{utl}!Profile\+Function@{Profile\+Function}}
+\index{Profile\+Function@{Profile\+Function}!utl@{utl}}
+\subsubsection{\texorpdfstring{Profile\+Function()}{ProfileFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structutl_1_1_profiling_data}{Profiling\+Data}} utl\+::\+Profile\+Function (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(void)$>$}]{f,  }\item[{const unsigned int}]{loops = {\ttfamily 1},  }\item[{\mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707}{Profiling\+Precision}}}]{precision = {\ttfamily \mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707a407aa8403e413c457b081a9dc095a285}{Profiling\+Precision\+::millisecond}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutl_a32ce5d71ca3cd937dab875e706f48a6a}\label{namespaceutl_a32ce5d71ca3cd937dab875e706f48a6a}} 
+\index{utl@{utl}!Write\+To\+File\+Local@{Write\+To\+File\+Local}}
+\index{Write\+To\+File\+Local@{Write\+To\+File\+Local}!utl@{utl}}
+\subsubsection{\texorpdfstring{Write\+To\+File\+Local()}{WriteToFileLocal()}}
+{\footnotesize\ttfamily void utl\+::\+Write\+To\+File\+Local (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+Str,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+

@@ -12,7 +12,11 @@ namespace ec
 	Transform3D::Transform3D(const glm::vec3& position, 
 							 const glm::vec3& scale,
 							 const glm::vec3& orientation)
-		: m_up{conf::g_coordinate_system_up}
+		: m_up{conf::g_coordinate_system_up},
+		m_position{position},
+		m_scale{scale},
+		m_forwardVector{orientation},
+		m_localMat{1.0f}
 	{
 	}
 
@@ -22,9 +26,15 @@ namespace ec
 
 	void Transform3D::UpdateLocalMat()
 	{
-		m_localMat = glm::scale(glm::mat4(1.0f), m_scale);
-		m_localMat *= glm::eulerAngleXYZ(m_orientation.x, m_orientation.y, m_orientation.z);
-		m_localMat *= glm::translate(m_localMat, m_position);
+		m_localMat = glm::translate(glm::mat4(1.0f), m_position);
+
+		glm::mat4 rotMat(1.0f);
+		rotMat[0] = glm::vec4(glm::cross(m_forwardVector, m_up), 0.0f);
+		rotMat[1] = glm::vec4(m_up, 0.0f);
+		rotMat[2] = glm::vec4(m_forwardVector, 0.0f);		
+
+		m_localMat *= rotMat;
+		m_localMat = glm::scale(m_localMat, m_scale);
 	}
 
 	const glm::vec3& Transform3D::GetLocalPosition()
@@ -43,9 +53,9 @@ namespace ec
 		return m_up;
 	}
 
-	const glm::vec3& Transform3D::GetOrientation() const
+	const glm::vec3& Transform3D::GetForwardVector() const
 	{
-		return m_orientation;
+		return m_forwardVector;
 	}
 
 	const glm::vec3& Transform3D::GetTranslation() const
@@ -124,54 +134,70 @@ namespace ec
 
 	void Transform3D::TranslateLocal(const float x, const float y, const float z)
 	{
-		m_position += x * glm::cross(m_orientation, m_up);
+		m_position += x * glm::cross(m_forwardVector, m_up);
 		m_position += y * m_up;
-		m_position += z * m_orientation;
+		m_position += z * m_forwardVector;
 	}
 
 	void Transform3D::TranslateLocal(const glm::vec3& v)
 	{
-		m_position += v.x * glm::cross(m_orientation, m_up);
+		m_position += v.x * glm::cross(m_forwardVector, m_up);
 		m_position += v.y * m_up;
-		m_position += v.z * m_orientation;
+		m_position += v.z * m_forwardVector;
 	}
 
 	void Transform3D::Rotate(const glm::quat& rot)
 	{
-		m_orientation = glm::normalize(rot * m_orientation);
+		m_forwardVector = glm::normalize(rot * m_forwardVector);
 		m_up = glm::normalize(rot * m_up);
 	}
 
 	void Transform3D::Rotate(float angle, const glm::vec3& axis)
 	{
-		m_orientation = glm::normalize(glm::rotate(m_orientation, angle, axis));
-		m_up = glm::rotate(m_up, angle, axis);
+		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
+		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
 	}
 
 	void Transform3D::RotateX(const float angle)
 	{
-		glm::vec3 axis = glm::cross(m_orientation, conf::g_coordinate_system_up);
-		m_orientation = glm::normalize(glm::rotate(m_orientation, angle, axis));
+		glm::vec3 axis = glm::vec3(1.0f, 0.0f, 0.0f);
+		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
 	}
 
 	void Transform3D::RotateY(const float angle)
 	{
-		glm::vec3 axis = glm::vec3(0.0f, 1.0f, 0.0f);
-		m_orientation = glm::normalize(glm::rotate(m_orientation, angle, axis));
+		glm::vec3 axis = conf::g_coordinate_system_up;
+		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
 	}
 
 	void Transform3D::RotateZ(const float angle)
 	{
 		glm::vec3 axis = glm::vec3(0.0f, 0.0f, 1.0f);
-		m_orientation = glm::normalize(glm::rotate(m_orientation, angle, axis));
+		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
 	}
 
-	void Transform3D::SetOrientation(const glm::vec3& orientation)
+	void Transform3D::RotateXLocal(const float angle)
 	{
-		m_orientation = orientation;
+		glm::vec3 axis = glm::cross(m_forwardVector, m_up);
+		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
+		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
+	}
+
+	void Transform3D::RotateYLocal(const float angle)
+	{
+		glm::vec3 axis = m_up;
+		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
+		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
+	}
+
+	void Transform3D::RotateZLocal(const float angle)
+	{
+		glm::vec3 axis = m_forwardVector;
+		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
+		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
 	}
 
 	const glm::vec3& Transform3D::GetScale() const

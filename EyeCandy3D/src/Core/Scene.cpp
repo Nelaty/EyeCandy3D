@@ -9,7 +9,8 @@ namespace ec
 		: m_root(nullptr),
 		m_sceneController{nullptr},
 		m_name{name},
-		m_sceneSystem{nullptr}
+		m_sceneSystem{nullptr},
+		m_enabled{true}
 	{
 		InitSceneRenderer();
 		m_root = std::make_unique<Node>(nullptr);
@@ -62,6 +63,21 @@ namespace ec
 	ec::SceneSystem* Scene::GetSceneSystem()
 	{
 		return m_sceneSystem;
+	}
+
+	void Scene::Enable()
+	{
+		m_enabled = true;
+	}
+
+	void Scene::Disable()
+	{
+		m_enabled = false;
+	}
+
+	bool Scene::IsEnabled() const
+	{
+		return m_enabled;
 	}
 
 	void Scene::InitSceneRenderer()

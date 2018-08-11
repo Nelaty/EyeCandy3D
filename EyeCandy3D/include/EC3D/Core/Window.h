@@ -95,6 +95,8 @@ namespace ec
 		/* Main loop function implementation */
 		virtual void MainLoopImpl();
 
+		void WindowTick(float timeDelta);
+
 		void InitCallbacks();
 		void InitOpenGL();
 

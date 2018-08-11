@@ -18,11 +18,15 @@ namespace ec
 	{
 	}
 
-
-	/// \todo implement tickíng of scenes -> currently active cameras?
 	void SceneSystem::Tick(const float timeDelta)
 	{
-		
+		for(auto& it : m_scenes)
+		{
+			if(it->IsEnabled())
+			{
+				it->Tick(timeDelta);
+			}
+		}
 	}
 
 	ec::Scene* SceneSystem::GetScene(const std::string& sceneName) const

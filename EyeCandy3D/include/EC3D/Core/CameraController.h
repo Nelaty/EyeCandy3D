@@ -22,6 +22,9 @@ namespace ec
 		/* Apply camera movement */
 		void Tick(const float timeDelta);
 
+		/** Reset camera to initial state */
+		void Reset();
+
 		/* Camera access */
 		void SetCamera(Camera* camera);
 		Camera* GetCamera() const;
@@ -46,7 +49,6 @@ namespace ec
 		Camera* m_camera;
 
 		/* Maximal and current linear velocity */
-		glm::vec3 m_cameraVelocity;
 		glm::vec3 m_cameraVelocityCurrent;
 		float m_cameraSpeed;
 
@@ -55,9 +57,15 @@ namespace ec
 		glm::vec3 m_cameraRotation;
 		glm::vec3 m_cameraRotationCurrent;
 
+		/* FOV limits */
+		float m_fovMin;
+		float m_fovMax;
+		float m_fovStep;
+
 		/* Mouse controlled camera rotation */
-		bool m_mouseChangeCameraDirFirst = true;
-		bool m_mouseChangeCameraDir = false;
+		float m_mouseSensitivity;
+		bool m_mouseChangeCameraDirFirst;
+		bool m_mouseChangeCameraDir;
 		glm::vec2 m_mouseCoordsLast;
 		glm::vec2 m_mouseMovement;
 	};

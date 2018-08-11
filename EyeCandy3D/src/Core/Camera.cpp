@@ -9,14 +9,16 @@
 namespace ec
 {
 	Camera::Camera(Scene* scene)
-		: m_scene{scene}
+		: m_scene{scene},
+		Node(nullptr)
 	{
 		Init();
 	}	
 
 	Camera::Camera(Scene* scene, const Viewport& viewport)
 		: m_scene{scene},
-		m_viewport{viewport}
+		m_viewport{viewport},
+		Node(nullptr)
 	{
 		Init();
 	}
@@ -34,112 +36,28 @@ namespace ec
 		}
 	}
 
-	void Camera::UpdateView()
+	void Camera::UpdateLocalMat()
 	{
+		__super::UpdateLocalMat();
+	}
+
+	void Camera::UpdateGlobalMatrices(const glm::mat4& m_parentMat)
+	{
+		__super::UpdateGlobalMatrices(m_parentMat);
+
 		m_view = glm::lookAt(m_position,
-							 m_orientation + m_position,
+							 m_forwardVector + m_position,
 							 m_up);
 	}
 
 	const glm::mat4& Camera::GetView() const
 	{
 		return m_view;
-	}
+	}	
 
 	const glm::mat4& Camera::GetProjection() const
 	{
 		return m_projection;
-	}
-
-	const glm::vec3& Camera::GetUpVector() const
-	{
-		return m_up;
-	}
-
-	void Camera::Rotate(const glm::quat& rot)
-	{
-		m_orientation = glm::normalize(rot * m_orientation);
-		m_up = glm::normalize(rot * m_up);
-	}
-
-	void Camera::Rotate(float angle, const glm::vec3& axis)
-	{
-		m_orientation = glm::normalize(glm::rotate(m_orientation, angle, axis));
-		m_up = glm::rotate(m_up, angle, axis);
-	}
-
-	void Camera::RotateX(const float angle)
-	{
-		glm::vec3 up(0.0f, 1.0f, 0.0f);
-		glm::vec3 axis = glm::cross(m_orientation, up);
-
-		m_orientation = glm::normalize(glm::rotate(m_orientation, angle, axis));
-		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
-	}
-
-	void Camera::RotateY(const float angle)
-	{
-		glm::vec3 axis = glm::vec3(0.0f, 1.0f, 0.0f);
-		m_orientation = glm::normalize(glm::rotate(m_orientation, angle, axis));
-		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
-	}
-
-	void Camera::RotateZ(const float angle)
-	{
-		glm::vec3 axis = glm::vec3(0.0f, 0.0f, 1.0f);
-		m_orientation = glm::normalize(glm::rotate(m_orientation, angle, axis));
-		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
-	}
-
-	void Camera::SetOrientation(const glm::vec3& orientation)
-	{
-		m_orientation = orientation;
-	}
-
-	void Camera::Translate(const float x, const float y, const float z)
-	{
-		m_position.x += x;
-		m_position.y += y;
-		m_position.z += z;
-	}
-
-	void Camera::Translate(const glm::vec3& v)
-	{
-		m_position += v;
-	}
-
-	void Camera::TranslateX(const float x)
-	{
-		m_position.x += x;
-	}
-
-	void Camera::TranslateY(const float y)
-	{
-		m_position.y += y;
-	}
-
-	void Camera::TranslateZ(const float z)
-	{
-		m_position.z += z;
-	}
-
-	void Camera::SetTranslation(const glm::vec3& translation)
-	{
-		m_position = translation;
-	}
-
-	void Camera::TranslateLocal(const float x, const float y, const float z)
-	{
-		m_position += x * glm::cross(m_orientation, m_up);
-		m_position += y * m_up;
-		m_position += z * m_orientation;
-	}
-
-	void Camera::TranslateLocal(const glm::vec3& v)
-	{
-		m_position += v.x * glm::cross(m_orientation, m_up);
-		m_position += v.y * m_up;
-		m_position += v.z * m_orientation;
 	}
 
 	void Camera::SetProjectionOrtho()
@@ -209,25 +127,11 @@ namespace ec
 
 	void Camera::Init()
 	{
-		m_aspect = 1.0f;
-		m_position = glm::vec3(0.0f, 0.0f, 0.0f);
-		m_orientation = glm::vec3(0.0f, 0.0f, -1.0f);
-		m_up = glm::vec3(0.0f, 1.0f, 0.0f);
-		m_view = glm::mat4(1.0f);
-		m_fov = 45.0f;
-		m_near = 1.0f;
-		m_far = 100.0f;
+		m_aspect = 1.0f;	
+		m_fov = 60.0f;
+		m_near = 0.01f;
+		m_far = 1000.0f;
 
 		SetProjectionPerspective();
-	}
-
-	const glm::vec3& Camera::GetTranslation() const
-	{
-		return m_position;
-	}
-
-	const glm::vec3& Camera::GetDirection() const
-	{
-		return m_orientation;
 	}
 }

@@ -202,6 +202,7 @@ namespace ec
 	{
 		float timeDelta = static_cast<float>(m_timer.GetTimeDelta());
 
+		WindowTick(timeDelta);
 		Tick(timeDelta);
 		m_timer.ResetTimeDelta();
 		Render();
@@ -394,7 +395,12 @@ void Window::PrintVersions() const
 
 	void Window::Tick(const float timeDelta)
 	{
+	}
+
+	void ec::Window::WindowTick(float timeDelta)
+	{
 		m_inputObservable.InformAll();
+		m_sceneSystem.Tick(timeDelta);
 	}
 
 	void Window::GoFullscreen()

@@ -1,6 +1,8 @@
 #include "EC3D/Core/CubeMesh.h"
+#include "EC3D/Core/Vertex.h"
 
 #include <array>
+#include <vector>
 
 namespace ec
 {

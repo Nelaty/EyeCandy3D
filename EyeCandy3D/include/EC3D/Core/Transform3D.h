@@ -19,7 +19,7 @@ namespace ec
 		 * Create a new local mat from the current position, rotation and
 		 * scale. 
 		 */
-		void UpdateLocalMat();
+		virtual void UpdateLocalMat();
 
 		/** 
 		 * Get the current local position .
@@ -31,8 +31,8 @@ namespace ec
 		const glm::mat4& GetLocalMat() const;
 		/** Get the current up vector. */
 		const glm::vec3& GetUpVector() const;
-		/** Get the current orientation. */
-		const glm::vec3& GetOrientation() const;
+		/** Get the current forward vector. */
+		const glm::vec3& GetForwardVector() const;
 
 		/** 
 		 * Get the current translation 
@@ -68,7 +68,15 @@ namespace ec
 		/** Assign the given value to the current z-coordinate. */
 		void SetTranslationZ(const float z);
 
+		/** 
+		 * Translate by the given coordinates and with respect to the
+		 * current orientation.
+		 */
 		void TranslateLocal(const float x, const float y, const float z);
+		/**
+		* Translate by the given vector and with respect to the
+		* current orientation.
+		*/
 		void TranslateLocal(const glm::vec3& v);
 
 		/** Rotate with a quaternion. */
@@ -81,8 +89,13 @@ namespace ec
 		void RotateY(const float angle);
 		/** Rotate around the z axis by a given angle. */
 		void RotateZ(const float angle);
-		/** Rotate so that the matrix matches the given orientation. */
-		void SetOrientation(const glm::vec3& orientation);
+
+		/** Rotate around the local x axis by a given angle */
+		void RotateXLocal(const float angle);
+		/** Rotate around the local y axis by a given angle */
+		void RotateYLocal(const float angle);
+		/** Rotate around the local z axis by a given angle */
+		void RotateZLocal(const float angle);
 
 		/** Get the current scale. */
 		const glm::vec3& GetScale() const;
@@ -116,9 +129,10 @@ namespace ec
 	protected:
 		glm::vec3 m_up;
 		glm::vec3 m_position;
-		glm::vec3 m_orientation;
+		glm::vec3 m_forwardVector;
 		glm::vec3 m_scale;
 
+	private:
 		glm::mat4 m_localMat;
 	};
 }

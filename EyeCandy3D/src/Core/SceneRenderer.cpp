@@ -25,6 +25,13 @@ namespace ec
 	void SceneRenderer::OnBeginRender(RenderContext& context)
 	{
 		const auto& scenes = context.m_uniqueScenes;
+		const auto& cameras = m_frame.GetCameras();
+
+		// Temp
+		for(const auto& it : cameras)
+		{
+			it->UpdateGlobalMatrices(glm::mat4(1.0f));
+		}
 
 		// Update matrices of all relevant nodes
 		for(const auto& it : scenes)
@@ -48,7 +55,6 @@ namespace ec
 
 			UpdateViewport(context, it);
 			UpdateShaders(shaderManager, it);
-			it->UpdateView();
 			RenderTargets();
 		}
 	}
@@ -66,7 +72,7 @@ namespace ec
 	{
 		for(const auto& target : m_renderingTargets)
 		{
-			const auto& mat = target->GetGlobalMatrix();
+			const auto& mat = target->GetGlobalMat();
 			const auto& drawables = target->GetDrawables();
 
 			for(const auto& it : drawables)
@@ -120,8 +126,6 @@ namespace ec
 		const auto& cameras = m_frame.GetCameras();
 		auto& shaderManager = window->GetShaderManager();
 
-		
-
 		// Collect all unique cameras, since a scene only needs to updated
 		// once.
 		std::set<Scene*> uniqueScenes;
@@ -137,7 +141,6 @@ namespace ec
 		RenderContext context;
 		context.m_window = window;
 		context.m_uniqueScenes = uniqueScenes;
-		
 
 		OnBeginRender(context);
 		OnRender(context);

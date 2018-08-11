@@ -8,7 +8,6 @@ namespace ec
 {
 	Node::Node(Node* parent)
 		: m_parent{parent},
-		m_localMat{1.0f},
 		m_globalMat{1.0f}
 	{
 	}	
@@ -31,7 +30,8 @@ namespace ec
 
 	void Node::UpdateGlobalMatrices(const glm::mat4& m_parentMat)
 	{
-		m_globalMat = m_parentMat * m_localMat;
+		UpdateLocalMat();
+		m_globalMat = m_parentMat * GetLocalMat();
 		for(auto& it : m_children)
 		{
 			it->UpdateGlobalMatrices(m_globalMat);
@@ -114,83 +114,5 @@ namespace ec
 	void Node::RemoveDrawables()
 	{
 		m_drawables = std::vector<Drawable*>();
-	}
-
-	const glm::mat4& Node::GetLocalMatrix() const
-	{
-		return m_localMat;
-	}
-
-	const glm::mat4& Node::GetGlobalMatrix() const
-	{
-		return m_globalMat;
-	}
-
-	void Node::Translate(const glm::vec3& val)
-	{
-		m_localMat[3].x += val.x;
-		m_localMat[3].y += val.y;
-		m_localMat[3].z += val.z;
-	}
-
-	void Node::TranslateX(float x)
-	{
-		m_localMat[3].x += x;
-	}
-
-	void Node::TranslateY(float y)
-	{
-		m_localMat[3].y += y;
-	}
-
-	void Node::TranslateZ(float z)
-	{
-		m_localMat[3].z += z;
-	}
-
-	void Node::SetTranslation(const glm::vec3& val)
-	{
-		m_localMat[3].x = val.x;
-		m_localMat[3].y = val.y;
-		m_localMat[3].z = val.z;
-	}
-
-	glm::vec3 Node::GetTranslation() const
-	{
-		return m_localMat[3];
-	}
-
-	void Node::Rotate(const float angle, const glm::vec3& axis)
-	{
-
-	}
-
-	void Node::SetOrientation(const glm::vec3& orientation)
-	{
-
-	}
-
-	glm::vec3 Node::SetOrientation() const
-	{
-		return glm::vec3(0);
-	}
-
-	void Node::Scale(const glm::vec3& val)
-	{
-		m_localMat[0][0] *= val.x;
-		m_localMat[1][1] *= val.y;
-		m_localMat[2][2] *= val.z;
-	}
-
-	void Node::SetScale(const glm::vec3& val)
-	{
-		m_localMat[0][0] = val.x;
-		m_localMat[1][1] = val.y;
-		m_localMat[2][2] = val.z;
-	}
-
-	glm::vec3 Node::GetScale() const
-	{
-		return glm::vec3(0);
 	}
 }

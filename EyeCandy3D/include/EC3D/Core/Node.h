@@ -1,4 +1,6 @@
 #pragma once
+#include "Transform3D.h"
+
 #include <vector>
 
 #include <glm/glm.hpp>
@@ -13,7 +15,7 @@ namespace ec
 	class Geometry;
 	class Drawable;
 
-	class Node
+	class Node : public Transform3D
 	{
 	public:
 		explicit Node(Node* parent);
@@ -23,7 +25,7 @@ namespace ec
 		virtual void Render(SceneRenderer& renderer);
 		
 		/** Recursively update global matrices */
-		void UpdateGlobalMatrices(const glm::mat4& m_parentMat);
+		virtual void UpdateGlobalMatrices(const glm::mat4& m_parentMat);
 
 		/**
 		 * Get the current global matrix. This node needs to be
@@ -49,36 +51,10 @@ namespace ec
 		void RemoveDrawable(Drawable* drawable);
 		void RemoveDrawables();
 
-		/* Matrix access */
-		const glm::mat4& GetLocalMatrix() const;
-		const glm::mat4& GetGlobalMatrix() const;
-
-		/* Translation */
-		void Translate(const glm::vec3& val);
-		void TranslateX(float x);
-		void TranslateY(float y);
-		void TranslateZ(float z);
-		void SetTranslation(const glm::vec3& val);
-		glm::vec3 GetTranslation() const;
-
-		// TODO: IMPLEMENT!
-		/* Rotation */
-		void Rotate(const float angle, const glm::vec3& axis);
-		void SetOrientation(const glm::vec3& orientation);
-		glm::vec3 SetOrientation() const;
-
-		/* Scaling */
-		void Scale(const glm::vec3& val);
-		void SetScale(const glm::vec3& val);
-		glm::vec3 GetScale() const;
-
 	protected:
 		Node* m_parent;
 		std::vector<Node*> m_children;
-
 		std::vector<Drawable*> m_drawables;
-
-		glm::mat4 m_localMat;
 
 	private:
 		glm::mat4 m_globalMat;

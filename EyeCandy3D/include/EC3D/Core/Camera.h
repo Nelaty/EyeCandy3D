@@ -1,4 +1,6 @@
 #pragma once
+#include "Node.h"
+
 #include "Viewport.h"
 #include "CameraType.h"
 
@@ -13,7 +15,7 @@ namespace ec
 	* to render the related scene. It contains a viewport, which defines
 	* the area of the render target the scene should be rendered into.
 	*/
-	class Camera
+	class Camera : public Node
 	{
 	public:
 		explicit Camera(Scene* scene);
@@ -31,40 +33,14 @@ namespace ec
 		 * DO NOT USE
 		 * Update the view matrix 
 		 */
-		void UpdateView();
+		virtual void UpdateLocalMat() override;
+
+		virtual void UpdateGlobalMatrices(const glm::mat4& m_parentMat) override;
 
 		/** Get the current view matrix */
 		const glm::mat4& GetView() const;
 		/** Get the current projection matrix */
 		const glm::mat4& GetProjection() const;
-		/** Get the current up vector */
-		const glm::vec3& GetUpVector() const;
-		/** Get the current orientation */
-		const glm::vec3& GetDirection() const;
-
-		/** Rotate with a quaternion */
-		void Rotate(const glm::quat& rot);
-		/** Rotate around an axis by a given angle */
-		void Rotate(float angle, const glm::vec3& axis);
-		/** Rotate around the x axis by a given angle */
-		void RotateX(const float angle);
-		/** Rotate around the y axis by a given angle */
-		void RotateY(const float angle);
-		/** Rotate around the z axis by a given angle */
-		void RotateZ(const float angle);
-		void SetOrientation(const glm::vec3& orientation);
-
-		/* Translation */
-		const glm::vec3& GetTranslation() const;
-		void Translate(const float x, const float y, const float z);
-		void Translate(const glm::vec3& v);
-		void TranslateX(const float x);
-		void TranslateY(const float y);
-		void TranslateZ(const float z);
-		void SetTranslation(const glm::vec3& translation);
-
-		void TranslateLocal(const float x, const float y, const float z);
-		void TranslateLocal(const glm::vec3& v);
 
 		/** Change to orthogonal projection */
 		void SetProjectionOrtho();
@@ -105,10 +81,6 @@ namespace ec
 		float m_fov;
 		float m_near;
 		float m_far;
-
-		glm::vec3 m_up;
-		glm::vec3 m_position;
-		glm::vec3 m_orientation;
 
 		glm::mat4 m_view;
 		glm::mat4 m_projection;

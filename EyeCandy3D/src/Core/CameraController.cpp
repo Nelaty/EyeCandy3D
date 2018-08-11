@@ -25,20 +25,18 @@ namespace ec
 		if(!m_camera) return;
 
 		m_camera->TranslateLocal(m_cameraVelocityCurrent * timeDelta * m_cameraSpeed);
-		if(m_cameraRotationCurrent != glm::vec3(0.0f))
-		{
-			m_camera->Rotate(m_cameraRotationSpeed * timeDelta, glm::normalize(m_cameraRotationCurrent));
-		}
-
 		if(m_mouseChangeCameraDir && m_mouseMovement != glm::vec2(0.0f))
 		{
-			static const float sensitivity = 0.001f;
-
-			m_camera->RotateY(-m_mouseMovement.x * sensitivity);
-			m_camera->RotateX(-m_mouseMovement.y * sensitivity);
+			m_camera->RotateY(-m_mouseMovement.x * m_mouseSensitivity);
+			m_camera->RotateXLocal(-m_mouseMovement.y * m_mouseSensitivity);
 
 			m_mouseMovement = glm::vec2(0.0f);
 		}
+	}
+
+	void CameraController::Reset()
+	{
+		Init();
 	}
 
 	void CameraController::SetCamera(Camera* camera)
@@ -207,16 +205,15 @@ namespace ec
 	{
 		if(!m_camera) return;
 
-		float scalar = 3.0f;
 		float FOV = m_camera->GetFOV();
-		FOV -= glm::radians(event.m_offsetY) * scalar;
-		if(FOV < glm::radians(0.1f))
+		FOV -= event.m_offsetY * m_fovStep;
+		if(FOV < m_fovMin)
 		{
-			FOV = glm::radians(0.1f);
+			FOV = m_fovMin;
 		}
-		else if(FOV > glm::radians(179.9f))
+		else if(FOV > m_fovMax)
 		{
-			FOV = glm::radians(179.9f);
+			FOV = m_fovMax;
 		}
 
 		m_camera->SetFOV(FOV);
@@ -229,8 +226,15 @@ namespace ec
 		m_cameraRotationCurrent = glm::vec3(0.0f);
 		m_cameraVelocityCurrent = glm::vec3(0.0f);
 
+		m_mouseSensitivity = 0.001f;
+		m_mouseChangeCameraDirFirst = true;
+		m_mouseChangeCameraDir = false;
+
 		m_cameraRotationSpeed = 0.003f;
 		m_cameraRotation = glm::vec3(1.0f, 1.0f, 1.0f);
-		m_cameraVelocity = glm::vec3(1.0f, 1.0f, 1.0f) * 10.0f;
+		
+		m_fovMin = glm::radians(0.1f);
+		m_fovMax = glm::radians(179.9f);
+		m_fovStep = glm::radians(3.0f);
 	}
 }

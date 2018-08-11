@@ -11,7 +11,6 @@
 #include "EC3D/Core/Frame.h"
 #include "EC3D/Core/SceneRenderer.h"
 #include "EC3D/Core/Shader/Shader.h"
-#include "EC3D/Core/Scene.h"
 
 using namespace ec;
 
@@ -30,63 +29,30 @@ ExampleWindow::~ExampleWindow()
 
 void ExampleWindow::Tick(const float timeDelta)
 {
-	__super::Tick(timeDelta);
-
-	if(m_activeScene)
-	{
-		m_activeScene->Tick(timeDelta);
-	}
-
 	m_cameraController.Tick(timeDelta);
 	//m_cameraController2.Tick(timeDelta);
 }
 
-void ExampleWindow::InitCamera()
+void ExampleWindow::InitCameras()
 {
+	// Create first camera
 	m_camera = new ec::Camera(m_exampleScene);
-	m_camera->SetNear(0.01f);
-	m_camera->SetFar(1000.0f);
 	m_camera->SetFOV(glm::radians(60.0f));
 	m_camera->SetTranslation(glm::vec3(0.0f, 0.0f, 10.0f));
-	//m_camera->RotateY(glm::radians(-90.0f));
 
 	m_cameraController.SetCamera(m_camera);
-	m_inputObservable.RegisterInputController(&m_cameraController);
+	m_inputObservable.RegisterInputListener(&m_cameraController);
 
-	//////////////////////////////////////////////////////////////////////////
-	/// TEST
+	// Create a second camera
 	m_camera2 = new ec::Camera(m_exampleScene);
-	m_camera2->SetNear(0.01f);
-	m_camera2->SetFar(1000.0f);
 	m_camera2->SetFOV(glm::radians(60.0f));
 	m_camera2->SetTranslation(glm::vec3(0.0f, 0.0f, 30.0f));
-	//cam->RotateY(glm::radians(-90.0f));
 	
-	//m_cameraController2.SetCamera(m_camera2);
-	//m_inputObservable.RegisterInputController(&m_cameraController2);
-
-
-
-
+	// Create a third camera
 	m_camera3 = new ec::Camera(m_exampleScene);
-	m_camera3->SetNear(0.01f);
-	m_camera3->SetFar(1000.0f);
 	m_camera3->SetFOV(glm::radians(60.0f));
-	m_camera3->RotateX(glm::radians(-45.0f));
-	m_camera3->SetTranslation(glm::vec3(0.0f, 15.0f, 20.0f));
-	//////////////////////////////////////////////////////////////////////////
-}
-
-void ExampleWindow::InitScenes()
-{
-	m_exampleScene = new ExampleScene("example");
-
-	m_sceneSystem.RegisterScene(m_exampleScene);
-	
-	ConstructTestSG();
-	SphereTest();
-
-	InitCamera();
+	m_camera3->RotateY(glm::radians(-180.0f));
+	m_camera3->SetTranslation(glm::vec3(0.0f, 0.0f, -30.0f));
 
 	// Init camera viewports
 	ec::Viewport view(glm::vec2(0.0, 0.0), glm::vec2(0.75f, 1.0f));
@@ -96,19 +62,46 @@ void ExampleWindow::InitScenes()
 	ec::Viewport view3(glm::vec2(0.75, 0.0), glm::vec2(0.25f, 0.5f));
 	m_camera3->SetViewport(view3);
 
-
-	// Init frame
+	// Init frame, which is a collection of the previously created cameras
 	Frame exampleFrame;
 	exampleFrame.AddCamera(m_camera);
 	exampleFrame.AddCamera(m_camera2);
 	exampleFrame.AddCamera(m_camera3);
 
-	// Init Renderer
+	// Create a renderer, which uses the frame from the last step
 	m_exampleRenderer = new SceneRenderer();
 	m_exampleRenderer->SetFrame(exampleFrame);
 
+	// Register the scene renderer with the main renderer
 	m_renderer.RegisterSceneRenderer("example", m_exampleRenderer);
+	// Tell the main renderer to use the example scene renderer, 
+	// which was registered in the last step.
 	m_renderer.ChangeRenderer("example");
+}
+
+void ExampleWindow::InitScenes()
+{
+	m_exampleScene = new ExampleScene("example", this);
+	m_sceneSystem.RegisterScene(m_exampleScene);
+
+	InitCameras();
+
+	// Add drawable to camera
+	Shader* shader = m_shaderManager.GetShader("basic");
+	CubeMesh* cubeMesh = new CubeMesh(1.0f);
+	Material* woodMat = new Material();
+	woodMat->AddDiffuseTextureFromPath("Resources/Textures/wall_02.jpg");
+
+	Drawable* cameraDrawable = new Drawable(cubeMesh, woodMat, shader);
+	//m_camera->AddDrawable(cameraDrawable);
+
+	auto* root = m_exampleScene->GetRoot();
+	root->AddChild(m_camera);
+
+	Node* blockNode = new Node(nullptr);
+	blockNode->AddDrawable(cameraDrawable);
+	blockNode->TranslateZ(-6);
+	m_camera->AddChild(blockNode);
 }
 
 void ExampleWindow::InitShaders()
@@ -126,68 +119,4 @@ void ExampleWindow::InitShaders()
 	m_shaderManager.AddShader("text",
 							  path + "text.vert",
 							  path + "text.frag");
-}
-
-void ExampleWindow::ConstructTestSG()
-{
-	CubeMesh* cubeMesh = new CubeMesh(1.0f);
-	Shader* shader = m_shaderManager.GetShader("basic");
-	Material* woodMat = new Material();
-	woodMat->AddDiffuseTextureFromPath("Resources/Textures/wood.jpg");
-	Material* wallMat00 = new Material();
-	wallMat00->AddDiffuseTextureFromPath("Resources/Textures/wall_00.jpg");
-	Material* wallMat01 = new Material();
-	wallMat01->AddDiffuseTextureFromPath("Resources/Textures/wall_01.jpg");
-
-	Drawable* woodCube = new Drawable(cubeMesh, woodMat, shader);
-	Drawable* wall00Cube = new Drawable(cubeMesh, wallMat00, shader);
-	Drawable* wall01Cube = new Drawable(cubeMesh, wallMat01, shader);
-
-	Node* left = new Node(nullptr);
-	Node* right = new Node(nullptr);
-	Node* backside = new Node(nullptr);
-	Node* bottom = new Node(nullptr);
-
-	float translation = 5;
-	float width = 0.1f;
-	float height = 10.0f;
-	float length = 10.0f;
-
-	left->AddDrawable(wall01Cube);
-	left->TranslateX(-translation);
-	left->Scale(glm::vec3(width, height, length));
-
-	right->AddDrawable(wall01Cube);
-	right->TranslateX(translation);
-	right->Scale(glm::vec3(width, height, length));
-
-	backside->AddDrawable(wall00Cube);
-	backside->TranslateZ(-translation);
-	backside->Scale(glm::vec3(length, height, width));
-
-	bottom->AddDrawable(woodCube);
-	bottom->TranslateY(-translation);
-	bottom->Scale(glm::vec3(height, width, length));
-
-	auto* rootNode = m_exampleScene->GetRoot();
-	rootNode->AddChild(left);
-	rootNode->AddChild(right);
-	rootNode->AddChild(bottom);
-	rootNode->AddChild(backside);
-}
-
-void ExampleWindow::SphereTest()
-{
-	SphereMesh* sphereMesh = new SphereMesh(1.0f, 20, 20);
-	Shader* shader = m_shaderManager.GetShader("basic");
-	Material* woodMat = new Material();
-	woodMat->AddDiffuseTextureFromPath("Resources/Textures/melon2.jpg");
-
-	Drawable* sphereDrawable = new Drawable(sphereMesh, woodMat, shader);
-	Node* sphereNode = new Node(nullptr);
-
-	sphereNode->AddDrawable(sphereDrawable);
-
-	auto* rootNode = m_exampleScene->GetRoot();
-	rootNode->AddChild(sphereNode);
 }

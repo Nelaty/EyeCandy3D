@@ -11,48 +11,48 @@ namespace ec
 
 	void InputObservable::ReceiveEvent(const InputEvent& event)
 	{
-		for(auto& controller : m_inputController)
+		for(auto& controller : m_inputListeners)
 		{
 			controller->Inform(event);
 		}
 	}
 
-	void InputObservable::RegisterInputController(InputListener* inputController)
+	void InputObservable::RegisterInputListener(InputListener* inputListener)
 	{
-		if(!Contains(inputController))
+		if(!Contains(inputListener))
 		{
-			m_inputController.push_back(inputController);
+			m_inputListeners.push_back(inputListener);
 		}
 	}
 
-	bool InputObservable::UnregisterInputController(InputListener* inputController)
+	bool InputObservable::UnregisterInputListener(InputListener* inputListener)
 	{
-		auto foundController = std::remove(m_inputController.begin(),
-										   m_inputController.end(),
-										   inputController);
+		auto foundListener = std::remove(m_inputListeners.begin(),
+										 m_inputListeners.end(),
+										 inputListener);
 
-		return foundController != m_inputController.end();
+		return foundListener != m_inputListeners.end();
 	}
 
-	bool InputObservable::Contains(InputListener* inputController)
+	bool InputObservable::Contains(InputListener* inputListener)
 	{
-		auto foundController = std::find(m_inputController.begin(),
-										 m_inputController.end(),
-										 inputController);
+		auto foundListener = std::find(m_inputListeners.begin(),
+									   m_inputListeners.end(),
+									   inputListener);
 
-		return foundController != m_inputController.end();
+		return foundListener != m_inputListeners.end();
 	}
 
-	void InputObservable::UnregisterAllInputControllers()
+	void InputObservable::UnregisterAllInputListeners()
 	{
-		m_inputController = InputControllers_T();
+		m_inputListeners = InputListeners_T();
 	}
 
 	void InputObservable::InformAll()
 	{
 		for(const auto& event : m_events)
 		{
-			for(auto& controller : m_inputController)
+			for(auto& controller : m_inputListeners)
 			{
 				controller->Inform(event);
 			}

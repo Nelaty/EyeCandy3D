@@ -43,8 +43,17 @@ namespace ec
 		void SetSceneSystem(SceneSystem* sceneSystem);
 		SceneSystem* GetSceneSystem();
 
+		/** Enable this scene */
+		void Enable();
+		/** Disable this scene */
+		void Disable();
+		/** Check if this scene is enabled */
+		bool IsEnabled() const;
+
 	protected:
 		void InitSceneRenderer();
+
+		bool m_enabled;
 
 		std::string m_name;
 

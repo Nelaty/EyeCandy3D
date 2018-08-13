@@ -33,7 +33,7 @@ void ExampleScene::Init()
 
 void ExampleScene::Tick(const float timeDelta)
 {
-	m_right->RotateX(timeDelta * 0.1f);
+	//m_right->RotateX(timeDelta * 0.1f);
 }
 
 void ExampleScene::ConstructTestSG()
@@ -92,10 +92,10 @@ void ExampleScene::ConstructTestSG()
 	rootNode->AddChild(m_bottom);
 	rootNode->AddChild(m_backside);
 
-	Node* testNode = new Node(nullptr);
+	/*Node* testNode = new Node(nullptr);
 	testNode->AddDrawable(woodCube);
 	testNode->SetTranslationX(2);
-	m_right->AddChild(testNode);
+	m_right->AddChild(testNode);*/
 }
 
 void ExampleScene::SphereTest()

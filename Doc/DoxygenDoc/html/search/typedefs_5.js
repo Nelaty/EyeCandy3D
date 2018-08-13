@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['widget_5ftp',['Widget_TP',['../classngl__gui_1_1_g_u_i.html#af4d527c3697ea8524c7af82bb855286d',1,'ngl_gui::GUI']]]
+  ['widget_5ftp',['Widget_TP',['../classec__gui_1_1_g_u_i.html#a2b94294ea5a4ad9f8edcb4eb4d97151a',1,'ec_gui::GUI']]]
 ];

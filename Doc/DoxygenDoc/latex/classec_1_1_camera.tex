@@ -6,12 +6,20 @@
 
 
 
-Collaboration diagram for ec\+:\+:Camera\+:
-\nopagebreak
+Inheritance diagram for ec\+:\+:Camera\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=198pt]{classec_1_1_camera__coll__graph}
+\includegraphics[height=550pt]{classec_1_1_camera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+:\+:Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_camera__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -25,45 +33,13 @@ Collaboration diagram for ec\+:\+:Camera\+:
 \item 
 void \mbox{\hyperlink{classec_1_1_camera_ad3790ce4b558aa906fe00e25d8c8c1ed}{Change\+Aspect\+Ratio}} (float aspect)
 \item 
-void \mbox{\hyperlink{classec_1_1_camera_aa358a0b0f9878f3ea39cfb5bccd9ddb9}{Update\+View}} ()
+virtual void \mbox{\hyperlink{classec_1_1_camera_ab9b2d59d1755a56d67c13a5539b7e033}{Update\+Local\+Mat}} () override
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_camera_abbdd88f9b352d34fef473064e2ccd625}{Update\+Global\+Matrices}} (const glm\+::mat4 \&m\+\_\+parent\+Mat) override
 \item 
 const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_camera_ad5ed2007c501081561fd8ee894f86ae0}{Get\+View}} () const
 \item 
 const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_camera_a9c52ad9d4077faf50d1d7170d08e1f13}{Get\+Projection}} () const
-\item 
-const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_camera_a286e78e35fe712ee2d685e73a126617f}{Get\+Up\+Vector}} () const
-\item 
-const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_camera_a45373436f96d65d84fa77157cf5d80d2}{Get\+Direction}} () const
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_a8d9b7b4944f32e685eef162f50a96d44}{Rotate}} (const glm\+::quat \&rot)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_a3cfaa2574d9fe5b90f255cf4e8b9fcae}{Rotate}} (float angle, const glm\+::vec3 \&axis)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_ac6233a1acdef77bfb7f86d8bf320119d}{RotateX}} (const float angle)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_afc7a198a827b5b35008495ea34ab48b3}{RotateY}} (const float angle)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_a5cd0489cfedea9b16f8ce21cf3474978}{RotateZ}} (const float angle)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_a274f4356818f347c9452a94070780636}{Set\+Orientation}} (const glm\+::vec3 \&orientation)
-\item 
-const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_camera_a0f77ddae83a5b37600aa2863f235115b}{Get\+Translation}} () const
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_a5219ecd1eef5a489dee8655609441a66}{Translate}} (const float x, const float y, const float z)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_a89e831dd0fbd418a7579b820679cdb01}{Translate}} (const glm\+::vec3 \&v)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_abc49923c90863ffd6f6f27d5b90927af}{TranslateX}} (const float x)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_ad029362d66dfd6679c83ab5a8374a030}{TranslateY}} (const float y)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_ad84cc6c7f90896450c8e884140176277}{TranslateZ}} (const float z)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_acb82ba3751feefd0753d5d318839b826}{Set\+Translation}} (const glm\+::vec3 \&translation)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_ac3a7ee291d1f574d1f1aae580b11ec6f}{Translate\+Local}} (const float x, const float y, const float z)
-\item 
-void \mbox{\hyperlink{classec_1_1_camera_a0cd6ecdeabaa08b179aeb0a21f126ccc}{Translate\+Local}} (const glm\+::vec3 \&v)
 \item 
 void \mbox{\hyperlink{classec_1_1_camera_ad17ef414e3a08344607a4929f89c7ab3}{Set\+Projection\+Ortho}} ()
 \item 
@@ -87,10 +63,11 @@ const \mbox{\hyperlink{classec_1_1_viewport}{Viewport}} \& \mbox{\hyperlink{clas
 \item 
 void \mbox{\hyperlink{classec_1_1_camera_a30dab960758a3614624cada979abdd5a}{Set\+Viewport}} (const \mbox{\hyperlink{classec_1_1_viewport}{Viewport}} \&viewport)
 \end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-Encapsulates a view matrix and enables manipulation of it. 
+A camera encapsulates a view and a projection matrix. It is used to render the related scene. It contains a viewport, which defines the area of the render target the scene should be rendered into. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classec_1_1_camera_a5b8034c32e082171bdb61033781cdcc3}\label{classec_1_1_camera_a5b8034c32e082171bdb61033781cdcc3}} 
@@ -120,13 +97,7 @@ Encapsulates a view matrix and enables manipulation of it.
 \subsubsection{\texorpdfstring{Change\+Aspect\+Ratio()}{ChangeAspectRatio()}}
 {\footnotesize\ttfamily void ec\+::\+Camera\+::\+Change\+Aspect\+Ratio (\begin{DoxyParamCaption}\item[{float}]{aspect }\end{DoxyParamCaption})}
 
-DO N\+OT U\+SE Update the viewport, so the aspect ratio of it equals the aspect ratio of the window. \mbox{\Hypertarget{classec_1_1_camera_a45373436f96d65d84fa77157cf5d80d2}\label{classec_1_1_camera_a45373436f96d65d84fa77157cf5d80d2}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Get\+Direction@{Get\+Direction}}
-\index{Get\+Direction@{Get\+Direction}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Get\+Direction()}{GetDirection()}}
-{\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Camera\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-Get the current orientation \mbox{\Hypertarget{classec_1_1_camera_a5bdbf9c5001e666bed13a5c75fd1c88f}\label{classec_1_1_camera_a5bdbf9c5001e666bed13a5c75fd1c88f}} 
+DO N\+OT U\+SE Update the viewport, so the aspect ratio of it equals the aspect ratio of the window. \mbox{\Hypertarget{classec_1_1_camera_a5bdbf9c5001e666bed13a5c75fd1c88f}\label{classec_1_1_camera_a5bdbf9c5001e666bed13a5c75fd1c88f}} 
 \index{ec\+::\+Camera@{ec\+::\+Camera}!Get\+Far@{Get\+Far}}
 \index{Get\+Far@{Get\+Far}!ec\+::\+Camera@{ec\+::\+Camera}}
 \subsubsection{\texorpdfstring{Get\+Far()}{GetFar()}}
@@ -156,19 +127,7 @@ Get the current projection matrix \mbox{\Hypertarget{classec_1_1_camera_a77f8c61
 \subsubsection{\texorpdfstring{Get\+Scene()}{GetScene()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene}{ec\+::\+Scene}} $\ast$ ec\+::\+Camera\+::\+Get\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Access to the related scene \mbox{\Hypertarget{classec_1_1_camera_a0f77ddae83a5b37600aa2863f235115b}\label{classec_1_1_camera_a0f77ddae83a5b37600aa2863f235115b}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Get\+Translation@{Get\+Translation}}
-\index{Get\+Translation@{Get\+Translation}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Get\+Translation()}{GetTranslation()}}
-{\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Camera\+::\+Get\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-\mbox{\Hypertarget{classec_1_1_camera_a286e78e35fe712ee2d685e73a126617f}\label{classec_1_1_camera_a286e78e35fe712ee2d685e73a126617f}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Get\+Up\+Vector@{Get\+Up\+Vector}}
-\index{Get\+Up\+Vector@{Get\+Up\+Vector}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Get\+Up\+Vector()}{GetUpVector()}}
-{\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Camera\+::\+Get\+Up\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-Get the current up vector \mbox{\Hypertarget{classec_1_1_camera_ad5ed2007c501081561fd8ee894f86ae0}\label{classec_1_1_camera_ad5ed2007c501081561fd8ee894f86ae0}} 
+Access to the related scene \mbox{\Hypertarget{classec_1_1_camera_ad5ed2007c501081561fd8ee894f86ae0}\label{classec_1_1_camera_ad5ed2007c501081561fd8ee894f86ae0}} 
 \index{ec\+::\+Camera@{ec\+::\+Camera}!Get\+View@{Get\+View}}
 \index{Get\+View@{Get\+View}!ec\+::\+Camera@{ec\+::\+Camera}}
 \subsubsection{\texorpdfstring{Get\+View()}{GetView()}}
@@ -180,37 +139,7 @@ Get the current view matrix \mbox{\Hypertarget{classec_1_1_camera_a6997f9c09e6cf
 \subsubsection{\texorpdfstring{Get\+Viewport()}{GetViewport()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{classec_1_1_viewport}{ec\+::\+Viewport}} \& ec\+::\+Camera\+::\+Get\+Viewport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_camera_a8d9b7b4944f32e685eef162f50a96d44}\label{classec_1_1_camera_a8d9b7b4944f32e685eef162f50a96d44}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Rotate@{Rotate}}
-\index{Rotate@{Rotate}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Rotate (\begin{DoxyParamCaption}\item[{const glm\+::quat \&}]{rot }\end{DoxyParamCaption})}
-
-Rotate with a quaternion \mbox{\Hypertarget{classec_1_1_camera_a3cfaa2574d9fe5b90f255cf4e8b9fcae}\label{classec_1_1_camera_a3cfaa2574d9fe5b90f255cf4e8b9fcae}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Rotate@{Rotate}}
-\index{Rotate@{Rotate}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Rotate (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{const glm\+::vec3 \&}]{axis }\end{DoxyParamCaption})}
-
-Rotate around an axis by a given angle \mbox{\Hypertarget{classec_1_1_camera_ac6233a1acdef77bfb7f86d8bf320119d}\label{classec_1_1_camera_ac6233a1acdef77bfb7f86d8bf320119d}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!RotateX@{RotateX}}
-\index{RotateX@{RotateX}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Rotate\+X()}{RotateX()}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+RotateX (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
-
-Rotate around the x axis by a given angle \mbox{\Hypertarget{classec_1_1_camera_afc7a198a827b5b35008495ea34ab48b3}\label{classec_1_1_camera_afc7a198a827b5b35008495ea34ab48b3}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!RotateY@{RotateY}}
-\index{RotateY@{RotateY}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Rotate\+Y()}{RotateY()}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+RotateY (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
-
-Rotate around the y axis by a given angle \mbox{\Hypertarget{classec_1_1_camera_a5cd0489cfedea9b16f8ce21cf3474978}\label{classec_1_1_camera_a5cd0489cfedea9b16f8ce21cf3474978}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!RotateZ@{RotateZ}}
-\index{RotateZ@{RotateZ}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Rotate\+Z()}{RotateZ()}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+RotateZ (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
-
-Rotate around the z axis by a given angle \mbox{\Hypertarget{classec_1_1_camera_adb376b3c35aed1e7681f74ddbbe9fa25}\label{classec_1_1_camera_adb376b3c35aed1e7681f74ddbbe9fa25}} 
+\mbox{\Hypertarget{classec_1_1_camera_adb376b3c35aed1e7681f74ddbbe9fa25}\label{classec_1_1_camera_adb376b3c35aed1e7681f74ddbbe9fa25}} 
 \index{ec\+::\+Camera@{ec\+::\+Camera}!Set\+Far@{Set\+Far}}
 \index{Set\+Far@{Set\+Far}!ec\+::\+Camera@{ec\+::\+Camera}}
 \subsubsection{\texorpdfstring{Set\+Far()}{SetFar()}}
@@ -233,13 +162,7 @@ Set the fov
 \subsubsection{\texorpdfstring{Set\+Near()}{SetNear()}}
 {\footnotesize\ttfamily void ec\+::\+Camera\+::\+Set\+Near (\begin{DoxyParamCaption}\item[{const float}]{near }\end{DoxyParamCaption})}
 
-Set the near plane \mbox{\Hypertarget{classec_1_1_camera_a274f4356818f347c9452a94070780636}\label{classec_1_1_camera_a274f4356818f347c9452a94070780636}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Set\+Orientation@{Set\+Orientation}}
-\index{Set\+Orientation@{Set\+Orientation}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Set\+Orientation()}{SetOrientation()}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Set\+Orientation (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{orientation }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classec_1_1_camera_ad17ef414e3a08344607a4929f89c7ab3}\label{classec_1_1_camera_ad17ef414e3a08344607a4929f89c7ab3}} 
+Set the near plane \mbox{\Hypertarget{classec_1_1_camera_ad17ef414e3a08344607a4929f89c7ab3}\label{classec_1_1_camera_ad17ef414e3a08344607a4929f89c7ab3}} 
 \index{ec\+::\+Camera@{ec\+::\+Camera}!Set\+Projection\+Ortho@{Set\+Projection\+Ortho}}
 \index{Set\+Projection\+Ortho@{Set\+Projection\+Ortho}!ec\+::\+Camera@{ec\+::\+Camera}}
 \subsubsection{\texorpdfstring{Set\+Projection\+Ortho()}{SetProjectionOrtho()}}
@@ -251,67 +174,33 @@ Change to orthogonal projection \mbox{\Hypertarget{classec_1_1_camera_a5d6b64ba5
 \subsubsection{\texorpdfstring{Set\+Projection\+Perspective()}{SetProjectionPerspective()}}
 {\footnotesize\ttfamily void ec\+::\+Camera\+::\+Set\+Projection\+Perspective (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Change to perspective projection \mbox{\Hypertarget{classec_1_1_camera_acb82ba3751feefd0753d5d318839b826}\label{classec_1_1_camera_acb82ba3751feefd0753d5d318839b826}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Set\+Translation@{Set\+Translation}}
-\index{Set\+Translation@{Set\+Translation}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Set\+Translation()}{SetTranslation()}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Set\+Translation (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{translation }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classec_1_1_camera_a30dab960758a3614624cada979abdd5a}\label{classec_1_1_camera_a30dab960758a3614624cada979abdd5a}} 
+Change to perspective projection \mbox{\Hypertarget{classec_1_1_camera_a30dab960758a3614624cada979abdd5a}\label{classec_1_1_camera_a30dab960758a3614624cada979abdd5a}} 
 \index{ec\+::\+Camera@{ec\+::\+Camera}!Set\+Viewport@{Set\+Viewport}}
 \index{Set\+Viewport@{Set\+Viewport}!ec\+::\+Camera@{ec\+::\+Camera}}
 \subsubsection{\texorpdfstring{Set\+Viewport()}{SetViewport()}}
 {\footnotesize\ttfamily void ec\+::\+Camera\+::\+Set\+Viewport (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_viewport}{Viewport}} \&}]{viewport }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_camera_a5219ecd1eef5a489dee8655609441a66}\label{classec_1_1_camera_a5219ecd1eef5a489dee8655609441a66}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Translate@{Translate}}
-\index{Translate@{Translate}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Translate (\begin{DoxyParamCaption}\item[{const float}]{x,  }\item[{const float}]{y,  }\item[{const float}]{z }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_camera_abbdd88f9b352d34fef473064e2ccd625}\label{classec_1_1_camera_abbdd88f9b352d34fef473064e2ccd625}} 
+\index{ec\+::\+Camera@{ec\+::\+Camera}!Update\+Global\+Matrices@{Update\+Global\+Matrices}}
+\index{Update\+Global\+Matrices@{Update\+Global\+Matrices}!ec\+::\+Camera@{ec\+::\+Camera}}
+\subsubsection{\texorpdfstring{Update\+Global\+Matrices()}{UpdateGlobalMatrices()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Update\+Global\+Matrices (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{m\+\_\+parent\+Mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classec_1_1_camera_a89e831dd0fbd418a7579b820679cdb01}\label{classec_1_1_camera_a89e831dd0fbd418a7579b820679cdb01}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Translate@{Translate}}
-\index{Translate@{Translate}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Translate (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{v }\end{DoxyParamCaption})}
+Recursively update global matrices 
 
-\mbox{\Hypertarget{classec_1_1_camera_ac3a7ee291d1f574d1f1aae580b11ec6f}\label{classec_1_1_camera_ac3a7ee291d1f574d1f1aae580b11ec6f}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Translate\+Local@{Translate\+Local}}
-\index{Translate\+Local@{Translate\+Local}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Translate\+Local()}{TranslateLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Translate\+Local (\begin{DoxyParamCaption}\item[{const float}]{x,  }\item[{const float}]{y,  }\item[{const float}]{z }\end{DoxyParamCaption})}
+Reimplemented from \mbox{\hyperlink{classec_1_1_node_ac9970ec0ec03e130da59d0d5376a9855}{ec\+::\+Node}}.
 
-\mbox{\Hypertarget{classec_1_1_camera_a0cd6ecdeabaa08b179aeb0a21f126ccc}\label{classec_1_1_camera_a0cd6ecdeabaa08b179aeb0a21f126ccc}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Translate\+Local@{Translate\+Local}}
-\index{Translate\+Local@{Translate\+Local}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Translate\+Local()}{TranslateLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Translate\+Local (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{v }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classec_1_1_camera_abc49923c90863ffd6f6f27d5b90927af}\label{classec_1_1_camera_abc49923c90863ffd6f6f27d5b90927af}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!TranslateX@{TranslateX}}
-\index{TranslateX@{TranslateX}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Translate\+X()}{TranslateX()}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+TranslateX (\begin{DoxyParamCaption}\item[{const float}]{x }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classec_1_1_camera_ad029362d66dfd6679c83ab5a8374a030}\label{classec_1_1_camera_ad029362d66dfd6679c83ab5a8374a030}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!TranslateY@{TranslateY}}
-\index{TranslateY@{TranslateY}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Translate\+Y()}{TranslateY()}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+TranslateY (\begin{DoxyParamCaption}\item[{const float}]{y }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classec_1_1_camera_ad84cc6c7f90896450c8e884140176277}\label{classec_1_1_camera_ad84cc6c7f90896450c8e884140176277}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!TranslateZ@{TranslateZ}}
-\index{TranslateZ@{TranslateZ}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Translate\+Z()}{TranslateZ()}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+TranslateZ (\begin{DoxyParamCaption}\item[{const float}]{z }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classec_1_1_camera_aa358a0b0f9878f3ea39cfb5bccd9ddb9}\label{classec_1_1_camera_aa358a0b0f9878f3ea39cfb5bccd9ddb9}} 
-\index{ec\+::\+Camera@{ec\+::\+Camera}!Update\+View@{Update\+View}}
-\index{Update\+View@{Update\+View}!ec\+::\+Camera@{ec\+::\+Camera}}
-\subsubsection{\texorpdfstring{Update\+View()}{UpdateView()}}
-{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Update\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_camera_ab9b2d59d1755a56d67c13a5539b7e033}\label{classec_1_1_camera_ab9b2d59d1755a56d67c13a5539b7e033}} 
+\index{ec\+::\+Camera@{ec\+::\+Camera}!Update\+Local\+Mat@{Update\+Local\+Mat}}
+\index{Update\+Local\+Mat@{Update\+Local\+Mat}!ec\+::\+Camera@{ec\+::\+Camera}}
+\subsubsection{\texorpdfstring{Update\+Local\+Mat()}{UpdateLocalMat()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::\+Update\+Local\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 DO N\+OT U\+SE Update the view matrix 
+
+Reimplemented from \mbox{\hyperlink{classec_1_1_transform3_d_a9af1af38089385c5b2100fe5f98f33ca}{ec\+::\+Transform3D}}.
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -6,12 +6,11 @@
 
 
 
-Collaboration diagram for ec\+:\+:Frame\+:
-\nopagebreak
+Collaboration diagram for ec\+:\+:Frame\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=180pt]{classec_1_1_frame__coll__graph}
+\includegraphics[width=190pt]{classec_1_1_frame__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -21,7 +20,15 @@ Collaboration diagram for ec\+:\+:Frame\+:
 \item 
 \mbox{\hyperlink{classec_1_1_frame_af2b2c733cacb47d99e460a2b75667eaa}{$\sim$\+Frame}} ()
 \item 
-void \mbox{\hyperlink{classec_1_1_frame_ac77592eb8af14980e6b984c8433ffe8c}{Add\+Camera}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera)
+void \mbox{\hyperlink{classec_1_1_frame_a06d07d0b719d2941c0334f4b54694348}{Add\+Camera\+Back}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera)
+\item 
+void \mbox{\hyperlink{classec_1_1_frame_a90fb8cd300040ea5884eb0e185385d96}{Add\+Camera\+Front}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera)
+\item 
+void \mbox{\hyperlink{classec_1_1_frame_a038fc1d43f9c11fb6d1c8a7c2127d55f}{Add\+Camera}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera, unsigned int priority)
+\item 
+bool \mbox{\hyperlink{classec_1_1_frame_ae75241fcbc4c499a1ac3a1a084d546ae}{Add\+Camera\+Before}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera, \mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$next\+Camera)
+\item 
+bool \mbox{\hyperlink{classec_1_1_frame_aa7cccffd1e0919e75faa35d1f38da5c1}{Add\+Camera\+After}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera, \mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$prev\+Camera)
 \item 
 bool \mbox{\hyperlink{classec_1_1_frame_a03d78a820026a27a6f18ec135283e22b}{Remove\+Camera}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera)
 \item 
@@ -30,6 +37,9 @@ void \mbox{\hyperlink{classec_1_1_frame_a9756a68f9db16a43cf23dac3f13c0672}{Clear
 const std\+::vector$<$ \mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$ $>$ \mbox{\hyperlink{classec_1_1_frame_ab0a5922f4be8a3565617418f447d4a5e}{Get\+Cameras}} () const
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+A \mbox{\hyperlink{classec_1_1_frame}{Frame}} is a collection of cameras. The order in, which these cameras are stored, determines the order in which will be rendered. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classec_1_1_frame_a80ed1da85818f646b6b80fb6c8a6c2a6}\label{classec_1_1_frame_a80ed1da85818f646b6b80fb6c8a6c2a6}} 
@@ -47,30 +57,77 @@ const std\+::vector$<$ \mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$ $>$ 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_frame_ac77592eb8af14980e6b984c8433ffe8c}\label{classec_1_1_frame_ac77592eb8af14980e6b984c8433ffe8c}} 
+\mbox{\Hypertarget{classec_1_1_frame_a038fc1d43f9c11fb6d1c8a7c2127d55f}\label{classec_1_1_frame_a038fc1d43f9c11fb6d1c8a7c2127d55f}} 
 \index{ec\+::\+Frame@{ec\+::\+Frame}!Add\+Camera@{Add\+Camera}}
 \index{Add\+Camera@{Add\+Camera}!ec\+::\+Frame@{ec\+::\+Frame}}
 \subsubsection{\texorpdfstring{Add\+Camera()}{AddCamera()}}
-{\footnotesize\ttfamily void ec\+::\+Frame\+::\+Add\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ec\+::\+Frame\+::\+Add\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera,  }\item[{unsigned int}]{priority }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_frame_a9756a68f9db16a43cf23dac3f13c0672}\label{classec_1_1_frame_a9756a68f9db16a43cf23dac3f13c0672}} 
+Add a given camera with a given priority. If there already is a (multiple) camera\mbox{[}s\mbox{]} with the same priority registered, put the given camera before those. \mbox{\Hypertarget{classec_1_1_frame_aa7cccffd1e0919e75faa35d1f38da5c1}\label{classec_1_1_frame_aa7cccffd1e0919e75faa35d1f38da5c1}} 
+\index{ec\+::\+Frame@{ec\+::\+Frame}!Add\+Camera\+After@{Add\+Camera\+After}}
+\index{Add\+Camera\+After@{Add\+Camera\+After}!ec\+::\+Frame@{ec\+::\+Frame}}
+\subsubsection{\texorpdfstring{Add\+Camera\+After()}{AddCameraAfter()}}
+{\footnotesize\ttfamily bool ec\+::\+Frame\+::\+Add\+Camera\+After (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera,  }\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{prev\+Camera }\end{DoxyParamCaption})}
+
+Add a given camera right after another given camera 
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera to be added. \\
+\hline
+{\em prev\+Camera} & The camera after which the newly added camera should follow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if prev\+Camera was found, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_frame_a06d07d0b719d2941c0334f4b54694348}\label{classec_1_1_frame_a06d07d0b719d2941c0334f4b54694348}} 
+\index{ec\+::\+Frame@{ec\+::\+Frame}!Add\+Camera\+Back@{Add\+Camera\+Back}}
+\index{Add\+Camera\+Back@{Add\+Camera\+Back}!ec\+::\+Frame@{ec\+::\+Frame}}
+\subsubsection{\texorpdfstring{Add\+Camera\+Back()}{AddCameraBack()}}
+{\footnotesize\ttfamily void ec\+::\+Frame\+::\+Add\+Camera\+Back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})}
+
+Add a given camera at the end (low priority camera) \mbox{\Hypertarget{classec_1_1_frame_ae75241fcbc4c499a1ac3a1a084d546ae}\label{classec_1_1_frame_ae75241fcbc4c499a1ac3a1a084d546ae}} 
+\index{ec\+::\+Frame@{ec\+::\+Frame}!Add\+Camera\+Before@{Add\+Camera\+Before}}
+\index{Add\+Camera\+Before@{Add\+Camera\+Before}!ec\+::\+Frame@{ec\+::\+Frame}}
+\subsubsection{\texorpdfstring{Add\+Camera\+Before()}{AddCameraBefore()}}
+{\footnotesize\ttfamily bool ec\+::\+Frame\+::\+Add\+Camera\+Before (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera,  }\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{next\+Camera }\end{DoxyParamCaption})}
+
+Add a given camera right before another given camera 
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera to be added. \\
+\hline
+{\em prev\+Camera} & The camera before which the newly added camera should follow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if next\+Camera was found, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_frame_a90fb8cd300040ea5884eb0e185385d96}\label{classec_1_1_frame_a90fb8cd300040ea5884eb0e185385d96}} 
+\index{ec\+::\+Frame@{ec\+::\+Frame}!Add\+Camera\+Front@{Add\+Camera\+Front}}
+\index{Add\+Camera\+Front@{Add\+Camera\+Front}!ec\+::\+Frame@{ec\+::\+Frame}}
+\subsubsection{\texorpdfstring{Add\+Camera\+Front()}{AddCameraFront()}}
+{\footnotesize\ttfamily void ec\+::\+Frame\+::\+Add\+Camera\+Front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})}
+
+Add a given camera at the front (high priority camera) \mbox{\Hypertarget{classec_1_1_frame_a9756a68f9db16a43cf23dac3f13c0672}\label{classec_1_1_frame_a9756a68f9db16a43cf23dac3f13c0672}} 
 \index{ec\+::\+Frame@{ec\+::\+Frame}!Clear@{Clear}}
 \index{Clear@{Clear}!ec\+::\+Frame@{ec\+::\+Frame}}
 \subsubsection{\texorpdfstring{Clear()}{Clear()}}
 {\footnotesize\ttfamily void ec\+::\+Frame\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_frame_ab0a5922f4be8a3565617418f447d4a5e}\label{classec_1_1_frame_ab0a5922f4be8a3565617418f447d4a5e}} 
+Remove all registered cameras. \mbox{\Hypertarget{classec_1_1_frame_ab0a5922f4be8a3565617418f447d4a5e}\label{classec_1_1_frame_ab0a5922f4be8a3565617418f447d4a5e}} 
 \index{ec\+::\+Frame@{ec\+::\+Frame}!Get\+Cameras@{Get\+Cameras}}
 \index{Get\+Cameras@{Get\+Cameras}!ec\+::\+Frame@{ec\+::\+Frame}}
 \subsubsection{\texorpdfstring{Get\+Cameras()}{GetCameras()}}
 {\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$ $>$ ec\+::\+Frame\+::\+Get\+Cameras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_frame_a03d78a820026a27a6f18ec135283e22b}\label{classec_1_1_frame_a03d78a820026a27a6f18ec135283e22b}} 
+Get all registered cameras \mbox{\Hypertarget{classec_1_1_frame_a03d78a820026a27a6f18ec135283e22b}\label{classec_1_1_frame_a03d78a820026a27a6f18ec135283e22b}} 
 \index{ec\+::\+Frame@{ec\+::\+Frame}!Remove\+Camera@{Remove\+Camera}}
 \index{Remove\+Camera@{Remove\+Camera}!ec\+::\+Frame@{ec\+::\+Frame}}
 \subsubsection{\texorpdfstring{Remove\+Camera()}{RemoveCamera()}}
 {\footnotesize\ttfamily bool ec\+::\+Frame\+::\+Remove\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})}
 
+Remove a given camera from the frame. \begin{DoxyReturn}{Returns}
+True if the given camera is registered, false otherwise. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

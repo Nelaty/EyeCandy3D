@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$unionec_1_1_input_event_1_1_event_data.html" title="ec::InputEvent::EventData" alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node1" href="$classec_1_1_input_listener.html" title="ec::InputListener" alt="" coords="5,56,124,83"/>
+<area shape="rect" id="node2" href="$classec_1_1_camera_controller.html" title="ec::CameraController" alt="" coords="173,5,317,32"/>
+<area shape="rect" id="node3" href="$classec_1_1_scene_controller.html" title="ec::SceneController" alt="" coords="177,56,313,83"/>
+<area shape="rect" id="node4" href="$classec__gui_1_1_g_u_i_controller.html" title="ec_gui::GUIController" alt="" coords="172,107,317,133"/>
 </map>

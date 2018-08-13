@@ -88,8 +88,8 @@ Collaboration diagram for ec::InputObservable:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:afd4bca548fe9829c5fc6c0ab33254162"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#afd4bca548fe9829c5fc6c0ab33254162">InputControllers_T</a> = std::vector&lt; <a class="el" href="classec_1_1_input_listener.html">InputListener</a> * &gt;</td></tr>
-<tr class="separator:afd4bca548fe9829c5fc6c0ab33254162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99717b2918621597db89d9ede34ddded"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a99717b2918621597db89d9ede34ddded">InputListeners_T</a> = std::vector&lt; <a class="el" href="classec_1_1_input_listener.html">InputListener</a> * &gt;</td></tr>
+<tr class="separator:a99717b2918621597db89d9ede34ddded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b63c8acbcbfc0f99d2964493ac52925"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a9b63c8acbcbfc0f99d2964493ac52925">Events_T</a> = std::vector&lt; <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &gt;</td></tr>
 <tr class="separator:a9b63c8acbcbfc0f99d2964493ac52925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -101,14 +101,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac261f6a73cfdcd37c276e732cc25f869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa043e1a78987c55e03acca7caf13820f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#aa043e1a78987c55e03acca7caf13820f">ReceiveEvent</a> (const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;event)</td></tr>
 <tr class="separator:aa043e1a78987c55e03acca7caf13820f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c44ef2397e793b1d19aa2a166199a41"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a4c44ef2397e793b1d19aa2a166199a41">RegisterInputController</a> (<a class="el" href="classec_1_1_input_listener.html">InputListener</a> *inputController)</td></tr>
-<tr class="separator:a4c44ef2397e793b1d19aa2a166199a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2db9e838abfe1910141cebdbebe13efb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a2db9e838abfe1910141cebdbebe13efb">UnregisterInputController</a> (<a class="el" href="classec_1_1_input_listener.html">InputListener</a> *inputController)</td></tr>
-<tr class="separator:a2db9e838abfe1910141cebdbebe13efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ecdba90416e0a70d56e13a2c74ade1c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a6ecdba90416e0a70d56e13a2c74ade1c">Contains</a> (<a class="el" href="classec_1_1_input_listener.html">InputListener</a> *inputController)</td></tr>
-<tr class="separator:a6ecdba90416e0a70d56e13a2c74ade1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a515f6e07f88351d9461ca192d2ead706"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a515f6e07f88351d9461ca192d2ead706">UnregisterAllInputControllers</a> ()</td></tr>
-<tr class="separator:a515f6e07f88351d9461ca192d2ead706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64505667464dde9b0e031fefe2468c43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a64505667464dde9b0e031fefe2468c43">RegisterInputListener</a> (<a class="el" href="classec_1_1_input_listener.html">InputListener</a> *inputListener)</td></tr>
+<tr class="separator:a64505667464dde9b0e031fefe2468c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06647b619d83edc42f33b23b4db80127"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a06647b619d83edc42f33b23b4db80127">UnregisterInputListener</a> (<a class="el" href="classec_1_1_input_listener.html">InputListener</a> *inputListener)</td></tr>
+<tr class="separator:a06647b619d83edc42f33b23b4db80127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7431f35b81b1a34f40605b10739e3ac1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a7431f35b81b1a34f40605b10739e3ac1">Contains</a> (<a class="el" href="classec_1_1_input_listener.html">InputListener</a> *inputListener)</td></tr>
+<tr class="separator:a7431f35b81b1a34f40605b10739e3ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65608ab3e937537a9058acfa9b7e9fde"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a65608ab3e937537a9058acfa9b7e9fde">UnregisterAllInputListeners</a> ()</td></tr>
+<tr class="separator:a65608ab3e937537a9058acfa9b7e9fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c3af1f58103d41e21bd95fed9131c5b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a2c3af1f58103d41e21bd95fed9131c5b">InformAll</a> ()</td></tr>
 <tr class="separator:a2c3af1f58103d41e21bd95fed9131c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4794f86124d9212e4055e8210c301cba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a4794f86124d9212e4055e8210c301cba">SetLastMouseButtonEvent</a> (const <a class="el" href="structec_1_1_mouse_button_event.html">MouseButtonEvent</a> &amp;event)</td></tr>
@@ -127,8 +127,8 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a9347ea13a20dd152cd76e0016947a802"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_observable.html#afd4bca548fe9829c5fc6c0ab33254162">InputControllers_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a9347ea13a20dd152cd76e0016947a802">m_inputController</a></td></tr>
-<tr class="separator:a9347ea13a20dd152cd76e0016947a802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11756df5cac4e93ace9db3f6c8817c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_observable.html#a99717b2918621597db89d9ede34ddded">InputListeners_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#aa11756df5cac4e93ace9db3f6c8817c4">m_inputListeners</a></td></tr>
+<tr class="separator:aa11756df5cac4e93ace9db3f6c8817c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af83e9f99bec60cdce82b129fa457c6ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_observable.html#a9b63c8acbcbfc0f99d2964493ac52925">Events_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#af83e9f99bec60cdce82b129fa457c6ab">m_events</a></td></tr>
 <tr class="separator:af83e9f99bec60cdce82b129fa457c6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaecb6c67b919793de0a178810b54f96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structec_1_1_mouse_button_event.html">MouseButtonEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#adaecb6c67b919793de0a178810b54f96">m_lastMouseButtonEvent</a></td></tr>
@@ -151,14 +151,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afd4bca548fe9829c5fc6c0ab33254162"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd4bca548fe9829c5fc6c0ab33254162">&#9670;&nbsp;</a></span>InputControllers_T</h2>
+<a id="a99717b2918621597db89d9ede34ddded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99717b2918621597db89d9ede34ddded">&#9670;&nbsp;</a></span>InputListeners_T</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classec_1_1_input_observable.html#afd4bca548fe9829c5fc6c0ab33254162">ec::InputObservable::InputControllers_T</a> =  std::vector&lt;<a class="el" href="classec_1_1_input_listener.html">InputListener</a>*&gt;</td>
+          <td class="memname">using <a class="el" href="classec_1_1_input_observable.html#a99717b2918621597db89d9ede34ddded">ec::InputObservable::InputListeners_T</a> =  std::vector&lt;<a class="el" href="classec_1_1_input_listener.html">InputListener</a>*&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -242,8 +242,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6ecdba90416e0a70d56e13a2c74ade1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ecdba90416e0a70d56e13a2c74ade1c">&#9670;&nbsp;</a></span>Contains()</h2>
+<a id="a7431f35b81b1a34f40605b10739e3ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7431f35b81b1a34f40605b10739e3ac1">&#9670;&nbsp;</a></span>Contains()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,7 +255,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">bool ec::InputObservable::Contains </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classec_1_1_input_listener.html">InputListener</a> *&#160;</td>
-          <td class="paramname"><em>inputController</em></td><td>)</td>
+          <td class="paramname"><em>inputListener</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -353,8 +353,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a4c44ef2397e793b1d19aa2a166199a41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c44ef2397e793b1d19aa2a166199a41">&#9670;&nbsp;</a></span>RegisterInputController()</h2>
+<a id="a64505667464dde9b0e031fefe2468c43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64505667464dde9b0e031fefe2468c43">&#9670;&nbsp;</a></span>RegisterInputListener()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,10 +363,10 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::InputObservable::RegisterInputController </td>
+          <td class="memname">void ec::InputObservable::RegisterInputListener </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classec_1_1_input_listener.html">InputListener</a> *&#160;</td>
-          <td class="paramname"><em>inputController</em></td><td>)</td>
+          <td class="paramname"><em>inputListener</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -415,8 +415,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a515f6e07f88351d9461ca192d2ead706"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a515f6e07f88351d9461ca192d2ead706">&#9670;&nbsp;</a></span>UnregisterAllInputControllers()</h2>
+<a id="a65608ab3e937537a9058acfa9b7e9fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65608ab3e937537a9058acfa9b7e9fde">&#9670;&nbsp;</a></span>UnregisterAllInputListeners()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +425,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::InputObservable::UnregisterAllInputControllers </td>
+          <td class="memname">void ec::InputObservable::UnregisterAllInputListeners </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -440,8 +440,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2db9e838abfe1910141cebdbebe13efb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2db9e838abfe1910141cebdbebe13efb">&#9670;&nbsp;</a></span>UnregisterInputController()</h2>
+<a id="a06647b619d83edc42f33b23b4db80127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06647b619d83edc42f33b23b4db80127">&#9670;&nbsp;</a></span>UnregisterInputListener()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -450,10 +450,10 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ec::InputObservable::UnregisterInputController </td>
+          <td class="memname">bool ec::InputObservable::UnregisterInputListener </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classec_1_1_input_listener.html">InputListener</a> *&#160;</td>
-          <td class="paramname"><em>inputController</em></td><td>)</td>
+          <td class="paramname"><em>inputListener</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -489,8 +489,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9347ea13a20dd152cd76e0016947a802"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9347ea13a20dd152cd76e0016947a802">&#9670;&nbsp;</a></span>m_inputController</h2>
+<a id="aa11756df5cac4e93ace9db3f6c8817c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa11756df5cac4e93ace9db3f6c8817c4">&#9670;&nbsp;</a></span>m_inputListeners</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -499,7 +499,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_input_observable.html#afd4bca548fe9829c5fc6c0ab33254162">InputControllers_T</a> ec::InputObservable::m_inputController</td>
+          <td class="memname"><a class="el" href="classec_1_1_input_observable.html#a99717b2918621597db89d9ede34ddded">InputListeners_T</a> ec::InputObservable::m_inputListeners</td>
         </tr>
       </table>
   </td>

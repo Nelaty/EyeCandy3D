@@ -6,8 +6,7 @@
 
 
 
-Collaboration diagram for ec\+:\+:Scene\+:
-\nopagebreak
+Collaboration diagram for ec\+:\+:Scene\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -38,6 +37,12 @@ void \mbox{\hyperlink{classec_1_1_scene_a3f300f8210249e457121aa0696261b4e}{Set\+
 void \mbox{\hyperlink{classec_1_1_scene_a24962dd137eba3192c3e88e597c7d03d}{Set\+Scene\+System}} (\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$scene\+System)
 \item 
 \mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_ae9e6923ee710a8b597e1996d1275d4fa}{Get\+Scene\+System}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_scene_a2c6d246942f97119f1a09a85e8175146}{Enable}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_scene_acd8a7b83227f99d595e9c6ee9592fc56}{Disable}} ()
+\item 
+bool \mbox{\hyperlink{classec_1_1_scene_a404676c2a1c87875b97c2c8942292f65}{Is\+Enabled}} () const
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -46,6 +51,8 @@ void \mbox{\hyperlink{classec_1_1_scene_a37c25b9ccec318568e9028be616305c4}{Init\
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classec_1_1_scene_ad68ba7af20ecfbc45ee136842a38ccfe}{m\+\_\+enabled}}
 \item 
 std\+::string \mbox{\hyperlink{classec_1_1_scene_a58a25f1f2370535750e341085ddfd95b}{m\+\_\+name}}
 \item 
@@ -75,7 +82,19 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_node}{Node}} $>$ \mbox{\h
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_scene_a1646cecfcece12eec99d904a4351d21c}\label{classec_1_1_scene_a1646cecfcece12eec99d904a4351d21c}} 
+\mbox{\Hypertarget{classec_1_1_scene_acd8a7b83227f99d595e9c6ee9592fc56}\label{classec_1_1_scene_acd8a7b83227f99d595e9c6ee9592fc56}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!Disable@{Disable}}
+\index{Disable@{Disable}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+::\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disable this scene \mbox{\Hypertarget{classec_1_1_scene_a2c6d246942f97119f1a09a85e8175146}\label{classec_1_1_scene_a2c6d246942f97119f1a09a85e8175146}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!Enable@{Enable}}
+\index{Enable@{Enable}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+::\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Enable this scene \mbox{\Hypertarget{classec_1_1_scene_a1646cecfcece12eec99d904a4351d21c}\label{classec_1_1_scene_a1646cecfcece12eec99d904a4351d21c}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!Get\+Name@{Get\+Name}}
 \index{Get\+Name@{Get\+Name}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
@@ -111,7 +130,13 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_node}{Node}} $>$ \mbox{\h
 \subsubsection{\texorpdfstring{Init\+Scene\+Renderer()}{InitSceneRenderer()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+::\+Init\+Scene\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classec_1_1_scene_a67660c99962c9e12280937dcbbfd2102}\label{classec_1_1_scene_a67660c99962c9e12280937dcbbfd2102}} 
+\mbox{\Hypertarget{classec_1_1_scene_a404676c2a1c87875b97c2c8942292f65}\label{classec_1_1_scene_a404676c2a1c87875b97c2c8942292f65}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!Is\+Enabled@{Is\+Enabled}}
+\index{Is\+Enabled@{Is\+Enabled}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{Is\+Enabled()}{IsEnabled()}}
+{\footnotesize\ttfamily bool ec\+::\+Scene\+::\+Is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Check if this scene is enabled \mbox{\Hypertarget{classec_1_1_scene_a67660c99962c9e12280937dcbbfd2102}\label{classec_1_1_scene_a67660c99962c9e12280937dcbbfd2102}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!Set\+Scene\+Controller@{Set\+Scene\+Controller}}
 \index{Set\+Scene\+Controller@{Set\+Scene\+Controller}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{Set\+Scene\+Controller()}{SetSceneController()}}
@@ -138,6 +163,12 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_node}{Node}} $>$ \mbox{\h
 
 
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_scene_ad68ba7af20ecfbc45ee136842a38ccfe}\label{classec_1_1_scene_ad68ba7af20ecfbc45ee136842a38ccfe}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!m\+\_\+enabled@{m\+\_\+enabled}}
+\index{m\+\_\+enabled@{m\+\_\+enabled}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+enabled}{m\_enabled}}
+{\footnotesize\ttfamily bool ec\+::\+Scene\+::m\+\_\+enabled\hspace{0.3cm}{\ttfamily [protected]}}
+
 \mbox{\Hypertarget{classec_1_1_scene_a58a25f1f2370535750e341085ddfd95b}\label{classec_1_1_scene_a58a25f1f2370535750e341085ddfd95b}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!m\+\_\+name@{m\+\_\+name}}
 \index{m\+\_\+name@{m\+\_\+name}!ec\+::\+Scene@{ec\+::\+Scene}}

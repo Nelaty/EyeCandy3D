@@ -78,8 +78,6 @@ $(function() {
 Collaboration diagram for ec::Frame:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_frame__coll__graph.png" border="0" usemap="#ec_1_1_frame_coll__map" alt="Collaboration graph"/></div>
-<map name="ec_1_1_frame_coll__map" id="ec_1_1_frame_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -88,8 +86,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a80ed1da85818f646b6b80fb6c8a6c2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2b2c733cacb47d99e460a2b75667eaa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_frame.html#af2b2c733cacb47d99e460a2b75667eaa">~Frame</a> ()</td></tr>
 <tr class="separator:af2b2c733cacb47d99e460a2b75667eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac77592eb8af14980e6b984c8433ffe8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_frame.html#ac77592eb8af14980e6b984c8433ffe8c">AddCamera</a> (<a class="el" href="classec_1_1_camera.html">Camera</a> *camera)</td></tr>
-<tr class="separator:ac77592eb8af14980e6b984c8433ffe8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d07d0b719d2941c0334f4b54694348"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_frame.html#a06d07d0b719d2941c0334f4b54694348">AddCameraBack</a> (<a class="el" href="classec_1_1_camera.html">Camera</a> *camera)</td></tr>
+<tr class="separator:a06d07d0b719d2941c0334f4b54694348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90fb8cd300040ea5884eb0e185385d96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_frame.html#a90fb8cd300040ea5884eb0e185385d96">AddCameraFront</a> (<a class="el" href="classec_1_1_camera.html">Camera</a> *camera)</td></tr>
+<tr class="separator:a90fb8cd300040ea5884eb0e185385d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038fc1d43f9c11fb6d1c8a7c2127d55f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_frame.html#a038fc1d43f9c11fb6d1c8a7c2127d55f">AddCamera</a> (<a class="el" href="classec_1_1_camera.html">Camera</a> *camera, unsigned int priority)</td></tr>
+<tr class="separator:a038fc1d43f9c11fb6d1c8a7c2127d55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75241fcbc4c499a1ac3a1a084d546ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_frame.html#ae75241fcbc4c499a1ac3a1a084d546ae">AddCameraBefore</a> (<a class="el" href="classec_1_1_camera.html">Camera</a> *camera, <a class="el" href="classec_1_1_camera.html">Camera</a> *nextCamera)</td></tr>
+<tr class="separator:ae75241fcbc4c499a1ac3a1a084d546ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cccffd1e0919e75faa35d1f38da5c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_frame.html#aa7cccffd1e0919e75faa35d1f38da5c1">AddCameraAfter</a> (<a class="el" href="classec_1_1_camera.html">Camera</a> *camera, <a class="el" href="classec_1_1_camera.html">Camera</a> *prevCamera)</td></tr>
+<tr class="separator:aa7cccffd1e0919e75faa35d1f38da5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03d78a820026a27a6f18ec135283e22b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_frame.html#a03d78a820026a27a6f18ec135283e22b">RemoveCamera</a> (<a class="el" href="classec_1_1_camera.html">Camera</a> *camera)</td></tr>
 <tr class="separator:a03d78a820026a27a6f18ec135283e22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9756a68f9db16a43cf23dac3f13c0672"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_frame.html#a9756a68f9db16a43cf23dac3f13c0672">Clear</a> ()</td></tr>
@@ -97,7 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab0a5922f4be8a3565617418f447d4a5e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classec_1_1_camera.html">Camera</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_frame.html#ab0a5922f4be8a3565617418f447d4a5e">GetCameras</a> () const</td></tr>
 <tr class="separator:ab0a5922f4be8a3565617418f447d4a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A <a class="el" href="classec_1_1_frame.html">Frame</a> is a collection of cameras. The order in, which these cameras are stored, determines the order in which will be rendered. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a80ed1da85818f646b6b80fb6c8a6c2a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80ed1da85818f646b6b80fb6c8a6c2a6">&#9670;&nbsp;</a></span>Frame()</h2>
 
@@ -141,8 +149,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac77592eb8af14980e6b984c8433ffe8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac77592eb8af14980e6b984c8433ffe8c">&#9670;&nbsp;</a></span>AddCamera()</h2>
+<a id="a038fc1d43f9c11fb6d1c8a7c2127d55f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038fc1d43f9c11fb6d1c8a7c2127d55f">&#9670;&nbsp;</a></span>AddCamera()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,11 +159,132 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void ec::Frame::AddCamera </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classec_1_1_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a given camera with a given priority. If there already is a (multiple) camera[s] with the same priority registered, put the given camera before those. </p>
+
+</div>
+</div>
+<a id="aa7cccffd1e0919e75faa35d1f38da5c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7cccffd1e0919e75faa35d1f38da5c1">&#9670;&nbsp;</a></span>AddCameraAfter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ec::Frame::AddCameraAfter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classec_1_1_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classec_1_1_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>prevCamera</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a given camera right after another given camera </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera to be added. </td></tr>
+    <tr><td class="paramname">prevCamera</td><td>The camera after which the newly added camera should follow. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if prevCamera was found, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a06d07d0b719d2941c0334f4b54694348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d07d0b719d2941c0334f4b54694348">&#9670;&nbsp;</a></span>AddCameraBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Frame::AddCameraBack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classec_1_1_camera.html">Camera</a> *&#160;</td>
           <td class="paramname"><em>camera</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Add a given camera at the end (low priority camera) </p>
+
+</div>
+</div>
+<a id="ae75241fcbc4c499a1ac3a1a084d546ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75241fcbc4c499a1ac3a1a084d546ae">&#9670;&nbsp;</a></span>AddCameraBefore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ec::Frame::AddCameraBefore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classec_1_1_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classec_1_1_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>nextCamera</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a given camera right before another given camera </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera to be added. </td></tr>
+    <tr><td class="paramname">prevCamera</td><td>The camera before which the newly added camera should follow. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if nextCamera was found, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a90fb8cd300040ea5884eb0e185385d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90fb8cd300040ea5884eb0e185385d96">&#9670;&nbsp;</a></span>AddCameraFront()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Frame::AddCameraFront </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classec_1_1_camera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a given camera at the front (high priority camera) </p>
 
 </div>
 </div>
@@ -173,6 +302,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Remove all registered cameras. </p>
 
 </div>
 </div>
@@ -190,6 +320,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get all registered cameras </p>
 
 </div>
 </div>
@@ -208,6 +339,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Remove a given camera from the frame. </p><dl class="section return"><dt>Returns</dt><dd>True if the given camera is registered, false otherwise. </dd></dl>
 
 </div>
 </div>

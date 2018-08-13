@@ -20,6 +20,7 @@ ExampleWindow::ExampleWindow(int width, int height, const char* windowTitle)
 	InitShaders();
 	InitScenes();
 
+	// Render everything as a wire frame
 	// SwitchToWireframeMode();
 }
 
@@ -48,6 +49,9 @@ void ExampleWindow::InitCameras()
 	m_camera2->SetFOV(glm::radians(60.0f));
 	m_camera2->SetTranslation(glm::vec3(0.0f, 0.0f, 30.0f));
 	
+	//m_cameraController2.SetCamera(m_camera2);
+	//m_inputObservable.RegisterInputListener(&m_cameraController2);
+
 	// Create a third camera
 	m_camera3 = new ec::Camera(m_exampleScene);
 	m_camera3->SetFOV(glm::radians(60.0f));
@@ -64,9 +68,9 @@ void ExampleWindow::InitCameras()
 
 	// Init frame, which is a collection of the previously created cameras
 	Frame exampleFrame;
-	exampleFrame.AddCamera(m_camera);
-	exampleFrame.AddCamera(m_camera2);
-	exampleFrame.AddCamera(m_camera3);
+	exampleFrame.AddCameraBack(m_camera);
+	exampleFrame.AddCameraBack(m_camera2);
+	exampleFrame.AddCameraBack(m_camera3);
 
 	// Create a renderer, which uses the frame from the last step
 	m_exampleRenderer = new SceneRenderer();

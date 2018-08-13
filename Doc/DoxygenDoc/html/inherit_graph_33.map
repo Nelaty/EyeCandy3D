@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structec_1_1_texture_types.html" title="ec::TextureTypes" alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node1" href="$classec_1_1_transform3_d.html" title="ec::Transform3D" alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node2" href="$classec_1_1_node.html" title="ec::Node" alt="" coords="171,5,245,32"/>
+<area shape="rect" id="node3" href="$classec_1_1_camera.html" title="ec::Camera" alt="" coords="293,5,383,32"/>
 </map>

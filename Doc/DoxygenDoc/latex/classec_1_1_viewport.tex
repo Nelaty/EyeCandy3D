@@ -6,8 +6,7 @@
 
 
 
-Collaboration diagram for ec\+:\+:Viewport\+:
-\nopagebreak
+Collaboration diagram for ec\+:\+:Viewport\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,6 +22,10 @@ Collaboration diagram for ec\+:\+:Viewport\+:
 \item 
 const glm\+::vec2 \& \mbox{\hyperlink{classec_1_1_viewport_aee8a504b5b66702a627cc13aa3e4ac94}{Get\+Position}} () const
 \item 
+float \mbox{\hyperlink{classec_1_1_viewport_a9eb9dd217b11d9f7fa1ffb2c76bc60a9}{Get\+PositionX}} () const
+\item 
+float \mbox{\hyperlink{classec_1_1_viewport_ab3b320481304aec2aee3f1ee53793898}{Get\+PositionY}} () const
+\item 
 void \mbox{\hyperlink{classec_1_1_viewport_a880a53af6b1b80bd30dec3da38e4a653}{Set\+Position}} (const glm\+::vec2 \&position)
 \item 
 void \mbox{\hyperlink{classec_1_1_viewport_a02f3a376956b1f7234efcaa26bedf064}{Set\+PositionX}} (float x)
@@ -30,6 +33,10 @@ void \mbox{\hyperlink{classec_1_1_viewport_a02f3a376956b1f7234efcaa26bedf064}{Se
 void \mbox{\hyperlink{classec_1_1_viewport_abe18d636e8f53f087b3cb7a21699fb93}{Set\+PositionY}} (float y)
 \item 
 const glm\+::vec2 \& \mbox{\hyperlink{classec_1_1_viewport_a128183b59733fcef73d52a9f61f82181}{Get\+Size}} () const
+\item 
+float \mbox{\hyperlink{classec_1_1_viewport_ad1d046f5f6da951f420cf6bae52bfb44}{Get\+SizeX}} () const
+\item 
+float \mbox{\hyperlink{classec_1_1_viewport_aae60019c1f37603b065f7d38b760764b}{Get\+SizeY}} () const
 \item 
 void \mbox{\hyperlink{classec_1_1_viewport_a9e8bd48f0bb12b8a45502d766d6e1b76}{Set\+Size}} (const glm\+::vec2 \&size)
 \item 
@@ -64,11 +71,35 @@ A viewport defines a rectangular area into which a camera renders. For every poi
 \subsubsection{\texorpdfstring{Get\+Position()}{GetPosition()}}
 {\footnotesize\ttfamily const glm\+::vec2 \& ec\+::\+Viewport\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{classec_1_1_viewport_a9eb9dd217b11d9f7fa1ffb2c76bc60a9}\label{classec_1_1_viewport_a9eb9dd217b11d9f7fa1ffb2c76bc60a9}} 
+\index{ec\+::\+Viewport@{ec\+::\+Viewport}!Get\+PositionX@{Get\+PositionX}}
+\index{Get\+PositionX@{Get\+PositionX}!ec\+::\+Viewport@{ec\+::\+Viewport}}
+\subsubsection{\texorpdfstring{Get\+Position\+X()}{GetPositionX()}}
+{\footnotesize\ttfamily float ec\+::\+Viewport\+::\+Get\+PositionX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_viewport_ab3b320481304aec2aee3f1ee53793898}\label{classec_1_1_viewport_ab3b320481304aec2aee3f1ee53793898}} 
+\index{ec\+::\+Viewport@{ec\+::\+Viewport}!Get\+PositionY@{Get\+PositionY}}
+\index{Get\+PositionY@{Get\+PositionY}!ec\+::\+Viewport@{ec\+::\+Viewport}}
+\subsubsection{\texorpdfstring{Get\+Position\+Y()}{GetPositionY()}}
+{\footnotesize\ttfamily float ec\+::\+Viewport\+::\+Get\+PositionY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 \mbox{\Hypertarget{classec_1_1_viewport_a128183b59733fcef73d52a9f61f82181}\label{classec_1_1_viewport_a128183b59733fcef73d52a9f61f82181}} 
 \index{ec\+::\+Viewport@{ec\+::\+Viewport}!Get\+Size@{Get\+Size}}
 \index{Get\+Size@{Get\+Size}!ec\+::\+Viewport@{ec\+::\+Viewport}}
 \subsubsection{\texorpdfstring{Get\+Size()}{GetSize()}}
 {\footnotesize\ttfamily const glm\+::vec2 \& ec\+::\+Viewport\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_viewport_ad1d046f5f6da951f420cf6bae52bfb44}\label{classec_1_1_viewport_ad1d046f5f6da951f420cf6bae52bfb44}} 
+\index{ec\+::\+Viewport@{ec\+::\+Viewport}!Get\+SizeX@{Get\+SizeX}}
+\index{Get\+SizeX@{Get\+SizeX}!ec\+::\+Viewport@{ec\+::\+Viewport}}
+\subsubsection{\texorpdfstring{Get\+Size\+X()}{GetSizeX()}}
+{\footnotesize\ttfamily float ec\+::\+Viewport\+::\+Get\+SizeX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_viewport_aae60019c1f37603b065f7d38b760764b}\label{classec_1_1_viewport_aae60019c1f37603b065f7d38b760764b}} 
+\index{ec\+::\+Viewport@{ec\+::\+Viewport}!Get\+SizeY@{Get\+SizeY}}
+\index{Get\+SizeY@{Get\+SizeY}!ec\+::\+Viewport@{ec\+::\+Viewport}}
+\subsubsection{\texorpdfstring{Get\+Size\+Y()}{GetSizeY()}}
+{\footnotesize\ttfamily float ec\+::\+Viewport\+::\+Get\+SizeY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{classec_1_1_viewport_a880a53af6b1b80bd30dec3da38e4a653}\label{classec_1_1_viewport_a880a53af6b1b80bd30dec3da38e4a653}} 
 \index{ec\+::\+Viewport@{ec\+::\+Viewport}!Set\+Position@{Set\+Position}}

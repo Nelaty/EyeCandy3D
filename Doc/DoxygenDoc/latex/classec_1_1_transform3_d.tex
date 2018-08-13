@@ -6,12 +6,20 @@
 
 
 
-Collaboration diagram for ec\+:\+:Transform3D\+:
-\nopagebreak
+Inheritance diagram for ec\+:\+:Transform3D\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=235pt]{classec_1_1_transform3_d__coll__graph}
+\includegraphics[height=550pt]{classec_1_1_transform3_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+:\+:Transform3D\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classec_1_1_transform3_d__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -21,7 +29,7 @@ Collaboration diagram for ec\+:\+:Transform3D\+:
 \item 
 \mbox{\hyperlink{classec_1_1_transform3_d_a1df4b7afcf78aef64719b2302cfac864}{$\sim$\+Transform3D}} ()
 \item 
-void \mbox{\hyperlink{classec_1_1_transform3_d_a9af1af38089385c5b2100fe5f98f33ca}{Update\+Local\+Mat}} ()
+virtual void \mbox{\hyperlink{classec_1_1_transform3_d_a9af1af38089385c5b2100fe5f98f33ca}{Update\+Local\+Mat}} ()
 \item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_a69a9688cbe54695c5798eb532b7f1a30}{Get\+Local\+Position}} ()
 \item 
@@ -29,7 +37,7 @@ const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_transform3_d_a39bf61001742803f
 \item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_ace4e850baa2cbbbbcbe12613eb6851a8}{Get\+Up\+Vector}} () const
 \item 
-const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_a84ad94cea6d167aedfc640bcf1165ea7}{Get\+Orientation}} () const
+const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_a50b05aae5350602938a0df871764e8c6}{Get\+Forward\+Vector}} () const
 \item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_a71b999a8cf046109562a5335c9af7c77}{Get\+Translation}} () const
 \item 
@@ -73,7 +81,11 @@ void \mbox{\hyperlink{classec_1_1_transform3_d_a71e31dbecd1bfad8754c7b3bca691876
 \item 
 void \mbox{\hyperlink{classec_1_1_transform3_d_aff76dc65f161ff8401976561772dd2fc}{RotateZ}} (const float angle)
 \item 
-void \mbox{\hyperlink{classec_1_1_transform3_d_a752381826edcad395fedaa4c9ced5da2}{Set\+Orientation}} (const glm\+::vec3 \&orientation)
+void \mbox{\hyperlink{classec_1_1_transform3_d_af5995f2c01e062a715f8a3181dd11f04}{Rotate\+X\+Local}} (const float angle)
+\item 
+void \mbox{\hyperlink{classec_1_1_transform3_d_a593767a5127e4156c309b3613a162b42}{Rotate\+Y\+Local}} (const float angle)
+\item 
+void \mbox{\hyperlink{classec_1_1_transform3_d_aba0aba873f12438d20f059bd86702135}{Rotate\+Z\+Local}} (const float angle)
 \item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_a8819e33e87e8a8cf0086c156b0072a4d}{Get\+Scale}} () const
 \item 
@@ -108,11 +120,9 @@ glm\+::vec3 \mbox{\hyperlink{classec_1_1_transform3_d_addd1132fb57befe841dfd9af9
 \item 
 glm\+::vec3 \mbox{\hyperlink{classec_1_1_transform3_d_a5bba8c29bb22d2b122b64b51b52335f7}{m\+\_\+position}}
 \item 
-glm\+::vec3 \mbox{\hyperlink{classec_1_1_transform3_d_aef0dbda6a07519263c5ad7e617bec33c}{m\+\_\+orientation}}
+glm\+::vec3 \mbox{\hyperlink{classec_1_1_transform3_d_a5d7ebb5dc842dc73fe0840f3e3f95ab8}{m\+\_\+forward\+Vector}}
 \item 
 glm\+::vec3 \mbox{\hyperlink{classec_1_1_transform3_d_a8eb8cecaa5ec8273e49c9487e0f6b935}{m\+\_\+scale}}
-\item 
-glm\+::mat4 \mbox{\hyperlink{classec_1_1_transform3_d_a3db99e0bf5af6dcbd68d18badcbf615e}{m\+\_\+local\+Mat}}
 \end{DoxyCompactItemize}
 
 
@@ -132,7 +142,13 @@ glm\+::mat4 \mbox{\hyperlink{classec_1_1_transform3_d_a3db99e0bf5af6dcbd68d18bad
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_transform3_d_a39bf61001742803f82e888e2b64a58f4}\label{classec_1_1_transform3_d_a39bf61001742803f82e888e2b64a58f4}} 
+\mbox{\Hypertarget{classec_1_1_transform3_d_a50b05aae5350602938a0df871764e8c6}\label{classec_1_1_transform3_d_a50b05aae5350602938a0df871764e8c6}} 
+\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Get\+Forward\+Vector@{Get\+Forward\+Vector}}
+\index{Get\+Forward\+Vector@{Get\+Forward\+Vector}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
+\subsubsection{\texorpdfstring{Get\+Forward\+Vector()}{GetForwardVector()}}
+{\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Transform3\+D\+::\+Get\+Forward\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the current forward vector. \mbox{\Hypertarget{classec_1_1_transform3_d_a39bf61001742803f82e888e2b64a58f4}\label{classec_1_1_transform3_d_a39bf61001742803f82e888e2b64a58f4}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Get\+Local\+Mat@{Get\+Local\+Mat}}
 \index{Get\+Local\+Mat@{Get\+Local\+Mat}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{Get\+Local\+Mat()}{GetLocalMat()}}
@@ -144,13 +160,7 @@ Get the current view matrix. \mbox{\Hypertarget{classec_1_1_transform3_d_a69a968
 \subsubsection{\texorpdfstring{Get\+Local\+Position()}{GetLocalPosition()}}
 {\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Transform3\+D\+::\+Get\+Local\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Get the current local position . Performance critical, since the local matrix has to be updated. \mbox{\Hypertarget{classec_1_1_transform3_d_a84ad94cea6d167aedfc640bcf1165ea7}\label{classec_1_1_transform3_d_a84ad94cea6d167aedfc640bcf1165ea7}} 
-\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Get\+Orientation@{Get\+Orientation}}
-\index{Get\+Orientation@{Get\+Orientation}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
-\subsubsection{\texorpdfstring{Get\+Orientation()}{GetOrientation()}}
-{\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Transform3\+D\+::\+Get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-Get the current orientation. \mbox{\Hypertarget{classec_1_1_transform3_d_a8819e33e87e8a8cf0086c156b0072a4d}\label{classec_1_1_transform3_d_a8819e33e87e8a8cf0086c156b0072a4d}} 
+Get the current local position . Performance critical, since the local matrix has to be updated. \mbox{\Hypertarget{classec_1_1_transform3_d_a8819e33e87e8a8cf0086c156b0072a4d}\label{classec_1_1_transform3_d_a8819e33e87e8a8cf0086c156b0072a4d}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Get\+Scale@{Get\+Scale}}
 \index{Get\+Scale@{Get\+Scale}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{Get\+Scale()}{GetScale()}}
@@ -222,19 +232,37 @@ Rotate around an axis by a given angle. \mbox{\Hypertarget{classec_1_1_transform
 \subsubsection{\texorpdfstring{Rotate\+X()}{RotateX()}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+RotateX (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
 
-Rotate around the x axis by a given angle. \mbox{\Hypertarget{classec_1_1_transform3_d_a71e31dbecd1bfad8754c7b3bca691876}\label{classec_1_1_transform3_d_a71e31dbecd1bfad8754c7b3bca691876}} 
+Rotate around the x axis by a given angle. \mbox{\Hypertarget{classec_1_1_transform3_d_af5995f2c01e062a715f8a3181dd11f04}\label{classec_1_1_transform3_d_af5995f2c01e062a715f8a3181dd11f04}} 
+\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Rotate\+X\+Local@{Rotate\+X\+Local}}
+\index{Rotate\+X\+Local@{Rotate\+X\+Local}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
+\subsubsection{\texorpdfstring{Rotate\+X\+Local()}{RotateXLocal()}}
+{\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+Rotate\+X\+Local (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
+
+Rotate around the local x axis by a given angle \mbox{\Hypertarget{classec_1_1_transform3_d_a71e31dbecd1bfad8754c7b3bca691876}\label{classec_1_1_transform3_d_a71e31dbecd1bfad8754c7b3bca691876}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!RotateY@{RotateY}}
 \index{RotateY@{RotateY}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{Rotate\+Y()}{RotateY()}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+RotateY (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
 
-Rotate around the y axis by a given angle. \mbox{\Hypertarget{classec_1_1_transform3_d_aff76dc65f161ff8401976561772dd2fc}\label{classec_1_1_transform3_d_aff76dc65f161ff8401976561772dd2fc}} 
+Rotate around the y axis by a given angle. \mbox{\Hypertarget{classec_1_1_transform3_d_a593767a5127e4156c309b3613a162b42}\label{classec_1_1_transform3_d_a593767a5127e4156c309b3613a162b42}} 
+\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Rotate\+Y\+Local@{Rotate\+Y\+Local}}
+\index{Rotate\+Y\+Local@{Rotate\+Y\+Local}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
+\subsubsection{\texorpdfstring{Rotate\+Y\+Local()}{RotateYLocal()}}
+{\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+Rotate\+Y\+Local (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
+
+Rotate around the local y axis by a given angle \mbox{\Hypertarget{classec_1_1_transform3_d_aff76dc65f161ff8401976561772dd2fc}\label{classec_1_1_transform3_d_aff76dc65f161ff8401976561772dd2fc}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!RotateZ@{RotateZ}}
 \index{RotateZ@{RotateZ}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{Rotate\+Z()}{RotateZ()}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+RotateZ (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
 
-Rotate around the z axis by a given angle. \mbox{\Hypertarget{classec_1_1_transform3_d_a6f6909d1f35cc5c4d4340e6fe56d5e4d}\label{classec_1_1_transform3_d_a6f6909d1f35cc5c4d4340e6fe56d5e4d}} 
+Rotate around the z axis by a given angle. \mbox{\Hypertarget{classec_1_1_transform3_d_aba0aba873f12438d20f059bd86702135}\label{classec_1_1_transform3_d_aba0aba873f12438d20f059bd86702135}} 
+\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Rotate\+Z\+Local@{Rotate\+Z\+Local}}
+\index{Rotate\+Z\+Local@{Rotate\+Z\+Local}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
+\subsubsection{\texorpdfstring{Rotate\+Z\+Local()}{RotateZLocal()}}
+{\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+Rotate\+Z\+Local (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
+
+Rotate around the local z axis by a given angle \mbox{\Hypertarget{classec_1_1_transform3_d_a6f6909d1f35cc5c4d4340e6fe56d5e4d}\label{classec_1_1_transform3_d_a6f6909d1f35cc5c4d4340e6fe56d5e4d}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Scale@{Scale}}
 \index{Scale@{Scale}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{Scale()}{Scale()}}
@@ -258,13 +286,7 @@ Multiplicatively scale the y scale component. \mbox{\Hypertarget{classec_1_1_tra
 \subsubsection{\texorpdfstring{Scale\+Z()}{ScaleZ()}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+ScaleZ (\begin{DoxyParamCaption}\item[{const float}]{sz }\end{DoxyParamCaption})}
 
-Multiplicatively scale the z scale component. \mbox{\Hypertarget{classec_1_1_transform3_d_a752381826edcad395fedaa4c9ced5da2}\label{classec_1_1_transform3_d_a752381826edcad395fedaa4c9ced5da2}} 
-\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Set\+Orientation@{Set\+Orientation}}
-\index{Set\+Orientation@{Set\+Orientation}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
-\subsubsection{\texorpdfstring{Set\+Orientation()}{SetOrientation()}}
-{\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+Set\+Orientation (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{orientation }\end{DoxyParamCaption})}
-
-Rotate so that the matrix matches the given orientation. \mbox{\Hypertarget{classec_1_1_transform3_d_ac60d767a4f53241ef68726530da0b984}\label{classec_1_1_transform3_d_ac60d767a4f53241ef68726530da0b984}} 
+Multiplicatively scale the z scale component. \mbox{\Hypertarget{classec_1_1_transform3_d_ac60d767a4f53241ef68726530da0b984}\label{classec_1_1_transform3_d_ac60d767a4f53241ef68726530da0b984}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Set\+Scale@{Set\+Scale}}
 \index{Set\+Scale@{Set\+Scale}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{Set\+Scale()}{SetScale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -342,13 +364,13 @@ Adds the given vector to the current position. \mbox{\Hypertarget{classec_1_1_tr
 \subsubsection{\texorpdfstring{Translate\+Local()}{TranslateLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+Translate\+Local (\begin{DoxyParamCaption}\item[{const float}]{x,  }\item[{const float}]{y,  }\item[{const float}]{z }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_transform3_d_a44ece37c7f56329840c2f92ae695e9a2}\label{classec_1_1_transform3_d_a44ece37c7f56329840c2f92ae695e9a2}} 
+Translate by the given coordinates and with respect to the current orientation. \mbox{\Hypertarget{classec_1_1_transform3_d_a44ece37c7f56329840c2f92ae695e9a2}\label{classec_1_1_transform3_d_a44ece37c7f56329840c2f92ae695e9a2}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Translate\+Local@{Translate\+Local}}
 \index{Translate\+Local@{Translate\+Local}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{Translate\+Local()}{TranslateLocal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+Translate\+Local (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{v }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_transform3_d_a0c1e55c9edcd7cb53199fd05ba111099}\label{classec_1_1_transform3_d_a0c1e55c9edcd7cb53199fd05ba111099}} 
+Translate by the given vector and with respect to the current orientation. \mbox{\Hypertarget{classec_1_1_transform3_d_a0c1e55c9edcd7cb53199fd05ba111099}\label{classec_1_1_transform3_d_a0c1e55c9edcd7cb53199fd05ba111099}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!TranslateX@{TranslateX}}
 \index{TranslateX@{TranslateX}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{Translate\+X()}{TranslateX()}}
@@ -370,22 +392,20 @@ Adds the given value to the current z-\/coordinate. \mbox{\Hypertarget{classec_1
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!Update\+Local\+Mat@{Update\+Local\+Mat}}
 \index{Update\+Local\+Mat@{Update\+Local\+Mat}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{Update\+Local\+Mat()}{UpdateLocalMat()}}
-{\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+Update\+Local\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::\+Update\+Local\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 This function should be called once before accessing the local matrix, if a prior transformation has been executed. Create a new local mat from the current position, rotation and scale. 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{classec_1_1_transform3_d_a3db99e0bf5af6dcbd68d18badcbf615e}\label{classec_1_1_transform3_d_a3db99e0bf5af6dcbd68d18badcbf615e}} 
-\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!m\+\_\+local\+Mat@{m\+\_\+local\+Mat}}
-\index{m\+\_\+local\+Mat@{m\+\_\+local\+Mat}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
-\subsubsection{\texorpdfstring{m\+\_\+local\+Mat}{m\_localMat}}
-{\footnotesize\ttfamily glm\+::mat4 ec\+::\+Transform3\+D\+::m\+\_\+local\+Mat\hspace{0.3cm}{\ttfamily [protected]}}
+Reimplemented in \mbox{\hyperlink{classec_1_1_camera_ab9b2d59d1755a56d67c13a5539b7e033}{ec\+::\+Camera}}.
 
-\mbox{\Hypertarget{classec_1_1_transform3_d_aef0dbda6a07519263c5ad7e617bec33c}\label{classec_1_1_transform3_d_aef0dbda6a07519263c5ad7e617bec33c}} 
-\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!m\+\_\+orientation@{m\+\_\+orientation}}
-\index{m\+\_\+orientation@{m\+\_\+orientation}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
-\subsubsection{\texorpdfstring{m\+\_\+orientation}{m\_orientation}}
-{\footnotesize\ttfamily glm\+::vec3 ec\+::\+Transform3\+D\+::m\+\_\+orientation\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_transform3_d_a5d7ebb5dc842dc73fe0840f3e3f95ab8}\label{classec_1_1_transform3_d_a5d7ebb5dc842dc73fe0840f3e3f95ab8}} 
+\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!m\+\_\+forward\+Vector@{m\+\_\+forward\+Vector}}
+\index{m\+\_\+forward\+Vector@{m\+\_\+forward\+Vector}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
+\subsubsection{\texorpdfstring{m\+\_\+forward\+Vector}{m\_forwardVector}}
+{\footnotesize\ttfamily glm\+::vec3 ec\+::\+Transform3\+D\+::m\+\_\+forward\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classec_1_1_transform3_d_a5bba8c29bb22d2b122b64b51b52335f7}\label{classec_1_1_transform3_d_a5bba8c29bb22d2b122b64b51b52335f7}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!m\+\_\+position@{m\+\_\+position}}

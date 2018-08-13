@@ -1,0 +1,138 @@
+\hypertarget{classec__gui_1_1_checkbox}{}\section{ec\+\_\+gui\+:\+:Checkbox Class Reference}
+\label{classec__gui_1_1_checkbox}\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+
+
+{\ttfamily \#include $<$Checkbox.\+h$>$}
+
+
+
+Inheritance diagram for ec\+\_\+gui\+:\+:Checkbox\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec__gui_1_1_checkbox__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+\_\+gui\+:\+:Checkbox\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec__gui_1_1_checkbox__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec__gui_1_1_checkbox_ae5f2c4a6e7ea07282d4770be2486525c}{Checkbox}} (\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$parent)
+\item 
+virtual \mbox{\hyperlink{classec__gui_1_1_checkbox_a819cbb2a47519c323bffb47a4b629818}{$\sim$\+Checkbox}} ()
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_checkbox_acea0dfc9db5670da3de8a24913bd4be3}{Set\+Selected\+Callback}} (std\+::function$<$ void()$>$ callback)
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_checkbox_a1c4f89f765e7e06779d7066ec8c6fd6d}{Set\+Deselected\+Callback}} (std\+::function$<$ void()$>$ callback)
+\item 
+virtual void \mbox{\hyperlink{classec__gui_1_1_checkbox_ac3a789d2acb2da6067f1ed4b7bd43317}{Select}} (const bool selected)
+\item 
+virtual void \mbox{\hyperlink{classec__gui_1_1_checkbox_a8bfa25b77b1c3e8e0cffcd85f77c0466}{Toggle\+Selection}} ()
+\item 
+bool \mbox{\hyperlink{classec__gui_1_1_checkbox_ac21f8cc9658affca8c044751d786729d}{Is\+Selected}} () const
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_checkbox_a0c109bc8ddf9b272857e71cec9b63b49}{On\+Mouse\+Button}} (const glm\+::ivec2 \&position, int button, int mods, bool pressed) override
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classec__gui_1_1_checkbox_ae1f5d67ca2f0e54930ac1a7fcf39fe05}{m\+\_\+selected\+Callback}}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classec__gui_1_1_checkbox_a67f81ba535c95503bb2f8b66db35e594}{m\+\_\+deselected\+Callback}}
+\item 
+bool \mbox{\hyperlink{classec__gui_1_1_checkbox_aa5c7879c4d6422bd5c0fd96edc484a88}{m\+\_\+selected}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_ae5f2c4a6e7ea07282d4770be2486525c}\label{classec__gui_1_1_checkbox_ae5f2c4a6e7ea07282d4770be2486525c}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!Checkbox@{Checkbox}}
+\index{Checkbox@{Checkbox}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{Checkbox()}{Checkbox()}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Checkbox\+::\+Checkbox (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_a819cbb2a47519c323bffb47a4b629818}\label{classec__gui_1_1_checkbox_a819cbb2a47519c323bffb47a4b629818}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!````~Checkbox@{$\sim$\+Checkbox}}
+\index{````~Checkbox@{$\sim$\+Checkbox}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{$\sim$\+Checkbox()}{~Checkbox()}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Checkbox\+::$\sim$\+Checkbox (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_ac21f8cc9658affca8c044751d786729d}\label{classec__gui_1_1_checkbox_ac21f8cc9658affca8c044751d786729d}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!Is\+Selected@{Is\+Selected}}
+\index{Is\+Selected@{Is\+Selected}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{Is\+Selected()}{IsSelected()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Checkbox\+::\+Is\+Selected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_a0c109bc8ddf9b272857e71cec9b63b49}\label{classec__gui_1_1_checkbox_a0c109bc8ddf9b272857e71cec9b63b49}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!On\+Mouse\+Button@{On\+Mouse\+Button}}
+\index{On\+Mouse\+Button@{On\+Mouse\+Button}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Button()}{OnMouseButton()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Checkbox\+::\+On\+Mouse\+Button (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{int}]{button,  }\item[{int}]{mods,  }\item[{bool}]{pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a00bff8173079cc1cb69ec84910715ffb}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_ac3a789d2acb2da6067f1ed4b7bd43317}\label{classec__gui_1_1_checkbox_ac3a789d2acb2da6067f1ed4b7bd43317}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!Select@{Select}}
+\index{Select@{Select}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{Select()}{Select()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Checkbox\+::\+Select (\begin{DoxyParamCaption}\item[{const bool}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_a1c4f89f765e7e06779d7066ec8c6fd6d}\label{classec__gui_1_1_checkbox_a1c4f89f765e7e06779d7066ec8c6fd6d}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!Set\+Deselected\+Callback@{Set\+Deselected\+Callback}}
+\index{Set\+Deselected\+Callback@{Set\+Deselected\+Callback}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{Set\+Deselected\+Callback()}{SetDeselectedCallback()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Checkbox\+::\+Set\+Deselected\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_acea0dfc9db5670da3de8a24913bd4be3}\label{classec__gui_1_1_checkbox_acea0dfc9db5670da3de8a24913bd4be3}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!Set\+Selected\+Callback@{Set\+Selected\+Callback}}
+\index{Set\+Selected\+Callback@{Set\+Selected\+Callback}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{Set\+Selected\+Callback()}{SetSelectedCallback()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Checkbox\+::\+Set\+Selected\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_a8bfa25b77b1c3e8e0cffcd85f77c0466}\label{classec__gui_1_1_checkbox_a8bfa25b77b1c3e8e0cffcd85f77c0466}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!Toggle\+Selection@{Toggle\+Selection}}
+\index{Toggle\+Selection@{Toggle\+Selection}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{Toggle\+Selection()}{ToggleSelection()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Checkbox\+::\+Toggle\+Selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_a67f81ba535c95503bb2f8b66db35e594}\label{classec__gui_1_1_checkbox_a67f81ba535c95503bb2f8b66db35e594}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!m\+\_\+deselected\+Callback@{m\+\_\+deselected\+Callback}}
+\index{m\+\_\+deselected\+Callback@{m\+\_\+deselected\+Callback}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{m\+\_\+deselected\+Callback}{m\_deselectedCallback}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ ec\+\_\+gui\+::\+Checkbox\+::m\+\_\+deselected\+Callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_aa5c7879c4d6422bd5c0fd96edc484a88}\label{classec__gui_1_1_checkbox_aa5c7879c4d6422bd5c0fd96edc484a88}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!m\+\_\+selected@{m\+\_\+selected}}
+\index{m\+\_\+selected@{m\+\_\+selected}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{m\+\_\+selected}{m\_selected}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Checkbox\+::m\+\_\+selected\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec__gui_1_1_checkbox_ae1f5d67ca2f0e54930ac1a7fcf39fe05}\label{classec__gui_1_1_checkbox_ae1f5d67ca2f0e54930ac1a7fcf39fe05}} 
+\index{ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}!m\+\_\+selected\+Callback@{m\+\_\+selected\+Callback}}
+\index{m\+\_\+selected\+Callback@{m\+\_\+selected\+Callback}!ec\+\_\+gui\+::\+Checkbox@{ec\+\_\+gui\+::\+Checkbox}}
+\subsubsection{\texorpdfstring{m\+\_\+selected\+Callback}{m\_selectedCallback}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ ec\+\_\+gui\+::\+Checkbox\+::m\+\_\+selected\+Callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\mbox{\hyperlink{_checkbox_8h}{Checkbox.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\mbox{\hyperlink{_checkbox_8cpp}{Checkbox.\+cpp}}\end{DoxyCompactItemize}

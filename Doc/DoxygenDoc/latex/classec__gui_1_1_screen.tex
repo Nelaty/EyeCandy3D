@@ -1,0 +1,216 @@
+\hypertarget{classec__gui_1_1_screen}{}\section{ec\+\_\+gui\+:\+:Screen Class Reference}
+\label{classec__gui_1_1_screen}\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+
+
+{\ttfamily \#include $<$Screen.\+h$>$}
+
+
+
+Inheritance diagram for ec\+\_\+gui\+:\+:Screen\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec__gui_1_1_screen__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+\_\+gui\+:\+:Screen\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec__gui_1_1_screen__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec__gui_1_1_screen_a70d376c7107983dc3e57f70c2eef3ffa}{Screen}} ()
+\item 
+\mbox{\hyperlink{classec__gui_1_1_screen_ae31ba095c31a7811bb18b0049511565c}{$\sim$\+Screen}} ()
+\item 
+virtual void \mbox{\hyperlink{classec__gui_1_1_screen_a8a1e8f2db412a40632c580c547861b52}{Render}} (\mbox{\hyperlink{classec__gui_1_1_g_u_i_renderer}{G\+U\+I\+Renderer}} \&renderer, \mbox{\hyperlink{classec__gui_1_1_g_u_i_rendering_context}{G\+U\+I\+Rendering\+Context}} \&context) override
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_screen_afad8f0e7494006c1c44953851dc8d9d4}{Set\+Focused\+Widget}} (\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$widget)
+\item 
+\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$ \mbox{\hyperlink{classec__gui_1_1_screen_af2a3ff2e547e2a1a7bb25ecec1f1a1bf}{Get\+Focused\+Widget}} ()
+\item 
+virtual void \mbox{\hyperlink{classec__gui_1_1_screen_ad80e3b3a1ea500da673e62675185ff18}{Move\+Focus}} () override
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_screen_a99d3e8673ceedf958fd36c470575be65}{Contains}} (const glm\+::ivec2 \&position) const override
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_screen_a2d13abce5d8f8e8332f15949db18c374}{On\+Mouse\+Button}} (const glm\+::ivec2 \&position, int button, int mods, bool pressed) override
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_screen_a22ba089bf993e921d2d9b8e26f620e52}{On\+Mouse\+Move}} (const glm\+::ivec2 \&position) override
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_screen_a79cafedae2faa7090fec46e7ad16efd9}{On\+Mouse\+Drag}} (const glm\+::ivec2 \&position, const glm\+::ivec2 \&offset, int button, int mods) override
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_screen_aff591b1b897b9237a3ab734689282c0e}{On\+Mouse\+Scroll}} (const glm\+::ivec2 \&position, const glm\+::vec2 \&offset) override
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_screen_a3a0f971501303d0285c0f38c2b424237}{On\+Focus}} (bool focused) override
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_screen_a17f251d79b8e3d07658c37768f1572d3}{On\+Key}} (int key, int scancode, int mods, bool pressed) override
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_screen_ac2f9e1f91cc01bbe22d3b8c9c19659b6}{On\+Text}} (unsigned int codepoint, int mods) override
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_screen_adb7eb3a5c83749054a6b275cd05ddee7}{On\+Drop}} (const glm\+::ivec2 \&position, int count, const char $\ast$$\ast$paths) override
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_screen_a739fe1176382a7f6f399610da74972ea}{On\+Resize}} (const glm\+::ivec2 \&size) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_screen_a70d376c7107983dc3e57f70c2eef3ffa}\label{classec__gui_1_1_screen_a70d376c7107983dc3e57f70c2eef3ffa}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!Screen@{Screen}}
+\index{Screen@{Screen}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{Screen()}{Screen()}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Screen\+::\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_ae31ba095c31a7811bb18b0049511565c}\label{classec__gui_1_1_screen_ae31ba095c31a7811bb18b0049511565c}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!````~Screen@{$\sim$\+Screen}}
+\index{````~Screen@{$\sim$\+Screen}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{$\sim$\+Screen()}{~Screen()}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Screen\+::$\sim$\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_screen_a99d3e8673ceedf958fd36c470575be65}\label{classec__gui_1_1_screen_a99d3e8673ceedf958fd36c470575be65}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!Contains@{Contains}}
+\index{Contains@{Contains}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Screen\+::\+Contains (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a61c3184d7fddb724bcf4a956a3f0e662}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_af2a3ff2e547e2a1a7bb25ecec1f1a1bf}\label{classec__gui_1_1_screen_af2a3ff2e547e2a1a7bb25ecec1f1a1bf}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!Get\+Focused\+Widget@{Get\+Focused\+Widget}}
+\index{Get\+Focused\+Widget@{Get\+Focused\+Widget}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{Get\+Focused\+Widget()}{GetFocusedWidget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec__gui_1_1_widget}{ec\+\_\+gui\+::\+Widget}} $\ast$ ec\+\_\+gui\+::\+Screen\+::\+Get\+Focused\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_ad80e3b3a1ea500da673e62675185ff18}\label{classec__gui_1_1_screen_ad80e3b3a1ea500da673e62675185ff18}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!Move\+Focus@{Move\+Focus}}
+\index{Move\+Focus@{Move\+Focus}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{Move\+Focus()}{MoveFocus()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Screen\+::\+Move\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a4cef77dd2f523b09bb771e245c285ca8}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_adb7eb3a5c83749054a6b275cd05ddee7}\label{classec__gui_1_1_screen_adb7eb3a5c83749054a6b275cd05ddee7}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!On\+Drop@{On\+Drop}}
+\index{On\+Drop@{On\+Drop}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{On\+Drop()}{OnDrop()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Screen\+::\+On\+Drop (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{int}]{count,  }\item[{const char $\ast$$\ast$}]{paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a2b053e3f775081317f2bae8600efcdea}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_a3a0f971501303d0285c0f38c2b424237}\label{classec__gui_1_1_screen_a3a0f971501303d0285c0f38c2b424237}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!On\+Focus@{On\+Focus}}
+\index{On\+Focus@{On\+Focus}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{On\+Focus()}{OnFocus()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Screen\+::\+On\+Focus (\begin{DoxyParamCaption}\item[{bool}]{focused }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_ad8c4e0841214f66501a0cefc4f6e863e}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_a17f251d79b8e3d07658c37768f1572d3}\label{classec__gui_1_1_screen_a17f251d79b8e3d07658c37768f1572d3}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!On\+Key@{On\+Key}}
+\index{On\+Key@{On\+Key}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{On\+Key()}{OnKey()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Screen\+::\+On\+Key (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{mods,  }\item[{bool}]{pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_adcbf1cb953e1cb480635befc379c8e62}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_a2d13abce5d8f8e8332f15949db18c374}\label{classec__gui_1_1_screen_a2d13abce5d8f8e8332f15949db18c374}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!On\+Mouse\+Button@{On\+Mouse\+Button}}
+\index{On\+Mouse\+Button@{On\+Mouse\+Button}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Button()}{OnMouseButton()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Screen\+::\+On\+Mouse\+Button (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{int}]{button,  }\item[{int}]{mods,  }\item[{bool}]{pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a00bff8173079cc1cb69ec84910715ffb}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_a79cafedae2faa7090fec46e7ad16efd9}\label{classec__gui_1_1_screen_a79cafedae2faa7090fec46e7ad16efd9}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!On\+Mouse\+Drag@{On\+Mouse\+Drag}}
+\index{On\+Mouse\+Drag@{On\+Mouse\+Drag}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Drag()}{OnMouseDrag()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Screen\+::\+On\+Mouse\+Drag (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{const glm\+::ivec2 \&}]{offset,  }\item[{int}]{button,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a1801c494e708ae6deb39386feb352f23}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_a22ba089bf993e921d2d9b8e26f620e52}\label{classec__gui_1_1_screen_a22ba089bf993e921d2d9b8e26f620e52}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!On\+Mouse\+Move@{On\+Mouse\+Move}}
+\index{On\+Mouse\+Move@{On\+Mouse\+Move}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Move()}{OnMouseMove()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Screen\+::\+On\+Mouse\+Move (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a8b4943212deb1a9774d119b0b09f9078}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_aff591b1b897b9237a3ab734689282c0e}\label{classec__gui_1_1_screen_aff591b1b897b9237a3ab734689282c0e}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!On\+Mouse\+Scroll@{On\+Mouse\+Scroll}}
+\index{On\+Mouse\+Scroll@{On\+Mouse\+Scroll}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Scroll()}{OnMouseScroll()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Screen\+::\+On\+Mouse\+Scroll (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{const glm\+::vec2 \&}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a528c2b3639db65de6281fc1bb679dfcb}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_a739fe1176382a7f6f399610da74972ea}\label{classec__gui_1_1_screen_a739fe1176382a7f6f399610da74972ea}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!On\+Resize@{On\+Resize}}
+\index{On\+Resize@{On\+Resize}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{On\+Resize()}{OnResize()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Screen\+::\+On\+Resize (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_af352c24c35835706de550ee3b9cfbf91}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_ac2f9e1f91cc01bbe22d3b8c9c19659b6}\label{classec__gui_1_1_screen_ac2f9e1f91cc01bbe22d3b8c9c19659b6}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!On\+Text@{On\+Text}}
+\index{On\+Text@{On\+Text}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{On\+Text()}{OnText()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Screen\+::\+On\+Text (\begin{DoxyParamCaption}\item[{unsigned int}]{codepoint,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a99980fcd7af47e9f9d29c85a404729f6}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_a8a1e8f2db412a40632c580c547861b52}\label{classec__gui_1_1_screen_a8a1e8f2db412a40632c580c547861b52}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!Render@{Render}}
+\index{Render@{Render}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Screen\+::\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_g_u_i_renderer}{G\+U\+I\+Renderer}} \&}]{renderer,  }\item[{\mbox{\hyperlink{classec__gui_1_1_g_u_i_rendering_context}{G\+U\+I\+Rendering\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a5a8b9275293ea433e6ba8fec3e7b5232}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_screen_afad8f0e7494006c1c44953851dc8d9d4}\label{classec__gui_1_1_screen_afad8f0e7494006c1c44953851dc8d9d4}} 
+\index{ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}!Set\+Focused\+Widget@{Set\+Focused\+Widget}}
+\index{Set\+Focused\+Widget@{Set\+Focused\+Widget}!ec\+\_\+gui\+::\+Screen@{ec\+\_\+gui\+::\+Screen}}
+\subsubsection{\texorpdfstring{Set\+Focused\+Widget()}{SetFocusedWidget()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Screen\+::\+Set\+Focused\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\mbox{\hyperlink{_screen_8h}{Screen.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\mbox{\hyperlink{_screen_8cpp}{Screen.\+cpp}}\end{DoxyCompactItemize}

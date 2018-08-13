@@ -1,0 +1,135 @@
+\hypertarget{classec__gui_1_1_radio_button}{}\section{ec\+\_\+gui\+:\+:Radio\+Button Class Reference}
+\label{classec__gui_1_1_radio_button}\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+
+
+{\ttfamily \#include $<$Radio\+Button.\+h$>$}
+
+
+
+Inheritance diagram for ec\+\_\+gui\+:\+:Radio\+Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec__gui_1_1_radio_button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+\_\+gui\+:\+:Radio\+Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec__gui_1_1_radio_button__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec__gui_1_1_radio_button_a47767d326d721a4f754926f0a3ef5033}{Radio\+Button}} (\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$parent)
+\item 
+virtual \mbox{\hyperlink{classec__gui_1_1_radio_button_afad4c8b1b6915e612f514b0710b1bcf0}{$\sim$\+Radio\+Button}} ()
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_radio_button_a72e6c296c4b8c2f43a6ea863394d0759}{Select}} ()
+\item 
+bool \mbox{\hyperlink{classec__gui_1_1_radio_button_a6c22c63444d84d52678fcd05d9bd6822}{Is\+Selected}} () const
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_radio_button_a1277e3e9140a1260f4a4bab7866268cc}{Set\+Selected\+Callback}} (std\+::function$<$ void()$>$ callback)
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_radio_button_a162efb732e91b51feae948bec72fe382}{Set\+Deselected\+Callback}} (std\+::function$<$ void()$>$ callback)
+\item 
+bool \mbox{\hyperlink{classec__gui_1_1_radio_button_a5d954dd35f9e9cbbc50f856dec6aea46}{Register\+Radio\+Button}} (\mbox{\hyperlink{classec__gui_1_1_radio_button}{Radio\+Button}} $\ast$radio\+Button)
+\item 
+bool \mbox{\hyperlink{classec__gui_1_1_radio_button_a9e08d43c8fc3a4e6300489fac5fb2d78}{Unregister\+Radio\+Button}} (\mbox{\hyperlink{classec__gui_1_1_radio_button}{Radio\+Button}} $\ast$radio\+Button)
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_radio_button_a3935dba5a87855294ba0d5d79f24edb7}{Unregister\+All\+Radio\+Buttons}} ()
+\item 
+virtual bool \mbox{\hyperlink{classec__gui_1_1_radio_button_a40837f7fe8a630e42a2c8778689f2463}{On\+Mouse\+Button}} (const glm\+::ivec2 \&position, int button, int mods, bool pressed) override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_radio_button_a3294984201b18a7ad86620d18942b76f}{Deselect}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_a47767d326d721a4f754926f0a3ef5033}\label{classec__gui_1_1_radio_button_a47767d326d721a4f754926f0a3ef5033}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!Radio\+Button@{Radio\+Button}}
+\index{Radio\+Button@{Radio\+Button}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{Radio\+Button()}{RadioButton()}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Radio\+Button\+::\+Radio\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_afad4c8b1b6915e612f514b0710b1bcf0}\label{classec__gui_1_1_radio_button_afad4c8b1b6915e612f514b0710b1bcf0}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!````~Radio\+Button@{$\sim$\+Radio\+Button}}
+\index{````~Radio\+Button@{$\sim$\+Radio\+Button}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{$\sim$\+Radio\+Button()}{~RadioButton()}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Radio\+Button\+::$\sim$\+Radio\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_a3294984201b18a7ad86620d18942b76f}\label{classec__gui_1_1_radio_button_a3294984201b18a7ad86620d18942b76f}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!Deselect@{Deselect}}
+\index{Deselect@{Deselect}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{Deselect()}{Deselect()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Radio\+Button\+::\+Deselect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_a6c22c63444d84d52678fcd05d9bd6822}\label{classec__gui_1_1_radio_button_a6c22c63444d84d52678fcd05d9bd6822}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!Is\+Selected@{Is\+Selected}}
+\index{Is\+Selected@{Is\+Selected}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{Is\+Selected()}{IsSelected()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Radio\+Button\+::\+Is\+Selected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_a40837f7fe8a630e42a2c8778689f2463}\label{classec__gui_1_1_radio_button_a40837f7fe8a630e42a2c8778689f2463}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!On\+Mouse\+Button@{On\+Mouse\+Button}}
+\index{On\+Mouse\+Button@{On\+Mouse\+Button}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Button()}{OnMouseButton()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Radio\+Button\+::\+On\+Mouse\+Button (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{int}]{button,  }\item[{int}]{mods,  }\item[{bool}]{pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a00bff8173079cc1cb69ec84910715ffb}{ec\+\_\+gui\+::\+Widget}}.
+
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_a5d954dd35f9e9cbbc50f856dec6aea46}\label{classec__gui_1_1_radio_button_a5d954dd35f9e9cbbc50f856dec6aea46}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!Register\+Radio\+Button@{Register\+Radio\+Button}}
+\index{Register\+Radio\+Button@{Register\+Radio\+Button}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{Register\+Radio\+Button()}{RegisterRadioButton()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Radio\+Button\+::\+Register\+Radio\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_radio_button}{Radio\+Button}} $\ast$}]{radio\+Button }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_a72e6c296c4b8c2f43a6ea863394d0759}\label{classec__gui_1_1_radio_button_a72e6c296c4b8c2f43a6ea863394d0759}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!Select@{Select}}
+\index{Select@{Select}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{Select()}{Select()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Radio\+Button\+::\+Select (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_a162efb732e91b51feae948bec72fe382}\label{classec__gui_1_1_radio_button_a162efb732e91b51feae948bec72fe382}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!Set\+Deselected\+Callback@{Set\+Deselected\+Callback}}
+\index{Set\+Deselected\+Callback@{Set\+Deselected\+Callback}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{Set\+Deselected\+Callback()}{SetDeselectedCallback()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Radio\+Button\+::\+Set\+Deselected\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_a1277e3e9140a1260f4a4bab7866268cc}\label{classec__gui_1_1_radio_button_a1277e3e9140a1260f4a4bab7866268cc}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!Set\+Selected\+Callback@{Set\+Selected\+Callback}}
+\index{Set\+Selected\+Callback@{Set\+Selected\+Callback}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{Set\+Selected\+Callback()}{SetSelectedCallback()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Radio\+Button\+::\+Set\+Selected\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_a3935dba5a87855294ba0d5d79f24edb7}\label{classec__gui_1_1_radio_button_a3935dba5a87855294ba0d5d79f24edb7}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!Unregister\+All\+Radio\+Buttons@{Unregister\+All\+Radio\+Buttons}}
+\index{Unregister\+All\+Radio\+Buttons@{Unregister\+All\+Radio\+Buttons}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{Unregister\+All\+Radio\+Buttons()}{UnregisterAllRadioButtons()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Radio\+Button\+::\+Unregister\+All\+Radio\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_radio_button_a9e08d43c8fc3a4e6300489fac5fb2d78}\label{classec__gui_1_1_radio_button_a9e08d43c8fc3a4e6300489fac5fb2d78}} 
+\index{ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}!Unregister\+Radio\+Button@{Unregister\+Radio\+Button}}
+\index{Unregister\+Radio\+Button@{Unregister\+Radio\+Button}!ec\+\_\+gui\+::\+Radio\+Button@{ec\+\_\+gui\+::\+Radio\+Button}}
+\subsubsection{\texorpdfstring{Unregister\+Radio\+Button()}{UnregisterRadioButton()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Radio\+Button\+::\+Unregister\+Radio\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_radio_button}{Radio\+Button}} $\ast$}]{radio\+Button }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\mbox{\hyperlink{_radio_button_8h}{Radio\+Button.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\mbox{\hyperlink{_radio_button_8cpp}{Radio\+Button.\+cpp}}\end{DoxyCompactItemize}

@@ -23,5 +23,5 @@ Additional dependencies:
 * opengl32.lib
 
 ## 3. Documentation
-* [Doxygen](./Doc/DoxygenDoc/html/index.html)
-* [User manual](./Doc/UserManual/EyeCandy3D_UserManual.pdf)
+* [Doxygen](https://nelaty.github.io/EyeCandy3D/Doc/DoxygenDoc/html/index.html)
+* [User manual](https://nelaty.github.io/EyeCandy3D/Doc/UserManual/EyeCandy3D_UserManual.pdf)

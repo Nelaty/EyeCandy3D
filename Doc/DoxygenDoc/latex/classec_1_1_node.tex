@@ -6,7 +6,8 @@
 
 
 
-Inheritance diagram for ec\+:\+:Node\+:\nopagebreak
+Inheritance diagram for ec\+:\+:Node\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Inheritance diagram for ec\+:\+:Node\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for ec\+:\+:Node\+:\nopagebreak
+Collaboration diagram for ec\+:\+:Node\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,6 +36,8 @@ virtual void \mbox{\hyperlink{classec_1_1_node_ac606be4f6d5a899a0b9679b6767ff109
 virtual void \mbox{\hyperlink{classec_1_1_node_ac9970ec0ec03e130da59d0d5376a9855}{Update\+Global\+Matrices}} (const glm\+::mat4 \&m\+\_\+parent\+Mat)
 \item 
 const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_node_aafbc9c31eb710b1ac22834792e039435}{Get\+Global\+Mat}} () const
+\item 
+const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_node_a0acfd7f3ead66d1694d2147383432da8}{Get\+Global\+Position}} ()
 \item 
 \mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classec_1_1_node_a88919835b03a7055f4c1c50c68b83fac}{Get\+Parent}} ()
 \item 
@@ -114,7 +118,13 @@ std\+::vector$<$ \mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$ $>$ \m
 \subsubsection{\texorpdfstring{Get\+Global\+Mat()}{GetGlobalMat()}}
 {\footnotesize\ttfamily const glm\+::mat4 \& ec\+::\+Node\+::\+Get\+Global\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the current global matrix. This node needs to be rendered at least once, for the matrix to be something else than the unit matrix. \mbox{\Hypertarget{classec_1_1_node_a88919835b03a7055f4c1c50c68b83fac}\label{classec_1_1_node_a88919835b03a7055f4c1c50c68b83fac}} 
+Get the current global matrix. This node needs to be rendered at least once, for the matrix to be something else than the unit matrix. \mbox{\Hypertarget{classec_1_1_node_a0acfd7f3ead66d1694d2147383432da8}\label{classec_1_1_node_a0acfd7f3ead66d1694d2147383432da8}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!Get\+Global\+Position@{Get\+Global\+Position}}
+\index{Get\+Global\+Position@{Get\+Global\+Position}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{Get\+Global\+Position()}{GetGlobalPosition()}}
+{\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Node\+::\+Get\+Global\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the current global position Global matrix has to be updated before calling this function! If not, the position will be from the last frame. \mbox{\Hypertarget{classec_1_1_node_a88919835b03a7055f4c1c50c68b83fac}\label{classec_1_1_node_a88919835b03a7055f4c1c50c68b83fac}} 
 \index{ec\+::\+Node@{ec\+::\+Node}!Get\+Parent@{Get\+Parent}}
 \index{Get\+Parent@{Get\+Parent}!ec\+::\+Node@{ec\+::\+Node}}
 \subsubsection{\texorpdfstring{Get\+Parent()}{GetParent()}}

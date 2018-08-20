@@ -1,9 +1,9 @@
 #pragma once
-#include "Geometry.h"
+#include "EC3D/Core/StaticGeometry.h"
 
 namespace ec
 {
-	class SphereMesh : public Geometry
+	class SphereMesh : public StaticGeometry
 	{
 	public:
 		explicit SphereMesh(float radius = 1.0f, int latitude = 20, int longitude = 20);

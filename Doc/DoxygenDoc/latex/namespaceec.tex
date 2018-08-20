@@ -1,21 +1,38 @@
 \hypertarget{namespaceec}{}\section{ec Namespace Reference}
 \label{namespaceec}\index{ec@{ec}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceec_1_1key}{key}}
+\end{DoxyCompactItemize}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classec_1_1_application}{Application}}
 \item 
 class \mbox{\hyperlink{classec_1_1_camera}{Camera}}
 \item 
 class \mbox{\hyperlink{classec_1_1_camera_controller}{Camera\+Controller}}
 \item 
-struct \mbox{\hyperlink{structec_1_1_closed_event}{Closed\+Event}}
-\item 
 class \mbox{\hyperlink{classec_1_1_cube_mesh}{Cube\+Mesh}}
+\item 
+class \mbox{\hyperlink{classec_1_1_cursor}{Cursor}}
+\item 
+class \mbox{\hyperlink{classec_1_1_device_registry}{Device\+Registry}}
+\item 
+struct \mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}}
 \item 
 class \mbox{\hyperlink{classec_1_1_drawable}{Drawable}}
 \item 
 struct \mbox{\hyperlink{structec_1_1_drop_event}{Drop\+Event}}
 \item 
-struct \mbox{\hyperlink{structec_1_1_focus_event}{Focus\+Event}}
+class \mbox{\hyperlink{classec_1_1_dynamic_geometry}{Dynamic\+Geometry}}
+\item 
+class \mbox{\hyperlink{classec_1_1_dynamic_line_geometry}{Dynamic\+Line\+Geometry}}
+\item 
+class \mbox{\hyperlink{classec_1_1_event_queue}{Event\+Queue}}
+\item 
+class \mbox{\hyperlink{classec_1_1_event_source}{Event\+Source}}
 \item 
 struct \mbox{\hyperlink{structec_1_1_font_character}{Font\+Character}}
 \item 
@@ -35,27 +52,21 @@ class \mbox{\hyperlink{classec_1_1_input_observable}{Input\+Observable}}
 \item 
 struct \mbox{\hyperlink{structec_1_1_joystick_event}{Joystick\+Event}}
 \item 
-struct \mbox{\hyperlink{structec_1_1_key_event}{Key\+Event}}
+class \mbox{\hyperlink{classec_1_1_keyboard}{Keyboard}}
+\item 
+struct \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}}
 \item 
 class \mbox{\hyperlink{classec_1_1_material}{Material}}
 \item 
-struct \mbox{\hyperlink{structec_1_1_mouse_button_event}{Mouse\+Button\+Event}}
+class \mbox{\hyperlink{classec_1_1_mouse}{Mouse}}
 \item 
-struct \mbox{\hyperlink{structec_1_1_mouse_drag_event}{Mouse\+Drag\+Event}}
-\item 
-struct \mbox{\hyperlink{structec_1_1_mouse_enter_event}{Mouse\+Enter\+Event}}
-\item 
-struct \mbox{\hyperlink{structec_1_1_mouse_move_event}{Mouse\+Move\+Event}}
-\item 
-struct \mbox{\hyperlink{structec_1_1_mouse_scroll_event}{Mouse\+Scroll\+Event}}
+struct \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}}
 \item 
 class \mbox{\hyperlink{classec_1_1_node}{Node}}
 \item 
 class \mbox{\hyperlink{classec_1_1_rectangle_mesh}{Rectangle\+Mesh}}
 \item 
 class \mbox{\hyperlink{classec_1_1_renderer}{Renderer}}
-\item 
-struct \mbox{\hyperlink{structec_1_1_resize_event}{Resize\+Event}}
 \item 
 class \mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}}
 \item 
@@ -73,7 +84,9 @@ class \mbox{\hyperlink{classec_1_1_shader_manager}{Shader\+Manager}}
 \item 
 class \mbox{\hyperlink{classec_1_1_sphere_mesh}{Sphere\+Mesh}}
 \item 
-struct \mbox{\hyperlink{structec_1_1_text_event}{Text\+Event}}
+class \mbox{\hyperlink{classec_1_1_spring_geometry}{Spring\+Geometry}}
+\item 
+class \mbox{\hyperlink{classec_1_1_static_geometry}{Static\+Geometry}}
 \item 
 class \mbox{\hyperlink{classec_1_1_texture}{Texture}}
 \item 
@@ -96,28 +109,46 @@ enum \mbox{\hyperlink{namespaceec_aeb1f95f6e5d6c17c5a67f68e44746ac4}{Camera\+Typ
 \mbox{\hyperlink{namespaceec_aeb1f95f6e5d6c17c5a67f68e44746ac4ac77848cc02fefd0c360ce733a4affd93}{Camera\+Type\+::perspective}}
  \}
 \item 
+enum \mbox{\hyperlink{namespaceec_a067d7854be2a4a8167831d52a7224e05}{Standard\+Cursor\+Type}} \+: int \{ \newline
+\mbox{\hyperlink{namespaceec_a067d7854be2a4a8167831d52a7224e05a9022a153e6190f10d9b57aa4232b8aea}{Standard\+Cursor\+Type\+::arrow}} = G\+L\+F\+W\+\_\+\+A\+R\+R\+O\+W\+\_\+\+C\+U\+R\+S\+OR, 
+\mbox{\hyperlink{namespaceec_a067d7854be2a4a8167831d52a7224e05a67d5a92fabc2cc76f7cc53a8d1a0f722}{Standard\+Cursor\+Type\+::ibeam}} = G\+L\+F\+W\+\_\+\+I\+B\+E\+A\+M\+\_\+\+C\+U\+R\+S\+OR, 
+\mbox{\hyperlink{namespaceec_a067d7854be2a4a8167831d52a7224e05aad90324c60706e26f566f84a1b1f55b0}{Standard\+Cursor\+Type\+::crosshair}} = G\+L\+F\+W\+\_\+\+C\+R\+O\+S\+S\+H\+A\+I\+R\+\_\+\+C\+U\+R\+S\+OR, 
+\mbox{\hyperlink{namespaceec_a067d7854be2a4a8167831d52a7224e05a573ce5969e9884d49d4fab77b09a306a}{Standard\+Cursor\+Type\+::hand}} = G\+L\+F\+W\+\_\+\+H\+A\+N\+D\+\_\+\+C\+U\+R\+S\+OR, 
+\newline
+\mbox{\hyperlink{namespaceec_a067d7854be2a4a8167831d52a7224e05ac52fc6f9dd9fcab00272edb9adffa5ea}{Standard\+Cursor\+Type\+::horizontal\+\_\+resize}} = G\+L\+F\+W\+\_\+\+H\+R\+E\+S\+I\+Z\+E\+\_\+\+C\+U\+R\+S\+OR, 
+\mbox{\hyperlink{namespaceec_a067d7854be2a4a8167831d52a7224e05a83bd12bee4ee624a3dc5476616b425e9}{Standard\+Cursor\+Type\+::vertical\+\_\+resize}} = G\+L\+F\+W\+\_\+\+V\+R\+E\+S\+I\+Z\+E\+\_\+\+C\+U\+R\+S\+OR
+ \}
+\item 
 enum \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964}{Input\+Type}} \+: unsigned char \{ \newline
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a03f85558f24cc469dac5df2fdc8fd117}{Input\+Type\+::mouse\+\_\+move}} = 0, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a0442427b92526e865f90827173e346a0}{Input\+Type\+::mouse\+\_\+drag}}, 
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a6fda8ddfe16d2314d571fd69f5d5e9ff}{Input\+Type\+::mouse\+\_\+scroll}}, 
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a41bc07e96e66c3decc6bcb84741efbd2}{Input\+Type\+::mouse\+\_\+enter}}, 
-\newline
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a88ad28b301ac29cf34aa69a9ff8dd4c8}{Input\+Type\+::mouse\+\_\+left}}, 
+\newline
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a8285417800ef72bf8102466fe9e71cff}{Input\+Type\+::mouse\+\_\+button\+\_\+pressed}}, 
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964aacdcff0ecfa7718eae6d7a9cb79f060d}{Input\+Type\+::mouse\+\_\+button\+\_\+released}}, 
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a2ed69833bf8cb33c80eaf0daa892400e}{Input\+Type\+::joystick}}, 
-\newline
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964ae394504187ed264fde32ad8f24ad7fba}{Input\+Type\+::key\+\_\+pressed}}, 
+\newline
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a54b6fde34ab4a8893fdd008d95331436}{Input\+Type\+::key\+\_\+released}}, 
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a1cb251ec0d568de6a929b520c4aed8d1}{Input\+Type\+::text}}, 
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a6e9d25362c485bc3c90c818dfac5dc49}{Input\+Type\+::drop}}, 
-\newline
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964adc3d3b1a336fbbd51585e31c95f45c83}{Input\+Type\+::resize}}, 
+\newline
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964ac3e76686badae4b6d625c39e41b23521}{Input\+Type\+::lost\+\_\+focus}}, 
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a4a46fc9d3e3456efe6a3980f2f3fbcc0}{Input\+Type\+::gained\+\_\+focus}}, 
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a349e686330723975502e9ef4f939a5ac}{Input\+Type\+::closed}}, 
-\newline
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964ae2942a04780e223b215eb8b663cf5353}{Input\+Type\+::count}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719}{Display\+Orientation}} \{ \newline
+\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719a138734ec961f603af1c8233366d1ec6d}{Display\+Orientation\+::rotated\+\_\+0}}, 
+\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719aec349ea1d66d24d897e8216bab84c85f}{Display\+Orientation\+::rotated\+\_\+90}}, 
+\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719ae84f3f92048f8219a04b51d77b6c2d15}{Display\+Orientation\+::rotated\+\_\+180}}, 
+\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719adab7f6e1e1c34743edbe7724bdfeaac9}{Display\+Orientation\+::rotated\+\_\+270}}, 
+\newline
+\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719a44eab28cf52a20d532ede6171589aab4}{Display\+Orientation\+::face\+\_\+up}}, 
+\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719ab6e43090c35d607589e26c65aa3423a0}{Display\+Orientation\+::face\+\_\+down}}
  \}
 \item 
 enum \mbox{\hyperlink{namespaceec_ae4420ccd0f79418a5ce075e43909289f}{Resource\+Type}} \{ \mbox{\hyperlink{namespaceec_ae4420ccd0f79418a5ce075e43909289faeec34d804c9ce6c89cff596be555e6a4}{Resource\+Type\+::material}}, 
@@ -129,6 +160,8 @@ enum \mbox{\hyperlink{namespaceec_ae4420ccd0f79418a5ce075e43909289f}{Resource\+T
 
 
 \subsection{Detailed Description}
+Input\+Observables inform Input\+Listeners about Input\+Events
+
 A scene enables an easy switching of root nodes It is possible to define an own scene controller, to influence a scene through user input.
 
 A \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} is able to render a scene with its underlying scene graph.
@@ -152,6 +185,38 @@ perspective&\\
 \hline
 
 \end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceec_a1492d2e603a780e281848af6a4bad719}\label{namespaceec_a1492d2e603a780e281848af6a4bad719}} 
+\index{ec@{ec}!Display\+Orientation@{Display\+Orientation}}
+\index{Display\+Orientation@{Display\+Orientation}!ec@{ec}}
+\subsubsection{\texorpdfstring{Display\+Orientation}{DisplayOrientation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719}{ec\+::\+Display\+Orientation}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rotated\+\_\+0@{rotated\+\_\+0}!ec@{ec}}\index{ec@{ec}!rotated\+\_\+0@{rotated\+\_\+0}}}\mbox{\Hypertarget{namespaceec_a1492d2e603a780e281848af6a4bad719a138734ec961f603af1c8233366d1ec6d}\label{namespaceec_a1492d2e603a780e281848af6a4bad719a138734ec961f603af1c8233366d1ec6d}} 
+rotated\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rotated\+\_\+90@{rotated\+\_\+90}!ec@{ec}}\index{ec@{ec}!rotated\+\_\+90@{rotated\+\_\+90}}}\mbox{\Hypertarget{namespaceec_a1492d2e603a780e281848af6a4bad719aec349ea1d66d24d897e8216bab84c85f}\label{namespaceec_a1492d2e603a780e281848af6a4bad719aec349ea1d66d24d897e8216bab84c85f}} 
+rotated\+\_\+90&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rotated\+\_\+180@{rotated\+\_\+180}!ec@{ec}}\index{ec@{ec}!rotated\+\_\+180@{rotated\+\_\+180}}}\mbox{\Hypertarget{namespaceec_a1492d2e603a780e281848af6a4bad719ae84f3f92048f8219a04b51d77b6c2d15}\label{namespaceec_a1492d2e603a780e281848af6a4bad719ae84f3f92048f8219a04b51d77b6c2d15}} 
+rotated\+\_\+180&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rotated\+\_\+270@{rotated\+\_\+270}!ec@{ec}}\index{ec@{ec}!rotated\+\_\+270@{rotated\+\_\+270}}}\mbox{\Hypertarget{namespaceec_a1492d2e603a780e281848af6a4bad719adab7f6e1e1c34743edbe7724bdfeaac9}\label{namespaceec_a1492d2e603a780e281848af6a4bad719adab7f6e1e1c34743edbe7724bdfeaac9}} 
+rotated\+\_\+270&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{face\+\_\+up@{face\+\_\+up}!ec@{ec}}\index{ec@{ec}!face\+\_\+up@{face\+\_\+up}}}\mbox{\Hypertarget{namespaceec_a1492d2e603a780e281848af6a4bad719a44eab28cf52a20d532ede6171589aab4}\label{namespaceec_a1492d2e603a780e281848af6a4bad719a44eab28cf52a20d532ede6171589aab4}} 
+face\+\_\+up&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{face\+\_\+down@{face\+\_\+down}!ec@{ec}}\index{ec@{ec}!face\+\_\+down@{face\+\_\+down}}}\mbox{\Hypertarget{namespaceec_a1492d2e603a780e281848af6a4bad719ab6e43090c35d607589e26c65aa3423a0}\label{namespaceec_a1492d2e603a780e281848af6a4bad719ab6e43090c35d607589e26c65aa3423a0}} 
+face\+\_\+down&\\
+\hline
+
+\end{DoxyEnumFields}
 \mbox{\Hypertarget{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964}\label{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964}} 
 \index{ec@{ec}!Input\+Type@{Input\+Type}}
 \index{Input\+Type@{Input\+Type}!ec@{ec}}
@@ -161,10 +226,6 @@ perspective&\\
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{mouse\+\_\+move@{mouse\+\_\+move}!ec@{ec}}\index{ec@{ec}!mouse\+\_\+move@{mouse\+\_\+move}}}\mbox{\Hypertarget{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a03f85558f24cc469dac5df2fdc8fd117}\label{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a03f85558f24cc469dac5df2fdc8fd117}} 
 mouse\+\_\+move&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{mouse\+\_\+drag@{mouse\+\_\+drag}!ec@{ec}}\index{ec@{ec}!mouse\+\_\+drag@{mouse\+\_\+drag}}}\mbox{\Hypertarget{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a0442427b92526e865f90827173e346a0}\label{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a0442427b92526e865f90827173e346a0}} 
-mouse\+\_\+drag&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{mouse\+\_\+scroll@{mouse\+\_\+scroll}!ec@{ec}}\index{ec@{ec}!mouse\+\_\+scroll@{mouse\+\_\+scroll}}}\mbox{\Hypertarget{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a6fda8ddfe16d2314d571fd69f5d5e9ff}\label{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a6fda8ddfe16d2314d571fd69f5d5e9ff}} 
@@ -249,6 +310,38 @@ geometry&\\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{count@{count}!ec@{ec}}\index{ec@{ec}!count@{count}}}\mbox{\Hypertarget{namespaceec_ae4420ccd0f79418a5ce075e43909289fae2942a04780e223b215eb8b663cf5353}\label{namespaceec_ae4420ccd0f79418a5ce075e43909289fae2942a04780e223b215eb8b663cf5353}} 
 count&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceec_a067d7854be2a4a8167831d52a7224e05}\label{namespaceec_a067d7854be2a4a8167831d52a7224e05}} 
+\index{ec@{ec}!Standard\+Cursor\+Type@{Standard\+Cursor\+Type}}
+\index{Standard\+Cursor\+Type@{Standard\+Cursor\+Type}!ec@{ec}}
+\subsubsection{\texorpdfstring{Standard\+Cursor\+Type}{StandardCursorType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceec_a067d7854be2a4a8167831d52a7224e05}{ec\+::\+Standard\+Cursor\+Type}} \+: int\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{arrow@{arrow}!ec@{ec}}\index{ec@{ec}!arrow@{arrow}}}\mbox{\Hypertarget{namespaceec_a067d7854be2a4a8167831d52a7224e05a9022a153e6190f10d9b57aa4232b8aea}\label{namespaceec_a067d7854be2a4a8167831d52a7224e05a9022a153e6190f10d9b57aa4232b8aea}} 
+arrow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ibeam@{ibeam}!ec@{ec}}\index{ec@{ec}!ibeam@{ibeam}}}\mbox{\Hypertarget{namespaceec_a067d7854be2a4a8167831d52a7224e05a67d5a92fabc2cc76f7cc53a8d1a0f722}\label{namespaceec_a067d7854be2a4a8167831d52a7224e05a67d5a92fabc2cc76f7cc53a8d1a0f722}} 
+ibeam&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{crosshair@{crosshair}!ec@{ec}}\index{ec@{ec}!crosshair@{crosshair}}}\mbox{\Hypertarget{namespaceec_a067d7854be2a4a8167831d52a7224e05aad90324c60706e26f566f84a1b1f55b0}\label{namespaceec_a067d7854be2a4a8167831d52a7224e05aad90324c60706e26f566f84a1b1f55b0}} 
+crosshair&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hand@{hand}!ec@{ec}}\index{ec@{ec}!hand@{hand}}}\mbox{\Hypertarget{namespaceec_a067d7854be2a4a8167831d52a7224e05a573ce5969e9884d49d4fab77b09a306a}\label{namespaceec_a067d7854be2a4a8167831d52a7224e05a573ce5969e9884d49d4fab77b09a306a}} 
+hand&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{horizontal\+\_\+resize@{horizontal\+\_\+resize}!ec@{ec}}\index{ec@{ec}!horizontal\+\_\+resize@{horizontal\+\_\+resize}}}\mbox{\Hypertarget{namespaceec_a067d7854be2a4a8167831d52a7224e05ac52fc6f9dd9fcab00272edb9adffa5ea}\label{namespaceec_a067d7854be2a4a8167831d52a7224e05ac52fc6f9dd9fcab00272edb9adffa5ea}} 
+horizontal\+\_\+resize&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{vertical\+\_\+resize@{vertical\+\_\+resize}!ec@{ec}}\index{ec@{ec}!vertical\+\_\+resize@{vertical\+\_\+resize}}}\mbox{\Hypertarget{namespaceec_a067d7854be2a4a8167831d52a7224e05a83bd12bee4ee624a3dc5476616b425e9}\label{namespaceec_a067d7854be2a4a8167831d52a7224e05a83bd12bee4ee624a3dc5476616b425e9}} 
+vertical\+\_\+resize&\\
 \hline
 
 \end{DoxyEnumFields}

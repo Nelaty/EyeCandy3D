@@ -1,3 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structec_1_1_joystick_event.html" title="ec::JoystickEvent" alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node1" href="$classec_1_1_geometry.html" title="ec::Geometry" alt="" coords="5,56,107,83"/>
+<area shape="rect" id="node2" href="$classec_1_1_dynamic_geometry.html" title="ec::DynamicGeometry" alt="" coords="155,5,307,32"/>
+<area shape="rect" id="node4" href="$classec_1_1_spring_geometry.html" title="ec::SpringGeometry" alt="" coords="161,56,300,83"/>
+<area shape="rect" id="node5" href="$classec_1_1_static_geometry.html" title="ec::StaticGeometry" alt="" coords="163,107,298,133"/>
+<area shape="rect" id="node3" href="$classec_1_1_dynamic_line_geometry.html" title="ec::DynamicLineGeometry" alt="" coords="355,5,531,32"/>
+<area shape="rect" id="node6" href="$classec_1_1_cube_mesh.html" title="ec::CubeMesh" alt="" coords="389,56,496,83"/>
+<area shape="rect" id="node7" href="$classec_1_1_rectangle_mesh.html" title="ec::RectangleMesh" alt="" coords="375,107,510,133"/>
+<area shape="rect" id="node8" href="$classec_1_1_sphere_mesh.html" title="ec::SphereMesh" alt="" coords="384,157,501,184"/>
 </map>

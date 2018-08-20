@@ -33,13 +33,13 @@ namespace ec
 		virtual void ProcessEvent(const InputEvent& event) override;
 
 		/* Routines for different input types */
-		void ProcessMouseMovement(const MouseMoveEvent& event);
-		void ProcessMouseButtonDown(const MouseButtonEvent& event);
-		void ProcessMouseButtonUp(const MouseButtonEvent& event);
+		void ProcessMouseMovement(const MouseEvent& event);
+		void ProcessMouseButtonDown(const MouseEvent& event);
+		void ProcessMouseButtonUp(const MouseEvent& event);
 
-		void ProcessKeyDownInput(const KeyEvent& event);
-		void ProcessKeyUpInput(const KeyEvent&  event);
-		void ProcessScrollInput(const MouseScrollEvent& event);
+		void ProcessKeyDownInput(const KeyboardEvent& event);
+		void ProcessKeyUpInput(const KeyboardEvent&  event);
+		void ProcessScrollInput(const MouseEvent& event);
 
 	private:
 		/* Initializes the camera controller */

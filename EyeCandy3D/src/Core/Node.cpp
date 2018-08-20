@@ -43,6 +43,11 @@ namespace ec
 		return m_globalMat;
 	}
 
+	const glm::vec3& Node::GetGlobalPosition()
+	{
+		return glm::vec3(m_globalMat[4]);
+	}
+
 	ec::Node* Node::GetParent()
 	{
 		return m_parent;

@@ -1,0 +1,182 @@
+\hypertarget{classec_1_1_static_geometry}{}\section{ec\+:\+:Static\+Geometry Class Reference}
+\label{classec_1_1_static_geometry}\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+
+
+{\ttfamily \#include $<$Static\+Geometry.\+h$>$}
+
+
+
+Inheritance diagram for ec\+:\+:Static\+Geometry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec_1_1_static_geometry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+:\+:Static\+Geometry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec_1_1_static_geometry__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classec_1_1_static_geometry_a47d1f09c1042762be9a9d4a492db2366}{$\sim$\+Static\+Geometry}} ()
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_static_geometry_a5e353f9962bb222229c59658097a129a}{Recalculate\+Normals}} ()
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_static_geometry_ae82f6d9fbad1e36e7bd97ed0aac94134}{Get\+V\+AO}} () const
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_static_geometry_a395f7523179090b1d42e176b40cc996b}{Get\+V\+BO}} () const
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_static_geometry_aafa07962d6488eb976146bc7d6351ec1}{Get\+E\+BO}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_static_geometry_a58dfe3cc7d91f3bcf99d83b038cf5f1d}{Begin\+Render}} () override
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_static_geometry_aa10330a07bc5ccd18d0d61c4c965bccd}{On\+Render}} () override
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_static_geometry_a2a66505344ad1a9eac31da2cf8171ea9}{End\+Render}} () override
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_static_geometry_a7b45ea19c8ca6662d90993f29648049d}{Setup\+Mesh}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_static_geometry_ad707c706ce148f5c9d6d8ddb2321807b}{Static\+Geometry}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_static_geometry_a7334854b00afa43e3ce02ce2e0600631}{m\+\_\+\+V\+AO}}
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_static_geometry_a14a581a93ea66ca97c79d554390fbd7b}{m\+\_\+\+V\+BO}}
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_static_geometry_a8cb4320862c6051fbef63b04ffb2333b}{m\+\_\+\+E\+BO}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structec_1_1_vertex}{Vertex}} $>$ \mbox{\hyperlink{classec_1_1_static_geometry_a7407d00e3c3a4157cc3a3d1ac5000631}{m\+\_\+vertices}}
+\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classec_1_1_static_geometry_a0a4c4722d3fe82b4b78dd23782c17862}{m\+\_\+indices}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_static_geometry_a47d1f09c1042762be9a9d4a492db2366}\label{classec_1_1_static_geometry_a47d1f09c1042762be9a9d4a492db2366}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!````~Static\+Geometry@{$\sim$\+Static\+Geometry}}
+\index{````~Static\+Geometry@{$\sim$\+Static\+Geometry}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{$\sim$\+Static\+Geometry()}{~StaticGeometry()}}
+{\footnotesize\ttfamily ec\+::\+Static\+Geometry\+::$\sim$\+Static\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_ad707c706ce148f5c9d6d8ddb2321807b}\label{classec_1_1_static_geometry_ad707c706ce148f5c9d6d8ddb2321807b}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!Static\+Geometry@{Static\+Geometry}}
+\index{Static\+Geometry@{Static\+Geometry}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{Static\+Geometry()}{StaticGeometry()}}
+{\footnotesize\ttfamily ec\+::\+Static\+Geometry\+::\+Static\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_static_geometry_a58dfe3cc7d91f3bcf99d83b038cf5f1d}\label{classec_1_1_static_geometry_a58dfe3cc7d91f3bcf99d83b038cf5f1d}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!Begin\+Render@{Begin\+Render}}
+\index{Begin\+Render@{Begin\+Render}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{Begin\+Render()}{BeginRender()}}
+{\footnotesize\ttfamily void ec\+::\+Static\+Geometry\+::\+Begin\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Called at the beginning of the rendering routine. 
+
+Implements \mbox{\hyperlink{classec_1_1_geometry_a184b4fdde8062c1dc0eb9e3393cc540f}{ec\+::\+Geometry}}.
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_a2a66505344ad1a9eac31da2cf8171ea9}\label{classec_1_1_static_geometry_a2a66505344ad1a9eac31da2cf8171ea9}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!End\+Render@{End\+Render}}
+\index{End\+Render@{End\+Render}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{End\+Render()}{EndRender()}}
+{\footnotesize\ttfamily void ec\+::\+Static\+Geometry\+::\+End\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Called at the end of the rendering routine. 
+
+Implements \mbox{\hyperlink{classec_1_1_geometry_a41ed9550a0d1746c55add3c3c0a38984}{ec\+::\+Geometry}}.
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_aafa07962d6488eb976146bc7d6351ec1}\label{classec_1_1_static_geometry_aafa07962d6488eb976146bc7d6351ec1}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!Get\+E\+BO@{Get\+E\+BO}}
+\index{Get\+E\+BO@{Get\+E\+BO}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+E\+B\+O()}{GetEBO()}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Static\+Geometry\+::\+Get\+E\+BO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_ae82f6d9fbad1e36e7bd97ed0aac94134}\label{classec_1_1_static_geometry_ae82f6d9fbad1e36e7bd97ed0aac94134}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!Get\+V\+AO@{Get\+V\+AO}}
+\index{Get\+V\+AO@{Get\+V\+AO}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+V\+A\+O()}{GetVAO()}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Static\+Geometry\+::\+Get\+V\+AO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_a395f7523179090b1d42e176b40cc996b}\label{classec_1_1_static_geometry_a395f7523179090b1d42e176b40cc996b}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!Get\+V\+BO@{Get\+V\+BO}}
+\index{Get\+V\+BO@{Get\+V\+BO}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+V\+B\+O()}{GetVBO()}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Static\+Geometry\+::\+Get\+V\+BO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_aa10330a07bc5ccd18d0d61c4c965bccd}\label{classec_1_1_static_geometry_aa10330a07bc5ccd18d0d61c4c965bccd}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!On\+Render@{On\+Render}}
+\index{On\+Render@{On\+Render}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{On\+Render()}{OnRender()}}
+{\footnotesize\ttfamily void ec\+::\+Static\+Geometry\+::\+On\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+The actual rendering of the object. 
+
+Implements \mbox{\hyperlink{classec_1_1_geometry_ae49d24667dca154cba707b0c219a8eb2}{ec\+::\+Geometry}}.
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_a5e353f9962bb222229c59658097a129a}\label{classec_1_1_static_geometry_a5e353f9962bb222229c59658097a129a}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!Recalculate\+Normals@{Recalculate\+Normals}}
+\index{Recalculate\+Normals@{Recalculate\+Normals}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{Recalculate\+Normals()}{RecalculateNormals()}}
+{\footnotesize\ttfamily void ec\+::\+Static\+Geometry\+::\+Recalculate\+Normals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_a7b45ea19c8ca6662d90993f29648049d}\label{classec_1_1_static_geometry_a7b45ea19c8ca6662d90993f29648049d}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!Setup\+Mesh@{Setup\+Mesh}}
+\index{Setup\+Mesh@{Setup\+Mesh}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{Setup\+Mesh()}{SetupMesh()}}
+{\footnotesize\ttfamily void ec\+::\+Static\+Geometry\+::\+Setup\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_static_geometry_a8cb4320862c6051fbef63b04ffb2333b}\label{classec_1_1_static_geometry_a8cb4320862c6051fbef63b04ffb2333b}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!m\+\_\+\+E\+BO@{m\+\_\+\+E\+BO}}
+\index{m\+\_\+\+E\+BO@{m\+\_\+\+E\+BO}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+\+E\+BO}{m\_EBO}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Static\+Geometry\+::m\+\_\+\+E\+BO\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_a0a4c4722d3fe82b4b78dd23782c17862}\label{classec_1_1_static_geometry_a0a4c4722d3fe82b4b78dd23782c17862}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!m\+\_\+indices@{m\+\_\+indices}}
+\index{m\+\_\+indices@{m\+\_\+indices}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+indices}{m\_indices}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned int$>$ ec\+::\+Static\+Geometry\+::m\+\_\+indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_a7334854b00afa43e3ce02ce2e0600631}\label{classec_1_1_static_geometry_a7334854b00afa43e3ce02ce2e0600631}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}}
+\index{m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+\+V\+AO}{m\_VAO}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Static\+Geometry\+::m\+\_\+\+V\+AO\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_a14a581a93ea66ca97c79d554390fbd7b}\label{classec_1_1_static_geometry_a14a581a93ea66ca97c79d554390fbd7b}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!m\+\_\+\+V\+BO@{m\+\_\+\+V\+BO}}
+\index{m\+\_\+\+V\+BO@{m\+\_\+\+V\+BO}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+\+V\+BO}{m\_VBO}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Static\+Geometry\+::m\+\_\+\+V\+BO\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_static_geometry_a7407d00e3c3a4157cc3a3d1ac5000631}\label{classec_1_1_static_geometry_a7407d00e3c3a4157cc3a3d1ac5000631}} 
+\index{ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}!m\+\_\+vertices@{m\+\_\+vertices}}
+\index{m\+\_\+vertices@{m\+\_\+vertices}!ec\+::\+Static\+Geometry@{ec\+::\+Static\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+vertices}{m\_vertices}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structec_1_1_vertex}{Vertex}}$>$ ec\+::\+Static\+Geometry\+::m\+\_\+vertices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_static_geometry_8h}{Static\+Geometry.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_static_geometry_8cpp}{Static\+Geometry.\+cpp}}\end{DoxyCompactItemize}

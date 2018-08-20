@@ -34,6 +34,13 @@ namespace ec
 		 */
 		const glm::mat4& GetGlobalMat() const;
 
+		/** 
+		 * Get the current global position
+		 * Global matrix has to be updated before calling this function!
+		 * If not, the position will be from the last frame.
+		 */
+		const glm::vec3& GetGlobalPosition();
+
 		/* Parent */
 		Node* GetParent();
 		void SetParent(Node* parent);

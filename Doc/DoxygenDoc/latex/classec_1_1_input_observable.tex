@@ -6,7 +6,8 @@
 
 
 
-Collaboration diagram for ec\+:\+:Input\+Observable\+:\nopagebreak
+Collaboration diagram for ec\+:\+:Input\+Observable\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -39,16 +40,22 @@ virtual void \mbox{\hyperlink{classec_1_1_input_observable_a65608ab3e937537a9058
 \item 
 virtual void \mbox{\hyperlink{classec_1_1_input_observable_a2c3af1f58103d41e21bd95fed9131c5b}{Inform\+All}} ()
 \item 
-void \mbox{\hyperlink{classec_1_1_input_observable_a4794f86124d9212e4055e8210c301cba}{Set\+Last\+Mouse\+Button\+Event}} (const \mbox{\hyperlink{structec_1_1_mouse_button_event}{Mouse\+Button\+Event}} \&event)
+void \mbox{\hyperlink{classec_1_1_input_observable_a317a5d73fe50080167524b729ecf4996}{Set\+Last\+Prev\+Mouse\+Event}} (const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&event)
 \item 
-const \mbox{\hyperlink{structec_1_1_mouse_button_event}{Mouse\+Button\+Event}} \& \mbox{\hyperlink{classec_1_1_input_observable_a0bcd5b8b0dcc5c4eb7da52a9b26daa84}{Get\+Last\+Mouse\+Button\+Event}} () const
+const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \& \mbox{\hyperlink{classec_1_1_input_observable_a6eb1660661290184fc1fe522f6b6651e}{Get\+Prev\+Mouse\+Event}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_input_observable_a6884c5c8175136fa379086a0abc1d751}{Set\+Last\+Mouse\+Position}} (const glm\+::vec2 \&position)
+void \mbox{\hyperlink{classec_1_1_input_observable_a7a45c985f2d778f6dfcd4708d6261395}{Set\+Prev\+Keyboard\+Event}} (const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \&event)
 \item 
-const glm\+::vec2 \mbox{\hyperlink{classec_1_1_input_observable_a1c76c19bfc7c610090ca4f933506d45d}{Get\+Last\+Mouse\+Position}} () const
+const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \& \mbox{\hyperlink{classec_1_1_input_observable_a25274eaa64334ec3d0c00dfb55f794c2}{Get\+Prev\+Keyboard\+Event}} () const
+\item 
+void \mbox{\hyperlink{classec_1_1_input_observable_ad4774821c9e54a31409b575b54639326}{Set\+Prev\+Display\+Event}} (const \mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}} \&event)
+\item 
+const \mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}} \& \mbox{\hyperlink{classec_1_1_input_observable_af18dbc3d7fe632683176b751d901f5d3}{Get\+Prev\+Display\+Event}} () const
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \mbox{\hyperlink{classec_1_1_input_observable_a99d0fa147a66bf09c7bedaa3d556cee2}{Prepare\+Event}} (const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&event)
 \item 
 virtual void \mbox{\hyperlink{classec_1_1_input_observable_a5af16f48a5bdca46229a6b5bc7769e2d}{Clear\+Events}} ()
 \end{DoxyCompactItemize}
@@ -59,9 +66,11 @@ virtual void \mbox{\hyperlink{classec_1_1_input_observable_a5af16f48a5bdca46229a
 \item 
 \mbox{\hyperlink{classec_1_1_input_observable_a9b63c8acbcbfc0f99d2964493ac52925}{Events\+\_\+T}} \mbox{\hyperlink{classec_1_1_input_observable_af83e9f99bec60cdce82b129fa457c6ab}{m\+\_\+events}}
 \item 
-\mbox{\hyperlink{structec_1_1_mouse_button_event}{Mouse\+Button\+Event}} \mbox{\hyperlink{classec_1_1_input_observable_adaecb6c67b919793de0a178810b54f96}{m\+\_\+last\+Mouse\+Button\+Event}}
+\mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \mbox{\hyperlink{classec_1_1_input_observable_a99e8c1484fe87503096e681d8bd3b75f}{m\+\_\+prev\+Mouse\+Event}}
 \item 
-glm\+::vec2 \mbox{\hyperlink{classec_1_1_input_observable_ae6fefe31977d17fd0ef4ab394433b08d}{m\+\_\+last\+Mouse\+Position}}
+\mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \mbox{\hyperlink{classec_1_1_input_observable_acf14cdeb5a394fbd296ff3dfb391c14f}{m\+\_\+prev\+Keyboard\+Event}}
+\item 
+\mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}} \mbox{\hyperlink{classec_1_1_input_observable_ae480593ec25d98ea00b0b7a9aa6cba32}{m\+\_\+prev\+Display\+Event}}
 \end{DoxyCompactItemize}
 
 
@@ -108,23 +117,35 @@ glm\+::vec2 \mbox{\hyperlink{classec_1_1_input_observable_ae6fefe31977d17fd0ef4a
 \subsubsection{\texorpdfstring{Contains()}{Contains()}}
 {\footnotesize\ttfamily bool ec\+::\+Input\+Observable\+::\+Contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$}]{input\+Listener }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_a0bcd5b8b0dcc5c4eb7da52a9b26daa84}\label{classec_1_1_input_observable_a0bcd5b8b0dcc5c4eb7da52a9b26daa84}} 
-\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Get\+Last\+Mouse\+Button\+Event@{Get\+Last\+Mouse\+Button\+Event}}
-\index{Get\+Last\+Mouse\+Button\+Event@{Get\+Last\+Mouse\+Button\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
-\subsubsection{\texorpdfstring{Get\+Last\+Mouse\+Button\+Event()}{GetLastMouseButtonEvent()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{structec_1_1_mouse_button_event}{ec\+::\+Mouse\+Button\+Event}} \& ec\+::\+Input\+Observable\+::\+Get\+Last\+Mouse\+Button\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+Check if this observer contains a specific controller \mbox{\Hypertarget{classec_1_1_input_observable_af18dbc3d7fe632683176b751d901f5d3}\label{classec_1_1_input_observable_af18dbc3d7fe632683176b751d901f5d3}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Get\+Prev\+Display\+Event@{Get\+Prev\+Display\+Event}}
+\index{Get\+Prev\+Display\+Event@{Get\+Prev\+Display\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{Get\+Prev\+Display\+Event()}{GetPrevDisplayEvent()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structec_1_1_display_event}{ec\+::\+Display\+Event}} \& ec\+::\+Input\+Observable\+::\+Get\+Prev\+Display\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_a1c76c19bfc7c610090ca4f933506d45d}\label{classec_1_1_input_observable_a1c76c19bfc7c610090ca4f933506d45d}} 
-\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Get\+Last\+Mouse\+Position@{Get\+Last\+Mouse\+Position}}
-\index{Get\+Last\+Mouse\+Position@{Get\+Last\+Mouse\+Position}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
-\subsubsection{\texorpdfstring{Get\+Last\+Mouse\+Position()}{GetLastMousePosition()}}
-{\footnotesize\ttfamily const glm\+::vec2 ec\+::\+Input\+Observable\+::\+Get\+Last\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+Get the previous keyboard event \mbox{\Hypertarget{classec_1_1_input_observable_a25274eaa64334ec3d0c00dfb55f794c2}\label{classec_1_1_input_observable_a25274eaa64334ec3d0c00dfb55f794c2}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Get\+Prev\+Keyboard\+Event@{Get\+Prev\+Keyboard\+Event}}
+\index{Get\+Prev\+Keyboard\+Event@{Get\+Prev\+Keyboard\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{Get\+Prev\+Keyboard\+Event()}{GetPrevKeyboardEvent()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structec_1_1_keyboard_event}{ec\+::\+Keyboard\+Event}} \& ec\+::\+Input\+Observable\+::\+Get\+Prev\+Keyboard\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_a2c3af1f58103d41e21bd95fed9131c5b}\label{classec_1_1_input_observable_a2c3af1f58103d41e21bd95fed9131c5b}} 
+Get the previous keyboard event \mbox{\Hypertarget{classec_1_1_input_observable_a6eb1660661290184fc1fe522f6b6651e}\label{classec_1_1_input_observable_a6eb1660661290184fc1fe522f6b6651e}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Get\+Prev\+Mouse\+Event@{Get\+Prev\+Mouse\+Event}}
+\index{Get\+Prev\+Mouse\+Event@{Get\+Prev\+Mouse\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{Get\+Prev\+Mouse\+Event()}{GetPrevMouseEvent()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structec_1_1_mouse_event}{ec\+::\+Mouse\+Event}} \& ec\+::\+Input\+Observable\+::\+Get\+Prev\+Mouse\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the previous mouse event \mbox{\Hypertarget{classec_1_1_input_observable_a2c3af1f58103d41e21bd95fed9131c5b}\label{classec_1_1_input_observable_a2c3af1f58103d41e21bd95fed9131c5b}} 
 \index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Inform\+All@{Inform\+All}}
 \index{Inform\+All@{Inform\+All}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
 \subsubsection{\texorpdfstring{Inform\+All()}{InformAll()}}
 {\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::\+Inform\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Inform all input listeners about all accumulated events \mbox{\Hypertarget{classec_1_1_input_observable_a99d0fa147a66bf09c7bedaa3d556cee2}\label{classec_1_1_input_observable_a99d0fa147a66bf09c7bedaa3d556cee2}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Prepare\+Event@{Prepare\+Event}}
+\index{Prepare\+Event@{Prepare\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{Prepare\+Event()}{PrepareEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_input_event}{ec\+::\+Input\+Event}} ec\+::\+Input\+Observable\+::\+Prepare\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classec_1_1_input_observable_aa043e1a78987c55e03acca7caf13820f}\label{classec_1_1_input_observable_aa043e1a78987c55e03acca7caf13820f}} 
 \index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Receive\+Event@{Receive\+Event}}
@@ -138,25 +159,31 @@ glm\+::vec2 \mbox{\hyperlink{classec_1_1_input_observable_ae6fefe31977d17fd0ef4a
 \subsubsection{\texorpdfstring{Register\+Input\+Listener()}{RegisterInputListener()}}
 {\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::\+Register\+Input\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$}]{input\+Listener }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_a4794f86124d9212e4055e8210c301cba}\label{classec_1_1_input_observable_a4794f86124d9212e4055e8210c301cba}} 
-\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Set\+Last\+Mouse\+Button\+Event@{Set\+Last\+Mouse\+Button\+Event}}
-\index{Set\+Last\+Mouse\+Button\+Event@{Set\+Last\+Mouse\+Button\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
-\subsubsection{\texorpdfstring{Set\+Last\+Mouse\+Button\+Event()}{SetLastMouseButtonEvent()}}
-{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::\+Set\+Last\+Mouse\+Button\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_button_event}{Mouse\+Button\+Event}} \&}]{event }\end{DoxyParamCaption})}
+Register a new or remove an old listener \mbox{\Hypertarget{classec_1_1_input_observable_a317a5d73fe50080167524b729ecf4996}\label{classec_1_1_input_observable_a317a5d73fe50080167524b729ecf4996}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Set\+Last\+Prev\+Mouse\+Event@{Set\+Last\+Prev\+Mouse\+Event}}
+\index{Set\+Last\+Prev\+Mouse\+Event@{Set\+Last\+Prev\+Mouse\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{Set\+Last\+Prev\+Mouse\+Event()}{SetLastPrevMouseEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::\+Set\+Last\+Prev\+Mouse\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_a6884c5c8175136fa379086a0abc1d751}\label{classec_1_1_input_observable_a6884c5c8175136fa379086a0abc1d751}} 
-\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Set\+Last\+Mouse\+Position@{Set\+Last\+Mouse\+Position}}
-\index{Set\+Last\+Mouse\+Position@{Set\+Last\+Mouse\+Position}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
-\subsubsection{\texorpdfstring{Set\+Last\+Mouse\+Position()}{SetLastMousePosition()}}
-{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::\+Set\+Last\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const glm\+::vec2 \&}]{position }\end{DoxyParamCaption})}
+Set the previous mouse event \mbox{\Hypertarget{classec_1_1_input_observable_ad4774821c9e54a31409b575b54639326}\label{classec_1_1_input_observable_ad4774821c9e54a31409b575b54639326}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Set\+Prev\+Display\+Event@{Set\+Prev\+Display\+Event}}
+\index{Set\+Prev\+Display\+Event@{Set\+Prev\+Display\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{Set\+Prev\+Display\+Event()}{SetPrevDisplayEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::\+Set\+Prev\+Display\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}} \&}]{event }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_a65608ab3e937537a9058acfa9b7e9fde}\label{classec_1_1_input_observable_a65608ab3e937537a9058acfa9b7e9fde}} 
+Set the previous keyboard event \mbox{\Hypertarget{classec_1_1_input_observable_a7a45c985f2d778f6dfcd4708d6261395}\label{classec_1_1_input_observable_a7a45c985f2d778f6dfcd4708d6261395}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Set\+Prev\+Keyboard\+Event@{Set\+Prev\+Keyboard\+Event}}
+\index{Set\+Prev\+Keyboard\+Event@{Set\+Prev\+Keyboard\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{Set\+Prev\+Keyboard\+Event()}{SetPrevKeyboardEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::\+Set\+Prev\+Keyboard\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+Set the previous keyboard event \mbox{\Hypertarget{classec_1_1_input_observable_a65608ab3e937537a9058acfa9b7e9fde}\label{classec_1_1_input_observable_a65608ab3e937537a9058acfa9b7e9fde}} 
 \index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Unregister\+All\+Input\+Listeners@{Unregister\+All\+Input\+Listeners}}
 \index{Unregister\+All\+Input\+Listeners@{Unregister\+All\+Input\+Listeners}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
 \subsubsection{\texorpdfstring{Unregister\+All\+Input\+Listeners()}{UnregisterAllInputListeners()}}
 {\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::\+Unregister\+All\+Input\+Listeners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_a06647b619d83edc42f33b23b4db80127}\label{classec_1_1_input_observable_a06647b619d83edc42f33b23b4db80127}} 
+Clears the input listener list \mbox{\Hypertarget{classec_1_1_input_observable_a06647b619d83edc42f33b23b4db80127}\label{classec_1_1_input_observable_a06647b619d83edc42f33b23b4db80127}} 
 \index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Unregister\+Input\+Listener@{Unregister\+Input\+Listener}}
 \index{Unregister\+Input\+Listener@{Unregister\+Input\+Listener}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
 \subsubsection{\texorpdfstring{Unregister\+Input\+Listener()}{UnregisterInputListener()}}
@@ -177,19 +204,25 @@ glm\+::vec2 \mbox{\hyperlink{classec_1_1_input_observable_ae6fefe31977d17fd0ef4a
 \subsubsection{\texorpdfstring{m\+\_\+input\+Listeners}{m\_inputListeners}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_observable_a99717b2918621597db89d9ede34ddded}{Input\+Listeners\+\_\+T}} ec\+::\+Input\+Observable\+::m\+\_\+input\+Listeners\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_adaecb6c67b919793de0a178810b54f96}\label{classec_1_1_input_observable_adaecb6c67b919793de0a178810b54f96}} 
-\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!m\+\_\+last\+Mouse\+Button\+Event@{m\+\_\+last\+Mouse\+Button\+Event}}
-\index{m\+\_\+last\+Mouse\+Button\+Event@{m\+\_\+last\+Mouse\+Button\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
-\subsubsection{\texorpdfstring{m\+\_\+last\+Mouse\+Button\+Event}{m\_lastMouseButtonEvent}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_mouse_button_event}{Mouse\+Button\+Event}} ec\+::\+Input\+Observable\+::m\+\_\+last\+Mouse\+Button\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classec_1_1_input_observable_ae480593ec25d98ea00b0b7a9aa6cba32}\label{classec_1_1_input_observable_ae480593ec25d98ea00b0b7a9aa6cba32}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!m\+\_\+prev\+Display\+Event@{m\+\_\+prev\+Display\+Event}}
+\index{m\+\_\+prev\+Display\+Event@{m\+\_\+prev\+Display\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{m\+\_\+prev\+Display\+Event}{m\_prevDisplayEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}} ec\+::\+Input\+Observable\+::m\+\_\+prev\+Display\+Event\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_ae6fefe31977d17fd0ef4ab394433b08d}\label{classec_1_1_input_observable_ae6fefe31977d17fd0ef4ab394433b08d}} 
-\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!m\+\_\+last\+Mouse\+Position@{m\+\_\+last\+Mouse\+Position}}
-\index{m\+\_\+last\+Mouse\+Position@{m\+\_\+last\+Mouse\+Position}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
-\subsubsection{\texorpdfstring{m\+\_\+last\+Mouse\+Position}{m\_lastMousePosition}}
-{\footnotesize\ttfamily glm\+::vec2 ec\+::\+Input\+Observable\+::m\+\_\+last\+Mouse\+Position\hspace{0.3cm}{\ttfamily [protected]}}
+Previous display event \mbox{\Hypertarget{classec_1_1_input_observable_acf14cdeb5a394fbd296ff3dfb391c14f}\label{classec_1_1_input_observable_acf14cdeb5a394fbd296ff3dfb391c14f}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!m\+\_\+prev\+Keyboard\+Event@{m\+\_\+prev\+Keyboard\+Event}}
+\index{m\+\_\+prev\+Keyboard\+Event@{m\+\_\+prev\+Keyboard\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{m\+\_\+prev\+Keyboard\+Event}{m\_prevKeyboardEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} ec\+::\+Input\+Observable\+::m\+\_\+prev\+Keyboard\+Event\hspace{0.3cm}{\ttfamily [protected]}}
 
+Previous keyboard event \mbox{\Hypertarget{classec_1_1_input_observable_a99e8c1484fe87503096e681d8bd3b75f}\label{classec_1_1_input_observable_a99e8c1484fe87503096e681d8bd3b75f}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!m\+\_\+prev\+Mouse\+Event@{m\+\_\+prev\+Mouse\+Event}}
+\index{m\+\_\+prev\+Mouse\+Event@{m\+\_\+prev\+Mouse\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{m\+\_\+prev\+Mouse\+Event}{m\_prevMouseEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} ec\+::\+Input\+Observable\+::m\+\_\+prev\+Mouse\+Event\hspace{0.3cm}{\ttfamily [protected]}}
 
+Previous mouse event 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

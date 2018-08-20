@@ -1,0 +1,23 @@
+# CMake generation dependency list for this directory.
+D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/External/Agui-master/CMakeLists.txt
+D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/External/Agui-master/build/CMakeFiles/3.12.0/CMakeCCompiler.cmake
+D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/External/Agui-master/build/CMakeFiles/3.12.0/CMakeCXXCompiler.cmake
+D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/External/Agui-master/build/CMakeFiles/3.12.0/CMakeRCCompiler.cmake
+D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/External/Agui-master/build/CMakeFiles/3.12.0/CMakeSystem.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/CMakeCInformation.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/CMakeCXXInformation.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/CMakeCommonLanguageInclude.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/CMakeGenericSystem.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/CMakeInitializeConfigs.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/CMakeLanguageInformation.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/CMakeRCInformation.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/CMakeSystemSpecificInformation.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/CMakeSystemSpecificInitialize.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/Compiler/MSVC-C.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/Compiler/MSVC-CXX.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/Platform/Windows-MSVC-C.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/Platform/Windows-MSVC-CXX.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/Platform/Windows-MSVC.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/Platform/Windows.cmake
+D:/Programs/CMake/share/cmake-3.12/Modules/Platform/WindowsPaths.cmake

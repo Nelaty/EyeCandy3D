@@ -23,8 +23,8 @@ namespace ec
 		void AddCameraFront(Camera* camera);
 		/** 
 		 * Add a given camera with a given priority. If there already
-		 * is a (multiple) camera[s] with the same priority registered,
-		 * put the given camera before those.
+		 * is a camera with the same priority registered,
+		 * put the given camera before this.
 		 */
 		void AddCamera(Camera* camera, unsigned int priority);
 		/**

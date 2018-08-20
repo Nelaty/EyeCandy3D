@@ -10,7 +10,6 @@ namespace ec
 	enum class InputType : unsigned char
 	{
 		mouse_move = 0,
-		mouse_drag,
 		mouse_scroll,
 		mouse_enter,
 		mouse_left,
@@ -32,32 +31,54 @@ namespace ec
 		count // Keep at end! - Number of event types
 	};
 
-	struct MouseMoveEvent
+	enum class DisplayOrientation
 	{
-		MouseMoveEvent(GLFWwindow* window, const float x, const float y);
-		~MouseMoveEvent();
-
-		void Print() const;
-
-		GLFWwindow* m_window;
-		float m_x;
-		float m_y;
+		rotated_0,
+		rotated_90,
+		rotated_180,
+		rotated_270,
+		face_up,
+		face_down
 	};
 
-	struct MouseDragEvent
+	struct DisplayEvent
 	{
-		MouseDragEvent(GLFWwindow* window, const float offsetX, const float offsetY, const float x, const float y, const int button, const int modifier);
-		~MouseDragEvent();
+		explicit DisplayEvent();
+		explicit DisplayEvent(GLFWwindow* window,
+							  int x, int y,
+							  int width, int height,
+							  DisplayOrientation orientation = DisplayOrientation::rotated_0);
 
 		void Print() const;
 
 		GLFWwindow* m_window;
-		float m_x;
-		float m_y;
-		float m_offsetX;
-		float m_offsetY;
-		int m_button;
-		int m_modifier;
+
+		int m_x;
+		int m_y;
+		int m_width;
+		int m_height;
+		DisplayOrientation m_orientation;
+	};
+
+	struct KeyboardEvent
+	{
+		explicit KeyboardEvent();
+		explicit KeyboardEvent(GLFWwindow* window,
+							   int key,
+							   int scancode,
+							   unsigned int unicode,
+							   int mods,
+							   bool repeat);
+		~KeyboardEvent();
+
+		void Print() const;
+
+		GLFWwindow* m_window;
+		int m_key;
+		int m_scancode;
+		unsigned int m_unicode;
+		int m_mods;
+		bool m_repeat;
 
 		bool ShiftPressed() const;
 		bool ControlPressed() const;
@@ -65,40 +86,37 @@ namespace ec
 		bool SuperPressed() const;
 	};
 
-	struct MouseScrollEvent
+	struct MouseEvent
 	{
-		MouseScrollEvent(GLFWwindow* window, const float offsetX, const float offsetY);
-		~MouseScrollEvent();
+		explicit MouseEvent();
+		explicit MouseEvent(GLFWwindow* window,
+							int x, int y, int z, int w,
+							int dx, int dy, int dz, int dw,
+							unsigned int button,
+							int modifier,
+							float pressure = 1.0f);
+		~MouseEvent();
 
 		void Print() const;
 
 		GLFWwindow* m_window;
-		float m_offsetX;
-		float m_offsetY;
-	};
+		int m_x; // primary x position
+		int m_y; // primary y position
+		int m_z; // mouse wheel position
+		int m_w; // (m_w, m_z) mouse wheel position if 2D mouse ball is used
 
-	struct MouseEnterEvent
-	{
-		MouseEnterEvent(GLFWwindow* window, const bool entered);
-		~MouseEnterEvent();
+		// Differences since last MouseEvent
+		int m_dx;
+		int m_dy;
+		int m_scrollX;
+		int m_scrollY;
 
-		void Print() const;
-
-		GLFWwindow* m_window;
-		bool m_entered;
-	};
-
-	struct MouseButtonEvent
-	{
-		MouseButtonEvent(GLFWwindow* window, const int button, const int mods, const bool pressed);
-		~MouseButtonEvent();
-
-		void Print() const;
-
-		GLFWwindow* m_window;
-		int m_button;
+		unsigned int m_button;
 		int m_mods;
-		bool m_pressed;
+
+		// For stylus: [0,1]
+		// For mouse: {0,1}
+		float m_pressure;
 
 		bool ShiftPressed() const;
 		bool ControlPressed() const;
@@ -108,7 +126,8 @@ namespace ec
 
 	struct JoystickEvent
 	{
-		JoystickEvent(GLFWwindow* window, const int joystick, const int event);
+		explicit JoystickEvent();
+		explicit JoystickEvent(GLFWwindow* window, const int joystick, const int event);
 		~JoystickEvent();
 
 		void Print() const;
@@ -118,121 +137,57 @@ namespace ec
 		int m_event;
 	};
 
-	struct KeyEvent
-	{
-		KeyEvent(GLFWwindow* window, const int key, const int scancode, const int mods, const bool pressed);
-		~KeyEvent();
-
-		void Print() const;
-
-		GLFWwindow* m_window;
-		int m_key;
-		int m_scancode;
-		int m_mods;
-		bool m_pressed;
-
-		bool ShiftPressed() const;
-		bool ControlPressed() const;
-		bool AltPressed() const;
-		bool SuperPressed() const;
-	};
-
-	struct TextEvent
-	{
-		TextEvent(GLFWwindow* window, const unsigned int codepoint, const int mods);
-		~TextEvent();
-
-		void Print() const;
-
-		GLFWwindow* m_window;
-		unsigned int m_codepoint;
-		int m_mods;
-
-		bool ShiftPressed() const;
-		bool ControlPressed() const;
-		bool AltPressed() const;
-		bool SuperPressed() const;
-	};
-
 	struct DropEvent
 	{
-		DropEvent(GLFWwindow* window, const int count, const char** paths);
+		explicit DropEvent();
+		explicit DropEvent(int x, int y,
+						   GLFWwindow* window, 
+						   const int count,
+						   const char** paths);
 		~DropEvent();
 
 		void Print() const;
 
 		GLFWwindow* m_window;
+		
+		// Mouse position
+		int m_x;
+		int m_y;
+
+		// Number of paths and the paths themselves
 		int m_count;
 		const char** m_paths;
 	};
 
-	struct ResizeEvent
-	{
-		ResizeEvent(GLFWwindow* window, const int width, const int height);
-		~ResizeEvent();
-
-		void Print() const;
-
-		GLFWwindow* m_window;
-		int m_width;
-		int m_height;
-	};
-
-	struct FocusEvent
-	{
-		FocusEvent(GLFWwindow* window, const bool focused);
-		~FocusEvent();
-
-		void Print() const;
-
-		GLFWwindow* m_window;
-		bool m_focused;
-	};
-
-	struct ClosedEvent
-	{
-		ClosedEvent(GLFWwindow* window);
-		~ClosedEvent();
-
-		void Print() const;
-
-		GLFWwindow* m_window;
-	};
-
-	/*
+	/**
 	* Group all input events to make transfer easy and save memory 
 	* by only holding the event, which is currently active
 	*/
 	struct InputEvent
 	{
+		explicit InputEvent();
 		explicit InputEvent(const InputType type);
 
-		/* Print the currently active event */
+		/** Print the currently active event */
 		void Print() const;
 
-		/* Tells which event is currently active */
+		/** Tells which event is currently active */
 		InputType m_type;
+
+		/** */
+		double m_timestamp;
 
 		union EventData
 		{
 			EventData(){}
 			~EventData(){}
 
-			MouseMoveEvent m_move;
-			MouseDragEvent m_drag;
-			MouseScrollEvent m_scroll;
-			MouseEnterEvent m_entered;
-			MouseButtonEvent m_mouse;
-
+			DisplayEvent m_display;
+			KeyboardEvent m_keyboard;
+			MouseEvent m_mouse;
 			JoystickEvent m_joystick;
-
-			KeyEvent m_key;
-			TextEvent m_text;
-
 			DropEvent m_drop;
-			ResizeEvent m_resize;
-			FocusEvent m_focus;
-			ClosedEvent m_closed;
+
 		} m_event;
 	};
 }

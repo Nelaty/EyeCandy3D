@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['key_5fpressed',['key_pressed',['../namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964ae394504187ed264fde32ad8f24ad7fba',1,'ec']]],
-  ['key_5freleased',['key_released',['../namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964a54b6fde34ab4a8893fdd008d95331436',1,'ec']]]
+  ['e',['E',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885ea6830589960a6abf6df58a68bc4f023e8',1,'ec::key']]],
+  ['end',['END',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885ea09ffeda8de54f530ab48577c0b4d7f5b',1,'ec::key']]],
+  ['enter',['ENTER',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885ea450e4117d76a8395e8f505e80a23dac4',1,'ec::key']]],
+  ['equal',['EQUAL',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885ea5bd50ef4224d3b255833802dc3debb0d',1,'ec::key']]],
+  ['escape',['ESCAPE',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885eacfc4200bccd711508d46922c63c899e9',1,'ec::key']]]
 ];

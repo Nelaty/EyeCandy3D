@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['beginrender',['BeginRender',['../classec_1_1_drawable.html#a5910709a97abc8bbbbd991ccc2c203ff',1,'ec::Drawable']]],
+  ['b',['B',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885ea51263abc1a3028740672e8bff2415318',1,'ec::key']]],
+  ['backslash',['BACKSLASH',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885eafb779eae8ddfb94dc860384f10c08a0e',1,'ec::key']]],
+  ['backspace',['BACKSPACE',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885ea6533926850b0da03673ddb6bd7699a66',1,'ec::key']]],
+  ['beginrender',['BeginRender',['../classec_1_1_drawable.html#a5910709a97abc8bbbbd991ccc2c203ff',1,'ec::Drawable::BeginRender()'],['../classec_1_1_geometry.html#a184b4fdde8062c1dc0eb9e3393cc540f',1,'ec::Geometry::BeginRender()'],['../classec_1_1_static_geometry.html#a58dfe3cc7d91f3bcf99d83b038cf5f1d',1,'ec::StaticGeometry::BeginRender()']]],
   ['bind',['Bind',['../classec_1_1_shader.html#a8b5c8c4788d011a65d158ef8428d1ece',1,'ec::Shader']]],
   ['bitmapheight',['bitmapHeight',['../structec_1_1_font_character.html#aa8ceecfdaf18e6d3567074a35c04580d',1,'ec::FontCharacter']]],
   ['bitmapleft',['bitmapLeft',['../structec_1_1_font_character.html#a70c91f359e600a1fd27a1226e5a2f11a',1,'ec::FontCharacter']]],

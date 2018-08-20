@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classutl_1_1_file_logger.html" title="utl::FileLogger" alt="" coords="5,5,109,32"/>
+<area shape="rect" id="node1" href="$class_font_loader.html" title="FontLoader" alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$classagui_1_1_open_g_l_font_loader.html" title="agui::OpenGLFontLoader" alt="" coords="140,5,307,32"/>
 </map>

@@ -1,5 +1,5 @@
 #pragma once
-#include "Geometry.h"
+#include "EC3D/Core/StaticGeometry.h"
 
 /*
 * Specialized geometry
@@ -7,7 +7,7 @@
 */
 namespace ec
 {
-	class CubeMesh : public Geometry
+	class CubeMesh : public StaticGeometry
 	{
 	public:
 		explicit CubeMesh(const float uniformSize = 1.0f);

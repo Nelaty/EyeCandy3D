@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Clipboard\WinClipboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Clipboard\Clipboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\ActionEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\ActionListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\BaseTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\BlinkingEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\BorderLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\CursorProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Dimension.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\EmptyWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\EventArgs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\FlowLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\FocusListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\FocusManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Graphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\GridLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\KeyboardListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Layout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\MouseListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Point.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Rectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\ResizableText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\ResizableBorderLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\SelectionListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\TableLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\TopContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\WidgetListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Button\Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Button\ButtonGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Button\ButtonListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\CheckBox\CheckBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\CheckBox\CheckBoxListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\DropDown\DropDown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\DropDown\DropDownListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Frame\Frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Frame\FrameListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\ImageWidget\ImageWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Label\Label.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Label\LabelListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\ListBox\ListBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\PopUp\PopUpMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\PopUp\PopUpMenuItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\ListBox\ListBoxListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\RadioButton\RadioButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\RadioButton\RadioButtonListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\RadioButton\RadioButtonGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\ScrollBar\HScrollBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\ScrollBar\HScrollBarListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\ScrollBar\VScrollBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\ScrollBar\VScrollBarListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\ScrollPane\ScrollPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Slider\Slider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Slider\SliderListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Tab\Tab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Tab\TabbedPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\Tab\TabbedPaneListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\TextBox\TextBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\TextBox\TextBoxListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\TextBox\ExtendedTextBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\TextField\TextField.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\TextField\TextFieldListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\src\Agui\Widgets\ToolTip\ToolTip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Library\Documents\Job\Forschungsmaster\Projekte\EyeCandy3D\External\Agui-master\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FB3815DA-F718-3020-92AB-DA743FB10331}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

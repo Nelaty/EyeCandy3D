@@ -22,27 +22,14 @@ namespace ec
 		/* Render this geometry with a given matrix */
 		virtual void Render(Shader* shader, const glm::mat4& model);
 
-		/* Recalculate vertex normals */
-		virtual void RecalculateNormals();
-
-		/* Geometry buffer access */
-		GLuint GetVAO() const;
-		GLuint GetVBO() const;
-		GLuint GetEBO() const;
-
 	protected:
-		/* Initialize the geometry */
-		virtual void SetupMesh();
-
-		/* Buffers */
-		GLuint m_VAO;
-		GLuint m_VBO;
-		GLuint m_EBO;
-
-		/* Vertex and index data */
-		std::vector<Vertex> m_vertices;
-		std::vector<unsigned int> m_indices;
-
+		/** Called at the beginning of the rendering routine. */
+		virtual void BeginRender() = 0;
+		/** The actual rendering of the object. */
+		virtual void OnRender() = 0;
+		/** Called at the end of the rendering routine. */
+		virtual void EndRender() = 0;
+		
 		explicit Geometry();
 	};
 }

@@ -11,9 +11,10 @@ namespace ec
 
 	void InputObservable::ReceiveEvent(const InputEvent& event)
 	{
+		InputEvent preparedEvent = PrepareEvent(event);
 		for(auto& controller : m_inputListeners)
 		{
-			controller->Inform(event);
+			controller->Inform(preparedEvent);
 		}
 	}
 
@@ -60,24 +61,80 @@ namespace ec
 		ClearEvents();
 	}
 
-	void InputObservable::SetLastMouseButtonEvent(const MouseButtonEvent& event)
+	void InputObservable::SetLastPrevMouseEvent(const MouseEvent& event)
 	{
-		m_lastMouseButtonEvent = event;
+		m_prevMouseEvent = event;
 	}
 
-	const ec::MouseButtonEvent& InputObservable::GetLastMouseButtonEvent() const
+	const ec::MouseEvent& InputObservable::GetPrevMouseEvent() const
 	{
-		return m_lastMouseButtonEvent;
+		return m_prevMouseEvent;
 	}
 
-	void InputObservable::SetLastMousePosition(const glm::vec2& position)
+	void InputObservable::SetPrevKeyboardEvent(const KeyboardEvent& event)
 	{
-		m_lastMousePosition = position;
+		m_prevKeyboardEvent = event;
 	}
 
-	const glm::vec2 InputObservable::GetLastMousePosition() const
+	const ec::KeyboardEvent& InputObservable::GetPrevKeyboardEvent() const
 	{
-		return m_lastMousePosition;
+		return m_prevKeyboardEvent;
+	}
+
+	void InputObservable::SetPrevDisplayEvent(const DisplayEvent& event)
+	{
+		m_prevDisplayEvent = event;
+	}
+
+	const ec::DisplayEvent& InputObservable::GetPrevDisplayEvent() const
+	{
+		return m_prevDisplayEvent;
+	}
+
+	ec::InputEvent InputObservable::PrepareEvent(const InputEvent& event)
+	{
+		InputEvent result = event;
+
+		switch(event.m_type)
+		{
+			case InputType::mouse_move:
+			{
+				SetLastPrevMouseEvent(event.m_event.m_mouse);
+				break;
+			}
+			case InputType::mouse_button_released:
+			case InputType::mouse_button_pressed:
+			{
+				SetLastPrevMouseEvent(event.m_event.m_mouse);
+				break;
+			}
+			case InputType::key_pressed:
+			case InputType::key_released:
+			{
+				SetPrevKeyboardEvent(event.m_event.m_keyboard);
+				break;
+			}
+			case InputType::text:
+			{
+				SetPrevKeyboardEvent(event.m_event.m_keyboard);
+				break;
+			}
+
+			case InputType::gained_focus:
+			case InputType::lost_focus:
+			{
+				SetPrevDisplayEvent(event.m_event.m_display);
+				break;
+			}
+
+
+			default:
+			{
+				break;
+			}
+		}
+
+		return result;
 	}
 
 	void InputObservable::ClearEvents()
@@ -86,7 +143,6 @@ namespace ec
 	}
 
 	InputObservable::InputObservable()
-		: m_lastMouseButtonEvent(nullptr, 0, 0, false)
 	{
 	}
 }

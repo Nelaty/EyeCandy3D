@@ -1,12 +1,12 @@
 #pragma once
-#include "Geometry.h"
+#include "EC3D/Core/StaticGeometry.h"
 
 /*
 * Specialized geometry for rectangles
 */
 namespace ec
 {
-	class RectangleMesh : public Geometry
+	class RectangleMesh : public StaticGeometry
 	{
 	public:
 		explicit RectangleMesh(const float uniform = 1.0f);

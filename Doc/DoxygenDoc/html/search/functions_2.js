@@ -1,22 +1,7 @@
 var searchData=
 [
-  ['camera',['Camera',['../classec_1_1_camera.html#a5b8034c32e082171bdb61033781cdcc3',1,'ec::Camera::Camera(Scene *scene)'],['../classec_1_1_camera.html#ab5fa55c91ae586754b613c3e8f33b31c',1,'ec::Camera::Camera(Scene *scene, const Viewport &amp;viewport)']]],
-  ['cameracontroller',['CameraController',['../classec_1_1_camera_controller.html#a53fd061c49374fd8f1194cecac1e35aa',1,'ec::CameraController::CameraController()'],['../classec_1_1_camera_controller.html#a9edd8fff13533c84c7ea8f7f10f16580',1,'ec::CameraController::CameraController(Camera *camera)']]],
-  ['changeaspectratio',['ChangeAspectRatio',['../classec_1_1_camera.html#ad3790ce4b558aa906fe00e25d8c8c1ed',1,'ec::Camera']]],
-  ['changerenderer',['ChangeRenderer',['../classec_1_1_renderer.html#a8c84ae50f78cd6a4ed913d228716ad9b',1,'ec::Renderer']]],
-  ['checkbox',['Checkbox',['../classec__gui_1_1_checkbox.html#ae5f2c4a6e7ea07282d4770be2486525c',1,'ec_gui::Checkbox']]],
-  ['clear',['Clear',['../classec_1_1_frame.html#a9756a68f9db16a43cf23dac3f13c0672',1,'ec::Frame']]],
-  ['clearevents',['ClearEvents',['../classec_1_1_input_observable.html#a5af16f48a5bdca46229a6b5bc7769e2d',1,'ec::InputObservable']]],
-  ['close',['Close',['../classutl_1_1_file_logger.html#a1df768e7a0615fdbb6bf8d3a9b459c75',1,'utl::FileLogger']]],
-  ['closedevent',['ClosedEvent',['../structec_1_1_closed_event.html#a70ac7681a32c7abbc97add221d7d9477',1,'ec::ClosedEvent']]],
-  ['closewindow',['CloseWindow',['../classec_1_1_window.html#a6605c513a7dbab0b43ddfad6ff7ac55a',1,'ec::Window']]],
-  ['contains',['Contains',['../classec_1_1_input_observable.html#a7431f35b81b1a34f40605b10739e3ac1',1,'ec::InputObservable::Contains()'],['../classec__gui_1_1_screen.html#a99d3e8673ceedf958fd36c470575be65',1,'ec_gui::Screen::Contains()'],['../classec__gui_1_1_widget.html#a61c3184d7fddb724bcf4a956a3f0e662',1,'ec_gui::Widget::Contains()']]],
-  ['controlpressed',['ControlPressed',['../structec_1_1_mouse_drag_event.html#a3d4f820f2b23c6e0e698472a98fdcdd2',1,'ec::MouseDragEvent::ControlPressed()'],['../structec_1_1_mouse_button_event.html#a47190821b20fc37538379471836aa211',1,'ec::MouseButtonEvent::ControlPressed()'],['../structec_1_1_key_event.html#af80f845419fb29c9b47a13cd7354bc27',1,'ec::KeyEvent::ControlPressed()'],['../structec_1_1_text_event.html#acc7283b28fbfe3b5c4f04d1eac37f3ff',1,'ec::TextEvent::ControlPressed()']]],
-  ['createdirectoryinworkingdirectory',['CreateDirectoryInWorkingDirectory',['../namespaceutl.html#a46d596900fabb65e6281dd634065dbf8',1,'utl']]],
-  ['createdirectorypath',['CreateDirectoryPath',['../namespaceutl.html#a3815036b0f9a13c874992104948198f6',1,'utl']]],
-  ['createdrawable',['CreateDrawable',['../classec__gui_1_1_theme.html#aeb8406fe5324c6fe494dc948f0d60b71',1,'ec_gui::Theme']]],
-  ['createfileinworkingdirectory',['CreateFileInWorkingDirectory',['../namespaceutl.html#adf4c2376b83a6713eaceb14c89b53f6a',1,'utl']]],
-  ['createfilepath',['CreateFilePath',['../namespaceutl.html#abf27aab9016dc2fb9f8b8049644276d7',1,'utl']]],
-  ['cubemapfromfile',['CubeMapFromFile',['../classec_1_1_texture.html#a4ddfae4d7a899f946f3453ecf3652d51',1,'ec::Texture']]],
-  ['cubemesh',['CubeMesh',['../classec_1_1_cube_mesh.html#ac7a03d63c5e3f57ef94e5d18098b4a03',1,'ec::CubeMesh::CubeMesh(const float uniformSize=1.0f)'],['../classec_1_1_cube_mesh.html#a645d007818631c7ab01c4725ec6818a6',1,'ec::CubeMesh::CubeMesh(const float width, const float height, const float depth)']]]
+  ['beginrender',['BeginRender',['../classec_1_1_drawable.html#a5910709a97abc8bbbbd991ccc2c203ff',1,'ec::Drawable::BeginRender()'],['../classec_1_1_geometry.html#a184b4fdde8062c1dc0eb9e3393cc540f',1,'ec::Geometry::BeginRender()'],['../classec_1_1_static_geometry.html#a58dfe3cc7d91f3bcf99d83b038cf5f1d',1,'ec::StaticGeometry::BeginRender()']]],
+  ['bind',['Bind',['../classec_1_1_shader.html#a8b5c8c4788d011a65d158ef8428d1ece',1,'ec::Shader']]],
+  ['bounds2d',['Bounds2D',['../classec__gui_1_1_bounds2_d.html#a329fcec6bf8d0c0756f9353e076842f7',1,'ec_gui::Bounds2D']]],
+  ['button',['Button',['../classec__gui_1_1_button.html#a179c52041fa20bbfc088020bafc31056',1,'ec_gui::Button']]]
 ];

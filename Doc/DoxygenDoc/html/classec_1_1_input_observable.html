@@ -82,7 +82,9 @@ Collaboration diagram for ec::InputObservable:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_input_observable__coll__graph.png" border="0" usemap="#ec_1_1_input_observable_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_input_observable_coll__map" id="ec_1_1_input_observable_coll__map">
-<area shape="rect" id="node3" href="structec_1_1_mouse_button_event.html" title="{ec::MouseButtonEvent\n||+ MouseButtonEvent()\l+ ~MouseButtonEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="169,160,328,325"/>
+<area shape="rect" id="node2" href="structec_1_1_keyboard_event.html" title="{ec::KeyboardEvent\n||+ KeyboardEvent()\l+ KeyboardEvent()\l+ ~KeyboardEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="95,292,232,472"/>
+<area shape="rect" id="node6" href="structec_1_1_display_event.html" title="{ec::DisplayEvent\n||+ DisplayEvent()\l+ DisplayEvent()\l+ Print()\l}" alt="" coords="545,329,664,435"/>
+<area shape="rect" id="node8" href="structec_1_1_mouse_event.html" title="{ec::MouseEvent\n||+ MouseEvent()\l+ MouseEvent()\l+ ~MouseEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="382,292,513,472"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -111,17 +113,23 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a65608ab3e937537a9058acfa9b7e9fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c3af1f58103d41e21bd95fed9131c5b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a2c3af1f58103d41e21bd95fed9131c5b">InformAll</a> ()</td></tr>
 <tr class="separator:a2c3af1f58103d41e21bd95fed9131c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4794f86124d9212e4055e8210c301cba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a4794f86124d9212e4055e8210c301cba">SetLastMouseButtonEvent</a> (const <a class="el" href="structec_1_1_mouse_button_event.html">MouseButtonEvent</a> &amp;event)</td></tr>
-<tr class="separator:a4794f86124d9212e4055e8210c301cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bcd5b8b0dcc5c4eb7da52a9b26daa84"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structec_1_1_mouse_button_event.html">MouseButtonEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a0bcd5b8b0dcc5c4eb7da52a9b26daa84">GetLastMouseButtonEvent</a> () const</td></tr>
-<tr class="separator:a0bcd5b8b0dcc5c4eb7da52a9b26daa84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6884c5c8175136fa379086a0abc1d751"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a6884c5c8175136fa379086a0abc1d751">SetLastMousePosition</a> (const glm::vec2 &amp;position)</td></tr>
-<tr class="separator:a6884c5c8175136fa379086a0abc1d751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c76c19bfc7c610090ca4f933506d45d"><td class="memItemLeft" align="right" valign="top">const glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a1c76c19bfc7c610090ca4f933506d45d">GetLastMousePosition</a> () const</td></tr>
-<tr class="separator:a1c76c19bfc7c610090ca4f933506d45d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317a5d73fe50080167524b729ecf4996"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a317a5d73fe50080167524b729ecf4996">SetLastPrevMouseEvent</a> (const <a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a> &amp;event)</td></tr>
+<tr class="separator:a317a5d73fe50080167524b729ecf4996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eb1660661290184fc1fe522f6b6651e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a6eb1660661290184fc1fe522f6b6651e">GetPrevMouseEvent</a> () const</td></tr>
+<tr class="separator:a6eb1660661290184fc1fe522f6b6651e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a45c985f2d778f6dfcd4708d6261395"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a7a45c985f2d778f6dfcd4708d6261395">SetPrevKeyboardEvent</a> (const <a class="el" href="structec_1_1_keyboard_event.html">KeyboardEvent</a> &amp;event)</td></tr>
+<tr class="separator:a7a45c985f2d778f6dfcd4708d6261395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25274eaa64334ec3d0c00dfb55f794c2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structec_1_1_keyboard_event.html">KeyboardEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a25274eaa64334ec3d0c00dfb55f794c2">GetPrevKeyboardEvent</a> () const</td></tr>
+<tr class="separator:a25274eaa64334ec3d0c00dfb55f794c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4774821c9e54a31409b575b54639326"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#ad4774821c9e54a31409b575b54639326">SetPrevDisplayEvent</a> (const <a class="el" href="structec_1_1_display_event.html">DisplayEvent</a> &amp;event)</td></tr>
+<tr class="separator:ad4774821c9e54a31409b575b54639326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af18dbc3d7fe632683176b751d901f5d3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structec_1_1_display_event.html">DisplayEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#af18dbc3d7fe632683176b751d901f5d3">GetPrevDisplayEvent</a> () const</td></tr>
+<tr class="separator:af18dbc3d7fe632683176b751d901f5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a99d0fa147a66bf09c7bedaa3d556cee2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structec_1_1_input_event.html">InputEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a99d0fa147a66bf09c7bedaa3d556cee2">PrepareEvent</a> (const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;event)</td></tr>
+<tr class="separator:a99d0fa147a66bf09c7bedaa3d556cee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5af16f48a5bdca46229a6b5bc7769e2d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a5af16f48a5bdca46229a6b5bc7769e2d">ClearEvents</a> ()</td></tr>
 <tr class="separator:a5af16f48a5bdca46229a6b5bc7769e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -131,10 +139,12 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aa11756df5cac4e93ace9db3f6c8817c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af83e9f99bec60cdce82b129fa457c6ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_observable.html#a9b63c8acbcbfc0f99d2964493ac52925">Events_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#af83e9f99bec60cdce82b129fa457c6ab">m_events</a></td></tr>
 <tr class="separator:af83e9f99bec60cdce82b129fa457c6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaecb6c67b919793de0a178810b54f96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structec_1_1_mouse_button_event.html">MouseButtonEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#adaecb6c67b919793de0a178810b54f96">m_lastMouseButtonEvent</a></td></tr>
-<tr class="separator:adaecb6c67b919793de0a178810b54f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6fefe31977d17fd0ef4ab394433b08d"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#ae6fefe31977d17fd0ef4ab394433b08d">m_lastMousePosition</a></td></tr>
-<tr class="separator:ae6fefe31977d17fd0ef4ab394433b08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e8c1484fe87503096e681d8bd3b75f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a99e8c1484fe87503096e681d8bd3b75f">m_prevMouseEvent</a></td></tr>
+<tr class="separator:a99e8c1484fe87503096e681d8bd3b75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf14cdeb5a394fbd296ff3dfb391c14f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structec_1_1_keyboard_event.html">KeyboardEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#acf14cdeb5a394fbd296ff3dfb391c14f">m_prevKeyboardEvent</a></td></tr>
+<tr class="separator:acf14cdeb5a394fbd296ff3dfb391c14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae480593ec25d98ea00b0b7a9aa6cba32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structec_1_1_display_event.html">DisplayEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#ae480593ec25d98ea00b0b7a9aa6cba32">m_prevDisplayEvent</a></td></tr>
+<tr class="separator:ae480593ec25d98ea00b0b7a9aa6cba32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a9b63c8acbcbfc0f99d2964493ac52925"></a>
@@ -265,40 +275,61 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Check if this observer contains a specific controller </p>
 
 </div>
 </div>
-<a id="a0bcd5b8b0dcc5c4eb7da52a9b26daa84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bcd5b8b0dcc5c4eb7da52a9b26daa84">&#9670;&nbsp;</a></span>GetLastMouseButtonEvent()</h2>
+<a id="af18dbc3d7fe632683176b751d901f5d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af18dbc3d7fe632683176b751d901f5d3">&#9670;&nbsp;</a></span>GetPrevDisplayEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structec_1_1_mouse_button_event.html">ec::MouseButtonEvent</a> &amp; ec::InputObservable::GetLastMouseButtonEvent </td>
+          <td class="memname">const <a class="el" href="structec_1_1_display_event.html">ec::DisplayEvent</a> &amp; ec::InputObservable::GetPrevDisplayEvent </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the previous keyboard event </p>
 
 </div>
 </div>
-<a id="a1c76c19bfc7c610090ca4f933506d45d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c76c19bfc7c610090ca4f933506d45d">&#9670;&nbsp;</a></span>GetLastMousePosition()</h2>
+<a id="a25274eaa64334ec3d0c00dfb55f794c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25274eaa64334ec3d0c00dfb55f794c2">&#9670;&nbsp;</a></span>GetPrevKeyboardEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const glm::vec2 ec::InputObservable::GetLastMousePosition </td>
+          <td class="memname">const <a class="el" href="structec_1_1_keyboard_event.html">ec::KeyboardEvent</a> &amp; ec::InputObservable::GetPrevKeyboardEvent </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the previous keyboard event </p>
+
+</div>
+</div>
+<a id="a6eb1660661290184fc1fe522f6b6651e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eb1660661290184fc1fe522f6b6651e">&#9670;&nbsp;</a></span>GetPrevMouseEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structec_1_1_mouse_event.html">ec::MouseEvent</a> &amp; ec::InputObservable::GetPrevMouseEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the previous mouse event </p>
 
 </div>
 </div>
@@ -321,6 +352,33 @@ Protected Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inform all input listeners about all accumulated events </p>
+
+</div>
+</div>
+<a id="a99d0fa147a66bf09c7bedaa3d556cee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d0fa147a66bf09c7bedaa3d556cee2">&#9670;&nbsp;</a></span>PrepareEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structec_1_1_input_event.html">ec::InputEvent</a> ec::InputObservable::PrepareEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -376,42 +434,64 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Register a new or remove an old listener </p>
 
 </div>
 </div>
-<a id="a4794f86124d9212e4055e8210c301cba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4794f86124d9212e4055e8210c301cba">&#9670;&nbsp;</a></span>SetLastMouseButtonEvent()</h2>
+<a id="a317a5d73fe50080167524b729ecf4996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a317a5d73fe50080167524b729ecf4996">&#9670;&nbsp;</a></span>SetLastPrevMouseEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::InputObservable::SetLastMouseButtonEvent </td>
+          <td class="memname">void ec::InputObservable::SetLastPrevMouseEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structec_1_1_mouse_button_event.html">MouseButtonEvent</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set the previous mouse event </p>
 
 </div>
 </div>
-<a id="a6884c5c8175136fa379086a0abc1d751"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6884c5c8175136fa379086a0abc1d751">&#9670;&nbsp;</a></span>SetLastMousePosition()</h2>
+<a id="ad4774821c9e54a31409b575b54639326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4774821c9e54a31409b575b54639326">&#9670;&nbsp;</a></span>SetPrevDisplayEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::InputObservable::SetLastMousePosition </td>
+          <td class="memname">void ec::InputObservable::SetPrevDisplayEvent </td>
           <td>(</td>
-          <td class="paramtype">const glm::vec2 &amp;&#160;</td>
-          <td class="paramname"><em>position</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structec_1_1_display_event.html">DisplayEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set the previous keyboard event </p>
+
+</div>
+</div>
+<a id="a7a45c985f2d778f6dfcd4708d6261395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a45c985f2d778f6dfcd4708d6261395">&#9670;&nbsp;</a></span>SetPrevKeyboardEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::InputObservable::SetPrevKeyboardEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structec_1_1_keyboard_event.html">KeyboardEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the previous keyboard event </p>
 
 </div>
 </div>
@@ -437,6 +517,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Clears the input listener list </p>
 
 </div>
 </div>
@@ -511,8 +592,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="adaecb6c67b919793de0a178810b54f96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaecb6c67b919793de0a178810b54f96">&#9670;&nbsp;</a></span>m_lastMouseButtonEvent</h2>
+<a id="ae480593ec25d98ea00b0b7a9aa6cba32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae480593ec25d98ea00b0b7a9aa6cba32">&#9670;&nbsp;</a></span>m_prevDisplayEvent</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -521,7 +602,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structec_1_1_mouse_button_event.html">MouseButtonEvent</a> ec::InputObservable::m_lastMouseButtonEvent</td>
+          <td class="memname"><a class="el" href="structec_1_1_display_event.html">DisplayEvent</a> ec::InputObservable::m_prevDisplayEvent</td>
         </tr>
       </table>
   </td>
@@ -530,11 +611,12 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Previous display event </p>
 
 </div>
 </div>
-<a id="ae6fefe31977d17fd0ef4ab394433b08d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6fefe31977d17fd0ef4ab394433b08d">&#9670;&nbsp;</a></span>m_lastMousePosition</h2>
+<a id="acf14cdeb5a394fbd296ff3dfb391c14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf14cdeb5a394fbd296ff3dfb391c14f">&#9670;&nbsp;</a></span>m_prevKeyboardEvent</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -543,7 +625,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">glm::vec2 ec::InputObservable::m_lastMousePosition</td>
+          <td class="memname"><a class="el" href="structec_1_1_keyboard_event.html">KeyboardEvent</a> ec::InputObservable::m_prevKeyboardEvent</td>
         </tr>
       </table>
   </td>
@@ -552,6 +634,30 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Previous keyboard event </p>
+
+</div>
+</div>
+<a id="a99e8c1484fe87503096e681d8bd3b75f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99e8c1484fe87503096e681d8bd3b75f">&#9670;&nbsp;</a></span>m_prevMouseEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a> ec::InputObservable::m_prevMouseEvent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Previous mouse event </p>
 
 </div>
 </div>

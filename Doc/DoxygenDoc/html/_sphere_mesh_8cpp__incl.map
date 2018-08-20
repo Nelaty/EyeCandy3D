@@ -1,6 +1,7 @@
 <map id="D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/src/Core/SphereMesh.cpp" name="D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/src/Core/SphereMesh.cpp">
-<area shape="rect" id="node2" href="$_sphere_mesh_8h.html" title="EC3D/Core/SphereMesh.h" alt="" coords="83,124,258,151"/>
-<area shape="rect" id="node3" href="$_geometry_8h.html" title="Geometry.h" alt="" coords="125,199,216,225"/>
-<area shape="rect" id="node4" href="$_vertex_8h.html" title="Vertex.h" alt="" coords="11,273,82,300"/>
-<area shape="rect" id="node6" href="$_texture_8h.html" title="Texture.h" alt="" coords="209,273,285,300"/>
+<area shape="rect" id="node2" href="$_sphere_mesh_8h.html" title="EC3D/Core/SphereMesh.h" alt="" coords="183,124,358,151"/>
+<area shape="rect" id="node3" href="$_static_geometry_8h.html" title="EC3D/Core/StaticGeometry.h" alt="" coords="174,199,367,225"/>
+<area shape="rect" id="node4" href="$_geometry_8h.html" title="EC3D/Core/Geometry.h" alt="" coords="127,273,286,300"/>
+<area shape="rect" id="node5" href="$_vertex_8h.html" title="Vertex.h" alt="" coords="17,348,87,375"/>
+<area shape="rect" id="node7" href="$_texture_8h.html" title="Texture.h" alt="" coords="163,348,239,375"/>
 </map>

@@ -41,7 +41,7 @@ namespace ec
 
 		/* Buffer Id access*/
 		void SetId(const unsigned int id);
-		unsigned int GetId() const;
+		int GetId() const;
 
 		/* Texture type access */
 		void SetType(const std::string& type);
@@ -56,8 +56,14 @@ namespace ec
 		/* Create a 3D texture */
 		bool CubeMapFromFile(const char* path, const std::string& type);
 
+		/* Check if this texture has been initialized */
+		bool IsInitialized() const;
+
+		/** Deallocation of texture memory */
+		void Free();
+
 	private:
-		unsigned int m_id;
+		int m_id;
 		std::string m_type;
 
 		TextureTypes::Dimensions m_dimension;

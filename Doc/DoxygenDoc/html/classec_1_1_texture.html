@@ -78,6 +78,8 @@ $(function() {
 Collaboration diagram for ec::Texture:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_texture__coll__graph.png" border="0" usemap="#ec_1_1_texture_coll__map" alt="Collaboration graph"/></div>
+<map name="ec_1_1_texture_coll__map" id="ec_1_1_texture_coll__map">
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -88,8 +90,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae567d80654dd09c6b02a38ca8de29ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83b67b45fa6991f79141f025dd5e269a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a83b67b45fa6991f79141f025dd5e269a">SetId</a> (const unsigned int id)</td></tr>
 <tr class="separator:a83b67b45fa6991f79141f025dd5e269a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a141c573d98b174bfe15175913a9cfc34"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a141c573d98b174bfe15175913a9cfc34">GetId</a> () const</td></tr>
-<tr class="separator:a141c573d98b174bfe15175913a9cfc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ba0bce713e3c54ec5a12c830a99940"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#af3ba0bce713e3c54ec5a12c830a99940">GetId</a> () const</td></tr>
+<tr class="separator:af3ba0bce713e3c54ec5a12c830a99940"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a190cc58745400d490ea492112196cb2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a190cc58745400d490ea492112196cb2d">SetType</a> (const std::string &amp;type)</td></tr>
 <tr class="separator:a190cc58745400d490ea492112196cb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5062d684caa000641817a918451eb76a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a5062d684caa000641817a918451eb76a">GetType</a> () const</td></tr>
@@ -100,6 +102,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4ad8c7559c57f05d993c895ea6820566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ddfae4d7a899f946f3453ecf3652d51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a4ddfae4d7a899f946f3453ecf3652d51">CubeMapFromFile</a> (const char *path, const std::string &amp;type)</td></tr>
 <tr class="separator:a4ddfae4d7a899f946f3453ecf3652d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1a3d1cc5c86b87e98929457899314e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#ada1a3d1cc5c86b87e98929457899314e">IsInitialized</a> () const</td></tr>
+<tr class="separator:ada1a3d1cc5c86b87e98929457899314e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea77869bff55578f0e8c65f58354e191"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#aea77869bff55578f0e8c65f58354e191">Free</a> ()</td></tr>
+<tr class="separator:aea77869bff55578f0e8c65f58354e191"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac2551ef676d0c771f35dc470b8a0b237"></a>
@@ -173,6 +179,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aea77869bff55578f0e8c65f58354e191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea77869bff55578f0e8c65f58354e191">&#9670;&nbsp;</a></span>Free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Texture::Free </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Deallocation of texture memory </p>
+
+</div>
+</div>
 <a id="a774a1f7dfefd55b01e7f645ba3b23660"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a774a1f7dfefd55b01e7f645ba3b23660">&#9670;&nbsp;</a></span>GetDimensions()</h2>
 
@@ -190,14 +214,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a141c573d98b174bfe15175913a9cfc34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a141c573d98b174bfe15175913a9cfc34">&#9670;&nbsp;</a></span>GetId()</h2>
+<a id="af3ba0bce713e3c54ec5a12c830a99940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ba0bce713e3c54ec5a12c830a99940">&#9670;&nbsp;</a></span>GetId()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int ec::Texture::GetId </td>
+          <td class="memname">int ec::Texture::GetId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -215,6 +239,23 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const std::string &amp; ec::Texture::GetType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada1a3d1cc5c86b87e98929457899314e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1a3d1cc5c86b87e98929457899314e">&#9670;&nbsp;</a></span>IsInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ec::Texture::IsInitialized </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

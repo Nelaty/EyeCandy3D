@@ -6,7 +6,8 @@
 
 
 
-Collaboration diagram for ec\+:\+:Input\+Event\+:\nopagebreak
+Collaboration diagram for ec\+:\+:Input\+Event\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,6 +22,8 @@ union \mbox{\hyperlink{unionec_1_1_input_event_1_1_event_data}{Event\+Data}}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{structec_1_1_input_event_a0e1dd98eb4e1161bdb573afe429d07c8}{Input\+Event}} ()
+\item 
 \mbox{\hyperlink{structec_1_1_input_event_ae7dd00fad1ba770de42ba5b7e977bc79}{Input\+Event}} (const \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964}{Input\+Type}} type)
 \item 
 void \mbox{\hyperlink{structec_1_1_input_event_a1ecc94cf2e36938b8bfc1c413de6ba04}{Print}} () const
@@ -30,15 +33,26 @@ void \mbox{\hyperlink{structec_1_1_input_event_a1ecc94cf2e36938b8bfc1c413de6ba04
 \item 
 \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964}{Input\+Type}} \mbox{\hyperlink{structec_1_1_input_event_a07aadaf18da2952478b803bbd4122bb7}{m\+\_\+type}}
 \item 
+double \mbox{\hyperlink{structec_1_1_input_event_ada54908facf585cb714bd6712d8f6c4d}{m\+\_\+timestamp}}
+\item 
 union \mbox{\hyperlink{unionec_1_1_input_event_1_1_event_data}{ec\+::\+Input\+Event\+::\+Event\+Data}} \mbox{\hyperlink{structec_1_1_input_event_a8d146eaa61615d0e9f680f68d920835c}{m\+\_\+event}}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Group all input events to make transfer easy and save memory by only holding the event, which is currently active 
+
 \subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structec_1_1_input_event_a0e1dd98eb4e1161bdb573afe429d07c8}\label{structec_1_1_input_event_a0e1dd98eb4e1161bdb573afe429d07c8}} 
+\index{ec\+::\+Input\+Event@{ec\+::\+Input\+Event}!Input\+Event@{Input\+Event}}
+\index{Input\+Event@{Input\+Event}!ec\+::\+Input\+Event@{ec\+::\+Input\+Event}}
+\subsubsection{\texorpdfstring{Input\+Event()}{InputEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ec\+::\+Input\+Event\+::\+Input\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
 \mbox{\Hypertarget{structec_1_1_input_event_ae7dd00fad1ba770de42ba5b7e977bc79}\label{structec_1_1_input_event_ae7dd00fad1ba770de42ba5b7e977bc79}} 
 \index{ec\+::\+Input\+Event@{ec\+::\+Input\+Event}!Input\+Event@{Input\+Event}}
 \index{Input\+Event@{Input\+Event}!ec\+::\+Input\+Event@{ec\+::\+Input\+Event}}
-\subsubsection{\texorpdfstring{Input\+Event()}{InputEvent()}}
+\subsubsection{\texorpdfstring{Input\+Event()}{InputEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily ec\+::\+Input\+Event\+::\+Input\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964}{Input\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
@@ -50,7 +64,7 @@ union \mbox{\hyperlink{unionec_1_1_input_event_1_1_event_data}{ec\+::\+Input\+Ev
 \subsubsection{\texorpdfstring{Print()}{Print()}}
 {\footnotesize\ttfamily void ec\+::\+Input\+Event\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-
+Print the currently active event 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{structec_1_1_input_event_a8d146eaa61615d0e9f680f68d920835c}\label{structec_1_1_input_event_a8d146eaa61615d0e9f680f68d920835c}} 
@@ -59,13 +73,19 @@ union \mbox{\hyperlink{unionec_1_1_input_event_1_1_event_data}{ec\+::\+Input\+Ev
 \subsubsection{\texorpdfstring{m\+\_\+event}{m\_event}}
 {\footnotesize\ttfamily union \mbox{\hyperlink{unionec_1_1_input_event_1_1_event_data}{ec\+::\+Input\+Event\+::\+Event\+Data}}  ec\+::\+Input\+Event\+::m\+\_\+event}
 
+\mbox{\Hypertarget{structec_1_1_input_event_ada54908facf585cb714bd6712d8f6c4d}\label{structec_1_1_input_event_ada54908facf585cb714bd6712d8f6c4d}} 
+\index{ec\+::\+Input\+Event@{ec\+::\+Input\+Event}!m\+\_\+timestamp@{m\+\_\+timestamp}}
+\index{m\+\_\+timestamp@{m\+\_\+timestamp}!ec\+::\+Input\+Event@{ec\+::\+Input\+Event}}
+\subsubsection{\texorpdfstring{m\+\_\+timestamp}{m\_timestamp}}
+{\footnotesize\ttfamily double ec\+::\+Input\+Event\+::m\+\_\+timestamp}
+
 \mbox{\Hypertarget{structec_1_1_input_event_a07aadaf18da2952478b803bbd4122bb7}\label{structec_1_1_input_event_a07aadaf18da2952478b803bbd4122bb7}} 
 \index{ec\+::\+Input\+Event@{ec\+::\+Input\+Event}!m\+\_\+type@{m\+\_\+type}}
 \index{m\+\_\+type@{m\+\_\+type}!ec\+::\+Input\+Event@{ec\+::\+Input\+Event}}
 \subsubsection{\texorpdfstring{m\+\_\+type}{m\_type}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964}{Input\+Type}} ec\+::\+Input\+Event\+::m\+\_\+type}
 
-
+Tells which event is currently active 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

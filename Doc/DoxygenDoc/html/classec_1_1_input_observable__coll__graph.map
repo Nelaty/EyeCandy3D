@@ -1,3 +1,5 @@
 <map id="ec::InputObservable" name="ec::InputObservable">
-<area shape="rect" id="node3" href="$structec_1_1_mouse_button_event.html" title="{ec::MouseButtonEvent\n||+ MouseButtonEvent()\l+ ~MouseButtonEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="169,160,328,325"/>
+<area shape="rect" id="node2" href="$structec_1_1_keyboard_event.html" title="{ec::KeyboardEvent\n||+ KeyboardEvent()\l+ KeyboardEvent()\l+ ~KeyboardEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="95,292,232,472"/>
+<area shape="rect" id="node6" href="$structec_1_1_display_event.html" title="{ec::DisplayEvent\n||+ DisplayEvent()\l+ DisplayEvent()\l+ Print()\l}" alt="" coords="545,329,664,435"/>
+<area shape="rect" id="node8" href="$structec_1_1_mouse_event.html" title="{ec::MouseEvent\n||+ MouseEvent()\l+ MouseEvent()\l+ ~MouseEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="382,292,513,472"/>
 </map>

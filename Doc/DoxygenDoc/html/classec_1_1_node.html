@@ -105,6 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac9970ec0ec03e130da59d0d5376a9855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafbc9c31eb710b1ac22834792e039435"><td class="memItemLeft" align="right" valign="top">const glm::mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#aafbc9c31eb710b1ac22834792e039435">GetGlobalMat</a> () const</td></tr>
 <tr class="separator:aafbc9c31eb710b1ac22834792e039435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0acfd7f3ead66d1694d2147383432da8"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#a0acfd7f3ead66d1694d2147383432da8">GetGlobalPosition</a> ()</td></tr>
+<tr class="separator:a0acfd7f3ead66d1694d2147383432da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88919835b03a7055f4c1c50c68b83fac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#a88919835b03a7055f4c1c50c68b83fac">GetParent</a> ()</td></tr>
 <tr class="separator:a88919835b03a7055f4c1c50c68b83fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abda1732f28b0f81df2028d889eb73bdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#abda1732f28b0f81df2028d889eb73bdf">SetParent</a> (<a class="el" href="classec_1_1_node.html">Node</a> *parent)</td></tr>
@@ -382,6 +384,24 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Get the current global matrix. This node needs to be rendered at least once, for the matrix to be something else than the unit matrix. </p>
+
+</div>
+</div>
+<a id="a0acfd7f3ead66d1694d2147383432da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0acfd7f3ead66d1694d2147383432da8">&#9670;&nbsp;</a></span>GetGlobalPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const glm::vec3 &amp; ec::Node::GetGlobalPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current global position Global matrix has to be updated before calling this function! If not, the position will be from the last frame. </p>
 
 </div>
 </div>

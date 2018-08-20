@@ -1,3 +1,4 @@
 <map id="ec::SphereMesh" name="ec::SphereMesh">
-<area shape="rect" id="node2" href="$classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ Render()\l+ RecalculateNormals()\l+ GetVAO()\l+ GetVBO()\l+ GetEBO()\l# SetupMesh()\l# Geometry()\l}" alt="" coords="165,175,324,355"/>
+<area shape="rect" id="node2" href="$classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n||+ ~StaticGeometry()\l+ RecalculateNormals()\l+ GetVAO()\l+ GetVBO()\l+ GetEBO()\l# BeginRender()\l# OnRender()\l# EndRender()\l# SetupMesh()\l# StaticGeometry()\l}" alt="" coords="219,248,378,457"/>
+<area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ Render()\l# BeginRender()\l# OnRender()\l# EndRender()\l# Geometry()\l}" alt="" coords="5,5,120,156"/>
 </map>

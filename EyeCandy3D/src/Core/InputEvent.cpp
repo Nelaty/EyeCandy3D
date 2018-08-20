@@ -3,147 +3,25 @@
 
 #include <stdio.h>
 
-#define __NGL_SHIFT_PRESSED__(mods) ((GLFW_MOD_SHIFT & (mods)) != 0)
-#define __NGL_CONTROL_PRESSED__(mods) ((GLFW_MOD_CONTROL & (mods)) != 0)
-#define __NGL_ALT_PRESSED__(mods) ((GLFW_MOD_ALT & (mods)) != 0)
-#define __NGL_SUPER_PRESSED__(mods) ((GLFW_MOD_SUPER & (mods)) != 0)
+#define EC3D_SHIFT_PRESSED(mods) ((GLFW_MOD_SHIFT & (mods)) != 0)
+#define EC3D_CONTROL_PRESSED(mods) ((GLFW_MOD_CONTROL & (mods)) != 0)
+#define EC3D_ALT_PRESSED(mods) ((GLFW_MOD_ALT & (mods)) != 0)
+#define EC3D_SUPER_PRESSED(mods) ((GLFW_MOD_SUPER & (mods)) != 0)
 
 namespace ec
 {
-	// Mouse move
-	MouseMoveEvent::MouseMoveEvent(GLFWwindow* window, const float x, const float y)
-		: m_window{window},
-		m_x{x},
-		m_y{y}
-	{
-	}
-
-	MouseMoveEvent::~MouseMoveEvent()
-	{
-	}
-
-	void MouseMoveEvent::Print() const
-	{
-		printf("Mouse move event: x:%f, y:%f\n", m_x, m_y);
-	}
-
-	// Mouse drag
-	MouseDragEvent::MouseDragEvent(GLFWwindow* window, const float offsetX, const float offsetY, const float x, const float y, const int button, const int modifier)
-		: m_window{window},
-		m_x{x},
-		m_y{y},
-		m_offsetX{offsetX},
-		m_offsetY{offsetY},
-		m_button{button},
-		m_modifier{modifier}
-	{
-	}
-
-	MouseDragEvent::~MouseDragEvent()
-	{
-	}
-
-	void MouseDragEvent::Print() const
-	{
-		printf("Mouse drag event: x:%f, y:%f, x-rel:%f, y-rel:%f, button:%d, mods:%d", m_x, m_y, m_offsetX, m_offsetY, m_button, m_modifier);
-	}
-
-	bool MouseDragEvent::ShiftPressed() const
-	{
-		return __NGL_SHIFT_PRESSED__(m_modifier);
-	}
-
-	bool MouseDragEvent::ControlPressed() const
-	{
-		return __NGL_CONTROL_PRESSED__(m_modifier);
-	}
-
-	bool MouseDragEvent::AltPressed() const
-	{
-		return __NGL_ALT_PRESSED__(m_modifier);
-	}
-
-	bool MouseDragEvent::SuperPressed() const
-	{
-		return __NGL_SUPER_PRESSED__(m_modifier);
-	}
-
-	// Mouse scroll
-	MouseScrollEvent::MouseScrollEvent(GLFWwindow* window, const float offsetX, const float offsetY)
-		: m_window{window},
-		m_offsetX{offsetX},
-		m_offsetY{offsetY}
-	{
-	}
-
-	MouseScrollEvent::~MouseScrollEvent()
-	{
-	}
-
-	void MouseScrollEvent::Print() const
-	{
-		printf("Mouse scroll event: x-offset:%f, y-offset:%f\n", m_offsetX, m_offsetY);
-	}
-
-	// Mouse enter
-	MouseEnterEvent::MouseEnterEvent(GLFWwindow* window, const bool entered)
-		: m_window{window},
-		m_entered{entered}
-	{
-	}
-
-	MouseEnterEvent::~MouseEnterEvent()
-	{
-	}
-
-	void MouseEnterEvent::Print() const
-	{
-		printf("Mouse enter event: entered %d\n", m_entered);
-	}
-
-	// Mouse button
-	MouseButtonEvent::MouseButtonEvent(GLFWwindow* window, const int button, const int mods, const bool pressed)
-		: m_window{window},
-		m_button{button},
-		m_mods{mods},
-		m_pressed{pressed}
-	{
-	}
-
-	MouseButtonEvent::~MouseButtonEvent()
-	{
-	}
-
-	void MouseButtonEvent::Print() const
-	{
-		printf("Mouse button event: button:%d, mods:%d, release/press:%d\n", m_button, m_mods, m_pressed);
-	}
-
-	bool MouseButtonEvent::ShiftPressed() const
-	{
-		return __NGL_SHIFT_PRESSED__(m_mods);
-	}
-
-	bool MouseButtonEvent::ControlPressed() const
-	{
-		return __NGL_CONTROL_PRESSED__(m_mods);
-	}
-
-	bool MouseButtonEvent::AltPressed() const
-	{
-		return __NGL_ALT_PRESSED__(m_mods);
-	}
-
-	bool MouseButtonEvent::SuperPressed() const
-	{
-		return __NGL_SUPER_PRESSED__(m_mods);
-	}
-
 	// Joystick event
 	JoystickEvent::JoystickEvent(GLFWwindow* window, const int joystick, const int event)
 		: m_window{window},
 		m_joystick{joystick},
 		m_event{event}
+	{
+	}
+
+	JoystickEvent::JoystickEvent()
+		: m_window{nullptr},
+		m_joystick{0},
+		m_event{0}
 	{
 	}
 
@@ -156,85 +34,229 @@ namespace ec
 		printf("Joystick event: joystick:%d, event:%d\n", m_joystick, m_event);
 	}
 
-	// Key pressed
-	KeyEvent::KeyEvent(GLFWwindow* window, const int key, const int scancode, const int mods, const bool pressed)
+	
+	// Input event
+	InputEvent::InputEvent(const InputType type)
+		: m_type{type}
+	{
+	}
+
+	InputEvent::InputEvent()
+	{
+	}
+
+	void InputEvent::Print() const
+	{
+		switch(m_type)
+		{
+			case InputType::mouse_move:
+			case InputType::mouse_scroll:
+			case InputType::mouse_enter:
+			case InputType::mouse_left:
+			case InputType::mouse_button_pressed:
+			case InputType::mouse_button_released:
+				m_event.m_mouse.Print();
+				break;
+			case InputType::joystick:
+				m_event.m_joystick.Print();
+				break;
+			case InputType::key_pressed:
+			case InputType::key_released:
+			case InputType::text:
+				m_event.m_keyboard.Print();
+				break;
+			case InputType::drop:
+				m_event.m_drop.Print();
+				break;
+			case InputType::resize:
+			case InputType::lost_focus:
+			case InputType::gained_focus:
+				m_event.m_display.Print();
+				break;
+			default:
+				printf("InputEvent::Print: Input type doesn't exist #%d\n", m_type);
+				break;
+		}
+	}
+
+	DisplayEvent::DisplayEvent()
+		: m_window{nullptr},
+		m_x{0},
+		m_y{0},
+		m_width{0},
+		m_height{0},
+		m_orientation{DisplayOrientation::rotated_0}
+	{
+	}
+
+	DisplayEvent::DisplayEvent(GLFWwindow* window,
+							   int x, int y, 
+							   int width, int height,
+							   DisplayOrientation orientation)
+		: m_window{window},
+		m_x{x},
+		m_y{y},
+		m_width{width},
+		m_height{height},
+		m_orientation{orientation}
+	{
+	}
+
+	void DisplayEvent::Print() const
+	{
+		printf("DISPLAY EVENT:\n");
+		printf("position: (%d, %d), size: (%d, %d), orientation: %d\n",
+			   m_x, m_y, m_width, m_height, (int)m_orientation);
+	}
+
+	KeyboardEvent::KeyboardEvent()
+		: m_window{nullptr},
+		m_key{0},
+		m_scancode{0},
+		m_unicode{0},
+		m_mods{0},
+		m_repeat{false}
+	{
+	}
+
+	KeyboardEvent::KeyboardEvent(GLFWwindow* window, 
+								 int key, 
+								 int scancode,
+								 unsigned int unicode,
+								 int mods, 
+								 bool repeat)
 		: m_window{window},
 		m_key{key},
 		m_scancode{scancode},
+		m_unicode{unicode},
 		m_mods{mods},
-		m_pressed{pressed}
+		m_repeat{repeat}
 	{
 	}
 
-	KeyEvent::~KeyEvent()
+	KeyboardEvent::~KeyboardEvent()
 	{
 	}
 
-	void KeyEvent::Print() const
+	void KeyboardEvent::Print() const
 	{
-		printf("Key event: key:%d, scancode:%d, mods:%d, released/pressed:%d\n", m_key, m_scancode, m_mods, m_pressed);
+		printf("KEYBOARD EVENT:\n");
+		printf("Window: %d\n", m_window);
+		printf("Key: %d, Scancode: %d, Repeat %s",
+			   m_key, m_scancode, m_repeat ? "true" : "false");
+		printf("Shift:   %s, ", ShiftPressed() ? "true" : "false");
+		printf("Control: %s, ", ControlPressed() ? "true" : "false");
+		printf("Alt:     %s, ", AltPressed() ? "true" : "false");
+		printf("Super:   %s, ", SuperPressed() ? "true" : "false");
 	}
 
-	bool KeyEvent::ShiftPressed() const
+	bool KeyboardEvent::ShiftPressed() const
 	{
-		return __NGL_SHIFT_PRESSED__(m_mods);
+		return EC3D_SHIFT_PRESSED(m_mods);
 	}
 
-	bool KeyEvent::ControlPressed() const
+	bool KeyboardEvent::ControlPressed() const
 	{
-		return __NGL_CONTROL_PRESSED__(m_mods);
+		return EC3D_CONTROL_PRESSED(m_mods);
 	}
 
-	bool KeyEvent::AltPressed() const
+	bool KeyboardEvent::AltPressed() const
 	{
-		return __NGL_ALT_PRESSED__(m_mods);
+		return EC3D_ALT_PRESSED(m_mods);
 	}
 
-	bool KeyEvent::SuperPressed() const
+	bool KeyboardEvent::SuperPressed() const
 	{
-		return __NGL_SUPER_PRESSED__(m_mods);
+		return EC3D_SUPER_PRESSED(m_mods);
 	}
 
-	// Text event
-	TextEvent::TextEvent(GLFWwindow* window, const unsigned int codepoint, const int mods)
+	MouseEvent::MouseEvent()
+		: m_window{nullptr},
+		m_x{0},
+		m_y{0},
+		m_z{0},
+		m_w{0},
+		m_dx{0},
+		m_dy{0},
+		m_scrollX{0},
+		m_scrollY{0},
+		m_button{0},
+		m_mods{0},
+		m_pressure{0.0f}
+	{
+	}
+
+	MouseEvent::MouseEvent(GLFWwindow* window, 
+						   int x, int y, int z, int w,
+						   int dx, int dy, int dz, int dw,
+						   unsigned int button, 
+						   int modifier, 
+						   float pressure)
 		: m_window{window},
-		m_codepoint{codepoint},
-		m_mods{mods}
+		m_x{x},
+		m_y{y},
+		m_z{z},
+		m_w{w},
+		m_dx{dx},
+		m_dy{dy},
+		m_scrollX{dz},
+		m_scrollY{dw},
+		m_button{button},
+		m_mods{modifier},
+		m_pressure{pressure}
 	{
 	}
 
-	TextEvent::~TextEvent()
+	MouseEvent::~MouseEvent()
 	{
 	}
 
-	void TextEvent::Print() const
+	void MouseEvent::Print() const
 	{
-		printf("Text event: codepoint:%d, mods:%d\n", m_codepoint, m_mods);
+		printf("MOUSE EVENT:\n");
+		printf("Window: %d\n", m_window);
+		printf("Position: (%d,%d,%d,%d), Position-Delta: (%d,%d,%d,%d)\n",
+			   m_x, m_y, m_z, m_w, m_dx, m_dy, m_scrollX, m_scrollY);
+		printf("Button: %d, Pressure: %f", m_button, m_pressure);
+		printf("Shift:   %s, ", ShiftPressed() ? "true" : "false");
+		printf("Control: %s, ", ControlPressed() ? "true" : "false");
+		printf("Alt:     %s, ", AltPressed() ? "true" : "false");
+		printf("Super:   %s, ", SuperPressed() ? "true" : "false");
 	}
 
-	bool TextEvent::ShiftPressed() const
+	bool MouseEvent::ShiftPressed() const
 	{
-		return __NGL_SHIFT_PRESSED__(m_mods);
+		return EC3D_SHIFT_PRESSED(m_mods);
 	}
 
-	bool TextEvent::ControlPressed() const
+	bool MouseEvent::ControlPressed() const
 	{
-		return __NGL_CONTROL_PRESSED__(m_mods);
+		return EC3D_CONTROL_PRESSED(m_mods);
 	}
 
-	bool TextEvent::AltPressed() const
+	bool MouseEvent::AltPressed() const
 	{
-		return __NGL_ALT_PRESSED__(m_mods);
+		return EC3D_ALT_PRESSED(m_mods);
 	}
 
-	bool TextEvent::SuperPressed() const
+	bool MouseEvent::SuperPressed() const
 	{
-		return __NGL_SUPER_PRESSED__(m_mods);
+		return EC3D_SUPER_PRESSED(m_mods);
 	}
 
-	// Drop event
-	DropEvent::DropEvent(GLFWwindow* window, const int count, const char** paths)
-		: m_window{window},
+	DropEvent::DropEvent()
+		: m_x{0},
+		m_y{0},
+		m_window{nullptr},
+		m_count{0},
+		m_paths{nullptr}
+	{
+	}
+
+	DropEvent::DropEvent(int x, int y, GLFWwindow* window, const int count, const char** paths)
+		: m_x{x},
+		m_y{y},
+		m_window{window},
 		m_count{count},
 		m_paths{paths}
 	{
@@ -246,113 +268,13 @@ namespace ec
 
 	void DropEvent::Print() const
 	{
-		printf("Drop event: count:%d\n", m_count);
+		printf("DROP EVENT\n");
+		printf("Window: %d\n", m_window);
+		printf("Position: (%d,%d), Count: %d, Paths: \n");
 		for(int i = 0; i < m_count; ++i)
 		{
-			printf("Path %d: %s\n", i, m_paths[i]);
+			printf("%s\n", m_paths[i]);
 		}
 	}
 
-	// Resize event
-	ResizeEvent::ResizeEvent(GLFWwindow* window, const int width, const int height)
-		: m_window{window},
-		m_width{width},
-		m_height{height}
-	{
-	}
-
-	ResizeEvent::~ResizeEvent()
-	{
-	}
-
-	void ResizeEvent::Print() const
-	{
-		printf("Resize event: width:%d, height:%d\n", m_width, m_height);
-	}
-
-	// Focus event
-	FocusEvent::FocusEvent(GLFWwindow* window, const bool focused)
-		: m_window{window},
-		m_focused{focused}
-	{
-	}
-
-	FocusEvent::~FocusEvent()
-	{
-	}
-
-	void FocusEvent::Print() const
-	{
-		printf("Focus event: focused:%d\n", m_focused);
-	}
-
-	// Closed event
-	ClosedEvent::ClosedEvent(GLFWwindow* window)
-		: m_window{window}
-	{
-	}
-
-	ClosedEvent::~ClosedEvent()
-	{
-	}
-
-	void ClosedEvent::Print() const
-	{
-		printf("Closed event\n");
-	}
-
-	// Input event
-	InputEvent::InputEvent(const InputType type)
-		: m_type{type}
-	{
-	}
-
-	void InputEvent::Print() const
-	{
-		switch(m_type)
-		{
-			case InputType::mouse_move:
-				m_event.m_move.Print();
-				break;
-			case InputType::mouse_drag:
-				m_event.m_drag.Print();
-			case InputType::mouse_scroll:
-				m_event.m_scroll.Print();
-				break;
-			case InputType::mouse_enter:
-			case InputType::mouse_left:
-				m_event.m_entered.Print();
-				break;
-			case InputType::mouse_button_pressed:
-			case InputType::mouse_button_released:
-				m_event.m_mouse.Print();
-				break;
-			case InputType::joystick:
-				m_event.m_joystick.Print();
-				break;
-			case InputType::key_pressed:
-			case InputType::key_released:
-				m_event.m_key.Print();
-				break;
-			case InputType::text:
-				m_event.m_text.Print();
-				break;
-			case InputType::drop:
-				m_event.m_drop.Print();
-				break;
-			case InputType::resize:
-				m_event.m_resize.Print();
-				break;
-			case InputType::lost_focus:
-			case InputType::gained_focus:
-				m_event.m_focus.Print();
-				break;
-			case InputType::closed:
-				m_event.m_closed.Print();
-				break;
-			default:
-				printf("InputEvent::Print: Input type doesn't exist #%d\n", m_type);
-				break;
-		}
-	}
 }

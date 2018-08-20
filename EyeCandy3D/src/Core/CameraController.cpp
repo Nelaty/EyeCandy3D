@@ -54,16 +54,16 @@ namespace ec
 		switch(event.m_type)
 		{
 			case InputType::mouse_move:
-				ProcessMouseMovement(event.m_event.m_move);
+				ProcessMouseMovement(event.m_event.m_mouse);
 				break;
 			case InputType::key_pressed:
-				ProcessKeyDownInput(event.m_event.m_key);
+				ProcessKeyDownInput(event.m_event.m_keyboard);
 				break;
 			case InputType::key_released:
-				ProcessKeyUpInput(event.m_event.m_key);
+				ProcessKeyUpInput(event.m_event.m_keyboard);
 				break;
 			case InputType::mouse_scroll:
-				ProcessScrollInput(event.m_event.m_scroll);
+				ProcessScrollInput(event.m_event.m_mouse);
 				break;
 			case InputType::mouse_button_pressed:
 				ProcessMouseButtonDown(event.m_event.m_mouse);
@@ -74,7 +74,7 @@ namespace ec
 		}
 	}
 
-	void CameraController::ProcessMouseMovement(const MouseMoveEvent& event)
+	void CameraController::ProcessMouseMovement(const MouseEvent& event)
 	{
 		if(!m_mouseChangeCameraDir)
 		{
@@ -90,7 +90,7 @@ namespace ec
 		m_mouseCoordsLast = glm::vec2(event.m_x, event.m_y);
 	}
 
-	void CameraController::ProcessMouseButtonDown(const MouseButtonEvent& event)
+	void CameraController::ProcessMouseButtonDown(const MouseEvent& event)
 	{
 		if(event.m_button == GLFW_MOUSE_BUTTON_RIGHT)
 		{
@@ -99,7 +99,7 @@ namespace ec
 		}
 	}
 
-	void CameraController::ProcessMouseButtonUp(const MouseButtonEvent& event)
+	void CameraController::ProcessMouseButtonUp(const MouseEvent& event)
 	{
 		if(event.m_button == GLFW_MOUSE_BUTTON_RIGHT)
 		{
@@ -109,7 +109,7 @@ namespace ec
 		}
 	}	
 
-	void CameraController::ProcessKeyDownInput(const KeyEvent& event)
+	void CameraController::ProcessKeyDownInput(const KeyboardEvent& event)
 	{
 		if(event.m_key == GLFW_KEY_LEFT_SHIFT)
 		{
@@ -155,7 +155,7 @@ namespace ec
 		}
 	}
 
-	void CameraController::ProcessKeyUpInput(const KeyEvent& event)
+	void CameraController::ProcessKeyUpInput(const KeyboardEvent& event)
 	{
 		if(event.m_key == GLFW_KEY_LEFT_SHIFT)
 		{
@@ -201,12 +201,12 @@ namespace ec
 		}
 	}
 
-	void CameraController::ProcessScrollInput(const MouseScrollEvent& event)
+	void CameraController::ProcessScrollInput(const MouseEvent& event)
 	{
 		if(!m_camera) return;
 
 		float FOV = m_camera->GetFOV();
-		FOV -= event.m_offsetY * m_fovStep;
+		FOV -= event.m_scrollY * m_fovStep;
 		if(FOV < m_fovMin)
 		{
 			FOV = m_fovMin;

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type',['Type',['../structec_1_1_texture_types.html#aff67825b98dd1edd7e4783350e866202',1,'ec::TextureTypes']]]
+  ['resourcetype',['ResourceType',['../namespaceec.html#ae4420ccd0f79418a5ce075e43909289f',1,'ec']]]
 ];

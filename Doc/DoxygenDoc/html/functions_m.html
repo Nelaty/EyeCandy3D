@@ -71,8 +71,7 @@ $(function() {
 : <a class="el" href="structutl_1_1_profiling_data.html#aa37adf9f2cd78f78d581b1bf12130910">utl::ProfilingData</a>
 </li>
 <li>m_button
-: <a class="el" href="structec_1_1_mouse_button_event.html#a98e02b29b7b5bd6c1923b7b09641ed9e">ec::MouseButtonEvent</a>
-, <a class="el" href="structec_1_1_mouse_drag_event.html#a10244c9d449dd4343281526350e1993f">ec::MouseDragEvent</a>
+: <a class="el" href="structec_1_1_mouse_event.html#a094f93fb232556fd71f8351ffe03efb4">ec::MouseEvent</a>
 </li>
 <li>m_checkboxOff
 : <a class="el" href="classec__gui_1_1_theme.html#a8b5f9bca215498ff954599c0ac79db0a">ec_gui::Theme</a>
@@ -84,21 +83,20 @@ $(function() {
 : <a class="el" href="classec_1_1_node.html#a648e1758013c7fc5899cbff2f8fe41fa">ec::Node</a>
 , <a class="el" href="classec__gui_1_1_widget.html#ad80b6bc6ae666273b733246001f3c277">ec_gui::Widget</a>
 </li>
-<li>m_closed
-: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#a6efd3bf979fade6572afd1943b192fbf">ec::InputEvent::EventData</a>
-</li>
-<li>m_codepoint
-: <a class="el" href="structec_1_1_text_event.html#a2db69911cec1c314623da0682b25ab50">ec::TextEvent</a>
-</li>
 <li>m_count
 : <a class="el" href="structec_1_1_drop_event.html#a63c1174cdefa0a30b15667c9fa070a41">ec::DropEvent</a>
 </li>
 <li>m_deselectedCallback
 : <a class="el" href="classec__gui_1_1_checkbox.html#a67f81ba535c95503bb2f8b66db35e594">ec_gui::Checkbox</a>
 </li>
+<li>m_deviceRegistry
+: <a class="el" href="classec_1_1_window.html#a55b0d5c6b22c3540bfcb18a29a0cc181">ec::Window</a>
+</li>
+<li>m_display
+: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#a8389ed647f95275e71ed9ebb0705cbfa">ec::InputEvent::EventData</a>
+</li>
 <li>m_drag
-: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#a91a200655ac87b3d464a06d7d192bea4">ec::InputEvent::EventData</a>
-, <a class="el" href="classec__gui_1_1_widget.html#a811ede6c4aae70632efd37eebfef0b0b">ec_gui::Widget</a>
+: <a class="el" href="classec__gui_1_1_widget.html#a811ede6c4aae70632efd37eebfef0b0b">ec_gui::Widget</a>
 </li>
 <li>m_drawable
 : <a class="el" href="classec__gui_1_1_widget.html#a9f35ffedabfbd15d9de62b82509376d3">ec_gui::Widget</a>
@@ -109,17 +107,19 @@ $(function() {
 <li>m_drop
 : <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#a9e9c97bd137c4efc47741b0671c22da0">ec::InputEvent::EventData</a>
 </li>
+<li>m_dx
+: <a class="el" href="structec_1_1_mouse_event.html#aab5ddd319c18746f3d09ed09b5d2281e">ec::MouseEvent</a>
+</li>
+<li>m_dy
+: <a class="el" href="structec_1_1_mouse_event.html#ad22c4d8c193a57c1ca849851ba5b4ebf">ec::MouseEvent</a>
+</li>
 <li>m_EBO
-: <a class="el" href="classec_1_1_geometry.html#a5d57590449314c09c6950324f5da4f74">ec::Geometry</a>
+: <a class="el" href="classec_1_1_static_geometry.html#a8cb4320862c6051fbef63b04ffb2333b">ec::StaticGeometry</a>
 </li>
 <li>m_enabled
 : <a class="el" href="classec_1_1_input_listener.html#af36b5fc46ed59886d73b1613aaef5a47">ec::InputListener</a>
 , <a class="el" href="classec_1_1_scene.html#ad68ba7af20ecfbc45ee136842a38ccfe">ec::Scene</a>
 , <a class="el" href="classec__gui_1_1_widget.html#a6df52d208d536654a4216f5de8c78aad">ec_gui::Widget</a>
-</li>
-<li>m_entered
-: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#ae53bd6defd14eb18ab294f01ab5632b1">ec::InputEvent::EventData</a>
-, <a class="el" href="structec_1_1_mouse_enter_event.html#ae778f98aa805ff1ce3ba6872177e3fd1">ec::MouseEnterEvent</a>
 </li>
 <li>m_event
 : <a class="el" href="structec_1_1_input_event.html#a8d146eaa61615d0e9f680f68d920835c">ec::InputEvent</a>
@@ -131,12 +131,8 @@ $(function() {
 <li>m_events
 : <a class="el" href="classec_1_1_input_observable.html#af83e9f99bec60cdce82b129fa457c6ab">ec::InputObservable</a>
 </li>
-<li>m_focus
-: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#a1533b88d1ec3fe02b2dc20188e3b15d3">ec::InputEvent::EventData</a>
-</li>
 <li>m_focused
-: <a class="el" href="structec_1_1_focus_event.html#afbca9e2277612590e35c63ef3c445042">ec::FocusEvent</a>
-, <a class="el" href="classec__gui_1_1_widget.html#a6eefde861da81a8319956a4d56c4337c">ec_gui::Widget</a>
+: <a class="el" href="classec__gui_1_1_widget.html#a6eefde861da81a8319956a4d56c4337c">ec_gui::Widget</a>
 </li>
 <li>m_forwardVector
 : <a class="el" href="classec_1_1_transform3_d.html#a5d7ebb5dc842dc73fe0840f3e3f95ab8">ec::Transform3D</a>
@@ -154,10 +150,10 @@ $(function() {
 : <a class="el" href="classec_1_1_drawable.html#a27c423409922385858f1ed89b4e85e70">ec::Drawable</a>
 </li>
 <li>m_height
-: <a class="el" href="structec_1_1_resize_event.html#a5a69028703c6d2e1c4982850b5e66868">ec::ResizeEvent</a>
+: <a class="el" href="structec_1_1_display_event.html#a395871be035f491d8e894b7cacc609ba">ec::DisplayEvent</a>
 </li>
 <li>m_indices
-: <a class="el" href="classec_1_1_geometry.html#ae6cf4719dfeee134a33a1272865f50a5">ec::Geometry</a>
+: <a class="el" href="classec_1_1_static_geometry.html#a0a4c4722d3fe82b4b78dd23782c17862">ec::StaticGeometry</a>
 </li>
 <li>m_inputListeners
 : <a class="el" href="classec_1_1_input_observable.html#aa11756df5cac4e93ace9db3f6c8817c4">ec::InputObservable</a>
@@ -170,14 +166,10 @@ $(function() {
 , <a class="el" href="structec_1_1_joystick_event.html#a415b6d2d801b41db8f3dee6b2be35448">ec::JoystickEvent</a>
 </li>
 <li>m_key
-: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#ac173ac49d3a99ca0dfeab8adc6860dbc">ec::InputEvent::EventData</a>
-, <a class="el" href="structec_1_1_key_event.html#a1c81390df89a4894405bee6cb101649e">ec::KeyEvent</a>
+: <a class="el" href="structec_1_1_keyboard_event.html#a3748aaf86e02d8e2f458f5135edc9e3d">ec::KeyboardEvent</a>
 </li>
-<li>m_lastMouseButtonEvent
-: <a class="el" href="classec_1_1_input_observable.html#adaecb6c67b919793de0a178810b54f96">ec::InputObservable</a>
-</li>
-<li>m_lastMousePosition
-: <a class="el" href="classec_1_1_input_observable.html#ae6fefe31977d17fd0ef4ab394433b08d">ec::InputObservable</a>
+<li>m_keyboard
+: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#a4c4a2bbea6b854c11f2fda34d546c053">ec::InputEvent::EventData</a>
 </li>
 <li>m_lastRenderer
 : <a class="el" href="classec_1_1_renderer.html#a818d84064fde8088d28358f7ea04f898">ec::Renderer</a>
@@ -197,19 +189,12 @@ $(function() {
 <li>m_min
 : <a class="el" href="structutl_1_1_profiling_data.html#a61e7406f3b528d1740ce266673cc725b">utl::ProfilingData</a>
 </li>
-<li>m_modifier
-: <a class="el" href="structec_1_1_mouse_drag_event.html#a9434738e62de520a280e4776232ce1a1">ec::MouseDragEvent</a>
-</li>
 <li>m_mods
-: <a class="el" href="structec_1_1_key_event.html#a2b57c4779afbd78542be4cee2cd3dcbb">ec::KeyEvent</a>
-, <a class="el" href="structec_1_1_mouse_button_event.html#afab73baa804fd9b9ab63846acf2274a9">ec::MouseButtonEvent</a>
-, <a class="el" href="structec_1_1_text_event.html#ac869da2d72b42d8dee86c3261b00fde8">ec::TextEvent</a>
+: <a class="el" href="structec_1_1_keyboard_event.html#afd3db99c42980b15922c83d4bd0ccd5c">ec::KeyboardEvent</a>
+, <a class="el" href="structec_1_1_mouse_event.html#ae2df7e912c0ddbd14a67f7686ebdeba8">ec::MouseEvent</a>
 </li>
 <li>m_mouse
-: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#a944e5e6d14fe8eb20f39d10def46d3f8">ec::InputEvent::EventData</a>
-</li>
-<li>m_move
-: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#a0592d7314321622bf817ac5ac8cf937c">ec::InputEvent::EventData</a>
+: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#ad9e425f64db2c4f1741729f66feb0426">ec::InputEvent::EventData</a>
 </li>
 <li>m_name
 : <a class="el" href="classec_1_1_scene.html#a58a25f1f2370535750e341085ddfd95b">ec::Scene</a>
@@ -217,14 +202,6 @@ $(function() {
 </li>
 <li>m_normal
 : <a class="el" href="structec_1_1_vertex.html#aec5eb9b7fc72c250525c6b64bfabd2a2">ec::Vertex</a>
-</li>
-<li>m_offsetX
-: <a class="el" href="structec_1_1_mouse_drag_event.html#afb2e5e98e6c0014b311d1b4aec103638">ec::MouseDragEvent</a>
-, <a class="el" href="structec_1_1_mouse_scroll_event.html#a1925678027669178fcdd37bb3f3c034d">ec::MouseScrollEvent</a>
-</li>
-<li>m_offsetY
-: <a class="el" href="structec_1_1_mouse_drag_event.html#a9019720292c490f1a09ecda32f89ae6e">ec::MouseDragEvent</a>
-, <a class="el" href="structec_1_1_mouse_scroll_event.html#ac366f5d0fb127838cca2387b7af61524">ec::MouseScrollEvent</a>
 </li>
 <li>m_onButtonDownCallback
 : <a class="el" href="classec__gui_1_1_button.html#a64f82706542dbeb39b5b0db328040bce">ec_gui::Button</a>
@@ -234,6 +211,9 @@ $(function() {
 </li>
 <li>m_onPressedCallback
 : <a class="el" href="classec__gui_1_1_button.html#aa4c9556354fa7cdd1f0365bccd1d2e28">ec_gui::Button</a>
+</li>
+<li>m_orientation
+: <a class="el" href="structec_1_1_display_event.html#a3d155441337a15fd45aa3584168da059">ec::DisplayEvent</a>
 </li>
 <li>m_params
 : <a class="el" href="classec__gui_1_1_g_u_i_rendering_context.html#a04be470f42b7b4a3fa333ea15ea23a86">ec_gui::GUIRenderingContext</a>
@@ -250,9 +230,17 @@ $(function() {
 , <a class="el" href="structec_1_1_vertex.html#acb3327c996406e4d1a6b43cfa1f3ea47">ec::Vertex</a>
 , <a class="el" href="classec__gui_1_1_widget.html#ac18ec15d2929f5a7e37461bab8ee34c0">ec_gui::Widget</a>
 </li>
-<li>m_pressed
-: <a class="el" href="structec_1_1_key_event.html#a4e9ab83e1535c1ee34c9eb54c21b05e3">ec::KeyEvent</a>
-, <a class="el" href="structec_1_1_mouse_button_event.html#ab8a22a5ef68729a7227d60b9b58bd438">ec::MouseButtonEvent</a>
+<li>m_pressure
+: <a class="el" href="structec_1_1_mouse_event.html#a2a6711331cfcdbcc5b889c4805db48bf">ec::MouseEvent</a>
+</li>
+<li>m_prevDisplayEvent
+: <a class="el" href="classec_1_1_input_observable.html#ae480593ec25d98ea00b0b7a9aa6cba32">ec::InputObservable</a>
+</li>
+<li>m_prevKeyboardEvent
+: <a class="el" href="classec_1_1_input_observable.html#acf14cdeb5a394fbd296ff3dfb391c14f">ec::InputObservable</a>
+</li>
+<li>m_prevMouseEvent
+: <a class="el" href="classec_1_1_input_observable.html#a99e8c1484fe87503096e681d8bd3b75f">ec::InputObservable</a>
 </li>
 <li>m_radioButtonOff
 : <a class="el" href="classec__gui_1_1_theme.html#a17440ed33f45c710bcb182798ab84a18">ec_gui::Theme</a>
@@ -264,8 +252,8 @@ $(function() {
 : <a class="el" href="classec_1_1_renderer.html#ac3f0c1c3253fbac0f734af313cc410a4">ec::Renderer</a>
 , <a class="el" href="classec_1_1_window.html#a6951a4d1a08549dcc797cf12c8f46710">ec::Window</a>
 </li>
-<li>m_resize
-: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#aa4baeac14bdea798dbe97b0482cd2845">ec::InputEvent::EventData</a>
+<li>m_repeat
+: <a class="el" href="structec_1_1_keyboard_event.html#ad9cc081843fb355f7f1b2a5d7b96b026">ec::KeyboardEvent</a>
 </li>
 <li>m_root
 : <a class="el" href="classec_1_1_scene.html#a7b7f1f4840087d56148e4c4be5737b50">ec::Scene</a>
@@ -280,7 +268,7 @@ $(function() {
 : <a class="el" href="structec__gui_1_1_g_u_i_rendering_parameter_list.html#a43db5462ec0af9a429bc9fc023a84a24">ec_gui::GUIRenderingParameterList</a>
 </li>
 <li>m_scancode
-: <a class="el" href="structec_1_1_key_event.html#ac7d1cc5ce7aad43f0aa73879677ad375">ec::KeyEvent</a>
+: <a class="el" href="structec_1_1_keyboard_event.html#a99de30a0a1504392405bbcfee3debd57">ec::KeyboardEvent</a>
 </li>
 <li>m_sceneController
 : <a class="el" href="classec_1_1_scene.html#aa6a8f71066fc44162b1c80341840d5fb">ec::Scene</a>
@@ -292,8 +280,11 @@ $(function() {
 : <a class="el" href="classec_1_1_scene.html#ad63e472baf8e283c596891384ea98aad">ec::Scene</a>
 , <a class="el" href="classec_1_1_window.html#a5c50dfac91e6105a6862693e71976a3e">ec::Window</a>
 </li>
-<li>m_scroll
-: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#a7cb5c60064ca006bcf29d8594472ce10">ec::InputEvent::EventData</a>
+<li>m_scrollX
+: <a class="el" href="structec_1_1_mouse_event.html#a957534c425902b9de4a416459ef17aa5">ec::MouseEvent</a>
+</li>
+<li>m_scrollY
+: <a class="el" href="structec_1_1_mouse_event.html#add0e314af571f90b9f514991ce19896f">ec::MouseEvent</a>
 </li>
 <li>m_selected
 : <a class="el" href="classec__gui_1_1_checkbox.html#aa5c7879c4d6422bd5c0fd96edc484a88">ec_gui::Checkbox</a>
@@ -314,8 +305,7 @@ $(function() {
 : <a class="el" href="structec_1_1_vertex.html#a12e2b45d0fdb3873a01dd9ada9e66f64">ec::Vertex</a>
 </li>
 <li>m_text
-: <a class="el" href="unionec_1_1_input_event_1_1_event_data.html#acd584a87f8886a1df789e075949f8f54">ec::InputEvent::EventData</a>
-, <a class="el" href="classec__gui_1_1_text.html#a97780a155cc50f0d83fe5149e006b938">ec_gui::Text</a>
+: <a class="el" href="classec__gui_1_1_text.html#a97780a155cc50f0d83fe5149e006b938">ec_gui::Text</a>
 </li>
 <li>m_textColor
 : <a class="el" href="classec__gui_1_1_text.html#af90729dfed09a3c4c94ed03e5769001e">ec_gui::Text</a>
@@ -329,46 +319,48 @@ $(function() {
 <li>m_timer
 : <a class="el" href="classec_1_1_window.html#af826de73c15768bf1a4ee5dbff0e377c">ec::Window</a>
 </li>
+<li>m_timestamp
+: <a class="el" href="structec_1_1_input_event.html#ada54908facf585cb714bd6712d8f6c4d">ec::InputEvent</a>
+</li>
 <li>m_tooltip
 : <a class="el" href="classec__gui_1_1_widget.html#ade1a9106e3877f2f56ea1473b4964c74">ec_gui::Widget</a>
 </li>
 <li>m_type
 : <a class="el" href="structec_1_1_input_event.html#a07aadaf18da2952478b803bbd4122bb7">ec::InputEvent</a>
 </li>
+<li>m_unicode
+: <a class="el" href="structec_1_1_keyboard_event.html#a530cc03b6d62e8068694756426222909">ec::KeyboardEvent</a>
+</li>
 <li>m_up
 : <a class="el" href="classec_1_1_transform3_d.html#addd1132fb57befe841dfd9af94aa4329">ec::Transform3D</a>
 </li>
 <li>m_VAO
-: <a class="el" href="classec_1_1_geometry.html#af2451c093d0483611160531ac2a4f01e">ec::Geometry</a>
+: <a class="el" href="classec_1_1_static_geometry.html#a7334854b00afa43e3ce02ce2e0600631">ec::StaticGeometry</a>
 </li>
 <li>m_VBO
-: <a class="el" href="classec_1_1_geometry.html#a418696e77f43a62bd8f78b8005ce7adf">ec::Geometry</a>
+: <a class="el" href="classec_1_1_static_geometry.html#a14a581a93ea66ca97c79d554390fbd7b">ec::StaticGeometry</a>
 </li>
 <li>m_vertices
-: <a class="el" href="classec_1_1_geometry.html#a501c19ed82548d9a8ff628f55e750af3">ec::Geometry</a>
+: <a class="el" href="classec_1_1_static_geometry.html#a7407d00e3c3a4157cc3a3d1ac5000631">ec::StaticGeometry</a>
 </li>
 <li>m_visible
 : <a class="el" href="classec__gui_1_1_widget.html#ac9266ce41736476342354d016d4535b2">ec_gui::Widget</a>
+</li>
+<li>m_w
+: <a class="el" href="structec_1_1_mouse_event.html#af7836a93b994d8807394fa24b25f31b8">ec::MouseEvent</a>
 </li>
 <li>m_widgetRoot
 : <a class="el" href="classec__gui_1_1_g_u_i.html#ad6b9982eb7b129a78c593da5008c2ac0">ec_gui::GUI</a>
 </li>
 <li>m_width
-: <a class="el" href="structec_1_1_resize_event.html#a3bd717165bb68bb9d28de8c7fef55f32">ec::ResizeEvent</a>
+: <a class="el" href="structec_1_1_display_event.html#ab14060df4b5ea8295712b58fce89a93a">ec::DisplayEvent</a>
 </li>
 <li>m_window
-: <a class="el" href="structec_1_1_closed_event.html#acd70453a645b12b21857e4e3a47f1294">ec::ClosedEvent</a>
+: <a class="el" href="structec_1_1_display_event.html#a501ab5209368544f1c264b3e25a87185">ec::DisplayEvent</a>
 , <a class="el" href="structec_1_1_drop_event.html#a526c7694184ab65111ca5f8f4f2384fa">ec::DropEvent</a>
-, <a class="el" href="structec_1_1_focus_event.html#a44db4d7190f7312e23a56cf90c634187">ec::FocusEvent</a>
 , <a class="el" href="structec_1_1_joystick_event.html#a9b108de0a7db9268dd11642a203ef816">ec::JoystickEvent</a>
-, <a class="el" href="structec_1_1_key_event.html#a334f32a8102f1d155a6fec87375efd04">ec::KeyEvent</a>
-, <a class="el" href="structec_1_1_mouse_button_event.html#ab83fb7bb5cd28b90c48fd6327fe45f9c">ec::MouseButtonEvent</a>
-, <a class="el" href="structec_1_1_mouse_drag_event.html#a98e4d2a8236829d2e156eda4a09655bf">ec::MouseDragEvent</a>
-, <a class="el" href="structec_1_1_mouse_enter_event.html#affdb33db16df7493f83e19cd70cfea3c">ec::MouseEnterEvent</a>
-, <a class="el" href="structec_1_1_mouse_move_event.html#ac1205c64a8f812566eeee2c83a4df824">ec::MouseMoveEvent</a>
-, <a class="el" href="structec_1_1_mouse_scroll_event.html#a76f795ff6bd0629d496005b8e415552a">ec::MouseScrollEvent</a>
-, <a class="el" href="structec_1_1_resize_event.html#a9a68471a8acd0344eadf63c9d899316c">ec::ResizeEvent</a>
-, <a class="el" href="structec_1_1_text_event.html#a7ab9619fd97483a705ef8e4ea6bd7f83">ec::TextEvent</a>
+, <a class="el" href="structec_1_1_keyboard_event.html#a6de06c21e83612aeca727beedd93ae82">ec::KeyboardEvent</a>
+, <a class="el" href="structec_1_1_mouse_event.html#aaaf460aa884923e375b961e64a8d55aa">ec::MouseEvent</a>
 , <a class="el" href="classec_1_1_window.html#a6d40786a23714fff2de92ed74e8eb10e">ec::Window</a>
 </li>
 <li>m_windowHeight
@@ -383,12 +375,17 @@ $(function() {
 , <a class="el" href="structec__gui_1_1_g_u_i_rendering_parameter_list.html#a3e289510cff39a00b12db310e7835d86">ec_gui::GUIRenderingParameterList</a>
 </li>
 <li>m_x
-: <a class="el" href="structec_1_1_mouse_drag_event.html#a4ebf4f701f677620bc1f76232ca1c9a5">ec::MouseDragEvent</a>
-, <a class="el" href="structec_1_1_mouse_move_event.html#a2e6f479609b2919db2623111e240284e">ec::MouseMoveEvent</a>
+: <a class="el" href="structec_1_1_display_event.html#a35b371c7098cc98509f44e6fe2802945">ec::DisplayEvent</a>
+, <a class="el" href="structec_1_1_drop_event.html#ae1b8807808b78aecbdb27d51a4ab87eb">ec::DropEvent</a>
+, <a class="el" href="structec_1_1_mouse_event.html#a671dcffa3a0310413d260bc6c5f3c7ec">ec::MouseEvent</a>
 </li>
 <li>m_y
-: <a class="el" href="structec_1_1_mouse_drag_event.html#ae66c5f3b087578bfcef4ff1215b50be7">ec::MouseDragEvent</a>
-, <a class="el" href="structec_1_1_mouse_move_event.html#a559559f7d2ae5a689963f71f28ad2409">ec::MouseMoveEvent</a>
+: <a class="el" href="structec_1_1_display_event.html#aa4314e0538f9929b39e37bb400ac2220">ec::DisplayEvent</a>
+, <a class="el" href="structec_1_1_drop_event.html#a59338dd4b8cd47b7f025908a63be2e92">ec::DropEvent</a>
+, <a class="el" href="structec_1_1_mouse_event.html#a70f1a81a4a1099cb425a4461d23dfbba">ec::MouseEvent</a>
+</li>
+<li>m_z
+: <a class="el" href="structec_1_1_mouse_event.html#a6ba4ec5d26b3dbe8be4d57b4197bada2">ec::MouseEvent</a>
 </li>
 <li>Material()
 : <a class="el" href="classec_1_1_material.html#a259d88ca352df2d284380f0b37052652">ec::Material</a>
@@ -396,20 +393,11 @@ $(function() {
 <li>Material_TP
 : <a class="el" href="classec__gui_1_1_theme.html#ad0272419db6e28fc59f972460e5260ad">ec_gui::Theme</a>
 </li>
-<li>MouseButtonEvent()
-: <a class="el" href="structec_1_1_mouse_button_event.html#aa7c76016af8d30e5c5486d5249568414">ec::MouseButtonEvent</a>
+<li>Mouse()
+: <a class="el" href="classec_1_1_mouse.html#ac1154831feadd646ecabad6dc1d42136">ec::Mouse</a>
 </li>
-<li>MouseDragEvent()
-: <a class="el" href="structec_1_1_mouse_drag_event.html#a209ef2aaeea4f5fdda4de8f3002798a4">ec::MouseDragEvent</a>
-</li>
-<li>MouseEnterEvent()
-: <a class="el" href="structec_1_1_mouse_enter_event.html#a8683590d2b99dbb3bf3db3cd50951797">ec::MouseEnterEvent</a>
-</li>
-<li>MouseMoveEvent()
-: <a class="el" href="structec_1_1_mouse_move_event.html#a3783a260f9b525df43a628cc2dff7611">ec::MouseMoveEvent</a>
-</li>
-<li>MouseScrollEvent()
-: <a class="el" href="structec_1_1_mouse_scroll_event.html#a3bccf854cfd63d44a49db296fc88b8dd">ec::MouseScrollEvent</a>
+<li>MouseEvent()
+: <a class="el" href="structec_1_1_mouse_event.html#af9aa266623dd0b951176a97969ab11f7">ec::MouseEvent</a>
 </li>
 <li>MoveFocus()
 : <a class="el" href="classec__gui_1_1_screen.html#ad80e3b3a1ea500da673e62675185ff18">ec_gui::Screen</a>

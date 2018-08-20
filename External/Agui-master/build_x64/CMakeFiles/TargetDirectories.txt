@@ -1,0 +1,3 @@
+D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/External/Agui-master/build_x64/CMakeFiles/agui.dir
+D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/External/Agui-master/build_x64/CMakeFiles/ALL_BUILD.dir
+D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/External/Agui-master/build_x64/CMakeFiles/ZERO_CHECK.dir

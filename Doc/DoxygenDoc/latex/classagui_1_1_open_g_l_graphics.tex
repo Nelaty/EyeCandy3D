@@ -1,0 +1,222 @@
+\hypertarget{classagui_1_1_open_g_l_graphics}{}\section{agui\+:\+:Open\+G\+L\+Graphics Class Reference}
+\label{classagui_1_1_open_g_l_graphics}\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+
+
+{\ttfamily \#include $<$Open\+G\+L\+Graphics.\+h$>$}
+
+
+
+Inheritance diagram for agui\+:\+:Open\+G\+L\+Graphics\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classagui_1_1_open_g_l_graphics__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for agui\+:\+:Open\+G\+L\+Graphics\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classagui_1_1_open_g_l_graphics__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a31085468a7f2df56d6e5fba0cefe2ebd}{Open\+G\+L\+Graphics}} ()
+\item 
+virtual \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a4b062b45f3c7bc4f63c925f6f12cda92}{$\sim$\+Open\+G\+L\+Graphics}} ()
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_ad0158ea89307d21c96cde0a47e982f72}{\+\_\+begin\+Paint}} () override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a744c073f057d938eec458a2517f5822a}{\+\_\+end\+Paint}} () override
+\item 
+virtual Dimension \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_afe63a1d7c4483c1d8315d781c516f8c8}{get\+Display\+Size}} () override
+\item 
+virtual Rectangle \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a6bf75c231dc6237d372b9cae8416c9ab}{get\+Clipping\+Rectangle}} () override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a121498d23f1d8fc73a230ec78488734a}{draw\+Image}} (const \mbox{\hyperlink{class_image}{Image}} $\ast$bmp, const Point \&position, const Point \&region\+Start, const Dimension \&region\+Size, const float \&opacity=1.\+0f) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a1fca808a081e0afe94fe7b94d8f9ed6f}{draw\+Image}} (const \mbox{\hyperlink{class_image}{Image}} $\ast$bmp, const Point \&position, const float \&opacity=1.\+0f) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a0b7bde4bebc7566ff78f04b5656c38b9}{draw\+Scaled\+Image}} (const \mbox{\hyperlink{class_image}{Image}} $\ast$bmp, const Point \&position, const Point \&region\+Start, const Dimension \&region\+Scale, const Dimension \&scale, const float \&opacity=1.\+0f) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a454da19b9133ed6ca6defea2abc832c4}{draw\+Text}} (const Point \&position, const char $\ast$text, const Color \&color, const \mbox{\hyperlink{class_font}{Font}} $\ast$font, Alignment\+Enum align=A\+L\+I\+G\+N\+\_\+\+L\+E\+FT) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a88a6af03611b93169c197167c2c014fe}{draw\+Rectangle}} (const Rectangle \&rect, const Color \&color) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a9174e22c26308ae9902f29970a68b687}{draw\+Filled\+Rectangle}} (const Rectangle \&rect, const Color \&color) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a333364e89726e8f7248e050c3bb8ee5a}{draw\+Pixel}} (const Point \&point, const Color \&color) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_ade9a5b35baddea11cb56e40676572c45}{draw\+Circle}} (const Point \&center, float radius, const Color \&color) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a7dd166776af1f0e8f85b35ec5e00bd64}{draw\+Filled\+Circle}} (const Point \&center, float radius, const Color \&color) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a4123aa29ef3c9610fc121f3e52cb5e60}{draw\+Line}} (const Point \&start, const Point \&end, const Color \&color) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_acb546631e5be32af2c3bac34b4159320}{set\+Target\+Image}} (const \mbox{\hyperlink{class_image}{Image}} $\ast$target) override
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_ab9203c356b807cdff090f23b94cc19fe}{reset\+Target\+Image}} () override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_adcd13d35b9590bfb0019b2a4dd53b692}{set\+Clipping\+Rectangle}} (const Rectangle \&rect) override
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a54efd9b25aaa7c9652c6640d13e1f4dd}{s\+\_\+circle\+Steps\+Num}} = 20
+\item 
+static constexpr float \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_aaca483f805bee0f62f04c6ffa0bf8c2b}{s\+\_\+circle\+Step}} = 2 $\ast$ M\+\_\+\+PI / \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a54efd9b25aaa7c9652c6640d13e1f4dd}{s\+\_\+circle\+Steps\+Num}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a31085468a7f2df56d6e5fba0cefe2ebd}\label{classagui_1_1_open_g_l_graphics_a31085468a7f2df56d6e5fba0cefe2ebd}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!Open\+G\+L\+Graphics@{Open\+G\+L\+Graphics}}
+\index{Open\+G\+L\+Graphics@{Open\+G\+L\+Graphics}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{Open\+G\+L\+Graphics()}{OpenGLGraphics()}}
+{\footnotesize\ttfamily agui\+::\+Open\+G\+L\+Graphics\+::\+Open\+G\+L\+Graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a4b062b45f3c7bc4f63c925f6f12cda92}\label{classagui_1_1_open_g_l_graphics_a4b062b45f3c7bc4f63c925f6f12cda92}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!````~Open\+G\+L\+Graphics@{$\sim$\+Open\+G\+L\+Graphics}}
+\index{````~Open\+G\+L\+Graphics@{$\sim$\+Open\+G\+L\+Graphics}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{$\sim$\+Open\+G\+L\+Graphics()}{~OpenGLGraphics()}}
+{\footnotesize\ttfamily agui\+::\+Open\+G\+L\+Graphics\+::$\sim$\+Open\+G\+L\+Graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_ad0158ea89307d21c96cde0a47e982f72}\label{classagui_1_1_open_g_l_graphics_ad0158ea89307d21c96cde0a47e982f72}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!\+\_\+begin\+Paint@{\+\_\+begin\+Paint}}
+\index{\+\_\+begin\+Paint@{\+\_\+begin\+Paint}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{\+\_\+begin\+Paint()}{\_beginPaint()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::\+\_\+begin\+Paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]enable transparency, enable shader, set current context \end{DoxyRefDesc}
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a744c073f057d938eec458a2517f5822a}\label{classagui_1_1_open_g_l_graphics_a744c073f057d938eec458a2517f5822a}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!\+\_\+end\+Paint@{\+\_\+end\+Paint}}
+\index{\+\_\+end\+Paint@{\+\_\+end\+Paint}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{\+\_\+end\+Paint()}{\_endPaint()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::\+\_\+end\+Paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]disable transparency, disable shader \end{DoxyRefDesc}
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_ade9a5b35baddea11cb56e40676572c45}\label{classagui_1_1_open_g_l_graphics_ade9a5b35baddea11cb56e40676572c45}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!draw\+Circle@{draw\+Circle}}
+\index{draw\+Circle@{draw\+Circle}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{draw\+Circle()}{drawCircle()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::draw\+Circle (\begin{DoxyParamCaption}\item[{const Point \&}]{center,  }\item[{float}]{radius,  }\item[{const Color \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a7dd166776af1f0e8f85b35ec5e00bd64}\label{classagui_1_1_open_g_l_graphics_a7dd166776af1f0e8f85b35ec5e00bd64}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!draw\+Filled\+Circle@{draw\+Filled\+Circle}}
+\index{draw\+Filled\+Circle@{draw\+Filled\+Circle}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{draw\+Filled\+Circle()}{drawFilledCircle()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::draw\+Filled\+Circle (\begin{DoxyParamCaption}\item[{const Point \&}]{center,  }\item[{float}]{radius,  }\item[{const Color \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a9174e22c26308ae9902f29970a68b687}\label{classagui_1_1_open_g_l_graphics_a9174e22c26308ae9902f29970a68b687}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!draw\+Filled\+Rectangle@{draw\+Filled\+Rectangle}}
+\index{draw\+Filled\+Rectangle@{draw\+Filled\+Rectangle}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{draw\+Filled\+Rectangle()}{drawFilledRectangle()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::draw\+Filled\+Rectangle (\begin{DoxyParamCaption}\item[{const Rectangle \&}]{rect,  }\item[{const Color \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a121498d23f1d8fc73a230ec78488734a}\label{classagui_1_1_open_g_l_graphics_a121498d23f1d8fc73a230ec78488734a}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!draw\+Image@{draw\+Image}}
+\index{draw\+Image@{draw\+Image}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{draw\+Image()}{drawImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::draw\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_image}{Image}} $\ast$}]{bmp,  }\item[{const Point \&}]{position,  }\item[{const Point \&}]{region\+Start,  }\item[{const Dimension \&}]{region\+Size,  }\item[{const float \&}]{opacity = {\ttfamily 1.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a1fca808a081e0afe94fe7b94d8f9ed6f}\label{classagui_1_1_open_g_l_graphics_a1fca808a081e0afe94fe7b94d8f9ed6f}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!draw\+Image@{draw\+Image}}
+\index{draw\+Image@{draw\+Image}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{draw\+Image()}{drawImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::draw\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_image}{Image}} $\ast$}]{bmp,  }\item[{const Point \&}]{position,  }\item[{const float \&}]{opacity = {\ttfamily 1.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a4123aa29ef3c9610fc121f3e52cb5e60}\label{classagui_1_1_open_g_l_graphics_a4123aa29ef3c9610fc121f3e52cb5e60}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!draw\+Line@{draw\+Line}}
+\index{draw\+Line@{draw\+Line}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{draw\+Line()}{drawLine()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::draw\+Line (\begin{DoxyParamCaption}\item[{const Point \&}]{start,  }\item[{const Point \&}]{end,  }\item[{const Color \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a333364e89726e8f7248e050c3bb8ee5a}\label{classagui_1_1_open_g_l_graphics_a333364e89726e8f7248e050c3bb8ee5a}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!draw\+Pixel@{draw\+Pixel}}
+\index{draw\+Pixel@{draw\+Pixel}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{draw\+Pixel()}{drawPixel()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::draw\+Pixel (\begin{DoxyParamCaption}\item[{const Point \&}]{point,  }\item[{const Color \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a88a6af03611b93169c197167c2c014fe}\label{classagui_1_1_open_g_l_graphics_a88a6af03611b93169c197167c2c014fe}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!draw\+Rectangle@{draw\+Rectangle}}
+\index{draw\+Rectangle@{draw\+Rectangle}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{draw\+Rectangle()}{drawRectangle()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::draw\+Rectangle (\begin{DoxyParamCaption}\item[{const Rectangle \&}]{rect,  }\item[{const Color \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a0b7bde4bebc7566ff78f04b5656c38b9}\label{classagui_1_1_open_g_l_graphics_a0b7bde4bebc7566ff78f04b5656c38b9}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!draw\+Scaled\+Image@{draw\+Scaled\+Image}}
+\index{draw\+Scaled\+Image@{draw\+Scaled\+Image}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{draw\+Scaled\+Image()}{drawScaledImage()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::draw\+Scaled\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_image}{Image}} $\ast$}]{bmp,  }\item[{const Point \&}]{position,  }\item[{const Point \&}]{region\+Start,  }\item[{const Dimension \&}]{region\+Scale,  }\item[{const Dimension \&}]{scale,  }\item[{const float \&}]{opacity = {\ttfamily 1.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a454da19b9133ed6ca6defea2abc832c4}\label{classagui_1_1_open_g_l_graphics_a454da19b9133ed6ca6defea2abc832c4}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!draw\+Text@{draw\+Text}}
+\index{draw\+Text@{draw\+Text}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{draw\+Text()}{drawText()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::draw\+Text (\begin{DoxyParamCaption}\item[{const Point \&}]{position,  }\item[{const char $\ast$}]{text,  }\item[{const Color \&}]{color,  }\item[{const \mbox{\hyperlink{class_font}{Font}} $\ast$}]{font,  }\item[{Alignment\+Enum}]{align = {\ttfamily ALIGN\+\_\+LEFT} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a6bf75c231dc6237d372b9cae8416c9ab}\label{classagui_1_1_open_g_l_graphics_a6bf75c231dc6237d372b9cae8416c9ab}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!get\+Clipping\+Rectangle@{get\+Clipping\+Rectangle}}
+\index{get\+Clipping\+Rectangle@{get\+Clipping\+Rectangle}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{get\+Clipping\+Rectangle()}{getClippingRectangle()}}
+{\footnotesize\ttfamily Rectangle agui\+::\+Open\+G\+L\+Graphics\+::get\+Clipping\+Rectangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_afe63a1d7c4483c1d8315d781c516f8c8}\label{classagui_1_1_open_g_l_graphics_afe63a1d7c4483c1d8315d781c516f8c8}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!get\+Display\+Size@{get\+Display\+Size}}
+\index{get\+Display\+Size@{get\+Display\+Size}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{get\+Display\+Size()}{getDisplaySize()}}
+{\footnotesize\ttfamily agui\+::\+Dimension agui\+::\+Open\+G\+L\+Graphics\+::get\+Display\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_ab9203c356b807cdff090f23b94cc19fe}\label{classagui_1_1_open_g_l_graphics_ab9203c356b807cdff090f23b94cc19fe}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!reset\+Target\+Image@{reset\+Target\+Image}}
+\index{reset\+Target\+Image@{reset\+Target\+Image}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{reset\+Target\+Image()}{resetTargetImage()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::reset\+Target\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_adcd13d35b9590bfb0019b2a4dd53b692}\label{classagui_1_1_open_g_l_graphics_adcd13d35b9590bfb0019b2a4dd53b692}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!set\+Clipping\+Rectangle@{set\+Clipping\+Rectangle}}
+\index{set\+Clipping\+Rectangle@{set\+Clipping\+Rectangle}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{set\+Clipping\+Rectangle()}{setClippingRectangle()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::set\+Clipping\+Rectangle (\begin{DoxyParamCaption}\item[{const Rectangle \&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_acb546631e5be32af2c3bac34b4159320}\label{classagui_1_1_open_g_l_graphics_acb546631e5be32af2c3bac34b4159320}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!set\+Target\+Image@{set\+Target\+Image}}
+\index{set\+Target\+Image@{set\+Target\+Image}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{set\+Target\+Image()}{setTargetImage()}}
+{\footnotesize\ttfamily void agui\+::\+Open\+G\+L\+Graphics\+::set\+Target\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_image}{Image}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_aaca483f805bee0f62f04c6ffa0bf8c2b}\label{classagui_1_1_open_g_l_graphics_aaca483f805bee0f62f04c6ffa0bf8c2b}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!s\+\_\+circle\+Step@{s\+\_\+circle\+Step}}
+\index{s\+\_\+circle\+Step@{s\+\_\+circle\+Step}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{s\+\_\+circle\+Step}{s\_circleStep}}
+{\footnotesize\ttfamily constexpr float agui\+::\+Open\+G\+L\+Graphics\+::s\+\_\+circle\+Step = 2 $\ast$ M\+\_\+\+PI / \mbox{\hyperlink{classagui_1_1_open_g_l_graphics_a54efd9b25aaa7c9652c6640d13e1f4dd}{s\+\_\+circle\+Steps\+Num}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classagui_1_1_open_g_l_graphics_a54efd9b25aaa7c9652c6640d13e1f4dd}\label{classagui_1_1_open_g_l_graphics_a54efd9b25aaa7c9652c6640d13e1f4dd}} 
+\index{agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}!s\+\_\+circle\+Steps\+Num@{s\+\_\+circle\+Steps\+Num}}
+\index{s\+\_\+circle\+Steps\+Num@{s\+\_\+circle\+Steps\+Num}!agui\+::\+Open\+G\+L\+Graphics@{agui\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{s\+\_\+circle\+Steps\+Num}{s\_circleStepsNum}}
+{\footnotesize\ttfamily constexpr int agui\+::\+Open\+G\+L\+Graphics\+::s\+\_\+circle\+Steps\+Num = 20\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\+Backend/\mbox{\hyperlink{_open_g_l_graphics_8h}{Open\+G\+L\+Graphics.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\+Backend/\mbox{\hyperlink{_open_g_l_graphics_8cpp}{Open\+G\+L\+Graphics.\+cpp}}\end{DoxyCompactItemize}

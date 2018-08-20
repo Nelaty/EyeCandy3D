@@ -15,6 +15,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="include\EC3D\Core\ResourceRegistry.inl" />
+    <None Include="src\Core\Cursor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\EC3D\Common\Common.h" />
@@ -29,7 +30,6 @@
     <ClInclude Include="include\EC3D\Core\FontTextureAtlas.h" />
     <ClInclude Include="include\EC3D\Core\Freetype.h" />
     <ClInclude Include="include\EC3D\Core\Geometry.h" />
-    <ClInclude Include="include\EC3D\Core\GeometryRoot.h" />
     <ClInclude Include="include\EC3D\Core\InputEvent.h" />
     <ClInclude Include="include\EC3D\Core\InputObservable.h" />
     <ClInclude Include="include\EC3D\Core\Material.h" />
@@ -77,6 +77,25 @@
     <ClInclude Include="include\EC3D\Core\CameraType.h" />
     <ClInclude Include="include\EC3D\Core\Transform3D.h" />
     <ClInclude Include="include\EC3D\GUI\GUIModel.h" />
+    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLCursorProvider.h" />
+    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLFont.h" />
+    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLFontLoader.h" />
+    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLGraphics.h" />
+    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLImage.h" />
+    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLImageLoader.h" />
+    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLInput.h" />
+    <ClInclude Include="include\EC3D\Core\keycodes.h" />
+    <ClInclude Include="include\EC3D\Core\Cursor.h" />
+    <ClInclude Include="include\EC3D\Core\SpringGeometry.h" />
+    <ClInclude Include="include\EC3D\Core\DynamicLineGeometry.h" />
+    <ClInclude Include="include\EC3D\Core\DynamicGeometry.h" />
+    <ClInclude Include="include\EC3D\Core\StaticGeometry.h" />
+    <ClInclude Include="include\EC3D\Core\EventSource.h" />
+    <ClInclude Include="include\EC3D\Core\EventQueue.h" />
+    <ClInclude Include="include\EC3D\Core\DeviceRegistry.h" />
+    <ClInclude Include="include\EC3D\Core\Mouse.h" />
+    <ClInclude Include="include\EC3D\Core\Keyboard.h" />
+    <ClInclude Include="include\EC3D\Core\Application.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -126,5 +145,21 @@
     <ClCompile Include="src\Core\Renderer.cpp" />
     <ClCompile Include="src\Core\Transform3D.cpp" />
     <ClCompile Include="src\GUI\GUIModel.cpp" />
+    <ClCompile Include="src\GUI\Backend\OpenGLCursorProvider.cpp" />
+    <ClCompile Include="src\GUI\Backend\OpenGLFont.cpp" />
+    <ClCompile Include="src\GUI\Backend\OpenGLFontLoader.cpp" />
+    <ClCompile Include="src\GUI\Backend\OpenGLGraphics.cpp" />
+    <ClCompile Include="src\GUI\Backend\OpenGLImage.cpp" />
+    <ClCompile Include="src\GUI\Backend\OpenGLImageLoader.cpp" />
+    <ClCompile Include="src\GUI\Backend\OpenGLInput.cpp" />
+    <ClCompile Include="src\Core\DynamicLineGeometry.cpp" />
+    <ClCompile Include="src\Core\DynamicGeometry.cpp" />
+    <ClCompile Include="src\Core\StaticGeometry.cpp" />
+    <ClCompile Include="src\Core\EventSource.cpp" />
+    <ClCompile Include="src\Core\EventQueue.cpp" />
+    <ClCompile Include="src\Core\DeviceRegistry.cpp" />
+    <ClCompile Include="src\Core\Mouse.cpp" />
+    <ClCompile Include="src\Core\Keyboard.cpp" />
+    <ClCompile Include="src\Core\Application.cpp" />
   </ItemGroup>
 </Project>

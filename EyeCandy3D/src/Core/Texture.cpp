@@ -6,6 +6,7 @@
 namespace ec
 {
 	Texture::Texture()
+		: m_id{-1}
 	{
 	}
 
@@ -23,7 +24,7 @@ namespace ec
 		m_type = type;
 	}
 
-	unsigned int Texture::GetId() const
+	int Texture::GetId() const
 	{
 		return m_id;
 	}
@@ -120,6 +121,20 @@ namespace ec
 
 		m_dimension = TextureTypes::Dimensions::texture_3D;
 		return result;
+	}
+
+	bool Texture::IsInitialized() const
+	{
+		return m_id != -1;
+	}
+
+	void Texture::Free()
+	{
+		if(!IsInitialized()) return;
+		
+		GLuint id = m_id;
+		glDeleteTextures(1, &id);
+		m_id = -1;
 	}
 
 	const std::string& TextureTypes::GetTypeString(const Type type)

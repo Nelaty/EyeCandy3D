@@ -66,6 +66,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -81,16 +82,26 @@ Collaboration diagram for ec::Window:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_window__coll__graph.png" border="0" usemap="#ec_1_1_window_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_window_coll__map" id="ec_1_1_window_coll__map">
-<area shape="rect" id="node3" href="classec_1_1_scene_system.html" title="{ec::SceneSystem\n||+ SceneSystem()\l+ ~SceneSystem()\l+ Tick()\l+ RegisterScene()\l+ UnregisterScene()\l+ GetScene()\l+ AddSceneController()\l+ RemoveSceneController()\l+ GetSceneController()\l+ GetWindow()\l}" alt="" coords="89,498,269,707"/>
-<area shape="rect" id="node8" href="structec_1_1_mouse_button_event.html" title="{ec::MouseButtonEvent\n||+ MouseButtonEvent()\l+ ~MouseButtonEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="347,197,505,362"/>
-<area shape="rect" id="node6" href="classec_1_1_input_observable.html" title="{ec::InputObservable\n||+ InputObservable()\l+ ~InputObservable()\l+ ReceiveEvent()\l+ RegisterInputListener()\l+ UnregisterInputListener()\l+ Contains()\l+ UnregisterAllInputListeners()\l+ InformAll()\l+ SetLastMouseButtonEvent()\l+ GetLastMouseButtonEvent()\l+ SetLastMousePosition()\l+ GetLastMousePosition()\l# ClearEvents()\l}" alt="" coords="601,476,798,729"/>
-<area shape="rect" id="node13" href="classec_1_1_renderer.html" title="{ec::Renderer\n||+ Renderer()\l+ ~Renderer()\l+ Render()\l+ ChangeRenderer()\l+ RegisterSceneRenderer()\l+ UnregisterSceneRenderer()\l+ GetSceneRenderer()\l}" alt="" coords="1107,520,1297,685"/>
-<area shape="rect" id="node15" href="classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ Render()\l+ SetScene()\l+ GetScene()\l+ GetFrame()\l+ GetFrame()\l+ SetFrame()\l+ AddRenderingTarget()\l# OnBeginRender()\l# OnRender()\l# OnEndRender()\l}" alt="" coords="1260,160,1419,399"/>
-<area shape="rect" id="node16" href="classec_1_1_timer.html" title="{ec::Timer\n||+ Timer()\l+ ~Timer()\l+ Reset()\l+ ResetTimeDelta()\l+ GetTime()\l+ GetTimeDelta()\l}" alt="" coords="1321,527,1456,678"/>
-<area shape="rect" id="node17" href="classec_1_1_shader_manager.html" title="{ec::ShaderManager\n||+ ShaderManager()\l+ ~ShaderManager()\l+ AddShader()\l+ GetShader()\l+ GetAllShader()\l+ SwitchShaderProgram()\l}" alt="" coords="1481,527,1651,678"/>
+<area shape="rect" id="node3" href="classec_1_1_scene_system.html" title="{ec::SceneSystem\n||+ SceneSystem()\l+ ~SceneSystem()\l+ Tick()\l+ RegisterScene()\l+ UnregisterScene()\l+ GetScene()\l+ AddSceneController()\l+ RemoveSceneController()\l+ GetSceneController()\l+ GetWindow()\l}" alt="" coords="89,652,269,861"/>
+<area shape="rect" id="node7" href="structec_1_1_keyboard_event.html" title="{ec::KeyboardEvent\n||+ KeyboardEvent()\l+ KeyboardEvent()\l+ ~KeyboardEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="1007,321,1144,501"/>
+<area shape="rect" id="node9" href="structec_1_1_display_event.html" title="{ec::DisplayEvent\n||+ DisplayEvent()\l+ DisplayEvent()\l+ Print()\l}" alt="" coords="667,358,785,465"/>
+<area shape="rect" id="node11" href="structec_1_1_mouse_event.html" title="{ec::MouseEvent\n||+ MouseEvent()\l+ MouseEvent()\l+ ~MouseEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="511,321,642,501"/>
+<area shape="rect" id="node6" href="classec_1_1_input_observable.html" title="{ec::InputObservable\n||+ InputObservable()\l+ ~InputObservable()\l+ ReceiveEvent()\l+ RegisterInputListener()\l+ UnregisterInputListener()\l+ Contains()\l+ UnregisterAllInputListeners()\l+ InformAll()\l+ SetLastPrevMouseEvent()\l+ GetPrevMouseEvent()\l+ SetPrevKeyboardEvent()\l+ GetPrevKeyboardEvent()\l+ SetPrevDisplayEvent()\l+ GetPrevDisplayEvent()\l# PrepareEvent()\l# ClearEvents()\l}" alt="" coords="698,608,895,905"/>
+<area shape="rect" id="node16" href="classec_1_1_device_registry.html" title="{ec::DeviceRegistry\n||+ DeviceRegistry()\l+ ~DeviceRegistry()\l+ InstallAll()\l+ UninstallAll()\l+ InstallKeyboard()\l+ UninstallKeyboard()\l+ InstallMouse()\l+ UninstallMouse()\l}" alt="" coords="1227,667,1374,847"/>
+<area shape="rect" id="node17" href="classec_1_1_renderer.html" title="{ec::Renderer\n||+ Renderer()\l+ ~Renderer()\l+ Render()\l+ ChangeRenderer()\l+ RegisterSceneRenderer()\l+ UnregisterSceneRenderer()\l+ GetSceneRenderer()\l}" alt="" coords="1399,674,1589,839"/>
+<area shape="rect" id="node19" href="classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ Render()\l+ SetScene()\l+ GetScene()\l+ GetFrame()\l+ GetFrame()\l+ SetFrame()\l+ AddRenderingTarget()\l# OnBeginRender()\l# OnRender()\l# OnEndRender()\l}" alt="" coords="1328,292,1487,531"/>
+<area shape="rect" id="node20" href="classec_1_1_timer.html" title="{ec::Timer\n||+ Timer()\l+ ~Timer()\l+ Reset()\l+ ResetTimeDelta()\l+ GetTime()\l+ GetTimeDelta()\l}" alt="" coords="1613,681,1748,832"/>
+<area shape="rect" id="node21" href="classec_1_1_shader_manager.html" title="{ec::ShaderManager\n||+ ShaderManager()\l+ ~ShaderManager()\l+ AddShader()\l+ GetShader()\l+ GetAllShader()\l+ SwitchShaderProgram()\l}" alt="" coords="1773,681,1943,832"/>
 </map>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:afe0927efdedc84c345120ae15bf6994a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#afe0927efdedc84c345120ae15bf6994a">EventQueue_Ptr</a> = std::unique_ptr&lt; <a class="el" href="classec_1_1_event_queue.html">EventQueue</a> &gt;</td></tr>
+<tr class="separator:afe0927efdedc84c345120ae15bf6994a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7501526590ece55dbe92ea496e62738"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#ae7501526590ece55dbe92ea496e62738">EventSource_Ptr</a> = std::unique_ptr&lt; <a class="el" href="classec_1_1_event_source.html">EventSource</a> &gt;</td></tr>
+<tr class="separator:ae7501526590ece55dbe92ea496e62738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af9eab51c6ea017a296866278bbbcdb28"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#af9eab51c6ea017a296866278bbbcdb28">Window</a> (const unsigned int windowWidth, const unsigned int windowHeight, const char *windowTitle)</td></tr>
@@ -105,14 +116,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af0be4ef5101cfd9251511c402c1e9598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fa670ea10ce548d445e1a82ded336a2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a5fa670ea10ce548d445e1a82ded336a2">SetFrameRate</a> (const double fps)</td></tr>
 <tr class="separator:a5fa670ea10ce548d445e1a82ded336a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53866131854aeb378e8a21cf18c9810b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a53866131854aeb378e8a21cf18c9810b">ResizeCallback</a> (GLFWwindow *window, int width, int height)</td></tr>
-<tr class="separator:a53866131854aeb378e8a21cf18c9810b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95ea89916704775d858e441c8b7430cd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a95ea89916704775d858e441c8b7430cd">ResizeWindow</a> (GLFWwindow *window, int width, int height)</td></tr>
+<tr class="separator:a95ea89916704775d858e441c8b7430cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f2af2fca7c4c20d027acf6afaf79b99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_observable.html">InputObservable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a0f2af2fca7c4c20d027acf6afaf79b99">GetInputObserver</a> ()</td></tr>
 <tr class="separator:a0f2af2fca7c4c20d027acf6afaf79b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f2d20a2d7b3bc05c29830164437d190"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_shader_manager.html">ShaderManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a5f2d20a2d7b3bc05c29830164437d190">GetShaderManager</a> ()</td></tr>
 <tr class="separator:a5f2d20a2d7b3bc05c29830164437d190"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad83b5eb3bb0708c08503ac3c6b7b670"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_system.html">SceneSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aad83b5eb3bb0708c08503ac3c6b7b670">GetSceneSystem</a> ()</td></tr>
 <tr class="separator:aad83b5eb3bb0708c08503ac3c6b7b670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d0d9e287c7dbf2377755ed89ea6848c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_event_queue.html">EventQueue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a7d0d9e287c7dbf2377755ed89ea6848c">GetEventQueue</a> ()</td></tr>
+<tr class="separator:a7d0d9e287c7dbf2377755ed89ea6848c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7253c61f74c2f5f6281d546379ca20e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_event_source.html">EventSource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a7253c61f74c2f5f6281d546379ca20e0">GetEventSource</a> ()</td></tr>
+<tr class="separator:a7253c61f74c2f5f6281d546379ca20e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefcd8fd06bb58f946100005975fc94c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aefcd8fd06bb58f946100005975fc94c4">SwitchToFaceMode</a> ()</td></tr>
 <tr class="separator:aefcd8fd06bb58f946100005975fc94c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5176dd1ed33f621b4eb8f71eb64cccad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a5176dd1ed33f621b4eb8f71eb64cccad">SwitchToWireframeMode</a> ()</td></tr>
@@ -161,11 +176,42 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a070efea3cadf4eaee9af066b7b21d595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6951a4d1a08549dcc797cf12c8f46710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_renderer.html">Renderer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a6951a4d1a08549dcc797cf12c8f46710">m_renderer</a></td></tr>
 <tr class="separator:a6951a4d1a08549dcc797cf12c8f46710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b0d5c6b22c3540bfcb18a29a0cc181"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_device_registry.html">DeviceRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a55b0d5c6b22c3540bfcb18a29a0cc181">m_deviceRegistry</a></td></tr>
+<tr class="separator:a55b0d5c6b22c3540bfcb18a29a0cc181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7245d9cfc57373c805b63ba3e8826f8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aa7245d9cfc57373c805b63ba3e8826f8">m_frameRate</a></td></tr>
 <tr class="separator:aa7245d9cfc57373c805b63ba3e8826f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c56361d6931e3a5a6dcfe7a08c25e09"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a6c56361d6931e3a5a6dcfe7a08c25e09">m_frameInterval</a></td></tr>
 <tr class="separator:a6c56361d6931e3a5a6dcfe7a08c25e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="afe0927efdedc84c345120ae15bf6994a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe0927efdedc84c345120ae15bf6994a">&#9670;&nbsp;</a></span>EventQueue_Ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classec_1_1_window.html#afe0927efdedc84c345120ae15bf6994a">ec::Window::EventQueue_Ptr</a> =  std::unique_ptr&lt;<a class="el" href="classec_1_1_event_queue.html">EventQueue</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7501526590ece55dbe92ea496e62738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7501526590ece55dbe92ea496e62738">&#9670;&nbsp;</a></span>EventSource_Ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classec_1_1_window.html#ae7501526590ece55dbe92ea496e62738">ec::Window::EventSource_Ptr</a> =  std::unique_ptr&lt;<a class="el" href="classec_1_1_event_source.html">EventSource</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af9eab51c6ea017a296866278bbbcdb28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9eab51c6ea017a296866278bbbcdb28">&#9670;&nbsp;</a></span>Window()</h2>
@@ -302,6 +348,42 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d0d9e287c7dbf2377755ed89ea6848c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d0d9e287c7dbf2377755ed89ea6848c">&#9670;&nbsp;</a></span>GetEventQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classec_1_1_event_queue.html">ec::EventQueue</a> * ec::Window::GetEventQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the event queue of this window </p>
+
+</div>
+</div>
+<a id="a7253c61f74c2f5f6281d546379ca20e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7253c61f74c2f5f6281d546379ca20e0">&#9670;&nbsp;</a></span>GetEventSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classec_1_1_event_source.html">ec::EventSource</a> * ec::Window::GetEventSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the event source of this window </p>
 
 </div>
 </div>
@@ -467,8 +549,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a53866131854aeb378e8a21cf18c9810b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53866131854aeb378e8a21cf18c9810b">&#9670;&nbsp;</a></span>ResizeCallback()</h2>
+<a id="a95ea89916704775d858e441c8b7430cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95ea89916704775d858e441c8b7430cd">&#9670;&nbsp;</a></span>ResizeWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -477,7 +559,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::ResizeCallback </td>
+          <td class="memname">void ec::Window::ResizeWindow </td>
           <td>(</td>
           <td class="paramtype">GLFWwindow *&#160;</td>
           <td class="paramname"><em>window</em>, </td>
@@ -656,6 +738,28 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a55b0d5c6b22c3540bfcb18a29a0cc181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b0d5c6b22c3540bfcb18a29a0cc181">&#9670;&nbsp;</a></span>m_deviceRegistry</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classec_1_1_device_registry.html">DeviceRegistry</a> ec::Window::m_deviceRegistry</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6c56361d6931e3a5a6dcfe7a08c25e09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c56361d6931e3a5a6dcfe7a08c25e09">&#9670;&nbsp;</a></span>m_frameInterval</h2>
 

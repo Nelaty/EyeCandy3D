@@ -1,21 +1,5 @@
 var searchData=
 [
-  ['scene_2ecpp',['Scene.cpp',['../_scene_8cpp.html',1,'']]],
-  ['scene_2eh',['Scene.h',['../_scene_8h.html',1,'']]],
-  ['scenecontroller_2ecpp',['SceneController.cpp',['../_scene_controller_8cpp.html',1,'']]],
-  ['scenecontroller_2eh',['SceneController.h',['../_scene_controller_8h.html',1,'']]],
-  ['scenerenderer_2ecpp',['SceneRenderer.cpp',['../_scene_renderer_8cpp.html',1,'']]],
-  ['scenerenderer_2eh',['SceneRenderer.h',['../_scene_renderer_8h.html',1,'']]],
-  ['scenesystem_2ecpp',['SceneSystem.cpp',['../_scene_system_8cpp.html',1,'']]],
-  ['scenesystem_2eh',['SceneSystem.h',['../_scene_system_8h.html',1,'']]],
-  ['screen_2ecpp',['Screen.cpp',['../_screen_8cpp.html',1,'']]],
-  ['screen_2eh',['Screen.h',['../_screen_8h.html',1,'']]],
-  ['shader_2ecpp',['Shader.cpp',['../_shader_8cpp.html',1,'']]],
-  ['shader_2eh',['Shader.h',['../_shader_8h.html',1,'']]],
-  ['shadermanager_2ecpp',['ShaderManager.cpp',['../_shader_manager_8cpp.html',1,'']]],
-  ['shadermanager_2eh',['ShaderManager.h',['../_shader_manager_8h.html',1,'']]],
-  ['slot_2eh',['Slot.h',['../_slot_8h.html',1,'']]],
-  ['slotpair_2eh',['SlotPair.h',['../_slot_pair_8h.html',1,'']]],
-  ['spheremesh_2ecpp',['SphereMesh.cpp',['../_sphere_mesh_8cpp.html',1,'']]],
-  ['spheremesh_2eh',['SphereMesh.h',['../_sphere_mesh_8h.html',1,'']]]
+  ['node_2ecpp',['Node.cpp',['../_node_8cpp.html',1,'']]],
+  ['node_2eh',['Node.h',['../_node_8h.html',1,'']]]
 ];

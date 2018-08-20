@@ -2,6 +2,9 @@
 #include "EC3D/Common/Config.h"
 #include "EC3D/Core/InputEvent.h"
 
+#include "EC3D/Core/EventQueue.h"
+#include "EC3D/Core/EventSource.h"
+
 #include "EC3D/Utilities/Profiler.h"
 
 #include <gl/glew.h>
@@ -17,9 +20,13 @@ namespace ec
 		m_windowHeight{windowHeight},
 		m_windowTitle{windowTitle},
 		m_initSuccessful{false},
-		m_clearColor{0.5,0.5,0.5,1.0}
+		m_clearColor{0.5,0.5,0.5,1.0},
+		m_deviceRegistry{this}
 	{
 		Init();
+
+		m_eventQueue = std::make_unique<EventQueue>();
+		m_eventSource = std::make_unique<EventSource>();
 
 		m_frameInterval = 1.0 / 100.0;
 
@@ -102,7 +109,7 @@ namespace ec
 		printf("ERROR: %s\n", description);
 	}
 
-	void Window::ResizeCallback(GLFWwindow* window, int width, int height)
+	void Window::ResizeWindow(GLFWwindow* window, int width, int height)
 	{
 		m_windowWidth = width;
 		m_windowHeight = height;
@@ -121,6 +128,11 @@ namespace ec
 	ec::SceneSystem& Window::GetSceneSystem()
 	{
 		return m_sceneSystem;
+	}
+
+	ec::EventQueue* Window::GetEventQueue()
+	{
+		return m_eventQueue.get();
 	}
 
 	void Window::SwitchToFaceMode()
@@ -215,158 +227,90 @@ namespace ec
 	{
 		printf("Initializing Callbacks...\n");
 		glfwSetWindowUserPointer(m_window, this);
-		
-		// Error
+
+		// Error callback
 		glfwSetErrorCallback(Window::ErrorCallback);
 
-		// Mouse
-		auto cursorPosCallback = [](GLFWwindow* window, double xpos, double ypos)
-		{	
-			auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
-
-			const auto& lastMouseButtonEvent = inputObserver.GetLastMouseButtonEvent();
-			if(lastMouseButtonEvent.m_pressed)
-			{
-				glm::vec2 offset(xpos, ypos);
-				offset -= inputObserver.GetLastMousePosition();
-				inputObserver.SetLastMousePosition(glm::vec2(xpos, ypos));
-
-				InputEvent inputEvent(InputType::mouse_drag);
-				inputEvent.m_event.m_drag = MouseDragEvent(window, offset.x, offset.y, xpos, ypos, lastMouseButtonEvent.m_button, lastMouseButtonEvent.m_mods);
-				inputObserver.ReceiveEvent(inputEvent);
-			}
-	
-			InputEvent inputEvent(InputType::mouse_move);
-			inputEvent.m_event.m_move = MouseMoveEvent(window, xpos, ypos);
-			inputObserver.ReceiveEvent(inputEvent);	
-		};
-		glfwSetCursorPosCallback(m_window, cursorPosCallback);
-		
-		auto cursorEnterCallback = [](GLFWwindow* window, int entered)
-		{
-			InputEvent inputEvent(InputType::mouse_enter);
-			inputEvent.m_event.m_entered = MouseEnterEvent(window, entered);
-			static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver().ReceiveEvent(inputEvent);
-		};
-		glfwSetCursorEnterCallback(m_window, cursorEnterCallback);
-
-		auto mouseButtonCallback = [](GLFWwindow* window, int button, int action, int mods)
-		{
-			if(action == GLFW_PRESS)
-			{
-				InputEvent inputEvent(InputType::mouse_button_pressed);
-				inputEvent.m_event.m_mouse = MouseButtonEvent(window, button, mods, true);
-				auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
-				inputObserver.ReceiveEvent(inputEvent);
-				inputObserver.SetLastMouseButtonEvent(inputEvent.m_event.m_mouse);
-			}
-			else if(action == GLFW_RELEASE)
-			{
-				InputEvent inputEvent(InputType::mouse_button_released);
-				inputEvent.m_event.m_mouse = MouseButtonEvent(window, button, mods, false);
-				auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
-				inputObserver.ReceiveEvent(inputEvent);
-				inputObserver.SetLastMouseButtonEvent(inputEvent.m_event.m_mouse);
-			}
-		};
-		glfwSetMouseButtonCallback(m_window, mouseButtonCallback);
-
-		auto scrollCallback = [](GLFWwindow* window, double xoffset, double yoffset)
-		{
-			InputEvent inputEvent(InputType::mouse_scroll);
-			inputEvent.m_event.m_scroll = MouseScrollEvent(window, xoffset, yoffset);
-			static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver().ReceiveEvent(inputEvent);
-		};
-		glfwSetScrollCallback(m_window, scrollCallback);
+		// Install all other devices (keyboard, mouse etc.)
+		m_deviceRegistry.InstallAll();
 
 		// Joystick
-		// TODO: Set joystick callback
+		/// \todo Create joystick device and add entry in DeviceRegistry
 
-		// Keyboard
-		auto keyCallback = [](GLFWwindow* window, int key, int scancode, int action, int mods)
+		// Window callbacks
+		glfwSetDropCallback(m_window, Window::DropCallback);
+		glfwSetFramebufferSizeCallback(m_window, Window::ResizeCallback);
+		glfwSetWindowFocusCallback(m_window, Window::FocusCallback);
+		glfwSetWindowCloseCallback(m_window, Window::CloseCallback);
+	}
+
+	void Window::DropCallback(GLFWwindow* window, int count, const char** paths)
+	{
+		InputEvent inputEvent(InputType::drop);
+		auto& dropEvent = inputEvent.m_event.m_drop;
+
+		dropEvent = DropEvent(0, 0,
+							  window,
+							  count, paths);
+
+		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
+		inputObserver.ReceiveEvent(inputEvent);
+	}
+
+	void Window::ResizeCallback(GLFWwindow* window, int width, int height)
+	{
+		static_cast<Window*>(glfwGetWindowUserPointer(window))->ResizeWindow(window, width, height);
+
+		InputEvent inputEvent(InputType::resize);
+		auto& displayEvent = inputEvent.m_event.m_display;
+
+		displayEvent = DisplayEvent(window, 0, 0, width, height);
+
+		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
+		inputObserver.ReceiveEvent(inputEvent);
+	}
+
+	void Window::FocusCallback(GLFWwindow* window, int focused)
+	{
+		InputEvent inputEvent;
+		auto& displayEvent = inputEvent.m_event.m_display;
+
+		displayEvent = DisplayEvent(window, 0, 0, 0, 0);
+
+		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
+		if(focused == GLFW_TRUE)
 		{
-			if(action == GLFW_PRESS)
-			{
-				InputEvent inputEvent(InputType::key_pressed);
-				inputEvent.m_event.m_key = KeyEvent(window, key, scancode, mods, true);
-				static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver().ReceiveEvent(inputEvent);
-			}
-			else if(action == GLFW_RELEASE)
-			{
-				InputEvent inputEvent(InputType::key_released);
-				inputEvent.m_event.m_key = KeyEvent(window, key, scancode, mods, false);
-				static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver().ReceiveEvent(inputEvent);
-			}
-		};
-		glfwSetKeyCallback(m_window, keyCallback);
-
-		// Text
-		auto charModsCallback = [](GLFWwindow* window, unsigned int codepoint, int mods)
+			inputEvent.m_type = InputType::gained_focus;
+		}
+		else if(focused == GLFW_FALSE)
 		{
-			InputEvent inputEvent(InputType::text);
-			inputEvent.m_event.m_text = TextEvent(window, codepoint, mods);
-			static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver().ReceiveEvent(inputEvent);
-		};
-		glfwSetCharModsCallback(m_window, charModsCallback);
+			inputEvent.m_type = InputType::lost_focus;
+		}
+		inputObserver.ReceiveEvent(inputEvent);
+	}
 
-		// Drag & drop
-		auto dropCallback = [](GLFWwindow* window, int count, const char** paths)
-		{
-			InputEvent inputEvent(InputType::drop);
-			inputEvent.m_event.m_drop = DropEvent(window, count, paths);
-			static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver().ReceiveEvent(inputEvent);
-		};
-		glfwSetDropCallback(m_window, dropCallback);
-	
-		// Window resize
-		auto resizeCallback = [](GLFWwindow* window, int width, int height)
-		{
-			static_cast<Window*>(glfwGetWindowUserPointer(window))->ResizeCallback(window, width, height);
+	void Window::CloseCallback(GLFWwindow* window)
+	{
+		InputEvent inputEvent(InputType::closed);
+			auto& displayEvent = inputEvent.m_event.m_display;
 
-			InputEvent inputEvent(InputType::resize);
-			inputEvent.m_event.m_resize = ResizeEvent(window, width, height);
-			static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver().ReceiveEvent(inputEvent);
-		};
-		glfwSetFramebufferSizeCallback(m_window, resizeCallback);
-	
-		// Window focused
-		auto focusCallback = [](GLFWwindow* window, int focused)
-		{
-			if(focused == GLFW_TRUE)
-			{
-				InputEvent inputEvent(InputType::gained_focus);
-				inputEvent.m_event.m_focus = FocusEvent(window, true);
-				static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver().ReceiveEvent(inputEvent);
-			}
-			else if(focused == GLFW_FALSE)
-			{
-				InputEvent inputEvent(InputType::lost_focus);
-				inputEvent.m_event.m_focus = FocusEvent(window, false);
-				static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver().ReceiveEvent(inputEvent);
-			}
-		};
-		glfwSetWindowFocusCallback(m_window, focusCallback);
+			displayEvent = DisplayEvent(window, 0, 0, 0, 0);
+		
+			auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
+			inputObserver.ReceiveEvent(inputEvent);
+	}
 
-		// Window closed
-		auto closeCallback = [](GLFWwindow* window)
-		{
-			InputEvent inputEvent(InputType::closed);
-			inputEvent.m_event.m_closed = ClosedEvent(window);
-			static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver().ReceiveEvent(inputEvent);
-		};
-		glfwSetWindowCloseCallback(m_window, closeCallback);
-}
 
-void Window::InitOpenGL()
-{
-	glEnable(GL_CULL_FACE);
-	glPolygonMode(GL_FRONT, GL_LINE);
-	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	void Window::InitOpenGL()
+	{
+		glEnable(GL_CULL_FACE);
+		glPolygonMode(GL_FRONT, GL_LINE);
+		//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-}
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	}
 
-void Window::PrintVersions() const
+	void Window::PrintVersions() const
 	{
 		int major = 0;
 		int minor = 0;
@@ -437,6 +381,11 @@ void Window::PrintVersions() const
 	GLFWwindow* Window::GetWindow() const
 	{
 		return m_window;
+	}
+
+	ec::EventSource* Window::GetEventSource()
+	{
+		return m_eventSource.get();
 	}
 
 }

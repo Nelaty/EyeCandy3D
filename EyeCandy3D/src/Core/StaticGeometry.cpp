@@ -10,7 +10,7 @@ namespace ec
 
 	void StaticGeometry::beginRender()
 	{
-		glBindVertexArray(m_VAO);
+		glBindVertexArray(m_vao);
 	}
 
 	void StaticGeometry::onRender()
@@ -25,16 +25,16 @@ namespace ec
 
 	void StaticGeometry::setupMesh()
 	{
-		glGenVertexArrays(1, &m_VAO);
-		glGenBuffers(1, &m_VBO);
-		glGenBuffers(1, &m_EBO);
+		glGenVertexArrays(1, &m_vao);
+		glGenBuffers(1, &m_vbo);
+		glGenBuffers(1, &m_ebo);
 
-		glBindVertexArray(m_VAO);
+		glBindVertexArray(m_vao);
 
-		glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
+		glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 		glBufferData(GL_ARRAY_BUFFER, m_vertices.size() * sizeof(Vertex), &m_vertices[0], GL_DYNAMIC_COPY);
 
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_EBO);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size() * sizeof(unsigned int), &m_indices[0], GL_DYNAMIC_COPY);
 
 
@@ -78,16 +78,16 @@ namespace ec
 
 	GLuint StaticGeometry::getVao() const
 	{
-		return m_VAO;
+		return m_vao;
 	}
 
 	GLuint StaticGeometry::getVbo() const
 	{
-		return m_VBO;
+		return m_vbo;
 	}
 
 	GLuint StaticGeometry::getEbo() const
 	{
-		return m_EBO;
+		return m_ebo;
 	}
 }

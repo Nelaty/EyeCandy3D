@@ -8,7 +8,7 @@ namespace ec
 	RectangleMesh::RectangleMesh(const float uniform /*= 1.0f*/)
 	{
 		init(uniform, uniform);
-		setupMesh();
+		StaticGeometry::setupMesh();
 	}
 
 	RectangleMesh::RectangleMesh(const float width, const float height)

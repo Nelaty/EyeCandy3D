@@ -12,8 +12,8 @@ namespace ec
 		void resize(float radius, int latitude = 20, int longitude = 20);
 
 		float getRadius() const;
-		float getLatitude() const;
-		float getLongitude() const;
+		int getLatitude() const;
+		int getLongitude() const;
 
 	private:
 		void init(float radius, int latitude, int longitude);
@@ -22,7 +22,7 @@ namespace ec
 		void initIndices();
 
 		float m_radius;
-		float m_latitude;
-		float m_longitude;
+		int m_latitude;
+		int m_longitude;
 	};
 }

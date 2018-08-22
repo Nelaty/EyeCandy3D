@@ -15,14 +15,14 @@ namespace agui
 		virtual ~OpenGLImage();
 		
 		/** Get the width of the texture. */
-		virtual int getWidth() const override;
+		int getWidth() const override;
 		/** Get the height of the texture. */
-		virtual int getHeight() const override;
+		int getHeight() const override;
 		
 		/** Get the color of a pixel at a given position */
-		virtual Color getPixel(int x, int y) const override;
+		Color getPixel(int x, int y) const override;
 		/** Set a pixel of the texture at a given position */
-		virtual void setPixel(int x, int y, const Color& color) override;
+		void setPixel(int x, int y, const Color& color) override;
 		
 		/** Set the texture to a given one. */
 		void setTexture(const ec::Texture& texture, bool autoFree = false);
@@ -30,15 +30,15 @@ namespace agui
 		const ec::Texture& getTexture() const;
 		
 		/** Check if the texture gets automatically deallocated */
-		virtual bool isAutoFreeing() const override;
+		bool isAutoFreeing() const override;
 		/** Free memory allocated by the texture */
-		virtual void free() override;
+		void free() override;
 		
 	private:
 		ec::Texture m_texture;
 
-		int m_width;
-		int m_height;
-		bool m_autoFree;
+		int m_width = 0;
+		int m_height = 0;
+		bool m_autoFree = false;
 	};
 }

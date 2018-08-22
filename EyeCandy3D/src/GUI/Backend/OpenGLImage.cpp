@@ -3,8 +3,7 @@
 namespace agui
 {
 	OpenGLImage::OpenGLImage()
-	{
-	}
+		= default;
 
 	OpenGLImage::OpenGLImage(const std::string& fileName, bool convertMask)
 	{

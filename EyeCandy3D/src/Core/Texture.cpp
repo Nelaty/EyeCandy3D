@@ -79,7 +79,7 @@ namespace ec
 
 		m_type = type;
 		m_id = textureID;
-		m_dimension = TextureTypes::Dimensions::texture_2D;
+		m_dimension = TextureTypes::Dimensions::texture_2d;
 
 		return result;
 	}
@@ -118,7 +118,7 @@ namespace ec
 		glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 		glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
 
-		m_dimension = TextureTypes::Dimensions::texture_3D;
+		m_dimension = TextureTypes::Dimensions::texture_3d;
 		return result;
 	}
 

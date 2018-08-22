@@ -17,49 +17,34 @@ namespace agui
 		{
 			case CursorProvider::DEFAULT_CURSOR:
 				return changeCursor(ec::StandardCursorType::arrow);
-				break;
 			case CursorProvider::ARROW_CURSOR:
 				return changeCursor(ec::StandardCursorType::arrow);
-				break;
 			case CursorProvider::BUSY_CURSOR:
 				return changeCursor(ec::StandardCursorType::arrow);
-				break;
 			case CursorProvider::QUESTION_CURSOR:
 				return changeCursor(ec::StandardCursorType::arrow);
-				break;
 			case CursorProvider::EDIT_CURSOR:
 				return changeCursor(ec::StandardCursorType::ibeam);
-				break;
 			case CursorProvider::MOVE_CURSOR:
 				return changeCursor(ec::StandardCursorType::arrow);
-				break;
 			case CursorProvider::RESIZE_N_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-				break;
 			case CursorProvider::RESIZE_W_CURSOR:
 				return changeCursor(ec::StandardCursorType::horizontal_resize);
-				break;
 			case CursorProvider::RESIZE_S_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-				break;
 			case CursorProvider::RESIZE_E_CURSOR:
 				return changeCursor(ec::StandardCursorType::horizontal_resize);
-				break;
 			case CursorProvider::RESIZE_NW_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-				break;
 			case CursorProvider::RESIZE_SW_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-				break;
 			case CursorProvider::RESIZE_SE_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-				break;
 			case CursorProvider::RESIZE_NE_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-				break;
 			case CursorProvider::LINK_CURSOR:
 				return changeCursor(ec::StandardCursorType::hand);
-				break;
 			default:
 				break;
 		}

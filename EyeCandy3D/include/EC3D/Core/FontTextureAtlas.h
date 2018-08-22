@@ -1,7 +1,7 @@
 #pragma once
-#include "FontCharacter.h"
+#include <GL/glew.h>
 
-#include <gl/glew.h>
+#include "FontCharacter.h"
 
 #include <ft2build.h>
 #include FT_FREETYPE_H

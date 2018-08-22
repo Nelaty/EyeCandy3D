@@ -1,9 +1,6 @@
 #include "EC3D/Core/DeviceRegistry.h"
 #include "EC3D/Core/Window.h"
 
-#include <GLFW/glfw3.h>
-
-
 namespace ec
 {
 	DeviceRegistry::DeviceRegistry(Window* window)

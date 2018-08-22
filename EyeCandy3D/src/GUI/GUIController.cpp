@@ -1,7 +1,8 @@
-#include "EC3D/GUI/GuiController.h"
-#include "EC3D/GUI/GuiSystem.h"
-#include "EC3D/GUI/Gui.h"
-#include "EC3D/GUI/Widget.h"
+#include "EC3D/Gui/GuiController.h"
+#include "EC3D/Gui/GuiSystem.h"
+#include "EC3D/Gui/Gui.h"
+#include "EC3D/Gui/Widget.h"
+#include "EC3D/Gui/GuiModel.h"
 
 #include "EC3D/Core/InputEvent.h"
 

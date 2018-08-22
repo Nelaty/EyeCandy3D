@@ -16,21 +16,16 @@ namespace utl
 			{
 				case ProfilingPrecision::second:
 					return static_cast<unsigned int>(duration_cast<seconds>(end - start).count());
-					break;
 				case ProfilingPrecision::millisecond:
 					return static_cast<unsigned int>(duration_cast<milliseconds>(end - start).count());
-					break;
 				case ProfilingPrecision::microsecond:
 					return static_cast<unsigned int>(duration_cast<microseconds>(end - start).count());
-					break;
 				case ProfilingPrecision::nanosecond:
 					return static_cast<unsigned int>(duration_cast<nanoseconds>(end - start).count());
-					break;
 
 				default:
 					printf("ERROR Profiler: precision not defined!\n");
 					return static_cast<unsigned int>(duration_cast<seconds>(end - start).count());
-					break;
 			}
 		}	
 	}
@@ -89,11 +84,11 @@ namespace utl
 		data.m_loops = loops;
 		data.setPrecision(precision);
 
-		unsigned int tempMin = UINT_MAX;
+		auto tempMin = UINT_MAX;
 		unsigned int tempMax = 0;
 		unsigned int tempAvg = 0;
 
-		for(int i = 0; i < loops; ++i)
+		for(unsigned int i = 0; i < loops; ++i)
 		{
 			const auto start = std::chrono::high_resolution_clock::now();
 			f();

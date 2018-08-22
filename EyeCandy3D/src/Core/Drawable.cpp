@@ -7,7 +7,6 @@
 
 #include <string>
 #include <sstream>
-#include <GL/glew.h>
 
 namespace ec
 {

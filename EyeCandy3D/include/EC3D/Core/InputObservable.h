@@ -2,7 +2,6 @@
 #include "InputEvent.h"
 
 #include <vector>
-#include <glm/glm.hpp>
 
 /**
 * InputObservables inform InputListeners about InputEvents

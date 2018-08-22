@@ -1,6 +1,5 @@
 #include "EC3D/GUI/Backend/OpenGLGraphics.h"
 
-#include <gl/glew.h>
 #include <GLFW/glfw3.h>
 
 namespace agui

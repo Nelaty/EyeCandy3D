@@ -153,10 +153,10 @@ namespace utl
 
 	std::string FileLogger::getSystemTimeFormatted(char divider)
 	{
-		auto now = getSystemDateTime();
-		auto s = now.tm_sec;
-		auto m = now.tm_min;
-		auto h = (now.tm_hour + 2) % 24;
+		const auto now = getSystemDateTime();
+		const auto s = now.tm_sec;
+		const auto m = now.tm_min;
+		const auto h = (now.tm_hour + 2) % 24;
 
 		std::ostringstream timeStrm;
 		if(h < 10)

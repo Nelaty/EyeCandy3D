@@ -1,9 +1,10 @@
 #include "EC3D/Core/Shader/Shader.h"
 
+#include <glm/gtc/type_ptr.hpp>
+
+#include <fstream>
 #include <iostream>
 #include <vector>
-
-#include <glm/gtc/type_ptr.hpp>
 
 namespace ec
 {
@@ -232,26 +233,25 @@ namespace ec
 		GLuint tessCtrlShader = 0;
 		GLuint tessEvalShader = 0;
 
-		auto result = GL_FALSE;
 		int logLength;
 
 		// Compile shaders
-		result = compileShader(vertShader, vertPath.c_str(), vertSource.c_str(), "vertex");
-		result = compileShader(fragShader, fragPath.c_str(), fragSource.c_str(), "fragment");
+		auto result = compileShader(vertShader, vertPath.c_str(), vertSource.c_str(), "vertex");
+		result &= compileShader(fragShader, fragPath.c_str(), fragSource.c_str(), "fragment");
 		if(useGeometryShader)
 		{
 			geomShader = glCreateShader(GL_GEOMETRY_SHADER);
-			result = compileShader(geomShader, geomPath.c_str(), geomSource.c_str(), "geometry");
+			result &= compileShader(geomShader, geomPath.c_str(), geomSource.c_str(), "geometry");
 		}
 		if(useTessCtrlShader)
 		{
 			tessCtrlShader = glCreateShader(GL_TESS_CONTROL_SHADER);
-			result = compileShader(tessCtrlShader, tessCtrlPath.c_str(), tessCtrlSource.c_str(), "tess control");
+			result &= compileShader(tessCtrlShader, tessCtrlPath.c_str(), tessCtrlSource.c_str(), "tess control");
 		}
 		if(useTessEvalShader)
 		{
 			tessEvalShader = glCreateShader(GL_TESS_EVALUATION_SHADER);
-			result = compileShader(tessEvalShader, tessEvalPath.c_str(), tessEvalSource.c_str(), "tess evaluation");
+			result &= compileShader(tessEvalShader, tessEvalPath.c_str(), tessEvalSource.c_str(), "tess evaluation");
 		}
 
 		// Linking the program

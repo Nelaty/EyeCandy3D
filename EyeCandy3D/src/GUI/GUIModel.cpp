@@ -1,5 +1,5 @@
-#include "EC3D/GUI/GuiModel.h"
-#include "EC3D/GUI/Gui.h"
+#include "EC3D/Gui/GuiModel.h"
+#include "EC3D/Gui/Gui.h"
 
 #include <algorithm>
 

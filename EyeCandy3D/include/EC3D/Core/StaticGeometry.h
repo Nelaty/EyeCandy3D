@@ -1,8 +1,8 @@
 #pragma once
+#include <GL/glew.h>
+
 #include "EC3D/Core/Geometry.h"
 #include "EC3D/Core/Vertex.h"
-
-#include <gl/glew.h>
 
 #include <vector>
 
@@ -27,9 +27,9 @@ namespace ec
 		void endRender() override;
 
 		/* Buffers */
-		GLuint m_VAO{};
-		GLuint m_VBO{};
-		GLuint m_EBO{};
+		GLuint m_vao{};
+		GLuint m_vbo{};
+		GLuint m_ebo{};
 
 		/* Initialize the geometry */
 		virtual void setupMesh();

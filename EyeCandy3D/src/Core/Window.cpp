@@ -7,7 +7,6 @@
 
 #include "EC3D/Utilities/Profiler.h"
 
-#include <gl/glew.h>
 #include <utility>
 
 namespace ec
@@ -118,7 +117,7 @@ namespace ec
 		printf("ERROR: %s\n", description);
 	}
 
-	void Window::resizeWindow(GLFWwindow* window, int width, int height)
+	void Window::resizeWindow(GLFWwindow* window, const int width, const int height)
 	{
 		m_windowWidth = width;
 		m_windowHeight = height;
@@ -139,30 +138,30 @@ namespace ec
 		return m_sceneSystem;
 	}
 
-	ec::EventQueue* Window::getEventQueue()
+	ec::EventQueue* Window::getEventQueue() const
 	{
 		return m_eventQueue.get();
 	}
 
-	void Window::switchToFaceMode()
+	void Window::switchToFaceMode() const
 	{
 		glEnable(GL_CULL_FACE);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	}
 
-	void Window::switchToWireframeMode()
+	void Window::switchToWireframeMode() const
 	{
 		glDisable(GL_CULL_FACE);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
 
-	void Window::switchToPointMode()
+	void Window::switchToPointMode() const
 	{
 		glDisable(GL_CULL_FACE);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
 	}
 
-	void Window::goWindowed()
+	void Window::goWindowed() const
 	{
 		glfwSetWindowMonitor(m_window, nullptr,
 							 m_windowPositionLast.x, m_windowPositionLast.y,
@@ -376,7 +375,7 @@ namespace ec
 		glfwSetWindowMonitor(m_window, monitor, 0, 0, width, height, GLFW_DONT_CARE);
 	}
 
-	void Window::closeWindow()
+	void Window::closeWindow() const
 	{
 		glfwSetWindowShouldClose(m_window, GLFW_TRUE);
 	}

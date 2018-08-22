@@ -1,8 +1,6 @@
 #pragma once
 #include "Widget.h"
 
-#include <vector>
-
 /*
 * Automatically aligns child widget in a horizontal order
 */
@@ -22,7 +20,7 @@ namespace ec_gui
 
 	private:
 		/* Align all child */
-		void alignChilds();
+		void alignChildren();
 		/* Align widget */
 		void alignChild(Widget* widget, int pos) const;
 

@@ -1,14 +1,11 @@
 #include "EC3D/Core/Application.h"
 #include "EC3D/Core/Window.h"
-#include "EC3D/Common/Config.h"
-
-#include <iostream>
 
 namespace ec
 {
 	Application::Application(const unsigned int windowWidth, 
 							 const unsigned int windowHeight,
-							 const std::string& windoTitle,
+							 const std::string& windowTitle,
 							 const std::string& windowName)
 		: m_running{true}
 	{
@@ -19,7 +16,7 @@ namespace ec
 			const char c = i + '0';
 			createWindow<Window>(windowWidth,
 								 windowHeight,
-								 windoTitle,
+								 windowTitle,
 								 windowName + c);
 		}
 

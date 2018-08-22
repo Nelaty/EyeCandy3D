@@ -1,5 +1,4 @@
 #include "EC3D/Gui/GuiRenderer.h"
-#include "EC3D/Gui/GuiSystem.h"
 #include "EC3D/Gui/Widget.h"
 #include "EC3D/Gui/Gui.h"
 #include "EC3D/Gui/Text.h"
@@ -7,15 +6,12 @@
 #include "EC3D/Gui/Screen.h"
 
 #include "EC3D/Core/Freetype.h"
-#include "EC3D/Core/Camera.h"
 #include "EC3D/Core/Shader/Shader.h"
 #include "EC3D/Core/Drawable.h"
 
-#include "EC3D/GUI/GUIModel.h"
+#include "EC3D/Gui/GuiModel.h"
 
 #include <glm/gtc/matrix_transform.hpp>
-
-#include <GLFW/glfw3.h>
 
 namespace ec_gui
 {

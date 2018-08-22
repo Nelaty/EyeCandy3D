@@ -11,8 +11,8 @@ namespace agui
 	= default;
 
 	agui::Image* OpenGLImageLoader::loadImage(const std::string &fileName,
-											  bool convertMask, 
-											  bool converToDisplayFormat)
+	                                          const bool convertMask, 
+											  bool convertToDisplayFormat)
 	{
 		return new OpenGLImage(fileName, convertMask);
 	}

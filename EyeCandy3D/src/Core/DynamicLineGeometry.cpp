@@ -3,8 +3,6 @@
 
 #include <glm/glm.hpp>
 
-#include <gl/glew.h>
-
 namespace ec
 {
 

@@ -1,5 +1,5 @@
-#include "EC3D/Gui/GUISystem.h"
-#include "EC3D/Gui/Gui.h"
+#include "EC3D/Gui/GuiSystem.h"
+#include "EC3D/Gui/GuiModel.h"
 
 namespace ec_gui
 {

@@ -29,7 +29,7 @@ namespace utl
 
 	private:
 		std::string m_precisionPostfix;
-		ProfilingPrecision m_precision;
+		ProfilingPrecision m_precision = ProfilingPrecision::millisecond;
 	};
 
 	/* Profile a single function */

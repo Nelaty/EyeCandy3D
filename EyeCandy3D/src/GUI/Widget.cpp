@@ -8,8 +8,6 @@
 #include <algorithm>
 #include <iterator>
 
-#include <GLFW/glfw3.h>
-
 namespace ec_gui
 {
 	Widget::Widget(Widget* parent)

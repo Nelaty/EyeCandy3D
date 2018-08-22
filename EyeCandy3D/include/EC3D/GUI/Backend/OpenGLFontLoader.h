@@ -9,11 +9,11 @@ namespace agui
 		explicit OpenGLFontLoader();
 		~OpenGLFontLoader();
 
-		virtual Font* loadFont(const std::string &fileName, 
-								int height, 
-								FontFlags fontFlags = FONT_DEFAULT_FLAGS, 
-								float borderWidth = 0, 
-								agui::Color borderColor = agui::Color()) override;
-		virtual Font* loadEmptyFont() override;
+		Font* loadFont(const std::string &fileName, 
+					   int height, 
+					   FontFlags fontFlags = FONT_DEFAULT_FLAGS, 
+					   float borderWidth = 0, 
+					   agui::Color borderColor = agui::Color()) override;
+		Font* loadEmptyFont() override;
 	};
 }

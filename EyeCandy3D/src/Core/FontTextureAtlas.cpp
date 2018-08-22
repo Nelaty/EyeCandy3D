@@ -5,7 +5,9 @@
 
 namespace ec
 {
-	FontTextureAtlas::FontTextureAtlas(FT_Face face, int h, GLuint tUniform)
+	FontTextureAtlas::FontTextureAtlas(const FT_Face face,
+	                                   const int h,
+	                                   const GLuint tUniform)
 	{
 		init(face, h, tUniform);
 	}
@@ -47,8 +49,8 @@ namespace ec
 	{
 		const auto glyphSlot = face->glyph;
 
-		auto roww = 0;
-		auto rowh = 0;
+		auto rowWidth = 0;
+		auto rowHeight = 0;
 		m_width = 0;
 		m_height = 0;
 
@@ -64,20 +66,20 @@ namespace ec
 				continue;
 			}
 
-			if(roww + glyphSlot->bitmap.width + 1 >= s_maxWidth)
+			if(rowWidth + glyphSlot->bitmap.width + 1 >= s_maxWidth)
 			{
-				m_width = std::fmax(m_width, roww);
-				m_height += rowh;
-				roww = 0;
-				rowh = 0;
+				m_width = std::fmax(m_width, rowWidth);
+				m_height += rowHeight;
+				rowWidth = 0;
+				rowHeight = 0;
 			}
 
-			roww += glyphSlot->bitmap.width + 1;
-			rowh = std::fmax(rowh, glyphSlot->bitmap.rows);
+			rowWidth += glyphSlot->bitmap.width + 1;
+			rowHeight = std::fmax(rowHeight, glyphSlot->bitmap.rows);
 		}
 
-		m_width = std::fmax(m_width, roww);
-		m_height += rowh;
+		m_width = std::fmax(m_width, rowWidth);
+		m_height += rowHeight;
 	}
 
 	void FontTextureAtlas::createAtlasTexture(GLuint tUniform)
@@ -154,8 +156,8 @@ namespace ec
 			m_characters[i].m_bitmapLeft = glyphSlot->bitmap_left;
 			m_characters[i].m_bitmapTop = glyphSlot->bitmap_top;
 
-			m_characters[i].m_uvOffsetX = offsetX / (float)m_width;
-			m_characters[i].m_uvOffsetY = offsetY / (float)m_height;
+			m_characters[i].m_uvOffsetX = offsetX / static_cast<float>(m_width);
+			m_characters[i].m_uvOffsetY = offsetY / static_cast<float>(m_height);
 
 			// Update row height and position in the row
 			rowHeight = std::fmax(rowHeight, glyphSlot->bitmap.rows);

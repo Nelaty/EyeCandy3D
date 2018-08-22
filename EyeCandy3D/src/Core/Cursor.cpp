@@ -3,12 +3,16 @@
 
 namespace ec
 {
-	Cursor::Cursor(StandardCursorType type)
+	Cursor::Cursor(const StandardCursorType type)
 	{
 		initType(type);
 	}
 
-	Cursor::Cursor(int width, int height, unsigned char* pixels, int hotSpotX, int hotSpotY)
+	Cursor::Cursor(const int width,
+	               const int height, 
+				   unsigned char* pixels, 
+				   int hotSpotX, 
+				   int hotSpotY)
 	{
 		initType(width, height, pixels);
 	}
@@ -22,7 +26,11 @@ namespace ec
 		m_cursor = glfwCreateStandardCursor(static_cast<int>(type));
 	}
 
-	void Cursor::initType(int width, int height, unsigned char* pixels, int hotSpotX, int hotSpotY)
+	void Cursor::initType(const int width,
+	                      const int height,
+						  unsigned char* pixels,
+	                      const int hotSpotX,
+	                      const int hotSpotY)
 	{
 		destroyCursor();
 

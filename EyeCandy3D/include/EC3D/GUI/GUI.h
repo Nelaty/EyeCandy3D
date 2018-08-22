@@ -19,7 +19,6 @@ namespace ec_gui
 	public:
 		using Widget_TP = std::unique_ptr<Widget>;
 
-	public:
 		explicit Gui(std::string guiName);
 		virtual ~Gui();
 

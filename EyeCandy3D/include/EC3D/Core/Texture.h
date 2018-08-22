@@ -20,8 +20,8 @@ namespace ec
 		};
 		enum class Dimensions : int
 		{
-			texture_2D = GL_TEXTURE_2D,
-			texture_3D = GL_TEXTURE_3D
+			texture_2d = GL_TEXTURE_2D,
+			texture_3d = GL_TEXTURE_3D
 		};
 
 		static const std::string& getTypeString(Type type);

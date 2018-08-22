@@ -1,4 +1,6 @@
 #pragma once
+#include <GL/glew.h>
+
 #include "EC3D/Core/DynamicGeometry.h"
 
 namespace ec

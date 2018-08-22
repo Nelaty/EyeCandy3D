@@ -1,6 +1,6 @@
-#include "EC3D/GUI/Gui.h"
-#include "EC3D/GUI/Widget.h"
-#include "EC3D/GUI/Screen.h"
+#include "EC3D/Gui/Gui.h"
+#include "EC3D/Gui/Widget.h"
+#include "EC3D/Gui/Screen.h"
 
 #include <utility>
 

@@ -23,12 +23,12 @@ namespace ec
 		return m_radius;
 	}
 
-	float SphereMesh::getLatitude() const
+	int SphereMesh::getLatitude() const
 	{
 		return m_latitude;
 	}
 
-	float SphereMesh::getLongitude() const
+	int SphereMesh::getLongitude() const
 	{
 		return m_longitude;
 	}
@@ -55,16 +55,16 @@ namespace ec
 	void SphereMesh::initVerticesAndTexCoords()
 	{
 		// Generate new vertex array
-		const int numVertices = m_latitude * (m_longitude) + 2;
+		const auto numVertices = m_latitude * (m_longitude) + 2;
 		m_vertices = std::vector<Vertex>(numVertices);
 
 		// Create top and bottom vertices of the sphere separately
-		Vertex top;
+		Vertex top{};
 		top.m_position = glm::vec3(0.0f, m_radius, 0.0f);
 		top.m_texCoords = glm::vec2(0, 1);
 		m_vertices[0] = top;
 
-		Vertex bot;
+		Vertex bot{};
 		bot.m_position = glm::vec3(0.0f, -m_radius, 0.0f);
 		bot.m_texCoords = glm::vec2(0, 0);
 		m_vertices[numVertices - 1] = bot;
@@ -88,8 +88,8 @@ namespace ec
 				// Convert to spherical coordinates:
 				// theta is a longitude angle (around the equator) in radians.
 				// phi is a latitude angle (north or south of the equator).
-				const float theta = texcoords.x * 2.0f * M_PI;
-				const float phi = (texcoords.y - 0.5f) * M_PI;
+				const auto theta = texcoords.x * 2.0f * M_PI;
+				const auto phi = (texcoords.y - 0.5f) * M_PI;
 
 				// This determines the radius of the ring of this line of latitude.
 				// It's widest at the equator, and narrows as phi increases/decreases.
@@ -113,8 +113,8 @@ namespace ec
 
 	void SphereMesh::initIndices()
 	{
-		const int vertexNum = m_vertices.size();
-		const int indexMax = vertexNum - 1;
+		const auto vertexNum = m_vertices.size();
+		const auto indexMax = vertexNum - 1;
 
 		// Top row sectors only contain triangles
 		for(auto i = 0; i < m_longitude; ++i)

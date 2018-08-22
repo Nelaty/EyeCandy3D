@@ -24,12 +24,12 @@ namespace ec_gui
 		m_text = text;
 	}
 
-	void Text::setText(int text)
+	void Text::setText(const int text)
 	{
 		m_text = std::to_string(text);
 	}
 
-	void Text::setText(float text, int precision /*= 7*/)
+	void Text::setText(const float text, const int precision)
 	{
 		m_text = std::to_string(text).substr(0, precision);
 	}

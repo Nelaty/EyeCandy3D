@@ -1,15 +1,14 @@
 #pragma once
-#include <memory>
-
 #include "GuiRenderer.h"
-#include "GuiModel.h"
+
+#include <memory>
 
 /*
 * A GUISystem is a collection of GUIs and enables the switching thereof
 */
 namespace ec_gui
 {
-	class Gui;
+	class GuiModel;
 	class GuiController;
 
 	class GuiSystem

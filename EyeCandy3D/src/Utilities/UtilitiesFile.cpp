@@ -5,8 +5,6 @@
 #include <sstream>
 #include <iterator>
 
-#include <GL/glew.h>
-
 namespace utl
 {
 	std::string getFileContentString(const char* filepath)
@@ -28,14 +26,14 @@ namespace utl
 			std::cerr << "Couldn't open " << filepath << "!\n";
 		}
 
-		return std::move(fileContent);
+		return fileContent;
 	}
 
 	std::vector<std::string> getFileContentSeparatedString(const char* filepath)
 	{
 		std::ifstream in(filepath);
 		std::string fileContent;
-		std::vector<std::string> separetedFileContent;
+		std::vector<std::string> separatedFileContent;
 
 		if(in.is_open())
 		{
@@ -50,14 +48,14 @@ namespace utl
 			std::istringstream iss(fileContent);
 			std::copy(std::istream_iterator<std::string>(iss),
 				std::istream_iterator<std::string>(),
-				std::back_inserter(separetedFileContent));
+				std::back_inserter(separatedFileContent));
 		}
 		else
 		{
 			std::cerr << "Couldn't open \"" << filepath << "\"!\n";
 		}
 
-		return std::move(separetedFileContent);
+		return separatedFileContent;
 	}
 
 	void writeToFileLocal(const std::string& inputStr, const char* filename)

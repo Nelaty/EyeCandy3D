@@ -1,4 +1,5 @@
 #pragma once
+#include <GL/glew.h>
 
 #include <memory>
 #include <map>
@@ -22,7 +23,7 @@ namespace ec
 
 		explicit Application(unsigned int windowWidth,
 							 unsigned int windowHeight,
-							 const std::string& windoTitle,
+							 const std::string& windowTitle,
 							 const std::string& windowName);
 		~Application();
 

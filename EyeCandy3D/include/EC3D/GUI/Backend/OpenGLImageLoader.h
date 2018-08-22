@@ -12,6 +12,6 @@ namespace agui
 		
 		Image* loadImage(const std::string &fileName, 
 						 bool convertMask = false,
-						 bool converToDisplayFormat = false) override;
+						 bool convertToDisplayFormat = false) override;
 	};
 }

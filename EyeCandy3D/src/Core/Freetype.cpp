@@ -2,13 +2,10 @@
 #include "EC3D/Core/Shader/Shader.h"
 #include "EC3D/Core/FontTextureAtlas.h"
 
-#include <iostream>
-#include <vector>
-#include <sstream>
-
 #include <glm/glm.hpp>
 
-#include <Gl/glew.h>
+#include <vector>
+#include <sstream>
 
 namespace ec
 {
@@ -32,7 +29,7 @@ namespace ec
 
 		std::vector<glm::vec4> coords;
 
-		int c = 0;
+		auto c = 0;
 
 		// HACK:
 		// Set the upper left corner of the first letter to the starting position

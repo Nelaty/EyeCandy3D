@@ -1,8 +1,8 @@
 #pragma once
+#include <GL/glew.h>
 
 #include "EC3D/Core/DeviceRegistry.h"
 #include "EC3D/Core/Renderer.h"
-#include "EC3D/Core/Freetype.h"
 #include "EC3D/Core/SceneSystem.h"
 #include "EC3D/Core/InputObservable.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
@@ -10,6 +10,7 @@
 #include "EC3D/Utilities/Timer.h"
 
 #include <glm/glm.hpp>
+
 
 #include <GLFW/glfw3.h>
 
@@ -49,8 +50,9 @@ namespace ec
 
 		virtual void setFrameRate(double fps);
 
-		/* GLFW Callbacks */
+		/** Error callback */
 		static void errorCallback(int error, const char* description);
+		/** */
 		virtual void resizeWindow(GLFWwindow* window, int width, int height);
 
 		/** Access to the input observer */
@@ -63,19 +65,19 @@ namespace ec
 		SceneSystem& getSceneSystem();
 
 		/** Get the event queue of this window */
-		EventQueue* getEventQueue();
+		EventQueue* getEventQueue() const;
 		/** Get the event source of this window */
 		EventSource* getEventSource() const;
 
 		/* Switch between face, wire frame and point mode */
-		void switchToFaceMode();
-		void switchToWireframeMode();
-		void switchToPointMode();
+		void switchToFaceMode() const;
+		void switchToWireframeMode() const;
+		void switchToPointMode() const;
 
 		/* Switch between full screen and windowed */
-		void goWindowed();
+		void goWindowed() const;
 		void goFullscreen();
-		void closeWindow();
+		void closeWindow() const;
 
 		/* Clear Color access */
 		void setClearColor(const glm::vec4& clearColor);

@@ -31,7 +31,7 @@ namespace agui
 	{
 		if(autoFree)
 		{
-			free();
+			OpenGLFont::free();
 		}
 	}
 

@@ -1,10 +1,9 @@
 #pragma once
 #include <GL/glew.h>
 
-#include <fstream>
-#include <string>
-
 #include <glm/glm.hpp>
+
+#include <string>
 
 /*
 * Bundles vertex, fragment shader, geometry, tessellation control and

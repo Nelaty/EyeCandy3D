@@ -2,7 +2,6 @@
 #include "EC3D/GUI/Theme.h"
 
 #include <algorithm>
-#include <iterator>
 #include <utility>
 
 namespace ec_gui

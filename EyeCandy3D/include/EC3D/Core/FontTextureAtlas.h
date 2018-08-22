@@ -23,18 +23,18 @@ namespace ec
 		GLuint m_textureUniform;
 
 		/* Getter */
-		int GetWidth() const;
-		int GetHeight() const;
-		const FontCharacter& GetChar(int index) const;
+		int getWidth() const;
+		int getHeight() const;
+		const FontCharacter& getChar(int index) const;
 		
 	private:
 		/* Initialize a font texture atlas */
-		void Init(FT_Face face, int h, GLuint tUniform);
+		void init(FT_Face face, int h, GLuint tUniform);
 	
 		/* Initialization routines */
-		void LoadCharacters(FT_Face face, int h);
-		void CreateAtlasTexture(GLuint tUniform);
-		void InitAtlasTexture(FT_Face face);
+		void loadCharacters(FT_Face face, int h);
+		void createAtlasTexture(GLuint tUniform);
+		void initAtlasTexture(FT_Face face);
 
 		/* Width and height of the texture */
 		int m_width;

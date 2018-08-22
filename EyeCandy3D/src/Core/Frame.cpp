@@ -6,24 +6,22 @@
 namespace ec
 {
 	Frame::Frame()
-	{
-	}
+	= default;
 
 	Frame::~Frame()
-	{
-	}
+	= default;
 
-	void Frame::AddCameraBack(Camera* camera)
+	void Frame::addCameraBack(Camera* camera)
 	{
 		m_cameras.push_back(camera);
 	}
 
-	void Frame::AddCameraFront(Camera* camera)
+	void Frame::addCameraFront(Camera* camera)
 	{
 		m_cameras.insert(m_cameras.begin(), camera);
 	}
 
-	void Frame::AddCamera(Camera* camera, unsigned int priority)
+	void Frame::addCamera(Camera* camera, unsigned int priority)
 	{
 		auto insertionPosition = m_cameras.begin();
 		if(priority < m_cameras.size())
@@ -39,11 +37,11 @@ namespace ec
 	}
 
 
-	bool Frame::AddCameraBefore(Camera* camera, Camera* nextCamera)
+	bool Frame::addCameraBefore(Camera* camera, Camera* nextCamera)
 	{
-		auto foundCamera = std::find(m_cameras.begin(),
-									 m_cameras.end(),
-									 nextCamera);
+		const auto foundCamera = std::find(m_cameras.begin(),
+										   m_cameras.end(),
+										   nextCamera);
 
 		if(foundCamera == m_cameras.end()) return false;
 
@@ -51,11 +49,11 @@ namespace ec
 		return true;
 	}
 
-	bool Frame::AddCameraAfter(Camera* camera, Camera* prevCamera)
+	bool Frame::addCameraAfter(Camera* camera, Camera* prevCamera)
 	{
-		auto foundCamera = std::find(m_cameras.begin(),
-									 m_cameras.end(),
-									 prevCamera);
+		const auto foundCamera = std::find(m_cameras.begin(),
+										   m_cameras.end(),
+										   prevCamera);
 
 		if(foundCamera == m_cameras.end()) return false;
 
@@ -63,21 +61,21 @@ namespace ec
 		return true;
 	}
 
-	bool Frame::RemoveCamera(Camera* camera)
+	bool Frame::removeCamera(Camera* camera)
 	{
-		auto removedCamera = std::remove(m_cameras.begin(),
-										 m_cameras.end(),
-										 camera);
+		const auto removedCamera = std::remove(m_cameras.begin(),
+											   m_cameras.end(),
+											   camera);
 
 		return removedCamera != m_cameras.end();
 	}
 
-	void Frame::Clear()
+	void Frame::clear()
 	{
 		m_cameras.clear();
 	}
 
-	const std::vector<Camera*> Frame::GetCameras() const
+	const std::vector<Camera*>& Frame::getCameras() const
 	{
 		return m_cameras;
 	}

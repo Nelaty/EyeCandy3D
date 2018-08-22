@@ -1,34 +1,33 @@
 #pragma once
-#include <vector>
 #include <memory>
 
-#include "GUIRenderer.h"
-#include "GUIModel.h"
+#include "GuiRenderer.h"
+#include "GuiModel.h"
 
 /*
 * A GUISystem is a collection of GUIs and enables the switching thereof
 */
 namespace ec_gui
 {
-	class GUI;
-	class GUIController;
+	class Gui;
+	class GuiController;
 
-	class GUISystem
+	class GuiSystem
 	{
 	public:
-		explicit GUISystem();
-		GUISystem(const GUISystem& guiSystem) = delete;
-		GUISystem& operator=(const GUISystem& guiSystem) = delete;
-		GUISystem(GUISystem&& guiSystem) = default;
-		GUISystem& operator=(GUISystem&& guiSystem) = default;
-		~GUISystem();
+		explicit GuiSystem();
+		GuiSystem(const GuiSystem& guiSystem) = delete;
+		GuiSystem& operator=(const GuiSystem& guiSystem) = delete;
+		GuiSystem(GuiSystem&& guiSystem) = default;
+		GuiSystem& operator=(GuiSystem&& guiSystem) = default;
+		~GuiSystem();
 
 		/** Get the model, which contains GUI data */
-		GUIModel* GetModel();
+		GuiModel* getModel() const;
 
 	private:
-		std::unique_ptr<GUIModel> m_guiModel;
-		GUIRenderer m_guiRenderer;
-		GUIController* m_guiController;
+		std::unique_ptr<GuiModel> m_guiModel;
+		GuiRenderer m_guiRenderer{};
+		GuiController* m_guiController{};
 	};
 }

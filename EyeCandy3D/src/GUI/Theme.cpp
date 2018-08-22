@@ -22,19 +22,18 @@ namespace ec_gui
 	}
 
 	Theme::~Theme()
-	{
-	}
+	= default;
 
-	void Theme::AddNewMaterial(const std::string& key, const std::string& texturePath)
+	void Theme::addNewMaterial(const std::string& key, const std::string& texturePath)
 	{
-		using pair_type = std::pair<std::string, Material_TP>;
+		using Pair_Type = std::pair<std::string, Material_Ptr>;
 
 		auto material = std::make_unique<ec::Material>();
-		material->AddDiffuseTextureFromPath(texturePath.c_str());
-		m_materials.insert(pair_type(key, std::move(material)));
+		material->addDiffuseTextureFromPath(texturePath.c_str());
+		m_materials.insert(Pair_Type(key, std::move(material)));
 	}
 
-	Theme::Drawable_TP Theme::CreateDrawable(const std::string& materialKey)
+	Theme::Drawable_Ptr Theme::createDrawable(const std::string& materialKey)
 	{
 		auto drawable = std::make_unique<ec::Drawable>();
 		auto* material = m_materials[materialKey].get();
@@ -42,8 +41,7 @@ namespace ec_gui
 		{
 			printf("THEME: Material \"%s\" does not exist!", materialKey.c_str());
 		}
-		drawable->Init(m_widgetGeometry.get(), material, m_guiShader);
+		drawable->init(m_widgetGeometry.get(), material, m_guiShader);
 		return std::move(drawable);
 	}
-
 }

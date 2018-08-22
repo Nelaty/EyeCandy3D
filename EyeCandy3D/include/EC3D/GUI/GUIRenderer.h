@@ -1,5 +1,4 @@
 #pragma once
-#include <vector>
 #include <stack>
 
 #include <glm/glm.hpp>
@@ -18,13 +17,13 @@ namespace ec_gui
 	class Screen;
 	class Window;
 
-	class GUIModel;
+	class GuiModel;
 
 	/*
 	* Parameter object
 	* Contains viable information for rendering a GUI
 	*/
-	struct GUIRenderingParameterList
+	struct GuiRenderingParameterList
 	{
 		ec::Freetype* m_freetype;
 		float m_scaleX;
@@ -39,27 +38,27 @@ namespace ec_gui
 	* This is necessary, since the GUI itself is very lightweight and
 	* shouldn't know anything about rendering.
 	*/
-	class GUIRenderingContext
+	class GuiRenderingContext
 	{
 	public:
-		GUIRenderingContext();
-		~GUIRenderingContext();
+		explicit GuiRenderingContext();
+		~GuiRenderingContext();
 
-		const glm::mat4& Top() const;
+		const glm::mat4& top() const;
 
-		void Save(const glm::mat4& mat);
-		void Restore();
+		void save(const glm::mat4& mat);
+		void restore();
 
 		/* Get the current global matrix */
-		const glm::mat4& GetGlobalMat();
+		const glm::mat4& getGlobalMat() const;
 
 		/*
 		* Calculate the global matrix of the specified widget and 
 		* save it inside the context
 		*/
-		void UpdateGlobalMat(Widget* widget);
+		void updateGlobalMat(Widget* widget);
 
-		GUIRenderingParameterList m_params;
+		GuiRenderingParameterList m_params;
 
 	private:
 		glm::mat4 m_globalMat;
@@ -71,35 +70,35 @@ namespace ec_gui
 	* A GUIRenderer is responsible for rendering the currently active
 	* GUI.
 	*/
-	class GUIRenderer
+	class GuiRenderer
 	{
 	public:
-		explicit GUIRenderer();
-		~GUIRenderer();
+		explicit GuiRenderer();
+		~GuiRenderer();
 
 		/** Initialize the renderer with a given model */
-		void Init(GUIModel* guiModel);
+		void init(GuiModel* guiModel);
 
 		/* Render the currently active GUI */
-		void Render(GUIRenderingParameterList params);
+		void render(GuiRenderingParameterList params);
 
 		/* Shader access. Will be used to render everything */
-		ec::Shader* GetShader();
-		void SetShader(ec::Shader* shader);
+		ec::Shader* getShader() const;
+		void setShader(ec::Shader* shader);
 
 		/* Visitor rendering functions */
-		void Render(Widget* widget, GUIRenderingContext& context);
-		void Render(Text* text, GUIRenderingContext& context);
-		void Render(Screen* screen, GUIRenderingContext& context);
-		void Render(Window* window, GUIRenderingContext& context);
+		void render(Widget* widget, GuiRenderingContext& context);
+		void render(Text* text, GuiRenderingContext& context);
+		void render(Screen* screen, GuiRenderingContext& context);
+		void render(Window* window, GuiRenderingContext& context);
 
 	private:
 		/* Accepts a widget and renders its hierarchy */
-		void RenderGUI(Widget* widget, GUIRenderingContext& context);
+		void renderGui(Widget* widget, GuiRenderingContext& context);
 		/* Renders the core elements every widgets possesses */
-		void RenderCoreElements(Widget* widget, GUIRenderingContext& context);
+		void renderCoreElements(Widget* widget, GuiRenderingContext& context);
 
-		GUIModel* m_guiModel;
+		GuiModel* m_guiModel;
 		ec::Shader* m_shader;
 	};
 }

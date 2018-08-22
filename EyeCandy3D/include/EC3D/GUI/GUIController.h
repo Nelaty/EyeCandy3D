@@ -6,23 +6,23 @@
 */
 namespace ec_gui
 {
-	class GUISystem;
-	class InputEvent;
+	class GuiSystem;
+	struct InputEvent;
 
-	class GUIController : public ec::InputListener
+	class GuiController : public ec::InputListener
 	{
 	public:
-		explicit GUIController();
-		~GUIController();
+		explicit GuiController();
+		~GuiController();
 
 		/* Get, set the controlled GUI */
-		GUISystem* GetGUISystem();
-		void SetGUISystem(GUISystem* guiSystem);
+		GuiSystem* getGuiSystem() const;
+		void setGuiSystem(GuiSystem* guiSystem);
+
+	protected:
+		void processEvent(const ec::InputEvent& event) override;
 
 	private:
-		GUISystem* m_guiSystem;
-	protected:
-		virtual void ProcessEvent(const ec::InputEvent& event) override;
-
+		GuiSystem* m_guiSystem;
 	};
 }

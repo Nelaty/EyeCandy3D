@@ -1,8 +1,6 @@
 #include "EC3D/Core/Renderer.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
 
-#include <algorithm>
-
 namespace ec
 {
 	Renderer::Renderer()
@@ -12,36 +10,35 @@ namespace ec
 	}
 
 	Renderer::~Renderer()
-	{
-	}
+	= default;
 
-	void Renderer::Render(Window* window)
+	void Renderer::render(Window* window) const
 	{
 		if(m_activeRenderer)
 		{
-			m_activeRenderer->Render(window);
+			m_activeRenderer->render(window);
 		}		
 	}
 
-	void Renderer::ChangeRenderer(const std::string& name)
+	void Renderer::changeRenderer(const std::string& name)
 	{
-		auto* renderer = GetSceneRenderer(name);
+		auto* renderer = getSceneRenderer(name);
 		if(!renderer) return;
 
 		m_lastRenderer = m_activeRenderer;
 		m_activeRenderer = renderer;
 	}
 
-	void Renderer::RegisterSceneRenderer(const std::string& name, SceneRenderer* renderer)
+	void Renderer::registerSceneRenderer(const std::string& name, SceneRenderer* renderer)
 	{
-		if(GetSceneRenderer(name)) return;
+		if(getSceneRenderer(name)) return;
 
 		m_renderer.insert(std::make_pair(name, renderer));
 	}
 
-	ec::SceneRenderer* Renderer::UnregisterSceneRenderer(const std::string& name)
+	ec::SceneRenderer* Renderer::unregisterSceneRenderer(const std::string& name)
 	{
-		auto foundRenderer = m_renderer.find(name);
+		const auto foundRenderer = m_renderer.find(name);
 		if(foundRenderer == m_renderer.end())
 		{
 			return nullptr;
@@ -53,18 +50,15 @@ namespace ec
 		}
 	}
 
-	ec::SceneRenderer* Renderer::GetSceneRenderer(const std::string& name)
+	ec::SceneRenderer* Renderer::getSceneRenderer(const std::string& name)
 	{
-		auto foundRenderer = m_renderer.find(name);
+		const auto foundRenderer = m_renderer.find(name);
 
 		if(foundRenderer == m_renderer.end())
 		{
 			return nullptr;
 		}
-		else
-		{
-			return foundRenderer->second;
-		}
+		return foundRenderer->second;
 	}
 
 }

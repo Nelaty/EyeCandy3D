@@ -19,20 +19,20 @@ namespace ec
 		virtual ~Material();
 
 		/* Add a texture to this material */
-		void AddTexture(const Texture& texture);
+		void addTexture(const Texture& texture);
 
 		/* Remove a specific texture associated with this material */
-		void RemoveTexture(const Texture& texture);
+		void removeTexture(const Texture& texture);
 
 		/* Try to get a texture at the specified index */
-		Texture* GetTexture(const unsigned int index);
+		Texture* getTexture(unsigned int index);
 
 		/* Get all textures associated with this material */
-		const std::vector<Texture>& GetTextures() const;
+		const std::vector<Texture>& getTextures() const;
 
 		/* */
-		void SetHasTexture(const bool hasTexture);
-		bool HasTexture() const;
+		void setHasTexture(bool hasTexture);
+		bool hasTexture() const;
 
 		/* 
 		* Comfort functions to create and add specific texture types to this material 
@@ -40,29 +40,29 @@ namespace ec
 		* outside this class and added via AddTexture
 		* return: true -> successfully added
 		*/
-		bool AddDiffuseTextureFromPath(const char* path);
-		bool AddSpecularTextureFromPath(const char* path);
-		bool AddBumpTextureFromPath(const char* path);
+		bool addDiffuseTextureFromPath(const char* path);
+		bool addSpecularTextureFromPath(const char* path);
+		bool addBumpTextureFromPath(const char* path);
 
 		/* Flat color manipulation functions */
-		void SetColorAmbient(const glm::vec4& color);
-		void SetColorAmbient(const float r, const float g, const float b, const float a);
-		void SetColorDiffuse(const glm::vec4& color);
-		void SetColorDiffuse(const float r, const float g, const float b, const float a);
-		void SetColorSpecular(const glm::vec4& color);
-		void SetColorSpecular(const float r, const float g, const float b, const float a);
-		void SetColorEmissive(const glm::vec4& color);
-		void SetColorEmissive(const float r, const float g, const float b, const float a);
+		void setColorAmbient(const glm::vec4& color);
+		void setColorAmbient(float r, float g, float b, float a);
+		void setColorDiffuse(const glm::vec4& color);
+		void setColorDiffuse(float r, float g, float b, float a);
+		void setColorSpecular(const glm::vec4& color);
+		void setColorSpecular(float r, float g, float b, float a);
+		void setColorEmissive(const glm::vec4& color);
+		void setColorEmissive(float r, float g, float b, float a);
 
 		/* Flat color getter */
-		const glm::vec4& GetColorAmbient() const;
-		const glm::vec4& GetColorDiffuse() const;
-		const glm::vec4& GetColorSpecular() const;
-		const glm::vec4& GetColorEmissive() const;
+		const glm::vec4& getColorAmbient() const;
+		const glm::vec4& getColorDiffuse() const;
+		const glm::vec4& getColorSpecular() const;
+		const glm::vec4& getColorEmissive() const;
 
 		/* Shininess access (specular attribute) */
-		void SetShininess(const float shininess);
-		float GetShininess() const;
+		void setShininess(float shininess);
+		float getShininess() const;
 
 	private:
 		/* Flat colors */

@@ -23,11 +23,11 @@ namespace ec
 		virtual ~InputListener();
 		
 		/* Inform this controller about an event */
-		void Inform(const InputEvent& event);
+		void inform(const InputEvent& event);
 
 		/* Enable or disable the evaluation of input */
-		virtual void Enable(const bool enabled);
-		virtual bool IsEnabled() const;
+		virtual void enable(bool enabled);
+		virtual bool isEnabled() const;
 
 		/* 
 		* Add a new callback 
@@ -35,21 +35,21 @@ namespace ec
 		* ID:	Identifier of the callback, so it can be retrieved later on
 		*		Needs to be unique for an EventType
 		*/
-		void AddCallback(const std::string& id, EventKey_T key, std::function<void()> callback);
+		void addCallback(const std::string& id, EventKey_T key, std::function<void()> callback);
 
 		/* Remove one specific or multiple callbacks */
-		bool RemoveCallback(const std::string&, EventKey_T key);
-		void RemoveCallbacksOfType(EventKey_T key);
-		void RemoveAllCallbacks();
+		bool removeCallback(const std::string&, EventKey_T key);
+		void removeCallbacksOfType(EventKey_T key);
+		void removeAllCallbacks();
 
 		/* Check if a certain callback is already registered */
-		bool IsCallbackRegistered(const std::string& id, EventKey_T key);
+		bool isCallbackRegistered(const std::string& id, EventKey_T key);
 
 	protected:
 		explicit InputListener();
 
 		/* Automatically called, when informed about an event */
-		virtual void ProcessEvent(const InputEvent& event);
+		virtual void processEvent(const InputEvent& event);
 
 		EventCallbackMap_T m_eventCallbacks;
 

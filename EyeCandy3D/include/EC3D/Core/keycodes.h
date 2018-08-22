@@ -349,9 +349,9 @@ namespace ec
 			{SUPER_RIGHT, "super_right"}
 		};
 		
-		static const char* KeyboardKeyToString(EC_KEY_KEYBOARD keyboardCode)
+		static const char* keyboardKeyToString(const EC_KEY_KEYBOARD keyboardCode)
 		{
-			auto foundIt = g_keyboard_key_string_lookup.find(keyboardCode);
+			const auto foundIt = g_keyboard_key_string_lookup.find(keyboardCode);
 			if(foundIt == g_keyboard_key_string_lookup.end())
 			{
 				return "not_found";
@@ -359,9 +359,9 @@ namespace ec
 			return foundIt->second;
 		}
 
-		static const char* MouseKeyToString(EC_KEY_MOUSE mouseCode)
+		static const char* mouseKeyToString(const EC_KEY_MOUSE mouseCode)
 		{
-			auto foundIt = g_mouse_key_string_lookup.find((EC_KEY_MOUSE)mouseCode);
+			const auto foundIt = g_mouse_key_string_lookup.find(static_cast<EC_KEY_MOUSE>(mouseCode));
 			if(foundIt == g_mouse_key_string_lookup.end())
 			{
 				return "not_found";
@@ -369,9 +369,9 @@ namespace ec
 			return foundIt->second;
 		}
 
-		static const char* KeymodToString(EC_KEYMOD keymod)
+		static const char* keymodToString(const EC_KEYMOD keymod)
 		{
-			auto foundIt = g_keymod_string_lookup.find((EC_KEYMOD)keymod);
+			const auto foundIt = g_keymod_string_lookup.find(static_cast<EC_KEYMOD>(keymod));
 			if(foundIt == g_keymod_string_lookup.end())
 			{
 				return "not_found";
@@ -379,21 +379,21 @@ namespace ec
 			return foundIt->second;
 		}
 
-		static bool KeycodeIsKey(int keycode)
+		static bool keycodeIsKey(int keycode)
 		{
-			auto foundEntry = g_keyboard_key_string_lookup.find((EC_KEY_KEYBOARD)keycode);
+			const auto foundEntry = g_keyboard_key_string_lookup.find(static_cast<EC_KEY_KEYBOARD>(keycode));
 			return foundEntry != g_keyboard_key_string_lookup.end();
 		}
 
-		static bool KeycodeIsMouse(int keycode)
+		static bool keycodeIsMouse(int keycode)
 		{
-			auto foundEntry = g_mouse_key_string_lookup.find((EC_KEY_MOUSE)keycode);
+			const auto foundEntry = g_mouse_key_string_lookup.find(static_cast<EC_KEY_MOUSE>(keycode));
 			return foundEntry != g_mouse_key_string_lookup.end();
 		}
 
 		static bool KeycodeIsKeymod(int keycode)
 		{
-			auto foundEntry = g_keymod_string_lookup.find((EC_KEYMOD)keycode);
+			const auto foundEntry = g_keymod_string_lookup.find(static_cast<EC_KEYMOD>(keycode));
 			return foundEntry != g_keymod_string_lookup.end();
 		}
 	}

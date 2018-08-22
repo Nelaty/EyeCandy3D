@@ -10,13 +10,13 @@ namespace ec
 	class CubeMesh : public StaticGeometry
 	{
 	public:
-		explicit CubeMesh(const float uniformSize = 1.0f);
-		explicit CubeMesh(const float width, const float height, const float depth);
+		explicit CubeMesh(float uniformSize = 1.0f);
+		explicit CubeMesh(float width, float height, float depth);
 		~CubeMesh();
 
-		void Resize(float width, float height, float depth);
+		void resize(float width, float height, float depth);
 
 	private:
-		void Init(const float width, const float height, const float depth);
+		void init(float width, float height, float depth);
 	};
 }

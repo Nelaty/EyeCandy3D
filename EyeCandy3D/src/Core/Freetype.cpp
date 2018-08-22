@@ -15,21 +15,20 @@ namespace ec
 	Freetype::Freetype(Shader* shader)
 		: m_textShader{shader}
 	{
-		InitFreetype();
+		initFreetype();
 	}
 
 	Freetype::~Freetype()
-	{
-	}
+	= default;
 
-	void Freetype::RenderText(const char* text, FontTextureAtlas* atlas, 
+	void Freetype::renderText(const char* text, FontTextureAtlas* atlas, 
 							  float x, float y, 
-							  float sx, float sy,
-							  const glm::vec4& color)
+							  const float sx, const float sy,
+							  const glm::vec4& color) const
 	{
-		m_textShader->Bind();
+		m_textShader->bind();
 
-		const unsigned char* p = (const unsigned char*)text;
+		const auto* p = reinterpret_cast<const unsigned char*>(text);
 
 		std::vector<glm::vec4> coords;
 
@@ -37,72 +36,72 @@ namespace ec
 
 		// HACK:
 		// Set the upper left corner of the first letter to the starting position
-		y -= atlas->GetChar(*p).bitmapHeight * sy;
+		y -= atlas->getChar(*p).m_bitmapHeight * sy;
 
 		for(; *p; p++)
 		{
-			auto character = atlas->GetChar(*p);
-			auto atlasHeight = atlas->GetHeight();
-			auto atlasWidth = atlas->GetWidth();
+			const auto character = atlas->getChar(*p);
+			const auto atlasHeight = atlas->getHeight();
+			const auto atlasWidth = atlas->getWidth();
 
-			float x2 = x + character.bitmapLeft * sx;
-			float y2 = -y - character.bitmapTop * sy;
-			float w = character.bitmapWidth * sx;
-			float h = character.bitmapHeight * sy;
+			const auto x2 = x + character.m_bitmapLeft * sx;
+			const auto y2 = -y - character.m_bitmapTop * sy;
+			const auto w = character.m_bitmapWidth * sx;
+			const auto h = character.m_bitmapHeight * sy;
 
-			x += character.advanceX * sx;
-			y += character.advanceY * sy;
+			x += character.m_advanceX * sx;
+			y += character.m_advanceY * sy;
 
 			if(!w || !h)
 				continue;
 
-			coords.push_back(
+			coords.emplace_back(
 				glm::vec4(
 					x2,
 					-y2 - h,
-					character.uvOffsetX,
-					character.uvOffsetY + character.bitmapHeight / atlasHeight)
+					character.m_uvOffsetX,
+					character.m_uvOffsetY + character.m_bitmapHeight / atlasHeight)
 			);
 
-			coords.push_back(
+			coords.emplace_back(
 				glm::vec4(
 					x2 + w,
 					-y2,
-					character.uvOffsetX + character.bitmapWidth / atlasWidth,
-					character.uvOffsetY)
+					character.m_uvOffsetX + character.m_bitmapWidth / atlasWidth,
+					character.m_uvOffsetY)
 			);
 
-			coords.push_back(
+			coords.emplace_back(
 				glm::vec4(
 					x2,
 					-y2,
-					character.uvOffsetX,
-					character.uvOffsetY)
+					character.m_uvOffsetX,
+					character.m_uvOffsetY)
 			);
 
-			coords.push_back(
+			coords.emplace_back(
 				glm::vec4(
 					x2 + w,
 					-y2,
-					character.uvOffsetX + character.bitmapWidth / atlasWidth,
-					character.uvOffsetY)
+					character.m_uvOffsetX + character.m_bitmapWidth / atlasWidth,
+					character.m_uvOffsetY)
 			);
 
-			coords.push_back(
+			coords.emplace_back(
 				glm::vec4(
 					x2,
 					-y2 - h,
-					character.uvOffsetX,
-					character.uvOffsetY + character.bitmapHeight / atlasHeight)
+					character.m_uvOffsetX,
+					character.m_uvOffsetY + character.m_bitmapHeight / atlasHeight)
 			);
 
 
-			coords.push_back(
+			coords.emplace_back(
 				glm::vec4(
 					x2 + w,
 					-y2 - h,
-					character.uvOffsetX + character.bitmapWidth / atlasWidth,
-					character.uvOffsetY + character.bitmapHeight / atlasHeight)
+					character.m_uvOffsetX + character.m_bitmapWidth / atlasWidth,
+					character.m_uvOffsetY + character.m_bitmapHeight / atlasHeight)
 			);
 		}
 
@@ -113,7 +112,7 @@ namespace ec
 		glUniform1i(atlas->m_textureUniform, 0);
 		glBindTexture(GL_TEXTURE_2D, atlas->m_texture);
 
-		m_textShader->SetVec4("inputColor", color);
+		m_textShader->setVec4("inputColor", color);
 
 		glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
 		glBufferData(GL_ARRAY_BUFFER, coords.size() * sizeof(glm::vec4), coords.data(), GL_DYNAMIC_DRAW);
@@ -130,10 +129,10 @@ namespace ec
 		glBindVertexArray(0);
 		
 		//glDisable(GL_BLEND);
-		m_textShader->Unbind();
+		m_textShader->unbind();
 	}
 
-	void Freetype::AddFontFace(const std::string& name, const std::string& filepath)
+	void Freetype::addFontFace(const std::string& name, const std::string& filepath)
 	{
 		FT_Face face;
 		if(FT_New_Face(m_ftLib, filepath.c_str(), 0, &face))
@@ -146,7 +145,7 @@ namespace ec
 		m_fontFaces.insert(std::pair<std::string, FT_Face>(name, face));
 	}
 
-	void Freetype::AddFontTextureAtlas(const std::string& face, unsigned int size)
+	void Freetype::addFontTextureAtlas(const std::string& face, unsigned int size)
 	{
 		auto foundFace = m_fontFaces.find(face);
 		if(foundFace == m_fontFaces.end())
@@ -157,16 +156,16 @@ namespace ec
 		std::ostringstream atlasName;
 		atlasName << face << size;
 
-		m_textShader->Bind();
+		m_textShader->bind();
 		auto atlas = std::make_unique<FontTextureAtlas>(foundFace->second, size, m_texture);
 		auto entryPair = std::make_pair(atlasName.str(), std::move(atlas));
 		m_fontTextureAtlases.insert(std::move(entryPair));
-		m_textShader->Unbind();
+		m_textShader->unbind();
 	}
 
-	FontTextureAtlas* Freetype::GetFontTextureAtlas(const std::string& name)
+	FontTextureAtlas* Freetype::getFontTextureAtlas(const std::string& name)
 	{
-		auto foundAtlas = m_fontTextureAtlases.find(name);
+		const auto foundAtlas = m_fontTextureAtlases.find(name);
 		if(foundAtlas == m_fontTextureAtlases.end())
 		{
 			return nullptr;
@@ -174,15 +173,15 @@ namespace ec
 		return foundAtlas->second.get();
 	}
 
-	void Freetype::InitFreetype()
+	void Freetype::initFreetype()
 	{
 		if(FT_Init_FreeType(&m_ftLib))
 		{
 			throw(std::exception("Couldn't initialize freetype!"));
 		}
 	
-		m_colorIN = m_textShader->GetUniformLocation("inputColor");
-		m_texture = m_textShader->GetUniformLocation("texture");
+		m_colorIN = m_textShader->getUniformLocation("inputColor");
+		m_texture = m_textShader->getUniformLocation("texture");
 
 		// Create the vertex buffer object
 		glGenBuffers(1, &m_VBO);

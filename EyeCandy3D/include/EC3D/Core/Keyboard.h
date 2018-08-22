@@ -14,24 +14,23 @@ namespace ec
 	public: 
 		using EventSource_Ptr = std::unique_ptr<EventSource>;
 
-	public:
 		explicit Keyboard();
 		~Keyboard();
 
 		/** Install the keyboard, which generates keyboard events. */
-		void Install(Window* window);
+		void install(Window* window);
 		/** Uninstall the keyboard. */
-		void Uninstall();
+		void uninstall();
 	
-		EventSource* GetEventSource();
-		GLFWwindow* GetWindow();
+		EventSource* getEventSource() const;
+		GLFWwindow* getWindow() const;
 
 	private:
-		static void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
-		static void CharModsCallback(GLFWwindow* window, unsigned int codepoint, int mods);
+		static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+		static void charModsCallback(GLFWwindow* window, unsigned int codepoint, int mods);
 
-		EventSource_Ptr m_eventSource;
-		EventQueue* m_eventQueue;		
-		GLFWwindow* m_window;
+		EventSource_Ptr m_eventSource = nullptr;
+		EventQueue* m_eventQueue = nullptr;		
+		GLFWwindow* m_window = nullptr;
 	};
 }

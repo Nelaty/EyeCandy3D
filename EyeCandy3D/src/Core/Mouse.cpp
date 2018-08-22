@@ -9,57 +9,52 @@
 namespace ec
 {
 	Mouse::Mouse()
-		: m_eventSource{nullptr},
-		m_window{nullptr},
-		m_eventQueue{nullptr}
-	{
-	}
+	= default;
 
 	Mouse::~Mouse()
-	{
-	}
+	= default;
 
-	void Mouse::Install(Window* window)
+	void Mouse::install(Window* window)
 	{
 		if(m_eventSource)
 		{
-			Uninstall();
+			uninstall();
 		}
 		m_eventSource = std::make_unique<EventSource>();
-		m_window = window->GetWindow();
-		m_eventQueue = window->GetEventQueue();
+		m_window = window->getWindow();
+		m_eventQueue = window->getEventQueue();
 
-		glfwSetCursorPosCallback(m_window, Mouse::CursorPosCallback);
-		glfwSetCursorEnterCallback(m_window, Mouse::CursorEnterCallback);
-		glfwSetMouseButtonCallback(m_window, Mouse::MouseButtonCallback);
-		glfwSetScrollCallback(m_window, Mouse::ScrollCallback);
+		glfwSetCursorPosCallback(m_window, Mouse::cursorPosCallback);
+		glfwSetCursorEnterCallback(m_window, Mouse::cursorEnterCallback);
+		glfwSetMouseButtonCallback(m_window, Mouse::mouseButtonCallback);
+		glfwSetScrollCallback(m_window, Mouse::scrollCallback);
 	}
 
-	void Mouse::Uninstall()
+	void Mouse::uninstall()
 	{
 		m_eventSource = nullptr;
 		m_window = nullptr;
 		m_eventQueue = nullptr;
 
-		glfwSetCursorPosCallback(nullptr, Mouse::CursorPosCallback);
-		glfwSetCursorEnterCallback(nullptr, Mouse::CursorEnterCallback);
-		glfwSetMouseButtonCallback(nullptr, Mouse::MouseButtonCallback);
-		glfwSetScrollCallback(nullptr, Mouse::ScrollCallback);
+		glfwSetCursorPosCallback(nullptr, Mouse::cursorPosCallback);
+		glfwSetCursorEnterCallback(nullptr, Mouse::cursorEnterCallback);
+		glfwSetMouseButtonCallback(nullptr, Mouse::mouseButtonCallback);
+		glfwSetScrollCallback(nullptr, Mouse::scrollCallback);
 	}
 
-	ec::EventSource* Mouse::GetEventSource()
+	ec::EventSource* Mouse::getEventSource() const
 	{
 		return m_eventSource.get();
 	}
 
-	GLFWwindow* Mouse::GetWindow()
+	GLFWwindow* Mouse::getWindow() const
 	{
 		return m_window;
 	}
 
-	void Mouse::CursorPosCallback(GLFWwindow* window, double xpos, double ypos)
+	void Mouse::cursorPosCallback(GLFWwindow* window, double xpos, double ypos)
 	{
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
+		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getInputObserver();
 
 		InputEvent inputEvent(InputType::mouse_move);
 		auto& mouseEvent = inputEvent.m_event.m_mouse;
@@ -69,10 +64,10 @@ namespace ec
 								0, 0, 0, 0,
 								0, 0);
 
-		inputObserver.ReceiveEvent(inputEvent);
+		inputObserver.receiveEvent(inputEvent);
 	}
 
-	void Mouse::CursorEnterCallback(GLFWwindow* window, int entered)
+	void Mouse::cursorEnterCallback(GLFWwindow* window, int entered)
 	{
 		InputEvent inputEvent;
 		auto& mouseEvent = inputEvent.m_event.m_mouse;
@@ -82,7 +77,7 @@ namespace ec
 								0, 0, 0, 0,
 								0, 0);
 
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
+		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getInputObserver();
 		if(entered == GLFW_TRUE)
 		{
 			inputEvent.m_type = InputType::mouse_enter;
@@ -91,10 +86,10 @@ namespace ec
 		{
 			inputEvent.m_type = InputType::mouse_left;
 		}
-		inputObserver.ReceiveEvent(inputEvent);
+		inputObserver.receiveEvent(inputEvent);
 	}
 
-	void Mouse::MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
+	void Mouse::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
 	{
 		InputEvent inputEvent;
 		auto& mouseEvent = inputEvent.m_event.m_mouse;
@@ -104,7 +99,7 @@ namespace ec
 								0, 0, 0, 0,
 								button, mods);
 
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
+		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getInputObserver();
 		if(action == GLFW_PRESS)
 		{
 			inputEvent.m_type = InputType::mouse_button_pressed;
@@ -115,10 +110,10 @@ namespace ec
 			inputEvent.m_type = InputType::mouse_button_released;
 			mouseEvent.m_pressure = 0.0f;
 		}
-		inputObserver.ReceiveEvent(inputEvent);
+		inputObserver.receiveEvent(inputEvent);
 	}
 
-	void Mouse::ScrollCallback(GLFWwindow* window, double xoffset, double yoffset)
+	void Mouse::scrollCallback(GLFWwindow* window, double xoffset, double yoffset)
 	{
 		InputEvent inputEvent(InputType::mouse_scroll);
 		auto& mouseEvent = inputEvent.m_event.m_mouse;
@@ -128,7 +123,7 @@ namespace ec
 								0, 0, static_cast<int>(xoffset), static_cast<int>(yoffset),
 								0, 0);
 
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->GetInputObserver();
-		inputObserver.ReceiveEvent(inputEvent);
+		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getInputObserver();
+		inputObserver.receiveEvent(inputEvent);
 	}
 }

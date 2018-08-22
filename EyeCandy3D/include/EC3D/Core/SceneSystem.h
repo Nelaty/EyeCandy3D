@@ -22,26 +22,26 @@ namespace ec
 		~SceneSystem();
 		
 		/* Update the currently active scene */
-		void Tick(const float timeDelta);
+		void tick(float timeDelta);
 
 		/* Scene access */
-		bool RegisterScene(Scene* scene);
-		ec::Scene* UnregisterScene(Scene* scene);
+		bool registerScene(Scene* scene);
+		ec::Scene* unregisterScene(Scene* scene);
 
 		/** 
 		 * Get the scene with the given name 
 		 * \return The requested scene if it exists, nullptr otherwise. 
 		 * 
 		*/
-		Scene* GetScene(const std::string& sceneName) const;
+		Scene* getScene(const std::string& sceneName) const;
 
 		/* Scene controller access */
-		void AddSceneController(std::unique_ptr<SceneController> sceneController);
-		bool RemoveSceneController(SceneController* controller);
-		SceneController* GetSceneController(const char* controllerName);
+		void addSceneController(std::unique_ptr<SceneController> sceneController);
+		bool removeSceneController(SceneController* controller);
+		SceneController* getSceneController(const char* controllerName);
 
 		/* Window access */
-		Window* GetWindow();
+		Window* getWindow() const;
 
 	private:
 		Window* m_window;

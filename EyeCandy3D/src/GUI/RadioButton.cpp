@@ -3,23 +3,20 @@
 
 #include <algorithm>
 #include <iterator>
+#include <utility>
 
 namespace ec_gui
 {
 	RadioButton::RadioButton(Widget* parent)
-		: Widget(parent),
-		m_selected{false},
-		m_selectedCallback{nullptr},
-		m_deselectedCallback{nullptr}
+		: Widget(parent)
 	{
-		UpdateDrawable();
+		updateDrawable();
 	}
 
 	RadioButton::~RadioButton()
-	{
-	}
+	= default;
 
-	void RadioButton::Select()
+	void RadioButton::select()
 	{
 		if(m_selected) return;
 
@@ -28,37 +25,37 @@ namespace ec_gui
 		{
 			m_selectedCallback();
 		}
-		UpdateDrawable();
+		updateDrawable();
 
 		// Deselect all but the active radio button
 		for(auto& it : m_radioButtons)
 		{
-			it->Deselect();
+			it->deselect();
 		}
 	}
 
-	bool RadioButton::IsSelected() const
+	bool RadioButton::isSelected() const
 	{
 		return m_selected;
 	}
 
-	void RadioButton::SetSelectedCallback(std::function<void()> callback)
+	void RadioButton::setSelectedCallback(std::function<void()> callback)
 	{
-		m_selectedCallback = callback;
+		m_selectedCallback = std::move(callback);
 	}
 
-	void RadioButton::SetDeselectedCallback(std::function<void()> callback)
+	void RadioButton::setDeselectedCallback(std::function<void()> callback)
 	{
-		m_deselectedCallback = callback;
+		m_deselectedCallback = std::move(callback);
 	}
 
-	bool RadioButton::RegisterRadioButton(RadioButton* radioButton)
+	bool RadioButton::registerRadioButton(RadioButton* radioButton)
 	{
 		// Radio buttons can't be registered at themselves
 		if(radioButton == this) return false;
 
 		// Check if the given radio button is already registered
-		bool isNew = true;
+		auto isNew = true;
 		for(const auto& it : m_radioButtons)
 		{
 			if(it == radioButton)
@@ -72,52 +69,52 @@ namespace ec_gui
 		if(isNew)
 		{
 			m_radioButtons.push_back(radioButton);
-			radioButton->RegisterRadioButton(this);
+			radioButton->registerRadioButton(this);
 			for(const auto& it : m_radioButtons)
 			{
-				radioButton->RegisterRadioButton(it);
+				radioButton->registerRadioButton(it);
 			}
 		}
 
 		return isNew;
 	}
 
-	bool RadioButton::UnregisterRadioButton(RadioButton* radioButton)
+	bool RadioButton::unregisterRadioButton(RadioButton* radioButton)
 	{
-		auto foundButton = std::remove(m_radioButtons.begin(), m_radioButtons.end(), radioButton);
-		bool removed = foundButton != m_radioButtons.end();
+		const auto foundButton = std::remove(m_radioButtons.begin(), m_radioButtons.end(), radioButton);
+		const auto removed = foundButton != m_radioButtons.end();
 
 		if(removed)
 		{
-			radioButton->UnregisterAllRadioButtons();
+			radioButton->unregisterAllRadioButtons();
 		}
 
 		return removed;
 	}
 
-	void RadioButton::UnregisterAllRadioButtons()
+	void RadioButton::unregisterAllRadioButtons()
 	{
 		m_radioButtons.clear();
 	}
 
-	bool RadioButton::OnMouseButton(const glm::ivec2& position, int button, int mods, bool pressed)
+	bool RadioButton::onMouseButton(const glm::ivec2& position, int button, int mods, bool pressed)
 	{
 		if(!pressed) return false;
 
-		if(Widget::OnMouseButton(position, button, mods, pressed))
+		if(Widget::onMouseButton(position, button, mods, pressed))
 		{
 			return true;
 		}
 
-		if(Contains(position) && !m_selected)
+		if(contains(position) && !m_selected)
 		{
-			Select();
+			select();
 			return true;
 		}
 		return false;
 	}
 
-	void RadioButton::Deselect()
+	void RadioButton::deselect()
 	{
 		if(!m_selected) return;
 
@@ -126,20 +123,20 @@ namespace ec_gui
 		{
 			m_deselectedCallback();
 		}
-		UpdateDrawable();
+		updateDrawable();
 	}
 
-	void RadioButton::UpdateDrawable()
+	void RadioButton::updateDrawable()
 	{
 		if(s_theme)
 		{
 			if(m_selected)
 			{
-				SetDrawable(s_theme->m_radioButtonOn.get());
+				setDrawable(s_theme->m_radioButtonOn.get());
 			}
 			else
 			{
-				SetDrawable(s_theme->m_radioButtonOff.get());
+				setDrawable(s_theme->m_radioButtonOff.get());
 			}
 		}
 	}

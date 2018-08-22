@@ -7,8 +7,8 @@
 */
 namespace ec_gui
 {
-	class GUIRenderer;
-	class GUIRenderingContext;
+	class GuiRenderer;
+	class GuiRenderingContext;
 
 	class Window : public Widget
 	{
@@ -17,9 +17,6 @@ namespace ec_gui
 		virtual ~Window();
 
 		/* Render visitor function */
-		virtual void Render(GUIRenderer& renderer, GUIRenderingContext& context) override;
-
-	private:
-
+		void render(GuiRenderer& renderer, GuiRenderingContext& context) override;
 	};
 }

@@ -9,7 +9,6 @@ namespace ec
 		explicit SpringGeometry();
 		~SpringGeometry();
 
-	private:
-		
+	
 	};
 }

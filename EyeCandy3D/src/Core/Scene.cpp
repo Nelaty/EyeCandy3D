@@ -1,3 +1,4 @@
+#include <utility>
 #include "EC3D/Core/Scene.h"
 #include "EC3D/Core/Node.h"
 #include "EC3D/Core/SceneSystem.h"
@@ -5,83 +6,78 @@
 
 namespace ec
 {
-	Scene::Scene(const std::string& name)
-		: m_root(nullptr),
-		m_sceneController{nullptr},
-		m_name{name},
-		m_sceneSystem{nullptr},
-		m_enabled{true}
+	Scene::Scene(std::string name)
+		: m_name{std::move(name)}
 	{
-		InitSceneRenderer();
+		initSceneRenderer();
 		m_root = std::make_unique<Node>(nullptr);
 	}
 
 	Scene::~Scene()
+	= default;
+
+	void Scene::tick(const float timeDelta)
 	{
 	}
 
-	void Scene::Tick(const float timeDelta)
-	{
-	}
-
-	const std::string& Scene::GetName() const
+	const std::string& Scene::getName() const
 	{
 		return m_name;
 	}
 	
-	ec::Node* Scene::GetRoot()
+	ec::Node* Scene::getRoot() const
 	{
 		return m_root.get();
 	}
 
-	void Scene::SetSceneController(SceneController* sceneController)
+	void Scene::setSceneController(SceneController* sceneController)
 	{
 		m_sceneController = sceneController;
 	}
 
-	ec::SceneController* Scene::GetSceneController()
+	ec::SceneController* Scene::getSceneController() const
 	{
 		return m_sceneController;
 	}
 
-	void Scene::SetSceneRenderer(const SceneRenderer& sceneRenderer)
+	void Scene::setSceneRenderer(const SceneRenderer& sceneRenderer)
 	{
 		m_sceneRenderer = sceneRenderer;
-		InitSceneRenderer();
+		initSceneRenderer();
 	}
 
-	ec::SceneRenderer& Scene::GetSceneRenderer()
+	ec::SceneRenderer& Scene::getSceneRenderer()
 	{
 		return m_sceneRenderer;
 	}
 
-	void Scene::SetSceneSystem(SceneSystem* sceneSystem)
+	void Scene::setSceneSystem(SceneSystem* sceneSystem)
 	{
 		m_sceneSystem = sceneSystem;
 	}
 
-	ec::SceneSystem* Scene::GetSceneSystem()
+	ec::SceneSystem* Scene::getSceneSystem() const
 	{
 		return m_sceneSystem;
 	}
 
-	void Scene::Enable()
+	void Scene::enable()
 	{
 		m_enabled = true;
 	}
 
-	void Scene::Disable()
+	void Scene::disable()
 	{
 		m_enabled = false;
 	}
 
-	bool Scene::IsEnabled() const
+	bool Scene::isEnabled() const
 	{
 		return m_enabled;
 	}
 
-	void Scene::InitSceneRenderer()
+	void Scene::initSceneRenderer()
 	{
-		m_sceneRenderer.SetScene(this);
+		m_sceneRenderer.setScene(this);
 	}
 }

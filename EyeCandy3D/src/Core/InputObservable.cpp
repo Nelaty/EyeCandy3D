@@ -6,124 +6,123 @@
 namespace ec
 {	
 	InputObservable::~InputObservable()
-	{
-	}
+	= default;
 
-	void InputObservable::ReceiveEvent(const InputEvent& event)
+	void InputObservable::receiveEvent(const InputEvent& event)
 	{
-		InputEvent preparedEvent = PrepareEvent(event);
+		const auto preparedEvent = prepareEvent(event);
 		for(auto& controller : m_inputListeners)
 		{
-			controller->Inform(preparedEvent);
+			controller->inform(preparedEvent);
 		}
 	}
 
-	void InputObservable::RegisterInputListener(InputListener* inputListener)
+	void InputObservable::registerInputListener(InputListener* inputListener)
 	{
-		if(!Contains(inputListener))
+		if(!contains(inputListener))
 		{
 			m_inputListeners.push_back(inputListener);
 		}
 	}
 
-	bool InputObservable::UnregisterInputListener(InputListener* inputListener)
+	bool InputObservable::unregisterInputListener(InputListener* inputListener)
 	{
-		auto foundListener = std::remove(m_inputListeners.begin(),
-										 m_inputListeners.end(),
-										 inputListener);
+		const auto foundListener = std::remove(m_inputListeners.begin(),
+											   m_inputListeners.end(),
+											   inputListener);
 
 		return foundListener != m_inputListeners.end();
 	}
 
-	bool InputObservable::Contains(InputListener* inputListener)
+	bool InputObservable::contains(InputListener* inputListener)
 	{
-		auto foundListener = std::find(m_inputListeners.begin(),
-									   m_inputListeners.end(),
-									   inputListener);
+		const auto foundListener = std::find(m_inputListeners.begin(),
+											 m_inputListeners.end(),
+											 inputListener);
 
 		return foundListener != m_inputListeners.end();
 	}
 
-	void InputObservable::UnregisterAllInputListeners()
+	void InputObservable::unregisterAllInputListeners()
 	{
 		m_inputListeners = InputListeners_T();
 	}
 
-	void InputObservable::InformAll()
+	void InputObservable::informAll()
 	{
 		for(const auto& event : m_events)
 		{
 			for(auto& controller : m_inputListeners)
 			{
-				controller->Inform(event);
+				controller->inform(event);
 			}
 		}
-		ClearEvents();
+		clearEvents();
 	}
 
-	void InputObservable::SetLastPrevMouseEvent(const MouseEvent& event)
+	void InputObservable::setLastPrevMouseEvent(const MouseEvent& event)
 	{
 		m_prevMouseEvent = event;
 	}
 
-	const ec::MouseEvent& InputObservable::GetPrevMouseEvent() const
+	const ec::MouseEvent& InputObservable::getPrevMouseEvent() const
 	{
 		return m_prevMouseEvent;
 	}
 
-	void InputObservable::SetPrevKeyboardEvent(const KeyboardEvent& event)
+	void InputObservable::setPrevKeyboardEvent(const KeyboardEvent& event)
 	{
 		m_prevKeyboardEvent = event;
 	}
 
-	const ec::KeyboardEvent& InputObservable::GetPrevKeyboardEvent() const
+	const ec::KeyboardEvent& InputObservable::getPrevKeyboardEvent() const
 	{
 		return m_prevKeyboardEvent;
 	}
 
-	void InputObservable::SetPrevDisplayEvent(const DisplayEvent& event)
+	void InputObservable::setPrevDisplayEvent(const DisplayEvent& event)
 	{
 		m_prevDisplayEvent = event;
 	}
 
-	const ec::DisplayEvent& InputObservable::GetPrevDisplayEvent() const
+	const ec::DisplayEvent& InputObservable::getPrevDisplayEvent() const
 	{
 		return m_prevDisplayEvent;
 	}
 
-	ec::InputEvent InputObservable::PrepareEvent(const InputEvent& event)
+	ec::InputEvent InputObservable::prepareEvent(const InputEvent& event)
 	{
-		InputEvent result = event;
+		auto result = event;
 
 		switch(event.m_type)
 		{
 			case InputType::mouse_move:
 			{
-				SetLastPrevMouseEvent(event.m_event.m_mouse);
+				setLastPrevMouseEvent(event.m_event.m_mouse);
 				break;
 			}
 			case InputType::mouse_button_released:
 			case InputType::mouse_button_pressed:
 			{
-				SetLastPrevMouseEvent(event.m_event.m_mouse);
+				setLastPrevMouseEvent(event.m_event.m_mouse);
 				break;
 			}
 			case InputType::key_pressed:
 			case InputType::key_released:
 			{
-				SetPrevKeyboardEvent(event.m_event.m_keyboard);
+				setPrevKeyboardEvent(event.m_event.m_keyboard);
 				break;
 			}
 			case InputType::text:
 			{
-				SetPrevKeyboardEvent(event.m_event.m_keyboard);
+				setPrevKeyboardEvent(event.m_event.m_keyboard);
 				break;
 			}
 
 			case InputType::gained_focus:
 			case InputType::lost_focus:
 			{
-				SetPrevDisplayEvent(event.m_event.m_display);
+				setPrevDisplayEvent(event.m_event.m_display);
 				break;
 			}
 
@@ -137,12 +136,11 @@ namespace ec
 		return result;
 	}
 
-	void InputObservable::ClearEvents()
+	void InputObservable::clearEvents()
 	{
 		m_events = Events_T();
 	}
 
 	InputObservable::InputObservable()
-	{
-	}
+	= default;
 }

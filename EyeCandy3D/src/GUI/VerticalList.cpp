@@ -11,33 +11,32 @@ namespace ec_gui
 	}
 
 	VerticalList::~VerticalList()
-	{
-	}
+	= default;
 
-	void VerticalList::SetVerticalSpace(int vspace)
+	void VerticalList::setVerticalSpace(int vspace)
 	{
 		m_vspace = vspace;
-		AlignChilds();
+		alignChilds();
 	}
 
-	void VerticalList::AddChild(Widget* widget)
+	void VerticalList::addChild(Widget* widget)
 	{
-		AlignChild(widget, m_children.size());
-		__super::AddChild(widget);
+		alignChild(widget, m_children.size());
+		__super::addChild(widget);
 	}
 
-	void VerticalList::AlignChilds()
+	void VerticalList::alignChilds()
 	{
 		for(size_t i = 0; i < m_children.size(); ++i)
 		{
-			AlignChild(m_children[i], i);
+			alignChild(m_children[i], i);
 		}
 	}
 
-	void VerticalList::AlignChild(Widget* widget, int pos)
+	void VerticalList::alignChild(Widget* widget, int pos) const
 	{
-		glm::ivec2 widgetPos(0, pos * m_vspace);
-		widget->SetPosition(widgetPos);
+		const glm::ivec2 widgetPos(0, pos * m_vspace);
+		widget->setPosition(widgetPos);
 	}
 
 }

@@ -10,8 +10,8 @@
 
 namespace ec_gui
 {
-	class GUIRenderer;
-	class GUIRenderingContext;
+	class GuiRenderer;
+	class GuiRenderingContext;
 
 	class Text : public Widget
 	{
@@ -20,17 +20,17 @@ namespace ec_gui
 		~Text();
 
 		/* Render visitor function */
-		virtual void Render(GUIRenderer& renderer, GUIRenderingContext& context) override;
+		void render(GuiRenderer& renderer, GuiRenderingContext& context) override;
 
 		/* Text access */
-		void SetText(const std::string& text);
-		void SetText(int text);
-		void SetText(float text, int precision = 7);
-		const std::string& GetText() const;
+		void setText(const std::string& text);
+		void setText(int text);
+		void setText(float text, int precision = 7);
+		const std::string& getText() const;
 
 		/* Text color access */
-		void SetTextColor(const glm::vec4& color);
-		const glm::vec4& GetTextColor() const;
+		void setTextColor(const glm::vec4& color);
+		const glm::vec4& getTextColor() const;
 
 	protected:
 		glm::vec4 m_textColor;

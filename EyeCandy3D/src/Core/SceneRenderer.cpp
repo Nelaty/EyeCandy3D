@@ -18,120 +18,118 @@ namespace ec
 	{
 	}
 
-	SceneRenderer::~SceneRenderer()
-	{
-	}
+	SceneRenderer::~SceneRenderer() = default;
 
-	void SceneRenderer::OnBeginRender(RenderContext& context)
+	void SceneRenderer::onBeginRender(RenderContext& context)
 	{
 		const auto& scenes = context.m_uniqueScenes;
-		const auto& cameras = m_frame.GetCameras();
+		const auto& cameras = m_frame.getCameras();
 
 		// Temp
 		for(const auto& it : cameras)
 		{
-			it->UpdateGlobalMatrices(glm::mat4(1.0f));
+			it->updateGlobalMatrices(glm::mat4(1.0f));
 		}
 
 		// Update matrices of all relevant nodes
 		for(const auto& it : scenes)
 		{
-			auto* rootNode = it->GetRoot();
-			rootNode->UpdateGlobalMatrices(m_globalTransformation);
+			auto* rootNode = it->getRoot();
+			rootNode->updateGlobalMatrices(m_globalTransformation);
 		}
-		Clear();
+		clear();
 	}
 
-	void SceneRenderer::OnRender(RenderContext& context)
+	void SceneRenderer::onRender(RenderContext& context)
 	{
-		auto& shaderManager = context.m_window->GetShaderManager();
-		const auto& cameras = m_frame.GetCameras();
+		auto& shaderManager = context.m_window->getShaderManager();
+		const auto& cameras = m_frame.getCameras();
 
 		for(const auto& it : cameras)
 		{
-			auto* scene = it->GetScene();
-			auto* rootNode = scene->GetRoot();
-			rootNode->Render(*this);
+			auto* scene = it->getScene();
+			auto* rootNode = scene->getRoot();
+			rootNode->render(*this);
 
-			UpdateViewport(context, it);
-			UpdateShaders(shaderManager, it);
-			RenderTargets();
+			updateViewport(context, it);
+			updateShaders(shaderManager, it);
+			renderTargets();
 		}
 	}
 
-	void SceneRenderer::OnEndRender(RenderContext& context)
+	void SceneRenderer::onEndRender(RenderContext& context)
 	{
 	}
 
-	void SceneRenderer::AddRenderingTarget(Node* node)
+	void SceneRenderer::addRenderingTarget(Node* node)
 	{
 		m_renderingTargets.push_back(node);
 	}
 
-	void SceneRenderer::RenderTargets()
+	void SceneRenderer::renderTargets()
 	{
 		for(const auto& target : m_renderingTargets)
 		{
-			const auto& mat = target->GetGlobalMat();
-			const auto& drawables = target->GetDrawables();
+			const auto& mat = target->getGlobalMat();
+			const auto& drawables = target->getDrawables();
 
 			for(const auto& it : drawables)
 			{
-				it->Render(mat);
+				it->render(mat);
 			}
 		}
 	}
 
-	void SceneRenderer::UpdateShaders(ShaderManager& shaderManager, Camera* camera)
+	void SceneRenderer::updateShaders(ShaderManager& shaderManager, Camera* camera)
 	{
-		auto& shaders = shaderManager.GetAllShader();
+		auto& shaders = shaderManager.getAllShader();
 
 		for(auto& it : shaders)
 		{
 			auto* shader = it.second.get();
 
-			shader->Bind();
-			shader->SetMat4(conf_shader::g_viewKey, camera->GetView());
-			shader->SetMat4(conf_shader::g_projectionKey, camera->GetProjection());
-			shader->Unbind();
+			shader->bind();
+			shader->setMat4(conf_shader::g_viewKey, camera->getView());
+			shader->setMat4(conf_shader::g_projectionKey, camera->getProjection());
+			shader->unbind();
 		}
 	}
 
-	void SceneRenderer::UpdateViewport(RenderContext& context, Camera* camera)
+	void SceneRenderer::updateViewport(RenderContext& context, Camera* camera) const
 	{
-		glm::ivec2 windowSize = context.m_window->GetWindowResolution();
-		float ratio = static_cast<float>(windowSize.x) / 
+		const auto windowSize = context.m_window->getWindowResolution();
+		const auto ratio = static_cast<float>(windowSize.x) / 
 			static_cast<float>(windowSize.y);
 
-		auto viewportCamera = camera->GetViewport();
-		camera->ChangeAspectRatio(ratio);
+		auto viewportCamera = camera->getViewport();
+		camera->changeAspectRatio(ratio);
 
-		float adjustedPositionX = viewportCamera.GetPositionX() * windowSize.x;
-		float adjustedPositionY = viewportCamera.GetPositionY() * windowSize.y;
+		const auto adjustedPositionX = viewportCamera.getPositionX() * windowSize.x;
+		const auto adjustedPositionY = viewportCamera.getPositionY() * windowSize.y;
 
-		float adjustedWidth = viewportCamera.GetSizeX() * windowSize.x;
-		float adjustedHeight = viewportCamera.GetSizeY() * windowSize.y;
+		const auto adjustedWidth = viewportCamera.getSizeX() * windowSize.x;
+		const auto adjustedHeight = viewportCamera.getSizeY() * windowSize.y;
 
 		glViewport(adjustedPositionX, adjustedPositionY,
 				   adjustedWidth, adjustedHeight);
 	}
 
-	void SceneRenderer::Clear()
+	void SceneRenderer::clear()
 	{
 		m_renderingTargets.clear();
 	}
 
-	void SceneRenderer::Render(Window* window)
+	void SceneRenderer::render(Window* window)
 	{
-		const auto& cameras = m_frame.GetCameras();
-		auto& shaderManager = window->GetShaderManager();
+		const auto& cameras = m_frame.getCameras();
+		auto& shaderManager = window->getShaderManager();
 
 		// Collect all unique cameras, since a scene only needs to updated
 		// once.
 		std::set<Scene*> uniqueScenes;
 		for(const auto& it : cameras)
 		{		
-			auto* scene = it->GetScene();
+			auto* scene = it->getScene();
 			if(scene)
 			{
 				uniqueScenes.insert(scene);
@@ -142,33 +140,39 @@ namespace ec
 		context.m_window = window;
 		context.m_uniqueScenes = uniqueScenes;
 
-		OnBeginRender(context);
-		OnRender(context);
-		OnEndRender(context);
+		onBeginRender(context);
+		onRender(context);
+		onEndRender(context);
 	}
 
-	void SceneRenderer::SetScene(Scene* scene)
+	void SceneRenderer::setScene(Scene* scene)
 	{
 		m_scene = scene;
 	}
 
-	ec::Scene* SceneRenderer::GetScene()
+	ec::Scene* SceneRenderer::getScene()
 	{
 		return m_scene;
 	}
 
-	ec::Frame& SceneRenderer::GetFrame()
+	ec::Frame& SceneRenderer::getFrame()
 	{
 		return m_frame;
 	}
 
-	const ec::Frame& SceneRenderer::GetFrame() const
+	const ec::Frame& SceneRenderer::getFrame() const
 	{
 		return m_frame;
 	}
 
-	void SceneRenderer::SetFrame(const Frame& frame)
+	void SceneRenderer::setFrame(const Frame& frame)
 	{
 		m_frame = frame;
 	}
+
+	SceneRenderer::RenderContext::RenderContext()
+		: m_window{nullptr}
+	{
+	}
+
 }

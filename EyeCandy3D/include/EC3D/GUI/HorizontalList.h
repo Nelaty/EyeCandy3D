@@ -15,16 +15,16 @@ namespace ec_gui
 		~HorizontalList();
 
 		/* Set horizontal space between child widgets */
-		void SetHorizontalSpace(int hspace);
+		void setHorizontalSpace(int hspace);
 
 		/* Automatically align new children */
-		virtual void AddChild(Widget* widget) override;
+		void addChild(Widget* widget) override;
 
 	private:
 		/* Align all child */
-		void AlignChilds();
+		void alignChilds();
 		/* Align widget */
-		void AlignChild(Widget* widget, int pos);
+		void alignChild(Widget* widget, int pos) const;
 
 		int m_hspace;
 	};

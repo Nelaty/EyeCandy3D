@@ -38,12 +38,12 @@ namespace ec_gui
 	{
 		if(m_secondWidget)
 		{
-			RemoveChild(m_secondWidget);
+			removeChild(m_secondWidget);
 		}
-		AddChild(slotData);
+		addChild(slotData);
 		if(m_firstWidget)
 		{
-			m_secondWidget->SetPositionX(m_firstWidget->GetSize().x)
+			m_secondWidget->SetPositionX(m_firstWidget->GetSize().x);
 		}
 		m_secondWidget = slotData;
 	}
@@ -65,12 +65,12 @@ namespace ec_gui
 	{
 		if(m_firstWidget)
 		{
-			RemoveChild(m_firstWidget);
+			removeChild(m_firstWidget);
 		}
-		AddChild(slotData);
+		addChild(slotData);
 		if(m_secondWidget)
 		{
-			m_secondWidget->SetPositionX(m_firstWidget->GetSize().x)
+			m_secondWidget->SetPositionX(m_firstWidget->GetSize().x);
 		}
 		m_firstWidget = slotData;
 	}
@@ -96,7 +96,7 @@ namespace ec_gui
 	ec_gui::SlotPair<FirstWidget, SecondWidget>::SlotPair(Widget* parent)
 		: Widget(parent)
 	{
-		static_assert(std::is_base_of<Widget, FirstWidget>, "FirstWidget is not derived from Widget!");
-		static_assert(std::is_base_of<Widget, SecondWidget>, "SecondWidget is not derived from Widget!");
+		static_assert(std::is_base_of<Widget, FirstWidget>::value, "FirstWidget is not derived from Widget!");
+		static_assert(std::is_base_of<Widget, SecondWidget>::value, "SecondWidget is not derived from Widget!");
 	}
 }

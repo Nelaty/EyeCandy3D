@@ -9,61 +9,60 @@
 namespace ec
 {
 	Camera::Camera(Scene* scene)
-		: m_scene{scene},
-		Node(nullptr)
+		: Node(nullptr),
+		m_scene{scene}
 	{
-		Init();
+		init();
 	}	
 
 	Camera::Camera(Scene* scene, const Viewport& viewport)
-		: m_scene{scene},
+		: Node(nullptr),
 		m_viewport{viewport},
-		Node(nullptr)
+		m_scene{scene}		
 	{
-		Init();
+		init();
 	}
 
 	Camera::~Camera()
-	{
-	}
+	= default;
 
-	void Camera::ChangeAspectRatio(float aspect)
+	void Camera::changeAspectRatio(float aspect)
 	{
 		m_aspect = aspect;
 		if(m_type == CameraType::perspective)
 		{
-			SetProjectionPerspective();
+			setProjectionPerspective();
 		}
 	}
 
-	void Camera::UpdateLocalMat()
+	void Camera::updateLocalMat()
 	{
-		__super::UpdateLocalMat();
+		__super::updateLocalMat();
 	}
 
-	void Camera::UpdateGlobalMatrices(const glm::mat4& m_parentMat)
+	void Camera::updateGlobalMatrices(const glm::mat4& parentMat)
 	{
-		__super::UpdateGlobalMatrices(m_parentMat);
+		__super::updateGlobalMatrices(parentMat);
 
 		m_view = glm::lookAt(m_position,
 							 m_forwardVector + m_position,
 							 m_up);
 	}
 
-	const glm::mat4& Camera::GetView() const
+	const glm::mat4& Camera::getView() const
 	{
 		return m_view;
 	}	
 
-	const glm::mat4& Camera::GetProjection() const
+	const glm::mat4& Camera::getProjection() const
 	{
 		return m_projection;
 	}
 
-	void Camera::SetProjectionOrtho()
+	void Camera::setProjectionOrtho()
 	{
-		const auto& pos = m_viewport.GetPosition();
-		const auto& size = m_viewport.GetSize();
+		const auto& pos = m_viewport.getPosition();
+		const auto& size = m_viewport.getSize();
 
 		m_projection = glm::ortho(pos.x, pos.x + size.x,
 								  pos.y + size.y, pos.y,
@@ -72,66 +71,66 @@ namespace ec
 		m_type = CameraType::orthogonal;
 	}
 
-	void Camera::SetProjectionPerspective()
+	void Camera::setProjectionPerspective()
 	{
-		float adjustedAspect = m_aspect * (m_viewport.GetSizeX() / m_viewport.GetSizeY());
+		const auto adjustedAspect = m_aspect * (m_viewport.getSizeX() / m_viewport.getSizeY());
 
 		m_projection = glm::perspective(m_fov, adjustedAspect, m_near, m_far);
 		m_type = CameraType::perspective;
 	}
 
-	void Camera::SetFOV(const float fov)
+	void Camera::setFov(const float fov)
 	{
 		m_fov = fov;
 	}
 
-	void Camera::SetNear(const float near)
+	void Camera::setNear(const float near)
 	{
 		m_near = near;
 	}
 
-	void Camera::SetFar(const float far)
+	void Camera::setFar(const float far)
 	{
 		m_far = far;
 	}
 
-	float Camera::GetFOV() const
+	float Camera::getFov() const
 	{
 		return m_fov;
 	}
 
-	float Camera::GetNear() const
+	float Camera::getNear() const
 	{
 		return m_near;
 	}
 
-	float Camera::GetFar() const
+	float Camera::getFar() const
 	{
 		return m_far;
 	}
 
-	ec::Scene* Camera::GetScene() const
+	ec::Scene* Camera::getScene() const
 	{
 		return m_scene;
 	}
 
-	const ec::Viewport& Camera::GetViewport() const
+	const ec::Viewport& Camera::getViewport() const
 	{
 		return m_viewport;
 	}
 
-	void Camera::SetViewport(const Viewport& viewport)
+	void Camera::setViewport(const Viewport& viewport)
 	{
 		m_viewport = viewport;
 	}
 
-	void Camera::Init()
+	void Camera::init()
 	{
 		m_aspect = 1.0f;	
 		m_fov = 60.0f;
 		m_near = 0.01f;
 		m_far = 1000.0f;
 
-		SetProjectionPerspective();
+		setProjectionPerspective();
 	}
 }

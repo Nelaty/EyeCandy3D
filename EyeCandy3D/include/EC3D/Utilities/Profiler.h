@@ -17,15 +17,15 @@ namespace utl
 	struct ProfilingData
 	{	
 	public:
-		void Print();
+		void print() const;
 	
 		unsigned int m_loops;
 		unsigned int m_min;
 		unsigned int m_avg;
 		unsigned int m_max;
 
-		void SetPrecision(ProfilingPrecision precision);
-		ProfilingPrecision GetPrecision() const;
+		void setPrecision(ProfilingPrecision precision);
+		ProfilingPrecision getPrecision() const;
 
 	private:
 		std::string m_precisionPostfix;
@@ -33,7 +33,7 @@ namespace utl
 	};
 
 	/* Profile a single function */
-	ProfilingData ProfileFunction(std::function<void(void)> f,
-								  const unsigned int loops = 1,
+	ProfilingData profileFunction(const std::function<void()>& f,
+								  unsigned int loops = 1,
 								  ProfilingPrecision precision = ProfilingPrecision::millisecond);
 }

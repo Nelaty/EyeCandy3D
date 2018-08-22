@@ -14,19 +14,23 @@ namespace ec
 						  const glm::vec2& size = glm::vec2(1.0f));
 		~Viewport();
 
-		const glm::vec2& GetPosition() const;
-		float GetPositionX() const;
-		float GetPositionY() const;
-		void SetPosition(const glm::vec2& position);
-		void SetPositionX(float x);
-		void SetPositionY(float y);
+		const glm::vec2& getPosition() const;
+		float getPositionX() const;
+		float getPositionY() const;
 
-		const glm::vec2& GetSize() const;
-		float GetSizeX() const;
-		float GetSizeY() const;
-		void SetSize(const glm::vec2& size);
-		void SetSizeX(float x);
-		void SetSizeY(float y);
+		void setPosition(float x, float y);
+		void setPosition(const glm::vec2& position);
+		void setPositionX(float x);
+		void setPositionY(float y);
+
+		const glm::vec2& getSize() const;
+		float getSizeX() const;
+		float getSizeY() const;
+
+		void setSize(float x, float y);
+		void setSize(const glm::vec2& size);
+		void setSizeX(float x);
+		void setSizeY(float y);
 
 	private:
 		glm::vec2 m_position;

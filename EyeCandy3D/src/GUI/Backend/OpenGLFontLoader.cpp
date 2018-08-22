@@ -5,12 +5,10 @@ namespace agui
 {
 	
 	OpenGLFontLoader::OpenGLFontLoader()
-	{
-	}
+	= default;
 
 	OpenGLFontLoader::~OpenGLFontLoader()
-	{
-	}
+	= default;
 
 
 	agui::Font* OpenGLFontLoader::loadFont(const std::string &fileName,

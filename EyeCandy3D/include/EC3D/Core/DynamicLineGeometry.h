@@ -12,19 +12,19 @@ namespace ec
 		~DynamicLineGeometry();
 
 		/* Start node access */
-		void SetStart(Node* start);
-		Node* GetStart() const;
+		void setStart(Node* start);
+		Node* getStart() const;
 
 		/* End node access */
-		void SetEnd(Node* end);
-		Node* GetEnd() const;
+		void setEnd(Node* end);
+		Node* getEnd() const;
 
 		/* Line width access */
-		void SetLinewidth(float linewidth);
-		float GetLinewidth() const;
+		void setLinewidth(float linewidth);
+		float getLinewidth() const;
 
 	protected:
-		virtual void OnRender() override;
+		void onRender() override;
 
 	private:
 		Node* m_start;

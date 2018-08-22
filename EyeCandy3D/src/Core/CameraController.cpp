@@ -6,75 +6,75 @@
 namespace ec
 {
 	CameraController::CameraController()
+		: m_camera{nullptr}
 	{
-		Init();
+		init();
 	}
 
 	CameraController::CameraController(Camera* camera)
 		: m_camera{camera}
 	{
-		Init();
+		init();
 	}
 
 	CameraController::~CameraController()
-	{
-	}
+	= default;
 
-	void CameraController::Tick(const float timeDelta)
+	void CameraController::tick(const float timeDelta)
 	{
 		if(!m_camera) return;
 
-		m_camera->TranslateLocal(m_cameraVelocityCurrent * timeDelta * m_cameraSpeed);
+		m_camera->translateLocal(m_cameraVelocityCurrent * timeDelta * m_cameraSpeed);
 		if(m_mouseChangeCameraDir && m_mouseMovement != glm::vec2(0.0f))
 		{
-			m_camera->RotateY(-m_mouseMovement.x * m_mouseSensitivity);
-			m_camera->RotateXLocal(-m_mouseMovement.y * m_mouseSensitivity);
+			m_camera->rotateY(-m_mouseMovement.x * m_mouseSensitivity);
+			m_camera->rotateXLocal(-m_mouseMovement.y * m_mouseSensitivity);
 
 			m_mouseMovement = glm::vec2(0.0f);
 		}
 	}
 
-	void CameraController::Reset()
+	void CameraController::reset()
 	{
-		Init();
+		init();
 	}
 
-	void CameraController::SetCamera(Camera* camera)
+	void CameraController::setCamera(Camera* camera)
 	{
 		m_camera = camera;
 	}
 
-	ec::Camera* CameraController::GetCamera() const
+	ec::Camera* CameraController::getCamera() const
 	{
 		return m_camera;
 	}
 
-	void CameraController::ProcessEvent(const InputEvent& event)
+	void CameraController::processEvent(const InputEvent& event)
 	{		
 		switch(event.m_type)
 		{
 			case InputType::mouse_move:
-				ProcessMouseMovement(event.m_event.m_mouse);
+				processMouseMovement(event.m_event.m_mouse);
 				break;
 			case InputType::key_pressed:
-				ProcessKeyDownInput(event.m_event.m_keyboard);
+				processKeyDownInput(event.m_event.m_keyboard);
 				break;
 			case InputType::key_released:
-				ProcessKeyUpInput(event.m_event.m_keyboard);
+				processKeyUpInput(event.m_event.m_keyboard);
 				break;
 			case InputType::mouse_scroll:
-				ProcessScrollInput(event.m_event.m_mouse);
+				processScrollInput(event.m_event.m_mouse);
 				break;
 			case InputType::mouse_button_pressed:
-				ProcessMouseButtonDown(event.m_event.m_mouse);
+				processMouseButtonDown(event.m_event.m_mouse);
 				break;
 			case InputType::mouse_button_released:
-				ProcessMouseButtonUp(event.m_event.m_mouse);
+				processMouseButtonUp(event.m_event.m_mouse);
 				break;
 		}
 	}
 
-	void CameraController::ProcessMouseMovement(const MouseEvent& event)
+	void CameraController::processMouseMovement(const MouseEvent& event)
 	{
 		if(!m_mouseChangeCameraDir)
 		{
@@ -90,7 +90,7 @@ namespace ec
 		m_mouseCoordsLast = glm::vec2(event.m_x, event.m_y);
 	}
 
-	void CameraController::ProcessMouseButtonDown(const MouseEvent& event)
+	void CameraController::processMouseButtonDown(const MouseEvent& event)
 	{
 		if(event.m_button == GLFW_MOUSE_BUTTON_RIGHT)
 		{
@@ -99,7 +99,7 @@ namespace ec
 		}
 	}
 
-	void CameraController::ProcessMouseButtonUp(const MouseEvent& event)
+	void CameraController::processMouseButtonUp(const MouseEvent& event)
 	{
 		if(event.m_button == GLFW_MOUSE_BUTTON_RIGHT)
 		{
@@ -109,7 +109,7 @@ namespace ec
 		}
 	}	
 
-	void CameraController::ProcessKeyDownInput(const KeyboardEvent& event)
+	void CameraController::processKeyDownInput(const KeyboardEvent& event)
 	{
 		if(event.m_key == GLFW_KEY_LEFT_SHIFT)
 		{
@@ -155,7 +155,7 @@ namespace ec
 		}
 	}
 
-	void CameraController::ProcessKeyUpInput(const KeyboardEvent& event)
+	void CameraController::processKeyUpInput(const KeyboardEvent& event)
 	{
 		if(event.m_key == GLFW_KEY_LEFT_SHIFT)
 		{
@@ -201,11 +201,11 @@ namespace ec
 		}
 	}
 
-	void CameraController::ProcessScrollInput(const MouseEvent& event)
+	void CameraController::processScrollInput(const MouseEvent& event) const
 	{
 		if(!m_camera) return;
 
-		float FOV = m_camera->GetFOV();
+		float FOV = m_camera->getFov();
 		FOV -= event.m_scrollY * m_fovStep;
 		if(FOV < m_fovMin)
 		{
@@ -216,10 +216,10 @@ namespace ec
 			FOV = m_fovMax;
 		}
 
-		m_camera->SetFOV(FOV);
+		m_camera->setFov(FOV);
 	}
 
-	void CameraController::Init()
+	void CameraController::init()
 	{
 		m_cameraSpeed = 1.0f;
 

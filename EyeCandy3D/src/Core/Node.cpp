@@ -10,113 +10,109 @@ namespace ec
 		: m_parent{parent},
 		m_globalMat{1.0f}
 	{
-	}	
-
-	Node::~Node()
-	{
 	}
 
-	void Node::Render(SceneRenderer& renderer)
+	Node::~Node()
+	= default;
+
+	void Node::render(SceneRenderer& renderer)
 	{
 		if(!m_drawables.empty())
 		{
-			renderer.AddRenderingTarget(this);
+			renderer.addRenderingTarget(this);
 		}
 		for(auto& it : m_children)
 		{
-			it->Render(renderer);
+			it->render(renderer);
 		}
 	}
 
-	void Node::UpdateGlobalMatrices(const glm::mat4& m_parentMat)
+	void Node::updateGlobalMatrices(const glm::mat4& m_parentMat)
 	{
-		UpdateLocalMat();
-		m_globalMat = m_parentMat * GetLocalMat();
+		updateLocalMat();
+		m_globalMat = m_parentMat * getLocalMat();
 		for(auto& it : m_children)
 		{
-			it->UpdateGlobalMatrices(m_globalMat);
+			it->updateGlobalMatrices(m_globalMat);
 		}
 	}
 
-	const glm::mat4& Node::GetGlobalMat() const
+	const glm::mat4& Node::getGlobalMat() const
 	{
 		return m_globalMat;
 	}
 
-	const glm::vec3& Node::GetGlobalPosition()
+	const glm::vec3& Node::getGlobalPosition()
 	{
 		return glm::vec3(m_globalMat[4]);
 	}
 
-	ec::Node* Node::GetParent()
+	ec::Node* Node::getParent() const
 	{
 		return m_parent;
 	}
 
-	void Node::SetParent(Node* parent)
+	void Node::setParent(Node* parent)
 	{
 		if(m_parent)
 		{
-			m_parent->RemoveChild(this);
+			m_parent->removeChild(this);
 		}
 		m_parent = parent;
 	}
 
-	void Node::AddChild(Node* child)
+	void Node::addChild(Node* child)
 	{
 		m_children.push_back(child);
 	}
 
-	bool Node::RemoveChild(Node* child)
+	bool Node::removeChild(Node* child)
 	{
-		auto foundChild = std::find(m_children.begin(),
-									m_children.end(),
-									child);
+		const auto foundChild = std::find(m_children.begin(),
+										  m_children.end(),
+										  child);
 
 		if(foundChild != m_children.end())
 		{
 			m_children.erase(foundChild);
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 
-	void Node::RemoveChildren()
+	void Node::removeChildren()
 	{
 		m_children = std::vector<Node*>();
 	}
 
-	unsigned int Node::GetChildrenCount(void) const
+	unsigned int Node::getChildrenCount() const
 	{
 		return m_children.size();
 	}
 
-	bool Node::HasChildren() const
+	bool Node::hasChildren() const
 	{
 		return !m_children.empty();
 	}
 
-	const std::vector<Drawable*>& Node::GetDrawables() const
+	const std::vector<Drawable*>& Node::getDrawables() const
 	{
 		return m_drawables;
 	}
 
-	void Node::AddDrawable(Drawable* drawable)
+	void Node::addDrawable(Drawable* drawable)
 	{
 		m_drawables.push_back(drawable);
 	}
 
-	void Node::RemoveDrawable(Drawable* drawable)
+	void Node::removeDrawable(Drawable* drawable)
 	{
 		std::remove(m_drawables.begin(),
 					m_drawables.end(),
 					drawable);
 	}
 
-	void Node::RemoveDrawables()
+	void Node::removeDrawables()
 	{
 		m_drawables = std::vector<Drawable*>();
 	}

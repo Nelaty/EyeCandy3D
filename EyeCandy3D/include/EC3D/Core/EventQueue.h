@@ -9,10 +9,8 @@ namespace ec
 		explicit EventQueue(unsigned int size = 100);
 		~EventQueue();
 
-		void PushEvent(const InputEvent& event);
-		bool PopEvent(InputEvent& outEvent);
-
-	private:
+		void pushEvent(const InputEvent& event);
+		bool popEvent(InputEvent& outEvent);
 
 	};
 }

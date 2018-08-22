@@ -12,10 +12,10 @@ namespace ec
 		explicit EventSource();
 		~EventSource();
 
-		void RegisterEventQueue(EventQueue* queue);
-		void UnregisterEventQueue(EventQueue* queue);
+		void registerEventQueue(EventQueue* queue);
+		void unregisterEventQueue(EventQueue* queue);
 
-		bool ContainsEventQueue(EventQueue* queue);
+		bool containsEventQueue(EventQueue* queue);
 
 	private:
 		std::vector<EventQueue*> m_eventQueues;

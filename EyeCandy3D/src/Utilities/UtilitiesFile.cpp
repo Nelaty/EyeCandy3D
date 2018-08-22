@@ -9,7 +9,7 @@
 
 namespace utl
 {
-	std::string GetFileContentString(const char* filepath)
+	std::string getFileContentString(const char* filepath)
 	{
 		std::ifstream in(filepath);
 		std::string fileContent;
@@ -31,7 +31,7 @@ namespace utl
 		return std::move(fileContent);
 	}
 
-	std::vector<std::string> GetFileContentSeparatedString(const char* filepath)
+	std::vector<std::string> getFileContentSeparatedString(const char* filepath)
 	{
 		std::ifstream in(filepath);
 		std::string fileContent;
@@ -60,7 +60,7 @@ namespace utl
 		return std::move(separetedFileContent);
 	}
 
-	void WriteToFileLocal(const std::string& inputStr, const char* filename)
+	void writeToFileLocal(const std::string& inputStr, const char* filename)
 	{
 		std::ofstream out;
 		out.open(filename);
@@ -74,42 +74,42 @@ namespace utl
 	}
 
 	// TODO: implement
-	void CreateFileInWorkingDirectory(const char* filename)
+	void createFileInWorkingDirectory(const char* filename)
 	{
 
 	}
 
-	void CreateDirectoryInWorkingDirectory(const char* dirname)
+	void createDirectoryInWorkingDirectory(const char* dirname)
 	{
 
 	}
 
-	bool IsFileInWorkingDir(const char* filename)
-	{
-		return true;
-	}
-
-	bool IsDirectoryInWorkingDir(const char* dirname)
+	bool isFileInWorkingDir(const char* filename)
 	{
 		return true;
 	}
 
-	void CreateFilePath(const char* filename, const char* filepath)
-	{
-
-	}
-
-	void CreateDirectoryPath(const char* filename, const char* filepath)
-	{
-
-	}
-
-	bool IsFileInPath(const char* filename, const char* filepath)
+	bool isDirectoryInWorkingDir(const char* dirname)
 	{
 		return true;
 	}
 
-	bool IsDirectoryInPath(const char* filename, const char* filepath)
+	void createFilePath(const char* filename, const char* filepath)
+	{
+
+	}
+
+	void createDirectoryPath(const char* filename, const char* filepath)
+	{
+
+	}
+
+	bool isFileInPath(const char* filename, const char* filepath)
+	{
+		return true;
+	}
+
+	bool isDirectoryInPath(const char* filename, const char* filepath)
 	{
 		return true;
 	}

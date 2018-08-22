@@ -1,6 +1,6 @@
-#include "EC3D/GUI/GUIController.h"
-#include "EC3D/GUI/GUISystem.h"
-#include "EC3D/GUI/GUI.h"
+#include "EC3D/GUI/GuiController.h"
+#include "EC3D/GUI/GuiSystem.h"
+#include "EC3D/GUI/Gui.h"
 #include "EC3D/GUI/Widget.h"
 
 #include "EC3D/Core/InputEvent.h"
@@ -9,32 +9,31 @@
 
 namespace ec_gui
 {
-	GUIController::GUIController()
+	GuiController::GuiController()
 		: m_guiSystem{nullptr}
 	{
 	}
 
-	GUIController::~GUIController()
-	{
-	}
+	GuiController::~GuiController()
+	= default;
 
-	ec_gui::GUISystem* GUIController::GetGUISystem()
+	ec_gui::GuiSystem* GuiController::getGuiSystem() const
 	{
 		return m_guiSystem;
 	}
 
-	void GUIController::SetGUISystem(GUISystem* guiSystem)
+	void GuiController::setGuiSystem(GuiSystem* guiSystem)
 	{
 		m_guiSystem = guiSystem;
 	}
 
-	void GUIController::ProcessEvent(const ec::InputEvent& event)
+	void GuiController::processEvent(const ec::InputEvent& event)
 	{
-		auto* model = m_guiSystem->GetModel();
+		auto* model = m_guiSystem->getModel();
 
-		for(auto& it : model->GetAllGUIs())
+		for(auto& it : model->getAllGuIs())
 		{
-			auto* widget = it->GetWidget();
+			auto* widget = it->getWidget();
 
 			auto CursorPos = [](GLFWwindow* window)
 			{
@@ -48,7 +47,7 @@ namespace ec_gui
 			// to make the GUI more light weight.
 			switch(event.m_type)
 			{
-				/// \todo implement GUIController ProcessEvent
+				/// \todo implement GuiController ProcessEvent
 			}
 		}
 	}

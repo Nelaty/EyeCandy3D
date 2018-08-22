@@ -1,5 +1,5 @@
 #pragma once
-#include "EC3D/GUI/GUIRenderer.h"
+#include "EC3D/Gui/GuiRenderer.h"
 #include "EC3D/Core/Frame.h"
 
 #include <set>
@@ -22,6 +22,8 @@ namespace ec
 	private:
 		struct RenderContext
 		{
+			explicit RenderContext();
+		
 			Window* m_window;
 			std::set<Scene*> m_uniqueScenes;
 		};
@@ -31,38 +33,38 @@ namespace ec
 		~SceneRenderer();
 
 		/* Render the currently active scene */
-		void Render(Window* window);
+		void render(Window* window);
 
 		/* Scene access */
-		void SetScene(Scene* scene);
-		Scene* GetScene();
+		void setScene(Scene* scene);
+		Scene* getScene();
 
 		/* Frame access */
-		Frame& GetFrame();
-		const Frame& GetFrame() const;
-		void SetFrame(const Frame& frame);
+		Frame& getFrame();
+		const Frame& getFrame() const;
+		void setFrame(const Frame& frame);
 
 		/*
 		* Nodes add themselves as rendering targets, if they should
 		* be rendered.
 		*/
-		void AddRenderingTarget(Node* node);
+		void addRenderingTarget(Node* node);
 
 	protected:
-		void OnBeginRender(RenderContext& context);
-		void OnRender(RenderContext& context);
-		void OnEndRender(RenderContext& context);
+		void onBeginRender(RenderContext& context);
+		void onRender(RenderContext& context);
+		void onEndRender(RenderContext& context);
 
 	private:
 		/** Render all previously collected render targets */
-		void RenderTargets();
+		void renderTargets();
 		/** Update matrices of all shaders */
-		void UpdateShaders(ShaderManager& shaderManager, Camera* camera);
+		void updateShaders(ShaderManager& shaderManager, Camera* camera);
 		/**  */
-		void UpdateViewport(RenderContext& context, Camera* camera);
+		void updateViewport(RenderContext& context, Camera* camera) const;
 
 		/* Clear all rendering targets */
-		void Clear();
+		void clear();
 		std::vector<Node*> m_renderingTargets;
 
 		Frame m_frame;

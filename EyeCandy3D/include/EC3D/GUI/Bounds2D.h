@@ -13,15 +13,15 @@ namespace ec_gui
 		virtual ~Bounds2D();
 
 		/* Check if another Bounds2D is fully contained in this bounds */
-		bool FullyContains(const Bounds2D& bounds);
+		bool fullyContains(const Bounds2D& bounds) const;
 
 		/* Translation */
-		void Translate(const glm::vec2& val);
-		void SetTranslation(const glm::vec2& val);
+		void translate(const glm::vec2& val);
+		void setTranslation(const glm::vec2& val);
 
 		/* Scaling */
-		void Scale(const glm::vec2& val);
-		void SetScale(const glm::vec2& val);
+		void scale(const glm::vec2& val);
+		void setScale(const glm::vec2& val);
 
 	private:
 		glm::vec2 m_leftUpperCorner;

@@ -5,7 +5,7 @@
 
 /*
 * Checkbox GUI element
-* Can handle callbacks for selection and deselection
+* Can handle callbacks for selection and de-selection
 */
 namespace ec_gui
 {
@@ -16,16 +16,16 @@ namespace ec_gui
 		virtual ~Checkbox();
 
 		/* Set the callback, for when the check box gets enabled */
-		void SetSelectedCallback(std::function<void()> callback);
+		void setSelectedCallback(std::function<void()> callback);
 		/* Set the callback, for when the check box gets disabled */
-		void SetDeselectedCallback(std::function<void()> callback);
+		void setDeselectedCallback(std::function<void()> callback);
 
 		/* Selection access */
-		virtual void Select(const bool selected);
-		virtual void ToggleSelection();
-		bool IsSelected() const;
+		virtual void select(bool selected);
+		virtual void toggleSelection();
+		bool isSelected() const;
 
-		virtual bool OnMouseButton(const glm::ivec2& position, int button, int mods, bool pressed) override;
+		bool onMouseButton(const glm::ivec2& position, int button, int mods, bool pressed) override;
 
 	protected:
 		std::function<void()> m_selectedCallback;
@@ -34,6 +34,6 @@ namespace ec_gui
 		bool m_selected;
 
 	private:
-		void UpdateDrawable();
+		void updateDrawable();
 	};
 }

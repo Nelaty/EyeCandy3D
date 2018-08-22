@@ -9,17 +9,17 @@ namespace ec
 		explicit SphereMesh(float radius = 1.0f, int latitude = 20, int longitude = 20);
 		~SphereMesh();
 
-		void Resize(float radius, int latitude = 20, int longitude = 20);
+		void resize(float radius, int latitude = 20, int longitude = 20);
 
-		float GetRadius() const;
-		float GetLatitude() const;
-		float GetLongitude() const;
+		float getRadius() const;
+		float getLatitude() const;
+		float getLongitude() const;
 
 	private:
-		void Init(float radius, int latitude, int longitude);
+		void init(float radius, int latitude, int longitude);
 
-		void InitVerticesAndTexCoords();
-		void InitIndices();
+		void initVerticesAndTexCoords();
+		void initIndices();
 
 		float m_radius;
 		float m_latitude;

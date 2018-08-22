@@ -14,64 +14,62 @@ namespace ec
 	{
 	}
 
-	SceneSystem::~SceneSystem()
-	{
-	}
+	SceneSystem::~SceneSystem()	= default;
 
-	void SceneSystem::Tick(const float timeDelta)
+	void SceneSystem::tick(const float timeDelta)
 	{
 		for(auto& it : m_scenes)
 		{
-			if(it->IsEnabled())
+			if(it->isEnabled())
 			{
-				it->Tick(timeDelta);
+				it->tick(timeDelta);
 			}
 		}
 	}
 
-	ec::Scene* SceneSystem::GetScene(const std::string& sceneName) const
+	ec::Scene* SceneSystem::getScene(const std::string& sceneName) const
 	{
-		auto foundScene = std::find_if(m_scenes.begin(),
-								  m_scenes.end(),
-								  [&](const Scene* it)
+		const auto foundScene = std::find_if(m_scenes.begin(),
+											 m_scenes.end(),
+											 [&](const Scene* it)
 		{
-			return it->GetName() == sceneName;
+			return it->getName() == sceneName;
 		});
 
 		return foundScene == m_scenes.end() ? nullptr : *foundScene;
 	}
 
-	bool SceneSystem::RegisterScene(Scene* scene)
+	bool SceneSystem::registerScene(Scene* scene)
 	{
-		if(GetScene(scene->GetName())) return false;
+		if(getScene(scene->getName())) return false;
 
-		scene->SetSceneSystem(this);
-		m_scenes.push_back(std::move(scene));
+		scene->setSceneSystem(this);
+		m_scenes.push_back(scene);
 
 		return true;
 	}
 
-	ec::Scene* SceneSystem::UnregisterScene(Scene* scene)
+	ec::Scene* SceneSystem::unregisterScene(Scene* scene)
 	{
-		auto removedScene = std::remove(m_scenes.begin(),
-										m_scenes.end(),
-										scene);
+		const auto removedScene = std::remove(m_scenes.begin(),
+											  m_scenes.end(),
+											  scene);
 
 		if(removedScene == m_scenes.end()) return nullptr;
 
 		return *removedScene;
 	}
 
-	void SceneSystem::AddSceneController(std::unique_ptr<SceneController> sceneController)
+	void SceneSystem::addSceneController(std::unique_ptr<SceneController> sceneController)
 	{
 		m_sceneController.push_back(std::move(sceneController));
 	}
 
-	bool SceneSystem::RemoveSceneController(SceneController* controller)
+	bool SceneSystem::removeSceneController(SceneController* controller)
 	{
-		auto foundController = std::remove_if(m_sceneController.begin(),
-											  m_sceneController.end(),
-											  [&](const std::unique_ptr<SceneController>& it)
+		const auto foundController = std::remove_if(m_sceneController.begin(),
+													m_sceneController.end(),
+													[&](const std::unique_ptr<SceneController>& it)
 		{
 			return it.get() == controller;
 		});
@@ -79,19 +77,19 @@ namespace ec
 		return foundController != m_sceneController.end();
 	}
 
-	ec::SceneController* SceneSystem::GetSceneController(const char* controllerName)
+	ec::SceneController* SceneSystem::getSceneController(const char* controllerName)
 	{
-		auto foundController = std::find_if(m_sceneController.begin(),
-											m_sceneController.end(),
-											[&](const std::unique_ptr<SceneController>& it)
+		const auto foundController = std::find_if(m_sceneController.begin(),
+												  m_sceneController.end(),
+												  [&](const std::unique_ptr<SceneController>& it)
 		{
-			return it->GetName() == controllerName;
+			return it->getName() == controllerName;
 		});
 
 		return foundController == m_sceneController.end() ? nullptr : foundController->get();
 	}
 
-	ec::Window* SceneSystem::GetWindow()
+	ec::Window* SceneSystem::getWindow() const
 	{
 		return m_window;
 	}

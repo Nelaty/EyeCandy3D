@@ -7,7 +7,7 @@
 namespace utl
 {
 	template<class T>
-	bool IsPrime(T number)
+	bool isPrime(T number)
 	{
 		if(number < 4)
 		{
@@ -19,7 +19,7 @@ namespace utl
 		}
 
 		T numSqrt = sqrt(number) + 1;
-		for(int i = 2; i < numSqrt; ++i)
+		for(auto i = 2; i < numSqrt; ++i)
 		{
 			if((number % i) == 0)
 			{

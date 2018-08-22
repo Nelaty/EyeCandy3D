@@ -11,43 +11,42 @@ namespace ec
 	}
 
 	Texture::~Texture()
-	{
-	}
+	= default;
 
-	void Texture::SetId(const unsigned int id)
+	void Texture::setId(const unsigned int id)
 	{
 		m_id = id;
 	}
 
-	void Texture::SetType(const std::string& type)
+	void Texture::setType(const std::string& type)
 	{
 		m_type = type;
 	}
 
-	int Texture::GetId() const
+	int Texture::getId() const
 	{
 		return m_id;
 	}
 
-	const std::string& Texture::GetType() const
+	const std::string& Texture::getType() const
 	{
 		return m_type;
 	}
 
-	ec::TextureTypes::Dimensions Texture::GetDimensions() const
+	ec::TextureTypes::Dimensions Texture::getDimensions() const
 	{
 		return m_dimension;
 	}
 
-	bool Texture::TextureFromFile(const char* path, const std::string& type)
+	bool Texture::textureFromFile(const char* path, const std::string& type)
 	{
 		unsigned int textureID = 0;
 		glGenTextures(1, &textureID);
 
 		int width, height, nrComponents;
-		bool result = false;
+		auto result = false;
 
-		unsigned char* data = stbi_load(path, &width, &height, &nrComponents, 0);
+		auto* data = stbi_load(path, &width, &height, &nrComponents, 0);
 		if(data)
 		{
 			result = true;
@@ -85,16 +84,16 @@ namespace ec
 		return result;
 	}
 
-	bool Texture::CubeMapFromFile(const char* path, const std::string& type)
+	bool Texture::cubeMapFromFile(const char* path, const std::string& type)
 	{
-		unsigned int textureID = 0;
-		glGenTextures(1, &textureID);
-		glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
+		unsigned int textureId = 0;
+		glGenTextures(1, &textureId);
+		glBindTexture(GL_TEXTURE_CUBE_MAP, textureId);
 
 		int width, height, nrChannels;
-		bool result = false;
+		auto result = false;
 
-		unsigned char* data = stbi_load(path, &width, &height, &nrChannels, 0);
+		auto* data = stbi_load(path, &width, &height, &nrChannels, 0);
 		if(data)
 		{
 			glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
@@ -123,21 +122,21 @@ namespace ec
 		return result;
 	}
 
-	bool Texture::IsInitialized() const
+	bool Texture::isInitialized() const
 	{
 		return m_id != -1;
 	}
 
-	void Texture::Free()
+	void Texture::free()
 	{
-		if(!IsInitialized()) return;
+		if(!isInitialized()) return;
 		
 		GLuint id = m_id;
 		glDeleteTextures(1, &id);
 		m_id = -1;
 	}
 
-	const std::string& TextureTypes::GetTypeString(const Type type)
+	const std::string& TextureTypes::getTypeString(const Type type)
 	{
 		return s_textureTypes.find(type)->second;
 	}

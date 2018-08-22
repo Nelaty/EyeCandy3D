@@ -46,11 +46,6 @@
     <ClInclude Include="include\EC3D\GUI\Button.h" />
     <ClInclude Include="include\EC3D\GUI\Checkbox.h" />
     <ClInclude Include="include\EC3D\GUI\GUI.h" />
-    <ClInclude Include="include\EC3D\GUI\GUIController.h" />
-    <ClInclude Include="include\EC3D\GUI\GUIFwd.h" />
-    <ClInclude Include="include\EC3D\GUI\GUIRenderer.h" />
-    <ClInclude Include="include\EC3D\GUI\GUIRoot.h" />
-    <ClInclude Include="include\EC3D\GUI\GUISystem.h" />
     <ClInclude Include="include\EC3D\GUI\HorizontalList.h" />
     <ClInclude Include="include\EC3D\GUI\RadioButton.h" />
     <ClInclude Include="include\EC3D\GUI\Screen.h" />
@@ -76,7 +71,6 @@
     <ClInclude Include="include\EC3D\Core\ResourceType.h" />
     <ClInclude Include="include\EC3D\Core\CameraType.h" />
     <ClInclude Include="include\EC3D\Core\Transform3D.h" />
-    <ClInclude Include="include\EC3D\GUI\GUIModel.h" />
     <ClInclude Include="include\EC3D\GUI\Backend\OpenGLCursorProvider.h" />
     <ClInclude Include="include\EC3D\GUI\Backend\OpenGLFont.h" />
     <ClInclude Include="include\EC3D\GUI\Backend\OpenGLFontLoader.h" />
@@ -96,6 +90,10 @@
     <ClInclude Include="include\EC3D\Core\Mouse.h" />
     <ClInclude Include="include\EC3D\Core\Keyboard.h" />
     <ClInclude Include="include\EC3D\Core\Application.h" />
+    <ClInclude Include="include\EC3D\GUI\GuiController.h" />
+    <ClInclude Include="include\EC3D\GUI\GuiModel.h" />
+    <ClInclude Include="include\EC3D\GUI\GuiRenderer.h" />
+    <ClInclude Include="include\EC3D\GUI\GuiSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -122,9 +120,6 @@
     <ClCompile Include="src\GUI\Button.cpp" />
     <ClCompile Include="src\GUI\Checkbox.cpp" />
     <ClCompile Include="src\GUI\GUI.cpp" />
-    <ClCompile Include="src\GUI\GUIController.cpp" />
-    <ClCompile Include="src\GUI\GUIRenderer.cpp" />
-    <ClCompile Include="src\GUI\GUISystem.cpp" />
     <ClCompile Include="src\GUI\HorizontalList.cpp" />
     <ClCompile Include="src\GUI\RadioButton.cpp" />
     <ClCompile Include="src\GUI\Screen.cpp" />
@@ -144,7 +139,6 @@
     <ClCompile Include="src\Core\Viewport.cpp" />
     <ClCompile Include="src\Core\Renderer.cpp" />
     <ClCompile Include="src\Core\Transform3D.cpp" />
-    <ClCompile Include="src\GUI\GUIModel.cpp" />
     <ClCompile Include="src\GUI\Backend\OpenGLCursorProvider.cpp" />
     <ClCompile Include="src\GUI\Backend\OpenGLFont.cpp" />
     <ClCompile Include="src\GUI\Backend\OpenGLFontLoader.cpp" />
@@ -161,5 +155,10 @@
     <ClCompile Include="src\Core\Mouse.cpp" />
     <ClCompile Include="src\Core\Keyboard.cpp" />
     <ClCompile Include="src\Core\Application.cpp" />
+    <ClCompile Include="src\Core\SpringGeometry.cpp" />
+    <ClCompile Include="src\GUI\GuiController.cpp" />
+    <ClCompile Include="src\GUI\GuiModel.cpp" />
+    <ClCompile Include="src\GUI\GuiRenderer.cpp" />
+    <ClCompile Include="src\GUI\GuiSystem.cpp" />
   </ItemGroup>
 </Project>

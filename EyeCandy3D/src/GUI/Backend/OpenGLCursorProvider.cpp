@@ -9,8 +9,7 @@ namespace agui
 	}
 
 	OpenGLCursorProvider::~OpenGLCursorProvider()
-	{
-	}
+	= default;
 
 	bool OpenGLCursorProvider::setCursor(CursorEnum cursor)
 	{
@@ -81,18 +80,16 @@ namespace agui
 
 	bool OpenGLCursorProvider::changeCursor(ec::StandardCursorType type)
 	{
-		ec::Cursor* cursor = getCursor(type);
+		auto* cursor = getCursor(type);
 		if(cursor)
 		{
-			GLFWwindow* window = glfwGetCurrentContext();
-			cursor->UseCursor(window);
+			auto* window = glfwGetCurrentContext();
+			cursor->useCursor(window);
 			return true;
 		}
-		else
-		{
-			printf("Couldn't set cursor!\n");
-			return false;
-		}
+		
+		printf("Couldn't set cursor!\n");
+		return false;
 	}
 
 	ec::Cursor* OpenGLCursorProvider::createCursor(ec::StandardCursorType type)

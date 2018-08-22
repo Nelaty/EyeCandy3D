@@ -10,8 +10,8 @@ namespace agui
 		explicit OpenGLImageLoader();
 		virtual ~OpenGLImageLoader();
 		
-		virtual Image* loadImage(const std::string &fileName, 
-			bool convertMask = false,
-			bool converToDisplayFormat = false);
+		Image* loadImage(const std::string &fileName, 
+						 bool convertMask = false,
+						 bool converToDisplayFormat = false) override;
 	};
 }

@@ -5,22 +5,14 @@
 namespace utl
 {
 	FileLogger::FileLogger()
-		: m_appendCurrentDate{true},
-		m_indentationStep{4},
-		m_indentationCurrent{0},
-		m_indentationFill{' '}
+		: m_indentationFill{' '}
 	{
 	}
 
 	FileLogger::~FileLogger()
-	{
-		if(m_out.is_open())
-		{
-			m_out.close();
-		}
-	}
+	= default;
 
-	void FileLogger::WriteToFile(const char* filepath, const char* data)
+	void FileLogger::writeToFile(const char* filepath, const char* data)
 	{
 		std::ofstream out;
 		out.open(filepath);
@@ -32,23 +24,18 @@ namespace utl
 		out.close();
 	}
 
-	void FileLogger::Open(const char* filepath)
+	void FileLogger::open(const char* filepath)
 	{
 		if(m_out.is_open())
 		{
 			m_out.close();
 		}
-
-		auto fp = AppendDate(filepath);
-
+		
+		const auto fp = appendDate(filepath);
 		m_out.open(fp);
-		if(!m_out.is_open())
-		{
-			return;
-		}
 	}
 
-	void FileLogger::Close()
+	void FileLogger::close()
 	{
 		if(m_out.is_open())
 		{
@@ -56,7 +43,7 @@ namespace utl
 		}
 	}
 
-	void FileLogger::ApplyIndentation()
+	void FileLogger::applyIndentation()
 	{
 		if(!m_out.is_open())
 		{
@@ -69,7 +56,7 @@ namespace utl
 		}
 	}
 
-	void FileLogger::NewLine()
+	void FileLogger::newLine()
 	{
 		if(!m_out.is_open())
 		{
@@ -79,75 +66,75 @@ namespace utl
 		m_out << "\n";
 	}
 
-	void FileLogger::IndentTab(const unsigned int steps)
+	void FileLogger::indentTab(unsigned int steps)
 	{
 		m_indentationCurrent += steps;
 	}
 
-	void FileLogger::IndentSpace(const unsigned int spaces)
+	void FileLogger::indentSpace(unsigned int spaces)
 	{
 		m_indentationCurrent += spaces;
 	}
 
-	void FileLogger::SetIndentationFill(const char fillChar)
+	void FileLogger::setIndentationFill(char fillChar)
 	{
 		m_indentationFill = fillChar;
 	}
 
-	char FileLogger::GetIndentationFill() const
+	char FileLogger::getIndentationFill() const
 	{
 		return m_indentationFill;
 	}
 
-	void FileLogger::IndentReverseTab(const unsigned int steps)
+	void FileLogger::indentReverseTab(unsigned int steps)
 	{
 		m_indentationCurrent -= steps * m_indentationStep;
 		m_indentationCurrent = m_indentationCurrent < 0 ? 0 : m_indentationCurrent;
 	}
 
-	void FileLogger::IndentReverseSpace(const unsigned int spaces)
+	void FileLogger::indentReverseSpace(unsigned int spaces)
 	{
 		m_indentationCurrent -= spaces;
 		m_indentationCurrent = m_indentationCurrent < 0 ? 0 : m_indentationCurrent;
 	}
 
-	void FileLogger::ResetIndentation()
+	void FileLogger::resetIndentation()
 	{
 		m_indentationCurrent = 0;
 	}
 
-	unsigned int FileLogger::GetCurrentIndentation() const
+	unsigned int FileLogger::getCurrentIndentation() const
 	{
 		return m_indentationCurrent;
 	}
 
-	void FileLogger::SetIndentation(const unsigned int indentation)
+	void FileLogger::setIndentation(unsigned int indentation)
 	{
 		m_indentationCurrent = indentation;
 	}
 
-	unsigned int FileLogger::GetIndentationStep() const
+	unsigned int FileLogger::getIndentationStep() const
 	{
 		return m_indentationStep;
 	}
 
-	void FileLogger::SetIndentationStep(const unsigned int step)
+	void FileLogger::setIndentationStep(unsigned int step)
 	{
 		m_indentationStep = step;
 	}
 
-	std::string FileLogger::GetSystemDateFormatted()
+	std::string FileLogger::getSystemDateFormatted()
 	{
-		return GetSystemDateFormatted(s_dateDivider);
+		return getSystemDateFormatted(s_dateDivider);
 	}
 
-	std::string FileLogger::GetSystemDateFormatted(const char divider)
+	std::string FileLogger::getSystemDateFormatted(char divider)
 	{
-		auto now = GetSystemDateTime();
-		auto h = (now.tm_hour + 2);
-		auto day = h < 24 ? now.tm_mday : now.tm_mday + 1;
-		auto month = now.tm_mon + 1;
-		auto year = now.tm_year + 1900;
+		const auto now = getSystemDateTime();
+		const auto h = (now.tm_hour + 2);
+		const auto day = h < 24 ? now.tm_mday : now.tm_mday + 1;
+		const auto month = now.tm_mon + 1;
+		const auto year = now.tm_year + 1900;
 
 		std::ostringstream date;
 		date << day;
@@ -159,14 +146,14 @@ namespace utl
 		return date.str();
 	}
 
-	std::string FileLogger::GetSystemTimeFormatted()
+	std::string FileLogger::getSystemTimeFormatted()
 	{
-		return GetSystemTimeFormatted(s_timeDivider);
+		return getSystemTimeFormatted(s_timeDivider);
 	}
 
-	std::string FileLogger::GetSystemTimeFormatted(const char divider)
+	std::string FileLogger::getSystemTimeFormatted(char divider)
 	{
-		auto now = GetSystemDateTime();
+		auto now = getSystemDateTime();
 		auto s = now.tm_sec;
 		auto m = now.tm_min;
 		auto h = (now.tm_hour + 2) % 24;
@@ -187,50 +174,50 @@ namespace utl
 		return timeStrm.str();
 	}
 
-	tm FileLogger::GetSystemDateTime()
+	tm FileLogger::getSystemDateTime()
 	{
-		time_t now = time(0);
-		tm gmtm;
+		auto now = time(nullptr);
+		tm gmtm{};
 		gmtime_s(&gmtm, &now);
 		return gmtm;
 	}
 
-	std::string FileLogger::GetSystemDateTimeFormatted()
+	std::string FileLogger::getSystemDateTimeFormatted()
 	{
-		return GetSystemDateTimeFormatted(s_dateDivider, '-', s_timeDivider);
+		return getSystemDateTimeFormatted(s_dateDivider, '-', s_timeDivider);
 	}
 
-	std::string FileLogger::GetSystemDateTimeFormatted(const char dateDivider, const char dateTimeDivider, const char timeDivider)
+	std::string FileLogger::getSystemDateTimeFormatted(char dateDivider, char dateTimeDivider, char timeDivider)
 	{
 		std::ostringstream dateTime;
-		dateTime << GetSystemDateFormatted(dateDivider);
+		dateTime << getSystemDateFormatted(dateDivider);
 		dateTime << dateTimeDivider;
-		dateTime << GetSystemTimeFormatted(timeDivider);
+		dateTime << getSystemTimeFormatted(timeDivider);
 		return dateTime.str();
 	}
 
-	void FileLogger::SetDateDivisor(const char divider)
+	void FileLogger::setDateDivisor(char divider)
 	{
 		s_dateDivider = divider;
 	}
 
-	void FileLogger::SetTimeDivisor(const char divider)
+	void FileLogger::setTimeDivisor(char divider)
 	{
 		s_timeDivider = divider;
 	}
 
-	std::string FileLogger::AppendDate(const char* filepath)
+	std::string FileLogger::appendDate(const char* filepath) const
 	{
 		std::string temp = filepath;
 
-		size_t extensionPos = temp.find_last_of('.');
-		std::string pathWithoutExtension = temp.substr(0, extensionPos);
-		std::string extension = temp.substr(extensionPos, temp.size());
+		const auto extensionPos = temp.find_last_of('.');
+		const auto pathWithoutExtension = temp.substr(0, extensionPos);
+		const auto extension = temp.substr(extensionPos, temp.size());
 
 		std::ostringstream strm;
 		strm << pathWithoutExtension;
 		strm << '_';
-		strm << GetSystemDateTimeFormatted('-', '#', '-');
+		strm << getSystemDateTimeFormatted('-', '#', '-');
 		strm << extension;
 		return strm.str();
 	}

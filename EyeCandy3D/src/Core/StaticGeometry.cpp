@@ -3,29 +3,27 @@
 namespace ec
 {
 	StaticGeometry::~StaticGeometry()
-	{
-	}
+	= default;
 
 	StaticGeometry::StaticGeometry()
-	{
-	}
+	= default;
 
-	void StaticGeometry::BeginRender()
+	void StaticGeometry::beginRender()
 	{
 		glBindVertexArray(m_VAO);
 	}
 
-	void StaticGeometry::OnRender()
+	void StaticGeometry::onRender()
 	{
-		glDrawElements(GL_TRIANGLES, m_indices.size(), GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_TRIANGLES, m_indices.size(), GL_UNSIGNED_INT, nullptr);
 	}
 
-	void StaticGeometry::EndRender()
+	void StaticGeometry::endRender()
 	{
 		glBindVertexArray(0);
 	}
 
-	void StaticGeometry::SetupMesh()
+	void StaticGeometry::setupMesh()
 	{
 		glGenVertexArrays(1, &m_VAO);
 		glGenBuffers(1, &m_VBO);
@@ -42,18 +40,18 @@ namespace ec
 
 		// positions
 		glEnableVertexAttribArray(0);
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), nullptr);
 		// normals
 		glEnableVertexAttribArray(1);
-		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, m_normal));
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, m_normal)));
 		// texture coordinates
 		glEnableVertexAttribArray(2);
-		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, m_texCoords));
+		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, m_texCoords)));
 
 		glBindVertexArray(0);
 	}
 
-	void StaticGeometry::RecalculateNormals()
+	void StaticGeometry::recalculateNormals()
 	{
 		for(auto& it : m_vertices)
 		{
@@ -62,10 +60,10 @@ namespace ec
 
 		for(size_t i = 0; i < m_indices.size();)
 		{
-			glm::vec3 edge1 = m_vertices[m_indices[i]].m_position - m_vertices[m_indices[i + 1]].m_position;
-			glm::vec3 edge2 = m_vertices[m_indices[i]].m_position - m_vertices[m_indices[i + 2]].m_position;
+			const auto edge1 = m_vertices[m_indices[i]].m_position - m_vertices[m_indices[i + 1]].m_position;
+			const auto edge2 = m_vertices[m_indices[i]].m_position - m_vertices[m_indices[i + 2]].m_position;
 
-			glm::vec3 faceNormal = glm::normalize(glm::cross(edge2, edge1));
+			const auto faceNormal = glm::normalize(glm::cross(edge2, edge1));
 			m_vertices[m_indices[i]].m_normal += faceNormal;
 			m_vertices[m_indices[i + 1]].m_normal += faceNormal;
 			m_vertices[m_indices[i + 2]].m_normal += faceNormal;
@@ -78,17 +76,17 @@ namespace ec
 		}
 	}
 
-	GLuint StaticGeometry::GetVAO() const
+	GLuint StaticGeometry::getVao() const
 	{
 		return m_VAO;
 	}
 
-	GLuint StaticGeometry::GetVBO() const
+	GLuint StaticGeometry::getVbo() const
 	{
 		return m_VBO;
 	}
 
-	GLuint StaticGeometry::GetEBO() const
+	GLuint StaticGeometry::getEbo() const
 	{
 		return m_EBO;
 	}

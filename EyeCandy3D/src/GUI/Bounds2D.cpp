@@ -3,14 +3,15 @@
 namespace ec_gui
 {
 	Bounds2D::Bounds2D()
+		: m_leftUpperCorner(0),
+		m_size(0)
 	{
 	}
 
 	Bounds2D::~Bounds2D()
-	{
-	}
+	= default;
 
-	bool Bounds2D::FullyContains(const Bounds2D& bounds)
+	bool Bounds2D::fullyContains(const Bounds2D& bounds) const
 	{
 		// Check if the bounds corner is above or to the left of this bounds
 		if(bounds.m_leftUpperCorner.x > m_leftUpperCorner.x)
@@ -19,31 +20,27 @@ namespace ec_gui
 		}
 		// Check if the bounds corner is below or to the right of this bounds
 		// or to big to be contained
-		glm::vec2 cornerDiff = m_leftUpperCorner - bounds.m_leftUpperCorner - m_size;
-		if(cornerDiff.x < 0.0f || cornerDiff.y < 0.0f)
-		{
-			return false;
-		}
+		const auto cornerDiff = m_leftUpperCorner - bounds.m_leftUpperCorner - m_size;
 
-		return true;
+		return !(cornerDiff.x < 0.0f || cornerDiff.y < 0.0f);
 	}
 
-	void Bounds2D::Translate(const glm::vec2& val)
+	void Bounds2D::translate(const glm::vec2& val)
 	{
 		m_leftUpperCorner += val;
 	}
 
-	void Bounds2D::SetTranslation(const glm::vec2& val)
+	void Bounds2D::setTranslation(const glm::vec2& val)
 	{
 		m_leftUpperCorner = val;
 	}
 
-	void Bounds2D::Scale(const glm::vec2& val)
+	void Bounds2D::scale(const glm::vec2& val)
 	{
 		m_size += val;
 	}
 
-	void Bounds2D::SetScale(const glm::vec2& val)
+	void Bounds2D::setScale(const glm::vec2& val)
 	{
 		m_size = val;
 	}

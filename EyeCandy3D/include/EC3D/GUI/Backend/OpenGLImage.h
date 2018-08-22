@@ -25,7 +25,7 @@ namespace agui
 		virtual void setPixel(int x, int y, const Color& color) override;
 		
 		/** Set the texture to a given one. */
-		void setTexture(ec::Texture texture, bool autoFree = false);
+		void setTexture(const ec::Texture& texture, bool autoFree = false);
 		/** Get the current texture. */
 		const ec::Texture& getTexture() const;
 		

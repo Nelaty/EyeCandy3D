@@ -10,8 +10,8 @@ namespace ec
 	public:
 		explicit Transform3D(const glm::vec3& position = glm::vec3(0.0f),
 							 const glm::vec3& scale = glm::vec3(1.0f),
-							 const glm::vec3& orientation = conf::g_coordinate_system_orientation);
-		~Transform3D();
+							 const glm::vec3& orientation = conf::g_coordinateSystemOrientation);
+		virtual ~Transform3D();
 
 		/** 
 		 * This function should be called once before accessing the local
@@ -19,112 +19,114 @@ namespace ec
 		 * Create a new local mat from the current position, rotation and
 		 * scale. 
 		 */
-		virtual void UpdateLocalMat();
+		virtual void updateLocalMat();
 
 		/** 
 		 * Get the current local position .
 		 * Performance critical, since the local matrix has to be updated.
 		 */
-		const glm::vec3& GetLocalPosition();
+		const glm::vec3& getLocalPosition();
 
 		/** Get the current view matrix. */
-		const glm::mat4& GetLocalMat() const;
+		const glm::mat4& getLocalMat() const;
 		/** Get the current up vector. */
-		const glm::vec3& GetUpVector() const;
+		const glm::vec3& getUpVector() const;
 		/** Get the current forward vector. */
-		const glm::vec3& GetForwardVector() const;
+		const glm::vec3& getForwardVector() const;
 
 		/** 
 		 * Get the current translation 
 		 * WITHOUT scale and rotation applied!
 		 */
-		const glm::vec3& GetTranslation() const;
+		const glm::vec3& getTranslation() const;
 		/** Get the x component of the current translation */
-		float GetTranslationX() const;
+		float getTranslationX() const;
 		/** Get the y component of the current translation */
-		float GetTranslationY() const;
+		float getTranslationY() const;
 		/** Get the z component of the current translation */
-		float GetTranslationZ() const;
+		float getTranslationZ() const;
 
 		/** Adds the given coordinates to the current position. */
-		void Translate(const float x, const float y, const float z);
+		void translate(float x, float y, float z);
 		/** Adds the given vector to the current position. */
-		void Translate(const glm::vec3& v);
+		void translate(const glm::vec3& v);
 		/** Adds the given value to the current x-coordinate. */
-		void TranslateX(const float x);
+		void translateX(float x);
 		/** Adds the given value to the current y-coordinate. */
-		void TranslateY(const float y);
+		void translateY(float y);
 		/** Adds the given value to the current z-coordinate. */
-		void TranslateZ(const float z);
+		void translateZ(float z);
 
 		/** Assign the given position to the current position. */
-		void SetTranslation(const glm::vec3& translation);
+		void setTranslation(const glm::vec3& translation);
 		/** Assign the given position to the current position. */
-		void SetTranslation(const float x, const float y, const float z);
+		void setTranslation(float x, float y, float z);
 		/** Assign the given value to the current x-coordinate. */
-		void SetTranslationX(const float x);
+		void setTranslationX(float x);
 		/** Assign the given value to the current y-coordinate. */
-		void SetTranslationY(const float y);
+		void setTranslationY(float y);
 		/** Assign the given value to the current z-coordinate. */
-		void SetTranslationZ(const float z);
+		void setTranslationZ(float z);
 
 		/** 
 		 * Translate by the given coordinates and with respect to the
 		 * current orientation.
 		 */
-		void TranslateLocal(const float x, const float y, const float z);
+		void translateLocal(float x, float y, float z);
 		/**
 		* Translate by the given vector and with respect to the
 		* current orientation.
 		*/
-		void TranslateLocal(const glm::vec3& v);
+		void translateLocal(const glm::vec3& v);
 
 		/** Rotate with a quaternion. */
-		void Rotate(const glm::quat& rot);
+		void rotate(const glm::quat& rot);
 		/** Rotate around an axis by a given angle. */
-		void Rotate(float angle, const glm::vec3& axis);
+		void rotate(float angle, const glm::vec3& axis);
 		/** Rotate around the x axis by a given angle. */
-		void RotateX(const float angle);
+		void rotateX(float angle);
 		/** Rotate around the y axis by a given angle. */
-		void RotateY(const float angle);
+		void rotateY(float angle);
 		/** Rotate around the z axis by a given angle. */
-		void RotateZ(const float angle);
+		void rotateZ(float angle);
 
 		/** Rotate around the local x axis by a given angle */
-		void RotateXLocal(const float angle);
+		void rotateXLocal(float angle);
 		/** Rotate around the local y axis by a given angle */
-		void RotateYLocal(const float angle);
+		void rotateYLocal(float angle);
 		/** Rotate around the local z axis by a given angle */
-		void RotateZLocal(const float angle);
+		void rotateZLocal(float angle);
 
 		/** Get the current scale. */
-		const glm::vec3& GetScale() const;
+		const glm::vec3& getScale() const;
 		/** Get the x component of the scale. */
-		float GetScaleX() const;
+		float getScaleX() const;
 		/** Get the y component of the scale. */
-		float GetScaleY() const;
+		float getScaleY() const;
 		/** Get the z component of the scale. */
-		float GetScaleZ() const;
+		float getScaleZ() const;
 
-		/** Multiplicatively scaling of the current scale. */
-		void Scale(const glm::vec3& val);
+		/** Multiplicative scaling of the current scale. */
+		void scale(float sx, float sy, float sz);
+		/** Multiplicative scaling of the current scale. */
+		void scale(const glm::vec3& val);
 		/** Multiplicatively scale the x scale component. */
-		void ScaleX(const float sx);
+		void scaleX(float sx);
 		/** Multiplicatively scale the y scale component. */
-		void ScaleY(const float sy);
+		void scaleY(float sy);
 		/** Multiplicatively scale the z scale component. */
-		void ScaleZ(const float sz);
+		void scaleZ(float sz);
 
 		/** Assign the given value to the current scale. */
-		void SetScale(const glm::vec3& val);
+		void setScale(const glm::vec3& val);
 		/** Assign the given value to the current scale. */
-		void SetScale(const float sx, const float sy, const float sz);
+		void setScale(float sx, float sy, float sz);
 		/** Assign the given value to the current x-scale component. */
-		void SetScaleX(const float sx);
+		void setScaleX(float sx);
 		/** Assign the given value to the current x-scale component. */
-		void SetScaleY(const float sy);
+		void setScaleY(float sy);
 		/** Assign the given value to the current x-scale component. */
-		void SetScaleZ(const float sz);
+		void setScaleZ(float sz);
 
 	protected:
 		glm::vec3 m_up;

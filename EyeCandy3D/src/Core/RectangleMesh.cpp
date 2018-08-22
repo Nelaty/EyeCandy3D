@@ -1,34 +1,31 @@
 #include "EC3D/Core/RectangleMesh.h"
 #include "EC3D/Core/Shader/Shader.h"
 
-#include <gl/glew.h>
-
 namespace ec
 {
 
 
 	RectangleMesh::RectangleMesh(const float uniform /*= 1.0f*/)
 	{
-		Init(uniform, uniform);
-		SetupMesh();
+		init(uniform, uniform);
+		setupMesh();
 	}
 
 	RectangleMesh::RectangleMesh(const float width, const float height)
 	{
-		Init(width, height);
+		init(width, height);
 	}
 
 	RectangleMesh::~RectangleMesh()
-	{
-	}
+	= default;
 
-	void RectangleMesh::Init(const float width, const float height)
+	void RectangleMesh::init(const float width, const float height)
 	{
 		m_vertices.resize(4);
 		m_indices.resize(6);
 
-		float halfWidth = width;
-		float halfHeight = height;
+		const auto halfWidth = width;
+		const auto halfHeight = height;
 
 		// Initialize vertices
 		// 0,0---0,1

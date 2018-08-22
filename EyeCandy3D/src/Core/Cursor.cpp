@@ -5,28 +5,26 @@ namespace ec
 {
 	Cursor::Cursor(StandardCursorType type)
 	{
-		InitType(type);
+		initType(type);
 	}
 
 	Cursor::Cursor(int width, int height, unsigned char* pixels, int hotSpotX, int hotSpotY)
 	{
-		InitType(width, height, pixels);
+		initType(width, height, pixels);
 	}
 
-	Cursor::~Cursor()
+	Cursor::~Cursor() = default;
+
+	void Cursor::initType(StandardCursorType type)
 	{
+		destroyCursor();
+
+		m_cursor = glfwCreateStandardCursor(static_cast<int>(type));
 	}
 
-	void Cursor::InitType(StandardCursorType type)
+	void Cursor::initType(int width, int height, unsigned char* pixels, int hotSpotX, int hotSpotY)
 	{
-		DestroyCursor();
-
-		m_cursor = glfwCreateStandardCursor((int)type);
-	}
-
-	void Cursor::InitType(int width, int height, unsigned char* pixels, int hotSpotX, int hotSpotY)
-	{
-		DestroyCursor();
+		destroyCursor();
 
 		GLFWimage image;
 		image.width = width;
@@ -36,12 +34,12 @@ namespace ec
 		m_cursor = glfwCreateCursor(&image, hotSpotX, hotSpotY);
 	}
 
-	void Cursor::UseCursor(GLFWwindow* window)
+	void Cursor::useCursor(GLFWwindow* window) const
 	{
 		glfwSetCursor(window, m_cursor);
 	}
 
-	void Cursor::DestroyCursor()
+	void Cursor::destroyCursor() const
 	{
 		glfwDestroyCursor(m_cursor);
 	}

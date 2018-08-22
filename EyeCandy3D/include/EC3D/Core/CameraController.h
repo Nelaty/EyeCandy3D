@@ -20,30 +20,30 @@ namespace ec
 		~CameraController();
 
 		/* Apply camera movement */
-		void Tick(const float timeDelta);
+		void tick(float timeDelta);
 
 		/** Reset camera to initial state */
-		void Reset();
+		void reset();
 
 		/* Camera access */
-		void SetCamera(Camera* camera);
-		Camera* GetCamera() const;
+		void setCamera(Camera* camera);
+		Camera* getCamera() const;
 
 	protected:
-		virtual void ProcessEvent(const InputEvent& event) override;
+		void processEvent(const InputEvent& event) override;
 
 		/* Routines for different input types */
-		void ProcessMouseMovement(const MouseEvent& event);
-		void ProcessMouseButtonDown(const MouseEvent& event);
-		void ProcessMouseButtonUp(const MouseEvent& event);
+		void processMouseMovement(const MouseEvent& event);
+		void processMouseButtonDown(const MouseEvent& event);
+		void processMouseButtonUp(const MouseEvent& event);
 
-		void ProcessKeyDownInput(const KeyboardEvent& event);
-		void ProcessKeyUpInput(const KeyboardEvent&  event);
-		void ProcessScrollInput(const MouseEvent& event);
+		void processKeyDownInput(const KeyboardEvent& event);
+		void processKeyUpInput(const KeyboardEvent&  event);
+		void processScrollInput(const MouseEvent& event) const;
 
 	private:
 		/* Initializes the camera controller */
-		void Init();
+		void init();
 
 		/* Active camera */
 		Camera* m_camera;

@@ -1,7 +1,7 @@
-#include "EC3D/GUI/Widget.h"
-#include "EC3D/GUI/Screen.h"
-#include "EC3D/GUI/GUIRenderer.h"
-#include "EC3D/GUI/Theme.h"
+#include "EC3D/Gui/Widget.h"
+#include "EC3D/Gui/Screen.h"
+#include "EC3D/Gui/GuiRenderer.h"
+#include "EC3D/Gui/Theme.h"
 
 #include "EC3D/Core/Drawable.h"
 
@@ -13,59 +13,50 @@
 namespace ec_gui
 {
 	Widget::Widget(Widget* parent)
-		: m_parent{parent},
-		m_position{0},
-		m_size{100},
-		m_tooltip{""},
-		m_enabled{true},
-		m_visible{true},
-		m_focused{false},
-		m_drag{false},
-		m_drawable{nullptr}
+		: m_parent{parent}
 	{
 	}
 
 	Widget::~Widget()
+	= default;
+
+	void Widget::render(GuiRenderer& renderer, GuiRenderingContext& context)
 	{
+		renderer.render(this, context);
 	}
 
-	void Widget::Render(GUIRenderer& renderer, GUIRenderingContext& context)
-	{
-		renderer.Render(this, context);
-	}
-
-	void Widget::SetDrawable(ec::Drawable* drawable)
+	void Widget::setDrawable(ec::Drawable* drawable)
 	{
 		m_drawable = drawable;
 	}
 
-	ec::Drawable* Widget::GetDrawable()
+	ec::Drawable* Widget::getDrawable()
 	{
 		return m_drawable;
 	}
 
-	const ec_gui::Widget* Widget::GetParent() const
+	const ec_gui::Widget* Widget::getParent() const
 	{
 		return m_parent;
 	}
 
-	ec_gui::Widget* Widget::GetParent()
+	ec_gui::Widget* Widget::getParent()
 	{
 		return m_parent;
 	}
 
-	void Widget::SetParent(Widget* widget)
+	void Widget::setParent(Widget* widget)
 	{
 		m_parent = widget;
 	}
 
-	void Widget::AddChild(Widget* widget)
+	void Widget::addChild(Widget* widget)
 	{
-		widget->SetParent(this);
-		m_children.push_back(std::move(widget));
+		widget->setParent(this);
+		m_children.push_back(widget);
 	}
 
-	void Widget::RemoveChild(Widget* widget)
+	void Widget::removeChild(Widget* widget)
 	{
 		std::remove_if(m_children.begin(),
 					   m_children.end(),
@@ -75,19 +66,19 @@ namespace ec_gui
 		});
 	}
 
-	void Widget::RemoveChildAtIndex(unsigned int index)
+	void Widget::removeChildAtIndex(unsigned int index)
 	{
 		auto it = m_children.begin();
 		std::advance(it, index);
 		m_children.erase(it);
 	}
 
-	const std::vector<Widget*>& Widget::GetChildren() const
+	const std::vector<Widget*>& Widget::getChildren() const
 	{
 		return m_children;
 	}
 
-	unsigned int Widget::GetIndexOfChild(Widget* widget)
+	unsigned int Widget::getIndexOfChild(Widget* widget)
 	{
 		const auto it = std::find_if(m_children.begin(),
 									 m_children.end(),
@@ -99,60 +90,60 @@ namespace ec_gui
 		return static_cast<unsigned int>(std::distance(m_children.begin(), it));
 	}
 
-	const ec_gui::Widget* Widget::GetChildAtIndex(const unsigned int index) const
+	const ec_gui::Widget* Widget::getChildAtIndex(const unsigned int index) const
 	{
 		return m_children[index];
 	}
 
-	ec_gui::Widget* Widget::GetChildAtIndex(const unsigned int index)
+	ec_gui::Widget* Widget::getChildAtIndex(const unsigned int index)
 	{
 		return m_children[index];
 	}
 
-	bool Widget::IsEnabled() const
+	bool Widget::isEnabled() const
 	{
 		return m_enabled;
 	}
 
-	void Widget::Enable(const bool enable)
+	void Widget::enable(const bool enable)
 	{
 		m_enabled = enable;
 	}
 
-	bool Widget::IsVisible() const
+	bool Widget::isVisible() const
 	{
 		return m_visible;
 	}
 
-	void Widget::SetVisible(const bool visible)
+	void Widget::setVisible(const bool visible)
 	{
 		m_visible = visible;
 	}
 
-	bool Widget::Contains(const glm::ivec2& position) const
+	bool Widget::contains(const glm::ivec2& position) const
 	{
-		glm::ivec2 movedPos = position - m_position;
+		const auto movedPos = position - m_position;
 		return movedPos.x >= 0 && movedPos.y >= 0
 			&& movedPos.x <= m_size.x && movedPos.y <= m_size.y;
 
 	}
 
-	bool Widget::IsFocused() const
+	bool Widget::isFocused() const
 	{
 		return m_focused;
 	}
 
-	void Widget::SetFocus(const bool focused)
+	void Widget::setFocus(const bool focused)
 	{
 		m_focused = focused;
 	}
 
-	void Widget::MoveFocus()
+	void Widget::moveFocus()
 	{
 		auto* parent = m_parent;
 		while(parent)
 		{
-			auto* nextParent = parent->GetParent();
+			auto* nextParent = parent->getParent();
 			if(nextParent)
 			{
 				parent = nextParent;
@@ -164,96 +155,96 @@ namespace ec_gui
 			}
 		}
 
-		auto* screen = static_cast<Screen*>(parent);
+		auto* screen = dynamic_cast<Screen*>(parent);
 		if(screen)
 		{
-			screen->SetFocusedWidget(this);
+			screen->setFocusedWidget(this);
 		}
 	}
 
-	bool Widget::IsDragged() const
+	bool Widget::isDragged() const
 	{
 		return m_drag;
 	}
 
-	void Widget::SetDragged(const bool dragged)
+	void Widget::setDragged(const bool dragged)
 	{
 		m_drag = dragged;
 	}
 
-	void Widget::SetPosition(const glm::ivec2& position)
+	void Widget::setPosition(const glm::ivec2& position)
 	{
 		m_position = position;
 	}
 
-	void Widget::SetPosition(const int x, const int y)
+	void Widget::setPosition(const int x, const int y)
 	{
 		m_position.x = x;
 		m_position.y = y;
 	}
 
-	void Widget::SetPositionX(const int x)
+	void Widget::setPositionX(const int x)
 	{
 		m_position.x = x;
 	}
 
-	const glm::ivec2& Widget::GetPosition() const
+	const glm::ivec2& Widget::getPosition() const
 	{
 		return m_position;
 	}
 
-	void Widget::SetSize(const glm::ivec2& size)
+	void Widget::setSize(const glm::ivec2& size)
 	{
 		m_size = size;
 	}
 
-	void Widget::SetSize(const int sx, const int sy)
+	void Widget::setSize(const int sx, const int sy)
 	{
 		m_size.x = sx;
 		m_size.y = sy;
 	}
 
-	void Widget::SetSizeX(const int sx)
+	void Widget::setSizeX(const int sx)
 	{
 		m_size.x = sx;
 	}
 
-	void Widget::SetSizeY(const int sy)
+	void Widget::setSizeY(const int sy)
 	{
 		m_size.y = sy;
 	}
 
-	const glm::ivec2& Widget::GetSize() const
+	const glm::ivec2& Widget::getSize() const
 	{
 		return m_size;
 	}
 
-	void Widget::SetTheme(Theme* theme)
+	void Widget::setTheme(Theme* theme)
 	{
 		s_theme = theme;
 	}
 
-	ec_gui::Theme* Widget::GetTheme()
+	ec_gui::Theme* Widget::getTheme()
 	{
 		return s_theme;
 	}
 
-	bool Widget::OnMouseButton(const glm::ivec2& position, int button, int mods, bool pressed)
+	bool Widget::onMouseButton(const glm::ivec2& position, int button, int mods, bool pressed)
 	{
 		if(!(m_enabled && m_visible))
 		{
 			return false;
 		}
 
-		if(Contains(position))
+		if(contains(position))
 		{
 			for(auto& it : m_children)
 			{
-				if(it->OnMouseButton(position - m_position, button, mods, pressed))
+				if(it->onMouseButton(position - m_position, button, mods, pressed))
 				{
 					if(!m_focused)
 					{
-						MoveFocus();
+						moveFocus();
 					}
 					return true;
 				}
@@ -262,18 +253,18 @@ namespace ec_gui
 		return false;
 	}
 
-	bool Widget::OnMouseMove(const glm::ivec2& position)
+	bool Widget::onMouseMove(const glm::ivec2& position)
 	{
 		if(!(m_enabled && m_visible))
 		{
 			return false;
 		}
 
-		if(Contains(position))
+		if(contains(position))
 		{
 			for(auto& it : m_children)
 			{
-				if(it->OnMouseMove(position - m_position))
+				if(it->onMouseMove(position - m_position))
 				{
 					return true;
 				}
@@ -282,23 +273,23 @@ namespace ec_gui
 		return false;
 	}
 
-	bool Widget::OnMouseDrag(const glm::ivec2& position, const glm::ivec2& offset, int button, int mods)
+	bool Widget::onMouseDrag(const glm::ivec2& position, const glm::ivec2& offset, int button, int mods)
 	{
 		return false;
 	}
 
-	bool Widget::OnMouseScroll(const glm::ivec2& position, const glm::vec2& offset)
+	bool Widget::onMouseScroll(const glm::ivec2& position, const glm::vec2& offset)
 	{
 		if(!(m_enabled && m_visible))
 		{
 			return false;
 		}
 
-		if(Contains(position))
+		if(contains(position))
 		{
 			for(auto& it : m_children)
 			{
-				if(it->OnMouseScroll(position - m_position, offset))
+				if(it->onMouseScroll(position - m_position, offset))
 				{
 					return true;
 				}
@@ -307,17 +298,17 @@ namespace ec_gui
 		return false;
 	}
 
-	bool Widget::OnFocus(bool focused)
+	bool Widget::onFocus(bool focused)
 	{
 		return true;
 	}
 
-	bool Widget::OnKey(int key, int scancode, int mods, bool pressed)
+	bool Widget::onKey(int key, int scancode, int mods, bool pressed)
 	{
 		return false;
 	}
 
-	bool Widget::OnText(unsigned int codepoint, int mods)
+	bool Widget::onText(unsigned int codepoint, int mods)
 	{
 		if(m_focused && m_visible && m_enabled)
 		{
@@ -329,18 +320,18 @@ namespace ec_gui
 		}		
 	}
 
-	bool Widget::OnDrop(const glm::ivec2& position, int count, const char** paths)
+	bool Widget::onDrop(const glm::ivec2& position, int count, const char** paths)
 	{
 		return false;
 	}
 
-	bool Widget::OnResize(const glm::ivec2& size)
+	bool Widget::onResize(const glm::ivec2& size)
 	{
 		return false;
 		// TODO: Reevaluate position
 	}
 
-	void Widget::SetPositionY(const int y)
+	void Widget::setPositionY(const int y)
 	{
 		m_position.y = y;
 	}

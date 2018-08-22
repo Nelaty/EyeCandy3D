@@ -1,26 +1,25 @@
 #pragma once
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
 
 #include "EC3D/Core/DeviceRegistry.h"
 #include "EC3D/Core/Renderer.h"
 #include "EC3D/Core/Freetype.h"
 #include "EC3D/Core/SceneSystem.h"
-#include "EC3D/Core/Shader/ShaderManager.h"
 #include "EC3D/Core/InputObservable.h"
+#include "EC3D/Core/Shader/ShaderManager.h"
+
 #include "EC3D/Utilities/Timer.h"
 
 #include <glm/glm.hpp>
+
+#include <GLFW/glfw3.h>
 
 #include <string>
 #include <memory>
 
 
 /**
-* A window represents the base of every application. It creates a 
-* os specific window. The application functionality can be executed
-* in the provided main loop.
-* It also supplies the user with input functionality and a scene system
+* A window is responsible for one os specific window, which can receive
+* input events.
 */
 namespace ec
 {
@@ -33,58 +32,59 @@ namespace ec
 		using EventQueue_Ptr = std::unique_ptr<EventQueue>;
 		using EventSource_Ptr = std::unique_ptr<EventSource>;
 
-	public:
-		explicit Window(const unsigned int windowWidth,
-						const unsigned int windowHeight,
-						const char* windowTitle);
+
+		explicit Window(unsigned int windowWidth,
+						unsigned int windowHeight,
+		                std::string windowTitle);
 		virtual ~Window();
 		
-		/* Should be called to start program */
-		virtual void StartMainLoop();
+		/** Should be called to start program */
+		virtual void startMainLoop();
 
-		/* Update the window */
-		virtual void Tick(const float timeDelta);
-		/* Render to the window */
-		virtual void Render();
+		/** Update the window */
+		void tickMeta();
+		virtual void tick(float timeDelta);
+		/** Render to the window */
+		virtual void render();
 
-		virtual void SetFrameRate(const double fps);
+		virtual void setFrameRate(double fps);
 
 		/* GLFW Callbacks */
-		static void ErrorCallback(int error, const char* description);
-		virtual void ResizeWindow(GLFWwindow* window, int width, int height);
+		static void errorCallback(int error, const char* description);
+		virtual void resizeWindow(GLFWwindow* window, int width, int height);
 
-		/* Access to the input observer */
-		InputObservable& GetInputObserver();
+		/** Access to the input observer */
+		InputObservable& getInputObserver();
 
-		/* Access to the shader manager */
-		ShaderManager& GetShaderManager();
+		/** Access to the shader manager */
+		ShaderManager& getShaderManager();
 
-		/* Access to the scene system */
-		SceneSystem& GetSceneSystem();
+		/** Access to the scene system */
+		SceneSystem& getSceneSystem();
 
 		/** Get the event queue of this window */
-		EventQueue* GetEventQueue();
+		EventQueue* getEventQueue();
 		/** Get the event source of this window */
-		EventSource* GetEventSource();
+		EventSource* getEventSource() const;
 
 		/* Switch between face, wire frame and point mode */
-		void SwitchToFaceMode();
-		void SwitchToWireframeMode();
-		void SwitchToPointMode();
+		void switchToFaceMode();
+		void switchToWireframeMode();
+		void switchToPointMode();
 
 		/* Switch between full screen and windowed */
-		void GoWindowed();
-		void GoFullscreen();
-		void CloseWindow();
+		void goWindowed();
+		void goFullscreen();
+		void closeWindow();
 
 		/* Clear Color access */
-		void SetClearColor(const glm::vec4& clearColor);
-		const glm::vec4& GetClearColor() const;
+		void setClearColor(const glm::vec4& clearColor);
+		const glm::vec4& getClearColor() const;
 
 		/** Access to window */
-		GLFWwindow* GetWindow() const;
-		glm::ivec2 GetWindowResolution() const;
-		glm::ivec2 GetWindowPosition() const;
+		GLFWwindow* getWindow() const;
+		glm::ivec2 getWindowResolution() const;
+		glm::ivec2 getWindowPosition() const;
 
 	protected:
 		unsigned int m_windowWidth;
@@ -106,43 +106,43 @@ namespace ec
 		double m_frameInterval;
 
 	private:
-		void Init();
+		void init();
 
 		/* Init function implementation */
-		virtual bool InitImpl();
+		virtual bool initImpl();
 		/* Main loop function implementation */
-		virtual void MainLoopImpl();
+		virtual void mainLoopImpl();
 
-		void WindowTick(float timeDelta);
+		void windowTick(float timeDelta);
 		
 		/** Callback initialization */
-		void InitCallbacks();
+		void initCallbacks();
 
 		/** 
 		 * The drop callback is called when one or multiple files are 
 		 * dragged into the window 
 		 */
-		static void DropCallback(GLFWwindow* window, int count, const char** paths);
+		static void dropCallback(GLFWwindow* window, int count, const char** paths);
 		/** 
 		 * The resize callback is called when the window's width or height
 		 * has changed.
 		 */
-		static void ResizeCallback(GLFWwindow* window, int width, int height);
+		static void resizeCallback(GLFWwindow* window, int width, int height);
 		/**
 		 * The focus callback is called when a window, which previously was
 		 * unfocused, receives focus.
 		 */
-		static void FocusCallback(GLFWwindow* window, int focused);
+		static void focusCallback(GLFWwindow* window, int focused);
 		/**
 		 * The close callback is called when a window is being destroyed.
 		 */
-		static void CloseCallback(GLFWwindow* window);
+		static void closeCallback(GLFWwindow* window);
 
 
-		void InitOpenGL();
-		void InitAgui();
+		void initOpenGl();
+		void initAgui();
 
-		void PrintVersions() const;
+		void printVersions() const;
 
 		EventQueue_Ptr m_eventQueue;
 		EventSource_Ptr m_eventSource;

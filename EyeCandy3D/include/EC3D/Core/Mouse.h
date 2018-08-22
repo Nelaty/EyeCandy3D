@@ -14,26 +14,25 @@ namespace ec
 	public:
 		using EventSource_Ptr = std::unique_ptr<EventSource>;
 
-	public:
 		explicit Mouse();
 		~Mouse();
 
 		/** Install the mouse, which generates mouse events. */
-		void Install(Window* window);
+		void install(Window* window);
 		/** Uninstall the mouse. */
-		void Uninstall();
+		void uninstall();
 
-		EventSource* GetEventSource();
-		GLFWwindow* GetWindow();
+		EventSource* getEventSource() const;
+		GLFWwindow* getWindow() const;
 
 	private:
-		static void CursorPosCallback(GLFWwindow* window, double xpos, double ypos);
-		static void CursorEnterCallback(GLFWwindow* window, int entered);
-		static void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
-		static void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
+		static void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
+		static void cursorEnterCallback(GLFWwindow* window, int entered);
+		static void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+		static void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 
-		EventSource_Ptr m_eventSource;
-		EventQueue* m_eventQueue;
-		GLFWwindow* m_window;
+		EventSource_Ptr m_eventSource = nullptr;
+		EventQueue* m_eventQueue = nullptr;
+		GLFWwindow* m_window = nullptr;
 	};
 }

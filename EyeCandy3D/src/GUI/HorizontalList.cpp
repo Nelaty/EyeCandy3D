@@ -11,33 +11,32 @@ namespace ec_gui
 	}
 
 	HorizontalList::~HorizontalList()
-	{
-	}
+	= default;
 
-	void HorizontalList::SetHorizontalSpace(int hspace)
+	void HorizontalList::setHorizontalSpace(int hspace)
 	{
 		m_hspace = hspace;
-		AlignChilds();
+		alignChilds();
 	}
 
-	void HorizontalList::AddChild(Widget* widget)
+	void HorizontalList::addChild(Widget* widget)
 	{
-		AlignChild(widget, m_children.size());
+		alignChild(widget, m_children.size());
 	
-		__super::AddChild(widget);
+		__super::addChild(widget);
 	}
 
-	void HorizontalList::AlignChilds()
+	void HorizontalList::alignChilds()
 	{
-		for(int i = 0; i < m_children.size(); ++i)
+		for(auto i = 0; i < m_children.size(); ++i)
 		{
-			AlignChild(m_children[i], i);
+			alignChild(m_children[i], i);
 		}
 	}
 
-	void HorizontalList::AlignChild(Widget* widget, int pos)
+	void HorizontalList::alignChild(Widget* widget, int pos) const
 	{
-		glm::ivec2 widgetPos(pos * m_hspace, 0);
-		widget->SetPosition(widgetPos);
+		const glm::ivec2 widgetPos(pos * m_hspace, 0);
+		widget->setPosition(widgetPos);
 	}
 }

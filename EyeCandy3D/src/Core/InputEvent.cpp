@@ -1,7 +1,7 @@
 #include "EC3D/Core/InputEvent.h"
 #include <GLFW/glfw3.h>
 
-#include <stdio.h>
+#include <cstdio>
 
 #define EC3D_SHIFT_PRESSED(mods) ((GLFW_MOD_SHIFT & (mods)) != 0)
 #define EC3D_CONTROL_PRESSED(mods) ((GLFW_MOD_CONTROL & (mods)) != 0)
@@ -25,11 +25,9 @@ namespace ec
 	{
 	}
 
-	JoystickEvent::~JoystickEvent()
-	{
-	}
+	JoystickEvent::~JoystickEvent() = default;
 
-	void JoystickEvent::Print() const
+	void JoystickEvent::print() const
 	{
 		printf("Joystick event: joystick:%d, event:%d\n", m_joystick, m_event);
 	}
@@ -37,7 +35,7 @@ namespace ec
 	
 	// Input event
 	InputEvent::InputEvent(const InputType type)
-		: m_type{type}
+		: m_type{type}	
 	{
 	}
 
@@ -45,7 +43,7 @@ namespace ec
 	{
 	}
 
-	void InputEvent::Print() const
+	void InputEvent::print() const
 	{
 		switch(m_type)
 		{
@@ -55,23 +53,23 @@ namespace ec
 			case InputType::mouse_left:
 			case InputType::mouse_button_pressed:
 			case InputType::mouse_button_released:
-				m_event.m_mouse.Print();
+				m_event.m_mouse.print();
 				break;
 			case InputType::joystick:
-				m_event.m_joystick.Print();
+				m_event.m_joystick.print();
 				break;
 			case InputType::key_pressed:
 			case InputType::key_released:
 			case InputType::text:
-				m_event.m_keyboard.Print();
+				m_event.m_keyboard.print();
 				break;
 			case InputType::drop:
-				m_event.m_drop.Print();
+				m_event.m_drop.print();
 				break;
 			case InputType::resize:
 			case InputType::lost_focus:
 			case InputType::gained_focus:
-				m_event.m_display.Print();
+				m_event.m_display.print();
 				break;
 			default:
 				printf("InputEvent::Print: Input type doesn't exist #%d\n", m_type);
@@ -102,11 +100,11 @@ namespace ec
 	{
 	}
 
-	void DisplayEvent::Print() const
+	void DisplayEvent::print() const
 	{
 		printf("DISPLAY EVENT:\n");
 		printf("position: (%d, %d), size: (%d, %d), orientation: %d\n",
-			   m_x, m_y, m_width, m_height, (int)m_orientation);
+			   m_x, m_y, m_width, m_height, static_cast<int>(m_orientation));
 	}
 
 	KeyboardEvent::KeyboardEvent()
@@ -134,38 +132,36 @@ namespace ec
 	{
 	}
 
-	KeyboardEvent::~KeyboardEvent()
-	{
-	}
+	KeyboardEvent::~KeyboardEvent() = default;
 
-	void KeyboardEvent::Print() const
+	void KeyboardEvent::print() const
 	{
 		printf("KEYBOARD EVENT:\n");
 		printf("Window: %d\n", m_window);
 		printf("Key: %d, Scancode: %d, Repeat %s",
 			   m_key, m_scancode, m_repeat ? "true" : "false");
-		printf("Shift:   %s, ", ShiftPressed() ? "true" : "false");
-		printf("Control: %s, ", ControlPressed() ? "true" : "false");
-		printf("Alt:     %s, ", AltPressed() ? "true" : "false");
-		printf("Super:   %s, ", SuperPressed() ? "true" : "false");
+		printf("Shift:   %s, ", shiftPressed() ? "true" : "false");
+		printf("Control: %s, ", controlPressed() ? "true" : "false");
+		printf("Alt:     %s, ", altPressed() ? "true" : "false");
+		printf("Super:   %s, ", superPressed() ? "true" : "false");
 	}
 
-	bool KeyboardEvent::ShiftPressed() const
+	bool KeyboardEvent::shiftPressed() const
 	{
 		return EC3D_SHIFT_PRESSED(m_mods);
 	}
 
-	bool KeyboardEvent::ControlPressed() const
+	bool KeyboardEvent::controlPressed() const
 	{
 		return EC3D_CONTROL_PRESSED(m_mods);
 	}
 
-	bool KeyboardEvent::AltPressed() const
+	bool KeyboardEvent::altPressed() const
 	{
 		return EC3D_ALT_PRESSED(m_mods);
 	}
 
-	bool KeyboardEvent::SuperPressed() const
+	bool KeyboardEvent::superPressed() const
 	{
 		return EC3D_SUPER_PRESSED(m_mods);
 	}
@@ -207,66 +203,62 @@ namespace ec
 	{
 	}
 
-	MouseEvent::~MouseEvent()
-	{
-	}
+	MouseEvent::~MouseEvent() = default;
 
-	void MouseEvent::Print() const
+	void MouseEvent::print() const
 	{
 		printf("MOUSE EVENT:\n");
 		printf("Window: %d\n", m_window);
 		printf("Position: (%d,%d,%d,%d), Position-Delta: (%d,%d,%d,%d)\n",
 			   m_x, m_y, m_z, m_w, m_dx, m_dy, m_scrollX, m_scrollY);
 		printf("Button: %d, Pressure: %f", m_button, m_pressure);
-		printf("Shift:   %s, ", ShiftPressed() ? "true" : "false");
-		printf("Control: %s, ", ControlPressed() ? "true" : "false");
-		printf("Alt:     %s, ", AltPressed() ? "true" : "false");
-		printf("Super:   %s, ", SuperPressed() ? "true" : "false");
+		printf("Shift:   %s, ", shiftPressed() ? "true" : "false");
+		printf("Control: %s, ", controlPressed() ? "true" : "false");
+		printf("Alt:     %s, ", altPressed() ? "true" : "false");
+		printf("Super:   %s, ", superPressed() ? "true" : "false");
 	}
 
-	bool MouseEvent::ShiftPressed() const
+	bool MouseEvent::shiftPressed() const
 	{
 		return EC3D_SHIFT_PRESSED(m_mods);
 	}
 
-	bool MouseEvent::ControlPressed() const
+	bool MouseEvent::controlPressed() const
 	{
 		return EC3D_CONTROL_PRESSED(m_mods);
 	}
 
-	bool MouseEvent::AltPressed() const
+	bool MouseEvent::altPressed() const
 	{
 		return EC3D_ALT_PRESSED(m_mods);
 	}
 
-	bool MouseEvent::SuperPressed() const
+	bool MouseEvent::superPressed() const
 	{
 		return EC3D_SUPER_PRESSED(m_mods);
 	}
 
 	DropEvent::DropEvent()
-		: m_x{0},
+		: m_window{nullptr},
+		m_x{0},
 		m_y{0},
-		m_window{nullptr},
 		m_count{0},
 		m_paths{nullptr}
 	{
 	}
 
 	DropEvent::DropEvent(int x, int y, GLFWwindow* window, const int count, const char** paths)
-		: m_x{x},
+		: m_window{window},
+		m_x{x},
 		m_y{y},
-		m_window{window},
 		m_count{count},
 		m_paths{paths}
 	{
 	}
 
-	DropEvent::~DropEvent()
-	{
-	}
+	DropEvent::~DropEvent() = default;
 
-	void DropEvent::Print() const
+	void DropEvent::print() const
 	{
 		printf("DROP EVENT\n");
 		printf("Window: %d\n", m_window);
@@ -277,4 +269,7 @@ namespace ec
 		}
 	}
 
+	EventData::EventData() = default;
+
+	EventData::~EventData() = default;
 }

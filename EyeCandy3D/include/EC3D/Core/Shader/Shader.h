@@ -20,64 +20,65 @@ namespace ec
 	class Shader
 	{
 	public:
-		Shader(const std::string& vertPath, 
-			   const std::string& fragPath,
-			   const std::string& geomPath = "",
-			   const std::string& tessCtrlPath = "",
-			   const std::string& tessEvalPath = "");
+		Shader(const std::string& vertPath,
+		       const std::string& fragPath,
+		       const std::string& geomPath = "",
+		       const std::string& tessCtrlPath = "",
+		       const std::string& tessEvalPath = "");
 		~Shader();
 
 		/* Activate this program */
-		void Bind();
-		void Unbind();
+		void bind() const;
+		void unbind() const;
 
 		/* Uniform single */
-		void SetBool(const char* uniformName, const bool val);
-		void SetInt(const char* uniformName, const int val);
-		void SetFloat(const char* uniformName, const float val);
-		void SetDouble(const char* uniformName, const double val);
+		void setBool(const char* uniformName, bool val) const;
+		void setInt(const char* uniformName, int val) const;
+		void setFloat(const char* uniformName, float val) const;
+		void setDouble(const char* uniformName, double val) const;
 
 		/* Uniform vector */
-		void SetVec2(const char* uniformName, const glm::vec2& v);
-		void SetVec3(const char* uniformName, const glm::vec3& v);
-		void SetVec4(const char* uniformName, const glm::vec4& v);
+		void setVec2(const char* uniformName, const glm::vec2& v) const;
+		void setVec3(const char* uniformName, const glm::vec3& v) const;
+		void setVec4(const char* uniformName, const glm::vec4& v) const;
 
 		/* Uniform matrix */
-		void SetMat2(const char* uniformName, const glm::mat2& m);
-		void SetMat3(const char* uniformName, const glm::mat3& m);
-		void SetMat4(const char* uniformName, const glm::mat4& m);
+		void setMat2(const char* uniformName, const glm::mat2& m) const;
+		void setMat3(const char* uniformName, const glm::mat3& m) const;
+		void setMat4(const char* uniformName, const glm::mat4& m) const;
 
 		/* Get the uniform location by name */
-		GLuint GetUniformLocation(const char* uniformName);
+		GLuint getUniformLocation(const char* uniformName) const;
 
 		/* Get the program identifier */
-		GLuint GetProgram() const;
+		GLuint getProgram() const;
 
 	private:
 		/* Read file content from path */
-		std::string ReadFile(const std::string& filepath);
-		
+		std::string readFile(const std::string& filepath);
+
 		/* Parse a line for comments and includes */
-		std::string ParseLine(const std::string& line, const std::string& directory);
+		std::string parseLine(const std::string& line, const std::string& directory);
 
 		/* Get the positions of a substring in another string */
-		std::string GetFileStringPositions(const unsigned int pos, const std::string& str, unsigned int& start, unsigned int& end);
-		
+		std::string getFileStringPositions(unsigned int pos, const std::string& str, unsigned int& start,
+		                                   unsigned int& end);
+
 		/* Check a shader id for errors */
-		GLint CheckError(GLuint shader, const char* shaderName);
+		GLint checkError(GLuint shader, const char* shaderName);
 
 		/* Compile a shader source */
-		GLint CompileShader(GLuint shader, const char* path, const char* source, const char* shaderName);
+		GLint compileShader(GLuint shader, const char* path, const char* source, const char* shaderName);
 
 		/* Load in shader sources and compile and link them */
-		void LoadCompileLinkShader(const std::string& vertPath, 
-								   const std::string& fragPath,
-								   const std::string& geomPath, 
-								   const std::string& tessCtrlPath,
-								   const std::string& tessEvalPath);
+		void loadCompileLinkShader(const std::string& vertPath,
+		                           const std::string& fragPath,
+		                           const std::string& geomPath,
+		                           const std::string& tessCtrlPath,
+		                           const std::string& tessEvalPath);
 
 		GLuint m_program;
-	
+
 		static const char* s_includeToken;
 		static constexpr unsigned int s_includeTokenLength = 8;
 	};

@@ -12,20 +12,21 @@ namespace ec
 		explicit Timer();
 		~Timer();
 
-		/* Reset the whole timer */
-		void Reset();
+		/** Reset the whole timer */
+		void reset();
 
-		/* Only reset the time since the last access of time delta */
-		void ResetTimeDelta();
+		/** Only reset the time since the last access of time delta */
+		void resetTimeDelta();
 
-		/* Get time since start or the time between calls */
-		double GetTime() const;
-		double GetTimeDelta();
+		/** Get time since the start of the timer or last reset */
+		double getTime() const;
+		/** Get time between calls */
+		double getTimeDelta();
 
 	private:
-		double m_start;
+		double m_start{};
 
-		double m_timeDeltaFirst;
-		double m_timeDeltaLast;
+		double m_timeDeltaFirst{};
+		double m_timeDeltaLast{};
 	};
 }

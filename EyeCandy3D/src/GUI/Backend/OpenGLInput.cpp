@@ -14,15 +14,14 @@ namespace agui
 	}
 
 	OpenGLInput::~OpenGLInput()
-	{
-	}
+	= default;
 
 	double OpenGLInput::getTime() const
 	{
 		return glfwGetTime();
 	}
 
-	void OpenGLInput::ProcessEvent(const ec::InputEvent &event)
+	void OpenGLInput::processEvent(const ec::InputEvent &event)
 	{
 		switch(event.m_type)
 		{
@@ -40,19 +39,19 @@ namespace agui
 			case ec::InputType::key_pressed:
 			case ec::InputType::text:
 			{
-				if(event.m_event.m_keyboard.ShiftPressed())
+				if(event.m_event.m_keyboard.shiftPressed())
 				{
 					this->shift = true;
 				}
-				if(event.m_event.m_keyboard.ControlPressed())
+				if(event.m_event.m_keyboard.controlPressed())
 				{
 					this->control = true;
 				}
-				if(event.m_event.m_keyboard.AltPressed())
+				if(event.m_event.m_keyboard.altPressed())
 				{
 					this->alt = true;
 				}
-				if(event.m_event.m_keyboard.SuperPressed())
+				if(event.m_event.m_keyboard.superPressed())
 				{
 					this->meta = true;
 				}
@@ -73,19 +72,19 @@ namespace agui
 			}
 			case ec::InputType::key_released:
 			{
-				if(event.m_event.m_keyboard.ShiftPressed())
+				if(event.m_event.m_keyboard.shiftPressed())
 				{
 					this->shift = false;
 				}
-				if(event.m_event.m_keyboard.ControlPressed())
+				if(event.m_event.m_keyboard.controlPressed())
 				{
 					this->control = false;
 				}
-				if(event.m_event.m_keyboard.AltPressed())
+				if(event.m_event.m_keyboard.altPressed())
 				{
 					this->alt = false;
 				}
-				if(event.m_event.m_keyboard.SuperPressed())
+				if(event.m_event.m_keyboard.superPressed())
 				{
 					this->meta = false;
 				}

@@ -1,6 +1,5 @@
 #pragma once
 #include "Widget.h"
-#include "EC3D/Core/InputEvent.h"
 
 #include <functional>
 
@@ -18,11 +17,11 @@ namespace ec_gui
 
 		
 		/* Set button click callbacks */
-		void SetOnPressedCallback(std::function<void()> callback);
-		void SetOnButtonDownCallback(std::function<void()> callback);
-		void SetOnButtonUpCallback(std::function<void()> callback);
+		void setOnPressedCallback(std::function<void()> callback);
+		void setOnButtonDownCallback(std::function<void()> callback);
+		void setOnButtonUpCallback(std::function<void()> callback);
 
-		virtual bool OnMouseButton(const glm::ivec2& position, int button, int mods, bool pressed) override;
+		bool onMouseButton(const glm::ivec2& position, int button, int mods, bool pressed) override;
 
 	protected:
 		std::function<void()> m_onPressedCallback;

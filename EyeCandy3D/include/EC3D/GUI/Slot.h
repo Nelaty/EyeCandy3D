@@ -33,9 +33,9 @@ namespace ec_gui
 	{
 		if(m_slotData)
 		{
-			RemoveChild(slotData);
+			removeChild(slotData);
 		}
-		AddChild(slotData);
+		addChild(slotData);
 		m_slotData = slotData;
 	}
 

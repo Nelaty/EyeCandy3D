@@ -1,8 +1,6 @@
 #pragma once
 #include "Widget.h"
 
-#include <vector>
-
 /*
 * Automatically aligns child widget in a vertical order
 */
@@ -15,16 +13,16 @@ namespace ec_gui
 		~VerticalList();
 
 		/* Set the vertical space between children */
-		void SetVerticalSpace(int vspace);
+		void setVerticalSpace(int vspace);
 
 		/* Add and align new children */
-		virtual void AddChild(Widget* widget) override;
+		void addChild(Widget* widget) override;
 
 	private:
 		/* Align all children */
-		void AlignChilds();
+		void alignChilds();
 		/* Align a widget */
-		void AlignChild(Widget* widget, int pos);
+		void alignChild(Widget* widget, int pos) const;
 
 		int m_vspace;
 	};

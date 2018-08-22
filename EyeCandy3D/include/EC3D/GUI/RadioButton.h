@@ -6,7 +6,7 @@
 
 /*
 * RadioButton GUI element
-* Can react on selection and deselection callbacks
+* Can react on selection and de-selection callbacks
 */
 namespace ec_gui
 {
@@ -17,33 +17,33 @@ namespace ec_gui
 		virtual ~RadioButton();
 	
 		/* Selection access */
-		void Select();
-		bool IsSelected() const;
+		void select();
+		bool isSelected() const;
 
 		/* Set callback, which is triggered when selecting the radio button */
-		void SetSelectedCallback(std::function<void()> callback);
+		void setSelectedCallback(std::function<void()> callback);
 		/* Set callback, which is triggered when another radio button is selected*/
-		void SetDeselectedCallback(std::function<void()> callback);
+		void setDeselectedCallback(std::function<void()> callback);
 
 		/* Change which radio buttons are associated with each other */
-		bool RegisterRadioButton(RadioButton* radioButton);
-		bool UnregisterRadioButton(RadioButton* radioButton);
-		void UnregisterAllRadioButtons();
+		bool registerRadioButton(RadioButton* radioButton);
+		bool unregisterRadioButton(RadioButton* radioButton);
+		void unregisterAllRadioButtons();
 
-		virtual bool OnMouseButton(const glm::ivec2& position, int button, int mods, bool pressed) override;
+		bool onMouseButton(const glm::ivec2& position, int button, int mods, bool pressed) override;
 
 	protected:
 		/* The user mustn't be allowed to deselect */
-		void Deselect();
+		void deselect();
 
 	private:
-		void UpdateDrawable();
+		void updateDrawable();
 
 		std::vector<RadioButton*> m_radioButtons;
 
-		std::function<void()> m_selectedCallback;
-		std::function<void()> m_deselectedCallback;
+		std::function<void()> m_selectedCallback = nullptr;
+		std::function<void()> m_deselectedCallback = nullptr;
 
-		bool m_selected;
+		bool m_selected = false;
 	};
 }

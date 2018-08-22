@@ -14,7 +14,6 @@ namespace ec_gui
 		explicit TextField(Widget* parent);
 		~TextField();
 
-		virtual bool OnText(unsigned int codepoint, int mods) override;
-
+		bool onText(unsigned int codepoint, int mods) override;
 	};
 }

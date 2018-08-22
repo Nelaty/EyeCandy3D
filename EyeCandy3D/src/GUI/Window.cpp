@@ -9,12 +9,11 @@ namespace ec_gui
 	}
 
 	Window::~Window()
-	{
-	}
+	= default;
 
-	void Window::Render(GUIRenderer& renderer, GUIRenderingContext& context)
+	void Window::render(GuiRenderer& renderer, GuiRenderingContext& context)
 	{
-		renderer.Render(this, context);
+		renderer.render(this, context);
 	}
 
 }

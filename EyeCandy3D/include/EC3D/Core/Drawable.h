@@ -19,33 +19,33 @@ namespace ec
 		explicit Drawable(Geometry* geometry, Material* material, Shader* shader);
 		virtual ~Drawable();
 
-		void Init(Geometry* geometry, Material* material, Shader* shader);
+		void init(Geometry* geometry, Material* material, Shader* shader);
 
 		/* Rendering */
-		virtual void Render(const glm::mat4& model);
+		virtual void render(const glm::mat4& model);
 
 		/* Geometry access */
-		void SetGeometry(Geometry* geometry);
-		Geometry* GetGeometry();
+		void setGeometry(Geometry* geometry);
+		Geometry* getGeometry();
 
 		/* Material access */
-		void SetMaterial(Material* material);
-		Material* GetMaterial();
+		void setMaterial(Material* material);
+		Material* getMaterial();
 
 		/* Shader access */
-		void SetShader(Shader* shader);
-		Shader* GetShader();
+		void setShader(Shader* shader);
+		Shader* getShader();
 
 	protected:
 		/* Prepare drawable for rendering */
-		virtual void BeginRender(const glm::mat4& model);
+		virtual void beginRender(const glm::mat4& model);
 		/* Render the drawable */
-		virtual void Render(Shader* shader, const glm::mat4& model);
+		virtual void render(Shader* shader, const glm::mat4& model);
 		/* Finalize the rendering */
-		virtual void EndRender();
+		virtual void endRender();
 
 		/* Transfer material data to the shader */
-		void SetMaterialUniforms(Shader* shader, Material* material);
+		void setMaterialUniforms(Shader* shader, Material* material);
 
 		Geometry* m_geometry;
 		Material* m_material;

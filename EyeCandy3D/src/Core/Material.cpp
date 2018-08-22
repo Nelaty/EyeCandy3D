@@ -16,36 +16,35 @@ namespace ec
 	}
 
 	Material::~Material()
-	{
-	}
+	= default;
 
-	void Material::AddTexture(const Texture& texture)
+	void Material::addTexture(const Texture& texture)
 	{
 		m_textures.push_back(texture);
 		m_hasTexture = true;
 	}
 
-	void Material::RemoveTexture(const Texture& texture)
+	void Material::removeTexture(const Texture& texture)
 	{
 
 	}
 
-	const std::vector<Texture>& Material::GetTextures() const
+	const std::vector<Texture>& Material::getTextures() const
 	{
 		return m_textures;
 	}
 
-	void Material::SetHasTexture(const bool hasTexture)
+	void Material::setHasTexture(const bool hasTexture)
 	{
 		m_hasTexture = hasTexture;
 	}
 
-	bool Material::HasTexture() const
+	bool Material::hasTexture() const
 	{
 		return m_hasTexture;
 	}
 
-	ec::Texture* Material::GetTexture(const unsigned int index)
+	ec::Texture* Material::getTexture(const unsigned int index)
 	{
 		if(index >= m_textures.size())
 		{
@@ -54,39 +53,39 @@ namespace ec
 		return &m_textures[index];
 	}
 
-	bool Material::AddDiffuseTextureFromPath(const char* path)
+	bool Material::addDiffuseTextureFromPath(const char* path)
 	{
 		Texture texture;
-		bool result = texture.TextureFromFile(path, conf_shader::g_texture_diffuse);
+		const auto result = texture.textureFromFile(path, conf_shader::g_textureDiffuse);
 		m_textures.push_back(texture);
 		m_hasTexture = true;
 		return result;
 	}
 
-	bool Material::AddSpecularTextureFromPath(const char* path)
+	bool Material::addSpecularTextureFromPath(const char* path)
 	{
 		Texture texture;
-		bool result = texture.TextureFromFile(path, conf_shader::g_texture_specular);
+		const auto result = texture.textureFromFile(path, conf_shader::g_textureSpecular);
 		m_textures.push_back(texture);
 		m_hasTexture = true;
 		return result;
 	}
 
-	bool Material::AddBumpTextureFromPath(const char* path)
+	bool Material::addBumpTextureFromPath(const char* path)
 	{
 		Texture texture;
-		bool result = texture.TextureFromFile(path, conf_shader::g_texture_bump);
+		const auto result = texture.textureFromFile(path, conf_shader::g_textureBump);
 		m_textures.push_back(texture);
 		m_hasTexture = true;
 		return result;
 	}
 
-	void Material::SetColorAmbient(const glm::vec4& color)
+	void Material::setColorAmbient(const glm::vec4& color)
 	{
 		m_colorAmbient = color;
 	}
 
-	void Material::SetColorAmbient(const float r, const float g, const float b, const float a)
+	void Material::setColorAmbient(const float r, const float g, const float b, const float a)
 	{
 		m_colorAmbient.r = r;
 		m_colorAmbient.g = g;
@@ -94,12 +93,12 @@ namespace ec
 		m_colorAmbient.a = a;
 	}
 
-	void Material::SetColorDiffuse(const glm::vec4& color)
+	void Material::setColorDiffuse(const glm::vec4& color)
 	{
 		m_colorDiffuse = color;
 	}
 
-	void Material::SetColorDiffuse(const float r, const float g, const float b, const float a)
+	void Material::setColorDiffuse(const float r, const float g, const float b, const float a)
 	{
 		m_colorDiffuse.r = r;
 		m_colorDiffuse.g = g;
@@ -107,12 +106,12 @@ namespace ec
 		m_colorDiffuse.a = a;
 	}
 
-	void Material::SetColorSpecular(const glm::vec4& color)
+	void Material::setColorSpecular(const glm::vec4& color)
 	{
 		m_colorSpecular = color;
 	}
 
-	void Material::SetColorSpecular(const float r, const float g, const float b, const float a)
+	void Material::setColorSpecular(const float r, const float g, const float b, const float a)
 	{
 		m_colorSpecular.r = r;
 		m_colorSpecular.g = g;
@@ -120,12 +119,12 @@ namespace ec
 		m_colorSpecular.a = a;
 	}
 
-	void Material::SetColorEmissive(const glm::vec4& color)
+	void Material::setColorEmissive(const glm::vec4& color)
 	{
 		m_colorEmissive = color;
 	}
 
-	void Material::SetColorEmissive(const float r, const float g, const float b, const float a)
+	void Material::setColorEmissive(const float r, const float g, const float b, const float a)
 	{
 		m_colorEmissive.r = r;
 		m_colorEmissive.g = g;
@@ -133,32 +132,32 @@ namespace ec
 		m_colorEmissive.a = a;
 	}
 
-	const glm::vec4& Material::GetColorAmbient() const
+	const glm::vec4& Material::getColorAmbient() const
 	{
 		return m_colorAmbient;
 	}
 
-	const glm::vec4& Material::GetColorDiffuse() const
+	const glm::vec4& Material::getColorDiffuse() const
 	{
 		return m_colorDiffuse;
 	}
 
-	const glm::vec4& Material::GetColorSpecular() const
+	const glm::vec4& Material::getColorSpecular() const
 	{
 		return m_colorSpecular;
 	}
 
-	const glm::vec4& Material::GetColorEmissive() const
+	const glm::vec4& Material::getColorEmissive() const
 	{
 		return m_colorEmissive;
 	}
 
-	void Material::SetShininess(const float shininess)
+	void Material::setShininess(const float shininess)
 	{
 		m_shininess = shininess;
 	}
 
-	float Material::GetShininess() const
+	float Material::getShininess() const
 	{
 		return m_shininess;
 	}

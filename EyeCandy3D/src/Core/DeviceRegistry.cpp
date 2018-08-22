@@ -12,38 +12,37 @@ namespace ec
 	}
 
 	DeviceRegistry::~DeviceRegistry()
+	= default;
+
+	void DeviceRegistry::installAll()
 	{
+		installKeyboard();
+		installMouse();
 	}
 
-	void DeviceRegistry::InstallAll()
+	void DeviceRegistry::uninstallAll()
 	{
-		InstallKeyboard();
-		InstallMouse();
+		uninstallKeyboard();
+		uninstallMouse();
 	}
 
-	void DeviceRegistry::UninstallAll()
+	void DeviceRegistry::installKeyboard()
 	{
-		UninstallKeyboard();
-		UninstallMouse();
+		m_keyboard.install(m_window);
 	}
 
-	void DeviceRegistry::InstallKeyboard()
+	void DeviceRegistry::uninstallKeyboard()
 	{
-		m_keyboard.Install(m_window);
+		m_keyboard.uninstall();
 	}
 
-	void DeviceRegistry::UninstallKeyboard()
+	void DeviceRegistry::installMouse()
 	{
-		m_keyboard.Uninstall();
+		m_mouse.install(m_window);
 	}
 
-	void DeviceRegistry::InstallMouse()
+	void DeviceRegistry::uninstallMouse()
 	{
-		m_mouse.Install(m_window);
-	}
-
-	void DeviceRegistry::UninstallMouse()
-	{
-		m_mouse.Uninstall();
+		m_mouse.uninstall();
 	}
 }

@@ -8,15 +8,14 @@ namespace ec
 	}
 
 	EventQueue::~EventQueue()
+	= default;
+
+	void EventQueue::pushEvent(const InputEvent& event)
 	{
+
 	}
 
-	void EventQueue::PushEvent(const InputEvent& event)
-	{
-
-	}
-
-	bool EventQueue::PopEvent(InputEvent& outEvent)
+	bool EventQueue::popEvent(InputEvent& outEvent)
 	{
 		return false;
 	}

@@ -1,3 +1,4 @@
+#include <utility>
 #include "EC3D/GUI/Button.h"
 
 #include "EC3D/Core/Drawable.h"
@@ -13,32 +14,31 @@ namespace ec_gui
 	}
 
 	Button::~Button()
+	= default;
+
+	void Button::setOnPressedCallback(std::function<void()> callback)
 	{
+		m_onPressedCallback = std::move(callback);
 	}
 
-	void Button::SetOnPressedCallback(std::function<void()> callback)
+	void Button::setOnButtonDownCallback(std::function<void()> callback)
 	{
-		m_onPressedCallback = callback;
+		m_onButtonDownCallback = std::move(callback);
 	}
 
-	void Button::SetOnButtonDownCallback(std::function<void()> callback)
+	void Button::setOnButtonUpCallback(std::function<void()> callback)
 	{
-		m_onButtonDownCallback = callback;
+		m_onButtonUpCallback = std::move(callback);
 	}
 
-	void Button::SetOnButtonUpCallback(std::function<void()> callback)
+	bool Button::onMouseButton(const glm::ivec2& position, int button, int mods, bool pressed)
 	{
-		m_onButtonUpCallback = callback;
-	}
-
-	bool Button::OnMouseButton(const glm::ivec2& position, int button, int mods, bool pressed)
-	{
-		if(__super::OnMouseButton(position, button, mods, pressed))
+		if(__super::onMouseButton(position, button, mods, pressed))
 		{
 			return true;
 		}
 
-		if(Contains(position))
+		if(contains(position))
 		{
 			if(m_onPressedCallback)	m_onPressedCallback();
 			if(pressed)

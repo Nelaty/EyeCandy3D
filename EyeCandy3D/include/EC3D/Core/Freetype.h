@@ -1,5 +1,5 @@
 #pragma once
-#include <gl/glew.h>
+#include <GL/glew.h>
 
 #include <map>
 #include <string>
@@ -29,23 +29,23 @@ namespace ec
 		* Render text with a specific FontTextureAtlas at a certain 
 		* position with a specified relative scale
 		*/
-		void RenderText(const char* text, FontTextureAtlas* atlas, 
+		void renderText(const char* text, FontTextureAtlas* atlas, 
 						float x, float y,
 						float sx, float sy,
-						const glm::vec4& color = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f));
+						const glm::vec4& color = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f)) const;
 
 		/* Add a new font face */
-		void AddFontFace(const std::string& name, const std::string& filepath);
+		void addFontFace(const std::string& name, const std::string& filepath);
 		
 		/* Add a new texture atlas */
-		void AddFontTextureAtlas(const std::string& face, unsigned int size);
+		void addFontTextureAtlas(const std::string& face, unsigned int size);
 
 		/* Try to get a existent FontTextureAtlas by name */
-		FontTextureAtlas* GetFontTextureAtlas(const std::string& name);
+		FontTextureAtlas* getFontTextureAtlas(const std::string& name);
 
 	private:
 		/* Initialization */
-		void InitFreetype();
+		void initFreetype();
 
 		/* Shader used for rendering text */
 		Shader* m_textShader;

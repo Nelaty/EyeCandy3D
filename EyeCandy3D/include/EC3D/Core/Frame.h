@@ -18,23 +18,23 @@ namespace ec
 		~Frame();
 
 		/** Add a given camera at the end (low priority camera) */
-		void AddCameraBack(Camera* camera);
+		void addCameraBack(Camera* camera);
 		/** Add a given camera at the front (high priority camera) */
-		void AddCameraFront(Camera* camera);
+		void addCameraFront(Camera* camera);
 		/** 
 		 * Add a given camera with a given priority. If there already
 		 * is a camera with the same priority registered,
 		 * put the given camera before this.
 		 */
-		void AddCamera(Camera* camera, unsigned int priority);
+		void addCamera(Camera* camera, unsigned int priority);
 		/**
 		 * Add a given camera right before another given camera 
 		 * \param camera The camera to be added.
-		 * \param prevCamera The camera before which the newly added
+		 * \param nextCamera The camera before which the newly added
 		 * camera should follow.
 		 * \return True if nextCamera was found, false otherwise.
 		 * */
-		bool AddCameraBefore(Camera* camera, Camera* nextCamera);
+		bool addCameraBefore(Camera* camera, Camera* nextCamera);
 		/**
 		* Add a given camera right after another given camera
 		* \param camera The camera to be added.
@@ -42,19 +42,19 @@ namespace ec
 		* camera should follow.
 		* \return True if prevCamera was found, false otherwise.
 		*/
-		bool AddCameraAfter(Camera* camera, Camera* prevCamera);
+		bool addCameraAfter(Camera* camera, Camera* prevCamera);
 
 		/**
 		 * Remove a given camera from the frame.
 		 * \return True if the given camera is registered, false otherwise.
 		 */
-		bool RemoveCamera(Camera* camera);
+		bool removeCamera(Camera* camera);
 
 		/** Remove all registered cameras. */
-		void Clear();
+		void clear();
 
 		/** Get all registered cameras */
-		const std::vector<Camera*> GetCameras() const;
+		const std::vector<Camera*>& getCameras() const;
 
 	private:
 		std::vector<Camera*> m_cameras;

@@ -5,38 +5,37 @@
 namespace ec
 {
 	InputListener::~InputListener()
-	{
-	}
+	= default;
 
-	void InputListener::Inform(const InputEvent& event)
+	void InputListener::inform(const InputEvent& event)
 	{
 		if(m_enabled)
 		{
-			ProcessEvent(event);
+			processEvent(event);
 		}
 	}
 
-	void InputListener::Enable(const bool enabled)
+	void InputListener::enable(const bool enabled)
 	{
 		m_enabled = enabled;
 	}
 
-	bool InputListener::IsEnabled() const
+	bool InputListener::isEnabled() const
 	{
 		return m_enabled;
 	}
 
-	void InputListener::AddCallback(const std::string& id, EventKey_T key, std::function<void()> callback)
+	void InputListener::addCallback(const std::string& id, EventKey_T key, std::function<void()> callback)
 	{
-		auto cbPair = std::make_pair(id, callback);
+		const auto cbPair = std::make_pair(id, callback);
 		m_eventCallbacks[key].push_back(cbPair);
 	}
 
-	bool InputListener::RemoveCallback(const std::string& id, EventKey_T key)
+	bool InputListener::removeCallback(const std::string& id, EventKey_T key)
 	{
 		auto& cbContainer = m_eventCallbacks[key];
-		auto foundCb = std::remove_if(cbContainer.begin(), cbContainer.end(), 
-									  [&](const auto& pair) -> bool
+		const auto foundCb = std::remove_if(cbContainer.begin(), cbContainer.end(), 
+											[&](const auto& pair) -> bool
 		{
 			return pair.first == id;
 		});
@@ -44,13 +43,13 @@ namespace ec
 		return foundCb != cbContainer.end();
 	}
 
-	void InputListener::RemoveCallbacksOfType(EventKey_T key)
+	void InputListener::removeCallbacksOfType(EventKey_T key)
 	{
 		auto& cbContainer = m_eventCallbacks[key];
 		cbContainer.clear();
 	}
 
-	void InputListener::RemoveAllCallbacks()
+	void InputListener::removeAllCallbacks()
 	{
 		for(auto& it : m_eventCallbacks)
 		{
@@ -58,10 +57,10 @@ namespace ec
 		}
 	}
 
-	bool InputListener::IsCallbackRegistered(const std::string& id, EventKey_T key)
+	bool InputListener::isCallbackRegistered(const std::string& id, EventKey_T key)
 	{
 		auto& cbContainer = m_eventCallbacks[key];
-		auto foundCb = std::find_if(cbContainer.begin(), cbContainer.end(),
+		const auto foundCb = std::find_if(cbContainer.begin(), cbContainer.end(),
 									[&](const auto& pair) -> bool
 		{
 			return pair.first == id;
@@ -75,7 +74,7 @@ namespace ec
 	{
 	}
 
-	void InputListener::ProcessEvent(const InputEvent& event)
+	void InputListener::processEvent(const InputEvent& event)
 	{
 		auto& cbContainer = m_eventCallbacks[event.m_type];
 		for(const auto& it : cbContainer)

@@ -8,15 +8,15 @@ namespace agui
 
 	OpenGLImage::OpenGLImage(const std::string& fileName, bool convertMask)
 	{
-		m_texture.TextureFromFile(fileName.c_str(), 
-								  ec::TextureTypes::GetTypeString(ec::TextureTypes::Type::texture_diffuse));
+		m_texture.textureFromFile(fileName.c_str(), 
+								  ec::TextureTypes::getTypeString(ec::TextureTypes::Type::texture_diffuse));
 	}
 
 	OpenGLImage::~OpenGLImage()
 	{
 		if(m_autoFree)
 		{
-			m_texture.Free();
+			m_texture.free();
 		}
 	}
 
@@ -33,7 +33,7 @@ namespace agui
 	agui::Color OpenGLImage::getPixel(int x, int y) const
 	{
 		/// \todo implement
-		return Color();
+		return {};
 	}
 
 	void OpenGLImage::setPixel(int x, int y, const Color& color)
@@ -41,7 +41,7 @@ namespace agui
 		/// \todo implement
 	}
 
-	void OpenGLImage::setTexture(ec::Texture texture, bool autoFree)
+	void OpenGLImage::setTexture(const ec::Texture& texture, const bool autoFree)
 	{
 		if(m_autoFree)
 		{
@@ -64,6 +64,6 @@ namespace agui
 
 	void OpenGLImage::free()
 	{
-		m_texture.Free();
+		m_texture.free();
 	}
 }

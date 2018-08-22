@@ -2,8 +2,6 @@
 
 #include <GLFW/glfw3.h>
 
-#include <array>
-
 namespace ec
 {
 	enum class StandardCursorType : int
@@ -22,25 +20,34 @@ namespace ec
 	{
 	public:
 		explicit Cursor(StandardCursorType type);
-		explicit Cursor(int width, int height, unsigned char* pixels, int hotSpotX = 0, int hotSpotY = 0);
+		explicit Cursor(int width, 
+						int height,
+						unsigned char* pixels,
+						int hotSpotX = 0, 
+						int hotSpotY = 0);
 		~Cursor();
 
-		void UseCursor(GLFWwindow* window);
+		void useCursor(GLFWwindow* window) const;
 
 	private:
-		void InitType(StandardCursorType type);
-		void InitType(int width, int height, unsigned char* pixels, int hotSpotX = 0, int hotSpotY = 0);
-		void DestroyCursor();
+		void initType(StandardCursorType type);
+		void initType(int width,
+					  int height,
+					  unsigned char* pixels, 
+					  int hotSpotX = 0, 
+					  int hotSpotY = 0);
+
+		void destroyCursor() const;
 
 		GLFWcursor* m_cursor;
 
 		/* Custom cursor data */
-		GLFWimage m_image;
-		int m_width;
-		int m_height;
+		GLFWimage m_image{};
+		int m_width{};
+		int m_height{};
 
 		/* Standard cursor data */
-		bool m_useStandardCursor;
+		bool m_useStandardCursor{};
 		StandardCursorType m_type;
 	};
 }

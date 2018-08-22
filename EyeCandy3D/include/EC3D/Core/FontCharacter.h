@@ -8,16 +8,16 @@ namespace ec
 {
 	struct FontCharacter
 	{
-		float advanceX;
-		float advanceY;
+		float m_advanceX;
+		float m_advanceY;
 
-		float bitmapWidth;
-		float bitmapHeight;
+		float m_bitmapWidth;
+		float m_bitmapHeight;
 
-		float bitmapLeft;
-		float bitmapTop;
+		float m_bitmapLeft;
+		float m_bitmapTop;
 
-		float uvOffsetX;
-		float uvOffsetY;
+		float m_uvOffsetX;
+		float m_uvOffsetY;
 	};
 }

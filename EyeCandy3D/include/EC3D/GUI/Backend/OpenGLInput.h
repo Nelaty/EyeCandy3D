@@ -21,10 +21,10 @@ namespace agui
 		explicit OpenGLInput();
 		virtual ~OpenGLInput();
 		
-		virtual double getTime() const override;
+		double getTime() const override;
 		
 	protected:
-		virtual void ProcessEvent(const ec::InputEvent& event) override;
+		void processEvent(const ec::InputEvent& event) override;
 
 	private:
 		bool shift;

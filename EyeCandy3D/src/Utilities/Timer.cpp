@@ -6,31 +6,30 @@ namespace ec
 {
 	Timer::Timer()
 	{
-		Reset();
+		reset();
 	}
 
 	Timer::~Timer()
-	{
-	}
+	= default;
 
-	void Timer::Reset()
+	void Timer::reset()
 	{
 		m_start = glfwGetTime();
 		m_timeDeltaFirst = m_start;
 		m_timeDeltaLast = m_start;
 	}
 
-	void Timer::ResetTimeDelta()
+	void Timer::resetTimeDelta()
 	{
 		m_timeDeltaFirst = m_timeDeltaLast;
 	}
 
-	double Timer::GetTime() const
+	double Timer::getTime() const
 	{
 		return glfwGetTime() - m_start;
 	}
 
-	double Timer::GetTimeDelta()
+	double Timer::getTimeDelta()
 	{
 		m_timeDeltaLast = glfwGetTime();
 		return m_timeDeltaLast - m_timeDeltaFirst;

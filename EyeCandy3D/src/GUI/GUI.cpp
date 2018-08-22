@@ -1,53 +1,51 @@
-#include "EC3D/GUI/GUI.h"
+#include "EC3D/GUI/Gui.h"
 #include "EC3D/GUI/Widget.h"
 #include "EC3D/GUI/Screen.h"
 
-#include <GLFW/glfw3.h>
-
+#include <utility>
 
 namespace ec_gui
 {
-	GUI::GUI(const std::string& guiName)
-		: m_name{guiName}
+	Gui::Gui(std::string guiName)
+		: m_name{std::move(guiName)}
 	{
 		m_widgetRoot = std::make_unique<Screen>();
 	}
-
-	GUI::~GUI()
-	{
-	}
 	
-	void GUI::Enable(bool enabled)
+	Gui::~Gui()
+	= default;
+
+	void Gui::enable(const bool enabled) const
 	{
-		m_widgetRoot->Enable(enabled);
+		m_widgetRoot->enable(enabled);
 	}
 
-	bool GUI::IsEnabled() const
+	bool Gui::isEnabled() const
 	{
-		return m_widgetRoot->IsEnabled();
+		return m_widgetRoot->isEnabled();
 	}
 
-	Widget* GUI::GetWidget()
+	Widget* Gui::getWidget() const
 	{
 		return m_widgetRoot.get();
 	}
 
-	void GUI::SetRoot(std::unique_ptr<Widget> root)
+	void Gui::setRoot(std::unique_ptr<Widget> root)
 	{
 		m_widgetRoot = std::move(root);
 	}
 
-	ec_gui::Widget* GUI::GetRoot()
+	ec_gui::Widget* Gui::getRoot() const
 	{
 		return m_widgetRoot.get();
 	}
 
-	const std::string& GUI::GetName() const
+	const std::string& Gui::getName() const
 	{
 		return m_name;
 	}
 
-	void GUI::SetName(const std::string& guiName)
+	void Gui::setName(const std::string& guiName)
 	{
 		m_name = guiName;
 	}

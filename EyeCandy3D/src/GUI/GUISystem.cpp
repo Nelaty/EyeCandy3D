@@ -1,20 +1,16 @@
-#include "EC3D/GUI/GUISystem.h"
-#include "EC3D/GUI/GUI.h"
-
-#include <algorithm>
+#include "EC3D/Gui/GUISystem.h"
+#include "EC3D/Gui/Gui.h"
 
 namespace ec_gui
 {
 
-	GUISystem::GUISystem()
-	{
-	}
+	GuiSystem::GuiSystem()
+	= default;
 
-	GUISystem::~GUISystem()
-	{
-	}
+	GuiSystem::~GuiSystem()
+	= default;
 
-	ec_gui::GUIModel* GUISystem::GetModel()
+	ec_gui::GuiModel* GuiSystem::getModel() const
 	{
 		return m_guiModel.get();
 	}

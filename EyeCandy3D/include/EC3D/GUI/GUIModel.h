@@ -5,24 +5,24 @@
 
 namespace ec_gui
 {
-	class GUI;
+	class Gui;
 
-	class GUIModel
+	class GuiModel
 	{
 	public:
-		explicit GUIModel();
-		~GUIModel();
+		explicit GuiModel();
+		~GuiModel();
 
 		/* Add a new gui */
-		bool AddGUI(GUI* gui);
-		bool RemoveGUI(GUI* gui);
-		bool RemoveGUI(const std::string& name);
+		bool addGui(Gui* gui);
+		bool removeGui(Gui* gui);
+		bool removeGui(const std::string& name);
 
 		/* GUI access */
-		GUI* GetGUI(const std::string& name);
-		const std::vector<GUI*>& GetAllGUIs() const;
+		Gui* getGui(const std::string& name);
+		const std::vector<Gui*>& getAllGuIs() const;
 
 	private:
-		std::vector<GUI*> m_guis;
+		std::vector<Gui*> m_guis;
 	};
 }

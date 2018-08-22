@@ -6,12 +6,10 @@
 namespace agui
 {	
 	OpenGLGraphics::OpenGLGraphics()
-	{
-	}
+	= default;
 
 	OpenGLGraphics::~OpenGLGraphics()
-	{
-	}
+	= default;
 
 	void OpenGLGraphics::_beginPaint()
 	{
@@ -32,22 +30,22 @@ namespace agui
 		{
 			glfwGetWindowSize(context, &width, &height);
 		}
-		return Dimension(width, height);
+		return {width, height};
 	}
 
 	Rectangle OpenGLGraphics::getClippingRectangle()
 	{
-		int width = 0;
-		int height = 0;
-		int x = 0;
-		int y = 0;
+		auto width = 0;
+		auto height = 0;
+		auto x = 0;
+		auto y = 0;
 		auto* context = glfwGetCurrentContext();
 		if(context)
 		{
 			glfwGetWindowSize(context, &width, &height);
 			glfwGetWindowPos(context, &x, &y);
 		}
-		return Rectangle(x, y, width, height);
+		return {x, y, width, height};
 	}
 
 	void OpenGLGraphics::drawImage(const Image *bmp, 
@@ -119,19 +117,22 @@ namespace agui
 									float radius, 
 									const Color &color)
 	{
-		float x = center.getX();
-		float y = center.getY();
+		const float x = center.getX();
+		const float y = center.getY();
 
-		float xPrev = x;
-		float yPrev = y;
+		auto xPrev = x;
+		auto yPrev = y;
 
 		glBegin(GL_LINE_LOOP);
 		glColor4f(color.getR(), color.getG(), color.getB(), color.getA());
 		glVertex2f(x, y);
-		for(float angle = 0.0f; angle < 2 * M_PI; angle += s_circleStep)
+
+		for(auto i = 0; i < s_circleStepsNum; ++i)
 		{
-			float xCurrent = x + cos(angle) * radius;
-			float yCurrent = y + sin(angle) * radius;
+			const auto angle = i * s_circleStep;
+
+			const auto xCurrent = x + cos(angle) * radius;
+			const auto yCurrent = y + sin(angle) * radius;
 
 			glVertex2f(xPrev, yPrev);
 			glVertex2f(xCurrent, yCurrent);
@@ -146,14 +147,16 @@ namespace agui
 										  float radius, 
 										  const Color &color)
 	{
-		float x = center.getX();
-		float y = center.getY();
+		const float x = center.getX();
+		const float y = center.getY();
 
 		glBegin(GL_TRIANGLE_FAN);
 		glColor4f(color.getR(), color.getG(), color.getB(), color.getA());
 		glVertex2f(x, y);
-		for(float angle = 0.0f; angle < 2 * M_PI; angle += s_circleStep)
+
+		for(auto i = 0; i < s_circleStepsNum; ++i)
 		{
+			const auto angle = i * s_circleStep;
 			glVertex2f(x + cos(angle) * radius, y + sin(angle) * radius);
 		}
 		glEnd();

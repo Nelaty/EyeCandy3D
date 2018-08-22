@@ -10,14 +10,12 @@ namespace ec_gui
 	}
 
 	TextField::~TextField()
-	{
+	= default;
 
-	}
-
-	bool TextField::OnText(unsigned int codepoint, int mods)
+	bool TextField::onText(unsigned int codepoint, int mods)
 	{
 		m_text += static_cast<char>(codepoint);
-		return __super::OnText(codepoint, mods);
+		return __super::onText(codepoint, mods);
 	}
 
 }

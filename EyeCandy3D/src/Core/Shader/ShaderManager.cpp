@@ -6,14 +6,12 @@
 namespace ec
 {
 	ShaderManager::ShaderManager()
-	{
-	}
+	= default;
 
 	ShaderManager::~ShaderManager()
-	{
-	}
+	= default;
 
-	bool ShaderManager::AddShader(const std::string& shaderName,
+	bool ShaderManager::addShader(const std::string& shaderName,
 								  const std::string& vertPath,
 								  const std::string& fragPath,
 								  const std::string& geomPath,
@@ -33,24 +31,24 @@ namespace ec
 		return true;
 	}
 
-	Shader* ShaderManager::GetShader(const char* shaderName)
+	Shader* ShaderManager::getShader(const char* shaderName) const
 	{
 		Shader* shader = m_shader.find(shaderName)->second.get();
 		return shader ? shader : nullptr;
 	}
 
-	bool ShaderManager::SwitchShaderProgram(const char* shaderName)
+	bool ShaderManager::switchShaderProgram(const char* shaderName) const
 	{
-		auto shader = GetShader(shaderName);
+		const auto shader = getShader(shaderName);
 		if(shader)
 		{
-			shader->Bind();
+			shader->bind();
 			return true;
 		}
 		return false;
 	}
 
-	const std::map<std::string, std::unique_ptr<ec::Shader>>& ec::ShaderManager::GetAllShader()
+	const std::map<std::string, std::unique_ptr<ec::Shader>>& ec::ShaderManager::getAllShader() const
 	{
 		return m_shader;
 	}

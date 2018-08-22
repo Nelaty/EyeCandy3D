@@ -3,6 +3,8 @@
 
 #include <glm/glm.hpp>
 
+#include <gl/glew.h>
+
 namespace ec
 {
 
@@ -14,45 +16,44 @@ namespace ec
 	}
 
 	DynamicLineGeometry::~DynamicLineGeometry()
-	{
-	}
+	= default;
 
-	void DynamicLineGeometry::SetStart(Node* start)
+	void DynamicLineGeometry::setStart(Node* start)
 	{
 		m_start = start;
 	}
 
-	ec::Node* DynamicLineGeometry::GetStart() const
+	ec::Node* DynamicLineGeometry::getStart() const
 	{
 		return m_start;
 	}
 
-	void DynamicLineGeometry::SetEnd(Node* end)
+	void DynamicLineGeometry::setEnd(Node* end)
 	{
 		m_end = end;
 	}
 
-	ec::Node* DynamicLineGeometry::GetEnd() const
+	ec::Node* DynamicLineGeometry::getEnd() const
 	{
 		return m_end;
 	}
 
-	void DynamicLineGeometry::SetLinewidth(float linewidth)
+	void DynamicLineGeometry::setLinewidth(float linewidth)
 	{
 		m_linewidth = linewidth;
 	}
 
-	float DynamicLineGeometry::GetLinewidth() const
+	float DynamicLineGeometry::getLinewidth() const
 	{
 		return m_linewidth;
 	}
 
-	void DynamicLineGeometry::OnRender()
+	void DynamicLineGeometry::onRender()
 	{
 		if(!m_start || !m_end) return;
 
-		const auto& startPos = m_start->GetGlobalPosition();
-		const auto& endPos = m_end->GetGlobalPosition();
+		const auto& startPos = m_start->getGlobalPosition();
+		const auto& endPos = m_end->getGlobalPosition();
 
 		glLineWidth(m_linewidth);
 		glBegin(GL_LINE);

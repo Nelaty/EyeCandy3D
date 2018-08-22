@@ -6,7 +6,7 @@ namespace utl
 {
 	namespace
 	{
-		unsigned int EvaluateProfilingPrecision(std::chrono::steady_clock::time_point start,
+		unsigned int evaluateProfilingPrecision(std::chrono::steady_clock::time_point start,
 										 std::chrono::steady_clock::time_point end,
 										 ProfilingPrecision precision)
 		{
@@ -35,7 +35,7 @@ namespace utl
 		}	
 	}
 
-	void ProfilingData::Print()
+	void ProfilingData::print() const
 	{
 		printf("Number of executions: %d\n", m_loops);
 		if(m_loops > 1)
@@ -51,7 +51,7 @@ namespace utl
 		}
 	}
 
-	void ProfilingData::SetPrecision(ProfilingPrecision precision)
+	void ProfilingData::setPrecision(ProfilingPrecision precision)
 	{
 		m_precision = precision;
 
@@ -76,18 +76,18 @@ namespace utl
 		}
 	}
 
-	utl::ProfilingPrecision ProfilingData::GetPrecision() const
+	utl::ProfilingPrecision ProfilingData::getPrecision() const
 	{
 		return m_precision;
 	}
 
-	ProfilingData ProfileFunction(std::function<void(void)> f,
+	ProfilingData profileFunction(const std::function<void()>& f,
 								  const unsigned int loops,
-								  ProfilingPrecision precision)
+								  const ProfilingPrecision precision)
 	{
 		ProfilingData data;
 		data.m_loops = loops;
-		data.SetPrecision(precision);
+		data.setPrecision(precision);
 
 		unsigned int tempMin = UINT_MAX;
 		unsigned int tempMax = 0;
@@ -95,10 +95,10 @@ namespace utl
 
 		for(int i = 0; i < loops; ++i)
 		{
-			auto start = std::chrono::high_resolution_clock::now();
+			const auto start = std::chrono::high_resolution_clock::now();
 			f();
-			auto end = std::chrono::high_resolution_clock::now();
-			auto timeTaken = EvaluateProfilingPrecision(start, end, precision);
+			const auto end = std::chrono::high_resolution_clock::now();
+			auto timeTaken = evaluateProfilingPrecision(start, end, precision);
 
 			tempAvg += timeTaken;
 

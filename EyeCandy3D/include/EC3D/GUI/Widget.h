@@ -1,17 +1,16 @@
 #pragma once
 
 #include <vector>
-#include <memory>
 #include <string>
 
 #include <glm/glm.hpp>
+
 
 struct GLFWwindow;
 
 namespace ec
 {
 	struct InputEvent;
-
 	class Drawable;
 }
 
@@ -22,8 +21,8 @@ namespace ec
 */
 namespace ec_gui
 {
-	class GUIRenderer;
-	class GUIRenderingContext;
+	class GuiRenderer;
+	class GuiRenderingContext;
 	class Theme;
 
 	class Widget
@@ -35,96 +34,96 @@ namespace ec_gui
 		/* 
 		* Render this widget. Uses visitor pattern. 
 		*/
-		virtual void Render(GUIRenderer& renderer, GUIRenderingContext& context);
+		virtual void render(GuiRenderer& renderer, GuiRenderingContext& context);
 
 		/* Drawable access */
-		virtual void SetDrawable(ec::Drawable* drawable);
-		virtual ec::Drawable* GetDrawable();
+		virtual void setDrawable(ec::Drawable* drawable);
+		virtual ec::Drawable* getDrawable();
 
 		/* Parent access */
-		virtual const Widget* GetParent() const;
-		virtual Widget* GetParent();
-		virtual void SetParent(Widget* widget);
+		virtual const Widget* getParent() const;
+		virtual Widget* getParent();
+		virtual void setParent(Widget* widget);
 
 		/* Remove and add children*/
-		virtual void AddChild(Widget* widget);
-		virtual void RemoveChild(Widget* widget);
-		virtual void RemoveChildAtIndex(unsigned int index);
+		virtual void addChild(Widget* widget);
+		virtual void removeChild(Widget* widget);
+		virtual void removeChildAtIndex(unsigned int index);
 
 		/* Get child at a specified index or get them all */
-		virtual const std::vector<Widget*>& GetChildren() const;
-		virtual unsigned int GetIndexOfChild(Widget* widget);
-		virtual const Widget* GetChildAtIndex(const unsigned int index) const;
-		virtual Widget* GetChildAtIndex(const unsigned int index);
+		virtual const std::vector<Widget*>& getChildren() const;
+		virtual unsigned int getIndexOfChild(Widget* widget);
+		virtual const Widget* getChildAtIndex(unsigned int index) const;
+		virtual Widget* getChildAtIndex(unsigned int index);
 
 		/* Activation */
-		virtual bool IsEnabled() const;
-		virtual void Enable(const bool enable);
+		virtual bool isEnabled() const;
+		virtual void enable(bool enable);
 
 		/* Visibility */
-		virtual bool IsVisible() const;
-		virtual void SetVisible(const bool visible);
+		virtual bool isVisible() const;
+		virtual void setVisible(bool visible);
 
 		/* Check if the position is contained in this widget */
-		virtual bool Contains(const glm::ivec2& position) const;
+		virtual bool contains(const glm::ivec2& position) const;
 
 		/* Focus */
-		virtual bool IsFocused() const;
-		virtual void SetFocus(const bool focused);
-		virtual void MoveFocus();
+		virtual bool isFocused() const;
+		virtual void setFocus(bool focused);
+		virtual void moveFocus();
 
 		/* Dragging */
-		virtual bool IsDragged() const;
-		virtual void SetDragged(const bool dragged);
+		virtual bool isDragged() const;
+		virtual void setDragged(bool dragged);
 
 		/* Position */
-		virtual void SetPosition(const glm::ivec2& position);
-		virtual void SetPosition(const int x, const int y);
-		virtual void SetPositionX(const int x);
-		virtual void SetPositionY(const int y);
-		virtual const glm::ivec2& GetPosition() const;
+		virtual void setPosition(const glm::ivec2& position);
+		virtual void setPosition(int x, int y);
+		virtual void setPositionX(int x);
+		virtual void setPositionY(int y);
+		virtual const glm::ivec2& getPosition() const;
 
 		/* Size */
-		virtual void SetSize(const glm::ivec2& size);
-		virtual void SetSize(const int sx, const int sy);
-		virtual void SetSizeX(const int sx);
-		virtual void SetSizeY(const int sy);
-		virtual const glm::ivec2& GetSize() const;
+		virtual void setSize(const glm::ivec2& size);
+		virtual void setSize(int sx, int sy);
+		virtual void setSizeX(int sx);
+		virtual void setSizeY(int sy);
+		virtual const glm::ivec2& getSize() const;
 
 		/* Theme */
-		static void SetTheme(Theme* theme);
-		static Theme* GetTheme();
+		static void setTheme(Theme* theme);
+		static Theme* getTheme();
 
 		/* Events */
-		virtual bool OnMouseButton(const glm::ivec2& position, int button, int mods, bool pressed);
-		virtual bool OnMouseMove(const glm::ivec2& position);
-		virtual bool OnMouseDrag(const glm::ivec2& position, const glm::ivec2& offset, int button, int mods);
-		virtual bool OnMouseScroll(const glm::ivec2& position, const glm::vec2& offset);
+		virtual bool onMouseButton(const glm::ivec2& position, int button, int mods, bool pressed);
+		virtual bool onMouseMove(const glm::ivec2& position);
+		virtual bool onMouseDrag(const glm::ivec2& position, const glm::ivec2& offset, int button, int mods);
+		virtual bool onMouseScroll(const glm::ivec2& position, const glm::vec2& offset);
 
-		virtual bool OnFocus(bool focused);
+		virtual bool onFocus(bool focused);
 
-		virtual bool OnKey(int key, int scancode, int mods, bool pressed);
-		virtual bool OnText(unsigned int codepoint, int mods);
+		virtual bool onKey(int key, int scancode, int mods, bool pressed);
+		virtual bool onText(unsigned int codepoint, int mods);
 
-		virtual bool OnDrop(const glm::ivec2& position, int count, const char** paths);
-		virtual bool OnResize(const glm::ivec2& size);
+		virtual bool onDrop(const glm::ivec2& position, int count, const char** paths);
+		virtual bool onResize(const glm::ivec2& size);
 
 	protected:
 		static Theme* s_theme;
 
 		Widget* m_parent;
 		std::vector<Widget*> m_children;
-		ec::Drawable* m_drawable;
+		ec::Drawable* m_drawable = nullptr;
 
-		glm::ivec2 m_position;
-		glm::ivec2 m_size;
+		glm::ivec2 m_position{0};
+		glm::ivec2 m_size{100};
 
-		std::string m_tooltip;
+		std::string m_tooltip = "";
 
 		/* Flags */
-		bool m_enabled;
-		bool m_visible;
-		bool m_focused;
-		bool m_drag;
+		bool m_enabled = true;
+		bool m_visible = true;
+		bool m_focused = false;
+		bool m_drag = false;
 	};
 }

@@ -15,13 +15,13 @@ public:
 	explicit ExampleScene(const std::string& name, ec::Window* window);
 	~ExampleScene();
 
-	void Init();
+	void init();
 
-	virtual void Tick(const float timeDelta) override;
+	void tick(float timeDelta) override;
 
 private:
-	void ConstructTestSG();
-	void SphereTest();
+	void constructTestSg();
+	void sphereTest();
 
 	ec::Window* m_window;
 

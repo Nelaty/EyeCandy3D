@@ -3,25 +3,24 @@
 #include <string>
 #include <vector>
 
-/*
+/**
 * File utility functions
 */
-
 namespace utl
 {
-	std::string GetFileContentString(const char* filepath);
-	std::vector<std::string> GetFileContentSeparatedString(const char* filepath);
+	std::string getFileContentString(const char* filepath);
+	std::vector<std::string> getFileContentSeparatedString(const char* filepath);
 
-	void WriteToFileLocal(const std::string& inputStr, const char* filename);
+	void writeToFileLocal(const std::string& inputStr, const char* filename);
 
 
-	void CreateFileInWorkingDirectory(const char* filename);
-	void CreateDirectoryInWorkingDirectory(const char* dirname);
-	bool IsFileInWorkingDir(const char* filename);
-	bool IsDirectoryInWorkingDir(const char* dirname);
+	void createFileInWorkingDirectory(const char* filename);
+	void createDirectoryInWorkingDirectory(const char* dirname);
+	bool isFileInWorkingDir(const char* filename);
+	bool isDirectoryInWorkingDir(const char* dirname);
 
-	void CreateFilePath(const char* filename, const char* filepath);
-	void CreateDirectoryPath(const char* filename, const char* filepath);
-	bool IsFileInPath(const char* filename, const char* filepath);
-	bool IsDirectoryInPath(const char* filename, const char* filepath);
+	void createFilePath(const char* filename, const char* filepath);
+	void createDirectoryPath(const char* filename, const char* filepath);
+	bool isFileInPath(const char* filename, const char* filepath);
+	bool isDirectoryInPath(const char* filename, const char* filepath);
 }

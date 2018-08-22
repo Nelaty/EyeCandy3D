@@ -1,62 +1,62 @@
-#include "EC3D/GUI/GUIModel.h"
-#include "EC3D/GUI/GUI.h"
+#include "EC3D/GUI/GuiModel.h"
+#include "EC3D/GUI/Gui.h"
 
 #include <algorithm>
 
 namespace ec_gui 
 {
 	
-	GUIModel::GUIModel()
-	{
-	}
+	GuiModel::GuiModel() = default;
 
-	GUIModel::~GUIModel()
-	{
-	}
+	GuiModel::~GuiModel() = default;
 
-	bool GUIModel::AddGUI(GUI* gui)
+	bool GuiModel::addGui(Gui* gui)
 	{
-		if(GetGUI(gui->GetName())) return false;
-
+		if(getGui(gui->getName()))
+		{
+			return false;
+		}
+		
 		m_guis.push_back(gui);
+		return true;
 	}
 
-	bool GUIModel::RemoveGUI(GUI* gui)
+	bool GuiModel::removeGui(Gui* gui)
 	{
-		auto foundGUI = std::remove(m_guis.begin(),
-									m_guis.end(),
-									gui);
+		const auto foundGui = std::remove(m_guis.begin(),
+										  m_guis.end(),
+										  gui);
 
-		return foundGUI != m_guis.end();
+		return foundGui != m_guis.end();
 	}
 
-	bool GUIModel::RemoveGUI(const std::string& name)
+	bool GuiModel::removeGui(const std::string& name)
 	{
-		auto foundGUI = std::find_if(m_guis.begin(),
-									 m_guis.end(),
-									 [&](const GUI* gui)
+		const auto foundGui = std::find_if(m_guis.begin(),
+										   m_guis.end(),
+										   [&](const Gui* gui)
 		{
-			return gui->GetName() == name;
+			return gui->getName() == name;
 		});
 
-		return foundGUI != m_guis.end();
+		return foundGui != m_guis.end();
 	}
 
-	ec_gui::GUI* GUIModel::GetGUI(const std::string& name)
+	ec_gui::Gui* GuiModel::getGui(const std::string& name)
 	{
-		auto foundGUI = std::find_if(m_guis.begin(),
-									 m_guis.end(),
-									 [&](const GUI* gui)
+		const auto foundGui = std::find_if(m_guis.begin(),
+										   m_guis.end(),
+										   [&](const Gui* gui)
 		{
-			return gui->GetName() == name;
+			return gui->getName() == name;
 		});
 
-		if(foundGUI == m_guis.end()) return nullptr;
+		if(foundGui == m_guis.end()) return nullptr;
 
-		return *foundGUI;
+		return *foundGui;
 	}
 
-	const std::vector<GUI*>& GUIModel::GetAllGUIs() const
+	const std::vector<Gui*>& GuiModel::getAllGuIs() const
 	{
 		return m_guis;
 	}

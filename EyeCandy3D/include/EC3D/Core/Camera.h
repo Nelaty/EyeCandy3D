@@ -27,52 +27,52 @@ namespace ec
 		 * Update the viewport, so the aspect ratio of it equals the
 		 * aspect ratio of the window.
 		 */
-		void ChangeAspectRatio(float aspect);
+		void changeAspectRatio(float aspect);
 
 		/** 
 		 * DO NOT USE
 		 * Update the view matrix 
 		 */
-		virtual void UpdateLocalMat() override;
+		void updateLocalMat() override;
 
-		virtual void UpdateGlobalMatrices(const glm::mat4& m_parentMat) override;
+		void updateGlobalMatrices(const glm::mat4& parentMat) override;
 
 		/** Get the current view matrix */
-		const glm::mat4& GetView() const;
+		const glm::mat4& getView() const;
 		/** Get the current projection matrix */
-		const glm::mat4& GetProjection() const;
+		const glm::mat4& getProjection() const;
 
 		/** Change to orthogonal projection */
-		void SetProjectionOrtho();
+		void setProjectionOrtho();
 		/** Change to perspective projection */
-		void SetProjectionPerspective();
+		void setProjectionPerspective();
 
 		/** 
 		 * Set the fov
 		 * \param fov FOV in radians 
 		 */
-		void SetFOV(const float fov);
+		void setFov(float fov);
 		/** Get the current fov in radians */
-		float GetFOV() const;
+		float getFov() const;
 
 		/** Set the near plane */
-		void SetNear(const float near);
+		void setNear(float near);
 		/** Get the current near plane */
-		float GetNear() const;
+		float getNear() const;
 
 		/** Set the far plane */
-		void SetFar(const float far);		
+		void setFar(float far);		
 		/** Get the current far plane */
-		float GetFar() const;
+		float getFar() const;
 
 		/** Access to the related scene */
-		Scene* GetScene() const;
+		Scene* getScene() const;
 
-		const Viewport& GetViewport() const;
-		void SetViewport(const Viewport& viewport);
+		const Viewport& getViewport() const;
+		void setViewport(const Viewport& viewport);
 
 	private:
-		void Init();
+		void init();
 
 		CameraType m_type;
 

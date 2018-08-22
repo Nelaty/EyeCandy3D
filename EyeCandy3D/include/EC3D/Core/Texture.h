@@ -1,5 +1,5 @@
 #pragma once
-#include <gl/glew.h>
+#include <GL/glew.h>
 
 #include <map>
 #include <string>
@@ -24,7 +24,7 @@ namespace ec
 			texture_3D = GL_TEXTURE_3D
 		};
 
-		static const std::string& GetTypeString(const Type type);
+		static const std::string& getTypeString(Type type);
 
 	private:
 		static const std::map<Type, std::string> s_textureTypes;
@@ -40,27 +40,27 @@ namespace ec
 		~Texture();
 
 		/* Buffer Id access*/
-		void SetId(const unsigned int id);
-		int GetId() const;
+		void setId(unsigned int id);
+		int getId() const;
 
 		/* Texture type access */
-		void SetType(const std::string& type);
-		const std::string& GetType() const;
+		void setType(const std::string& type);
+		const std::string& getType() const;
 
 		/* Texture dimension access */
-		TextureTypes::Dimensions GetDimensions() const;
+		TextureTypes::Dimensions getDimensions() const;
 
 		/* Create 2D texture */
-		bool TextureFromFile(const char* path, const std::string& type);
+		bool textureFromFile(const char* path, const std::string& type);
 	
 		/* Create a 3D texture */
-		bool CubeMapFromFile(const char* path, const std::string& type);
+		bool cubeMapFromFile(const char* path, const std::string& type);
 
 		/* Check if this texture has been initialized */
-		bool IsInitialized() const;
+		bool isInitialized() const;
 
 		/** Deallocation of texture memory */
-		void Free();
+		void free();
 
 	private:
 		int m_id;

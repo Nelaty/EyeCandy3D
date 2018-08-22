@@ -13,19 +13,19 @@ namespace ec
 		~DeviceRegistry();
 
 		/** Install every device */
-		void InstallAll();
+		void installAll();
 		/** Uninstall every device */
-		void UninstallAll();
+		void uninstallAll();
 
 		/** Install a keyboard device */
-		void InstallKeyboard();
+		void installKeyboard();
 		/** Uninstall a keyboard device */
-		void UninstallKeyboard();
+		void uninstallKeyboard();
 
 		/** Install a mouse device */
-		void InstallMouse();
+		void installMouse();
 		/** Uninstall a mouse device */
-		void UninstallMouse();
+		void uninstallMouse();
 
 	private:
 		Window* m_window;

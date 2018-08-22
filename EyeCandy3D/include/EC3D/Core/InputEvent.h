@@ -49,7 +49,7 @@ namespace ec
 							  int width, int height,
 							  DisplayOrientation orientation = DisplayOrientation::rotated_0);
 
-		void Print() const;
+		void print() const;
 
 		GLFWwindow* m_window;
 
@@ -71,7 +71,7 @@ namespace ec
 							   bool repeat);
 		~KeyboardEvent();
 
-		void Print() const;
+		void print() const;
 
 		GLFWwindow* m_window;
 		int m_key;
@@ -80,10 +80,10 @@ namespace ec
 		int m_mods;
 		bool m_repeat;
 
-		bool ShiftPressed() const;
-		bool ControlPressed() const;
-		bool AltPressed() const;
-		bool SuperPressed() const;
+		bool shiftPressed() const;
+		bool controlPressed() const;
+		bool altPressed() const;
+		bool superPressed() const;
 	};
 
 	struct MouseEvent
@@ -97,7 +97,7 @@ namespace ec
 							float pressure = 1.0f);
 		~MouseEvent();
 
-		void Print() const;
+		void print() const;
 
 		GLFWwindow* m_window;
 		int m_x; // primary x position
@@ -118,19 +118,19 @@ namespace ec
 		// For mouse: {0,1}
 		float m_pressure;
 
-		bool ShiftPressed() const;
-		bool ControlPressed() const;
-		bool AltPressed() const;
-		bool SuperPressed() const;
+		bool shiftPressed() const;
+		bool controlPressed() const;
+		bool altPressed() const;
+		bool superPressed() const;
 	};
 
 	struct JoystickEvent
 	{
 		explicit JoystickEvent();
-		explicit JoystickEvent(GLFWwindow* window, const int joystick, const int event);
+		explicit JoystickEvent(GLFWwindow* window, int joystick, int event);
 		~JoystickEvent();
 
-		void Print() const;
+		void print() const;
 
 		GLFWwindow* m_window;
 		int m_joystick;
@@ -142,11 +142,11 @@ namespace ec
 		explicit DropEvent();
 		explicit DropEvent(int x, int y,
 						   GLFWwindow* window, 
-						   const int count,
+						   int count,
 						   const char** paths);
 		~DropEvent();
 
-		void Print() const;
+		void print() const;
 
 		GLFWwindow* m_window;
 		
@@ -159,6 +159,18 @@ namespace ec
 		const char** m_paths;
 	};
 
+	union EventData
+	{
+		explicit EventData();
+		~EventData();
+
+		DisplayEvent m_display;
+		KeyboardEvent m_keyboard;
+		MouseEvent m_mouse;
+		JoystickEvent m_joystick;
+		DropEvent m_drop;
+	};
+
 	/**
 	* Group all input events to make transfer easy and save memory 
 	* by only holding the event, which is currently active
@@ -166,10 +178,10 @@ namespace ec
 	struct InputEvent
 	{
 		explicit InputEvent();
-		explicit InputEvent(const InputType type);
+		explicit InputEvent(InputType type);
 
 		/** Print the currently active event */
-		void Print() const;
+		void print() const;
 
 		/** Tells which event is currently active */
 		InputType m_type;
@@ -177,17 +189,7 @@ namespace ec
 		/** */
 		double m_timestamp;
 
-		union EventData
-		{
-			EventData(){}
-			~EventData(){}
-
-			DisplayEvent m_display;
-			KeyboardEvent m_keyboard;
-			MouseEvent m_mouse;
-			JoystickEvent m_joystick;
-			DropEvent m_drop;
-
-		} m_event;
+	
+		EventData m_event;
 	};
 }

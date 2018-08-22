@@ -3,28 +3,23 @@
 
 namespace ec
 {
-
 	EventSource::EventSource()
-	{
-
-	}
+	= default;
 
 	EventSource::~EventSource()
+	= default;
+
+	void EventSource::registerEventQueue(EventQueue* queue)
 	{
 
 	}
 
-	void EventSource::RegisterEventQueue(EventQueue* queue)
+	void EventSource::unregisterEventQueue(EventQueue* queue)
 	{
 
 	}
 
-	void EventSource::UnregisterEventQueue(EventQueue* queue)
-	{
-
-	}
-
-	bool EventSource::ContainsEventQueue(EventQueue* queue)
+	bool EventSource::containsEventQueue(EventQueue* queue)
 	{
 		return false;
 	}

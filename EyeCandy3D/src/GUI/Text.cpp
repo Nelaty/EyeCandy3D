@@ -1,5 +1,5 @@
-#include "EC3D/GUI/Text.h"
-#include "EC3D/GUI/GUIRenderer.h"
+#include "EC3D/Gui/Text.h"
+#include "EC3D/Gui/GuiRenderer.h"
 
 namespace ec_gui
 {
@@ -8,44 +8,43 @@ namespace ec_gui
 		: Widget(parent),
 		m_textColor{0.0f, 0.0f, 0.0f, 1.0f}
 	{
-		SetSize(0, 0);
+		setSize(0, 0);
 	}
 
 	Text::~Text()
+	= default;
+
+	void Text::render(GuiRenderer& renderer, GuiRenderingContext& context)
 	{
+		renderer.render(this, context);
 	}
 
-	void Text::Render(GUIRenderer& renderer, GUIRenderingContext& context)
-	{
-		renderer.Render(this, context);
-	}
-
-	void Text::SetText(const std::string& text)
+	void Text::setText(const std::string& text)
 	{
 		m_text = text;
 	}
 
-	void Text::SetText(int text)
+	void Text::setText(int text)
 	{
 		m_text = std::to_string(text);
 	}
 
-	void Text::SetText(float text, int precision /*= 7*/)
+	void Text::setText(float text, int precision /*= 7*/)
 	{
 		m_text = std::to_string(text).substr(0, precision);
 	}
 
-	const std::string& Text::GetText() const
+	const std::string& Text::getText() const
 	{
 		return m_text;
 	}
 
-	void Text::SetTextColor(const glm::vec4& color)
+	void Text::setTextColor(const glm::vec4& color)
 	{
 		m_textColor = color;
 	}
 
-	const glm::vec4& Text::GetTextColor() const
+	const glm::vec4& Text::getTextColor() const
 	{
 		return m_textColor;
 	}

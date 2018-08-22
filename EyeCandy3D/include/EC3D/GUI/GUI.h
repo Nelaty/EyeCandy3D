@@ -2,7 +2,6 @@
 #include "Widget.h"
 
 #include <memory>
-#include <vector>
 #include <string>
 
 struct GLFWwindow;
@@ -15,29 +14,29 @@ namespace ec_gui
 {
 	class Widget;
 
-	class GUI
+	class Gui
 	{
 	public:
 		using Widget_TP = std::unique_ptr<Widget>;
 
 	public:
-		explicit GUI(const std::string& guiName);
-		virtual ~GUI();
+		explicit Gui(std::string guiName);
+		virtual ~Gui();
 
 		/* Enable and disable this GUI */
-		void Enable(bool enabled);
-		bool IsEnabled() const;
+		void enable(bool enabled) const;
+		bool isEnabled() const;
 
 		/* Widget access */
-		Widget* GetWidget();
+		Widget* getWidget() const;
 
 		/* Root widget access */
-		void SetRoot(std::unique_ptr<Widget> root);
-		Widget* GetRoot();
+		void setRoot(std::unique_ptr<Widget> root);
+		Widget* getRoot() const;
 
 		/* GUI name access */
-		const std::string& GetName() const;
-		void SetName(const std::string& guiName);
+		const std::string& getName() const;
+		void setName(const std::string& guiName);
 
 	protected:
 		std::string m_name;

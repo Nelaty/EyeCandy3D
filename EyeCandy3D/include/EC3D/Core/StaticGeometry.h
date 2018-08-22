@@ -14,25 +14,25 @@ namespace ec
 		virtual ~StaticGeometry();
 
 		/* Recalculate vertex normals */
-		virtual void RecalculateNormals();
+		virtual void recalculateNormals();
 
 		/* Geometry buffer access */
-		GLuint GetVAO() const;
-		GLuint GetVBO() const;
-		GLuint GetEBO() const;
+		GLuint getVao() const;
+		GLuint getVbo() const;
+		GLuint getEbo() const;
 
 	protected:
-		virtual void BeginRender() override;
-		virtual void OnRender() override;
-		virtual void EndRender() override;
+		void beginRender() override;
+		void onRender() override;
+		void endRender() override;
 
 		/* Buffers */
-		GLuint m_VAO;
-		GLuint m_VBO;
-		GLuint m_EBO;
+		GLuint m_VAO{};
+		GLuint m_VBO{};
+		GLuint m_EBO{};
 
 		/* Initialize the geometry */
-		virtual void SetupMesh();
+		virtual void setupMesh();
 
 		/* Vertex and index data */
 		std::vector<Vertex> m_vertices;

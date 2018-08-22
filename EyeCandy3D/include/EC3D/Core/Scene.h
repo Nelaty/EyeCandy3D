@@ -19,48 +19,48 @@ namespace ec
 	class Scene
 	{
 	public:
-		explicit Scene(const std::string& name);
+		explicit Scene(std::string name);
 		virtual ~Scene();
 
 		/* Update routine */
-		virtual void Tick(const float timeDelta);
+		virtual void tick(float timeDelta);
 
 		/* Access to this scene's name */
-		const std::string& GetName() const;
+		const std::string& getName() const;
 
 		/* Node access */
-		Node* GetRoot();
+		Node* getRoot() const;
 
 		/* Scene controller access */
-		void SetSceneController(SceneController* sceneController);
-		SceneController* GetSceneController();
+		void setSceneController(SceneController* sceneController);
+		SceneController* getSceneController() const;
 
 		/* Scene renderer access */
-		void SetSceneRenderer(const SceneRenderer& sceneRenderer);
-		SceneRenderer& GetSceneRenderer();
+		void setSceneRenderer(const SceneRenderer& sceneRenderer);
+		SceneRenderer& getSceneRenderer();
 
 		/* Set the containing scene system */
-		void SetSceneSystem(SceneSystem* sceneSystem);
-		SceneSystem* GetSceneSystem();
+		void setSceneSystem(SceneSystem* sceneSystem);
+		SceneSystem* getSceneSystem() const;
 
 		/** Enable this scene */
-		void Enable();
+		void enable();
 		/** Disable this scene */
-		void Disable();
+		void disable();
 		/** Check if this scene is enabled */
-		bool IsEnabled() const;
+		bool isEnabled() const;
 
 	protected:
-		void InitSceneRenderer();
+		void initSceneRenderer();
 
-		bool m_enabled;
+		bool m_enabled = true;
 
 		std::string m_name;
 
-		std::unique_ptr<Node> m_root;
+		std::unique_ptr<Node> m_root = nullptr;
 
-		SceneSystem* m_sceneSystem;
+		SceneSystem* m_sceneSystem = nullptr;
 		SceneRenderer m_sceneRenderer;
-		SceneController* m_sceneController;
+		SceneController* m_sceneController = nullptr;
 	};
 }

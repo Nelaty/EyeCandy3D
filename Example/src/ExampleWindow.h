@@ -17,11 +17,11 @@ public:
 	explicit ExampleWindow(int width, int height, const char* windowTitle);
 	~ExampleWindow();
 
-	virtual void Tick(const float timeDelta) override;
+	void tick(float timeDelta) override;
 
-	void InitCameras();
-	void InitScenes();
-	void InitShaders();
+	void initCameras();
+	void initScenes();
+	void initShaders();
 
 private:
 

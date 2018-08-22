@@ -8,28 +8,27 @@ namespace ec
 {
 	CubeMesh::CubeMesh(const float uniformSize)
 	{
-		Init(uniformSize, uniformSize, uniformSize);
+		init(uniformSize, uniformSize, uniformSize);
 	}
 
 	CubeMesh::CubeMesh(const float width, const float height, const float depth)
 	{
-		Init(width, height, depth);
+		init(width, height, depth);
 	}
 
 	CubeMesh::~CubeMesh()
+	= default;
+
+	void CubeMesh::resize(const float width, const float height, const float depth)
 	{
-	}
-	
-	void CubeMesh::Resize(float width, float height, float depth)
-	{
-		Init(width, height, depth);
+		init(width, height, depth);
 	}
 
-	void CubeMesh::Init(const float width, const float height, const float depth)
+	void CubeMesh::init(const float width, const float height, const float depth)
 	{
 		m_vertices = std::vector<Vertex>(8);
 		m_indices = std::vector<unsigned int>(36);
-		glm::vec3 halfSizes(0.5f * width, 0.5f * height, 0.5f * depth);
+		const glm::vec3 halfSizes(0.5f * width, 0.5f * height, 0.5f * depth);
 
 		// Vertex positions
 		m_vertices[0].m_position = glm::vec3(-halfSizes.x, -halfSizes.y, halfSizes.z);
@@ -102,7 +101,7 @@ namespace ec
 		m_indices[34] = 7;
 		m_indices[35] = 6;
 
-		RecalculateNormals();
-		SetupMesh();
+		recalculateNormals();
+		setupMesh();
 	}
 }

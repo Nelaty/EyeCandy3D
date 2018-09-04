@@ -6,10 +6,10 @@
 namespace ec
 {
 
-	DynamicLineGeometry::DynamicLineGeometry(Node* start, Node* end, float linewidth)
+	DynamicLineGeometry::DynamicLineGeometry(Node* start, Node* end, const float lineWidth)
 		: m_start{start},
 		m_end{end},
-		m_linewidth{linewidth}
+		m_lineWidth{lineWidth}
 	{
 	}
 
@@ -36,28 +36,36 @@ namespace ec
 		return m_end;
 	}
 
-	void DynamicLineGeometry::setLinewidth(float linewidth)
+	void DynamicLineGeometry::setLineWidth(float lineWidth)
 	{
-		m_linewidth = linewidth;
+		m_lineWidth = lineWidth;
 	}
 
-	float DynamicLineGeometry::getLinewidth() const
+	float DynamicLineGeometry::getLineWidth() const
 	{
-		return m_linewidth;
+		return m_lineWidth;
+	}
+
+	void DynamicLineGeometry::beginRender()
+	{
 	}
 
 	void DynamicLineGeometry::onRender()
 	{
 		if(!m_start || !m_end) return;
 
-		const auto& startPos = m_start->getGlobalPosition();
-		const auto& endPos = m_end->getGlobalPosition();
+		const auto startPos = m_start->getGlobalPosition();
+		const auto endPos = m_end->getGlobalPosition();
 
-		glLineWidth(m_linewidth);
+		glLineWidth(m_lineWidth);
 		glBegin(GL_LINE);
 		glVertex3f(startPos.x, startPos.y, startPos.z);
 		glVertex3f(endPos.x, endPos.y, endPos.z);
 		glEnd();
 		glLineWidth(1.0f);
+	}
+
+	void DynamicLineGeometry::endRender()
+	{
 	}
 }

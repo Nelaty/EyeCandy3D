@@ -9,7 +9,7 @@ var searchData=
   ['shadermanager',['ShaderManager',['../classec_1_1_shader_manager.html',1,'ec']]],
   ['slot',['Slot',['../classec__gui_1_1_slot.html',1,'ec_gui']]],
   ['slotpair',['SlotPair',['../classec__gui_1_1_slot_pair.html',1,'ec_gui']]],
-  ['spheremesh',['SphereMesh',['../classec_1_1_sphere_mesh.html',1,'ec']]],
+  ['spheregeometry',['SphereGeometry',['../classec_1_1_sphere_geometry.html',1,'ec']]],
   ['springgeometry',['SpringGeometry',['../classec_1_1_spring_geometry.html',1,'ec']]],
   ['staticgeometry',['StaticGeometry',['../classec_1_1_static_geometry.html',1,'ec']]]
 ];

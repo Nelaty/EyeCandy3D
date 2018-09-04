@@ -1,0 +1,110 @@
+\hypertarget{classec__gui_1_1_gui_renderer}{}\section{ec\+\_\+gui\+:\+:Gui\+Renderer Class Reference}
+\label{classec__gui_1_1_gui_renderer}\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+
+
+{\ttfamily \#include $<$G\+U\+I\+Renderer.\+h$>$}
+
+
+
+Collaboration diagram for ec\+\_\+gui\+:\+:Gui\+Renderer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classec__gui_1_1_gui_renderer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec__gui_1_1_gui_renderer_a3f1bd94abc7858301310670c8e74699c}{Gui\+Renderer}} ()
+\item 
+\mbox{\hyperlink{classec__gui_1_1_gui_renderer_ae2f5dd8870812ba957760f30d1c1ee3a}{$\sim$\+Gui\+Renderer}} ()
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_gui_renderer_a35e7de4510fa8206976d894868710a99}{init}} (\mbox{\hyperlink{classec__gui_1_1_gui_model}{Gui\+Model}} $\ast$gui\+Model)
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_gui_renderer_adf27a8072779fd7ce56315dd4db5ffd5}{render}} (\mbox{\hyperlink{structec__gui_1_1_gui_rendering_parameter_list}{Gui\+Rendering\+Parameter\+List}} params)
+\item 
+\mbox{\hyperlink{classec_1_1_shader}{ec\+::\+Shader}} $\ast$ \mbox{\hyperlink{classec__gui_1_1_gui_renderer_aa27617a3c91e94215388151e4262dec6}{get\+Shader}} () const
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_gui_renderer_a01fd73fc0e9ff5eb801412b8f83dad9b}{set\+Shader}} (\mbox{\hyperlink{classec_1_1_shader}{ec\+::\+Shader}} $\ast$shader)
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_gui_renderer_ac0242de734dc7f984221d3255eaf0f34}{render}} (\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$widget, \mbox{\hyperlink{classec__gui_1_1_gui_rendering_context}{Gui\+Rendering\+Context}} \&context)
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_gui_renderer_a3484329593908c38ce2953e9632ebce7}{render}} (\mbox{\hyperlink{classec__gui_1_1_text}{Text}} $\ast$text, \mbox{\hyperlink{classec__gui_1_1_gui_rendering_context}{Gui\+Rendering\+Context}} \&context)
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_gui_renderer_ad33e6cb6537a95bcf9c2f2a575913e4d}{render}} (\mbox{\hyperlink{classec__gui_1_1_screen}{Screen}} $\ast$screen, \mbox{\hyperlink{classec__gui_1_1_gui_rendering_context}{Gui\+Rendering\+Context}} \&context)
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_gui_renderer_a6f40e38fdaa3c580322009dcf4ae84ed}{render}} (\mbox{\hyperlink{classec__gui_1_1_window}{Window}} $\ast$window, \mbox{\hyperlink{classec__gui_1_1_gui_rendering_context}{Gui\+Rendering\+Context}} \&context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_gui_renderer_a3f1bd94abc7858301310670c8e74699c}\label{classec__gui_1_1_gui_renderer_a3f1bd94abc7858301310670c8e74699c}} 
+\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}!Gui\+Renderer@{Gui\+Renderer}}
+\index{Gui\+Renderer@{Gui\+Renderer}!ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+\subsubsection{\texorpdfstring{Gui\+Renderer()}{GuiRenderer()}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Gui\+Renderer\+::\+Gui\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_renderer_ae2f5dd8870812ba957760f30d1c1ee3a}\label{classec__gui_1_1_gui_renderer_ae2f5dd8870812ba957760f30d1c1ee3a}} 
+\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}!````~Gui\+Renderer@{$\sim$\+Gui\+Renderer}}
+\index{````~Gui\+Renderer@{$\sim$\+Gui\+Renderer}!ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+\subsubsection{\texorpdfstring{$\sim$\+Gui\+Renderer()}{~GuiRenderer()}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Gui\+Renderer\+::$\sim$\+Gui\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_gui_renderer_aa27617a3c91e94215388151e4262dec6}\label{classec__gui_1_1_gui_renderer_aa27617a3c91e94215388151e4262dec6}} 
+\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}!get\+Shader@{get\+Shader}}
+\index{get\+Shader@{get\+Shader}!ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+\subsubsection{\texorpdfstring{get\+Shader()}{getShader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_shader}{ec\+::\+Shader}} $\ast$ ec\+\_\+gui\+::\+Gui\+Renderer\+::get\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_renderer_a35e7de4510fa8206976d894868710a99}\label{classec__gui_1_1_gui_renderer_a35e7de4510fa8206976d894868710a99}} 
+\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}!init@{init}}
+\index{init@{init}!ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Gui\+Renderer\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_gui_model}{Gui\+Model}} $\ast$}]{gui\+Model }\end{DoxyParamCaption})}
+
+Initialize the renderer with a given model \mbox{\Hypertarget{classec__gui_1_1_gui_renderer_adf27a8072779fd7ce56315dd4db5ffd5}\label{classec__gui_1_1_gui_renderer_adf27a8072779fd7ce56315dd4db5ffd5}} 
+\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}!render@{render}}
+\index{render@{render}!ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+\subsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Gui\+Renderer\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structec__gui_1_1_gui_rendering_parameter_list}{Gui\+Rendering\+Parameter\+List}}}]{params }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_renderer_ac0242de734dc7f984221d3255eaf0f34}\label{classec__gui_1_1_gui_renderer_ac0242de734dc7f984221d3255eaf0f34}} 
+\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}!render@{render}}
+\index{render@{render}!ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+\subsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Gui\+Renderer\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$}]{widget,  }\item[{\mbox{\hyperlink{classec__gui_1_1_gui_rendering_context}{Gui\+Rendering\+Context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_renderer_a3484329593908c38ce2953e9632ebce7}\label{classec__gui_1_1_gui_renderer_a3484329593908c38ce2953e9632ebce7}} 
+\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}!render@{render}}
+\index{render@{render}!ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+\subsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Gui\+Renderer\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_text}{Text}} $\ast$}]{text,  }\item[{\mbox{\hyperlink{classec__gui_1_1_gui_rendering_context}{Gui\+Rendering\+Context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_renderer_ad33e6cb6537a95bcf9c2f2a575913e4d}\label{classec__gui_1_1_gui_renderer_ad33e6cb6537a95bcf9c2f2a575913e4d}} 
+\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}!render@{render}}
+\index{render@{render}!ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+\subsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Gui\+Renderer\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_screen}{Screen}} $\ast$}]{screen,  }\item[{\mbox{\hyperlink{classec__gui_1_1_gui_rendering_context}{Gui\+Rendering\+Context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_renderer_a6f40e38fdaa3c580322009dcf4ae84ed}\label{classec__gui_1_1_gui_renderer_a6f40e38fdaa3c580322009dcf4ae84ed}} 
+\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}!render@{render}}
+\index{render@{render}!ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+\subsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Gui\+Renderer\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec__gui_1_1_window}{Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{classec__gui_1_1_gui_rendering_context}{Gui\+Rendering\+Context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_renderer_a01fd73fc0e9ff5eb801412b8f83dad9b}\label{classec__gui_1_1_gui_renderer_a01fd73fc0e9ff5eb801412b8f83dad9b}} 
+\index{ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}!set\+Shader@{set\+Shader}}
+\index{set\+Shader@{set\+Shader}!ec\+\_\+gui\+::\+Gui\+Renderer@{ec\+\_\+gui\+::\+Gui\+Renderer}}
+\subsubsection{\texorpdfstring{set\+Shader()}{setShader()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Gui\+Renderer\+::set\+Shader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_shader}{ec\+::\+Shader}} $\ast$}]{shader }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\mbox{\hyperlink{_g_u_i_renderer_8h}{G\+U\+I\+Renderer.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\mbox{\hyperlink{_g_u_i_renderer_8cpp}{G\+U\+I\+Renderer.\+cpp}}\end{DoxyCompactItemize}

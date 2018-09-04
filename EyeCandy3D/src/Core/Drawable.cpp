@@ -2,7 +2,7 @@
 
 #include "EC3D/Core/Drawable.h"
 #include "EC3D/Core/Shader/Shader.h"
-#include "EC3D/Core/Geometry.h"
+#include "EC3D/Core/IGeometryAccess.h"
 #include "EC3D/Core/Material.h"
 
 #include <string>
@@ -17,7 +17,7 @@ namespace ec
 	{
 	}
 
-	Drawable::Drawable(Geometry* geometry, Material* material, Shader* shader)
+	Drawable::Drawable(IGeometryAccess* geometry, Material* material, Shader* shader)
 		: m_geometry{geometry},
 		m_material{material},
 		m_shader{shader}
@@ -26,7 +26,7 @@ namespace ec
 
 	Drawable::~Drawable() = default;
 
-	void Drawable::init(Geometry* geometry, Material* material, Shader* shader)
+	void Drawable::init(IGeometryAccess* geometry, Material* material, Shader* shader)
 	{
 		m_geometry = geometry;
 		m_material = material;
@@ -57,7 +57,7 @@ namespace ec
 		m_shader->unbind();
 	}
 
-	void Drawable::setMaterialUniforms(Shader* shader, Material* material)
+	void Drawable::setMaterialUniforms(Shader* shader, Material* material) const
 	{
 		if(material)
 		{
@@ -65,7 +65,7 @@ namespace ec
 			shader->setVec4(conf_shader::g_materialAmbient, material->getColorAmbient());
 			shader->setVec4(conf_shader::g_materialDiffuse, material->getColorDiffuse());
 			shader->setVec4(conf_shader::g_materialSpecular, material->getColorSpecular());
-			shader->setVec4(conf_shader::g_materialEmissive, material->getColorEmissive());
+			shader->setVec4(conf_shader::g_materialEmissive, material->getColorEmission());
 			shader->setFloat(conf_shader::g_materialShininess, material->getShininess());
 			shader->setBool(conf_shader::g_materialHasTexture, material->hasTexture());
 
@@ -90,7 +90,7 @@ namespace ec
 				const auto number = ss.str();
 
 				shader->setInt(("material." + name + number).c_str(), i);
-				glBindTexture(GL_TEXTURE_2D, textures[i].getId());
+				textures[i].bind();
 			}
 		}
 		else
@@ -105,12 +105,12 @@ namespace ec
 		}
 	}
 
-	void Drawable::setGeometry(Geometry* geometry)
+	void Drawable::setGeometry(IGeometryAccess* geometry)
 	{
 		m_geometry = geometry;
 	}
 
-	ec::Geometry* Drawable::getGeometry()
+	ec::IGeometryAccess* Drawable::getGeometry() const
 	{
 		return m_geometry;
 	}
@@ -120,7 +120,7 @@ namespace ec
 		m_material = material;
 	}
 
-	ec::Material* Drawable::getMaterial()
+	ec::Material* Drawable::getMaterial() const
 	{
 		return m_material;
 	}
@@ -130,7 +130,7 @@ namespace ec
 		m_shader = shader;
 	}
 
-	ec::Shader* Drawable::getShader()
+	ec::Shader* Drawable::getShader() const
 	{
 		return m_shader;
 	}

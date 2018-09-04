@@ -1,4 +1,5 @@
 <map id="D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/Geometry.h" name="D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/Geometry.h">
-<area shape="rect" id="node2" href="$_vertex_8h.html" title="Vertex.h" alt="" coords="11,124,82,151"/>
-<area shape="rect" id="node4" href="$_texture_8h.html" title="Texture.h" alt="" coords="209,124,285,151"/>
+<area shape="rect" id="node2" href="$_i_geometry_access_8h.html" title="EC3D/Core/IGeometryAccess.h" alt="" coords="5,124,212,151"/>
+<area shape="rect" id="node4" href="$_geometry_data_8h.html" title="EC3D/Core/GeometryData.h" alt="" coords="237,124,423,151"/>
+<area shape="rect" id="node6" href="$_vertex_8h.html" title="EC3D/Core/Vertex.h" alt="" coords="257,199,397,225"/>
 </map>

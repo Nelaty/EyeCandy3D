@@ -5,7 +5,7 @@ namespace ec
 {
 
 
-	RectangleMesh::RectangleMesh(const float uniform /*= 1.0f*/)
+	RectangleMesh::RectangleMesh(const float uniform)
 	{
 		init(uniform, uniform);
 		StaticGeometry::setupMesh();
@@ -21,39 +21,41 @@ namespace ec
 
 	void RectangleMesh::init(const float width, const float height)
 	{
-		m_vertices.resize(4);
-		m_indices.resize(6);
+		m_data.resizeBuffers(4, 6);
 
 		const auto halfWidth = width;
 		const auto halfHeight = height;
+
+		auto& vertices = m_data.m_vertices;
+		auto& indices = m_data.m_indices;
 
 		// Initialize vertices
 		// 0,0---0,1
 		// |      |
 		// 1,0---1,1
-		m_vertices[0].m_position = glm::vec3(-halfWidth, -halfHeight, 0.0f);
-		m_vertices[0].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
-		m_vertices[0].m_texCoords = glm::vec2(1.0f, 1.0f);
+		vertices[0].m_position = glm::vec3(-halfWidth, -halfHeight, 0.0f);
+		vertices[0].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
+		vertices[0].m_texCoords = glm::vec2(1.0f, 1.0f);
 
-		m_vertices[1].m_position = glm::vec3(halfWidth, -halfHeight, 0.0f);
-		m_vertices[1].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
-		m_vertices[1].m_texCoords = glm::vec2(0.0f, 1.0f);
+		vertices[1].m_position = glm::vec3(halfWidth, -halfHeight, 0.0f);
+		vertices[1].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
+		vertices[1].m_texCoords = glm::vec2(0.0f, 1.0f);
 
-		m_vertices[2].m_position = glm::vec3(halfWidth, halfHeight, 0.0f);
-		m_vertices[2].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
-		m_vertices[2].m_texCoords = glm::vec2(0.0f, 0.0f);
+		vertices[2].m_position = glm::vec3(halfWidth, halfHeight, 0.0f);
+		vertices[2].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
+		vertices[2].m_texCoords = glm::vec2(0.0f, 0.0f);
 
-		m_vertices[3].m_position = glm::vec3(-halfWidth, halfHeight, 0.0f);
-		m_vertices[3].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
-		m_vertices[3].m_texCoords = glm::vec2(1.0f, 0.0f);
+		vertices[3].m_position = glm::vec3(-halfWidth, halfHeight, 0.0f);
+		vertices[3].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
+		vertices[3].m_texCoords = glm::vec2(1.0f, 0.0f);
 
 		// Initialize index list
-		m_indices.push_back(0);
-		m_indices.push_back(1);
-		m_indices.push_back(2);
+		indices.push_back(0);
+		indices.push_back(1);
+		indices.push_back(2);
 
-		m_indices.push_back(2);
-		m_indices.push_back(3);
-		m_indices.push_back(0);
+		indices.push_back(2);
+		indices.push_back(3);
+		indices.push_back(0);
 	}
 }

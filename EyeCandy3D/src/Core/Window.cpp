@@ -2,9 +2,6 @@
 #include "EC3D/Common/Config.h"
 #include "EC3D/Core/InputEvent.h"
 
-#include "EC3D/Core/EventQueue.h"
-#include "EC3D/Core/EventSource.h"
-
 #include "EC3D/Utilities/Profiler.h"
 
 #include <utility>
@@ -13,19 +10,16 @@ namespace ec
 {
 	Window::Window(const unsigned int windowWidth,
 				   const unsigned int windowHeight,
-	               std::string windowTitle)
+				   std::string windowTitle)
 		: m_windowWidth{windowWidth},
 		m_windowHeight{windowHeight},
 		m_windowTitle{std::move(windowTitle)},
 		m_sceneSystem{this},
-		m_deviceRegistry{this},
+		m_eventSystem{this},
 		m_clearColor{0.5,0.5,0.5,1.0},
 		m_initSuccessful{false}
 	{
 		init();
-
-		m_eventQueue = std::make_unique<EventQueue>();
-		m_eventSource = std::make_unique<EventSource>();
 
 		m_frameInterval = 1.0 / 100.0;
 
@@ -54,12 +48,15 @@ namespace ec
 		}
 		printf("##############################\n");
 
-		printVersions();
-
 		if(!m_initSuccessful)
 		{
 			throw(std::exception("Error: Couldn't initialize window!\n"));
 		}
+	}
+
+	void Window::makeContextCurrent() const
+	{
+		glfwMakeContextCurrent(m_window);
 	}
 
 	void Window::startMainLoop()
@@ -90,6 +87,8 @@ namespace ec
 
 	void Window::render()
 	{
+		makeContextCurrent();
+
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glClearColor(m_clearColor.r, m_clearColor.g, m_clearColor.b, m_clearColor.a);
@@ -112,9 +111,9 @@ namespace ec
 		m_frameInterval = 1.0 / fps;
 	}
 
-	void Window::errorCallback(int error, const char* description)
+	void Window::errorCallback(const int error, const char* description)
 	{
-		printf("ERROR: %s\n", description);
+		printf("ERROR: (%d) %s\n", error, description);
 	}
 
 	void Window::resizeWindow(GLFWwindow* window, const int width, const int height)
@@ -123,9 +122,9 @@ namespace ec
 		m_windowHeight = height;
 	}
 
-	ec::InputObservable& Window::getInputObserver()
+	EventSystem& Window::getEventSystem()
 	{
-		return m_inputObservable;
+		return m_eventSystem;
 	}
 
 	ec::ShaderManager& Window::getShaderManager()
@@ -138,25 +137,23 @@ namespace ec
 		return m_sceneSystem;
 	}
 
-	ec::EventQueue* Window::getEventQueue() const
-	{
-		return m_eventQueue.get();
-	}
-
 	void Window::switchToFaceMode() const
 	{
+		makeContextCurrent();
 		glEnable(GL_CULL_FACE);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	}
 
-	void Window::switchToWireframeMode() const
+	void Window::switchToWireFrameMode() const
 	{
+		makeContextCurrent();
 		glDisable(GL_CULL_FACE);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
 
 	void Window::switchToPointMode() const
 	{
+		makeContextCurrent();
 		glDisable(GL_CULL_FACE);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
 	}
@@ -199,7 +196,7 @@ namespace ec
 		}
 
 		/* Make the window's context current */
-		glfwMakeContextCurrent(m_window);
+		makeContextCurrent();
 
 		/* Init GLEW */
 		printf("Initializing GLEW...\n");
@@ -228,7 +225,7 @@ namespace ec
 		render();
 
 		/* Poll for and process events */
-		glfwPollEvents();
+		m_eventSystem.pollEvents();
 	}
 
 	void Window::initCallbacks()
@@ -240,7 +237,7 @@ namespace ec
 		glfwSetErrorCallback(Window::errorCallback);
 
 		// Install all other devices (keyboard, mouse etc.)
-		m_deviceRegistry.installAll();
+		m_eventSystem.getDeviceRegistry().installAll();
 
 		// Joystick
 		/// \todo Create joystick device and add entry in DeviceRegistry
@@ -261,8 +258,8 @@ namespace ec
 							  window,
 							  count, paths);
 
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getInputObserver();
-		inputObserver.receiveEvent(inputEvent);
+		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
+		inputObserver.dispatchEvent(inputEvent);
 	}
 
 	void Window::resizeCallback(GLFWwindow* window, int width, int height)
@@ -274,8 +271,8 @@ namespace ec
 
 		displayEvent = DisplayEvent(window, 0, 0, width, height);
 
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getInputObserver();
-		inputObserver.receiveEvent(inputEvent);
+		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
+		inputObserver.dispatchEvent(inputEvent);
 	}
 
 	void Window::focusCallback(GLFWwindow* window, int focused)
@@ -285,7 +282,7 @@ namespace ec
 
 		displayEvent = DisplayEvent(window, 0, 0, 0, 0);
 
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getInputObserver();
+		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
 		if(focused == GLFW_TRUE)
 		{
 			inputEvent.m_type = InputType::gained_focus;
@@ -294,7 +291,7 @@ namespace ec
 		{
 			inputEvent.m_type = InputType::lost_focus;
 		}
-		inputObserver.receiveEvent(inputEvent);
+		inputObserver.dispatchEvent(inputEvent);
 	}
 
 	void Window::closeCallback(GLFWwindow* window)
@@ -304,8 +301,8 @@ namespace ec
 
 			displayEvent = DisplayEvent(window, 0, 0, 0, 0);
 		
-			auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getInputObserver();
-			inputObserver.receiveEvent(inputEvent);
+			auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
+			inputObserver.dispatchEvent(inputEvent);
 	}
 
 
@@ -320,19 +317,6 @@ namespace ec
 
 	void Window::initAgui()
 	{
-	}
-
-	void Window::printVersions() const
-	{
-		auto major = 0;
-		auto minor = 0;
-
-		sscanf_s(reinterpret_cast<const char*>(glGetString(GL_VERSION)), "%d.%d", &major, &minor);
-		
-		printf("LIBRARY VERSIONS\n\n");
-		printf("OpenGL v%d.%d\n", major, minor);
-		printf("GLEW v%p\n", glewGetString(GLEW_VERSION));
-		printf("GLFW v%d.%d.%d\n", GLFW_VERSION_MAJOR, GLFW_VERSION_MINOR, GLFW_VERSION_REVISION);
 	}
 
 	glm::ivec2 Window::getWindowResolution() const
@@ -353,9 +337,9 @@ namespace ec
 	{
 	}
 
-	void ec::Window::windowTick(float timeDelta)
+	void ec::Window::windowTick(const float timeDelta)
 	{
-		m_inputObservable.informAll();
+		m_eventSystem.informAll();
 		m_sceneSystem.tick(timeDelta);
 	}
 
@@ -394,10 +378,4 @@ namespace ec
 	{
 		return m_window;
 	}
-
-	ec::EventSource* Window::getEventSource() const
-	{
-		return m_eventSource.get();
-	}
-
 }

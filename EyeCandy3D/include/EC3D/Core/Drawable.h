@@ -9,7 +9,7 @@
 */
 namespace ec
 {
-	class Geometry;
+	class IGeometryAccess;
 	class Material;
 	class Shader;
 
@@ -17,38 +17,42 @@ namespace ec
 	{
 	public:
 		explicit Drawable();
-		explicit Drawable(Geometry* geometry, Material* material, Shader* shader);
+		explicit Drawable(IGeometryAccess* geometry, Material* material, Shader* shader);
 		virtual ~Drawable();
 
-		void init(Geometry* geometry, Material* material, Shader* shader);
+		/** Initialize this drawable. Comfort function. */
+		void init(IGeometryAccess* geometry, Material* material, Shader* shader);
 
-		/* Rendering */
+		/** Render this drawable. */
 		virtual void render(const glm::mat4& model);
 
-		/* Geometry access */
-		void setGeometry(Geometry* geometry);
-		Geometry* getGeometry();
+		/** Set the current geometry. */
+		void setGeometry(IGeometryAccess* geometry);
+		/** Get the current geometry. */
+		IGeometryAccess* getGeometry() const;
 
-		/* Material access */
+		/** Set the current material. */
 		void setMaterial(Material* material);
-		Material* getMaterial();
+		/** Get the current material. */
+		Material* getMaterial() const;
 
-		/* Shader access */
+		/** Set the current shader. */
 		void setShader(Shader* shader);
-		Shader* getShader();
+		/** Get the current shader. */
+		Shader* getShader() const;
 
 	protected:
-		/* Prepare drawable for rendering */
+		/** Prepare drawable for rendering. */
 		virtual void beginRender(const glm::mat4& model);
-		/* Render the drawable */
+		/** Render the drawable. */
 		virtual void render(Shader* shader, const glm::mat4& model);
-		/* Finalize the rendering */
+		/** Finalize the rendering. */
 		virtual void endRender();
 
-		/* Transfer material data to the shader */
-		void setMaterialUniforms(Shader* shader, Material* material);
+		/** Transfer material data to the shader. */
+		void setMaterialUniforms(Shader* shader, Material* material) const;
 
-		Geometry* m_geometry;
+		IGeometryAccess* m_geometry;
 		Material* m_material;
 		Shader* m_shader;
 	};

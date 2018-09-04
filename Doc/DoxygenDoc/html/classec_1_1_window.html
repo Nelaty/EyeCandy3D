@@ -82,79 +82,79 @@ Collaboration diagram for ec::Window:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_window__coll__graph.png" border="0" usemap="#ec_1_1_window_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_window_coll__map" id="ec_1_1_window_coll__map">
-<area shape="rect" id="node3" href="classec_1_1_scene_system.html" title="{ec::SceneSystem\n||+ SceneSystem()\l+ ~SceneSystem()\l+ Tick()\l+ RegisterScene()\l+ UnregisterScene()\l+ GetScene()\l+ AddSceneController()\l+ RemoveSceneController()\l+ GetSceneController()\l+ GetWindow()\l}" alt="" coords="89,652,269,861"/>
-<area shape="rect" id="node7" href="structec_1_1_keyboard_event.html" title="{ec::KeyboardEvent\n||+ KeyboardEvent()\l+ KeyboardEvent()\l+ ~KeyboardEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="1007,321,1144,501"/>
-<area shape="rect" id="node9" href="structec_1_1_display_event.html" title="{ec::DisplayEvent\n||+ DisplayEvent()\l+ DisplayEvent()\l+ Print()\l}" alt="" coords="667,358,785,465"/>
-<area shape="rect" id="node11" href="structec_1_1_mouse_event.html" title="{ec::MouseEvent\n||+ MouseEvent()\l+ MouseEvent()\l+ ~MouseEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="511,321,642,501"/>
-<area shape="rect" id="node6" href="classec_1_1_input_observable.html" title="{ec::InputObservable\n||+ InputObservable()\l+ ~InputObservable()\l+ ReceiveEvent()\l+ RegisterInputListener()\l+ UnregisterInputListener()\l+ Contains()\l+ UnregisterAllInputListeners()\l+ InformAll()\l+ SetLastPrevMouseEvent()\l+ GetPrevMouseEvent()\l+ SetPrevKeyboardEvent()\l+ GetPrevKeyboardEvent()\l+ SetPrevDisplayEvent()\l+ GetPrevDisplayEvent()\l# PrepareEvent()\l# ClearEvents()\l}" alt="" coords="698,608,895,905"/>
-<area shape="rect" id="node16" href="classec_1_1_device_registry.html" title="{ec::DeviceRegistry\n||+ DeviceRegistry()\l+ ~DeviceRegistry()\l+ InstallAll()\l+ UninstallAll()\l+ InstallKeyboard()\l+ UninstallKeyboard()\l+ InstallMouse()\l+ UninstallMouse()\l}" alt="" coords="1227,667,1374,847"/>
-<area shape="rect" id="node17" href="classec_1_1_renderer.html" title="{ec::Renderer\n||+ Renderer()\l+ ~Renderer()\l+ Render()\l+ ChangeRenderer()\l+ RegisterSceneRenderer()\l+ UnregisterSceneRenderer()\l+ GetSceneRenderer()\l}" alt="" coords="1399,674,1589,839"/>
-<area shape="rect" id="node19" href="classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ Render()\l+ SetScene()\l+ GetScene()\l+ GetFrame()\l+ GetFrame()\l+ SetFrame()\l+ AddRenderingTarget()\l# OnBeginRender()\l# OnRender()\l# OnEndRender()\l}" alt="" coords="1328,292,1487,531"/>
-<area shape="rect" id="node20" href="classec_1_1_timer.html" title="{ec::Timer\n||+ Timer()\l+ ~Timer()\l+ Reset()\l+ ResetTimeDelta()\l+ GetTime()\l+ GetTimeDelta()\l}" alt="" coords="1613,681,1748,832"/>
-<area shape="rect" id="node21" href="classec_1_1_shader_manager.html" title="{ec::ShaderManager\n||+ ShaderManager()\l+ ~ShaderManager()\l+ AddShader()\l+ GetShader()\l+ GetAllShader()\l+ SwitchShaderProgram()\l}" alt="" coords="1773,681,1943,832"/>
+<area shape="rect" id="node2" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Material \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="5,343,160,523"/>
+<area shape="rect" id="node3" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; Resource \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="267,35,421,215"/>
+<area shape="rect" id="node10" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Texture \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="184,343,339,523"/>
+<area shape="rect" id="node11" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Geometry \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="363,343,517,523"/>
+<area shape="rect" id="node12" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Drawable \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="541,343,696,523"/>
+<area shape="rect" id="node5" href="classec_1_1_scene_system.html" title="{ec::SceneSystem\n||+ SceneSystem()\l+ ~SceneSystem()\l+ tick()\l+ registerScene()\l+ unregisterScene()\l+ getScene()\l+ addSceneController()\l+ removeSceneController()\l+ getSceneController()\l+ getWindow()\l}" alt="" coords="805,329,979,538"/>
+<area shape="rect" id="node8" href="classec_1_1_event_system.html" title="{ec::EventSystem\n||+ EventSystem()\l+ ~EventSystem()\l+ dispatchEvent()\l+ informAll()\l+ registerInputListener()\l+ unregisterInputListener()\l+ contains()\l+ unregisterAllInputListeners()\l+ pollEvents()\l+ getWindow()\l+ getDeviceRegistry()\l}" alt="" coords="1201,321,1396,545"/>
+<area shape="rect" id="node13" href="classec_1_1_renderer.html" title="{ec::Renderer\n||+ Renderer()\l+ ~Renderer()\l+ render()\l+ changeRenderer()\l+ registerSceneRenderer()\l+ unregisterSceneRenderer()\l+ getSceneRenderer()\l}" alt="" coords="1499,351,1687,516"/>
+<area shape="rect" id="node15" href="classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ render()\l+ setScene()\l+ getScene()\l+ getFrame()\l+ getFrame()\l+ setFrame()\l+ addRenderingTarget()\l# onBeginRender()\l# onRender()\l# onEndRender()\l}" alt="" coords="1601,5,1759,244"/>
+<area shape="rect" id="node16" href="classec_1_1_timer.html" title="{ec::Timer\n||+ Timer()\l+ ~Timer()\l+ reset()\l+ resetTimeDelta()\l+ getTime()\l+ getTimeDelta()\l}" alt="" coords="1711,358,1841,509"/>
+<area shape="rect" id="node17" href="classec_1_1_shader_manager.html" title="{ec::ShaderManager\n||+ ShaderManager()\l+ ~ShaderManager()\l+ addShader()\l+ getShader()\l+ getAllShader()\l+ switchShaderProgram()\l}" alt="" coords="1865,358,2034,509"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:afe0927efdedc84c345120ae15bf6994a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#afe0927efdedc84c345120ae15bf6994a">EventQueue_Ptr</a> = std::unique_ptr&lt; <a class="el" href="classec_1_1_event_queue.html">EventQueue</a> &gt;</td></tr>
+<tr class="memitem:afe0927efdedc84c345120ae15bf6994a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#afe0927efdedc84c345120ae15bf6994a">EventQueue_Ptr</a> = std::unique_ptr&lt; EventQueue &gt;</td></tr>
 <tr class="separator:afe0927efdedc84c345120ae15bf6994a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7501526590ece55dbe92ea496e62738"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#ae7501526590ece55dbe92ea496e62738">EventSource_Ptr</a> = std::unique_ptr&lt; <a class="el" href="classec_1_1_event_source.html">EventSource</a> &gt;</td></tr>
+<tr class="memitem:ae7501526590ece55dbe92ea496e62738"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#ae7501526590ece55dbe92ea496e62738">EventSource_Ptr</a> = std::unique_ptr&lt; EventSource &gt;</td></tr>
 <tr class="separator:ae7501526590ece55dbe92ea496e62738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af9eab51c6ea017a296866278bbbcdb28"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#af9eab51c6ea017a296866278bbbcdb28">Window</a> (const unsigned int windowWidth, const unsigned int windowHeight, const char *windowTitle)</td></tr>
-<tr class="separator:af9eab51c6ea017a296866278bbbcdb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01bb029fa4964caf70553c5ca806d8cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a01bb029fa4964caf70553c5ca806d8cc">Window</a> (unsigned int windowWidth, unsigned int windowHeight, std::string windowTitle)</td></tr>
+<tr class="memdesc:a01bb029fa4964caf70553c5ca806d8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classec_1_1_window.html">Window</a> contructor.  <a href="#a01bb029fa4964caf70553c5ca806d8cc">More...</a><br /></td></tr>
+<tr class="separator:a01bb029fa4964caf70553c5ca806d8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a639d3f230ca0e232066b4c61a5a212b7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a639d3f230ca0e232066b4c61a5a212b7">~Window</a> ()</td></tr>
 <tr class="separator:a639d3f230ca0e232066b4c61a5a212b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cde792adea9d3e15f7bab9c3100a8b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a1cde792adea9d3e15f7bab9c3100a8b9">StartMainLoop</a> ()</td></tr>
-<tr class="separator:a1cde792adea9d3e15f7bab9c3100a8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab4c6c1ee3c71e53532ec21a253cad4d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aab4c6c1ee3c71e53532ec21a253cad4d">Tick</a> (const float timeDelta)</td></tr>
-<tr class="separator:aab4c6c1ee3c71e53532ec21a253cad4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0be4ef5101cfd9251511c402c1e9598"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#af0be4ef5101cfd9251511c402c1e9598">Render</a> ()</td></tr>
-<tr class="separator:af0be4ef5101cfd9251511c402c1e9598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fa670ea10ce548d445e1a82ded336a2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a5fa670ea10ce548d445e1a82ded336a2">SetFrameRate</a> (const double fps)</td></tr>
-<tr class="separator:a5fa670ea10ce548d445e1a82ded336a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95ea89916704775d858e441c8b7430cd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a95ea89916704775d858e441c8b7430cd">ResizeWindow</a> (GLFWwindow *window, int width, int height)</td></tr>
-<tr class="separator:a95ea89916704775d858e441c8b7430cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f2af2fca7c4c20d027acf6afaf79b99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_observable.html">InputObservable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a0f2af2fca7c4c20d027acf6afaf79b99">GetInputObserver</a> ()</td></tr>
-<tr class="separator:a0f2af2fca7c4c20d027acf6afaf79b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f2d20a2d7b3bc05c29830164437d190"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_shader_manager.html">ShaderManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a5f2d20a2d7b3bc05c29830164437d190">GetShaderManager</a> ()</td></tr>
-<tr class="separator:a5f2d20a2d7b3bc05c29830164437d190"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad83b5eb3bb0708c08503ac3c6b7b670"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_system.html">SceneSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aad83b5eb3bb0708c08503ac3c6b7b670">GetSceneSystem</a> ()</td></tr>
-<tr class="separator:aad83b5eb3bb0708c08503ac3c6b7b670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d0d9e287c7dbf2377755ed89ea6848c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_event_queue.html">EventQueue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a7d0d9e287c7dbf2377755ed89ea6848c">GetEventQueue</a> ()</td></tr>
-<tr class="separator:a7d0d9e287c7dbf2377755ed89ea6848c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7253c61f74c2f5f6281d546379ca20e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_event_source.html">EventSource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a7253c61f74c2f5f6281d546379ca20e0">GetEventSource</a> ()</td></tr>
-<tr class="separator:a7253c61f74c2f5f6281d546379ca20e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefcd8fd06bb58f946100005975fc94c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aefcd8fd06bb58f946100005975fc94c4">SwitchToFaceMode</a> ()</td></tr>
-<tr class="separator:aefcd8fd06bb58f946100005975fc94c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5176dd1ed33f621b4eb8f71eb64cccad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a5176dd1ed33f621b4eb8f71eb64cccad">SwitchToWireframeMode</a> ()</td></tr>
-<tr class="separator:a5176dd1ed33f621b4eb8f71eb64cccad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaf30fde0a52c772d3b089746fd6397a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#adaf30fde0a52c772d3b089746fd6397a">SwitchToPointMode</a> ()</td></tr>
-<tr class="separator:adaf30fde0a52c772d3b089746fd6397a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33339ac52b268b577d21dc9248e59935"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a33339ac52b268b577d21dc9248e59935">GoWindowed</a> ()</td></tr>
-<tr class="separator:a33339ac52b268b577d21dc9248e59935"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6345e0c05937b769936e714f154623e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#af6345e0c05937b769936e714f154623e">GoFullscreen</a> ()</td></tr>
-<tr class="separator:af6345e0c05937b769936e714f154623e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6605c513a7dbab0b43ddfad6ff7ac55a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a6605c513a7dbab0b43ddfad6ff7ac55a">CloseWindow</a> ()</td></tr>
-<tr class="separator:a6605c513a7dbab0b43ddfad6ff7ac55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0d59d99e745ebde21fed3b165543a52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#af0d59d99e745ebde21fed3b165543a52">SetClearColor</a> (const glm::vec4 &amp;clearColor)</td></tr>
-<tr class="separator:af0d59d99e745ebde21fed3b165543a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa87fd9b3042657bc41461c1234296847"><td class="memItemLeft" align="right" valign="top">const glm::vec4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aa87fd9b3042657bc41461c1234296847">GetClearColor</a> () const</td></tr>
-<tr class="separator:aa87fd9b3042657bc41461c1234296847"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3131064635c5c422ac65b17eeaddae59"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a3131064635c5c422ac65b17eeaddae59">GetWindow</a> () const</td></tr>
-<tr class="separator:a3131064635c5c422ac65b17eeaddae59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8dde6eac2f340b3a31cadf764f664f1"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#ab8dde6eac2f340b3a31cadf764f664f1">GetWindowResolution</a> () const</td></tr>
-<tr class="separator:ab8dde6eac2f340b3a31cadf764f664f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04959818ec9c89bb982deefa5868cab5"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a04959818ec9c89bb982deefa5868cab5">GetWindowPosition</a> () const</td></tr>
-<tr class="separator:a04959818ec9c89bb982deefa5868cab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a156a8352f977dd3828e95ab694284359"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a156a8352f977dd3828e95ab694284359">startMainLoop</a> ()</td></tr>
+<tr class="separator:a156a8352f977dd3828e95ab694284359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0adaafc13d0dafc238aa0aaa0f5f4f82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a0adaafc13d0dafc238aa0aaa0f5f4f82">tickMeta</a> ()</td></tr>
+<tr class="separator:a0adaafc13d0dafc238aa0aaa0f5f4f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093b4989e4cd12cf9e62777ec4ef8661"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a093b4989e4cd12cf9e62777ec4ef8661">tick</a> (float timeDelta)</td></tr>
+<tr class="separator:a093b4989e4cd12cf9e62777ec4ef8661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb066b817adc7c790b0810695078dee3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#acb066b817adc7c790b0810695078dee3">render</a> ()</td></tr>
+<tr class="separator:acb066b817adc7c790b0810695078dee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6acc36f2c069b5e38f522953ca52ce9f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a6acc36f2c069b5e38f522953ca52ce9f">setFrameRate</a> (double fps)</td></tr>
+<tr class="separator:a6acc36f2c069b5e38f522953ca52ce9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ef071f4198715ae42844c681fb40eb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a33ef071f4198715ae42844c681fb40eb">resizeWindow</a> (GLFWwindow *window, int width, int height)</td></tr>
+<tr class="separator:a33ef071f4198715ae42844c681fb40eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dda11a247352aa51fea720076174535"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_event_system.html">EventSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a9dda11a247352aa51fea720076174535">getEventSystem</a> ()</td></tr>
+<tr class="separator:a9dda11a247352aa51fea720076174535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc63f54684ad3681c0d4bea8481b6322"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_shader_manager.html">ShaderManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#adc63f54684ad3681c0d4bea8481b6322">getShaderManager</a> ()</td></tr>
+<tr class="separator:adc63f54684ad3681c0d4bea8481b6322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d8cba249c2de0a5366c2507e887290"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_system.html">SceneSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a13d8cba249c2de0a5366c2507e887290">getSceneSystem</a> ()</td></tr>
+<tr class="separator:a13d8cba249c2de0a5366c2507e887290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071d133719298221af21bd2c207733b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a071d133719298221af21bd2c207733b3">switchToFaceMode</a> () const</td></tr>
+<tr class="separator:a071d133719298221af21bd2c207733b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85be553f3f877b77ac70db32b9f8a8f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a85be553f3f877b77ac70db32b9f8a8f6">switchToWireFrameMode</a> () const</td></tr>
+<tr class="separator:a85be553f3f877b77ac70db32b9f8a8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633ebdd1e469a3a865f4748b99f9c664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a633ebdd1e469a3a865f4748b99f9c664">switchToPointMode</a> () const</td></tr>
+<tr class="separator:a633ebdd1e469a3a865f4748b99f9c664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeaa47b1f8199b4df60f74aa3b2c45f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aeeaa47b1f8199b4df60f74aa3b2c45f7">goWindowed</a> () const</td></tr>
+<tr class="separator:aeeaa47b1f8199b4df60f74aa3b2c45f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89e0e27d169da6f5d9430b78c77c0ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#ab89e0e27d169da6f5d9430b78c77c0ee">goFullscreen</a> ()</td></tr>
+<tr class="separator:ab89e0e27d169da6f5d9430b78c77c0ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa38b17b4251dee392623910a378f60c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aa38b17b4251dee392623910a378f60c3">closeWindow</a> () const</td></tr>
+<tr class="separator:aa38b17b4251dee392623910a378f60c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915c4b64dde5f2274e59c40bc10eff58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a915c4b64dde5f2274e59c40bc10eff58">setClearColor</a> (const glm::vec4 &amp;clearColor)</td></tr>
+<tr class="separator:a915c4b64dde5f2274e59c40bc10eff58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4355925b4898e5b032da048eec86f103"><td class="memItemLeft" align="right" valign="top">const glm::vec4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a4355925b4898e5b032da048eec86f103">getClearColor</a> () const</td></tr>
+<tr class="separator:a4355925b4898e5b032da048eec86f103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe525ce2f27fecf298b1ad0926024ae3"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#abe525ce2f27fecf298b1ad0926024ae3">getWindow</a> () const</td></tr>
+<tr class="separator:abe525ce2f27fecf298b1ad0926024ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b44b42e9cc6e8aa1d41c0bc01543977"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a8b44b42e9cc6e8aa1d41c0bc01543977">getWindowResolution</a> () const</td></tr>
+<tr class="separator:a8b44b42e9cc6e8aa1d41c0bc01543977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf3c652040d022bdd953ed69aec0df5"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#accf3c652040d022bdd953ed69aec0df5">getWindowPosition</a> () const</td></tr>
+<tr class="separator:accf3c652040d022bdd953ed69aec0df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad8b192b0b757ec15d233d65e52dedc2c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#ad8b192b0b757ec15d233d65e52dedc2c">ErrorCallback</a> (int error, const char *description)</td></tr>
-<tr class="separator:ad8b192b0b757ec15d233d65e52dedc2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d202aaa954ea0b62cf380fb48288107"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a1d202aaa954ea0b62cf380fb48288107">errorCallback</a> (int error, const char *description)</td></tr>
+<tr class="separator:a1d202aaa954ea0b62cf380fb48288107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -170,18 +170,24 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:af826de73c15768bf1a4ee5dbff0e377c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c50dfac91e6105a6862693e71976a3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_system.html">SceneSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a5c50dfac91e6105a6862693e71976a3e">m_sceneSystem</a></td></tr>
 <tr class="separator:a5c50dfac91e6105a6862693e71976a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb083ee014fec3d0f141f24ce8c463a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_event_system.html">EventSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#afb083ee014fec3d0f141f24ce8c463a4">m_eventSystem</a></td></tr>
+<tr class="separator:afb083ee014fec3d0f141f24ce8c463a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4b04fabdef20b69206562d2703a7bf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_shader_manager.html">ShaderManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#ad4b04fabdef20b69206562d2703a7bf9">m_shaderManager</a></td></tr>
 <tr class="separator:ad4b04fabdef20b69206562d2703a7bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a070efea3cadf4eaee9af066b7b21d595"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_observable.html">InputObservable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a070efea3cadf4eaee9af066b7b21d595">m_inputObservable</a></td></tr>
-<tr class="separator:a070efea3cadf4eaee9af066b7b21d595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6951a4d1a08549dcc797cf12c8f46710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_renderer.html">Renderer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a6951a4d1a08549dcc797cf12c8f46710">m_renderer</a></td></tr>
 <tr class="separator:a6951a4d1a08549dcc797cf12c8f46710"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55b0d5c6b22c3540bfcb18a29a0cc181"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_device_registry.html">DeviceRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a55b0d5c6b22c3540bfcb18a29a0cc181">m_deviceRegistry</a></td></tr>
-<tr class="separator:a55b0d5c6b22c3540bfcb18a29a0cc181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7245d9cfc57373c805b63ba3e8826f8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aa7245d9cfc57373c805b63ba3e8826f8">m_frameRate</a></td></tr>
 <tr class="separator:aa7245d9cfc57373c805b63ba3e8826f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c56361d6931e3a5a6dcfe7a08c25e09"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a6c56361d6931e3a5a6dcfe7a08c25e09">m_frameInterval</a></td></tr>
 <tr class="separator:a6c56361d6931e3a5a6dcfe7a08c25e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9bc9f64ecfe087b7423195c505120d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a>&lt; <a class="el" href="classec_1_1_geometry.html">Geometry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#ac9bc9f64ecfe087b7423195c505120d7">m_geometryRegistry</a></td></tr>
+<tr class="separator:ac9bc9f64ecfe087b7423195c505120d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b20defc21abe2eb397a09e389cad419"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a>&lt; <a class="el" href="classec_1_1_material.html">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a4b20defc21abe2eb397a09e389cad419">m_materialRegistry</a></td></tr>
+<tr class="separator:a4b20defc21abe2eb397a09e389cad419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea5c28c3ae7ef5cf43472f506410abe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a>&lt; <a class="el" href="classec_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#aeea5c28c3ae7ef5cf43472f506410abe">m_textureRegistry</a></td></tr>
+<tr class="separator:aeea5c28c3ae7ef5cf43472f506410abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c72dfdc44a79fe7d70456258db7064c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a>&lt; <a class="el" href="classec_1_1_drawable.html">Drawable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_window.html#a1c72dfdc44a79fe7d70456258db7064c">m_drawableRegistry</a></td></tr>
+<tr class="separator:a1c72dfdc44a79fe7d70456258db7064c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="afe0927efdedc84c345120ae15bf6994a"></a>
@@ -191,7 +197,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classec_1_1_window.html#afe0927efdedc84c345120ae15bf6994a">ec::Window::EventQueue_Ptr</a> =  std::unique_ptr&lt;<a class="el" href="classec_1_1_event_queue.html">EventQueue</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classec_1_1_window.html#afe0927efdedc84c345120ae15bf6994a">ec::Window::EventQueue_Ptr</a> =  std::unique_ptr&lt;EventQueue&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -205,7 +211,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classec_1_1_window.html#ae7501526590ece55dbe92ea496e62738">ec::Window::EventSource_Ptr</a> =  std::unique_ptr&lt;<a class="el" href="classec_1_1_event_source.html">EventSource</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classec_1_1_window.html#ae7501526590ece55dbe92ea496e62738">ec::Window::EventSource_Ptr</a> =  std::unique_ptr&lt;EventSource&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -213,8 +219,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af9eab51c6ea017a296866278bbbcdb28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9eab51c6ea017a296866278bbbcdb28">&#9670;&nbsp;</a></span>Window()</h2>
+<a id="a01bb029fa4964caf70553c5ca806d8cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01bb029fa4964caf70553c5ca806d8cc">&#9670;&nbsp;</a></span>Window()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,19 +231,19 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">ec::Window::Window </td>
           <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>windowWidth</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>windowHeight</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>windowTitle</em>&#160;</td>
         </tr>
         <tr>
@@ -252,6 +258,16 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classec_1_1_window.html">Window</a> contructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">windowWidth</td><td>Width of this window in pixels. </td></tr>
+    <tr><td class="paramname">windowHeight</td><td>Height of this window in pixels. </td></tr>
+    <tr><td class="paramname">windowTitle</td><td>Title of this window. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -273,7 +289,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -281,25 +297,26 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6605c513a7dbab0b43ddfad6ff7ac55a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6605c513a7dbab0b43ddfad6ff7ac55a">&#9670;&nbsp;</a></span>CloseWindow()</h2>
+<a id="aa38b17b4251dee392623910a378f60c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38b17b4251dee392623910a378f60c3">&#9670;&nbsp;</a></span>closeWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::CloseWindow </td>
+          <td class="memname">void ec::Window::closeWindow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Close this window. </p>
 
 </div>
 </div>
-<a id="ad8b192b0b757ec15d233d65e52dedc2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8b192b0b757ec15d233d65e52dedc2c">&#9670;&nbsp;</a></span>ErrorCallback()</h2>
+<a id="a1d202aaa954ea0b62cf380fb48288107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d202aaa954ea0b62cf380fb48288107">&#9670;&nbsp;</a></span>errorCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +325,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::ErrorCallback </td>
+          <td class="memname">void ec::Window::errorCallback </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>error</em>, </td>
@@ -331,121 +348,90 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Error callback </p>
 
 </div>
 </div>
-<a id="aa87fd9b3042657bc41461c1234296847"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa87fd9b3042657bc41461c1234296847">&#9670;&nbsp;</a></span>GetClearColor()</h2>
+<a id="a4355925b4898e5b032da048eec86f103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4355925b4898e5b032da048eec86f103">&#9670;&nbsp;</a></span>getClearColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const glm::vec4 &amp; ec::Window::GetClearColor </td>
+          <td class="memname">const glm::vec4 &amp; ec::Window::getClearColor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the current clear color. </p>
 
 </div>
 </div>
-<a id="a7d0d9e287c7dbf2377755ed89ea6848c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d0d9e287c7dbf2377755ed89ea6848c">&#9670;&nbsp;</a></span>GetEventQueue()</h2>
+<a id="a9dda11a247352aa51fea720076174535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dda11a247352aa51fea720076174535">&#9670;&nbsp;</a></span>getEventSystem()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_event_queue.html">ec::EventQueue</a> * ec::Window::GetEventQueue </td>
+          <td class="memname"><a class="el" href="classec_1_1_event_system.html">EventSystem</a> &amp; ec::Window::getEventSystem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the event queue of this window </p>
+<p>Get this window's event system. </p>
 
 </div>
 </div>
-<a id="a7253c61f74c2f5f6281d546379ca20e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7253c61f74c2f5f6281d546379ca20e0">&#9670;&nbsp;</a></span>GetEventSource()</h2>
+<a id="a13d8cba249c2de0a5366c2507e887290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13d8cba249c2de0a5366c2507e887290">&#9670;&nbsp;</a></span>getSceneSystem()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_event_source.html">ec::EventSource</a> * ec::Window::GetEventSource </td>
+          <td class="memname"><a class="el" href="classec_1_1_scene_system.html">ec::SceneSystem</a> &amp; ec::Window::getSceneSystem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the event source of this window </p>
+<p>Access to the scene system </p>
 
 </div>
 </div>
-<a id="a0f2af2fca7c4c20d027acf6afaf79b99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f2af2fca7c4c20d027acf6afaf79b99">&#9670;&nbsp;</a></span>GetInputObserver()</h2>
+<a id="adc63f54684ad3681c0d4bea8481b6322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc63f54684ad3681c0d4bea8481b6322">&#9670;&nbsp;</a></span>getShaderManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_input_observable.html">ec::InputObservable</a> &amp; ec::Window::GetInputObserver </td>
+          <td class="memname"><a class="el" href="classec_1_1_shader_manager.html">ec::ShaderManager</a> &amp; ec::Window::getShaderManager </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Access to the shader manager </p>
 
 </div>
 </div>
-<a id="aad83b5eb3bb0708c08503ac3c6b7b670"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad83b5eb3bb0708c08503ac3c6b7b670">&#9670;&nbsp;</a></span>GetSceneSystem()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classec_1_1_scene_system.html">ec::SceneSystem</a> &amp; ec::Window::GetSceneSystem </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5f2d20a2d7b3bc05c29830164437d190"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f2d20a2d7b3bc05c29830164437d190">&#9670;&nbsp;</a></span>GetShaderManager()</h2>
+<a id="abe525ce2f27fecf298b1ad0926024ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe525ce2f27fecf298b1ad0926024ae3">&#9670;&nbsp;</a></span>getWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_shader_manager.html">ec::ShaderManager</a> &amp; ec::Window::GetShaderManager </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3131064635c5c422ac65b17eeaddae59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3131064635c5c422ac65b17eeaddae59">&#9670;&nbsp;</a></span>GetWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GLFWwindow * ec::Window::GetWindow </td>
+          <td class="memname">GLFWwindow * ec::Window::getWindow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -456,14 +442,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a04959818ec9c89bb982deefa5868cab5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04959818ec9c89bb982deefa5868cab5">&#9670;&nbsp;</a></span>GetWindowPosition()</h2>
+<a id="accf3c652040d022bdd953ed69aec0df5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accf3c652040d022bdd953ed69aec0df5">&#9670;&nbsp;</a></span>getWindowPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">glm::ivec2 ec::Window::GetWindowPosition </td>
+          <td class="memname">glm::ivec2 ec::Window::getWindowPosition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -473,14 +459,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab8dde6eac2f340b3a31cadf764f664f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8dde6eac2f340b3a31cadf764f664f1">&#9670;&nbsp;</a></span>GetWindowResolution()</h2>
+<a id="a8b44b42e9cc6e8aa1d41c0bc01543977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b44b42e9cc6e8aa1d41c0bc01543977">&#9670;&nbsp;</a></span>getWindowResolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">glm::ivec2 ec::Window::GetWindowResolution </td>
+          <td class="memname">glm::ivec2 ec::Window::getWindowResolution </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -490,42 +476,44 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af6345e0c05937b769936e714f154623e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6345e0c05937b769936e714f154623e">&#9670;&nbsp;</a></span>GoFullscreen()</h2>
+<a id="ab89e0e27d169da6f5d9430b78c77c0ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89e0e27d169da6f5d9430b78c77c0ee">&#9670;&nbsp;</a></span>goFullscreen()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::GoFullscreen </td>
+          <td class="memname">void ec::Window::goFullscreen </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Switch to fullscreen mode. </p>
 
 </div>
 </div>
-<a id="a33339ac52b268b577d21dc9248e59935"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33339ac52b268b577d21dc9248e59935">&#9670;&nbsp;</a></span>GoWindowed()</h2>
+<a id="aeeaa47b1f8199b4df60f74aa3b2c45f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeaa47b1f8199b4df60f74aa3b2c45f7">&#9670;&nbsp;</a></span>goWindowed()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::GoWindowed </td>
+          <td class="memname">void ec::Window::goWindowed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Switch to windowed mode. </p>
 
 </div>
 </div>
-<a id="af0be4ef5101cfd9251511c402c1e9598"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0be4ef5101cfd9251511c402c1e9598">&#9670;&nbsp;</a></span>Render()</h2>
+<a id="acb066b817adc7c790b0810695078dee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb066b817adc7c790b0810695078dee3">&#9670;&nbsp;</a></span>render()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -534,7 +522,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::Render </td>
+          <td class="memname">void ec::Window::render </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -546,11 +534,12 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Render to the window </p>
 
 </div>
 </div>
-<a id="a95ea89916704775d858e441c8b7430cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95ea89916704775d858e441c8b7430cd">&#9670;&nbsp;</a></span>ResizeWindow()</h2>
+<a id="a33ef071f4198715ae42844c681fb40eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ef071f4198715ae42844c681fb40eb">&#9670;&nbsp;</a></span>resizeWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -559,7 +548,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::ResizeWindow </td>
+          <td class="memname">void ec::Window::resizeWindow </td>
           <td>(</td>
           <td class="paramtype">GLFWwindow *&#160;</td>
           <td class="paramname"><em>window</em>, </td>
@@ -588,17 +577,18 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p><a class="el" href="classec_1_1_window.html">Window</a> resize callback </p>
 
 </div>
 </div>
-<a id="af0d59d99e745ebde21fed3b165543a52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0d59d99e745ebde21fed3b165543a52">&#9670;&nbsp;</a></span>SetClearColor()</h2>
+<a id="a915c4b64dde5f2274e59c40bc10eff58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a915c4b64dde5f2274e59c40bc10eff58">&#9670;&nbsp;</a></span>setClearColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::SetClearColor </td>
+          <td class="memname">void ec::Window::setClearColor </td>
           <td>(</td>
           <td class="paramtype">const glm::vec4 &amp;&#160;</td>
           <td class="paramname"><em>clearColor</em></td><td>)</td>
@@ -606,11 +596,12 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set the current clear color. </p>
 
 </div>
 </div>
-<a id="a5fa670ea10ce548d445e1a82ded336a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fa670ea10ce548d445e1a82ded336a2">&#9670;&nbsp;</a></span>SetFrameRate()</h2>
+<a id="a6acc36f2c069b5e38f522953ca52ce9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6acc36f2c069b5e38f522953ca52ce9f">&#9670;&nbsp;</a></span>setFrameRate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -619,9 +610,9 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::SetFrameRate </td>
+          <td class="memname">void ec::Window::setFrameRate </td>
           <td>(</td>
-          <td class="paramtype">const double&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>fps</em></td><td>)</td>
           <td></td>
         </tr>
@@ -635,8 +626,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1cde792adea9d3e15f7bab9c3100a8b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cde792adea9d3e15f7bab9c3100a8b9">&#9670;&nbsp;</a></span>StartMainLoop()</h2>
+<a id="a156a8352f977dd3828e95ab694284359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a156a8352f977dd3828e95ab694284359">&#9670;&nbsp;</a></span>startMainLoop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -645,7 +636,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::StartMainLoop </td>
+          <td class="memname">void ec::Window::startMainLoop </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -657,62 +648,63 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Should be called to start program </p>
 
 </div>
 </div>
-<a id="aefcd8fd06bb58f946100005975fc94c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefcd8fd06bb58f946100005975fc94c4">&#9670;&nbsp;</a></span>SwitchToFaceMode()</h2>
+<a id="a071d133719298221af21bd2c207733b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a071d133719298221af21bd2c207733b3">&#9670;&nbsp;</a></span>switchToFaceMode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::SwitchToFaceMode </td>
+          <td class="memname">void ec::Window::switchToFaceMode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="adaf30fde0a52c772d3b089746fd6397a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaf30fde0a52c772d3b089746fd6397a">&#9670;&nbsp;</a></span>SwitchToPointMode()</h2>
+<a id="a633ebdd1e469a3a865f4748b99f9c664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a633ebdd1e469a3a865f4748b99f9c664">&#9670;&nbsp;</a></span>switchToPointMode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::SwitchToPointMode </td>
+          <td class="memname">void ec::Window::switchToPointMode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a5176dd1ed33f621b4eb8f71eb64cccad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5176dd1ed33f621b4eb8f71eb64cccad">&#9670;&nbsp;</a></span>SwitchToWireframeMode()</h2>
+<a id="a85be553f3f877b77ac70db32b9f8a8f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85be553f3f877b77ac70db32b9f8a8f6">&#9670;&nbsp;</a></span>switchToWireFrameMode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::SwitchToWireframeMode </td>
+          <td class="memname">void ec::Window::switchToWireFrameMode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aab4c6c1ee3c71e53532ec21a253cad4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab4c6c1ee3c71e53532ec21a253cad4d">&#9670;&nbsp;</a></span>Tick()</h2>
+<a id="a093b4989e4cd12cf9e62777ec4ef8661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a093b4989e4cd12cf9e62777ec4ef8661">&#9670;&nbsp;</a></span>tick()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -721,9 +713,9 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Window::Tick </td>
+          <td class="memname">void ec::Window::tick </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>timeDelta</em></td><td>)</td>
           <td></td>
         </tr>
@@ -737,9 +729,27 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0adaafc13d0dafc238aa0aaa0f5f4f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0adaafc13d0dafc238aa0aaa0f5f4f82">&#9670;&nbsp;</a></span>tickMeta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Window::tickMeta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Update the window </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a55b0d5c6b22c3540bfcb18a29a0cc181"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55b0d5c6b22c3540bfcb18a29a0cc181">&#9670;&nbsp;</a></span>m_deviceRegistry</h2>
+<a id="a1c72dfdc44a79fe7d70456258db7064c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c72dfdc44a79fe7d70456258db7064c">&#9670;&nbsp;</a></span>m_drawableRegistry</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -748,7 +758,29 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_device_registry.html">DeviceRegistry</a> ec::Window::m_deviceRegistry</td>
+          <td class="memname"><a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a>&lt;<a class="el" href="classec_1_1_drawable.html">Drawable</a>&gt; ec::Window::m_drawableRegistry</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb083ee014fec3d0f141f24ce8c463a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb083ee014fec3d0f141f24ce8c463a4">&#9670;&nbsp;</a></span>m_eventSystem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classec_1_1_event_system.html">EventSystem</a> ec::Window::m_eventSystem</td>
         </tr>
       </table>
   </td>
@@ -804,8 +836,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a070efea3cadf4eaee9af066b7b21d595"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a070efea3cadf4eaee9af066b7b21d595">&#9670;&nbsp;</a></span>m_inputObservable</h2>
+<a id="ac9bc9f64ecfe087b7423195c505120d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9bc9f64ecfe087b7423195c505120d7">&#9670;&nbsp;</a></span>m_geometryRegistry</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -814,7 +846,29 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_input_observable.html">InputObservable</a> ec::Window::m_inputObservable</td>
+          <td class="memname"><a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a>&lt;<a class="el" href="classec_1_1_geometry.html">Geometry</a>&gt; ec::Window::m_geometryRegistry</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b20defc21abe2eb397a09e389cad419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b20defc21abe2eb397a09e389cad419">&#9670;&nbsp;</a></span>m_materialRegistry</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a>&lt;<a class="el" href="classec_1_1_material.html">Material</a>&gt; ec::Window::m_materialRegistry</td>
         </tr>
       </table>
   </td>
@@ -881,6 +935,28 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classec_1_1_shader_manager.html">ShaderManager</a> ec::Window::m_shaderManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeea5c28c3ae7ef5cf43472f506410abe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea5c28c3ae7ef5cf43472f506410abe">&#9670;&nbsp;</a></span>m_textureRegistry</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a>&lt;<a class="el" href="classec_1_1_texture.html">Texture</a>&gt; ec::Window::m_textureRegistry</td>
         </tr>
       </table>
   </td>

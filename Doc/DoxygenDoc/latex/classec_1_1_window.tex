@@ -6,8 +6,7 @@
 
 
 
-Collaboration diagram for ec\+:\+:Window\+:
-\nopagebreak
+Collaboration diagram for ec\+:\+:Window\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,63 +16,61 @@ Collaboration diagram for ec\+:\+:Window\+:
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{classec_1_1_window_afe0927efdedc84c345120ae15bf6994a}{Event\+Queue\+\_\+\+Ptr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_event_queue}{Event\+Queue}} $>$
+using \mbox{\hyperlink{classec_1_1_window_afe0927efdedc84c345120ae15bf6994a}{Event\+Queue\+\_\+\+Ptr}} = std\+::unique\+\_\+ptr$<$ Event\+Queue $>$
 \item 
-using \mbox{\hyperlink{classec_1_1_window_ae7501526590ece55dbe92ea496e62738}{Event\+Source\+\_\+\+Ptr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_event_source}{Event\+Source}} $>$
+using \mbox{\hyperlink{classec_1_1_window_ae7501526590ece55dbe92ea496e62738}{Event\+Source\+\_\+\+Ptr}} = std\+::unique\+\_\+ptr$<$ Event\+Source $>$
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classec_1_1_window_af9eab51c6ea017a296866278bbbcdb28}{Window}} (const unsigned int window\+Width, const unsigned int window\+Height, const char $\ast$window\+Title)
-\item 
+\mbox{\hyperlink{classec_1_1_window_a01bb029fa4964caf70553c5ca806d8cc}{Window}} (unsigned int window\+Width, unsigned int window\+Height, std\+::string window\+Title)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_window}{Window}} contructor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classec_1_1_window_a639d3f230ca0e232066b4c61a5a212b7}{$\sim$\+Window}} ()
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_window_a1cde792adea9d3e15f7bab9c3100a8b9}{Start\+Main\+Loop}} ()
+virtual void \mbox{\hyperlink{classec_1_1_window_a156a8352f977dd3828e95ab694284359}{start\+Main\+Loop}} ()
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_window_aab4c6c1ee3c71e53532ec21a253cad4d}{Tick}} (const float time\+Delta)
+void \mbox{\hyperlink{classec_1_1_window_a0adaafc13d0dafc238aa0aaa0f5f4f82}{tick\+Meta}} ()
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_window_af0be4ef5101cfd9251511c402c1e9598}{Render}} ()
+virtual void \mbox{\hyperlink{classec_1_1_window_a093b4989e4cd12cf9e62777ec4ef8661}{tick}} (float time\+Delta)
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_window_a5fa670ea10ce548d445e1a82ded336a2}{Set\+Frame\+Rate}} (const double fps)
+virtual void \mbox{\hyperlink{classec_1_1_window_acb066b817adc7c790b0810695078dee3}{render}} ()
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_window_a95ea89916704775d858e441c8b7430cd}{Resize\+Window}} (G\+L\+F\+Wwindow $\ast$window, int width, int height)
+virtual void \mbox{\hyperlink{classec_1_1_window_a6acc36f2c069b5e38f522953ca52ce9f}{set\+Frame\+Rate}} (double fps)
 \item 
-\mbox{\hyperlink{classec_1_1_input_observable}{Input\+Observable}} \& \mbox{\hyperlink{classec_1_1_window_a0f2af2fca7c4c20d027acf6afaf79b99}{Get\+Input\+Observer}} ()
+virtual void \mbox{\hyperlink{classec_1_1_window_a33ef071f4198715ae42844c681fb40eb}{resize\+Window}} (G\+L\+F\+Wwindow $\ast$window, int width, int height)
 \item 
-\mbox{\hyperlink{classec_1_1_shader_manager}{Shader\+Manager}} \& \mbox{\hyperlink{classec_1_1_window_a5f2d20a2d7b3bc05c29830164437d190}{Get\+Shader\+Manager}} ()
+\mbox{\hyperlink{classec_1_1_event_system}{Event\+System}} \& \mbox{\hyperlink{classec_1_1_window_a9dda11a247352aa51fea720076174535}{get\+Event\+System}} ()
 \item 
-\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} \& \mbox{\hyperlink{classec_1_1_window_aad83b5eb3bb0708c08503ac3c6b7b670}{Get\+Scene\+System}} ()
+\mbox{\hyperlink{classec_1_1_shader_manager}{Shader\+Manager}} \& \mbox{\hyperlink{classec_1_1_window_adc63f54684ad3681c0d4bea8481b6322}{get\+Shader\+Manager}} ()
 \item 
-\mbox{\hyperlink{classec_1_1_event_queue}{Event\+Queue}} $\ast$ \mbox{\hyperlink{classec_1_1_window_a7d0d9e287c7dbf2377755ed89ea6848c}{Get\+Event\+Queue}} ()
+\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} \& \mbox{\hyperlink{classec_1_1_window_a13d8cba249c2de0a5366c2507e887290}{get\+Scene\+System}} ()
 \item 
-\mbox{\hyperlink{classec_1_1_event_source}{Event\+Source}} $\ast$ \mbox{\hyperlink{classec_1_1_window_a7253c61f74c2f5f6281d546379ca20e0}{Get\+Event\+Source}} ()
+void \mbox{\hyperlink{classec_1_1_window_a071d133719298221af21bd2c207733b3}{switch\+To\+Face\+Mode}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_window_aefcd8fd06bb58f946100005975fc94c4}{Switch\+To\+Face\+Mode}} ()
+void \mbox{\hyperlink{classec_1_1_window_a85be553f3f877b77ac70db32b9f8a8f6}{switch\+To\+Wire\+Frame\+Mode}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_window_a5176dd1ed33f621b4eb8f71eb64cccad}{Switch\+To\+Wireframe\+Mode}} ()
+void \mbox{\hyperlink{classec_1_1_window_a633ebdd1e469a3a865f4748b99f9c664}{switch\+To\+Point\+Mode}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_window_adaf30fde0a52c772d3b089746fd6397a}{Switch\+To\+Point\+Mode}} ()
+void \mbox{\hyperlink{classec_1_1_window_aeeaa47b1f8199b4df60f74aa3b2c45f7}{go\+Windowed}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_window_a33339ac52b268b577d21dc9248e59935}{Go\+Windowed}} ()
+void \mbox{\hyperlink{classec_1_1_window_ab89e0e27d169da6f5d9430b78c77c0ee}{go\+Fullscreen}} ()
 \item 
-void \mbox{\hyperlink{classec_1_1_window_af6345e0c05937b769936e714f154623e}{Go\+Fullscreen}} ()
+void \mbox{\hyperlink{classec_1_1_window_aa38b17b4251dee392623910a378f60c3}{close\+Window}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_window_a6605c513a7dbab0b43ddfad6ff7ac55a}{Close\+Window}} ()
+void \mbox{\hyperlink{classec_1_1_window_a915c4b64dde5f2274e59c40bc10eff58}{set\+Clear\+Color}} (const glm\+::vec4 \&clear\+Color)
 \item 
-void \mbox{\hyperlink{classec_1_1_window_af0d59d99e745ebde21fed3b165543a52}{Set\+Clear\+Color}} (const glm\+::vec4 \&clear\+Color)
+const glm\+::vec4 \& \mbox{\hyperlink{classec_1_1_window_a4355925b4898e5b032da048eec86f103}{get\+Clear\+Color}} () const
 \item 
-const glm\+::vec4 \& \mbox{\hyperlink{classec_1_1_window_aa87fd9b3042657bc41461c1234296847}{Get\+Clear\+Color}} () const
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classec_1_1_window_abe525ce2f27fecf298b1ad0926024ae3}{get\+Window}} () const
 \item 
-G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classec_1_1_window_a3131064635c5c422ac65b17eeaddae59}{Get\+Window}} () const
+glm\+::ivec2 \mbox{\hyperlink{classec_1_1_window_a8b44b42e9cc6e8aa1d41c0bc01543977}{get\+Window\+Resolution}} () const
 \item 
-glm\+::ivec2 \mbox{\hyperlink{classec_1_1_window_ab8dde6eac2f340b3a31cadf764f664f1}{Get\+Window\+Resolution}} () const
-\item 
-glm\+::ivec2 \mbox{\hyperlink{classec_1_1_window_a04959818ec9c89bb982deefa5868cab5}{Get\+Window\+Position}} () const
+glm\+::ivec2 \mbox{\hyperlink{classec_1_1_window_accf3c652040d022bdd953ed69aec0df5}{get\+Window\+Position}} () const
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{classec_1_1_window_ad8b192b0b757ec15d233d65e52dedc2c}{Error\+Callback}} (int error, const char $\ast$description)
+static void \mbox{\hyperlink{classec_1_1_window_a1d202aaa954ea0b62cf380fb48288107}{error\+Callback}} (int error, const char $\ast$description)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -90,17 +87,23 @@ G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classec_1_1_window_a6d40786a23714fff2de
 \item 
 \mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} \mbox{\hyperlink{classec_1_1_window_a5c50dfac91e6105a6862693e71976a3e}{m\+\_\+scene\+System}}
 \item 
+\mbox{\hyperlink{classec_1_1_event_system}{Event\+System}} \mbox{\hyperlink{classec_1_1_window_afb083ee014fec3d0f141f24ce8c463a4}{m\+\_\+event\+System}}
+\item 
 \mbox{\hyperlink{classec_1_1_shader_manager}{Shader\+Manager}} \mbox{\hyperlink{classec_1_1_window_ad4b04fabdef20b69206562d2703a7bf9}{m\+\_\+shader\+Manager}}
 \item 
-\mbox{\hyperlink{classec_1_1_input_observable}{Input\+Observable}} \mbox{\hyperlink{classec_1_1_window_a070efea3cadf4eaee9af066b7b21d595}{m\+\_\+input\+Observable}}
-\item 
 \mbox{\hyperlink{classec_1_1_renderer}{Renderer}} \mbox{\hyperlink{classec_1_1_window_a6951a4d1a08549dcc797cf12c8f46710}{m\+\_\+renderer}}
-\item 
-\mbox{\hyperlink{classec_1_1_device_registry}{Device\+Registry}} \mbox{\hyperlink{classec_1_1_window_a55b0d5c6b22c3540bfcb18a29a0cc181}{m\+\_\+device\+Registry}}
 \item 
 double \mbox{\hyperlink{classec_1_1_window_aa7245d9cfc57373c805b63ba3e8826f8}{m\+\_\+frame\+Rate}}
 \item 
 double \mbox{\hyperlink{classec_1_1_window_a6c56361d6931e3a5a6dcfe7a08c25e09}{m\+\_\+frame\+Interval}}
+\item 
+\mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}}$<$ \mbox{\hyperlink{classec_1_1_geometry}{Geometry}} $>$ \mbox{\hyperlink{classec_1_1_window_ac9bc9f64ecfe087b7423195c505120d7}{m\+\_\+geometry\+Registry}}
+\item 
+\mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}}$<$ \mbox{\hyperlink{classec_1_1_material}{Material}} $>$ \mbox{\hyperlink{classec_1_1_window_a4b20defc21abe2eb397a09e389cad419}{m\+\_\+material\+Registry}}
+\item 
+\mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}}$<$ \mbox{\hyperlink{classec_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{classec_1_1_window_aeea5c28c3ae7ef5cf43472f506410abe}{m\+\_\+texture\+Registry}}
+\item 
+\mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}}$<$ \mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $>$ \mbox{\hyperlink{classec_1_1_window_a1c72dfdc44a79fe7d70456258db7064c}{m\+\_\+drawable\+Registry}}
 \end{DoxyCompactItemize}
 
 
@@ -109,172 +112,185 @@ double \mbox{\hyperlink{classec_1_1_window_a6c56361d6931e3a5a6dcfe7a08c25e09}{m\
 \index{ec\+::\+Window@{ec\+::\+Window}!Event\+Queue\+\_\+\+Ptr@{Event\+Queue\+\_\+\+Ptr}}
 \index{Event\+Queue\+\_\+\+Ptr@{Event\+Queue\+\_\+\+Ptr}!ec\+::\+Window@{ec\+::\+Window}}
 \subsubsection{\texorpdfstring{Event\+Queue\+\_\+\+Ptr}{EventQueue\_Ptr}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_window_afe0927efdedc84c345120ae15bf6994a}{ec\+::\+Window\+::\+Event\+Queue\+\_\+\+Ptr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_event_queue}{Event\+Queue}}$>$}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_window_afe0927efdedc84c345120ae15bf6994a}{ec\+::\+Window\+::\+Event\+Queue\+\_\+\+Ptr}} =  std\+::unique\+\_\+ptr$<$Event\+Queue$>$}
 
 \mbox{\Hypertarget{classec_1_1_window_ae7501526590ece55dbe92ea496e62738}\label{classec_1_1_window_ae7501526590ece55dbe92ea496e62738}} 
 \index{ec\+::\+Window@{ec\+::\+Window}!Event\+Source\+\_\+\+Ptr@{Event\+Source\+\_\+\+Ptr}}
 \index{Event\+Source\+\_\+\+Ptr@{Event\+Source\+\_\+\+Ptr}!ec\+::\+Window@{ec\+::\+Window}}
 \subsubsection{\texorpdfstring{Event\+Source\+\_\+\+Ptr}{EventSource\_Ptr}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_window_ae7501526590ece55dbe92ea496e62738}{ec\+::\+Window\+::\+Event\+Source\+\_\+\+Ptr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_event_source}{Event\+Source}}$>$}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_window_ae7501526590ece55dbe92ea496e62738}{ec\+::\+Window\+::\+Event\+Source\+\_\+\+Ptr}} =  std\+::unique\+\_\+ptr$<$Event\+Source$>$}
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classec_1_1_window_af9eab51c6ea017a296866278bbbcdb28}\label{classec_1_1_window_af9eab51c6ea017a296866278bbbcdb28}} 
+\mbox{\Hypertarget{classec_1_1_window_a01bb029fa4964caf70553c5ca806d8cc}\label{classec_1_1_window_a01bb029fa4964caf70553c5ca806d8cc}} 
 \index{ec\+::\+Window@{ec\+::\+Window}!Window@{Window}}
 \index{Window@{Window}!ec\+::\+Window@{ec\+::\+Window}}
 \subsubsection{\texorpdfstring{Window()}{Window()}}
-{\footnotesize\ttfamily ec\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const unsigned int}]{window\+Width,  }\item[{const unsigned int}]{window\+Height,  }\item[{const char $\ast$}]{window\+Title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily ec\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{unsigned int}]{window\+Width,  }\item[{unsigned int}]{window\+Height,  }\item[{std\+::string}]{window\+Title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+
+
+\mbox{\hyperlink{classec_1_1_window}{Window}} contructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+Width} & Width of this window in pixels. \\
+\hline
+{\em window\+Height} & Height of this window in pixels. \\
+\hline
+{\em window\+Title} & Title of this window. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classec_1_1_window_a639d3f230ca0e232066b4c61a5a212b7}\label{classec_1_1_window_a639d3f230ca0e232066b4c61a5a212b7}} 
 \index{ec\+::\+Window@{ec\+::\+Window}!````~Window@{$\sim$\+Window}}
 \index{````~Window@{$\sim$\+Window}!ec\+::\+Window@{ec\+::\+Window}}
 \subsubsection{\texorpdfstring{$\sim$\+Window()}{~Window()}}
-{\footnotesize\ttfamily ec\+::\+Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily ec\+::\+Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_window_a6605c513a7dbab0b43ddfad6ff7ac55a}\label{classec_1_1_window_a6605c513a7dbab0b43ddfad6ff7ac55a}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Close\+Window@{Close\+Window}}
-\index{Close\+Window@{Close\+Window}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Close\+Window()}{CloseWindow()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Close\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_window_aa38b17b4251dee392623910a378f60c3}\label{classec_1_1_window_aa38b17b4251dee392623910a378f60c3}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!close\+Window@{close\+Window}}
+\index{close\+Window@{close\+Window}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{close\+Window()}{closeWindow()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::close\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_window_ad8b192b0b757ec15d233d65e52dedc2c}\label{classec_1_1_window_ad8b192b0b757ec15d233d65e52dedc2c}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Error\+Callback@{Error\+Callback}}
-\index{Error\+Callback@{Error\+Callback}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Error\+Callback()}{ErrorCallback()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Error\+Callback (\begin{DoxyParamCaption}\item[{int}]{error,  }\item[{const char $\ast$}]{description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+Close this window. \mbox{\Hypertarget{classec_1_1_window_a1d202aaa954ea0b62cf380fb48288107}\label{classec_1_1_window_a1d202aaa954ea0b62cf380fb48288107}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!error\+Callback@{error\+Callback}}
+\index{error\+Callback@{error\+Callback}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{error\+Callback()}{errorCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::error\+Callback (\begin{DoxyParamCaption}\item[{int}]{error,  }\item[{const char $\ast$}]{description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\mbox{\Hypertarget{classec_1_1_window_aa87fd9b3042657bc41461c1234296847}\label{classec_1_1_window_aa87fd9b3042657bc41461c1234296847}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Get\+Clear\+Color@{Get\+Clear\+Color}}
-\index{Get\+Clear\+Color@{Get\+Clear\+Color}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Get\+Clear\+Color()}{GetClearColor()}}
-{\footnotesize\ttfamily const glm\+::vec4 \& ec\+::\+Window\+::\+Get\+Clear\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+Error callback \mbox{\Hypertarget{classec_1_1_window_a4355925b4898e5b032da048eec86f103}\label{classec_1_1_window_a4355925b4898e5b032da048eec86f103}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!get\+Clear\+Color@{get\+Clear\+Color}}
+\index{get\+Clear\+Color@{get\+Clear\+Color}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Clear\+Color()}{getClearColor()}}
+{\footnotesize\ttfamily const glm\+::vec4 \& ec\+::\+Window\+::get\+Clear\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_window_a7d0d9e287c7dbf2377755ed89ea6848c}\label{classec_1_1_window_a7d0d9e287c7dbf2377755ed89ea6848c}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Get\+Event\+Queue@{Get\+Event\+Queue}}
-\index{Get\+Event\+Queue@{Get\+Event\+Queue}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Get\+Event\+Queue()}{GetEventQueue()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_event_queue}{ec\+::\+Event\+Queue}} $\ast$ ec\+::\+Window\+::\+Get\+Event\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Get the current clear color. \mbox{\Hypertarget{classec_1_1_window_a9dda11a247352aa51fea720076174535}\label{classec_1_1_window_a9dda11a247352aa51fea720076174535}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!get\+Event\+System@{get\+Event\+System}}
+\index{get\+Event\+System@{get\+Event\+System}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Event\+System()}{getEventSystem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_event_system}{Event\+System}} \& ec\+::\+Window\+::get\+Event\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Get the event queue of this window \mbox{\Hypertarget{classec_1_1_window_a7253c61f74c2f5f6281d546379ca20e0}\label{classec_1_1_window_a7253c61f74c2f5f6281d546379ca20e0}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Get\+Event\+Source@{Get\+Event\+Source}}
-\index{Get\+Event\+Source@{Get\+Event\+Source}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Get\+Event\+Source()}{GetEventSource()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_event_source}{ec\+::\+Event\+Source}} $\ast$ ec\+::\+Window\+::\+Get\+Event\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Get this window\textquotesingle{}s event system. \mbox{\Hypertarget{classec_1_1_window_a13d8cba249c2de0a5366c2507e887290}\label{classec_1_1_window_a13d8cba249c2de0a5366c2507e887290}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!get\+Scene\+System@{get\+Scene\+System}}
+\index{get\+Scene\+System@{get\+Scene\+System}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Scene\+System()}{getSceneSystem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_system}{ec\+::\+Scene\+System}} \& ec\+::\+Window\+::get\+Scene\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Get the event source of this window \mbox{\Hypertarget{classec_1_1_window_a0f2af2fca7c4c20d027acf6afaf79b99}\label{classec_1_1_window_a0f2af2fca7c4c20d027acf6afaf79b99}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Get\+Input\+Observer@{Get\+Input\+Observer}}
-\index{Get\+Input\+Observer@{Get\+Input\+Observer}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Get\+Input\+Observer()}{GetInputObserver()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_observable}{ec\+::\+Input\+Observable}} \& ec\+::\+Window\+::\+Get\+Input\+Observer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Access to the scene system \mbox{\Hypertarget{classec_1_1_window_adc63f54684ad3681c0d4bea8481b6322}\label{classec_1_1_window_adc63f54684ad3681c0d4bea8481b6322}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!get\+Shader\+Manager@{get\+Shader\+Manager}}
+\index{get\+Shader\+Manager@{get\+Shader\+Manager}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Shader\+Manager()}{getShaderManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_shader_manager}{ec\+::\+Shader\+Manager}} \& ec\+::\+Window\+::get\+Shader\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_window_aad83b5eb3bb0708c08503ac3c6b7b670}\label{classec_1_1_window_aad83b5eb3bb0708c08503ac3c6b7b670}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Get\+Scene\+System@{Get\+Scene\+System}}
-\index{Get\+Scene\+System@{Get\+Scene\+System}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Get\+Scene\+System()}{GetSceneSystem()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_system}{ec\+::\+Scene\+System}} \& ec\+::\+Window\+::\+Get\+Scene\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Access to the shader manager \mbox{\Hypertarget{classec_1_1_window_abe525ce2f27fecf298b1ad0926024ae3}\label{classec_1_1_window_abe525ce2f27fecf298b1ad0926024ae3}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!get\+Window@{get\+Window}}
+\index{get\+Window@{get\+Window}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Window()}{getWindow()}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow $\ast$ ec\+::\+Window\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_window_a5f2d20a2d7b3bc05c29830164437d190}\label{classec_1_1_window_a5f2d20a2d7b3bc05c29830164437d190}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Get\+Shader\+Manager@{Get\+Shader\+Manager}}
-\index{Get\+Shader\+Manager@{Get\+Shader\+Manager}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Get\+Shader\+Manager()}{GetShaderManager()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_shader_manager}{ec\+::\+Shader\+Manager}} \& ec\+::\+Window\+::\+Get\+Shader\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Access to window \mbox{\Hypertarget{classec_1_1_window_accf3c652040d022bdd953ed69aec0df5}\label{classec_1_1_window_accf3c652040d022bdd953ed69aec0df5}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!get\+Window\+Position@{get\+Window\+Position}}
+\index{get\+Window\+Position@{get\+Window\+Position}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Window\+Position()}{getWindowPosition()}}
+{\footnotesize\ttfamily glm\+::ivec2 ec\+::\+Window\+::get\+Window\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_window_a3131064635c5c422ac65b17eeaddae59}\label{classec_1_1_window_a3131064635c5c422ac65b17eeaddae59}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Get\+Window@{Get\+Window}}
-\index{Get\+Window@{Get\+Window}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Get\+Window()}{GetWindow()}}
-{\footnotesize\ttfamily G\+L\+F\+Wwindow $\ast$ ec\+::\+Window\+::\+Get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{classec_1_1_window_a8b44b42e9cc6e8aa1d41c0bc01543977}\label{classec_1_1_window_a8b44b42e9cc6e8aa1d41c0bc01543977}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!get\+Window\+Resolution@{get\+Window\+Resolution}}
+\index{get\+Window\+Resolution@{get\+Window\+Resolution}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Window\+Resolution()}{getWindowResolution()}}
+{\footnotesize\ttfamily glm\+::ivec2 ec\+::\+Window\+::get\+Window\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Access to window \mbox{\Hypertarget{classec_1_1_window_a04959818ec9c89bb982deefa5868cab5}\label{classec_1_1_window_a04959818ec9c89bb982deefa5868cab5}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Get\+Window\+Position@{Get\+Window\+Position}}
-\index{Get\+Window\+Position@{Get\+Window\+Position}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Get\+Window\+Position()}{GetWindowPosition()}}
-{\footnotesize\ttfamily glm\+::ivec2 ec\+::\+Window\+::\+Get\+Window\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{classec_1_1_window_ab89e0e27d169da6f5d9430b78c77c0ee}\label{classec_1_1_window_ab89e0e27d169da6f5d9430b78c77c0ee}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!go\+Fullscreen@{go\+Fullscreen}}
+\index{go\+Fullscreen@{go\+Fullscreen}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{go\+Fullscreen()}{goFullscreen()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::go\+Fullscreen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_window_ab8dde6eac2f340b3a31cadf764f664f1}\label{classec_1_1_window_ab8dde6eac2f340b3a31cadf764f664f1}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Get\+Window\+Resolution@{Get\+Window\+Resolution}}
-\index{Get\+Window\+Resolution@{Get\+Window\+Resolution}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Get\+Window\+Resolution()}{GetWindowResolution()}}
-{\footnotesize\ttfamily glm\+::ivec2 ec\+::\+Window\+::\+Get\+Window\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+Switch to fullscreen mode. \mbox{\Hypertarget{classec_1_1_window_aeeaa47b1f8199b4df60f74aa3b2c45f7}\label{classec_1_1_window_aeeaa47b1f8199b4df60f74aa3b2c45f7}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!go\+Windowed@{go\+Windowed}}
+\index{go\+Windowed@{go\+Windowed}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{go\+Windowed()}{goWindowed()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::go\+Windowed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_window_af6345e0c05937b769936e714f154623e}\label{classec_1_1_window_af6345e0c05937b769936e714f154623e}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Go\+Fullscreen@{Go\+Fullscreen}}
-\index{Go\+Fullscreen@{Go\+Fullscreen}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Go\+Fullscreen()}{GoFullscreen()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Go\+Fullscreen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Switch to windowed mode. \mbox{\Hypertarget{classec_1_1_window_acb066b817adc7c790b0810695078dee3}\label{classec_1_1_window_acb066b817adc7c790b0810695078dee3}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!render@{render}}
+\index{render@{render}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classec_1_1_window_a33339ac52b268b577d21dc9248e59935}\label{classec_1_1_window_a33339ac52b268b577d21dc9248e59935}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Go\+Windowed@{Go\+Windowed}}
-\index{Go\+Windowed@{Go\+Windowed}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Go\+Windowed()}{GoWindowed()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Go\+Windowed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Render to the window \mbox{\Hypertarget{classec_1_1_window_a33ef071f4198715ae42844c681fb40eb}\label{classec_1_1_window_a33ef071f4198715ae42844c681fb40eb}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!resize\+Window@{resize\+Window}}
+\index{resize\+Window@{resize\+Window}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{resize\+Window()}{resizeWindow()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::resize\+Window (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classec_1_1_window_af0be4ef5101cfd9251511c402c1e9598}\label{classec_1_1_window_af0be4ef5101cfd9251511c402c1e9598}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Render@{Render}}
-\index{Render@{Render}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Render()}{Render()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\hyperlink{classec_1_1_window}{Window}} resize callback \mbox{\Hypertarget{classec_1_1_window_a915c4b64dde5f2274e59c40bc10eff58}\label{classec_1_1_window_a915c4b64dde5f2274e59c40bc10eff58}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!set\+Clear\+Color@{set\+Clear\+Color}}
+\index{set\+Clear\+Color@{set\+Clear\+Color}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{set\+Clear\+Color()}{setClearColor()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::set\+Clear\+Color (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{clear\+Color }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_window_a95ea89916704775d858e441c8b7430cd}\label{classec_1_1_window_a95ea89916704775d858e441c8b7430cd}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Resize\+Window@{Resize\+Window}}
-\index{Resize\+Window@{Resize\+Window}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Resize\+Window()}{ResizeWindow()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Resize\+Window (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+Set the current clear color. \mbox{\Hypertarget{classec_1_1_window_a6acc36f2c069b5e38f522953ca52ce9f}\label{classec_1_1_window_a6acc36f2c069b5e38f522953ca52ce9f}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!set\+Frame\+Rate@{set\+Frame\+Rate}}
+\index{set\+Frame\+Rate@{set\+Frame\+Rate}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{set\+Frame\+Rate()}{setFrameRate()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::set\+Frame\+Rate (\begin{DoxyParamCaption}\item[{double}]{fps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classec_1_1_window_af0d59d99e745ebde21fed3b165543a52}\label{classec_1_1_window_af0d59d99e745ebde21fed3b165543a52}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Set\+Clear\+Color@{Set\+Clear\+Color}}
-\index{Set\+Clear\+Color@{Set\+Clear\+Color}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Set\+Clear\+Color()}{SetClearColor()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Set\+Clear\+Color (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{clear\+Color }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_window_a156a8352f977dd3828e95ab694284359}\label{classec_1_1_window_a156a8352f977dd3828e95ab694284359}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!start\+Main\+Loop@{start\+Main\+Loop}}
+\index{start\+Main\+Loop@{start\+Main\+Loop}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{start\+Main\+Loop()}{startMainLoop()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::start\+Main\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classec_1_1_window_a5fa670ea10ce548d445e1a82ded336a2}\label{classec_1_1_window_a5fa670ea10ce548d445e1a82ded336a2}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Set\+Frame\+Rate@{Set\+Frame\+Rate}}
-\index{Set\+Frame\+Rate@{Set\+Frame\+Rate}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Set\+Frame\+Rate()}{SetFrameRate()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Set\+Frame\+Rate (\begin{DoxyParamCaption}\item[{const double}]{fps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+Should be called to start program \mbox{\Hypertarget{classec_1_1_window_a071d133719298221af21bd2c207733b3}\label{classec_1_1_window_a071d133719298221af21bd2c207733b3}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!switch\+To\+Face\+Mode@{switch\+To\+Face\+Mode}}
+\index{switch\+To\+Face\+Mode@{switch\+To\+Face\+Mode}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{switch\+To\+Face\+Mode()}{switchToFaceMode()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::switch\+To\+Face\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_window_a1cde792adea9d3e15f7bab9c3100a8b9}\label{classec_1_1_window_a1cde792adea9d3e15f7bab9c3100a8b9}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Start\+Main\+Loop@{Start\+Main\+Loop}}
-\index{Start\+Main\+Loop@{Start\+Main\+Loop}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Start\+Main\+Loop()}{StartMainLoop()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Start\+Main\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{classec_1_1_window_a633ebdd1e469a3a865f4748b99f9c664}\label{classec_1_1_window_a633ebdd1e469a3a865f4748b99f9c664}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!switch\+To\+Point\+Mode@{switch\+To\+Point\+Mode}}
+\index{switch\+To\+Point\+Mode@{switch\+To\+Point\+Mode}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{switch\+To\+Point\+Mode()}{switchToPointMode()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::switch\+To\+Point\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_window_aefcd8fd06bb58f946100005975fc94c4}\label{classec_1_1_window_aefcd8fd06bb58f946100005975fc94c4}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Switch\+To\+Face\+Mode@{Switch\+To\+Face\+Mode}}
-\index{Switch\+To\+Face\+Mode@{Switch\+To\+Face\+Mode}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Switch\+To\+Face\+Mode()}{SwitchToFaceMode()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Switch\+To\+Face\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_window_a85be553f3f877b77ac70db32b9f8a8f6}\label{classec_1_1_window_a85be553f3f877b77ac70db32b9f8a8f6}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!switch\+To\+Wire\+Frame\+Mode@{switch\+To\+Wire\+Frame\+Mode}}
+\index{switch\+To\+Wire\+Frame\+Mode@{switch\+To\+Wire\+Frame\+Mode}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{switch\+To\+Wire\+Frame\+Mode()}{switchToWireFrameMode()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::switch\+To\+Wire\+Frame\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_window_adaf30fde0a52c772d3b089746fd6397a}\label{classec_1_1_window_adaf30fde0a52c772d3b089746fd6397a}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Switch\+To\+Point\+Mode@{Switch\+To\+Point\+Mode}}
-\index{Switch\+To\+Point\+Mode@{Switch\+To\+Point\+Mode}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Switch\+To\+Point\+Mode()}{SwitchToPointMode()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Switch\+To\+Point\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_window_a093b4989e4cd12cf9e62777ec4ef8661}\label{classec_1_1_window_a093b4989e4cd12cf9e62777ec4ef8661}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!tick@{tick}}
+\index{tick@{tick}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::tick (\begin{DoxyParamCaption}\item[{float}]{time\+Delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classec_1_1_window_a5176dd1ed33f621b4eb8f71eb64cccad}\label{classec_1_1_window_a5176dd1ed33f621b4eb8f71eb64cccad}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Switch\+To\+Wireframe\+Mode@{Switch\+To\+Wireframe\+Mode}}
-\index{Switch\+To\+Wireframe\+Mode@{Switch\+To\+Wireframe\+Mode}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Switch\+To\+Wireframe\+Mode()}{SwitchToWireframeMode()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Switch\+To\+Wireframe\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_window_a0adaafc13d0dafc238aa0aaa0f5f4f82}\label{classec_1_1_window_a0adaafc13d0dafc238aa0aaa0f5f4f82}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!tick\+Meta@{tick\+Meta}}
+\index{tick\+Meta@{tick\+Meta}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{tick\+Meta()}{tickMeta()}}
+{\footnotesize\ttfamily void ec\+::\+Window\+::tick\+Meta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_window_aab4c6c1ee3c71e53532ec21a253cad4d}\label{classec_1_1_window_aab4c6c1ee3c71e53532ec21a253cad4d}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!Tick@{Tick}}
-\index{Tick@{Tick}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{Tick()}{Tick()}}
-{\footnotesize\ttfamily void ec\+::\+Window\+::\+Tick (\begin{DoxyParamCaption}\item[{const float}]{time\+Delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
+Update the window 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{classec_1_1_window_a55b0d5c6b22c3540bfcb18a29a0cc181}\label{classec_1_1_window_a55b0d5c6b22c3540bfcb18a29a0cc181}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!m\+\_\+device\+Registry@{m\+\_\+device\+Registry}}
-\index{m\+\_\+device\+Registry@{m\+\_\+device\+Registry}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{m\+\_\+device\+Registry}{m\_deviceRegistry}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_device_registry}{Device\+Registry}} ec\+::\+Window\+::m\+\_\+device\+Registry\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classec_1_1_window_a1c72dfdc44a79fe7d70456258db7064c}\label{classec_1_1_window_a1c72dfdc44a79fe7d70456258db7064c}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!m\+\_\+drawable\+Registry@{m\+\_\+drawable\+Registry}}
+\index{m\+\_\+drawable\+Registry@{m\+\_\+drawable\+Registry}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+drawable\+Registry}{m\_drawableRegistry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}}$<$\mbox{\hyperlink{classec_1_1_drawable}{Drawable}}$>$ ec\+::\+Window\+::m\+\_\+drawable\+Registry\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_window_afb083ee014fec3d0f141f24ce8c463a4}\label{classec_1_1_window_afb083ee014fec3d0f141f24ce8c463a4}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!m\+\_\+event\+System@{m\+\_\+event\+System}}
+\index{m\+\_\+event\+System@{m\+\_\+event\+System}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+event\+System}{m\_eventSystem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_event_system}{Event\+System}} ec\+::\+Window\+::m\+\_\+event\+System\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classec_1_1_window_a6c56361d6931e3a5a6dcfe7a08c25e09}\label{classec_1_1_window_a6c56361d6931e3a5a6dcfe7a08c25e09}} 
 \index{ec\+::\+Window@{ec\+::\+Window}!m\+\_\+frame\+Interval@{m\+\_\+frame\+Interval}}
@@ -288,11 +304,17 @@ Access to window \mbox{\Hypertarget{classec_1_1_window_a04959818ec9c89bb982deefa
 \subsubsection{\texorpdfstring{m\+\_\+frame\+Rate}{m\_frameRate}}
 {\footnotesize\ttfamily double ec\+::\+Window\+::m\+\_\+frame\+Rate\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classec_1_1_window_a070efea3cadf4eaee9af066b7b21d595}\label{classec_1_1_window_a070efea3cadf4eaee9af066b7b21d595}} 
-\index{ec\+::\+Window@{ec\+::\+Window}!m\+\_\+input\+Observable@{m\+\_\+input\+Observable}}
-\index{m\+\_\+input\+Observable@{m\+\_\+input\+Observable}!ec\+::\+Window@{ec\+::\+Window}}
-\subsubsection{\texorpdfstring{m\+\_\+input\+Observable}{m\_inputObservable}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_observable}{Input\+Observable}} ec\+::\+Window\+::m\+\_\+input\+Observable\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classec_1_1_window_ac9bc9f64ecfe087b7423195c505120d7}\label{classec_1_1_window_ac9bc9f64ecfe087b7423195c505120d7}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!m\+\_\+geometry\+Registry@{m\+\_\+geometry\+Registry}}
+\index{m\+\_\+geometry\+Registry@{m\+\_\+geometry\+Registry}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+geometry\+Registry}{m\_geometryRegistry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}}$<$\mbox{\hyperlink{classec_1_1_geometry}{Geometry}}$>$ ec\+::\+Window\+::m\+\_\+geometry\+Registry\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_window_a4b20defc21abe2eb397a09e389cad419}\label{classec_1_1_window_a4b20defc21abe2eb397a09e389cad419}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!m\+\_\+material\+Registry@{m\+\_\+material\+Registry}}
+\index{m\+\_\+material\+Registry@{m\+\_\+material\+Registry}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+material\+Registry}{m\_materialRegistry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}}$<$\mbox{\hyperlink{classec_1_1_material}{Material}}$>$ ec\+::\+Window\+::m\+\_\+material\+Registry\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classec_1_1_window_a6951a4d1a08549dcc797cf12c8f46710}\label{classec_1_1_window_a6951a4d1a08549dcc797cf12c8f46710}} 
 \index{ec\+::\+Window@{ec\+::\+Window}!m\+\_\+renderer@{m\+\_\+renderer}}
@@ -311,6 +333,12 @@ Access to window \mbox{\Hypertarget{classec_1_1_window_a04959818ec9c89bb982deefa
 \index{m\+\_\+shader\+Manager@{m\+\_\+shader\+Manager}!ec\+::\+Window@{ec\+::\+Window}}
 \subsubsection{\texorpdfstring{m\+\_\+shader\+Manager}{m\_shaderManager}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_shader_manager}{Shader\+Manager}} ec\+::\+Window\+::m\+\_\+shader\+Manager\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_window_aeea5c28c3ae7ef5cf43472f506410abe}\label{classec_1_1_window_aeea5c28c3ae7ef5cf43472f506410abe}} 
+\index{ec\+::\+Window@{ec\+::\+Window}!m\+\_\+texture\+Registry@{m\+\_\+texture\+Registry}}
+\index{m\+\_\+texture\+Registry@{m\+\_\+texture\+Registry}!ec\+::\+Window@{ec\+::\+Window}}
+\subsubsection{\texorpdfstring{m\+\_\+texture\+Registry}{m\_textureRegistry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_resource_registry}{Resource\+Registry}}$<$\mbox{\hyperlink{classec_1_1_texture}{Texture}}$>$ ec\+::\+Window\+::m\+\_\+texture\+Registry\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classec_1_1_window_af826de73c15768bf1a4ee5dbff0e377c}\label{classec_1_1_window_af826de73c15768bf1a4ee5dbff0e377c}} 
 \index{ec\+::\+Window@{ec\+::\+Window}!m\+\_\+timer@{m\+\_\+timer}}

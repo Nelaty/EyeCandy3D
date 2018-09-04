@@ -1,5 +1,11 @@
 #include "EC3D/Core/Application.h"
 #include "EC3D/Core/Window.h"
+#include "EC3D/Utilities/Random.h"
+#include "EC3D/Gui/MiniAgui.h"
+
+#include <glm/glm.hpp>
+
+
 
 namespace ec
 {
@@ -9,17 +15,7 @@ namespace ec
 							 const std::string& windowName)
 		: m_running{true}
 	{
-		init();
-
-		for(auto i = 0; i < 1; ++i)
-		{
-			const char c = i + '0';
-			createWindow<Window>(windowWidth,
-								 windowHeight,
-								 windowTitle,
-								 windowName + c);
-		}
-
+		utl::Random::seed();
 	}
 
 	Application::~Application() = default;
@@ -51,28 +47,8 @@ namespace ec
 
 	void Application::init()
 	{
-		printf("\n");
-		printf("##############################\n");
-		printf("INITIALIZING APPLICATION\n\n");
-
 		const auto initSuccessful = initImpl();
-
-		if(initSuccessful)
-		{
-			printf("\nINITIALIZATION SUCCESSFUL\n");
-		}
-		else
-		{
-			printf("\nERROR: INITIALIZATION UNSUCCESSFUL");
-		}
-		printf("##############################\n");
-
 		printVersions();
-
-		if(!initSuccessful)
-		{
-			throw(std::exception("Error: Couldn't initialize application!\n"));
-		}
 	}
 
 	void Application::cleanup()
@@ -81,30 +57,9 @@ namespace ec
 	}
 
 	bool Application::initImpl()
-	{
-		glewExperimental = GL_TRUE;
-		/* Init GLFW */
-		printf("Initializing GLFW...\n");
-		if(!glfwInit())
-		{
-			printf("ERROR: Couldn't initialize GLFW!\n");
-			return false;
-		}
-		
-		createWindow<Window>(1024, 1024, "asd", "asdf");
-
-		/* Init GLEW */
-		printf("Initializing GLEW...\n");
-		const auto glewError = glewInit();
-		if(glewError != GLEW_OK)
-		{
-			printf("ERROR: Couldn't init GLEW: \n");
-			printf("Error: %p\n", glewGetErrorString(glewError));
-			return false;
-		}
-
+	{		
 		initOpenGl();
-		initAgui();
+		MiniAgui::init();
 
 		return true;
 	}
@@ -127,14 +82,10 @@ namespace ec
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	}
 
-	void Application::initAgui()
-	{
-	}
-
 	void Application::printVersions() const
 	{
-		int major = 0;
-		int minor = 0;
+		auto major = 0;
+		auto minor = 0;
 
 		sscanf_s(reinterpret_cast<const char*>(glGetString(GL_VERSION)), "%d.%d",
 				 &major, &minor);

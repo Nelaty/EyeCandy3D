@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for ec\+:\+:Geometry\+:
-\nopagebreak
+Inheritance diagram for ec\+:\+:Geometry\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,12 +15,11 @@ Inheritance diagram for ec\+:\+:Geometry\+:
 \end{figure}
 
 
-Collaboration diagram for ec\+:\+:Geometry\+:
-\nopagebreak
+Collaboration diagram for ec\+:\+:Geometry\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=166pt]{classec_1_1_geometry__coll__graph}
+\includegraphics[width=350pt]{classec_1_1_geometry__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -29,18 +27,33 @@ Collaboration diagram for ec\+:\+:Geometry\+:
 \item 
 virtual \mbox{\hyperlink{classec_1_1_geometry_a964c581313da2be51a3c78d3be7f48b3}{$\sim$\+Geometry}} ()
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_geometry_a8de70c6fd7391ec0555b2df57912b177}{Render}} (\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$shader, const glm\+::mat4 \&model)
+virtual void \mbox{\hyperlink{classec_1_1_geometry_a228d4a0fa01a17379f24aee2c769b501}{recalculate\+Normals}} ()
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_geometry_a91a89baad39d4f2b2c4e9774d952dce9}{get\+Vao}} () const
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_geometry_abad5d4311d16462099b8f9d084d99dd4}{get\+Vbo}} () const
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_geometry_a5d956ff01a7b6648ede8982e0a461ae0}{get\+Ebo}} () const
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_geometry_a184b4fdde8062c1dc0eb9e3393cc540f}{Begin\+Render}} ()=0
+\mbox{\hyperlink{classec_1_1_geometry_aeae22c6b54c7c534249ee08b3fb77a70}{Geometry}} (G\+Lenum mode=G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+ES, G\+Lenum type=G\+L\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT)
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_geometry_ae49d24667dca154cba707b0c219a8eb2}{On\+Render}} ()=0
+void \mbox{\hyperlink{classec_1_1_geometry_aeca5f0e52e7c2e4b352ede1a6e7c3f5b}{begin\+Render}} () override
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_geometry_a41ed9550a0d1746c55add3c3c0a38984}{End\+Render}} ()=0
+void \mbox{\hyperlink{classec_1_1_geometry_a1f166e70fc880e88092f29ef46afb836}{on\+Render}} () override
 \item 
-\mbox{\hyperlink{classec_1_1_geometry_a409c80ac243a5eb27c2a98b17cc8b3e9}{Geometry}} ()
+void \mbox{\hyperlink{classec_1_1_geometry_ae0352702162501df185517e84c3b02bd}{end\+Render}} () override
+\item 
+void \mbox{\hyperlink{classec_1_1_geometry_ad4f80cd4d4c22b108c33b9030e91467b}{set\+Mode}} (G\+Lenum mode)
+\item 
+void \mbox{\hyperlink{classec_1_1_geometry_a12c3da280ff11e86a8b07d18a23e0880}{set\+Type}} (G\+Lenum type)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structec_1_1_geometry_data}{Geometry\+Data}} \mbox{\hyperlink{classec_1_1_geometry_aeb72a472b242d92496f0283cfee17fac}{m\+\_\+data}}
 \end{DoxyCompactItemize}
 
 
@@ -49,52 +62,91 @@ virtual void \mbox{\hyperlink{classec_1_1_geometry_a41ed9550a0d1746c55add3c3c0a3
 \index{ec\+::\+Geometry@{ec\+::\+Geometry}!````~Geometry@{$\sim$\+Geometry}}
 \index{````~Geometry@{$\sim$\+Geometry}!ec\+::\+Geometry@{ec\+::\+Geometry}}
 \subsubsection{\texorpdfstring{$\sim$\+Geometry()}{~Geometry()}}
-{\footnotesize\ttfamily ec\+::\+Geometry\+::$\sim$\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily ec\+::\+Geometry\+::$\sim$\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
-\mbox{\Hypertarget{classec_1_1_geometry_a409c80ac243a5eb27c2a98b17cc8b3e9}\label{classec_1_1_geometry_a409c80ac243a5eb27c2a98b17cc8b3e9}} 
+\mbox{\Hypertarget{classec_1_1_geometry_aeae22c6b54c7c534249ee08b3fb77a70}\label{classec_1_1_geometry_aeae22c6b54c7c534249ee08b3fb77a70}} 
 \index{ec\+::\+Geometry@{ec\+::\+Geometry}!Geometry@{Geometry}}
 \index{Geometry@{Geometry}!ec\+::\+Geometry@{ec\+::\+Geometry}}
 \subsubsection{\texorpdfstring{Geometry()}{Geometry()}}
-{\footnotesize\ttfamily ec\+::\+Geometry\+::\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+{\footnotesize\ttfamily ec\+::\+Geometry\+::\+Geometry (\begin{DoxyParamCaption}\item[{G\+Lenum}]{mode = {\ttfamily GL\+\_\+TRIANGLES},  }\item[{G\+Lenum}]{type = {\ttfamily GL\+\_\+UNSIGNED\+\_\+INT} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_geometry_a184b4fdde8062c1dc0eb9e3393cc540f}\label{classec_1_1_geometry_a184b4fdde8062c1dc0eb9e3393cc540f}} 
-\index{ec\+::\+Geometry@{ec\+::\+Geometry}!Begin\+Render@{Begin\+Render}}
-\index{Begin\+Render@{Begin\+Render}!ec\+::\+Geometry@{ec\+::\+Geometry}}
-\subsubsection{\texorpdfstring{Begin\+Render()}{BeginRender()}}
-{\footnotesize\ttfamily void ec\+::\+Geometry\+::\+Begin\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+\mbox{\Hypertarget{classec_1_1_geometry_aeca5f0e52e7c2e4b352ede1a6e7c3f5b}\label{classec_1_1_geometry_aeca5f0e52e7c2e4b352ede1a6e7c3f5b}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!begin\+Render@{begin\+Render}}
+\index{begin\+Render@{begin\+Render}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{begin\+Render()}{beginRender()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+::begin\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 Called at the beginning of the rendering routine. 
 
-Implemented in \mbox{\hyperlink{classec_1_1_static_geometry_a58dfe3cc7d91f3bcf99d83b038cf5f1d}{ec\+::\+Static\+Geometry}}.
+Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a17a87aca44e2a23a6185e78262e02652}{ec\+::\+I\+Geometry\+Access}}.
 
-\mbox{\Hypertarget{classec_1_1_geometry_a41ed9550a0d1746c55add3c3c0a38984}\label{classec_1_1_geometry_a41ed9550a0d1746c55add3c3c0a38984}} 
-\index{ec\+::\+Geometry@{ec\+::\+Geometry}!End\+Render@{End\+Render}}
-\index{End\+Render@{End\+Render}!ec\+::\+Geometry@{ec\+::\+Geometry}}
-\subsubsection{\texorpdfstring{End\+Render()}{EndRender()}}
-{\footnotesize\ttfamily void ec\+::\+Geometry\+::\+End\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+\mbox{\Hypertarget{classec_1_1_geometry_ae0352702162501df185517e84c3b02bd}\label{classec_1_1_geometry_ae0352702162501df185517e84c3b02bd}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!end\+Render@{end\+Render}}
+\index{end\+Render@{end\+Render}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{end\+Render()}{endRender()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+::end\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 Called at the end of the rendering routine. 
 
-Implemented in \mbox{\hyperlink{classec_1_1_static_geometry_a2a66505344ad1a9eac31da2cf8171ea9}{ec\+::\+Static\+Geometry}}.
+Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a6d3b9c34a8b73aeac26663ef349ce41f}{ec\+::\+I\+Geometry\+Access}}.
 
-\mbox{\Hypertarget{classec_1_1_geometry_ae49d24667dca154cba707b0c219a8eb2}\label{classec_1_1_geometry_ae49d24667dca154cba707b0c219a8eb2}} 
-\index{ec\+::\+Geometry@{ec\+::\+Geometry}!On\+Render@{On\+Render}}
-\index{On\+Render@{On\+Render}!ec\+::\+Geometry@{ec\+::\+Geometry}}
-\subsubsection{\texorpdfstring{On\+Render()}{OnRender()}}
-{\footnotesize\ttfamily void ec\+::\+Geometry\+::\+On\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+\mbox{\Hypertarget{classec_1_1_geometry_a5d956ff01a7b6648ede8982e0a461ae0}\label{classec_1_1_geometry_a5d956ff01a7b6648ede8982e0a461ae0}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!get\+Ebo@{get\+Ebo}}
+\index{get\+Ebo@{get\+Ebo}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{get\+Ebo()}{getEbo()}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::get\+Ebo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the element buffer object id. \mbox{\Hypertarget{classec_1_1_geometry_a91a89baad39d4f2b2c4e9774d952dce9}\label{classec_1_1_geometry_a91a89baad39d4f2b2c4e9774d952dce9}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!get\+Vao@{get\+Vao}}
+\index{get\+Vao@{get\+Vao}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{get\+Vao()}{getVao()}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::get\+Vao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the vertex array object id. \mbox{\Hypertarget{classec_1_1_geometry_abad5d4311d16462099b8f9d084d99dd4}\label{classec_1_1_geometry_abad5d4311d16462099b8f9d084d99dd4}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!get\+Vbo@{get\+Vbo}}
+\index{get\+Vbo@{get\+Vbo}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{get\+Vbo()}{getVbo()}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::get\+Vbo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the vertex buffer object id. \mbox{\Hypertarget{classec_1_1_geometry_a1f166e70fc880e88092f29ef46afb836}\label{classec_1_1_geometry_a1f166e70fc880e88092f29ef46afb836}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!on\+Render@{on\+Render}}
+\index{on\+Render@{on\+Render}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{on\+Render()}{onRender()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+::on\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 The actual rendering of the object. 
 
-Implemented in \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_aea2c2ade5a97294e579a559b20771275}{ec\+::\+Dynamic\+Line\+Geometry}}, and \mbox{\hyperlink{classec_1_1_static_geometry_aa10330a07bc5ccd18d0d61c4c965bccd}{ec\+::\+Static\+Geometry}}.
+Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a2ee418c9fa4eb266347bae2f0ef8095b}{ec\+::\+I\+Geometry\+Access}}.
 
-\mbox{\Hypertarget{classec_1_1_geometry_a8de70c6fd7391ec0555b2df57912b177}\label{classec_1_1_geometry_a8de70c6fd7391ec0555b2df57912b177}} 
-\index{ec\+::\+Geometry@{ec\+::\+Geometry}!Render@{Render}}
-\index{Render@{Render}!ec\+::\+Geometry@{ec\+::\+Geometry}}
-\subsubsection{\texorpdfstring{Render()}{Render()}}
-{\footnotesize\ttfamily void ec\+::\+Geometry\+::\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{shader,  }\item[{const glm\+::mat4 \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{classec_1_1_geometry_a228d4a0fa01a17379f24aee2c769b501}\label{classec_1_1_geometry_a228d4a0fa01a17379f24aee2c769b501}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!recalculate\+Normals@{recalculate\+Normals}}
+\index{recalculate\+Normals@{recalculate\+Normals}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{recalculate\+Normals()}{recalculateNormals()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+::recalculate\+Normals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Recalculate vertex normals. \mbox{\Hypertarget{classec_1_1_geometry_ad4f80cd4d4c22b108c33b9030e91467b}\label{classec_1_1_geometry_ad4f80cd4d4c22b108c33b9030e91467b}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!set\+Mode@{set\+Mode}}
+\index{set\+Mode@{set\+Mode}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{set\+Mode()}{setMode()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+::set\+Mode (\begin{DoxyParamCaption}\item[{G\+Lenum}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_geometry_a12c3da280ff11e86a8b07d18a23e0880}\label{classec_1_1_geometry_a12c3da280ff11e86a8b07d18a23e0880}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{set\+Type()}{setType()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+::set\+Type (\begin{DoxyParamCaption}\item[{G\+Lenum}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_geometry_aeb72a472b242d92496f0283cfee17fac}\label{classec_1_1_geometry_aeb72a472b242d92496f0283cfee17fac}} 
+\index{ec\+::\+Geometry@{ec\+::\+Geometry}!m\+\_\+data@{m\+\_\+data}}
+\index{m\+\_\+data@{m\+\_\+data}!ec\+::\+Geometry@{ec\+::\+Geometry}}
+\subsubsection{\texorpdfstring{m\+\_\+data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_geometry_data}{Geometry\+Data}} ec\+::\+Geometry\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

@@ -1,8 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" href="$class_input.html" title="Input" alt="" coords="39,5,90,32"/>
-<area shape="rect" id="node2" href="$classagui_1_1_open_g_l_input.html" title="agui::OpenGLInput" alt="" coords="179,5,310,32"/>
+<area shape="rect" id="node2" href="$classagui_1_1_open_g_l_input.html" title="agui::OpenGLInput" alt="" coords="179,5,309,32"/>
 <area shape="rect" id="node3" href="$classec_1_1_input_listener.html" title="ec::InputListener" alt="" coords="5,81,124,108"/>
-<area shape="rect" id="node4" href="$classec_1_1_camera_controller.html" title="ec::CameraController" alt="" coords="173,56,317,83"/>
-<area shape="rect" id="node5" href="$classec_1_1_scene_controller.html" title="ec::SceneController" alt="" coords="177,107,313,133"/>
-<area shape="rect" id="node6" href="$classec__gui_1_1_g_u_i_controller.html" title="ec_gui::GUIController" alt="" coords="172,157,317,184"/>
+<area shape="rect" id="node4" href="$classec_1_1_camera_controller.html" title="ec::CameraController" alt="" coords="172,56,316,83"/>
+<area shape="rect" id="node5" href="$classec_1_1_scene_controller.html" title="ec::SceneController" alt="" coords="176,107,312,133"/>
+<area shape="rect" id="node6" href="$classec__gui_1_1_gui_controller.html" title="ec_gui::GuiController" alt="" coords="173,157,315,184"/>
 </map>

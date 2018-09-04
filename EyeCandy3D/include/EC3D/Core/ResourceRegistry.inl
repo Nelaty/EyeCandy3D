@@ -3,33 +3,37 @@ namespace ec
 {
 	template<class Resource>
 	ResourceRegistry<Resource>::ResourceRegistry()
-	{
-	}
+	= default;
 
 	template<class Resource>
 	ResourceRegistry<Resource>::~ResourceRegistry()
+	= default;
+
+	template<class Resource>
+	Resource* ResourceRegistry<Resource>::registerResource(Resource_Ptr resource, const std::string& key)
 	{
+		auto foundResource = getResource(key);
+		if(foundResource != nullptr)
+		{
+			return foundResource;
+		}
+
+		m_resources[key] = resource;
+		return getResource(key);
 	}
 
 	template<class Resource>
-	bool ResourceRegistry<Resource>::registerResource(Resource_Ptr resource, const std::string& key)
+	typename ResourceRegistry<Resource>::Resource_Ptr ResourceRegistry<Resource>::unregisterResource(const std::string& key)
 	{
-		if(isRegistered(key)) return false;
-
-		m_resources.insert(std::make_pair(key, resource));
-		return true;
-	}
-
-	template<class Resource>
-	Resource* ResourceRegistry<Resource>::unregisterResource(const std::string& key)
-	{
-		auto foundResource = m_resources.find(key);
-		if(foundResource == m_resources.end())
+		auto foundResource = getResource(key);
+		if(foundResource == nullptr)
 		{
 			return nullptr;
 		}
+
+		auto retVal = foundResource->second;
 		m_resources.erase(foundResource);
-		return foundResource->second;
+		return retVal;
 	}
 
 	template<class Resource>
@@ -46,13 +50,20 @@ namespace ec
 	template<class Resource>
 	bool ResourceRegistry<Resource>::isRegistered(const std::string& key)
 	{
-		return getResource(key) == nullptr;
+		return getResource(key) != nullptr;
 	}
 
 
 	template<class Resource>
-	bool ResourceRegistry<Resource>::isRegistered(Resource_Ptr)
+	bool ResourceRegistry<Resource>::isRegistered(Resource* resource)
 	{
+		for(const auto& it : m_resources)
+		{
+			if(it.second == resource)
+			{
+				return true;
+			}
+		}
 		return false;
 	}
 }

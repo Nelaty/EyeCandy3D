@@ -110,11 +110,11 @@ namespace ec
 		void scale(float sx, float sy, float sz);
 		/** Multiplicative scaling of the current scale. */
 		void scale(const glm::vec3& val);
-		/** Multiplicatively scale the x scale component. */
+		/** Multiplicative scaling of the x-scale component. */
 		void scaleX(float sx);
-		/** Multiplicatively scale the y scale component. */
+		/** Multiplicative scaling of y-scale component. */
 		void scaleY(float sy);
-		/** Multiplicatively scale the z scale component. */
+		/** Multiplicative scaling of z-scale component. */
 		void scaleZ(float sz);
 
 		/** Assign the given value to the current scale. */

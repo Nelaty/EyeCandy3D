@@ -15,8 +15,7 @@ Inheritance diagram for ec\+\_\+gui\+:\+:Button\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for ec\+\_\+gui\+:\+:Button\+:
-\nopagebreak
+Collaboration diagram for ec\+\_\+gui\+:\+:Button\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,13 +29,13 @@ Collaboration diagram for ec\+\_\+gui\+:\+:Button\+:
 \item 
 virtual \mbox{\hyperlink{classec__gui_1_1_button_a4e6b3dc59f83c39f5f644e8040f7577f}{$\sim$\+Button}} ()
 \item 
-void \mbox{\hyperlink{classec__gui_1_1_button_a81c99c46bc9f747cdacdafa813f6974e}{Set\+On\+Pressed\+Callback}} (std\+::function$<$ void()$>$ callback)
+void \mbox{\hyperlink{classec__gui_1_1_button_a2db872af3725958fafc6c1fe59c7c971}{set\+On\+Pressed\+Callback}} (std\+::function$<$ void()$>$ callback)
 \item 
-void \mbox{\hyperlink{classec__gui_1_1_button_a0c8039773e843b8e6d05058969b24a23}{Set\+On\+Button\+Down\+Callback}} (std\+::function$<$ void()$>$ callback)
+void \mbox{\hyperlink{classec__gui_1_1_button_a41d8f8d496449348e8fa2a3dfc5edaf4}{set\+On\+Button\+Down\+Callback}} (std\+::function$<$ void()$>$ callback)
 \item 
-void \mbox{\hyperlink{classec__gui_1_1_button_a39a9d1fa701cd83ee5818df093aa1bd3}{Set\+On\+Button\+Up\+Callback}} (std\+::function$<$ void()$>$ callback)
+void \mbox{\hyperlink{classec__gui_1_1_button_a5031b22c411277ab2625f28d6de4dd49}{set\+On\+Button\+Up\+Callback}} (std\+::function$<$ void()$>$ callback)
 \item 
-virtual bool \mbox{\hyperlink{classec__gui_1_1_button_a9df65865d810e2ba198905cdf691f9be}{On\+Mouse\+Button}} (const glm\+::ivec2 \&position, int button, int mods, bool pressed) override
+bool \mbox{\hyperlink{classec__gui_1_1_button_aee51b738c759beadb9de9734ca1bde08}{on\+Mouse\+Button}} (const glm\+::ivec2 \&position, int button, int mods, bool pressed) override
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -61,38 +60,38 @@ std\+::function$<$ void()$>$ \mbox{\hyperlink{classec__gui_1_1_button_a7a4572135
 \index{ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}!````~Button@{$\sim$\+Button}}
 \index{````~Button@{$\sim$\+Button}!ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}}
 \subsubsection{\texorpdfstring{$\sim$\+Button()}{~Button()}}
-{\footnotesize\ttfamily ec\+\_\+gui\+::\+Button\+::$\sim$\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Button\+::$\sim$\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec__gui_1_1_button_a9df65865d810e2ba198905cdf691f9be}\label{classec__gui_1_1_button_a9df65865d810e2ba198905cdf691f9be}} 
-\index{ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}!On\+Mouse\+Button@{On\+Mouse\+Button}}
-\index{On\+Mouse\+Button@{On\+Mouse\+Button}!ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}}
-\subsubsection{\texorpdfstring{On\+Mouse\+Button()}{OnMouseButton()}}
-{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Button\+::\+On\+Mouse\+Button (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{int}]{button,  }\item[{int}]{mods,  }\item[{bool}]{pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{classec__gui_1_1_button_aee51b738c759beadb9de9734ca1bde08}\label{classec__gui_1_1_button_aee51b738c759beadb9de9734ca1bde08}} 
+\index{ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}!on\+Mouse\+Button@{on\+Mouse\+Button}}
+\index{on\+Mouse\+Button@{on\+Mouse\+Button}!ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{on\+Mouse\+Button()}{onMouseButton()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Button\+::on\+Mouse\+Button (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{position,  }\item[{int}]{button,  }\item[{int}]{mods,  }\item[{bool}]{pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a00bff8173079cc1cb69ec84910715ffb}{ec\+\_\+gui\+::\+Widget}}.
+Reimplemented from \mbox{\hyperlink{classec__gui_1_1_widget_a824efc45fa4df40d7e1e94f08e6363cf}{ec\+\_\+gui\+::\+Widget}}.
 
-\mbox{\Hypertarget{classec__gui_1_1_button_a0c8039773e843b8e6d05058969b24a23}\label{classec__gui_1_1_button_a0c8039773e843b8e6d05058969b24a23}} 
-\index{ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}!Set\+On\+Button\+Down\+Callback@{Set\+On\+Button\+Down\+Callback}}
-\index{Set\+On\+Button\+Down\+Callback@{Set\+On\+Button\+Down\+Callback}!ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}}
-\subsubsection{\texorpdfstring{Set\+On\+Button\+Down\+Callback()}{SetOnButtonDownCallback()}}
-{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Button\+::\+Set\+On\+Button\+Down\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec__gui_1_1_button_a41d8f8d496449348e8fa2a3dfc5edaf4}\label{classec__gui_1_1_button_a41d8f8d496449348e8fa2a3dfc5edaf4}} 
+\index{ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}!set\+On\+Button\+Down\+Callback@{set\+On\+Button\+Down\+Callback}}
+\index{set\+On\+Button\+Down\+Callback@{set\+On\+Button\+Down\+Callback}!ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{set\+On\+Button\+Down\+Callback()}{setOnButtonDownCallback()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Button\+::set\+On\+Button\+Down\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec__gui_1_1_button_a39a9d1fa701cd83ee5818df093aa1bd3}\label{classec__gui_1_1_button_a39a9d1fa701cd83ee5818df093aa1bd3}} 
-\index{ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}!Set\+On\+Button\+Up\+Callback@{Set\+On\+Button\+Up\+Callback}}
-\index{Set\+On\+Button\+Up\+Callback@{Set\+On\+Button\+Up\+Callback}!ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}}
-\subsubsection{\texorpdfstring{Set\+On\+Button\+Up\+Callback()}{SetOnButtonUpCallback()}}
-{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Button\+::\+Set\+On\+Button\+Up\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec__gui_1_1_button_a5031b22c411277ab2625f28d6de4dd49}\label{classec__gui_1_1_button_a5031b22c411277ab2625f28d6de4dd49}} 
+\index{ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}!set\+On\+Button\+Up\+Callback@{set\+On\+Button\+Up\+Callback}}
+\index{set\+On\+Button\+Up\+Callback@{set\+On\+Button\+Up\+Callback}!ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{set\+On\+Button\+Up\+Callback()}{setOnButtonUpCallback()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Button\+::set\+On\+Button\+Up\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec__gui_1_1_button_a81c99c46bc9f747cdacdafa813f6974e}\label{classec__gui_1_1_button_a81c99c46bc9f747cdacdafa813f6974e}} 
-\index{ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}!Set\+On\+Pressed\+Callback@{Set\+On\+Pressed\+Callback}}
-\index{Set\+On\+Pressed\+Callback@{Set\+On\+Pressed\+Callback}!ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}}
-\subsubsection{\texorpdfstring{Set\+On\+Pressed\+Callback()}{SetOnPressedCallback()}}
-{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Button\+::\+Set\+On\+Pressed\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec__gui_1_1_button_a2db872af3725958fafc6c1fe59c7c971}\label{classec__gui_1_1_button_a2db872af3725958fafc6c1fe59c7c971}} 
+\index{ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}!set\+On\+Pressed\+Callback@{set\+On\+Pressed\+Callback}}
+\index{set\+On\+Pressed\+Callback@{set\+On\+Pressed\+Callback}!ec\+\_\+gui\+::\+Button@{ec\+\_\+gui\+::\+Button}}
+\subsubsection{\texorpdfstring{set\+On\+Pressed\+Callback()}{setOnPressedCallback()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Button\+::set\+On\+Pressed\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
 
 
 

@@ -1,0 +1,138 @@
+\hypertarget{classec__gui_1_1_gui}{}\section{ec\+\_\+gui\+:\+:Gui Class Reference}
+\label{classec__gui_1_1_gui}\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+
+
+{\ttfamily \#include $<$G\+U\+I.\+h$>$}
+
+
+
+Collaboration diagram for ec\+\_\+gui\+:\+:Gui\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classec__gui_1_1_gui__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec__gui_1_1_gui_af2df87aa1795fe5b141e1137084f7822}{Widget\+\_\+\+TP}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec__gui_1_1_gui_a3db88342b9e6979451a50d96e769b10d}{Gui}} (std\+::string gui\+Name)
+\item 
+virtual \mbox{\hyperlink{classec__gui_1_1_gui_a77aa635b86319deb6318c1255ffddc7d}{$\sim$\+Gui}} ()
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_gui_a173a82ceeec4a539c8e8fa840e73d867}{enable}} (bool enabled) const
+\item 
+bool \mbox{\hyperlink{classec__gui_1_1_gui_a1afd78c6ec1dc802c58adf5eb73fbf2e}{is\+Enabled}} () const
+\item 
+\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$ \mbox{\hyperlink{classec__gui_1_1_gui_a35320910e22b37df873993786dde35e2}{get\+Widget}} () const
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_gui_a85e0f5a75c0721cd6d83fa0531ebaa4d}{set\+Root}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $>$ root)
+\item 
+\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$ \mbox{\hyperlink{classec__gui_1_1_gui_a180e748ae4ff3db1398c2a2db7eee9f7}{get\+Root}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{classec__gui_1_1_gui_a9b55e3b7f9c46982e5c67fc84d909dd9}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classec__gui_1_1_gui_a3d5ebcd1961f7f2b352ab071061e1c3f}{set\+Name}} (const std\+::string \&gui\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classec__gui_1_1_gui_a2d2b9975b1375f9bb0d799877d8fc76a}{m\+\_\+name}}
+\item 
+\mbox{\hyperlink{classec__gui_1_1_gui_af2df87aa1795fe5b141e1137084f7822}{Widget\+\_\+\+TP}} \mbox{\hyperlink{classec__gui_1_1_gui_afc73c5c8b07c8ee9eb01ce84b5d0d748}{m\+\_\+widget\+Root}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_gui_af2df87aa1795fe5b141e1137084f7822}\label{classec__gui_1_1_gui_af2df87aa1795fe5b141e1137084f7822}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!Widget\+\_\+\+TP@{Widget\+\_\+\+TP}}
+\index{Widget\+\_\+\+TP@{Widget\+\_\+\+TP}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{Widget\+\_\+\+TP}{Widget\_TP}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec__gui_1_1_gui_af2df87aa1795fe5b141e1137084f7822}{ec\+\_\+gui\+::\+Gui\+::\+Widget\+\_\+\+TP}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec__gui_1_1_widget}{Widget}}$>$}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_gui_a3db88342b9e6979451a50d96e769b10d}\label{classec__gui_1_1_gui_a3db88342b9e6979451a50d96e769b10d}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!Gui@{Gui}}
+\index{Gui@{Gui}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{Gui()}{Gui()}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Gui\+::\+Gui (\begin{DoxyParamCaption}\item[{std\+::string}]{gui\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_a77aa635b86319deb6318c1255ffddc7d}\label{classec__gui_1_1_gui_a77aa635b86319deb6318c1255ffddc7d}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!````~Gui@{$\sim$\+Gui}}
+\index{````~Gui@{$\sim$\+Gui}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{$\sim$\+Gui()}{~Gui()}}
+{\footnotesize\ttfamily ec\+\_\+gui\+::\+Gui\+::$\sim$\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_gui_a173a82ceeec4a539c8e8fa840e73d867}\label{classec__gui_1_1_gui_a173a82ceeec4a539c8e8fa840e73d867}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!enable@{enable}}
+\index{enable@{enable}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Gui\+::enable (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_a9b55e3b7f9c46982e5c67fc84d909dd9}\label{classec__gui_1_1_gui_a9b55e3b7f9c46982e5c67fc84d909dd9}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& ec\+\_\+gui\+::\+Gui\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_a180e748ae4ff3db1398c2a2db7eee9f7}\label{classec__gui_1_1_gui_a180e748ae4ff3db1398c2a2db7eee9f7}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!get\+Root@{get\+Root}}
+\index{get\+Root@{get\+Root}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{get\+Root()}{getRoot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec__gui_1_1_widget}{ec\+\_\+gui\+::\+Widget}} $\ast$ ec\+\_\+gui\+::\+Gui\+::get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_a35320910e22b37df873993786dde35e2}\label{classec__gui_1_1_gui_a35320910e22b37df873993786dde35e2}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!get\+Widget@{get\+Widget}}
+\index{get\+Widget@{get\+Widget}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{get\+Widget()}{getWidget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $\ast$ ec\+\_\+gui\+::\+Gui\+::get\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_a1afd78c6ec1dc802c58adf5eb73fbf2e}\label{classec__gui_1_1_gui_a1afd78c6ec1dc802c58adf5eb73fbf2e}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!is\+Enabled@{is\+Enabled}}
+\index{is\+Enabled@{is\+Enabled}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{is\+Enabled()}{isEnabled()}}
+{\footnotesize\ttfamily bool ec\+\_\+gui\+::\+Gui\+::is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_a3d5ebcd1961f7f2b352ab071061e1c3f}\label{classec__gui_1_1_gui_a3d5ebcd1961f7f2b352ab071061e1c3f}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Gui\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{gui\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_a85e0f5a75c0721cd6d83fa0531ebaa4d}\label{classec__gui_1_1_gui_a85e0f5a75c0721cd6d83fa0531ebaa4d}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!set\+Root@{set\+Root}}
+\index{set\+Root@{set\+Root}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{set\+Root()}{setRoot()}}
+{\footnotesize\ttfamily void ec\+\_\+gui\+::\+Gui\+::set\+Root (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec__gui_1_1_widget}{Widget}} $>$}]{root }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classec__gui_1_1_gui_a2d2b9975b1375f9bb0d799877d8fc76a}\label{classec__gui_1_1_gui_a2d2b9975b1375f9bb0d799877d8fc76a}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!m\+\_\+name@{m\+\_\+name}}
+\index{m\+\_\+name@{m\+\_\+name}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{m\+\_\+name}{m\_name}}
+{\footnotesize\ttfamily std\+::string ec\+\_\+gui\+::\+Gui\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec__gui_1_1_gui_afc73c5c8b07c8ee9eb01ce84b5d0d748}\label{classec__gui_1_1_gui_afc73c5c8b07c8ee9eb01ce84b5d0d748}} 
+\index{ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}!m\+\_\+widget\+Root@{m\+\_\+widget\+Root}}
+\index{m\+\_\+widget\+Root@{m\+\_\+widget\+Root}!ec\+\_\+gui\+::\+Gui@{ec\+\_\+gui\+::\+Gui}}
+\subsubsection{\texorpdfstring{m\+\_\+widget\+Root}{m\_widgetRoot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec__gui_1_1_gui_af2df87aa1795fe5b141e1137084f7822}{Widget\+\_\+\+TP}} ec\+\_\+gui\+::\+Gui\+::m\+\_\+widget\+Root\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\mbox{\hyperlink{_g_u_i_8h}{G\+U\+I.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\mbox{\hyperlink{_g_u_i_8cpp}{G\+U\+I.\+cpp}}\end{DoxyCompactItemize}

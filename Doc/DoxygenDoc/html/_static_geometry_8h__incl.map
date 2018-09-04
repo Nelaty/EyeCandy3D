@@ -1,5 +1,6 @@
 <map id="D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/StaticGeometry.h" name="D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/StaticGeometry.h">
-<area shape="rect" id="node2" href="$_geometry_8h.html" title="EC3D/Core/Geometry.h" alt="" coords="127,124,286,151"/>
-<area shape="rect" id="node3" href="$_vertex_8h.html" title="Vertex.h" alt="" coords="17,199,87,225"/>
-<area shape="rect" id="node5" href="$_texture_8h.html" title="Texture.h" alt="" coords="163,199,239,225"/>
+<area shape="rect" id="node3" href="$_geometry_8h.html" title="EC3D/Core/Geometry.h" alt="" coords="117,124,275,151"/>
+<area shape="rect" id="node4" href="$_i_geometry_access_8h.html" title="EC3D/Core/IGeometryAccess.h" alt="" coords="314,199,521,225"/>
+<area shape="rect" id="node6" href="$_geometry_data_8h.html" title="EC3D/Core/GeometryData.h" alt="" coords="103,199,289,225"/>
+<area shape="rect" id="node7" href="$_vertex_8h.html" title="EC3D/Core/Vertex.h" alt="" coords="239,273,379,300"/>
 </map>

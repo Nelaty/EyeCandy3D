@@ -1,4 +1,5 @@
 <map id="ec::DynamicGeometry" name="ec::DynamicGeometry">
-<area shape="rect" id="node3" href="$classec_1_1_dynamic_line_geometry.html" title="{ec::DynamicLineGeometry\n||+ DynamicLineGeometry()\l+ ~DynamicLineGeometry()\l+ SetStart()\l+ GetStart()\l+ SetEnd()\l+ GetEnd()\l+ SetLinewidth()\l+ GetLinewidth()\l# OnRender()\l}" alt="" coords="5,344,188,539"/>
-<area shape="rect" id="node2" href="$classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ Render()\l# BeginRender()\l# OnRender()\l# EndRender()\l# Geometry()\l}" alt="" coords="39,5,154,156"/>
+<area shape="rect" id="node4" href="$classec_1_1_dynamic_line_geometry.html" title="{ec::DynamicLineGeometry\n||+ DynamicLineGeometry()\l+ ~DynamicLineGeometry()\l+ setStart()\l+ getStart()\l+ setEnd()\l+ getEnd()\l+ setLineWidth()\l+ getLineWidth()\l# beginRender()\l# onRender()\l# endRender()\l}" alt="" coords="5,645,188,869"/>
+<area shape="rect" id="node2" href="$classec_1_1_geometry.html" title="{ec::Geometry\n|# m_data\l|+ ~Geometry()\l+ recalculateNormals()\l+ getVao()\l+ getVbo()\l+ getEbo()\l# Geometry()\l# beginRender()\l# onRender()\l# endRender()\l# setMode()\l# setType()\l}" alt="" coords="20,204,173,428"/>
+<area shape="rect" id="node3" href="$classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="19,5,174,156"/>
 </map>

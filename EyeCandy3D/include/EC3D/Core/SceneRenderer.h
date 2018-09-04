@@ -1,6 +1,7 @@
 #pragma once
-#include "EC3D/Gui/GuiRenderer.h"
 #include "EC3D/Core/Frame.h"
+
+#include <glm/glm.hpp>
 
 #include <set>
 

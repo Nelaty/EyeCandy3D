@@ -1,8 +1,8 @@
 <map id="ec::InputEvent" name="ec::InputEvent">
-<area shape="rect" id="node4" href="$unionec_1_1_input_event_1_1_event_data.html" title="{ec::InputEvent::EventData\n||+ EventData()\l+ ~EventData()\l}" alt="" coords="589,535,760,627"/>
-<area shape="rect" id="node5" href="$structec_1_1_keyboard_event.html" title="{ec::KeyboardEvent\n||+ KeyboardEvent()\l+ KeyboardEvent()\l+ ~KeyboardEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="429,292,566,472"/>
-<area shape="rect" id="node9" href="$structec_1_1_display_event.html" title="{ec::DisplayEvent\n||+ DisplayEvent()\l+ DisplayEvent()\l+ Print()\l}" alt="" coords="243,329,362,435"/>
-<area shape="rect" id="node11" href="$structec_1_1_mouse_event.html" title="{ec::MouseEvent\n||+ MouseEvent()\l+ MouseEvent()\l+ ~MouseEvent()\l+ Print()\l+ ShiftPressed()\l+ ControlPressed()\l+ AltPressed()\l+ SuperPressed()\l}" alt="" coords="1088,292,1219,472"/>
-<area shape="rect" id="node13" href="$structec_1_1_drop_event.html" title="{ec::DropEvent\n||+ DropEvent()\l+ DropEvent()\l+ ~DropEvent()\l+ Print()\l}" alt="" coords="852,321,961,443"/>
-<area shape="rect" id="node15" href="$structec_1_1_joystick_event.html" title="{ec::JoystickEvent\n||+ JoystickEvent()\l+ JoystickEvent()\l+ ~JoystickEvent()\l+ Print()\l}" alt="" coords="609,321,740,443"/>
+<area shape="rect" id="node3" href="$unionec_1_1_event_data.html" title="{ec::EventData\n||+ EventData()\l+ ~EventData()\l}" alt="" coords="612,535,721,627"/>
+<area shape="rect" id="node4" href="$structec_1_1_keyboard_event.html" title="{ec::KeyboardEvent\n||+ KeyboardEvent()\l+ KeyboardEvent()\l+ ~KeyboardEvent()\l+ print()\l+ shiftPressed()\l+ controlPressed()\l+ altPressed()\l+ superPressed()\l}" alt="" coords="421,292,558,472"/>
+<area shape="rect" id="node8" href="$structec_1_1_display_event.html" title="{ec::DisplayEvent\n||+ DisplayEvent()\l+ DisplayEvent()\l+ print()\l}" alt="" coords="235,329,354,435"/>
+<area shape="rect" id="node10" href="$structec_1_1_mouse_event.html" title="{ec::MouseEvent\n||+ MouseEvent()\l+ MouseEvent()\l+ ~MouseEvent()\l+ print()\l+ shiftPressed()\l+ controlPressed()\l+ altPressed()\l+ superPressed()\l}" alt="" coords="1089,292,1218,472"/>
+<area shape="rect" id="node12" href="$structec_1_1_drop_event.html" title="{ec::DropEvent\n||+ DropEvent()\l+ DropEvent()\l+ ~DropEvent()\l+ print()\l}" alt="" coords="852,321,961,443"/>
+<area shape="rect" id="node14" href="$structec_1_1_joystick_event.html" title="{ec::JoystickEvent\n||+ JoystickEvent()\l+ JoystickEvent()\l+ ~JoystickEvent()\l+ print()\l}" alt="" coords="601,321,732,443"/>
 </map>

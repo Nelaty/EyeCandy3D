@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for ec\+:\+:Node\+:
-\nopagebreak
+Inheritance diagram for ec\+:\+:Node\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for ec\+:\+:Node\+:
 \end{figure}
 
 
-Collaboration diagram for ec\+:\+:Node\+:
-\nopagebreak
+Collaboration diagram for ec\+:\+:Node\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,39 +25,39 @@ Collaboration diagram for ec\+:\+:Node\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classec_1_1_node_a99fb4715fbc3f193ad5ed88dff15cd0e}{Node}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$parent)
+\mbox{\hyperlink{classec_1_1_node_a38582758606734f5f3a0e5c6d3dc0200}{Node}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$parent=nullptr)
 \item 
 virtual \mbox{\hyperlink{classec_1_1_node_a6b2dfa6d2490ec46a5d15a326780889b}{$\sim$\+Node}} ()
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_node_ac606be4f6d5a899a0b9679b6767ff109}{Render}} (\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \&renderer)
+virtual void \mbox{\hyperlink{classec_1_1_node_add44dc77d499886e9c75a0e1c1e446cf}{render}} (\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \&renderer)
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_node_ac9970ec0ec03e130da59d0d5376a9855}{Update\+Global\+Matrices}} (const glm\+::mat4 \&m\+\_\+parent\+Mat)
+virtual void \mbox{\hyperlink{classec_1_1_node_a12a9b14ccc434c52404e262ef5db6f80}{update\+Global\+Matrices}} (const glm\+::mat4 \&parent\+Mat)
 \item 
-const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_node_aafbc9c31eb710b1ac22834792e039435}{Get\+Global\+Mat}} () const
+const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_node_aecf550ed169a643bd9c23979377d8afc}{get\+Global\+Mat}} () const
 \item 
-const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_node_a0acfd7f3ead66d1694d2147383432da8}{Get\+Global\+Position}} ()
+glm\+::vec3 \mbox{\hyperlink{classec_1_1_node_ab4072f05f2b51e3d76f67e8557fc2134}{get\+Global\+Position}} () const
 \item 
-\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classec_1_1_node_a88919835b03a7055f4c1c50c68b83fac}{Get\+Parent}} ()
+\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classec_1_1_node_ae1f93035b3df9db7a24afc06a7526dab}{get\+Parent}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_node_abda1732f28b0f81df2028d889eb73bdf}{Set\+Parent}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$parent)
+void \mbox{\hyperlink{classec_1_1_node_a3c908e5f01e989cedfba5dc1a3ed66c1}{set\+Parent}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$parent)
 \item 
-void \mbox{\hyperlink{classec_1_1_node_a769243d9432b14a0c4362c98f4c89a73}{Add\+Child}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$child)
+void \mbox{\hyperlink{classec_1_1_node_a647bcdef4e01de3ecb34e0917ba9e333}{add\+Child}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$child)
 \item 
-bool \mbox{\hyperlink{classec_1_1_node_a65f938c730afc4f5b4fcceb64ac84416}{Remove\+Child}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$child)
+bool \mbox{\hyperlink{classec_1_1_node_ab0d856da4064db916e6fd4f9ad1ecafb}{remove\+Child}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$child)
 \item 
-void \mbox{\hyperlink{classec_1_1_node_ae91a96819729bc06c17870fa8cca2129}{Remove\+Children}} ()
+void \mbox{\hyperlink{classec_1_1_node_a4d9f13d7482fe4612ec2cffa8a06cc00}{remove\+Children}} ()
 \item 
-unsigned int \mbox{\hyperlink{classec_1_1_node_afc08689badadadcbbca919858994d30b}{Get\+Children\+Count}} () const
+unsigned int \mbox{\hyperlink{classec_1_1_node_a3fb0342e532d42984870f598ec4d0ba3}{get\+Children\+Count}} () const
 \item 
-bool \mbox{\hyperlink{classec_1_1_node_add6f4b234aebaeb7d1e76d42234b9831}{Has\+Children}} () const
+bool \mbox{\hyperlink{classec_1_1_node_ae1626b695c7c5f15af399772b51d0a5a}{has\+Children}} () const
 \item 
-virtual const std\+::vector$<$ \mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$ $>$ \& \mbox{\hyperlink{classec_1_1_node_ab1cd50204e1b38c9c1b31e46d13ea915}{Get\+Drawables}} () const
+virtual const std\+::vector$<$ \mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$ $>$ \& \mbox{\hyperlink{classec_1_1_node_a2403cd39000eceffdec878133f621e3a}{get\+Drawables}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_node_aee80ae03faf344743ab38944ce3ced5f}{Add\+Drawable}} (\mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$\mbox{\hyperlink{namespaceec_ae4420ccd0f79418a5ce075e43909289fac571a3227368b17e0ecc38a2a417e201}{drawable}})
+void \mbox{\hyperlink{classec_1_1_node_aef615bcf1c24225838e00c15d03dc707}{add\+Drawable}} (\mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$\mbox{\hyperlink{namespaceec_ae4420ccd0f79418a5ce075e43909289fac571a3227368b17e0ecc38a2a417e201}{drawable}})
 \item 
-void \mbox{\hyperlink{classec_1_1_node_acd641d3927ae368628ac90d5d79597d9}{Remove\+Drawable}} (\mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$\mbox{\hyperlink{namespaceec_ae4420ccd0f79418a5ce075e43909289fac571a3227368b17e0ecc38a2a417e201}{drawable}})
+void \mbox{\hyperlink{classec_1_1_node_a9cd4bc1df04ee734dd11ebe0b9079434}{remove\+Drawable}} (\mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$\mbox{\hyperlink{namespaceec_ae4420ccd0f79418a5ce075e43909289fac571a3227368b17e0ecc38a2a417e201}{drawable}})
 \item 
-void \mbox{\hyperlink{classec_1_1_node_ad874f229d3602ac6f0d0f0ce502a1fbc}{Remove\+Drawables}} ()
+void \mbox{\hyperlink{classec_1_1_node_a57fd7f0d158527df372880399ca48002}{remove\+Drawables}} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -73,114 +71,114 @@ std\+::vector$<$ \mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$ $>$ \m
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classec_1_1_node_a99fb4715fbc3f193ad5ed88dff15cd0e}\label{classec_1_1_node_a99fb4715fbc3f193ad5ed88dff15cd0e}} 
+\mbox{\Hypertarget{classec_1_1_node_a38582758606734f5f3a0e5c6d3dc0200}\label{classec_1_1_node_a38582758606734f5f3a0e5c6d3dc0200}} 
 \index{ec\+::\+Node@{ec\+::\+Node}!Node@{Node}}
 \index{Node@{Node}!ec\+::\+Node@{ec\+::\+Node}}
 \subsubsection{\texorpdfstring{Node()}{Node()}}
-{\footnotesize\ttfamily ec\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily ec\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 \mbox{\Hypertarget{classec_1_1_node_a6b2dfa6d2490ec46a5d15a326780889b}\label{classec_1_1_node_a6b2dfa6d2490ec46a5d15a326780889b}} 
 \index{ec\+::\+Node@{ec\+::\+Node}!````~Node@{$\sim$\+Node}}
 \index{````~Node@{$\sim$\+Node}!ec\+::\+Node@{ec\+::\+Node}}
 \subsubsection{\texorpdfstring{$\sim$\+Node()}{~Node()}}
-{\footnotesize\ttfamily ec\+::\+Node\+::$\sim$\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily ec\+::\+Node\+::$\sim$\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_node_a769243d9432b14a0c4362c98f4c89a73}\label{classec_1_1_node_a769243d9432b14a0c4362c98f4c89a73}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Add\+Child@{Add\+Child}}
-\index{Add\+Child@{Add\+Child}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Add\+Child()}{AddChild()}}
-{\footnotesize\ttfamily void ec\+::\+Node\+::\+Add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{child }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_node_a647bcdef4e01de3ecb34e0917ba9e333}\label{classec_1_1_node_a647bcdef4e01de3ecb34e0917ba9e333}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!add\+Child@{add\+Child}}
+\index{add\+Child@{add\+Child}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{add\+Child()}{addChild()}}
+{\footnotesize\ttfamily void ec\+::\+Node\+::add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{child }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_node_aee80ae03faf344743ab38944ce3ced5f}\label{classec_1_1_node_aee80ae03faf344743ab38944ce3ced5f}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Add\+Drawable@{Add\+Drawable}}
-\index{Add\+Drawable@{Add\+Drawable}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Add\+Drawable()}{AddDrawable()}}
-{\footnotesize\ttfamily void ec\+::\+Node\+::\+Add\+Drawable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$}]{drawable }\end{DoxyParamCaption})}
+Add a new child to this node \mbox{\Hypertarget{classec_1_1_node_aef615bcf1c24225838e00c15d03dc707}\label{classec_1_1_node_aef615bcf1c24225838e00c15d03dc707}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!add\+Drawable@{add\+Drawable}}
+\index{add\+Drawable@{add\+Drawable}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{add\+Drawable()}{addDrawable()}}
+{\footnotesize\ttfamily void ec\+::\+Node\+::add\+Drawable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$}]{drawable }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_node_afc08689badadadcbbca919858994d30b}\label{classec_1_1_node_afc08689badadadcbbca919858994d30b}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Get\+Children\+Count@{Get\+Children\+Count}}
-\index{Get\+Children\+Count@{Get\+Children\+Count}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Get\+Children\+Count()}{GetChildrenCount()}}
-{\footnotesize\ttfamily unsigned int ec\+::\+Node\+::\+Get\+Children\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+Add a given drawable to this node. \mbox{\Hypertarget{classec_1_1_node_a3fb0342e532d42984870f598ec4d0ba3}\label{classec_1_1_node_a3fb0342e532d42984870f598ec4d0ba3}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!get\+Children\+Count@{get\+Children\+Count}}
+\index{get\+Children\+Count@{get\+Children\+Count}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Children\+Count()}{getChildrenCount()}}
+{\footnotesize\ttfamily unsigned int ec\+::\+Node\+::get\+Children\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_node_ab1cd50204e1b38c9c1b31e46d13ea915}\label{classec_1_1_node_ab1cd50204e1b38c9c1b31e46d13ea915}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Get\+Drawables@{Get\+Drawables}}
-\index{Get\+Drawables@{Get\+Drawables}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Get\+Drawables()}{GetDrawables()}}
-{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$ $>$ \& ec\+::\+Node\+::\+Get\+Drawables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+Get the number of children nodes. \mbox{\Hypertarget{classec_1_1_node_a2403cd39000eceffdec878133f621e3a}\label{classec_1_1_node_a2403cd39000eceffdec878133f621e3a}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!get\+Drawables@{get\+Drawables}}
+\index{get\+Drawables@{get\+Drawables}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Drawables()}{getDrawables()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$ $>$ \& ec\+::\+Node\+::get\+Drawables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classec_1_1_node_aafbc9c31eb710b1ac22834792e039435}\label{classec_1_1_node_aafbc9c31eb710b1ac22834792e039435}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Get\+Global\+Mat@{Get\+Global\+Mat}}
-\index{Get\+Global\+Mat@{Get\+Global\+Mat}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Get\+Global\+Mat()}{GetGlobalMat()}}
-{\footnotesize\ttfamily const glm\+::mat4 \& ec\+::\+Node\+::\+Get\+Global\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+Get all drawables related to this node. \mbox{\Hypertarget{classec_1_1_node_aecf550ed169a643bd9c23979377d8afc}\label{classec_1_1_node_aecf550ed169a643bd9c23979377d8afc}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!get\+Global\+Mat@{get\+Global\+Mat}}
+\index{get\+Global\+Mat@{get\+Global\+Mat}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Global\+Mat()}{getGlobalMat()}}
+{\footnotesize\ttfamily const glm\+::mat4 \& ec\+::\+Node\+::get\+Global\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the current global matrix. This node needs to be rendered at least once, for the matrix to be something else than the unit matrix. \mbox{\Hypertarget{classec_1_1_node_a0acfd7f3ead66d1694d2147383432da8}\label{classec_1_1_node_a0acfd7f3ead66d1694d2147383432da8}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Get\+Global\+Position@{Get\+Global\+Position}}
-\index{Get\+Global\+Position@{Get\+Global\+Position}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Get\+Global\+Position()}{GetGlobalPosition()}}
-{\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Node\+::\+Get\+Global\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Get the current global matrix. This node needs to be rendered at least once, for the matrix to be something else than the unit matrix. \mbox{\Hypertarget{classec_1_1_node_ab4072f05f2b51e3d76f67e8557fc2134}\label{classec_1_1_node_ab4072f05f2b51e3d76f67e8557fc2134}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!get\+Global\+Position@{get\+Global\+Position}}
+\index{get\+Global\+Position@{get\+Global\+Position}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Global\+Position()}{getGlobalPosition()}}
+{\footnotesize\ttfamily glm\+::vec3 ec\+::\+Node\+::get\+Global\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the current global position Global matrix has to be updated before calling this function! If not, the position will be from the last frame. \mbox{\Hypertarget{classec_1_1_node_a88919835b03a7055f4c1c50c68b83fac}\label{classec_1_1_node_a88919835b03a7055f4c1c50c68b83fac}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Get\+Parent@{Get\+Parent}}
-\index{Get\+Parent@{Get\+Parent}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Get\+Parent()}{GetParent()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_node}{ec\+::\+Node}} $\ast$ ec\+::\+Node\+::\+Get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Get the current global position Global matrix has to be updated before calling this function! If not, the position will be from the last frame. \mbox{\Hypertarget{classec_1_1_node_ae1f93035b3df9db7a24afc06a7526dab}\label{classec_1_1_node_ae1f93035b3df9db7a24afc06a7526dab}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!get\+Parent@{get\+Parent}}
+\index{get\+Parent@{get\+Parent}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Parent()}{getParent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_node}{ec\+::\+Node}} $\ast$ ec\+::\+Node\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_node_add6f4b234aebaeb7d1e76d42234b9831}\label{classec_1_1_node_add6f4b234aebaeb7d1e76d42234b9831}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Has\+Children@{Has\+Children}}
-\index{Has\+Children@{Has\+Children}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Has\+Children()}{HasChildren()}}
-{\footnotesize\ttfamily bool ec\+::\+Node\+::\+Has\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+Get this node\textquotesingle{}s parent node. \mbox{\Hypertarget{classec_1_1_node_ae1626b695c7c5f15af399772b51d0a5a}\label{classec_1_1_node_ae1626b695c7c5f15af399772b51d0a5a}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!has\+Children@{has\+Children}}
+\index{has\+Children@{has\+Children}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{has\+Children()}{hasChildren()}}
+{\footnotesize\ttfamily bool ec\+::\+Node\+::has\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_node_a65f938c730afc4f5b4fcceb64ac84416}\label{classec_1_1_node_a65f938c730afc4f5b4fcceb64ac84416}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Remove\+Child@{Remove\+Child}}
-\index{Remove\+Child@{Remove\+Child}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Remove\+Child()}{RemoveChild()}}
-{\footnotesize\ttfamily bool ec\+::\+Node\+::\+Remove\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{child }\end{DoxyParamCaption})}
+Check if this node has one or more child nodes. \mbox{\Hypertarget{classec_1_1_node_ab0d856da4064db916e6fd4f9ad1ecafb}\label{classec_1_1_node_ab0d856da4064db916e6fd4f9ad1ecafb}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!remove\+Child@{remove\+Child}}
+\index{remove\+Child@{remove\+Child}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{remove\+Child()}{removeChild()}}
+{\footnotesize\ttfamily bool ec\+::\+Node\+::remove\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{child }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_node_ae91a96819729bc06c17870fa8cca2129}\label{classec_1_1_node_ae91a96819729bc06c17870fa8cca2129}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Remove\+Children@{Remove\+Children}}
-\index{Remove\+Children@{Remove\+Children}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Remove\+Children()}{RemoveChildren()}}
-{\footnotesize\ttfamily void ec\+::\+Node\+::\+Remove\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Remove an existing child from this node. \mbox{\Hypertarget{classec_1_1_node_a4d9f13d7482fe4612ec2cffa8a06cc00}\label{classec_1_1_node_a4d9f13d7482fe4612ec2cffa8a06cc00}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!remove\+Children@{remove\+Children}}
+\index{remove\+Children@{remove\+Children}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{remove\+Children()}{removeChildren()}}
+{\footnotesize\ttfamily void ec\+::\+Node\+::remove\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_node_acd641d3927ae368628ac90d5d79597d9}\label{classec_1_1_node_acd641d3927ae368628ac90d5d79597d9}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Remove\+Drawable@{Remove\+Drawable}}
-\index{Remove\+Drawable@{Remove\+Drawable}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Remove\+Drawable()}{RemoveDrawable()}}
-{\footnotesize\ttfamily void ec\+::\+Node\+::\+Remove\+Drawable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$}]{drawable }\end{DoxyParamCaption})}
+Remove all child nodes from this node. \mbox{\Hypertarget{classec_1_1_node_a9cd4bc1df04ee734dd11ebe0b9079434}\label{classec_1_1_node_a9cd4bc1df04ee734dd11ebe0b9079434}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!remove\+Drawable@{remove\+Drawable}}
+\index{remove\+Drawable@{remove\+Drawable}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{remove\+Drawable()}{removeDrawable()}}
+{\footnotesize\ttfamily void ec\+::\+Node\+::remove\+Drawable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_drawable}{Drawable}} $\ast$}]{drawable }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_node_ad874f229d3602ac6f0d0f0ce502a1fbc}\label{classec_1_1_node_ad874f229d3602ac6f0d0f0ce502a1fbc}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Remove\+Drawables@{Remove\+Drawables}}
-\index{Remove\+Drawables@{Remove\+Drawables}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Remove\+Drawables()}{RemoveDrawables()}}
-{\footnotesize\ttfamily void ec\+::\+Node\+::\+Remove\+Drawables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Remove a given drawable from this node. \mbox{\Hypertarget{classec_1_1_node_a57fd7f0d158527df372880399ca48002}\label{classec_1_1_node_a57fd7f0d158527df372880399ca48002}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!remove\+Drawables@{remove\+Drawables}}
+\index{remove\+Drawables@{remove\+Drawables}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{remove\+Drawables()}{removeDrawables()}}
+{\footnotesize\ttfamily void ec\+::\+Node\+::remove\+Drawables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_node_ac606be4f6d5a899a0b9679b6767ff109}\label{classec_1_1_node_ac606be4f6d5a899a0b9679b6767ff109}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Render@{Render}}
-\index{Render@{Render}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Render()}{Render()}}
-{\footnotesize\ttfamily void ec\+::\+Node\+::\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \&}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+Remove all drawables from this node. \mbox{\Hypertarget{classec_1_1_node_add44dc77d499886e9c75a0e1c1e446cf}\label{classec_1_1_node_add44dc77d499886e9c75a0e1c1e446cf}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!render@{render}}
+\index{render@{render}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void ec\+::\+Node\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \&}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Adds drawables to the given scene renderer visitor. \mbox{\Hypertarget{classec_1_1_node_abda1732f28b0f81df2028d889eb73bdf}\label{classec_1_1_node_abda1732f28b0f81df2028d889eb73bdf}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Set\+Parent@{Set\+Parent}}
-\index{Set\+Parent@{Set\+Parent}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Set\+Parent()}{SetParent()}}
-{\footnotesize\ttfamily void ec\+::\+Node\+::\+Set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{parent }\end{DoxyParamCaption})}
+Adds drawables to the given scene renderer visitor. \mbox{\Hypertarget{classec_1_1_node_a3c908e5f01e989cedfba5dc1a3ed66c1}\label{classec_1_1_node_a3c908e5f01e989cedfba5dc1a3ed66c1}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!set\+Parent@{set\+Parent}}
+\index{set\+Parent@{set\+Parent}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{set\+Parent()}{setParent()}}
+{\footnotesize\ttfamily void ec\+::\+Node\+::set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{parent }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_node_ac9970ec0ec03e130da59d0d5376a9855}\label{classec_1_1_node_ac9970ec0ec03e130da59d0d5376a9855}} 
-\index{ec\+::\+Node@{ec\+::\+Node}!Update\+Global\+Matrices@{Update\+Global\+Matrices}}
-\index{Update\+Global\+Matrices@{Update\+Global\+Matrices}!ec\+::\+Node@{ec\+::\+Node}}
-\subsubsection{\texorpdfstring{Update\+Global\+Matrices()}{UpdateGlobalMatrices()}}
-{\footnotesize\ttfamily void ec\+::\+Node\+::\+Update\+Global\+Matrices (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{m\+\_\+parent\+Mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+Set this node\textquotesingle{}s parent node. \mbox{\Hypertarget{classec_1_1_node_a12a9b14ccc434c52404e262ef5db6f80}\label{classec_1_1_node_a12a9b14ccc434c52404e262ef5db6f80}} 
+\index{ec\+::\+Node@{ec\+::\+Node}!update\+Global\+Matrices@{update\+Global\+Matrices}}
+\index{update\+Global\+Matrices@{update\+Global\+Matrices}!ec\+::\+Node@{ec\+::\+Node}}
+\subsubsection{\texorpdfstring{update\+Global\+Matrices()}{updateGlobalMatrices()}}
+{\footnotesize\ttfamily void ec\+::\+Node\+::update\+Global\+Matrices (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{parent\+Mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Recursively update global matrices 
 
-Reimplemented in \mbox{\hyperlink{classec_1_1_camera_abbdd88f9b352d34fef473064e2ccd625}{ec\+::\+Camera}}.
+Reimplemented in \mbox{\hyperlink{classec_1_1_camera_a1661dae4666cf50e697603904c96df6a}{ec\+::\+Camera}}.
 
 
 

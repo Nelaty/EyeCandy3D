@@ -10,7 +10,7 @@ namespace ec
 	class DynamicLineGeometry : public DynamicGeometry
 	{
 	public:
-		explicit DynamicLineGeometry(Node* start, Node* end, float linewidth = 1.0f);
+		explicit DynamicLineGeometry(Node* start, Node* end, float lineWidth = 1.0f);
 		~DynamicLineGeometry();
 
 		/* Start node access */
@@ -22,16 +22,19 @@ namespace ec
 		Node* getEnd() const;
 
 		/* Line width access */
-		void setLinewidth(float linewidth);
-		float getLinewidth() const;
+		void setLineWidth(float lineWidth);
+		float getLineWidth() const;
 
 	protected:
+
+		void beginRender() override;
 		void onRender() override;
+		void endRender() override;
 
 	private:
 		Node* m_start;
 		Node* m_end;
 
-		float m_linewidth;
+		float m_lineWidth;
 	};
 }

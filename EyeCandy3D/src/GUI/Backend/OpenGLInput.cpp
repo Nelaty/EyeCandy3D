@@ -6,10 +6,10 @@ namespace agui
 {
 	
 	OpenGLInput::OpenGLInput()
-		: shift{false},
-		control{false},
-		alt{false},
-		meta{false}
+		: m_shift{false},
+		m_control{false},
+		m_alt{false},
+		m_meta{false}
 	{
 	}
 
@@ -41,19 +41,19 @@ namespace agui
 			{
 				if(event.m_event.m_keyboard.shiftPressed())
 				{
-					this->shift = true;
+					this->m_shift = true;
 				}
 				if(event.m_event.m_keyboard.controlPressed())
 				{
-					this->control = true;
+					this->m_control = true;
 				}
 				if(event.m_event.m_keyboard.altPressed())
 				{
-					this->alt = true;
+					this->m_alt = true;
 				}
 				if(event.m_event.m_keyboard.superPressed())
 				{
-					this->meta = true;
+					this->m_meta = true;
 				}
 
 				if(event.m_type == ec::InputType::key_pressed
@@ -74,19 +74,19 @@ namespace agui
 			{
 				if(event.m_event.m_keyboard.shiftPressed())
 				{
-					this->shift = false;
+					this->m_shift = false;
 				}
 				if(event.m_event.m_keyboard.controlPressed())
 				{
-					this->control = false;
+					this->m_control = false;
 				}
 				if(event.m_event.m_keyboard.altPressed())
 				{
-					this->alt = false;
+					this->m_alt = false;
 				}
 				if(event.m_event.m_keyboard.superPressed())
 				{
-					this->meta = false;
+					this->m_meta = false;
 				}
 
 				if(isKeyboardEnabled())
@@ -100,10 +100,10 @@ namespace agui
 			}
 			case ec::InputType::gained_focus:
 			{
-				this->shift = false;
-				this->control = false;
-				this->alt = false;
-				this->meta = false;
+				this->m_shift = false;
+				this->m_control = false;
+				this->m_alt = false;
+				this->m_meta = false;
 				break;
 			}
 			default:

@@ -1,5 +1,6 @@
 #pragma once
 #include <memory>
+#include <map>
 
 struct GLFWwindow;
 
@@ -21,16 +22,14 @@ namespace ec
 		void install(Window* window);
 		/** Uninstall the keyboard. */
 		void uninstall();
-	
-		EventSource* getEventSource() const;
+
+		/** Get the window, which is associated with this keyboard. */
 		GLFWwindow* getWindow() const;
 
 	private:
 		static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 		static void charModsCallback(GLFWwindow* window, unsigned int codepoint, int mods);
-
-		EventSource_Ptr m_eventSource = nullptr;
-		EventQueue* m_eventQueue = nullptr;		
+	
 		GLFWwindow* m_window = nullptr;
 	};
 }

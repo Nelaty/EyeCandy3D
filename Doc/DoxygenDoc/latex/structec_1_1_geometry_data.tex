@@ -1,0 +1,181 @@
+\hypertarget{structec_1_1_geometry_data}{}\section{ec\+:\+:Geometry\+Data Struct Reference}
+\label{structec_1_1_geometry_data}\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+
+
+{\ttfamily \#include $<$Geometry\+Data.\+h$>$}
+
+
+
+Collaboration diagram for ec\+:\+:Geometry\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structec_1_1_geometry_data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structec_1_1_geometry_data_a21db28a4c6d964c8bc59cc698170e77c}{Geometry\+Data}} ()
+\item 
+\mbox{\hyperlink{structec_1_1_geometry_data_ab0684d232286015d10fb40ab49836c84}{$\sim$\+Geometry\+Data}} ()
+\item 
+void \mbox{\hyperlink{structec_1_1_geometry_data_acb50971e6fbd928172731a3427d22691}{bind}} ()
+\item 
+void \mbox{\hyperlink{structec_1_1_geometry_data_abb54af4b2922eb16973b450d6cf0beae}{unbind}} ()
+\item 
+void \mbox{\hyperlink{structec_1_1_geometry_data_a85ce34e18732d88632310d751a6c2cee}{resize\+Buffers}} (unsigned int vertex\+Count, unsigned int index\+Count)
+\item 
+bool \mbox{\hyperlink{structec_1_1_geometry_data_a5a3ba60e2d48de04706168229bdfa87d}{init\+Buffer\+Objects}} (G\+Lenum usage=G\+L\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+C\+O\+PY)
+\item 
+bool \mbox{\hyperlink{structec_1_1_geometry_data_a23c0090061b5b21b74f070916915ca69}{buffers\+Initialized}} () const
+\item 
+bool \mbox{\hyperlink{structec_1_1_geometry_data_a5df7921c489c60d96a971003c299dcb3}{release\+Memory}} ()
+\item 
+void \mbox{\hyperlink{structec_1_1_geometry_data_aeb93c2e5bd5f4656eaa12651cd4927aa}{update\+Vertex\+Data}} ()
+\item 
+void \mbox{\hyperlink{structec_1_1_geometry_data_a23fd4a2619691fb7bbd5c0650544cce3}{update\+Index\+Data}} ()
+\item 
+void \mbox{\hyperlink{structec_1_1_geometry_data_ad8edfa8a7fda52850f072ab845ef38fd}{update}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Lenum \mbox{\hyperlink{structec_1_1_geometry_data_ab2cb1a359dabc5cad9d41cf0f8121d95}{m\+\_\+usage}}
+\item 
+G\+Luint \mbox{\hyperlink{structec_1_1_geometry_data_a2d352d0d0b888258b610afa8ceb7b449}{m\+\_\+vao}}
+\item 
+G\+Luint \mbox{\hyperlink{structec_1_1_geometry_data_aaf6e747c999eee7225183960bb30fc07}{m\+\_\+vbo}}
+\item 
+G\+Luint \mbox{\hyperlink{structec_1_1_geometry_data_a9a982abc1fed3a4797a5353dec4feb16}{m\+\_\+ebo}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structec_1_1_vertex}{Vertex}} $>$ \mbox{\hyperlink{structec_1_1_geometry_data_ade3f4dd48315b696846bb2c00267394c}{m\+\_\+vertices}}
+\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{structec_1_1_geometry_data_ab32858fa60eb5c6859c287d00b14357d}{m\+\_\+indices}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structec_1_1_geometry_data_a21db28a4c6d964c8bc59cc698170e77c}\label{structec_1_1_geometry_data_a21db28a4c6d964c8bc59cc698170e77c}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!Geometry\+Data@{Geometry\+Data}}
+\index{Geometry\+Data@{Geometry\+Data}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{Geometry\+Data()}{GeometryData()}}
+{\footnotesize\ttfamily ec\+::\+Geometry\+Data\+::\+Geometry\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structec_1_1_geometry_data_ab0684d232286015d10fb40ab49836c84}\label{structec_1_1_geometry_data_ab0684d232286015d10fb40ab49836c84}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!````~Geometry\+Data@{$\sim$\+Geometry\+Data}}
+\index{````~Geometry\+Data@{$\sim$\+Geometry\+Data}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{$\sim$\+Geometry\+Data()}{~GeometryData()}}
+{\footnotesize\ttfamily ec\+::\+Geometry\+Data\+::$\sim$\+Geometry\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structec_1_1_geometry_data_acb50971e6fbd928172731a3427d22691}\label{structec_1_1_geometry_data_acb50971e6fbd928172731a3427d22691}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!bind@{bind}}
+\index{bind@{bind}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+Data\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structec_1_1_geometry_data_a23c0090061b5b21b74f070916915ca69}\label{structec_1_1_geometry_data_a23c0090061b5b21b74f070916915ca69}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!buffers\+Initialized@{buffers\+Initialized}}
+\index{buffers\+Initialized@{buffers\+Initialized}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{buffers\+Initialized()}{buffersInitialized()}}
+{\footnotesize\ttfamily bool ec\+::\+Geometry\+Data\+::buffers\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Check if buffer objects are initialized. \begin{DoxyReturn}{Returns}
+True if they are initialized, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structec_1_1_geometry_data_a5a3ba60e2d48de04706168229bdfa87d}\label{structec_1_1_geometry_data_a5a3ba60e2d48de04706168229bdfa87d}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!init\+Buffer\+Objects@{init\+Buffer\+Objects}}
+\index{init\+Buffer\+Objects@{init\+Buffer\+Objects}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{init\+Buffer\+Objects()}{initBufferObjects()}}
+{\footnotesize\ttfamily bool ec\+::\+Geometry\+Data\+::init\+Buffer\+Objects (\begin{DoxyParamCaption}\item[{G\+Lenum}]{usage = {\ttfamily GL\+\_\+DYNAMIC\+\_\+COPY} }\end{DoxyParamCaption})}
+
+Initializes V\+AO, V\+BO and E\+BO. Passes vertex and index data to the G\+PU. \begin{DoxyReturn}{Returns}
+False if buffers are already initialized, true otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structec_1_1_geometry_data_a5df7921c489c60d96a971003c299dcb3}\label{structec_1_1_geometry_data_a5df7921c489c60d96a971003c299dcb3}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!release\+Memory@{release\+Memory}}
+\index{release\+Memory@{release\+Memory}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{release\+Memory()}{releaseMemory()}}
+{\footnotesize\ttfamily bool ec\+::\+Geometry\+Data\+::release\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clears containers and releases memory on the G\+PU. After calling this function, this data object won\textquotesingle{}t be initialized any more. \begin{DoxyReturn}{Returns}
+True if buffers are initialized, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structec_1_1_geometry_data_a85ce34e18732d88632310d751a6c2cee}\label{structec_1_1_geometry_data_a85ce34e18732d88632310d751a6c2cee}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!resize\+Buffers@{resize\+Buffers}}
+\index{resize\+Buffers@{resize\+Buffers}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{resize\+Buffers()}{resizeBuffers()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+Data\+::resize\+Buffers (\begin{DoxyParamCaption}\item[{unsigned int}]{vertex\+Count,  }\item[{unsigned int}]{index\+Count }\end{DoxyParamCaption})}
+
+Resize vertex and index containers. \mbox{\Hypertarget{structec_1_1_geometry_data_abb54af4b2922eb16973b450d6cf0beae}\label{structec_1_1_geometry_data_abb54af4b2922eb16973b450d6cf0beae}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!unbind@{unbind}}
+\index{unbind@{unbind}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+Data\+::unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structec_1_1_geometry_data_ad8edfa8a7fda52850f072ab845ef38fd}\label{structec_1_1_geometry_data_ad8edfa8a7fda52850f072ab845ef38fd}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!update@{update}}
+\index{update@{update}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+Data\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Should be called if vertex and index data changed. Updates vertices and indices on the G\+PU. \mbox{\Hypertarget{structec_1_1_geometry_data_a23fd4a2619691fb7bbd5c0650544cce3}\label{structec_1_1_geometry_data_a23fd4a2619691fb7bbd5c0650544cce3}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!update\+Index\+Data@{update\+Index\+Data}}
+\index{update\+Index\+Data@{update\+Index\+Data}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{update\+Index\+Data()}{updateIndexData()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+Data\+::update\+Index\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Should be called if index data has changed. Updates indices on the G\+PU. \mbox{\Hypertarget{structec_1_1_geometry_data_aeb93c2e5bd5f4656eaa12651cd4927aa}\label{structec_1_1_geometry_data_aeb93c2e5bd5f4656eaa12651cd4927aa}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!update\+Vertex\+Data@{update\+Vertex\+Data}}
+\index{update\+Vertex\+Data@{update\+Vertex\+Data}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{update\+Vertex\+Data()}{updateVertexData()}}
+{\footnotesize\ttfamily void ec\+::\+Geometry\+Data\+::update\+Vertex\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Should be called if vertex data has changed. Updates vertices on the G\+PU. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structec_1_1_geometry_data_a9a982abc1fed3a4797a5353dec4feb16}\label{structec_1_1_geometry_data_a9a982abc1fed3a4797a5353dec4feb16}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!m\+\_\+ebo@{m\+\_\+ebo}}
+\index{m\+\_\+ebo@{m\+\_\+ebo}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{m\+\_\+ebo}{m\_ebo}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+Data\+::m\+\_\+ebo}
+
+\mbox{\Hypertarget{structec_1_1_geometry_data_ab32858fa60eb5c6859c287d00b14357d}\label{structec_1_1_geometry_data_ab32858fa60eb5c6859c287d00b14357d}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!m\+\_\+indices@{m\+\_\+indices}}
+\index{m\+\_\+indices@{m\+\_\+indices}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{m\+\_\+indices}{m\_indices}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned int$>$ ec\+::\+Geometry\+Data\+::m\+\_\+indices}
+
+\mbox{\Hypertarget{structec_1_1_geometry_data_ab2cb1a359dabc5cad9d41cf0f8121d95}\label{structec_1_1_geometry_data_ab2cb1a359dabc5cad9d41cf0f8121d95}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!m\+\_\+usage@{m\+\_\+usage}}
+\index{m\+\_\+usage@{m\+\_\+usage}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{m\+\_\+usage}{m\_usage}}
+{\footnotesize\ttfamily G\+Lenum ec\+::\+Geometry\+Data\+::m\+\_\+usage}
+
+\mbox{\Hypertarget{structec_1_1_geometry_data_a2d352d0d0b888258b610afa8ceb7b449}\label{structec_1_1_geometry_data_a2d352d0d0b888258b610afa8ceb7b449}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!m\+\_\+vao@{m\+\_\+vao}}
+\index{m\+\_\+vao@{m\+\_\+vao}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{m\+\_\+vao}{m\_vao}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+Data\+::m\+\_\+vao}
+
+\mbox{\Hypertarget{structec_1_1_geometry_data_aaf6e747c999eee7225183960bb30fc07}\label{structec_1_1_geometry_data_aaf6e747c999eee7225183960bb30fc07}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!m\+\_\+vbo@{m\+\_\+vbo}}
+\index{m\+\_\+vbo@{m\+\_\+vbo}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{m\+\_\+vbo}{m\_vbo}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+Data\+::m\+\_\+vbo}
+
+\mbox{\Hypertarget{structec_1_1_geometry_data_ade3f4dd48315b696846bb2c00267394c}\label{structec_1_1_geometry_data_ade3f4dd48315b696846bb2c00267394c}} 
+\index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!m\+\_\+vertices@{m\+\_\+vertices}}
+\index{m\+\_\+vertices@{m\+\_\+vertices}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
+\subsubsection{\texorpdfstring{m\+\_\+vertices}{m\_vertices}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structec_1_1_vertex}{Vertex}}$>$ ec\+::\+Geometry\+Data\+::m\+\_\+vertices}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_geometry_data_8h}{Geometry\+Data.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_geometry_data_8cpp}{Geometry\+Data.\+cpp}}\end{DoxyCompactItemize}

@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structutl_1_1_profiling_data.html" title="utl::ProfilingData" alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node1" href="$class_graphics.html" title="Graphics" alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node2" href="$classagui_1_1_open_g_l_graphics.html" title="agui::OpenGLGraphics" alt="" coords="128,5,283,32"/>
 </map>

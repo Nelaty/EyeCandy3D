@@ -1,9 +1,9 @@
 <map id="ec::Geometry" name="ec::Geometry">
-<area shape="rect" id="node2" href="$classec_1_1_dynamic_geometry.html" title="{ec::DynamicGeometry\n||+ ~DynamicGeometry()\l# DynamicGeometry()\l}" alt="" coords="17,292,176,384"/>
-<area shape="rect" id="node4" href="$classec_1_1_spring_geometry.html" title="{ec::SpringGeometry\n||+ SpringGeometry()\l+ ~SpringGeometry()\l}" alt="" coords="201,292,345,384"/>
-<area shape="rect" id="node5" href="$classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n|# m_VAO\l# m_VBO\l# m_EBO\l# m_vertices\l# m_indices\l|+ ~StaticGeometry()\l+ RecalculateNormals()\l+ GetVAO()\l+ GetVBO()\l+ GetEBO()\l# BeginRender()\l# OnRender()\l# EndRender()\l# SetupMesh()\l# StaticGeometry()\l}" alt="" coords="369,204,528,472"/>
-<area shape="rect" id="node3" href="$classec_1_1_dynamic_line_geometry.html" title="{ec::DynamicLineGeometry\n||+ DynamicLineGeometry()\l+ ~DynamicLineGeometry()\l+ SetStart()\l+ GetStart()\l+ SetEnd()\l+ GetEnd()\l+ SetLinewidth()\l+ GetLinewidth()\l# OnRender()\l}" alt="" coords="5,520,188,715"/>
-<area shape="rect" id="node6" href="$classec_1_1_cube_mesh.html" title="{ec::CubeMesh\n||+ CubeMesh()\l+ CubeMesh()\l+ ~CubeMesh()\l+ Resize()\l}" alt="" coords="242,557,354,678"/>
-<area shape="rect" id="node7" href="$classec_1_1_rectangle_mesh.html" title="{ec::RectangleMesh\n||+ RectangleMesh()\l+ RectangleMesh()\l+ ~RectangleMesh()\l}" alt="" coords="379,564,519,671"/>
-<area shape="rect" id="node8" href="$classec_1_1_sphere_mesh.html" title="{ec::SphereMesh\n||+ SphereMesh()\l+ ~SphereMesh()\l+ Resize()\l+ GetRadius()\l+ GetLatitude()\l+ GetLongitude()\l}" alt="" coords="543,542,666,693"/>
+<area shape="rect" id="node3" href="$classec_1_1_dynamic_geometry.html" title="{ec::DynamicGeometry\n||+ ~DynamicGeometry()\l# DynamicGeometry()\l# beginRender()\l# update()\l}" alt="" coords="63,476,221,597"/>
+<area shape="rect" id="node5" href="$classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n||+ ~StaticGeometry()\l# setupMesh()\l# StaticGeometry()\l}" alt="" coords="291,483,433,590"/>
+<area shape="rect" id="node2" href="$classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="157,5,311,156"/>
+<area shape="rect" id="node4" href="$classec_1_1_dynamic_line_geometry.html" title="{ec::DynamicLineGeometry\n||+ DynamicLineGeometry()\l+ ~DynamicLineGeometry()\l+ setStart()\l+ getStart()\l+ setEnd()\l+ getEnd()\l+ setLineWidth()\l+ getLineWidth()\l# beginRender()\l# onRender()\l# endRender()\l}" alt="" coords="5,645,188,869"/>
+<area shape="rect" id="node6" href="$classec_1_1_cube_geometry.html" title="{ec::CubeGeometry\n||+ CubeGeometry()\l+ CubeGeometry()\l+ ~CubeGeometry()\l+ resize()\l}" alt="" coords="212,697,349,818"/>
+<area shape="rect" id="node7" href="$classec_1_1_rectangle_mesh.html" title="{ec::RectangleMesh\n||+ RectangleMesh()\l+ RectangleMesh()\l+ ~RectangleMesh()\l}" alt="" coords="373,704,513,811"/>
+<area shape="rect" id="node8" href="$classec_1_1_sphere_geometry.html" title="{ec::SphereGeometry\n||+ SphereGeometry()\l+ ~SphereGeometry()\l+ resize()\l+ getRadius()\l+ getLatitude()\l+ getLongitude()\l}" alt="" coords="537,682,685,833"/>
 </map>

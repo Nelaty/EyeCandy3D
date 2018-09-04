@@ -4,11 +4,12 @@
 #include "EC3D/Core/Scene.h"
 #include "EC3D/Core/Node.h"
 #include "EC3D/Core/Drawable.h"
-#include "EC3D/Core/CubeMesh.h"
-#include "EC3D/Core/SphereMesh.h"
+#include "EC3D/Core/CubeGeometry.h"
+#include "EC3D/Core/SphereGeometry.h"
 #include "EC3D/Core/Material.h"
 #include "EC3D/Core/Shader/Shader.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
+#include "EC3D/Utilities/Random.h"
 
 using namespace ec;
 
@@ -27,9 +28,15 @@ void ExampleScene::init()
 	sphereTest();
 }
 
-void ExampleScene::tick(float timeDelta)
+void ExampleScene::tick(const float timeDelta)
 {
-	//m_right->RotateX(timeDelta * 0.1f);
+	/*
+	float min = 0.0f;
+	float max = 0.1f;
+
+	m_right->rotate(utl::Random::randomFloat(min, max),
+					utl::Random::randomVec3(0.0f, 1.0f));
+	*/
 }
 
 void ExampleScene::constructTestSg()
@@ -38,15 +45,15 @@ void ExampleScene::constructTestSg()
 	Shader* shader = shaderManager.getShader("basic");
 
 	// Create meshes
-	auto* cubeMesh = new CubeMesh(1.0f);
+	auto* cubeMesh = new CubeGeometry(1.0f);
 
 	// Create new materials and load textures
 	auto* woodMat = new Material();
-	woodMat->addDiffuseTextureFromPath("Resources/Textures/wood.jpg");
+	woodMat->addDiffuseTextureFromPath("../Resources/Textures/wood.jpg");
 	auto* wallMat00 = new Material();
-	wallMat00->addDiffuseTextureFromPath("Resources/Textures/wall_00.jpg");
+	wallMat00->addDiffuseTextureFromPath("../Resources/Textures/wall_00.jpg");
 	auto* wallMat01 = new Material();
-	wallMat01->addDiffuseTextureFromPath("Resources/Textures/wall_01.jpg");
+	wallMat01->addDiffuseTextureFromPath("../Resources/Textures/wall_01.jpg");
 
 	// Link mesh, material and shader in drawables
 	auto* woodCube = new Drawable(cubeMesh, woodMat, shader);
@@ -98,10 +105,10 @@ void ExampleScene::sphereTest()
 {
 	auto& shaderManager = m_window->getShaderManager();
 
-	auto* sphereMesh = new SphereMesh(1.0f, 20, 20);
+	auto* sphereMesh = new SphereGeometry(1.0f, 20, 20);
 	auto* shader = shaderManager.getShader("basic");
 	auto* woodMat = new Material();
-	woodMat->addDiffuseTextureFromPath("Resources/Textures/sand_00.jpg");
+	woodMat->addDiffuseTextureFromPath("../Resources/Textures/sand_00.jpg");
 
 	auto* sphereDrawable = new Drawable(sphereMesh, woodMat, shader);
 	auto* sphereNode = new Node(nullptr);

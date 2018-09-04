@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <map>
+#include <memory>
 
 namespace ec
 {
@@ -11,16 +12,15 @@ namespace ec
 		using Resource_Ptr = Resource*;
 		using Resource_Container = std::map<std::string, Resource_Ptr>;
 
-	public:
 		explicit ResourceRegistry();
 		~ResourceRegistry();
 
-		bool registerResource(Resource_Ptr resource, const std::string& key);
-		Resource* unregisterResource(const std::string& key);
+		Resource* registerResource(Resource_Ptr resource, const std::string& key);
+		Resource_Ptr unregisterResource(const std::string& key);
 
 		Resource* getResource(const std::string& key);
 		bool isRegistered(const std::string& key);
-		bool isRegistered(Resource_Ptr);
+		bool isRegistered(Resource* resource);
 
 	private:
 		Resource_Container m_resources;

@@ -14,7 +14,7 @@ class \mbox{\hyperlink{classec_1_1_camera}{Camera}}
 \item 
 class \mbox{\hyperlink{classec_1_1_camera_controller}{Camera\+Controller}}
 \item 
-class \mbox{\hyperlink{classec_1_1_cube_mesh}{Cube\+Mesh}}
+class \mbox{\hyperlink{classec_1_1_cube_geometry}{Cube\+Geometry}}
 \item 
 class \mbox{\hyperlink{classec_1_1_cursor}{Cursor}}
 \item 
@@ -30,9 +30,9 @@ class \mbox{\hyperlink{classec_1_1_dynamic_geometry}{Dynamic\+Geometry}}
 \item 
 class \mbox{\hyperlink{classec_1_1_dynamic_line_geometry}{Dynamic\+Line\+Geometry}}
 \item 
-class \mbox{\hyperlink{classec_1_1_event_queue}{Event\+Queue}}
+union \mbox{\hyperlink{unionec_1_1_event_data}{Event\+Data}}
 \item 
-class \mbox{\hyperlink{classec_1_1_event_source}{Event\+Source}}
+class \mbox{\hyperlink{classec_1_1_event_system}{Event\+System}}
 \item 
 struct \mbox{\hyperlink{structec_1_1_font_character}{Font\+Character}}
 \item 
@@ -43,6 +43,10 @@ class \mbox{\hyperlink{classec_1_1_frame}{Frame}}
 class \mbox{\hyperlink{classec_1_1_freetype}{Freetype}}
 \item 
 class \mbox{\hyperlink{classec_1_1_geometry}{Geometry}}
+\item 
+struct \mbox{\hyperlink{structec_1_1_geometry_data}{Geometry\+Data}}
+\item 
+class \mbox{\hyperlink{classec_1_1_i_geometry_access}{I\+Geometry\+Access}}
 \item 
 struct \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}}
 \item 
@@ -82,7 +86,7 @@ class \mbox{\hyperlink{classec_1_1_shader}{Shader}}
 \item 
 class \mbox{\hyperlink{classec_1_1_shader_manager}{Shader\+Manager}}
 \item 
-class \mbox{\hyperlink{classec_1_1_sphere_mesh}{Sphere\+Mesh}}
+class \mbox{\hyperlink{classec_1_1_sphere_geometry}{Sphere\+Geometry}}
 \item 
 class \mbox{\hyperlink{classec_1_1_spring_geometry}{Spring\+Geometry}}
 \item 
@@ -162,11 +166,17 @@ enum \mbox{\hyperlink{namespaceec_ae4420ccd0f79418a5ce075e43909289f}{Resource\+T
 \subsection{Detailed Description}
 Input\+Observables inform Input\+Listeners about Input\+Events
 
+Nodes make up the scene graph They can have multiple child nodes and can point to drawables
+
 A scene enables an easy switching of root nodes It is possible to define an own scene controller, to influence a scene through user input.
+
+Specialized Input\+Observer for controlling a scene
 
 A \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} is able to render a scene with its underlying scene graph.
 
-A window represents the base of every application. It creates a os specific window. The application functionality can be executed in the provided main loop. It also supplies the user with input functionality and a scene system 
+Manages a collection of shaders.
+
+A window is responsible for one os specific window, which can receive input events. 
 
 \subsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{namespaceec_aeb1f95f6e5d6c17c5a67f68e44746ac4}\label{namespaceec_aeb1f95f6e5d6c17c5a67f68e44746ac4}} 

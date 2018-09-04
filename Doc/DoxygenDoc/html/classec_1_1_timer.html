@@ -86,14 +86,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afa10f411221610c507291183b6b6aa56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a496dc6127f9d0c8ec3dc8d91de6b6448"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_timer.html#a496dc6127f9d0c8ec3dc8d91de6b6448">~Timer</a> ()</td></tr>
 <tr class="separator:a496dc6127f9d0c8ec3dc8d91de6b6448"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a241c38c45185bf51c5b5ac32f4b1f89a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_timer.html#a241c38c45185bf51c5b5ac32f4b1f89a">Reset</a> ()</td></tr>
-<tr class="separator:a241c38c45185bf51c5b5ac32f4b1f89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef045d450e959956d09a6d816c4ca406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_timer.html#aef045d450e959956d09a6d816c4ca406">ResetTimeDelta</a> ()</td></tr>
-<tr class="separator:aef045d450e959956d09a6d816c4ca406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acadbad5c86afeaf115596dc7dedfd303"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_timer.html#acadbad5c86afeaf115596dc7dedfd303">GetTime</a> () const</td></tr>
-<tr class="separator:acadbad5c86afeaf115596dc7dedfd303"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae128c90f92cf2dc71dc1095ba60b2f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_timer.html#adae128c90f92cf2dc71dc1095ba60b2f">GetTimeDelta</a> ()</td></tr>
-<tr class="separator:adae128c90f92cf2dc71dc1095ba60b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f712ea9fa17c4657a877b9322219aa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_timer.html#a0f712ea9fa17c4657a877b9322219aa3">reset</a> ()</td></tr>
+<tr class="separator:a0f712ea9fa17c4657a877b9322219aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0d47620b70d0d7f392a9837601dad3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_timer.html#a9c0d47620b70d0d7f392a9837601dad3">resetTimeDelta</a> ()</td></tr>
+<tr class="separator:a9c0d47620b70d0d7f392a9837601dad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c1b163f49e71696a632f2d43bec957"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_timer.html#a70c1b163f49e71696a632f2d43bec957">getTime</a> () const</td></tr>
+<tr class="separator:a70c1b163f49e71696a632f2d43bec957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b6b8d3cf83bb86df9164160b791016"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_timer.html#a17b6b8d3cf83bb86df9164160b791016">getTimeDelta</a> ()</td></tr>
+<tr class="separator:a17b6b8d3cf83bb86df9164160b791016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afa10f411221610c507291183b6b6aa56"></a>
@@ -126,6 +126,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ec::Timer::~Timer </td>
@@ -134,76 +137,85 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="acadbad5c86afeaf115596dc7dedfd303"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acadbad5c86afeaf115596dc7dedfd303">&#9670;&nbsp;</a></span>GetTime()</h2>
+<a id="a70c1b163f49e71696a632f2d43bec957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c1b163f49e71696a632f2d43bec957">&#9670;&nbsp;</a></span>getTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double ec::Timer::GetTime </td>
+          <td class="memname">double ec::Timer::getTime </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get time since the start of the timer or last reset </p>
 
 </div>
 </div>
-<a id="adae128c90f92cf2dc71dc1095ba60b2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adae128c90f92cf2dc71dc1095ba60b2f">&#9670;&nbsp;</a></span>GetTimeDelta()</h2>
+<a id="a17b6b8d3cf83bb86df9164160b791016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17b6b8d3cf83bb86df9164160b791016">&#9670;&nbsp;</a></span>getTimeDelta()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double ec::Timer::GetTimeDelta </td>
+          <td class="memname">double ec::Timer::getTimeDelta </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get time between calls </p>
 
 </div>
 </div>
-<a id="a241c38c45185bf51c5b5ac32f4b1f89a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a241c38c45185bf51c5b5ac32f4b1f89a">&#9670;&nbsp;</a></span>Reset()</h2>
+<a id="a0f712ea9fa17c4657a877b9322219aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f712ea9fa17c4657a877b9322219aa3">&#9670;&nbsp;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Timer::Reset </td>
+          <td class="memname">void ec::Timer::reset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Reset the whole timer </p>
 
 </div>
 </div>
-<a id="aef045d450e959956d09a6d816c4ca406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef045d450e959956d09a6d816c4ca406">&#9670;&nbsp;</a></span>ResetTimeDelta()</h2>
+<a id="a9c0d47620b70d0d7f392a9837601dad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0d47620b70d0d7f392a9837601dad3">&#9670;&nbsp;</a></span>resetTimeDelta()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Timer::ResetTimeDelta </td>
+          <td class="memname">void ec::Timer::resetTimeDelta </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Only reset the time since the last access of time delta </p>
 
 </div>
 </div>

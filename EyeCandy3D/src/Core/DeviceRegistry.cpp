@@ -5,7 +5,7 @@ namespace ec
 {
 	DeviceRegistry::DeviceRegistry(Window* window)
 		: m_window{window}
-	{		
+	{
 	}
 
 	DeviceRegistry::~DeviceRegistry()

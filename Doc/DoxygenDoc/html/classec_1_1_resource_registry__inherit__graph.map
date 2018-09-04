@@ -1,0 +1,6 @@
+<map id="ec::ResourceRegistry&lt; Resource &gt;" name="ec::ResourceRegistry&lt; Resource &gt;">
+<area shape="rect" id="node2" href="$classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Drawable \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="5,248,160,428"/>
+<area shape="rect" id="node3" href="$classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Geometry \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="184,248,339,428"/>
+<area shape="rect" id="node4" href="$classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Material \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="363,248,517,428"/>
+<area shape="rect" id="node5" href="$classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Texture \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="541,248,696,428"/>
+</map>

@@ -10,5 +10,13 @@ namespace ec
 
 	protected:
 		explicit DynamicGeometry();
+
+		void beginRender() override;
+
+		/**
+		 * Update function gets called once at the start of every
+		 * render cycle.
+		 */
+		virtual void update();
 	};
 }

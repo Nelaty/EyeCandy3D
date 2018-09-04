@@ -1,6 +1,6 @@
 #include "EC3D/Core/Node.h"
 #include "EC3D/Core/SceneRenderer.h"
-#include "EC3D/Core/Geometry.h"
+#include "EC3D/Core/IGeometryAccess.h"
 
 #include <algorithm>
 
@@ -10,6 +10,10 @@ namespace ec
 		: m_parent{parent},
 		m_globalMat{1.0f}
 	{
+		if(parent && parent != this)
+		{
+			parent->addChild(this);
+		}
 	}
 
 	Node::~Node()
@@ -27,10 +31,10 @@ namespace ec
 		}
 	}
 
-	void Node::updateGlobalMatrices(const glm::mat4& m_parentMat)
+	void Node::updateGlobalMatrices(const glm::mat4& parentMat)
 	{
 		updateLocalMat();
-		m_globalMat = m_parentMat * getLocalMat();
+		m_globalMat = parentMat * getLocalMat();
 		for(auto& it : m_children)
 		{
 			it->updateGlobalMatrices(m_globalMat);
@@ -42,9 +46,9 @@ namespace ec
 		return m_globalMat;
 	}
 
-	const glm::vec3& Node::getGlobalPosition()
+	glm::vec3 Node::getGlobalPosition() const
 	{
-		return glm::vec3(m_globalMat[4]);
+		return glm::vec3(m_globalMat[3]);
 	}
 
 	ec::Node* Node::getParent() const
@@ -114,6 +118,6 @@ namespace ec
 
 	void Node::removeDrawables()
 	{
-		m_drawables = std::vector<Drawable*>();
+		m_drawables.clear();
 	}
 }

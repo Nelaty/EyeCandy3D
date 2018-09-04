@@ -26,20 +26,23 @@
   <ItemGroup>
     <ClInclude Include="include\EC3D\Common\Common.h" />
     <ClInclude Include="include\EC3D\Common\Config.h" />
+    <ClInclude Include="include\EC3D\Gui\MiniAgui.h" />
     <ClInclude Include="include\EC3D\Core\Application.h" />
     <ClInclude Include="include\EC3D\Core\Camera.h" />
     <ClInclude Include="include\EC3D\Core\CameraController.h" />
     <ClInclude Include="include\EC3D\Core\CameraType.h" />
-    <ClInclude Include="include\EC3D\Core\CubeMesh.h" />
+    <ClInclude Include="include\EC3D\Core\CubeGeometry.h" />
     <ClInclude Include="include\EC3D\Core\Cursor.h" />
     <ClInclude Include="include\EC3D\Core\Drawable.h" />
     <ClInclude Include="include\EC3D\Core\DynamicGeometry.h" />
-    <ClInclude Include="include\EC3D\Core\EventQueue.h" />
+    <ClInclude Include="include\EC3D\Core\EventSystem.h" />
     <ClInclude Include="include\EC3D\Core\FontCharacter.h" />
     <ClInclude Include="include\EC3D\Core\FontTextureAtlas.h" />
     <ClInclude Include="include\EC3D\Core\Frame.h" />
     <ClInclude Include="include\EC3D\Core\Freetype.h" />
     <ClInclude Include="include\EC3D\Core\Geometry.h" />
+    <ClInclude Include="include\EC3D\Core\GeometryData.h" />
+    <ClInclude Include="include\EC3D\Core\IGeometryAccess.h" />
     <ClInclude Include="include\EC3D\Core\InputEvent.h" />
     <ClInclude Include="include\EC3D\Core\InputObservable.h" />
     <ClInclude Include="include\EC3D\Core\InputListener.h" />
@@ -58,44 +61,26 @@
     <ClInclude Include="include\EC3D\Core\SceneSystem.h" />
     <ClInclude Include="include\EC3D\Core\Shader\Shader.h" />
     <ClInclude Include="include\EC3D\Core\Shader\ShaderManager.h" />
-    <ClInclude Include="include\EC3D\Core\SphereMesh.h" />
+    <ClInclude Include="include\EC3D\Core\SphereGeometry.h" />
     <ClInclude Include="include\EC3D\Core\SpringGeometry.h" />
     <ClInclude Include="include\EC3D\Core\Texture.h" />
     <ClInclude Include="include\EC3D\Core\Transform3D.h" />
     <ClInclude Include="include\EC3D\Core\Vertex.h" />
     <ClInclude Include="include\EC3D\Core\Viewport.h" />
     <ClInclude Include="include\EC3D\Core\Window.h" />
-    <ClInclude Include="include\EC3D\Core\EventSource.h" />
     <ClInclude Include="include\EC3D\Core\DeviceRegistry.h" />
-    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLCursorProvider.h" />
-    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLFont.h" />
-    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLFontLoader.h" />
-    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLGraphics.h" />
-    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLImage.h" />
-    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLImageLoader.h" />
-    <ClInclude Include="include\EC3D\GUI\Backend\OpenGLInput.h" />
-    <ClInclude Include="include\EC3D\GUI\Bounds2D.h" />
-    <ClInclude Include="include\EC3D\GUI\Button.h" />
-    <ClInclude Include="include\EC3D\GUI\Checkbox.h" />
-    <ClInclude Include="include\EC3D\GUI\Gui.h" />
-    <ClInclude Include="include\EC3D\GUI\GuiController.h" />
-    <ClInclude Include="include\EC3D\GUI\GuiModel.h" />
-    <ClInclude Include="include\EC3D\GUI\GuiRenderer.h" />
-    <ClInclude Include="include\EC3D\GUI\GuiSystem.h" />
-    <ClInclude Include="include\EC3D\GUI\HorizontalList.h" />
-    <ClInclude Include="include\EC3D\GUI\RadioButton.h" />
-    <ClInclude Include="include\EC3D\GUI\Screen.h" />
-    <ClInclude Include="include\EC3D\GUI\Slot.h" />
-    <ClInclude Include="include\EC3D\GUI\SlotPair.h" />
-    <ClInclude Include="include\EC3D\GUI\Text.h" />
-    <ClInclude Include="include\EC3D\GUI\TextField.h" />
-    <ClInclude Include="include\EC3D\GUI\Theme.h" />
-    <ClInclude Include="include\EC3D\GUI\VerticalList.h" />
-    <ClInclude Include="include\EC3D\GUI\Widget.h" />
-    <ClInclude Include="include\EC3D\GUI\Window.h" />
+    <ClInclude Include="include\EC3D\Gui\Backend\OpenGLCursorProvider.h" />
+    <ClInclude Include="include\EC3D\Gui\Backend\OpenGLFont.h" />
+    <ClInclude Include="include\EC3D\Gui\Backend\OpenGLFontLoader.h" />
+    <ClInclude Include="include\EC3D\Gui\Backend\OpenGLGraphics.h" />
+    <ClInclude Include="include\EC3D\Gui\Backend\OpenGLImage.h" />
+    <ClInclude Include="include\EC3D\Gui\Backend\OpenGLImageLoader.h" />
+    <ClInclude Include="include\EC3D\Gui\Backend\OpenGLInput.h" />
+    <ClInclude Include="include\EC3D\Gui\GUISystem.h" />
     <ClInclude Include="include\EC3D\Core\Mouse.h" />
     <ClInclude Include="include\EC3D\Utilities\FileLogger.h" />
     <ClInclude Include="include\EC3D\Utilities\Profiler.h" />
+    <ClInclude Include="include\EC3D\Utilities\Random.h" />
     <ClInclude Include="include\EC3D\Utilities\Timer.h" />
     <ClInclude Include="include\EC3D\Utilities\UtilitiesFile.h" />
     <ClInclude Include="include\EC3D\Utilities\UtilitiesMath.h" />
@@ -105,17 +90,18 @@
     <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\Core\Camera.cpp" />
     <ClCompile Include="src\Core\CameraController.cpp" />
-    <ClCompile Include="src\Core\CubeMesh.cpp" />
+    <ClCompile Include="src\Core\CubeGeometry.cpp" />
     <ClCompile Include="src\Core\DeviceRegistry.cpp" />
     <ClCompile Include="src\Core\Drawable.cpp" />
     <ClCompile Include="src\Core\DynamicGeometry.cpp" />
     <ClCompile Include="src\Core\DynamicLineGeometry.cpp" />
-    <ClCompile Include="src\Core\EventQueue.cpp" />
-    <ClCompile Include="src\Core\EventSource.cpp" />
+    <ClCompile Include="src\Core\EventSystem.cpp" />
     <ClCompile Include="src\Core\FontTextureAtlas.cpp" />
     <ClCompile Include="src\Core\Frame.cpp" />
     <ClCompile Include="src\Core\Freetype.cpp" />
     <ClCompile Include="src\Core\Geometry.cpp" />
+    <ClCompile Include="src\Core\GeometryData.cpp" />
+    <ClCompile Include="src\Core\IGeometryAccess.cpp" />
     <ClCompile Include="src\Core\InputEvent.cpp" />
     <ClCompile Include="src\Core\InputObservable.cpp" />
     <ClCompile Include="src\Core\InputListener.cpp" />
@@ -131,39 +117,25 @@
     <ClCompile Include="src\Core\SceneSystem.cpp" />
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
     <ClCompile Include="src\Core\Shader\ShaderManager.cpp" />
-    <ClCompile Include="src\Core\SphereMesh.cpp" />
+    <ClCompile Include="src\Core\SphereGeometry.cpp" />
     <ClCompile Include="src\Core\SpringGeometry.cpp" />
     <ClCompile Include="src\Core\StaticGeometry.cpp" />
     <ClCompile Include="src\Core\Texture.cpp" />
     <ClCompile Include="src\Core\Transform3D.cpp" />
     <ClCompile Include="src\Core\Viewport.cpp" />
     <ClCompile Include="src\Core\Window.cpp" />
-    <ClCompile Include="src\GUI\Backend\OpenGLCursorProvider.cpp" />
-    <ClCompile Include="src\GUI\Backend\OpenGLFont.cpp" />
-    <ClCompile Include="src\GUI\Backend\OpenGLFontLoader.cpp" />
-    <ClCompile Include="src\GUI\Backend\OpenGLGraphics.cpp" />
-    <ClCompile Include="src\GUI\Backend\OpenGLImage.cpp" />
-    <ClCompile Include="src\GUI\Backend\OpenGLImageLoader.cpp" />
-    <ClCompile Include="src\GUI\Backend\OpenGLInput.cpp" />
-    <ClCompile Include="src\GUI\Bounds2D.cpp" />
-    <ClCompile Include="src\GUI\Button.cpp" />
-    <ClCompile Include="src\GUI\Checkbox.cpp" />
-    <ClCompile Include="src\GUI\Gui.cpp" />
-    <ClCompile Include="src\GUI\GuiController.cpp" />
-    <ClCompile Include="src\GUI\GuiModel.cpp" />
-    <ClCompile Include="src\GUI\GuiRenderer.cpp" />
-    <ClCompile Include="src\GUI\GuiSystem.cpp" />
-    <ClCompile Include="src\GUI\HorizontalList.cpp" />
-    <ClCompile Include="src\GUI\RadioButton.cpp" />
-    <ClCompile Include="src\GUI\Screen.cpp" />
-    <ClCompile Include="src\GUI\Text.cpp" />
-    <ClCompile Include="src\GUI\TextField.cpp" />
-    <ClCompile Include="src\GUI\Theme.cpp" />
-    <ClCompile Include="src\GUI\VerticalList.cpp" />
-    <ClCompile Include="src\GUI\Widget.cpp" />
-    <ClCompile Include="src\GUI\Window.cpp" />
+    <ClCompile Include="src\Gui\MiniAgui.cpp" />
+    <ClCompile Include="src\Gui\Backend\OpenGLCursorProvider.cpp" />
+    <ClCompile Include="src\Gui\Backend\OpenGLFont.cpp" />
+    <ClCompile Include="src\Gui\Backend\OpenGLFontLoader.cpp" />
+    <ClCompile Include="src\Gui\Backend\OpenGLGraphics.cpp" />
+    <ClCompile Include="src\Gui\Backend\OpenGLImage.cpp" />
+    <ClCompile Include="src\Gui\Backend\OpenGLImageLoader.cpp" />
+    <ClCompile Include="src\Gui\Backend\OpenGLInput.cpp" />
+    <ClCompile Include="src\Gui\GUISystem.cpp" />
     <ClCompile Include="src\Utilities\FileLogger.cpp" />
     <ClCompile Include="src\Utilities\Profiler.cpp" />
+    <ClCompile Include="src\Utilities\Random.cpp" />
     <ClCompile Include="src\Utilities\Timer.cpp" />
     <ClCompile Include="src\Utilities\UtilitiesFile.cpp" />
   </ItemGroup>
@@ -222,21 +194,25 @@
     <OutDir>$(SolutionDir)\Build\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
     <SourcePath>$(VC_SourcePath);$(SolutionDir)\External\include;</SourcePath>
+    <IntDir>$(SolutionDir)Bin\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\Build\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
     <SourcePath>$(VC_SourcePath);$(SolutionDir)\External\include;</SourcePath>
+    <IntDir>$(SolutionDir)Bin\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\Build\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
     <SourcePath>$(VC_SourcePath);$(SolutionDir)\External\include;</SourcePath>
+    <IntDir>$(SolutionDir)Bin\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\Build\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
     <SourcePath>$(VC_SourcePath);$(SolutionDir)\External\include;</SourcePath>
+    <IntDir>$(SolutionDir)Bin\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -245,10 +221,11 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)\External\include;</AdditionalIncludeDirectories>
-      <ObjectFileName>%(RelativeDir)\$(IntDir)</ObjectFileName>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)\External\lib\$(PlatformShortName)\$(Configuration)\;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)/Build/$(PlatformShortName)/$(Configuration);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>agui.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -258,10 +235,11 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)\External\include;</AdditionalIncludeDirectories>
-      <ObjectFileName>%(RelativeDir)\$(IntDir)</ObjectFileName>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)\External\lib\$(PlatformShortName)\$(Configuration)\;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)/Build/$(PlatformShortName)/$(Configuration);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>agui.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -273,14 +251,15 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)\External\include;</AdditionalIncludeDirectories>
-      <ObjectFileName>%(RelativeDir)\$(IntDir)</ObjectFileName>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)\External\lib\$(PlatformShortName)\$(Configuration)\;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)/Build/$(PlatformShortName)/$(Configuration);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>agui.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -292,14 +271,15 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)\External\include;</AdditionalIncludeDirectories>
-      <ObjectFileName>%(RelativeDir)\$(IntDir)</ObjectFileName>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)\External\lib\$(PlatformShortName)\$(Configuration)\;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)/Build/$(PlatformShortName)/$(Configuration);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>agui.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

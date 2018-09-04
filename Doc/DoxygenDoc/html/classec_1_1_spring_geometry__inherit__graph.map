@@ -1,3 +1,3 @@
 <map id="ec::SpringGeometry" name="ec::SpringGeometry">
-<area shape="rect" id="node2" href="$classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ Render()\l# BeginRender()\l# OnRender()\l# EndRender()\l# Geometry()\l}" alt="" coords="20,5,135,156"/>
+<area shape="rect" id="node2" href="$classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="5,5,160,156"/>
 </map>

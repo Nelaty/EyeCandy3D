@@ -1,4 +1,4 @@
 <map id="ec::Camera" name="ec::Camera">
-<area shape="rect" id="node2" href="$classec_1_1_node.html" title="{ec::Node\n||+ Node()\l+ ~Node()\l+ Render()\l+ UpdateGlobalMatrices()\l+ GetGlobalMat()\l+ GetGlobalPosition()\l+ GetParent()\l+ SetParent()\l+ AddChild()\l+ RemoveChild()\land 7 more...\l}" alt="" coords="173,476,344,700"/>
-<area shape="rect" id="node3" href="$classec_1_1_transform3_d.html" title="{ec::Transform3D\n||+ Transform3D()\l+ ~Transform3D()\l+ UpdateLocalMat()\l+ GetLocalPosition()\l+ GetLocalMat()\l+ GetUpVector()\l+ GetForwardVector()\l+ GetTranslation()\l+ GetTranslationX()\l+ GetTranslationY()\land 34 more...\l}" alt="" coords="5,189,152,413"/>
+<area shape="rect" id="node2" href="$classec_1_1_node.html" title="{ec::Node\n||+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="172,476,340,700"/>
+<area shape="rect" id="node3" href="$classec_1_1_transform3_d.html" title="{ec::Transform3D\n||+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getLocalMat()\l+ getUpVector()\l+ getForwardVector()\l+ getTranslation()\l+ getTranslationX()\l+ getTranslationY()\land 35 more...\l}" alt="" coords="5,189,149,413"/>
 </map>

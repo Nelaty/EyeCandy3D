@@ -6,18 +6,17 @@
 
 
 
-Collaboration diagram for ec\+:\+:Keyboard\+:
-\nopagebreak
+Collaboration diagram for ec\+:\+:Keyboard\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=182pt]{classec_1_1_keyboard__coll__graph}
+\includegraphics[width=160pt]{classec_1_1_keyboard__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}{Event\+Source\+\_\+\+Ptr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_event_source}{Event\+Source}} $>$
+using \mbox{\hyperlink{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}{Event\+Source\+\_\+\+Ptr}} = std\+::unique\+\_\+ptr$<$ Event\+Source $>$
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -26,13 +25,11 @@ using \mbox{\hyperlink{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}{E
 \item 
 \mbox{\hyperlink{classec_1_1_keyboard_a817f6cd6ea29898c6651dee24de59ba5}{$\sim$\+Keyboard}} ()
 \item 
-void \mbox{\hyperlink{classec_1_1_keyboard_ab6e5cd1eeb0346198895203918a6c6d5}{Install}} (\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$window)
+void \mbox{\hyperlink{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}{install}} (\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$window)
 \item 
-void \mbox{\hyperlink{classec_1_1_keyboard_a06d27f5a8cdc6800b0792beb78699187}{Uninstall}} ()
+void \mbox{\hyperlink{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}{uninstall}} ()
 \item 
-\mbox{\hyperlink{classec_1_1_event_source}{Event\+Source}} $\ast$ \mbox{\hyperlink{classec_1_1_keyboard_a4893086d1994d0d507a021cbbeed70c6}{Get\+Event\+Source}} ()
-\item 
-G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classec_1_1_keyboard_a1674d65a5a014c30d129e9308f13051b}{Get\+Window}} ()
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classec_1_1_keyboard_ad6b17bd2f2853def1e6ec21fadd9b658}{get\+Window}} () const
 \end{DoxyCompactItemize}
 
 
@@ -41,7 +38,7 @@ G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classec_1_1_keyboard_a1674d65a5a014c30d
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!Event\+Source\+\_\+\+Ptr@{Event\+Source\+\_\+\+Ptr}}
 \index{Event\+Source\+\_\+\+Ptr@{Event\+Source\+\_\+\+Ptr}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
 \subsubsection{\texorpdfstring{Event\+Source\+\_\+\+Ptr}{EventSource\_Ptr}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}{ec\+::\+Keyboard\+::\+Event\+Source\+\_\+\+Ptr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_event_source}{Event\+Source}}$>$}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}{ec\+::\+Keyboard\+::\+Event\+Source\+\_\+\+Ptr}} =  std\+::unique\+\_\+ptr$<$Event\+Source$>$}
 
 
 
@@ -50,40 +47,34 @@ G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classec_1_1_keyboard_a1674d65a5a014c30d
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!Keyboard@{Keyboard}}
 \index{Keyboard@{Keyboard}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
 \subsubsection{\texorpdfstring{Keyboard()}{Keyboard()}}
-{\footnotesize\ttfamily ec\+::\+Keyboard\+::\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily ec\+::\+Keyboard\+::\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
 
 \mbox{\Hypertarget{classec_1_1_keyboard_a817f6cd6ea29898c6651dee24de59ba5}\label{classec_1_1_keyboard_a817f6cd6ea29898c6651dee24de59ba5}} 
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!````~Keyboard@{$\sim$\+Keyboard}}
 \index{````~Keyboard@{$\sim$\+Keyboard}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
 \subsubsection{\texorpdfstring{$\sim$\+Keyboard()}{~Keyboard()}}
-{\footnotesize\ttfamily ec\+::\+Keyboard\+::$\sim$\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ec\+::\+Keyboard\+::$\sim$\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_keyboard_a4893086d1994d0d507a021cbbeed70c6}\label{classec_1_1_keyboard_a4893086d1994d0d507a021cbbeed70c6}} 
-\index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!Get\+Event\+Source@{Get\+Event\+Source}}
-\index{Get\+Event\+Source@{Get\+Event\+Source}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
-\subsubsection{\texorpdfstring{Get\+Event\+Source()}{GetEventSource()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_event_source}{ec\+::\+Event\+Source}} $\ast$ ec\+::\+Keyboard\+::\+Get\+Event\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_keyboard_ad6b17bd2f2853def1e6ec21fadd9b658}\label{classec_1_1_keyboard_ad6b17bd2f2853def1e6ec21fadd9b658}} 
+\index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!get\+Window@{get\+Window}}
+\index{get\+Window@{get\+Window}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{get\+Window()}{getWindow()}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow $\ast$ ec\+::\+Keyboard\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_keyboard_a1674d65a5a014c30d129e9308f13051b}\label{classec_1_1_keyboard_a1674d65a5a014c30d129e9308f13051b}} 
-\index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!Get\+Window@{Get\+Window}}
-\index{Get\+Window@{Get\+Window}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
-\subsubsection{\texorpdfstring{Get\+Window()}{GetWindow()}}
-{\footnotesize\ttfamily G\+L\+F\+Wwindow $\ast$ ec\+::\+Keyboard\+::\+Get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Get the window, which is associated with this keyboard. \mbox{\Hypertarget{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}\label{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}} 
+\index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!install@{install}}
+\index{install@{install}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{install()}{install()}}
+{\footnotesize\ttfamily void ec\+::\+Keyboard\+::install (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$}]{window }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_keyboard_ab6e5cd1eeb0346198895203918a6c6d5}\label{classec_1_1_keyboard_ab6e5cd1eeb0346198895203918a6c6d5}} 
-\index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!Install@{Install}}
-\index{Install@{Install}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
-\subsubsection{\texorpdfstring{Install()}{Install()}}
-{\footnotesize\ttfamily void ec\+::\+Keyboard\+::\+Install (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$}]{window }\end{DoxyParamCaption})}
-
-Install the keyboard, which generates keyboard events. \mbox{\Hypertarget{classec_1_1_keyboard_a06d27f5a8cdc6800b0792beb78699187}\label{classec_1_1_keyboard_a06d27f5a8cdc6800b0792beb78699187}} 
-\index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!Uninstall@{Uninstall}}
-\index{Uninstall@{Uninstall}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
-\subsubsection{\texorpdfstring{Uninstall()}{Uninstall()}}
-{\footnotesize\ttfamily void ec\+::\+Keyboard\+::\+Uninstall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Install the keyboard, which generates keyboard events. \mbox{\Hypertarget{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}\label{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}} 
+\index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!uninstall@{uninstall}}
+\index{uninstall@{uninstall}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{uninstall()}{uninstall()}}
+{\footnotesize\ttfamily void ec\+::\+Keyboard\+::uninstall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Uninstall the keyboard. 
 

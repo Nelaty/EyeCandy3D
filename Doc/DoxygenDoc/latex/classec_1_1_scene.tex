@@ -16,149 +16,149 @@ Collaboration diagram for ec\+:\+:Scene\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classec_1_1_scene_ad137e70b44b44f22b3e68d50671e9989}{Scene}} (const std\+::string \&name)
+\mbox{\hyperlink{classec_1_1_scene_a9abac0a0de42ff4e9eb6481cf1927754}{Scene}} (std\+::string name)
 \item 
 virtual \mbox{\hyperlink{classec_1_1_scene_a25e849d1bd5a9a71af922c3668115cb6}{$\sim$\+Scene}} ()
 \item 
-virtual void \mbox{\hyperlink{classec_1_1_scene_a07895d944a6045fa0ce5712b6a020c91}{Tick}} (const float time\+Delta)
+virtual void \mbox{\hyperlink{classec_1_1_scene_a09deb945a2c8255d70a68b0aaddaecb6}{tick}} (float time\+Delta)
 \item 
-const std\+::string \& \mbox{\hyperlink{classec_1_1_scene_a1646cecfcece12eec99d904a4351d21c}{Get\+Name}} () const
+const std\+::string \& \mbox{\hyperlink{classec_1_1_scene_a24c00d38f3b17123f10f02ff77830f62}{get\+Name}} () const
 \item 
-\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_aa2c014fb59f0b51abe5de601a93297d5}{Get\+Root}} ()
+\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_aef77276f4a386c5b66159ecb1d4d072c}{get\+Root}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_scene_a67660c99962c9e12280937dcbbfd2102}{Set\+Scene\+Controller}} (\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$scene\+Controller)
+void \mbox{\hyperlink{classec_1_1_scene_a8c3bc6848957704f9f45508c13133a91}{set\+Scene\+Controller}} (\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$scene\+Controller)
 \item 
-\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_ac3e1522d93014a5f19193cc3d173d64a}{Get\+Scene\+Controller}} ()
+\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_ad562a16db4552e529af7284de0b79304}{get\+Scene\+Controller}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_scene_a3f300f8210249e457121aa0696261b4e}{Set\+Scene\+Renderer}} (const \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \&scene\+Renderer)
+void \mbox{\hyperlink{classec_1_1_scene_a4a000b3820dfcf578ed80bae3bf5f432}{set\+Scene\+Renderer}} (const \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \&scene\+Renderer)
 \item 
-\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \& \mbox{\hyperlink{classec_1_1_scene_a79d67056a8b73bf78e37e5d8951363f5}{Get\+Scene\+Renderer}} ()
+\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \& \mbox{\hyperlink{classec_1_1_scene_a73f48395e9442f3e6647dd9503050b91}{get\+Scene\+Renderer}} ()
 \item 
-void \mbox{\hyperlink{classec_1_1_scene_a24962dd137eba3192c3e88e597c7d03d}{Set\+Scene\+System}} (\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$scene\+System)
+void \mbox{\hyperlink{classec_1_1_scene_a87a6277fea206956c0a7175cf308ece0}{set\+Scene\+System}} (\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$scene\+System)
 \item 
-\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_ae9e6923ee710a8b597e1996d1275d4fa}{Get\+Scene\+System}} ()
+\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_a95b79ca1dc856cb50262ab4b9e72465f}{get\+Scene\+System}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_scene_a2c6d246942f97119f1a09a85e8175146}{Enable}} ()
+void \mbox{\hyperlink{classec_1_1_scene_ab1788ac3be0db2d82ee2f8c5fa0cecef}{enable}} ()
 \item 
-void \mbox{\hyperlink{classec_1_1_scene_acd8a7b83227f99d595e9c6ee9592fc56}{Disable}} ()
+void \mbox{\hyperlink{classec_1_1_scene_a05bf59f23abb809000ad17bdb00cab94}{disable}} ()
 \item 
-bool \mbox{\hyperlink{classec_1_1_scene_a404676c2a1c87875b97c2c8942292f65}{Is\+Enabled}} () const
+bool \mbox{\hyperlink{classec_1_1_scene_a0748d645ee5204e64d674c1b10b26864}{is\+Enabled}} () const
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classec_1_1_scene_a37c25b9ccec318568e9028be616305c4}{Init\+Scene\+Renderer}} ()
+void \mbox{\hyperlink{classec_1_1_scene_a137505b25a213810b1b477ad13daca7f}{init\+Scene\+Renderer}} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{classec_1_1_scene_ad68ba7af20ecfbc45ee136842a38ccfe}{m\+\_\+enabled}}
+bool \mbox{\hyperlink{classec_1_1_scene_ad68ba7af20ecfbc45ee136842a38ccfe}{m\+\_\+enabled}} = true
 \item 
 std\+::string \mbox{\hyperlink{classec_1_1_scene_a58a25f1f2370535750e341085ddfd95b}{m\+\_\+name}}
 \item 
-std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_node}{Node}} $>$ \mbox{\hyperlink{classec_1_1_scene_a7b7f1f4840087d56148e4c4be5737b50}{m\+\_\+root}}
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_node}{Node}} $>$ \mbox{\hyperlink{classec_1_1_scene_a7b7f1f4840087d56148e4c4be5737b50}{m\+\_\+root}} = nullptr
 \item 
-\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_ad63e472baf8e283c596891384ea98aad}{m\+\_\+scene\+System}}
+\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_ad63e472baf8e283c596891384ea98aad}{m\+\_\+scene\+System}} = nullptr
 \item 
 \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \mbox{\hyperlink{classec_1_1_scene_a17a2c241cec6bda0a5895b353aa28fa7}{m\+\_\+scene\+Renderer}}
 \item 
-\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_aa6a8f71066fc44162b1c80341840d5fb}{m\+\_\+scene\+Controller}}
+\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_aa6a8f71066fc44162b1c80341840d5fb}{m\+\_\+scene\+Controller}} = nullptr
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classec_1_1_scene_ad137e70b44b44f22b3e68d50671e9989}\label{classec_1_1_scene_ad137e70b44b44f22b3e68d50671e9989}} 
+\mbox{\Hypertarget{classec_1_1_scene_a9abac0a0de42ff4e9eb6481cf1927754}\label{classec_1_1_scene_a9abac0a0de42ff4e9eb6481cf1927754}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!Scene@{Scene}}
 \index{Scene@{Scene}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{Scene()}{Scene()}}
-{\footnotesize\ttfamily ec\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily ec\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 \mbox{\Hypertarget{classec_1_1_scene_a25e849d1bd5a9a71af922c3668115cb6}\label{classec_1_1_scene_a25e849d1bd5a9a71af922c3668115cb6}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!````~Scene@{$\sim$\+Scene}}
 \index{````~Scene@{$\sim$\+Scene}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{$\sim$\+Scene()}{~Scene()}}
-{\footnotesize\ttfamily ec\+::\+Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily ec\+::\+Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_scene_acd8a7b83227f99d595e9c6ee9592fc56}\label{classec_1_1_scene_acd8a7b83227f99d595e9c6ee9592fc56}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Disable@{Disable}}
-\index{Disable@{Disable}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Disable()}{Disable()}}
-{\footnotesize\ttfamily void ec\+::\+Scene\+::\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_scene_a05bf59f23abb809000ad17bdb00cab94}\label{classec_1_1_scene_a05bf59f23abb809000ad17bdb00cab94}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!disable@{disable}}
+\index{disable@{disable}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Disable this scene \mbox{\Hypertarget{classec_1_1_scene_a2c6d246942f97119f1a09a85e8175146}\label{classec_1_1_scene_a2c6d246942f97119f1a09a85e8175146}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Enable@{Enable}}
-\index{Enable@{Enable}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Enable()}{Enable()}}
-{\footnotesize\ttfamily void ec\+::\+Scene\+::\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Disable this scene \mbox{\Hypertarget{classec_1_1_scene_ab1788ac3be0db2d82ee2f8c5fa0cecef}\label{classec_1_1_scene_ab1788ac3be0db2d82ee2f8c5fa0cecef}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!enable@{enable}}
+\index{enable@{enable}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Enable this scene \mbox{\Hypertarget{classec_1_1_scene_a1646cecfcece12eec99d904a4351d21c}\label{classec_1_1_scene_a1646cecfcece12eec99d904a4351d21c}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Get\+Name@{Get\+Name}}
-\index{Get\+Name@{Get\+Name}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
-{\footnotesize\ttfamily const std\+::string \& ec\+::\+Scene\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+Enable this scene \mbox{\Hypertarget{classec_1_1_scene_a24c00d38f3b17123f10f02ff77830f62}\label{classec_1_1_scene_a24c00d38f3b17123f10f02ff77830f62}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& ec\+::\+Scene\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_scene_aa2c014fb59f0b51abe5de601a93297d5}\label{classec_1_1_scene_aa2c014fb59f0b51abe5de601a93297d5}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Get\+Root@{Get\+Root}}
-\index{Get\+Root@{Get\+Root}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Get\+Root()}{GetRoot()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_node}{ec\+::\+Node}} $\ast$ ec\+::\+Scene\+::\+Get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_scene_aef77276f4a386c5b66159ecb1d4d072c}\label{classec_1_1_scene_aef77276f4a386c5b66159ecb1d4d072c}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!get\+Root@{get\+Root}}
+\index{get\+Root@{get\+Root}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{get\+Root()}{getRoot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_node}{ec\+::\+Node}} $\ast$ ec\+::\+Scene\+::get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_scene_ac3e1522d93014a5f19193cc3d173d64a}\label{classec_1_1_scene_ac3e1522d93014a5f19193cc3d173d64a}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Get\+Scene\+Controller@{Get\+Scene\+Controller}}
-\index{Get\+Scene\+Controller@{Get\+Scene\+Controller}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Get\+Scene\+Controller()}{GetSceneController()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_controller}{ec\+::\+Scene\+Controller}} $\ast$ ec\+::\+Scene\+::\+Get\+Scene\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_scene_ad562a16db4552e529af7284de0b79304}\label{classec_1_1_scene_ad562a16db4552e529af7284de0b79304}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!get\+Scene\+Controller@{get\+Scene\+Controller}}
+\index{get\+Scene\+Controller@{get\+Scene\+Controller}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{get\+Scene\+Controller()}{getSceneController()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_controller}{ec\+::\+Scene\+Controller}} $\ast$ ec\+::\+Scene\+::get\+Scene\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_scene_a79d67056a8b73bf78e37e5d8951363f5}\label{classec_1_1_scene_a79d67056a8b73bf78e37e5d8951363f5}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Get\+Scene\+Renderer@{Get\+Scene\+Renderer}}
-\index{Get\+Scene\+Renderer@{Get\+Scene\+Renderer}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Get\+Scene\+Renderer()}{GetSceneRenderer()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_renderer}{ec\+::\+Scene\+Renderer}} \& ec\+::\+Scene\+::\+Get\+Scene\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_scene_a73f48395e9442f3e6647dd9503050b91}\label{classec_1_1_scene_a73f48395e9442f3e6647dd9503050b91}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!get\+Scene\+Renderer@{get\+Scene\+Renderer}}
+\index{get\+Scene\+Renderer@{get\+Scene\+Renderer}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{get\+Scene\+Renderer()}{getSceneRenderer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_renderer}{ec\+::\+Scene\+Renderer}} \& ec\+::\+Scene\+::get\+Scene\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_scene_ae9e6923ee710a8b597e1996d1275d4fa}\label{classec_1_1_scene_ae9e6923ee710a8b597e1996d1275d4fa}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Get\+Scene\+System@{Get\+Scene\+System}}
-\index{Get\+Scene\+System@{Get\+Scene\+System}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Get\+Scene\+System()}{GetSceneSystem()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_system}{ec\+::\+Scene\+System}} $\ast$ ec\+::\+Scene\+::\+Get\+Scene\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_scene_a95b79ca1dc856cb50262ab4b9e72465f}\label{classec_1_1_scene_a95b79ca1dc856cb50262ab4b9e72465f}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!get\+Scene\+System@{get\+Scene\+System}}
+\index{get\+Scene\+System@{get\+Scene\+System}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{get\+Scene\+System()}{getSceneSystem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_system}{ec\+::\+Scene\+System}} $\ast$ ec\+::\+Scene\+::get\+Scene\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_scene_a37c25b9ccec318568e9028be616305c4}\label{classec_1_1_scene_a37c25b9ccec318568e9028be616305c4}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Init\+Scene\+Renderer@{Init\+Scene\+Renderer}}
-\index{Init\+Scene\+Renderer@{Init\+Scene\+Renderer}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Init\+Scene\+Renderer()}{InitSceneRenderer()}}
-{\footnotesize\ttfamily void ec\+::\+Scene\+::\+Init\+Scene\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classec_1_1_scene_a137505b25a213810b1b477ad13daca7f}\label{classec_1_1_scene_a137505b25a213810b1b477ad13daca7f}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!init\+Scene\+Renderer@{init\+Scene\+Renderer}}
+\index{init\+Scene\+Renderer@{init\+Scene\+Renderer}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{init\+Scene\+Renderer()}{initSceneRenderer()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+::init\+Scene\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classec_1_1_scene_a404676c2a1c87875b97c2c8942292f65}\label{classec_1_1_scene_a404676c2a1c87875b97c2c8942292f65}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Is\+Enabled@{Is\+Enabled}}
-\index{Is\+Enabled@{Is\+Enabled}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Is\+Enabled()}{IsEnabled()}}
-{\footnotesize\ttfamily bool ec\+::\+Scene\+::\+Is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{classec_1_1_scene_a0748d645ee5204e64d674c1b10b26864}\label{classec_1_1_scene_a0748d645ee5204e64d674c1b10b26864}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!is\+Enabled@{is\+Enabled}}
+\index{is\+Enabled@{is\+Enabled}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{is\+Enabled()}{isEnabled()}}
+{\footnotesize\ttfamily bool ec\+::\+Scene\+::is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Check if this scene is enabled \mbox{\Hypertarget{classec_1_1_scene_a67660c99962c9e12280937dcbbfd2102}\label{classec_1_1_scene_a67660c99962c9e12280937dcbbfd2102}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Set\+Scene\+Controller@{Set\+Scene\+Controller}}
-\index{Set\+Scene\+Controller@{Set\+Scene\+Controller}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Set\+Scene\+Controller()}{SetSceneController()}}
-{\footnotesize\ttfamily void ec\+::\+Scene\+::\+Set\+Scene\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$}]{scene\+Controller }\end{DoxyParamCaption})}
+Check if this scene is enabled \mbox{\Hypertarget{classec_1_1_scene_a8c3bc6848957704f9f45508c13133a91}\label{classec_1_1_scene_a8c3bc6848957704f9f45508c13133a91}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!set\+Scene\+Controller@{set\+Scene\+Controller}}
+\index{set\+Scene\+Controller@{set\+Scene\+Controller}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{set\+Scene\+Controller()}{setSceneController()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+::set\+Scene\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$}]{scene\+Controller }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_scene_a3f300f8210249e457121aa0696261b4e}\label{classec_1_1_scene_a3f300f8210249e457121aa0696261b4e}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Set\+Scene\+Renderer@{Set\+Scene\+Renderer}}
-\index{Set\+Scene\+Renderer@{Set\+Scene\+Renderer}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Set\+Scene\+Renderer()}{SetSceneRenderer()}}
-{\footnotesize\ttfamily void ec\+::\+Scene\+::\+Set\+Scene\+Renderer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \&}]{scene\+Renderer }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_scene_a4a000b3820dfcf578ed80bae3bf5f432}\label{classec_1_1_scene_a4a000b3820dfcf578ed80bae3bf5f432}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!set\+Scene\+Renderer@{set\+Scene\+Renderer}}
+\index{set\+Scene\+Renderer@{set\+Scene\+Renderer}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{set\+Scene\+Renderer()}{setSceneRenderer()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+::set\+Scene\+Renderer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \&}]{scene\+Renderer }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_scene_a24962dd137eba3192c3e88e597c7d03d}\label{classec_1_1_scene_a24962dd137eba3192c3e88e597c7d03d}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Set\+Scene\+System@{Set\+Scene\+System}}
-\index{Set\+Scene\+System@{Set\+Scene\+System}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Set\+Scene\+System()}{SetSceneSystem()}}
-{\footnotesize\ttfamily void ec\+::\+Scene\+::\+Set\+Scene\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$}]{scene\+System }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_scene_a87a6277fea206956c0a7175cf308ece0}\label{classec_1_1_scene_a87a6277fea206956c0a7175cf308ece0}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!set\+Scene\+System@{set\+Scene\+System}}
+\index{set\+Scene\+System@{set\+Scene\+System}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{set\+Scene\+System()}{setSceneSystem()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+::set\+Scene\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$}]{scene\+System }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_scene_a07895d944a6045fa0ce5712b6a020c91}\label{classec_1_1_scene_a07895d944a6045fa0ce5712b6a020c91}} 
-\index{ec\+::\+Scene@{ec\+::\+Scene}!Tick@{Tick}}
-\index{Tick@{Tick}!ec\+::\+Scene@{ec\+::\+Scene}}
-\subsubsection{\texorpdfstring{Tick()}{Tick()}}
-{\footnotesize\ttfamily void ec\+::\+Scene\+::\+Tick (\begin{DoxyParamCaption}\item[{const float}]{time\+Delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{classec_1_1_scene_a09deb945a2c8255d70a68b0aaddaecb6}\label{classec_1_1_scene_a09deb945a2c8255d70a68b0aaddaecb6}} 
+\index{ec\+::\+Scene@{ec\+::\+Scene}!tick@{tick}}
+\index{tick@{tick}!ec\+::\+Scene@{ec\+::\+Scene}}
+\subsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void ec\+::\+Scene\+::tick (\begin{DoxyParamCaption}\item[{float}]{time\+Delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -167,7 +167,7 @@ Check if this scene is enabled \mbox{\Hypertarget{classec_1_1_scene_a67660c99962
 \index{ec\+::\+Scene@{ec\+::\+Scene}!m\+\_\+enabled@{m\+\_\+enabled}}
 \index{m\+\_\+enabled@{m\+\_\+enabled}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{m\+\_\+enabled}{m\_enabled}}
-{\footnotesize\ttfamily bool ec\+::\+Scene\+::m\+\_\+enabled\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily bool ec\+::\+Scene\+::m\+\_\+enabled = true\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classec_1_1_scene_a58a25f1f2370535750e341085ddfd95b}\label{classec_1_1_scene_a58a25f1f2370535750e341085ddfd95b}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!m\+\_\+name@{m\+\_\+name}}
@@ -179,13 +179,13 @@ Check if this scene is enabled \mbox{\Hypertarget{classec_1_1_scene_a67660c99962
 \index{ec\+::\+Scene@{ec\+::\+Scene}!m\+\_\+root@{m\+\_\+root}}
 \index{m\+\_\+root@{m\+\_\+root}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{m\+\_\+root}{m\_root}}
-{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_node}{Node}}$>$ ec\+::\+Scene\+::m\+\_\+root\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_node}{Node}}$>$ ec\+::\+Scene\+::m\+\_\+root = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classec_1_1_scene_aa6a8f71066fc44162b1c80341840d5fb}\label{classec_1_1_scene_aa6a8f71066fc44162b1c80341840d5fb}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!m\+\_\+scene\+Controller@{m\+\_\+scene\+Controller}}
 \index{m\+\_\+scene\+Controller@{m\+\_\+scene\+Controller}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{m\+\_\+scene\+Controller}{m\_sceneController}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}}$\ast$ ec\+::\+Scene\+::m\+\_\+scene\+Controller\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}}$\ast$ ec\+::\+Scene\+::m\+\_\+scene\+Controller = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classec_1_1_scene_a17a2c241cec6bda0a5895b353aa28fa7}\label{classec_1_1_scene_a17a2c241cec6bda0a5895b353aa28fa7}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!m\+\_\+scene\+Renderer@{m\+\_\+scene\+Renderer}}
@@ -197,7 +197,7 @@ Check if this scene is enabled \mbox{\Hypertarget{classec_1_1_scene_a67660c99962
 \index{ec\+::\+Scene@{ec\+::\+Scene}!m\+\_\+scene\+System@{m\+\_\+scene\+System}}
 \index{m\+\_\+scene\+System@{m\+\_\+scene\+System}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{m\+\_\+scene\+System}{m\_sceneSystem}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}}$\ast$ ec\+::\+Scene\+::m\+\_\+scene\+System\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}}$\ast$ ec\+::\+Scene\+::m\+\_\+scene\+System = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

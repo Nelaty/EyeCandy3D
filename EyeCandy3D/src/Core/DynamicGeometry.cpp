@@ -7,4 +7,14 @@ namespace ec
 
 	DynamicGeometry::DynamicGeometry()
 	= default;
+
+	void DynamicGeometry::beginRender()
+	{
+		update();
+		__super::beginRender();
+	}
+
+	void DynamicGeometry::update()
+	{
+	}
 }

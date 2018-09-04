@@ -6,12 +6,11 @@
 
 
 
-Collaboration diagram for ec\+:\+:Application\+:
-\nopagebreak
+Collaboration diagram for ec\+:\+:Application\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=175pt]{classec_1_1_application__coll__graph}
+\includegraphics[width=173pt]{classec_1_1_application__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
@@ -22,13 +21,34 @@ using \mbox{\hyperlink{classec_1_1_application_af1e09a0f1b603eab8d3245d8b8075ad5
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classec_1_1_application_aeb940e0d02a540322cb43daa21e6e0cc}{Application}} (const unsigned int window\+Width, const unsigned int window\+Height, const std\+::string \&windo\+Title, const std\+::string \&window\+Name)
-\item 
+\mbox{\hyperlink{classec_1_1_application_af4a94888105d739a2de75be17ce9ad67}{Application}} (unsigned int window\+Width, unsigned int window\+Height, const std\+::string \&window\+Title, const std\+::string \&window\+Name)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_application}{Application}} constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_application_abe00fd469062e9710bfda9f9d13765f3}{$\sim$\+Application}} ()
 \item 
-bool \mbox{\hyperlink{classec_1_1_application_ae542514441629578de091652e0153359}{Create\+Window}} (unsigned int width, unsigned int height, const std\+::string \&title, const std\+::string \&name)
+virtual void \mbox{\hyperlink{classec_1_1_application_ad541044a8fc0ff8d6c3fc57220109a50}{start\+Main\+Loop}} ()
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_application_a036ae53bcbf708c7a01deb199feeccdf}{tick}} ()
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_application_a4fe5dcd06017ba4322eca3adec47e03e}{render}} ()
+\item 
+virtual bool \mbox{\hyperlink{classec_1_1_application_a1460d7083c312271285747a7cc03f7e8}{init\+Impl}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_application_a8d6ef43e247b541017fa82e001c42995}{init\+Open\+Gl}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_application_a970bf73d58fbf89647125267d5c54a73}{init\+Agui}} ()
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_application_ad32692a6e65a00346ab2992eba3a86e7}{main\+Loop\+Impl}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_application_a6a04a15ddb8e4e2f15d40b6ddb92455e}{print\+Versions}} () const
+\item 
+{\footnotesize template$<$class Window\+Class $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+constructible$<$ Window\+Class, unsigned int, unsigned int, const std\+::string \& $>$\+::value, Window\+Class $>$\+::type $\ast$ \mbox{\hyperlink{classec_1_1_application_a465270af2a0bb6d34b813683bacfa808}{create\+Window}} (unsigned int width, unsigned int height, const std\+::string \&title, const std\+::string \&name)
+\item 
+{\footnotesize template$<$class Window\+Class $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+constructible$<$ Window\+Class, unsigned int, unsigned int, const std\+::string \& $>$\+::value, Window\+Class $>$\+::type $\ast$ \mbox{\hyperlink{classec_1_1_application_ae8227078a50aca68da1a340656c52579}{create\+Window}} (unsigned width, unsigned height, const std\+::string \&title, const std\+::string \&name)
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+An application is the main class of a program. ..... 
 
 \subsection{Member Typedef Documentation}
 \mbox{\Hypertarget{classec_1_1_application_af1e09a0f1b603eab8d3245d8b8075ad5}\label{classec_1_1_application_af1e09a0f1b603eab8d3245d8b8075ad5}} 
@@ -40,31 +60,118 @@ bool \mbox{\hyperlink{classec_1_1_application_ae542514441629578de091652e0153359}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classec_1_1_application_aeb940e0d02a540322cb43daa21e6e0cc}\label{classec_1_1_application_aeb940e0d02a540322cb43daa21e6e0cc}} 
+\mbox{\Hypertarget{classec_1_1_application_af4a94888105d739a2de75be17ce9ad67}\label{classec_1_1_application_af4a94888105d739a2de75be17ce9ad67}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!Application@{Application}}
 \index{Application@{Application}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{Application()}{Application()}}
-{\footnotesize\ttfamily ec\+::\+Application\+::\+Application (\begin{DoxyParamCaption}\item[{const unsigned int}]{window\+Width,  }\item[{const unsigned int}]{window\+Height,  }\item[{const std\+::string \&}]{windo\+Title,  }\item[{const std\+::string \&}]{window\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily ec\+::\+Application\+::\+Application (\begin{DoxyParamCaption}\item[{unsigned int}]{window\+Width,  }\item[{unsigned int}]{window\+Height,  }\item[{const std\+::string \&}]{window\+Title,  }\item[{const std\+::string \&}]{window\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+
+
+\mbox{\hyperlink{classec_1_1_application}{Application}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+Width} & Width of the first window in pixels. \\
+\hline
+{\em window\+Height} & Height of the first window in pixels. \\
+\hline
+{\em window\+Title} & Title of the first window. \\
+\hline
+{\em window\+Name} & Identifier of the first window. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classec_1_1_application_abe00fd469062e9710bfda9f9d13765f3}\label{classec_1_1_application_abe00fd469062e9710bfda9f9d13765f3}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!````~Application@{$\sim$\+Application}}
 \index{````~Application@{$\sim$\+Application}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{$\sim$\+Application()}{~Application()}}
-{\footnotesize\ttfamily ec\+::\+Application\+::$\sim$\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ec\+::\+Application\+::$\sim$\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_application_ae542514441629578de091652e0153359}\label{classec_1_1_application_ae542514441629578de091652e0153359}} 
-\index{ec\+::\+Application@{ec\+::\+Application}!Create\+Window@{Create\+Window}}
-\index{Create\+Window@{Create\+Window}!ec\+::\+Application@{ec\+::\+Application}}
-\subsubsection{\texorpdfstring{Create\+Window()}{CreateWindow()}}
-{\footnotesize\ttfamily bool ec\+::\+Application\+::\+Create\+Window (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{const std\+::string \&}]{title,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_application_a465270af2a0bb6d34b813683bacfa808}\label{classec_1_1_application_a465270af2a0bb6d34b813683bacfa808}} 
+\index{ec\+::\+Application@{ec\+::\+Application}!create\+Window@{create\+Window}}
+\index{create\+Window@{create\+Window}!ec\+::\+Application@{ec\+::\+Application}}
+\subsubsection{\texorpdfstring{create\+Window()}{createWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Window\+Class $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+constructible$<$ Window\+Class, unsigned int, unsigned int, const std\+::string\&$>$\+::value, Window\+Class$>$\+::type$\ast$ ec\+::\+Application\+::create\+Window (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{const std\+::string \&}]{title,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
 
-Create a new window and add it to the current list of windows. \begin{DoxyReturn}{Returns}
-False it a window with the given name already exists, true otherwise. 
+Create a new window and add it to the current list of windows. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Window\+Class} & Needs to be derived from \mbox{\hyperlink{classec_1_1_window}{Window}}. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the window in pixels. \\
+\hline
+{\em height} & Height of the window in pixels. \\
+\hline
+{\em title} & Title of the window. \\
+\hline
+{\em name} & Identifier of the window. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nullptr if a window with the given name already exists, pointer to the newly created window otherwise. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_application_ae8227078a50aca68da1a340656c52579}\label{classec_1_1_application_ae8227078a50aca68da1a340656c52579}} 
+\index{ec\+::\+Application@{ec\+::\+Application}!create\+Window@{create\+Window}}
+\index{create\+Window@{create\+Window}!ec\+::\+Application@{ec\+::\+Application}}
+\subsubsection{\texorpdfstring{create\+Window()}{createWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Window\+Class $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+constructible$<$ Window\+Class, unsigned int, unsigned int, const std\+::string\&$>$\+::value, Window\+Class$>$\+::type$\ast$ ec\+::\+Application\+::create\+Window (\begin{DoxyParamCaption}\item[{unsigned}]{width,  }\item[{unsigned}]{height,  }\item[{const std\+::string \&}]{title,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{classec_1_1_application_a970bf73d58fbf89647125267d5c54a73}\label{classec_1_1_application_a970bf73d58fbf89647125267d5c54a73}} 
+\index{ec\+::\+Application@{ec\+::\+Application}!init\+Agui@{init\+Agui}}
+\index{init\+Agui@{init\+Agui}!ec\+::\+Application@{ec\+::\+Application}}
+\subsubsection{\texorpdfstring{init\+Agui()}{initAgui()}}
+{\footnotesize\ttfamily void ec\+::\+Application\+::init\+Agui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize Agui G\+U\+I-\/\+Library. \mbox{\Hypertarget{classec_1_1_application_a1460d7083c312271285747a7cc03f7e8}\label{classec_1_1_application_a1460d7083c312271285747a7cc03f7e8}} 
+\index{ec\+::\+Application@{ec\+::\+Application}!init\+Impl@{init\+Impl}}
+\index{init\+Impl@{init\+Impl}!ec\+::\+Application@{ec\+::\+Application}}
+\subsubsection{\texorpdfstring{init\+Impl()}{initImpl()}}
+{\footnotesize\ttfamily bool ec\+::\+Application\+::init\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Init function implementation. \mbox{\Hypertarget{classec_1_1_application_a8d6ef43e247b541017fa82e001c42995}\label{classec_1_1_application_a8d6ef43e247b541017fa82e001c42995}} 
+\index{ec\+::\+Application@{ec\+::\+Application}!init\+Open\+Gl@{init\+Open\+Gl}}
+\index{init\+Open\+Gl@{init\+Open\+Gl}!ec\+::\+Application@{ec\+::\+Application}}
+\subsubsection{\texorpdfstring{init\+Open\+Gl()}{initOpenGl()}}
+{\footnotesize\ttfamily void ec\+::\+Application\+::init\+Open\+Gl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize Open\+GL. \mbox{\Hypertarget{classec_1_1_application_ad32692a6e65a00346ab2992eba3a86e7}\label{classec_1_1_application_ad32692a6e65a00346ab2992eba3a86e7}} 
+\index{ec\+::\+Application@{ec\+::\+Application}!main\+Loop\+Impl@{main\+Loop\+Impl}}
+\index{main\+Loop\+Impl@{main\+Loop\+Impl}!ec\+::\+Application@{ec\+::\+Application}}
+\subsubsection{\texorpdfstring{main\+Loop\+Impl()}{mainLoopImpl()}}
+{\footnotesize\ttfamily void ec\+::\+Application\+::main\+Loop\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Main loop function implementation \mbox{\Hypertarget{classec_1_1_application_a6a04a15ddb8e4e2f15d40b6ddb92455e}\label{classec_1_1_application_a6a04a15ddb8e4e2f15d40b6ddb92455e}} 
+\index{ec\+::\+Application@{ec\+::\+Application}!print\+Versions@{print\+Versions}}
+\index{print\+Versions@{print\+Versions}!ec\+::\+Application@{ec\+::\+Application}}
+\subsubsection{\texorpdfstring{print\+Versions()}{printVersions()}}
+{\footnotesize\ttfamily void ec\+::\+Application\+::print\+Versions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Print the versions of used libraries to console. \mbox{\Hypertarget{classec_1_1_application_a4fe5dcd06017ba4322eca3adec47e03e}\label{classec_1_1_application_a4fe5dcd06017ba4322eca3adec47e03e}} 
+\index{ec\+::\+Application@{ec\+::\+Application}!render@{render}}
+\index{render@{render}!ec\+::\+Application@{ec\+::\+Application}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void ec\+::\+Application\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Render all windows \mbox{\Hypertarget{classec_1_1_application_ad541044a8fc0ff8d6c3fc57220109a50}\label{classec_1_1_application_ad541044a8fc0ff8d6c3fc57220109a50}} 
+\index{ec\+::\+Application@{ec\+::\+Application}!start\+Main\+Loop@{start\+Main\+Loop}}
+\index{start\+Main\+Loop@{start\+Main\+Loop}!ec\+::\+Application@{ec\+::\+Application}}
+\subsubsection{\texorpdfstring{start\+Main\+Loop()}{startMainLoop()}}
+{\footnotesize\ttfamily void ec\+::\+Application\+::start\+Main\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Should be called to start the application \mbox{\Hypertarget{classec_1_1_application_a036ae53bcbf708c7a01deb199feeccdf}\label{classec_1_1_application_a036ae53bcbf708c7a01deb199feeccdf}} 
+\index{ec\+::\+Application@{ec\+::\+Application}!tick@{tick}}
+\index{tick@{tick}!ec\+::\+Application@{ec\+::\+Application}}
+\subsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void ec\+::\+Application\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Update all windows 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

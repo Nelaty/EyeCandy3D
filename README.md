@@ -17,10 +17,15 @@ Nuget packages:
 
 Additional include directories:
 * *EyeCandy3D/include*
+* *External/include*
 
 Additional dependencies:
 * EyeCandy3D.lib
 * opengl32.lib
+* agui.lib
+
+Additional dependencies directories:
+* *Build*
 
 ## 3. Documentation
 * [Doxygen](https://nelaty.github.io/EyeCandy3D/Doc/DoxygenDoc/html/index.html)

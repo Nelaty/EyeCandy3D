@@ -86,14 +86,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6064ffe0b832b2744eeb83a6aef563b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afda0f442e5f6194cfd4253b9def34f0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#afda0f442e5f6194cfd4253b9def34f0a">~ShaderManager</a> ()</td></tr>
 <tr class="separator:afda0f442e5f6194cfd4253b9def34f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad66bcc74668f5d872afb6fd47709c630"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#ad66bcc74668f5d872afb6fd47709c630">AddShader</a> (const std::string &amp;shaderName, const std::string &amp;vertPath, const std::string &amp;fragPath, const std::string &amp;geomPath=&quot;&quot;, const std::string &amp;tessCtrlPath=&quot;&quot;, const std::string &amp;tessEvalPath=&quot;&quot;)</td></tr>
-<tr class="separator:ad66bcc74668f5d872afb6fd47709c630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52f341542759f5fd2c0013133f1007ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_shader.html">Shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a52f341542759f5fd2c0013133f1007ab">GetShader</a> (const char *shaderName)</td></tr>
-<tr class="separator:a52f341542759f5fd2c0013133f1007ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a0cc15d1f843a8bc39999792c26e762"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::unique_ptr&lt; <a class="el" href="classec_1_1_shader.html">Shader</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a0a0cc15d1f843a8bc39999792c26e762">GetAllShader</a> ()</td></tr>
-<tr class="separator:a0a0cc15d1f843a8bc39999792c26e762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19b4d35481ff18573de99722c62064b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a19b4d35481ff18573de99722c62064b0">SwitchShaderProgram</a> (const char *shaderName)</td></tr>
-<tr class="separator:a19b4d35481ff18573de99722c62064b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a63a18679d10c93e75b11ded25e8f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a81a63a18679d10c93e75b11ded25e8f0">addShader</a> (const std::string &amp;shaderName, const std::string &amp;vertPath, const std::string &amp;fragPath, const std::string &amp;geomPath=&quot;&quot;, const std::string &amp;tessCtrlPath=&quot;&quot;, const std::string &amp;tessEvalPath=&quot;&quot;)</td></tr>
+<tr class="separator:a81a63a18679d10c93e75b11ded25e8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e1390b9c15a6809ef07a10bac4112c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_shader.html">Shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a3e1390b9c15a6809ef07a10bac4112c7">getShader</a> (const char *shaderName) const</td></tr>
+<tr class="separator:a3e1390b9c15a6809ef07a10bac4112c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff28268f21b821c048f351684a0213f"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::unique_ptr&lt; <a class="el" href="classec_1_1_shader.html">Shader</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#aaff28268f21b821c048f351684a0213f">getAllShader</a> () const</td></tr>
+<tr class="separator:aaff28268f21b821c048f351684a0213f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af42171dd2256a130b056d772e3190da0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#af42171dd2256a130b056d772e3190da0">switchShaderProgram</a> (const char *shaderName) const</td></tr>
+<tr class="separator:af42171dd2256a130b056d772e3190da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6064ffe0b832b2744eeb83a6aef563b7"></a>
@@ -101,6 +101,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ec::ShaderManager::ShaderManager </td>
@@ -109,6 +112,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -118,6 +126,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ec::ShaderManager::~ShaderManager </td>
@@ -126,19 +137,24 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad66bcc74668f5d872afb6fd47709c630"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad66bcc74668f5d872afb6fd47709c630">&#9670;&nbsp;</a></span>AddShader()</h2>
+<a id="a81a63a18679d10c93e75b11ded25e8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a63a18679d10c93e75b11ded25e8f0">&#9670;&nbsp;</a></span>addShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ec::ShaderManager::AddShader </td>
+          <td class="memname">bool ec::ShaderManager::addShader </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>shaderName</em>, </td>
@@ -180,59 +196,63 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Try to add a new shader </p>
 
 </div>
 </div>
-<a id="a0a0cc15d1f843a8bc39999792c26e762"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a0cc15d1f843a8bc39999792c26e762">&#9670;&nbsp;</a></span>GetAllShader()</h2>
+<a id="aaff28268f21b821c048f351684a0213f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaff28268f21b821c048f351684a0213f">&#9670;&nbsp;</a></span>getAllShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::map&lt; std::string, std::unique_ptr&lt; <a class="el" href="classec_1_1_shader.html">ec::Shader</a> &gt; &gt; &amp; ec::ShaderManager::GetAllShader </td>
+          <td class="memname">const std::map&lt; std::string, std::unique_ptr&lt; <a class="el" href="classec_1_1_shader.html">ec::Shader</a> &gt; &gt; &amp; ec::ShaderManager::getAllShader </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return all shaders </p>
 
 </div>
 </div>
-<a id="a52f341542759f5fd2c0013133f1007ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52f341542759f5fd2c0013133f1007ab">&#9670;&nbsp;</a></span>GetShader()</h2>
+<a id="a3e1390b9c15a6809ef07a10bac4112c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e1390b9c15a6809ef07a10bac4112c7">&#9670;&nbsp;</a></span>getShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_shader.html">Shader</a> * ec::ShaderManager::GetShader </td>
+          <td class="memname"><a class="el" href="classec_1_1_shader.html">Shader</a> * ec::ShaderManager::getShader </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>shaderName</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get a shader by its name return null if not existent </p>
 
 </div>
 </div>
-<a id="a19b4d35481ff18573de99722c62064b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19b4d35481ff18573de99722c62064b0">&#9670;&nbsp;</a></span>SwitchShaderProgram()</h2>
+<a id="af42171dd2256a130b056d772e3190da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af42171dd2256a130b056d772e3190da0">&#9670;&nbsp;</a></span>switchShaderProgram()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ec::ShaderManager::SwitchShaderProgram </td>
+          <td class="memname">bool ec::ShaderManager::switchShaderProgram </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>shaderName</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Try binding another shader </p>
 
 </div>
 </div>

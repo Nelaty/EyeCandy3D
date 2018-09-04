@@ -68,9 +68,10 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classec_1_1_geometry-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ec::Geometry Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">ec::Geometry Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -80,13 +81,13 @@ Inheritance diagram for ec::Geometry:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_geometry__inherit__graph.png" border="0" usemap="#ec_1_1_geometry_inherit__map" alt="Inheritance graph"/></div>
 <map name="ec_1_1_geometry_inherit__map" id="ec_1_1_geometry_inherit__map">
-<area shape="rect" id="node2" href="classec_1_1_dynamic_geometry.html" title="{ec::DynamicGeometry\n||+ ~DynamicGeometry()\l# DynamicGeometry()\l}" alt="" coords="17,292,176,384"/>
-<area shape="rect" id="node4" href="classec_1_1_spring_geometry.html" title="{ec::SpringGeometry\n||+ SpringGeometry()\l+ ~SpringGeometry()\l}" alt="" coords="201,292,345,384"/>
-<area shape="rect" id="node5" href="classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n|# m_VAO\l# m_VBO\l# m_EBO\l# m_vertices\l# m_indices\l|+ ~StaticGeometry()\l+ RecalculateNormals()\l+ GetVAO()\l+ GetVBO()\l+ GetEBO()\l# BeginRender()\l# OnRender()\l# EndRender()\l# SetupMesh()\l# StaticGeometry()\l}" alt="" coords="369,204,528,472"/>
-<area shape="rect" id="node3" href="classec_1_1_dynamic_line_geometry.html" title="{ec::DynamicLineGeometry\n||+ DynamicLineGeometry()\l+ ~DynamicLineGeometry()\l+ SetStart()\l+ GetStart()\l+ SetEnd()\l+ GetEnd()\l+ SetLinewidth()\l+ GetLinewidth()\l# OnRender()\l}" alt="" coords="5,520,188,715"/>
-<area shape="rect" id="node6" href="classec_1_1_cube_mesh.html" title="{ec::CubeMesh\n||+ CubeMesh()\l+ CubeMesh()\l+ ~CubeMesh()\l+ Resize()\l}" alt="" coords="242,557,354,678"/>
-<area shape="rect" id="node7" href="classec_1_1_rectangle_mesh.html" title="{ec::RectangleMesh\n||+ RectangleMesh()\l+ RectangleMesh()\l+ ~RectangleMesh()\l}" alt="" coords="379,564,519,671"/>
-<area shape="rect" id="node8" href="classec_1_1_sphere_mesh.html" title="{ec::SphereMesh\n||+ SphereMesh()\l+ ~SphereMesh()\l+ Resize()\l+ GetRadius()\l+ GetLatitude()\l+ GetLongitude()\l}" alt="" coords="543,542,666,693"/>
+<area shape="rect" id="node3" href="classec_1_1_dynamic_geometry.html" title="{ec::DynamicGeometry\n||+ ~DynamicGeometry()\l# DynamicGeometry()\l# beginRender()\l# update()\l}" alt="" coords="63,476,221,597"/>
+<area shape="rect" id="node5" href="classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n||+ ~StaticGeometry()\l# setupMesh()\l# StaticGeometry()\l}" alt="" coords="291,483,433,590"/>
+<area shape="rect" id="node2" href="classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="157,5,311,156"/>
+<area shape="rect" id="node4" href="classec_1_1_dynamic_line_geometry.html" title="{ec::DynamicLineGeometry\n||+ DynamicLineGeometry()\l+ ~DynamicLineGeometry()\l+ setStart()\l+ getStart()\l+ setEnd()\l+ getEnd()\l+ setLineWidth()\l+ getLineWidth()\l# beginRender()\l# onRender()\l# endRender()\l}" alt="" coords="5,645,188,869"/>
+<area shape="rect" id="node6" href="classec_1_1_cube_geometry.html" title="{ec::CubeGeometry\n||+ CubeGeometry()\l+ CubeGeometry()\l+ ~CubeGeometry()\l+ resize()\l}" alt="" coords="212,697,349,818"/>
+<area shape="rect" id="node7" href="classec_1_1_rectangle_mesh.html" title="{ec::RectangleMesh\n||+ RectangleMesh()\l+ RectangleMesh()\l+ ~RectangleMesh()\l}" alt="" coords="373,704,513,811"/>
+<area shape="rect" id="node8" href="classec_1_1_sphere_geometry.html" title="{ec::SphereGeometry\n||+ SphereGeometry()\l+ ~SphereGeometry()\l+ resize()\l+ getRadius()\l+ getLatitude()\l+ getLongitude()\l}" alt="" coords="537,682,685,833"/>
 </map>
 </div>
 <div class="dynheader">
@@ -94,6 +95,8 @@ Collaboration diagram for ec::Geometry:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_geometry__coll__graph.png" border="0" usemap="#ec_1_1_geometry_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_geometry_coll__map" id="ec_1_1_geometry_coll__map">
+<area shape="rect" id="node2" href="classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="5,211,160,362"/>
+<area shape="rect" id="node3" href="structec_1_1_geometry_data.html" title="{ec::GeometryData\n||+ GeometryData()\l+ ~GeometryData()\l+ bind()\l+ unbind()\l+ resizeBuffers()\l+ initBufferObjects()\l+ buffersInitialized()\l+ releaseMemory()\l+ updateVertexData()\l+ updateIndexData()\l+ update()\l}" alt="" coords="184,175,331,399"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -101,19 +104,42 @@ Collaboration diagram for ec::Geometry:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a964c581313da2be51a3c78d3be7f48b3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a964c581313da2be51a3c78d3be7f48b3">~Geometry</a> ()</td></tr>
 <tr class="separator:a964c581313da2be51a3c78d3be7f48b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de70c6fd7391ec0555b2df57912b177"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a8de70c6fd7391ec0555b2df57912b177">Render</a> (<a class="el" href="classec_1_1_shader.html">Shader</a> *shader, const glm::mat4 &amp;model)</td></tr>
-<tr class="separator:a8de70c6fd7391ec0555b2df57912b177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228d4a0fa01a17379f24aee2c769b501"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a228d4a0fa01a17379f24aee2c769b501">recalculateNormals</a> ()</td></tr>
+<tr class="separator:a228d4a0fa01a17379f24aee2c769b501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a89baad39d4f2b2c4e9774d952dce9"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a91a89baad39d4f2b2c4e9774d952dce9">getVao</a> () const</td></tr>
+<tr class="separator:a91a89baad39d4f2b2c4e9774d952dce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad5d4311d16462099b8f9d084d99dd4"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#abad5d4311d16462099b8f9d084d99dd4">getVbo</a> () const</td></tr>
+<tr class="separator:abad5d4311d16462099b8f9d084d99dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d956ff01a7b6648ede8982e0a461ae0"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a5d956ff01a7b6648ede8982e0a461ae0">getEbo</a> () const</td></tr>
+<tr class="separator:a5d956ff01a7b6648ede8982e0a461ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classec_1_1_i_geometry_access"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classec_1_1_i_geometry_access')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classec_1_1_i_geometry_access.html">ec::IGeometryAccess</a></td></tr>
+<tr class="memitem:a786b4a8489f1c7fd6c4c2685fc53e7dc inherit pub_methods_classec_1_1_i_geometry_access"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_i_geometry_access.html#a786b4a8489f1c7fd6c4c2685fc53e7dc">~IGeometryAccess</a> ()</td></tr>
+<tr class="separator:a786b4a8489f1c7fd6c4c2685fc53e7dc inherit pub_methods_classec_1_1_i_geometry_access"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a478e674624120a644c05be9be4e386b8 inherit pub_methods_classec_1_1_i_geometry_access"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_i_geometry_access.html#a478e674624120a644c05be9be4e386b8">render</a> (<a class="el" href="classec_1_1_shader.html">Shader</a> *shader, const glm::mat4 &amp;model)</td></tr>
+<tr class="separator:a478e674624120a644c05be9be4e386b8 inherit pub_methods_classec_1_1_i_geometry_access"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a184b4fdde8062c1dc0eb9e3393cc540f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a184b4fdde8062c1dc0eb9e3393cc540f">BeginRender</a> ()=0</td></tr>
-<tr class="separator:a184b4fdde8062c1dc0eb9e3393cc540f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae49d24667dca154cba707b0c219a8eb2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#ae49d24667dca154cba707b0c219a8eb2">OnRender</a> ()=0</td></tr>
-<tr class="separator:ae49d24667dca154cba707b0c219a8eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41ed9550a0d1746c55add3c3c0a38984"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a41ed9550a0d1746c55add3c3c0a38984">EndRender</a> ()=0</td></tr>
-<tr class="separator:a41ed9550a0d1746c55add3c3c0a38984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a409c80ac243a5eb27c2a98b17cc8b3e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a409c80ac243a5eb27c2a98b17cc8b3e9">Geometry</a> ()</td></tr>
-<tr class="separator:a409c80ac243a5eb27c2a98b17cc8b3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae22c6b54c7c534249ee08b3fb77a70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#aeae22c6b54c7c534249ee08b3fb77a70">Geometry</a> (GLenum mode=GL_TRIANGLES, GLenum type=GL_UNSIGNED_INT)</td></tr>
+<tr class="separator:aeae22c6b54c7c534249ee08b3fb77a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca5f0e52e7c2e4b352ede1a6e7c3f5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#aeca5f0e52e7c2e4b352ede1a6e7c3f5b">beginRender</a> () override</td></tr>
+<tr class="separator:aeca5f0e52e7c2e4b352ede1a6e7c3f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f166e70fc880e88092f29ef46afb836"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a1f166e70fc880e88092f29ef46afb836">onRender</a> () override</td></tr>
+<tr class="separator:a1f166e70fc880e88092f29ef46afb836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0352702162501df185517e84c3b02bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#ae0352702162501df185517e84c3b02bd">endRender</a> () override</td></tr>
+<tr class="separator:ae0352702162501df185517e84c3b02bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f80cd4d4c22b108c33b9030e91467b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#ad4f80cd4d4c22b108c33b9030e91467b">setMode</a> (GLenum mode)</td></tr>
+<tr class="separator:ad4f80cd4d4c22b108c33b9030e91467b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c3da280ff11e86a8b07d18a23e0880"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a12c3da280ff11e86a8b07d18a23e0880">setType</a> (GLenum type)</td></tr>
+<tr class="separator:a12c3da280ff11e86a8b07d18a23e0880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classec_1_1_i_geometry_access"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classec_1_1_i_geometry_access')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classec_1_1_i_geometry_access.html">ec::IGeometryAccess</a></td></tr>
+<tr class="memitem:aaf9faa0f583e89aa0b27db7cecbb7c6e inherit pro_methods_classec_1_1_i_geometry_access"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_i_geometry_access.html#aaf9faa0f583e89aa0b27db7cecbb7c6e">IGeometryAccess</a> ()</td></tr>
+<tr class="separator:aaf9faa0f583e89aa0b27db7cecbb7c6e inherit pro_methods_classec_1_1_i_geometry_access"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aeb72a472b242d92496f0283cfee17fac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structec_1_1_geometry_data.html">GeometryData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#aeb72a472b242d92496f0283cfee17fac">m_data</a></td></tr>
+<tr class="separator:aeb72a472b242d92496f0283cfee17fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a964c581313da2be51a3c78d3be7f48b3"></a>
@@ -134,15 +160,15 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a409c80ac243a5eb27c2a98b17cc8b3e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a409c80ac243a5eb27c2a98b17cc8b3e9">&#9670;&nbsp;</a></span>Geometry()</h2>
+<a id="aeae22c6b54c7c534249ee08b3fb77a70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae22c6b54c7c534249ee08b3fb77a70">&#9670;&nbsp;</a></span>Geometry()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,8 +179,19 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">ec::Geometry::Geometry </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>mode</em> = <code>GL_TRIANGLES</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>type</em> = <code>GL_UNSIGNED_INT</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -167,8 +204,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a184b4fdde8062c1dc0eb9e3393cc540f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a184b4fdde8062c1dc0eb9e3393cc540f">&#9670;&nbsp;</a></span>BeginRender()</h2>
+<a id="aeca5f0e52e7c2e4b352ede1a6e7c3f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca5f0e52e7c2e4b352ede1a6e7c3f5b">&#9670;&nbsp;</a></span>beginRender()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,7 +214,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Geometry::BeginRender </td>
+          <td class="memname">void ec::Geometry::beginRender </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -185,18 +222,18 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Called at the beginning of the rendering routine. </p>
 
-<p>Implemented in <a class="el" href="classec_1_1_static_geometry.html#a58dfe3cc7d91f3bcf99d83b038cf5f1d">ec::StaticGeometry</a>.</p>
+<p>Implements <a class="el" href="classec_1_1_i_geometry_access.html#a17a87aca44e2a23a6185e78262e02652">ec::IGeometryAccess</a>.</p>
 
 </div>
 </div>
-<a id="a41ed9550a0d1746c55add3c3c0a38984"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41ed9550a0d1746c55add3c3c0a38984">&#9670;&nbsp;</a></span>EndRender()</h2>
+<a id="ae0352702162501df185517e84c3b02bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0352702162501df185517e84c3b02bd">&#9670;&nbsp;</a></span>endRender()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,7 +242,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Geometry::EndRender </td>
+          <td class="memname">void ec::Geometry::endRender </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -213,18 +250,72 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Called at the end of the rendering routine. </p>
 
-<p>Implemented in <a class="el" href="classec_1_1_static_geometry.html#a2a66505344ad1a9eac31da2cf8171ea9">ec::StaticGeometry</a>.</p>
+<p>Implements <a class="el" href="classec_1_1_i_geometry_access.html#a6d3b9c34a8b73aeac26663ef349ce41f">ec::IGeometryAccess</a>.</p>
 
 </div>
 </div>
-<a id="ae49d24667dca154cba707b0c219a8eb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae49d24667dca154cba707b0c219a8eb2">&#9670;&nbsp;</a></span>OnRender()</h2>
+<a id="a5d956ff01a7b6648ede8982e0a461ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d956ff01a7b6648ede8982e0a461ae0">&#9670;&nbsp;</a></span>getEbo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint ec::Geometry::getEbo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the element buffer object id. </p>
+
+</div>
+</div>
+<a id="a91a89baad39d4f2b2c4e9774d952dce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a89baad39d4f2b2c4e9774d952dce9">&#9670;&nbsp;</a></span>getVao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint ec::Geometry::getVao </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the vertex array object id. </p>
+
+</div>
+</div>
+<a id="abad5d4311d16462099b8f9d084d99dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abad5d4311d16462099b8f9d084d99dd4">&#9670;&nbsp;</a></span>getVbo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint ec::Geometry::getVbo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the vertex buffer object id. </p>
+
+</div>
+</div>
+<a id="a1f166e70fc880e88092f29ef46afb836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f166e70fc880e88092f29ef46afb836">&#9670;&nbsp;</a></span>onRender()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +324,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Geometry::OnRender </td>
+          <td class="memname">void ec::Geometry::onRender </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -241,18 +332,18 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>The actual rendering of the object. </p>
 
-<p>Implemented in <a class="el" href="classec_1_1_dynamic_line_geometry.html#aea2c2ade5a97294e579a559b20771275">ec::DynamicLineGeometry</a>, and <a class="el" href="classec_1_1_static_geometry.html#aa10330a07bc5ccd18d0d61c4c965bccd">ec::StaticGeometry</a>.</p>
+<p>Implements <a class="el" href="classec_1_1_i_geometry_access.html#a2ee418c9fa4eb266347bae2f0ef8095b">ec::IGeometryAccess</a>.</p>
 
 </div>
 </div>
-<a id="a8de70c6fd7391ec0555b2df57912b177"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8de70c6fd7391ec0555b2df57912b177">&#9670;&nbsp;</a></span>Render()</h2>
+<a id="a228d4a0fa01a17379f24aee2c769b501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a228d4a0fa01a17379f24aee2c769b501">&#9670;&nbsp;</a></span>recalculateNormals()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,26 +352,91 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Geometry::Render </td>
+          <td class="memname">void ec::Geometry::recalculateNormals </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classec_1_1_shader.html">Shader</a> *&#160;</td>
-          <td class="paramname"><em>shader</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const glm::mat4 &amp;&#160;</td>
-          <td class="paramname"><em>model</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Recalculate vertex normals. </p>
+
+</div>
+</div>
+<a id="ad4f80cd4d4c22b108c33b9030e91467b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f80cd4d4c22b108c33b9030e91467b">&#9670;&nbsp;</a></span>setMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Geometry::setMode </td>
+          <td>(</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12c3da280ff11e86a8b07d18a23e0880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c3da280ff11e86a8b07d18a23e0880">&#9670;&nbsp;</a></span>setType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Geometry::setType </td>
+          <td>(</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aeb72a472b242d92496f0283cfee17fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb72a472b242d92496f0283cfee17fac">&#9670;&nbsp;</a></span>m_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structec_1_1_geometry_data.html">GeometryData</a> ec::Geometry::m_data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

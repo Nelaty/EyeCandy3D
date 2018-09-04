@@ -1,4 +1,4 @@
 <map id="agui::OpenGLInput" name="agui::OpenGLInput">
-<area shape="rect" id="node2" href="$class_input.html" title="{Input\n||}" alt="" coords="25,233,76,311"/>
-<area shape="rect" id="node3" href="$classec_1_1_input_listener.html" title="{ec::InputListener\n||+ ~InputListener()\l+ Inform()\l+ Enable()\l+ IsEnabled()\l+ AddCallback()\l+ RemoveCallback()\l+ RemoveCallbacksOfType()\l+ RemoveAllCallbacks()\l+ IsCallbackRegistered()\l# InputListener()\l# ProcessEvent()\l}" alt="" coords="100,160,287,384"/>
+<area shape="rect" id="node2" href="$class_input.html" title="{Input\n||}" alt="" coords="28,233,79,311"/>
+<area shape="rect" id="node3" href="$classec_1_1_input_listener.html" title="{ec::InputListener\n||+ ~InputListener()\l+ inform()\l+ enable()\l+ isEnabled()\l+ addCallback()\l+ removeCallback()\l+ removeCallbacksOfType()\l+ removeAllCallbacks()\l+ isCallbackRegistered()\l# InputListener()\l# processEvent()\l}" alt="" coords="103,160,284,384"/>
 </map>

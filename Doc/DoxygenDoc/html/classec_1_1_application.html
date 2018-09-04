@@ -79,8 +79,6 @@ $(function() {
 Collaboration diagram for ec::Application:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_application__coll__graph.png" border="0" usemap="#ec_1_1_application_coll__map" alt="Collaboration graph"/></div>
-<map name="ec_1_1_application_coll__map" id="ec_1_1_application_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -90,14 +88,37 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeb940e0d02a540322cb43daa21e6e0cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#aeb940e0d02a540322cb43daa21e6e0cc">Application</a> (const unsigned int windowWidth, const unsigned int windowHeight, const std::string &amp;windoTitle, const std::string &amp;windowName)</td></tr>
-<tr class="separator:aeb940e0d02a540322cb43daa21e6e0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4a94888105d739a2de75be17ce9ad67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#af4a94888105d739a2de75be17ce9ad67">Application</a> (unsigned int windowWidth, unsigned int windowHeight, const std::string &amp;windowTitle, const std::string &amp;windowName)</td></tr>
+<tr class="memdesc:af4a94888105d739a2de75be17ce9ad67"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classec_1_1_application.html">Application</a> constructor.  <a href="#af4a94888105d739a2de75be17ce9ad67">More...</a><br /></td></tr>
+<tr class="separator:af4a94888105d739a2de75be17ce9ad67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe00fd469062e9710bfda9f9d13765f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#abe00fd469062e9710bfda9f9d13765f3">~Application</a> ()</td></tr>
 <tr class="separator:abe00fd469062e9710bfda9f9d13765f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae542514441629578de091652e0153359"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#ae542514441629578de091652e0153359">CreateWindow</a> (unsigned int width, unsigned int height, const std::string &amp;title, const std::string &amp;name)</td></tr>
-<tr class="separator:ae542514441629578de091652e0153359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad541044a8fc0ff8d6c3fc57220109a50"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#ad541044a8fc0ff8d6c3fc57220109a50">startMainLoop</a> ()</td></tr>
+<tr class="separator:ad541044a8fc0ff8d6c3fc57220109a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036ae53bcbf708c7a01deb199feeccdf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a036ae53bcbf708c7a01deb199feeccdf">tick</a> ()</td></tr>
+<tr class="separator:a036ae53bcbf708c7a01deb199feeccdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe5dcd06017ba4322eca3adec47e03e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a4fe5dcd06017ba4322eca3adec47e03e">render</a> ()</td></tr>
+<tr class="separator:a4fe5dcd06017ba4322eca3adec47e03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1460d7083c312271285747a7cc03f7e8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a1460d7083c312271285747a7cc03f7e8">initImpl</a> ()</td></tr>
+<tr class="separator:a1460d7083c312271285747a7cc03f7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6ef43e247b541017fa82e001c42995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a8d6ef43e247b541017fa82e001c42995">initOpenGl</a> ()</td></tr>
+<tr class="separator:a8d6ef43e247b541017fa82e001c42995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a970bf73d58fbf89647125267d5c54a73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a970bf73d58fbf89647125267d5c54a73">initAgui</a> ()</td></tr>
+<tr class="separator:a970bf73d58fbf89647125267d5c54a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32692a6e65a00346ab2992eba3a86e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#ad32692a6e65a00346ab2992eba3a86e7">mainLoopImpl</a> ()</td></tr>
+<tr class="separator:ad32692a6e65a00346ab2992eba3a86e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a04a15ddb8e4e2f15d40b6ddb92455e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a6a04a15ddb8e4e2f15d40b6ddb92455e">printVersions</a> () const</td></tr>
+<tr class="separator:a6a04a15ddb8e4e2f15d40b6ddb92455e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a465270af2a0bb6d34b813683bacfa808"><td class="memTemplParams" colspan="2">template&lt;class WindowClass &gt; </td></tr>
+<tr class="memitem:a465270af2a0bb6d34b813683bacfa808"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_constructible&lt; WindowClass, unsigned int, unsigned int, const std::string &amp; &gt;::value, WindowClass &gt;::type *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a465270af2a0bb6d34b813683bacfa808">createWindow</a> (unsigned int width, unsigned int height, const std::string &amp;title, const std::string &amp;name)</td></tr>
+<tr class="separator:a465270af2a0bb6d34b813683bacfa808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8227078a50aca68da1a340656c52579"><td class="memTemplParams" colspan="2">template&lt;class WindowClass &gt; </td></tr>
+<tr class="memitem:ae8227078a50aca68da1a340656c52579"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_constructible&lt; WindowClass, unsigned int, unsigned int, const std::string &amp; &gt;::value, WindowClass &gt;::type *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#ae8227078a50aca68da1a340656c52579">createWindow</a> (unsigned width, unsigned height, const std::string &amp;title, const std::string &amp;name)</td></tr>
+<tr class="separator:ae8227078a50aca68da1a340656c52579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An application is the main class of a program. ..... </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="af1e09a0f1b603eab8d3245d8b8075ad5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1e09a0f1b603eab8d3245d8b8075ad5">&#9670;&nbsp;</a></span>Window_Ptr</h2>
 
@@ -113,8 +134,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aeb940e0d02a540322cb43daa21e6e0cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb940e0d02a540322cb43daa21e6e0cc">&#9670;&nbsp;</a></span>Application()</h2>
+<a id="af4a94888105d739a2de75be17ce9ad67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4a94888105d739a2de75be17ce9ad67">&#9670;&nbsp;</a></span>Application()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,20 +146,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">ec::Application::Application </td>
           <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>windowWidth</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>windowHeight</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>windoTitle</em>, </td>
+          <td class="paramname"><em>windowTitle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -159,6 +180,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classec_1_1_application.html">Application</a> constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">windowWidth</td><td>Width of the first window in pixels. </td></tr>
+    <tr><td class="paramname">windowHeight</td><td>Height of the first window in pixels. </td></tr>
+    <tr><td class="paramname">windowTitle</td><td>Title of the first window. </td></tr>
+    <tr><td class="paramname">windowName</td><td>Identifier of the first window. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="abe00fd469062e9710bfda9f9d13765f3"></a>
@@ -166,6 +198,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ec::Application::~Application </td>
@@ -174,19 +209,26 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae542514441629578de091652e0153359"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae542514441629578de091652e0153359">&#9670;&nbsp;</a></span>CreateWindow()</h2>
+<a id="a465270af2a0bb6d34b813683bacfa808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a465270af2a0bb6d34b813683bacfa808">&#9670;&nbsp;</a></span>createWindow() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class WindowClass &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool ec::Application::CreateWindow </td>
+          <td class="memname">std::enable_if&lt;std::is_constructible&lt; WindowClass, unsigned int, unsigned int, const std::string&amp;&gt;::value, WindowClass&gt;::type* ec::Application::createWindow </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>width</em>, </td>
@@ -216,7 +258,248 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a new window and add it to the current list of windows. </p><dl class="section return"><dt>Returns</dt><dd>False it a window with the given name already exists, true otherwise. </dd></dl>
+<p>Create a new window and add it to the current list of windows. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">WindowClass</td><td>Needs to be derived from <a class="el" href="classec_1_1_window.html">Window</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Width of the window in pixels. </td></tr>
+    <tr><td class="paramname">height</td><td>Height of the window in pixels. </td></tr>
+    <tr><td class="paramname">title</td><td>Title of the window. </td></tr>
+    <tr><td class="paramname">name</td><td>Identifier of the window. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nullptr if a window with the given name already exists, pointer to the newly created window otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ae8227078a50aca68da1a340656c52579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8227078a50aca68da1a340656c52579">&#9670;&nbsp;</a></span>createWindow() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class WindowClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt;std::is_constructible&lt; WindowClass, unsigned int, unsigned int, const std::string&amp;&gt;::value, WindowClass&gt;::type* ec::Application::createWindow </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a970bf73d58fbf89647125267d5c54a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a970bf73d58fbf89647125267d5c54a73">&#9670;&nbsp;</a></span>initAgui()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::initAgui </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize Agui GUI-Library. </p>
+
+</div>
+</div>
+<a id="a1460d7083c312271285747a7cc03f7e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1460d7083c312271285747a7cc03f7e8">&#9670;&nbsp;</a></span>initImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ec::Application::initImpl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Init function implementation. </p>
+
+</div>
+</div>
+<a id="a8d6ef43e247b541017fa82e001c42995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6ef43e247b541017fa82e001c42995">&#9670;&nbsp;</a></span>initOpenGl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::initOpenGl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize OpenGL. </p>
+
+</div>
+</div>
+<a id="ad32692a6e65a00346ab2992eba3a86e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad32692a6e65a00346ab2992eba3a86e7">&#9670;&nbsp;</a></span>mainLoopImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::mainLoopImpl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Main loop function implementation </p>
+
+</div>
+</div>
+<a id="a6a04a15ddb8e4e2f15d40b6ddb92455e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a04a15ddb8e4e2f15d40b6ddb92455e">&#9670;&nbsp;</a></span>printVersions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::printVersions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print the versions of used libraries to console. </p>
+
+</div>
+</div>
+<a id="a4fe5dcd06017ba4322eca3adec47e03e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fe5dcd06017ba4322eca3adec47e03e">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Render all windows </p>
+
+</div>
+</div>
+<a id="ad541044a8fc0ff8d6c3fc57220109a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad541044a8fc0ff8d6c3fc57220109a50">&#9670;&nbsp;</a></span>startMainLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::startMainLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Should be called to start the application </p>
+
+</div>
+</div>
+<a id="a036ae53bcbf708c7a01deb199feeccdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036ae53bcbf708c7a01deb199feeccdf">&#9670;&nbsp;</a></span>tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::tick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Update all windows </p>
 
 </div>
 </div>

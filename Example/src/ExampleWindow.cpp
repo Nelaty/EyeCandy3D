@@ -4,21 +4,26 @@
 #include "EC3D/Core/Scene.h"
 #include "EC3D/Core/Node.h"
 #include "EC3D/Core/Drawable.h"
-#include "EC3D/Core/CubeMesh.h"
+#include "EC3D/Core/CubeGeometry.h"
 #include "EC3D/Core/Material.h"
 #include "EC3D/Core/Camera.h"
 #include "EC3D/Core/Frame.h"
+#include "EC3D/Core/DynamicLineGeometry.h"
+
 #include "EC3D/Core/SceneRenderer.h"
 #include "EC3D/Core/Shader/Shader.h"
 
 using namespace ec;
 
-ExampleWindow::ExampleWindow(int width, int height, const char* windowTitle)
+ExampleWindow::ExampleWindow(unsigned int width, unsigned int height, const std::string& windowTitle)
 	: Window(width, height, windowTitle)
 {
 	initShaders();
 	initScenes();
 
+	initGeometries();
+
+	dynamicGeoTest();
 	// Render everything as a wire frame
 	// SwitchToWireframeMode();
 }
@@ -39,7 +44,7 @@ void ExampleWindow::initCameras()
 	m_camera->setTranslation(glm::vec3(0.0f, 0.0f, 10.0f));
 
 	m_cameraController.setCamera(m_camera);
-	m_inputObservable.registerInputListener(&m_cameraController);
+	m_eventSystem.registerInputListener(&m_cameraController);
 
 	// Create a second camera
 	m_camera2 = new ec::Camera(m_exampleScene);
@@ -86,11 +91,11 @@ void ExampleWindow::initScenes()
 
 	// Add drawable to camera
 	auto* shader = m_shaderManager.getShader("basic");
-	auto* cubeMesh = new CubeMesh(1.0f);
-	auto* woodMat = new Material();
-	woodMat->addDiffuseTextureFromPath("Resources/Textures/wall_02.jpg");
+	auto* cubeMesh = new CubeGeometry(1.0f);
+	m_woodMat = new Material();
+	m_woodMat->addDiffuseTextureFromPath("../Resources/Textures/wall_02.jpg");
 
-	auto* cameraDrawable = new Drawable(cubeMesh, woodMat, shader);
+	auto* cameraDrawable = new Drawable(cubeMesh, m_woodMat, shader);
 	//m_camera->AddDrawable(cameraDrawable);
 
 	auto* root = m_exampleScene->getRoot();
@@ -104,7 +109,7 @@ void ExampleWindow::initScenes()
 
 void ExampleWindow::initShaders()
 {
-	const std::string path = "Resources/Shaders/";
+	const std::string path = "../Resources/Shaders/";
 
 	m_shaderManager.addShader("basic",
 							  path + "basic.vert",
@@ -117,4 +122,37 @@ void ExampleWindow::initShaders()
 	m_shaderManager.addShader("text",
 							  path + "text.vert",
 							  path + "text.frag");
+}
+
+void ExampleWindow::dynamicGeoTest()
+{
+	auto origin = new Node();
+	auto endNode = new Node();
+	endNode->translateZ(-10);
+
+	auto lineGeo = new DynamicLineGeometry(origin, endNode, 10.0f);
+	auto drawable = new Drawable(lineGeo, m_woodMat, m_shaderManager.getShader("basic"));
+	origin->addDrawable(drawable);
+
+	auto* root = m_exampleScene->getRoot();
+	root->addChild(origin);
+	root->addChild(endNode);
+}
+
+void ExampleWindow::initGeometries()
+{
+	
+}
+
+void ExampleWindow::initMaterials()
+{
+	
+}
+
+void ExampleWindow::initTextures()
+{
+}
+
+void ExampleWindow::initDrawables()
+{
 }

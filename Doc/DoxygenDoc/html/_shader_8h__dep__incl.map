@@ -1,7 +1,7 @@
 <map id="D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/Shader/Shader.h" name="D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/Shader/Shader.h">
 <area shape="rect" id="node2" href="$_drawable_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Drawable.cpp" alt="" coords="5,139,231,209"/>
 <area shape="rect" id="node3" href="$_freetype_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Freetype.cpp" alt="" coords="255,139,480,209"/>
-<area shape="rect" id="node4" href="$_geometry_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Geometry.cpp" alt="" coords="504,139,729,209"/>
+<area shape="rect" id="node4" href="$_i_geometry_access_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/IGeometryAccess.cpp" alt="" coords="504,139,729,209"/>
 <area shape="rect" id="node5" href="$_material_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Material.cpp" alt="" coords="753,139,979,209"/>
 <area shape="rect" id="node6" href="$_rectangle_mesh_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/RectangleMesh.cpp" alt="" coords="1003,139,1228,209"/>
 <area shape="rect" id="node7" href="$_scene_renderer_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/SceneRenderer.cpp" alt="" coords="1252,139,1477,209"/>

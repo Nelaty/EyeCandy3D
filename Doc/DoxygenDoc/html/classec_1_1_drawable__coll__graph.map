@@ -1,5 +1,5 @@
 <map id="ec::Drawable" name="ec::Drawable">
-<area shape="rect" id="node2" href="$classec_1_1_material.html" title="{ec::Material\n||+ Material()\l+ ~Material()\l+ AddTexture()\l+ RemoveTexture()\l+ GetTexture()\l+ GetTextures()\l+ SetHasTexture()\l+ HasTexture()\l+ AddDiffuseTextureFromPath()\l+ AddSpecularTextureFromPath()\land 15 more...\l}" alt="" coords="5,5,221,229"/>
-<area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ Render()\l# BeginRender()\l# OnRender()\l# EndRender()\l# Geometry()\l}" alt="" coords="245,42,360,193"/>
-<area shape="rect" id="node4" href="$classec_1_1_shader.html" title="{ec::Shader\n||+ Shader()\l+ ~Shader()\l+ Bind()\l+ Unbind()\l+ SetBool()\l+ SetInt()\l+ SetFloat()\l+ SetDouble()\l+ SetVec2()\l+ SetVec3()\land 6 more...\l}" alt="" coords="385,5,487,229"/>
+<area shape="rect" id="node2" href="$classec_1_1_material.html" title="{ec::Material\n||+ Material()\l+ ~Material()\l+ addTexture()\l+ removeTexture()\l+ getTexture()\l+ getTextures()\l+ setHasTexture()\l+ hasTexture()\l+ addDiffuseTextureFromPath()\l+ addSpecularTextureFromPath()\land 15 more...\l}" alt="" coords="5,5,220,229"/>
+<area shape="rect" id="node3" href="$classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="245,42,399,193"/>
+<area shape="rect" id="node4" href="$classec_1_1_shader.html" title="{ec::Shader\n||+ Shader()\l+ ~Shader()\l+ bind()\l+ unbind()\l+ setBool()\l+ setInt()\l+ setFloat()\l+ setDouble()\l+ setVec2()\l+ setVec3()\land 6 more...\l}" alt="" coords="424,5,524,229"/>
 </map>

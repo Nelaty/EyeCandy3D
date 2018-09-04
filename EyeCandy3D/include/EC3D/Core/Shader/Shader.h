@@ -8,7 +8,7 @@
 /*
 * Bundles vertex, fragment shader, geometry, tessellation control and
 * tessellation evaluation shaders.
-* Geometry and tessellation shaders are optional.
+* IGeometry and tessellation shaders are optional.
 *
 * Includes are allowed in shader sources and referenced files will be
 * inlined.

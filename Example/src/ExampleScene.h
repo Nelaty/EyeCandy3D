@@ -22,6 +22,8 @@ public:
 private:
 	void constructTestSg();
 	void sphereTest();
+	
+
 
 	ec::Window* m_window;
 
@@ -29,4 +31,6 @@ private:
 	ec::Node* m_right;
 	ec::Node* m_backside;
 	ec::Node* m_bottom;
+
+	ec::Node* m_origin;
 };

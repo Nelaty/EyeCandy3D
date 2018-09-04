@@ -6,12 +6,11 @@
 
 
 
-Collaboration diagram for ec\+:\+:Texture\+:
-\nopagebreak
+Collaboration diagram for ec\+:\+:Texture\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=191pt]{classec_1_1_texture__coll__graph}
+\includegraphics[width=190pt]{classec_1_1_texture__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -21,23 +20,27 @@ Collaboration diagram for ec\+:\+:Texture\+:
 \item 
 \mbox{\hyperlink{classec_1_1_texture_ae567d80654dd09c6b02a38ca8de29ead}{$\sim$\+Texture}} ()
 \item 
-void \mbox{\hyperlink{classec_1_1_texture_a83b67b45fa6991f79141f025dd5e269a}{Set\+Id}} (const unsigned int id)
+void \mbox{\hyperlink{classec_1_1_texture_a9e2f0191cfcc85c87edb821508cc06ee}{bind}} () const
 \item 
-int \mbox{\hyperlink{classec_1_1_texture_af3ba0bce713e3c54ec5a12c830a99940}{Get\+Id}} () const
+void \mbox{\hyperlink{classec_1_1_texture_a95c72abc5c801df231fc970c6adffdcc}{unbind}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_texture_a190cc58745400d490ea492112196cb2d}{Set\+Type}} (const std\+::string \&type)
+void \mbox{\hyperlink{classec_1_1_texture_af3555f8dda9a13babcb96d40d4417813}{set\+Id}} (unsigned int id)
 \item 
-const std\+::string \& \mbox{\hyperlink{classec_1_1_texture_a5062d684caa000641817a918451eb76a}{Get\+Type}} () const
+int \mbox{\hyperlink{classec_1_1_texture_a0097b0b1826d7339ae109a187b6304d5}{get\+Id}} () const
 \item 
-\mbox{\hyperlink{structec_1_1_texture_types_aa9ef510185cfe61d20918eb0b2c13501}{Texture\+Types\+::\+Dimensions}} \mbox{\hyperlink{classec_1_1_texture_a774a1f7dfefd55b01e7f645ba3b23660}{Get\+Dimensions}} () const
+void \mbox{\hyperlink{classec_1_1_texture_a4d984f43478753facd81186d1cd36bcb}{set\+Type}} (const std\+::string \&type)
 \item 
-bool \mbox{\hyperlink{classec_1_1_texture_a4ad8c7559c57f05d993c895ea6820566}{Texture\+From\+File}} (const char $\ast$path, const std\+::string \&type)
+const std\+::string \& \mbox{\hyperlink{classec_1_1_texture_a1c33bc610c0b5c7807fa92897320349f}{get\+Type}} () const
 \item 
-bool \mbox{\hyperlink{classec_1_1_texture_a4ddfae4d7a899f946f3453ecf3652d51}{Cube\+Map\+From\+File}} (const char $\ast$path, const std\+::string \&type)
+\mbox{\hyperlink{structec_1_1_texture_types_ac0e07f24452fa28dd8e6e33a224842fc}{Texture\+Types\+::\+Dimensions}} \mbox{\hyperlink{classec_1_1_texture_a5d1e6d8dd6c98ea036caf2696e47637a}{get\+Dimensions}} () const
 \item 
-bool \mbox{\hyperlink{classec_1_1_texture_ada1a3d1cc5c86b87e98929457899314e}{Is\+Initialized}} () const
+bool \mbox{\hyperlink{classec_1_1_texture_ac2461a696b914d1b22192a87d326f480}{texture\+From\+File}} (const char $\ast$path, const std\+::string \&type)
 \item 
-void \mbox{\hyperlink{classec_1_1_texture_aea77869bff55578f0e8c65f58354e191}{Free}} ()
+bool \mbox{\hyperlink{classec_1_1_texture_ae84b0f18fa11275f09e4c8ea3dc89e02}{cube\+Map\+From\+File}} (const char $\ast$path, const std\+::string \&type)
+\item 
+bool \mbox{\hyperlink{classec_1_1_texture_ab81c62fde2f54dfbb5895a421224fcd9}{is\+Initialized}} () const
+\item 
+void \mbox{\hyperlink{classec_1_1_texture_a57242daae8cc1ea827848f9b7f7b7fbb}{free}} ()
 \end{DoxyCompactItemize}
 
 
@@ -52,66 +55,78 @@ void \mbox{\hyperlink{classec_1_1_texture_aea77869bff55578f0e8c65f58354e191}{Fre
 \index{ec\+::\+Texture@{ec\+::\+Texture}!````~Texture@{$\sim$\+Texture}}
 \index{````~Texture@{$\sim$\+Texture}!ec\+::\+Texture@{ec\+::\+Texture}}
 \subsubsection{\texorpdfstring{$\sim$\+Texture()}{~Texture()}}
-{\footnotesize\ttfamily ec\+::\+Texture\+::$\sim$\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ec\+::\+Texture\+::$\sim$\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_texture_a4ddfae4d7a899f946f3453ecf3652d51}\label{classec_1_1_texture_a4ddfae4d7a899f946f3453ecf3652d51}} 
-\index{ec\+::\+Texture@{ec\+::\+Texture}!Cube\+Map\+From\+File@{Cube\+Map\+From\+File}}
-\index{Cube\+Map\+From\+File@{Cube\+Map\+From\+File}!ec\+::\+Texture@{ec\+::\+Texture}}
-\subsubsection{\texorpdfstring{Cube\+Map\+From\+File()}{CubeMapFromFile()}}
-{\footnotesize\ttfamily bool ec\+::\+Texture\+::\+Cube\+Map\+From\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_texture_a9e2f0191cfcc85c87edb821508cc06ee}\label{classec_1_1_texture_a9e2f0191cfcc85c87edb821508cc06ee}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!bind@{bind}}
+\index{bind@{bind}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void ec\+::\+Texture\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_texture_aea77869bff55578f0e8c65f58354e191}\label{classec_1_1_texture_aea77869bff55578f0e8c65f58354e191}} 
-\index{ec\+::\+Texture@{ec\+::\+Texture}!Free@{Free}}
-\index{Free@{Free}!ec\+::\+Texture@{ec\+::\+Texture}}
-\subsubsection{\texorpdfstring{Free()}{Free()}}
-{\footnotesize\ttfamily void ec\+::\+Texture\+::\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Activate this texture. \mbox{\Hypertarget{classec_1_1_texture_ae84b0f18fa11275f09e4c8ea3dc89e02}\label{classec_1_1_texture_ae84b0f18fa11275f09e4c8ea3dc89e02}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!cube\+Map\+From\+File@{cube\+Map\+From\+File}}
+\index{cube\+Map\+From\+File@{cube\+Map\+From\+File}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{cube\+Map\+From\+File()}{cubeMapFromFile()}}
+{\footnotesize\ttfamily bool ec\+::\+Texture\+::cube\+Map\+From\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
 
-Deallocation of texture memory \mbox{\Hypertarget{classec_1_1_texture_a774a1f7dfefd55b01e7f645ba3b23660}\label{classec_1_1_texture_a774a1f7dfefd55b01e7f645ba3b23660}} 
-\index{ec\+::\+Texture@{ec\+::\+Texture}!Get\+Dimensions@{Get\+Dimensions}}
-\index{Get\+Dimensions@{Get\+Dimensions}!ec\+::\+Texture@{ec\+::\+Texture}}
-\subsubsection{\texorpdfstring{Get\+Dimensions()}{GetDimensions()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_texture_types_aa9ef510185cfe61d20918eb0b2c13501}{ec\+::\+Texture\+Types\+::\+Dimensions}} ec\+::\+Texture\+::\+Get\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{classec_1_1_texture_a57242daae8cc1ea827848f9b7f7b7fbb}\label{classec_1_1_texture_a57242daae8cc1ea827848f9b7f7b7fbb}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!free@{free}}
+\index{free@{free}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void ec\+::\+Texture\+::free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_texture_af3ba0bce713e3c54ec5a12c830a99940}\label{classec_1_1_texture_af3ba0bce713e3c54ec5a12c830a99940}} 
-\index{ec\+::\+Texture@{ec\+::\+Texture}!Get\+Id@{Get\+Id}}
-\index{Get\+Id@{Get\+Id}!ec\+::\+Texture@{ec\+::\+Texture}}
-\subsubsection{\texorpdfstring{Get\+Id()}{GetId()}}
-{\footnotesize\ttfamily int ec\+::\+Texture\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+Deallocation of texture memory \mbox{\Hypertarget{classec_1_1_texture_a5d1e6d8dd6c98ea036caf2696e47637a}\label{classec_1_1_texture_a5d1e6d8dd6c98ea036caf2696e47637a}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!get\+Dimensions@{get\+Dimensions}}
+\index{get\+Dimensions@{get\+Dimensions}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{get\+Dimensions()}{getDimensions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_texture_types_ac0e07f24452fa28dd8e6e33a224842fc}{ec\+::\+Texture\+Types\+::\+Dimensions}} ec\+::\+Texture\+::get\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_texture_a5062d684caa000641817a918451eb76a}\label{classec_1_1_texture_a5062d684caa000641817a918451eb76a}} 
-\index{ec\+::\+Texture@{ec\+::\+Texture}!Get\+Type@{Get\+Type}}
-\index{Get\+Type@{Get\+Type}!ec\+::\+Texture@{ec\+::\+Texture}}
-\subsubsection{\texorpdfstring{Get\+Type()}{GetType()}}
-{\footnotesize\ttfamily const std\+::string \& ec\+::\+Texture\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{classec_1_1_texture_a0097b0b1826d7339ae109a187b6304d5}\label{classec_1_1_texture_a0097b0b1826d7339ae109a187b6304d5}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily int ec\+::\+Texture\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_texture_ada1a3d1cc5c86b87e98929457899314e}\label{classec_1_1_texture_ada1a3d1cc5c86b87e98929457899314e}} 
-\index{ec\+::\+Texture@{ec\+::\+Texture}!Is\+Initialized@{Is\+Initialized}}
-\index{Is\+Initialized@{Is\+Initialized}!ec\+::\+Texture@{ec\+::\+Texture}}
-\subsubsection{\texorpdfstring{Is\+Initialized()}{IsInitialized()}}
-{\footnotesize\ttfamily bool ec\+::\+Texture\+::\+Is\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{classec_1_1_texture_a1c33bc610c0b5c7807fa92897320349f}\label{classec_1_1_texture_a1c33bc610c0b5c7807fa92897320349f}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily const std\+::string \& ec\+::\+Texture\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_texture_a83b67b45fa6991f79141f025dd5e269a}\label{classec_1_1_texture_a83b67b45fa6991f79141f025dd5e269a}} 
-\index{ec\+::\+Texture@{ec\+::\+Texture}!Set\+Id@{Set\+Id}}
-\index{Set\+Id@{Set\+Id}!ec\+::\+Texture@{ec\+::\+Texture}}
-\subsubsection{\texorpdfstring{Set\+Id()}{SetId()}}
-{\footnotesize\ttfamily void ec\+::\+Texture\+::\+Set\+Id (\begin{DoxyParamCaption}\item[{const unsigned int}]{id }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_texture_ab81c62fde2f54dfbb5895a421224fcd9}\label{classec_1_1_texture_ab81c62fde2f54dfbb5895a421224fcd9}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!is\+Initialized@{is\+Initialized}}
+\index{is\+Initialized@{is\+Initialized}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{is\+Initialized()}{isInitialized()}}
+{\footnotesize\ttfamily bool ec\+::\+Texture\+::is\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_texture_a190cc58745400d490ea492112196cb2d}\label{classec_1_1_texture_a190cc58745400d490ea492112196cb2d}} 
-\index{ec\+::\+Texture@{ec\+::\+Texture}!Set\+Type@{Set\+Type}}
-\index{Set\+Type@{Set\+Type}!ec\+::\+Texture@{ec\+::\+Texture}}
-\subsubsection{\texorpdfstring{Set\+Type()}{SetType()}}
-{\footnotesize\ttfamily void ec\+::\+Texture\+::\+Set\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_texture_af3555f8dda9a13babcb96d40d4417813}\label{classec_1_1_texture_af3555f8dda9a13babcb96d40d4417813}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily void ec\+::\+Texture\+::set\+Id (\begin{DoxyParamCaption}\item[{unsigned int}]{id }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_texture_a4ad8c7559c57f05d993c895ea6820566}\label{classec_1_1_texture_a4ad8c7559c57f05d993c895ea6820566}} 
-\index{ec\+::\+Texture@{ec\+::\+Texture}!Texture\+From\+File@{Texture\+From\+File}}
-\index{Texture\+From\+File@{Texture\+From\+File}!ec\+::\+Texture@{ec\+::\+Texture}}
-\subsubsection{\texorpdfstring{Texture\+From\+File()}{TextureFromFile()}}
-{\footnotesize\ttfamily bool ec\+::\+Texture\+::\+Texture\+From\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classec_1_1_texture_a4d984f43478753facd81186d1cd36bcb}\label{classec_1_1_texture_a4d984f43478753facd81186d1cd36bcb}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{set\+Type()}{setType()}}
+{\footnotesize\ttfamily void ec\+::\+Texture\+::set\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{classec_1_1_texture_ac2461a696b914d1b22192a87d326f480}\label{classec_1_1_texture_ac2461a696b914d1b22192a87d326f480}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!texture\+From\+File@{texture\+From\+File}}
+\index{texture\+From\+File@{texture\+From\+File}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{texture\+From\+File()}{textureFromFile()}}
+{\footnotesize\ttfamily bool ec\+::\+Texture\+::texture\+From\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{classec_1_1_texture_a95c72abc5c801df231fc970c6adffdcc}\label{classec_1_1_texture_a95c72abc5c801df231fc970c6adffdcc}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!unbind@{unbind}}
+\index{unbind@{unbind}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily void ec\+::\+Texture\+::unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Deactivate this texture. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

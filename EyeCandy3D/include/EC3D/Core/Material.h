@@ -51,14 +51,14 @@ namespace ec
 		void setColorDiffuse(float r, float g, float b, float a);
 		void setColorSpecular(const glm::vec4& color);
 		void setColorSpecular(float r, float g, float b, float a);
-		void setColorEmissive(const glm::vec4& color);
-		void setColorEmissive(float r, float g, float b, float a);
-
+		void setColorEmission(const glm::vec4& color);
+		void setColorEmission(float r, float g, float b, float a);
+	
 		/* Flat color getter */
 		const glm::vec4& getColorAmbient() const;
 		const glm::vec4& getColorDiffuse() const;
 		const glm::vec4& getColorSpecular() const;
-		const glm::vec4& getColorEmissive() const;
+		const glm::vec4& getColorEmission() const;
 
 		/* Shininess access (specular attribute) */
 		void setShininess(float shininess);
@@ -69,7 +69,7 @@ namespace ec
 		glm::vec4 m_colorAmbient;
 		glm::vec4 m_colorDiffuse;
 		glm::vec4 m_colorSpecular;
-		glm::vec4 m_colorEmissive;
+		glm::vec4 m_colorEmission;
 
 		/* Additional attributes */
 		float m_shininess;

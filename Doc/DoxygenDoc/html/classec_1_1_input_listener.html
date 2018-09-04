@@ -82,18 +82,16 @@ Inheritance diagram for ec::InputListener:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_input_listener__inherit__graph.png" border="0" usemap="#ec_1_1_input_listener_inherit__map" alt="Inheritance graph"/></div>
 <map name="ec_1_1_input_listener_inherit__map" id="ec_1_1_input_listener_inherit__map">
-<area shape="rect" id="node2" href="classagui_1_1_open_g_l_input.html" title="{agui::OpenGLInput\n||+ OpenGLInput()\l+ ~OpenGLInput()\l+ getTime()\l# ProcessEvent()\l}" alt="" coords="5,365,136,487"/>
-<area shape="rect" id="node3" href="classec_1_1_camera_controller.html" title="{ec::CameraController\n||+ CameraController()\l+ CameraController()\l+ ~CameraController()\l+ Tick()\l+ Reset()\l+ SetCamera()\l+ GetCamera()\l# ProcessEvent()\l# ProcessMouseMovement()\l# ProcessMouseButtonDown()\l# ProcessMouseButtonUp()\l# ProcessKeyDownInput()\l# ProcessKeyUpInput()\l# ProcessScrollInput()\l}" alt="" coords="161,292,359,560"/>
-<area shape="rect" id="node4" href="classec_1_1_scene_controller.html" title="{ec::SceneController\n||+ SceneController()\l+ ~SceneController()\l+ GetName()\l}" alt="" coords="383,373,526,479"/>
-<area shape="rect" id="node5" href="classec__gui_1_1_g_u_i_controller.html" title="{ec_gui::GUIController\n||+ GUIController()\l+ ~GUIController()\l+ GetGUISystem()\l+ SetGUISystem()\l# ProcessEvent()\l}" alt="" coords="550,358,695,494"/>
+<area shape="rect" id="node2" href="classagui_1_1_open_g_l_input.html" title="{agui::OpenGLInput\n||+ OpenGLInput()\l+ ~OpenGLInput()\l+ getTime()\l# processEvent()\l}" alt="" coords="5,365,136,487"/>
+<area shape="rect" id="node3" href="classec_1_1_camera_controller.html" title="{ec::CameraController\n||+ CameraController()\l+ CameraController()\l+ ~CameraController()\l+ tick()\l+ reset()\l+ setCamera()\l+ getCamera()\l# processEvent()\l# processMouseMovement()\l# processMouseButtonDown()\l# processMouseButtonUp()\l# processKeyDownInput()\l# processKeyUpInput()\l# processScrollInput()\l}" alt="" coords="161,292,357,560"/>
+<area shape="rect" id="node4" href="classec_1_1_scene_controller.html" title="{ec::SceneController\n||+ SceneController()\l+ ~SceneController()\l+ getName()\l}" alt="" coords="381,373,523,479"/>
+<area shape="rect" id="node5" href="classec__gui_1_1_gui_controller.html" title="{ec_gui::GuiController\n||+ GuiController()\l+ ~GuiController()\l+ getGuiSystem()\l+ setGuiSystem()\l# processEvent()\l}" alt="" coords="547,358,690,494"/>
 </map>
 </div>
 <div class="dynheader">
 Collaboration diagram for ec::InputListener:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_input_listener__coll__graph.png" border="0" usemap="#ec_1_1_input_listener_coll__map" alt="Collaboration graph"/></div>
-<map name="ec_1_1_input_listener_coll__map" id="ec_1_1_input_listener_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -111,29 +109,29 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afd65ca201e735f5758646d6653f42804"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#afd65ca201e735f5758646d6653f42804">~InputListener</a> ()</td></tr>
 <tr class="separator:afd65ca201e735f5758646d6653f42804"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa340cac5b314410b157c1a63df32540"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#afa340cac5b314410b157c1a63df32540">Inform</a> (const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;event)</td></tr>
-<tr class="separator:afa340cac5b314410b157c1a63df32540"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc475ae19a77d3b2f3cf622a23aad123"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#abc475ae19a77d3b2f3cf622a23aad123">Enable</a> (const bool enabled)</td></tr>
-<tr class="separator:abc475ae19a77d3b2f3cf622a23aad123"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab0a7d62f153cf1e10dfbfb58517e063"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#aab0a7d62f153cf1e10dfbfb58517e063">IsEnabled</a> () const</td></tr>
-<tr class="separator:aab0a7d62f153cf1e10dfbfb58517e063"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd10663298114e8790d695feab96b188"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#abd10663298114e8790d695feab96b188">AddCallback</a> (const std::string &amp;id, <a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964">EventKey_T</a> key, std::function&lt; void()&gt; callback)</td></tr>
-<tr class="separator:abd10663298114e8790d695feab96b188"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8903c97def61ce6b9b15f36b26998883"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a8903c97def61ce6b9b15f36b26998883">RemoveCallback</a> (const std::string &amp;, <a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964">EventKey_T</a> key)</td></tr>
-<tr class="separator:a8903c97def61ce6b9b15f36b26998883"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5cf00215ffda9b797e7d6954da2acef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#ae5cf00215ffda9b797e7d6954da2acef">RemoveCallbacksOfType</a> (<a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964">EventKey_T</a> key)</td></tr>
-<tr class="separator:ae5cf00215ffda9b797e7d6954da2acef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7dd3e51508a10667973c36ef7ef48a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#af7dd3e51508a10667973c36ef7ef48a8">RemoveAllCallbacks</a> ()</td></tr>
-<tr class="separator:af7dd3e51508a10667973c36ef7ef48a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82c8ee6b16d7b3a05d55aded95bcb658"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a82c8ee6b16d7b3a05d55aded95bcb658">IsCallbackRegistered</a> (const std::string &amp;id, <a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964">EventKey_T</a> key)</td></tr>
-<tr class="separator:a82c8ee6b16d7b3a05d55aded95bcb658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e0803651e945e177336df2cf84d61b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a39e0803651e945e177336df2cf84d61b">inform</a> (const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;event)</td></tr>
+<tr class="separator:a39e0803651e945e177336df2cf84d61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459a44443e7de70e854c2175b6c6914d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a459a44443e7de70e854c2175b6c6914d">enable</a> (bool enabled)</td></tr>
+<tr class="separator:a459a44443e7de70e854c2175b6c6914d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d7a4e04543e3a86745261d9fefcbfc1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a6d7a4e04543e3a86745261d9fefcbfc1">isEnabled</a> () const</td></tr>
+<tr class="separator:a6d7a4e04543e3a86745261d9fefcbfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028ec5ed34aeb8b1377af91c2811bedb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a028ec5ed34aeb8b1377af91c2811bedb">addCallback</a> (const std::string &amp;id, <a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964">EventKey_T</a> key, std::function&lt; void()&gt; callback)</td></tr>
+<tr class="separator:a028ec5ed34aeb8b1377af91c2811bedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b59eb3a5b89db5a59351cc9ea20c01a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a8b59eb3a5b89db5a59351cc9ea20c01a">removeCallback</a> (const std::string &amp;, <a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964">EventKey_T</a> key)</td></tr>
+<tr class="separator:a8b59eb3a5b89db5a59351cc9ea20c01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3962c262607b3fc5ad1570c0c0f3a5c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a3962c262607b3fc5ad1570c0c0f3a5c9">removeCallbacksOfType</a> (<a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964">EventKey_T</a> key)</td></tr>
+<tr class="separator:a3962c262607b3fc5ad1570c0c0f3a5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c4085477da60677e0a0659f750ead4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#ab3c4085477da60677e0a0659f750ead4">removeAllCallbacks</a> ()</td></tr>
+<tr class="separator:ab3c4085477da60677e0a0659f750ead4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb55b880fb8fbc1fb6d8606ec8ca867"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#aabb55b880fb8fbc1fb6d8606ec8ca867">isCallbackRegistered</a> (const std::string &amp;id, <a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964">EventKey_T</a> key)</td></tr>
+<tr class="separator:aabb55b880fb8fbc1fb6d8606ec8ca867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aa44d25c2b2d3ef5e72611831fd66e10c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#aa44d25c2b2d3ef5e72611831fd66e10c">InputListener</a> ()</td></tr>
 <tr class="separator:aa44d25c2b2d3ef5e72611831fd66e10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25ef07efb72ac5c880cbca876ddfe66a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a25ef07efb72ac5c880cbca876ddfe66a">ProcessEvent</a> (const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;event)</td></tr>
-<tr class="separator:a25ef07efb72ac5c880cbca876ddfe66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ceaefc79c6b0b260e88454616137840"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a9ceaefc79c6b0b260e88454616137840">processEvent</a> (const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;event)</td></tr>
+<tr class="separator:a9ceaefc79c6b0b260e88454616137840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -218,7 +216,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -251,14 +249,14 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abd10663298114e8790d695feab96b188"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd10663298114e8790d695feab96b188">&#9670;&nbsp;</a></span>AddCallback()</h2>
+<a id="a028ec5ed34aeb8b1377af91c2811bedb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028ec5ed34aeb8b1377af91c2811bedb">&#9670;&nbsp;</a></span>addCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::InputListener::AddCallback </td>
+          <td class="memname">void ec::InputListener::addCallback </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>id</em>, </td>
@@ -285,8 +283,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abc475ae19a77d3b2f3cf622a23aad123"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc475ae19a77d3b2f3cf622a23aad123">&#9670;&nbsp;</a></span>Enable()</h2>
+<a id="a459a44443e7de70e854c2175b6c6914d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a459a44443e7de70e854c2175b6c6914d">&#9670;&nbsp;</a></span>enable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,9 +293,9 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::InputListener::Enable </td>
+          <td class="memname">void ec::InputListener::enable </td>
           <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>enabled</em></td><td>)</td>
           <td></td>
         </tr>
@@ -311,14 +309,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afa340cac5b314410b157c1a63df32540"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa340cac5b314410b157c1a63df32540">&#9670;&nbsp;</a></span>Inform()</h2>
+<a id="a39e0803651e945e177336df2cf84d61b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e0803651e945e177336df2cf84d61b">&#9670;&nbsp;</a></span>inform()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::InputListener::Inform </td>
+          <td class="memname">void ec::InputListener::inform </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
@@ -329,14 +327,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a82c8ee6b16d7b3a05d55aded95bcb658"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82c8ee6b16d7b3a05d55aded95bcb658">&#9670;&nbsp;</a></span>IsCallbackRegistered()</h2>
+<a id="aabb55b880fb8fbc1fb6d8606ec8ca867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabb55b880fb8fbc1fb6d8606ec8ca867">&#9670;&nbsp;</a></span>isCallbackRegistered()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ec::InputListener::IsCallbackRegistered </td>
+          <td class="memname">bool ec::InputListener::isCallbackRegistered </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>id</em>, </td>
@@ -357,8 +355,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aab0a7d62f153cf1e10dfbfb58517e063"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab0a7d62f153cf1e10dfbfb58517e063">&#9670;&nbsp;</a></span>IsEnabled()</h2>
+<a id="a6d7a4e04543e3a86745261d9fefcbfc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d7a4e04543e3a86745261d9fefcbfc1">&#9670;&nbsp;</a></span>isEnabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,7 +365,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ec::InputListener::IsEnabled </td>
+          <td class="memname">bool ec::InputListener::isEnabled </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -382,8 +380,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a25ef07efb72ac5c880cbca876ddfe66a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25ef07efb72ac5c880cbca876ddfe66a">&#9670;&nbsp;</a></span>ProcessEvent()</h2>
+<a id="a9ceaefc79c6b0b260e88454616137840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ceaefc79c6b0b260e88454616137840">&#9670;&nbsp;</a></span>processEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -392,7 +390,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::InputListener::ProcessEvent </td>
+          <td class="memname">void ec::InputListener::processEvent </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
@@ -406,18 +404,18 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classec_1_1_camera_controller.html#a0e2d455602581a484daf81bdb60a01bc">ec::CameraController</a>, <a class="el" href="classagui_1_1_open_g_l_input.html#afee8d588768cea3b75bcb3de36e03397">agui::OpenGLInput</a>, and <a class="el" href="classec__gui_1_1_g_u_i_controller.html#a3d9e413ddf78d41e929ec652c5409f3c">ec_gui::GUIController</a>.</p>
+<p>Reimplemented in <a class="el" href="classec_1_1_camera_controller.html#af44aad5f80005eaadf5d637b3b00c6d6">ec::CameraController</a>, <a class="el" href="classagui_1_1_open_g_l_input.html#aeb8c519c7fb7791295531b12948d4390">agui::OpenGLInput</a>, and <a class="el" href="classec__gui_1_1_gui_controller.html#a3435c1c74eff0dc75c27142d0d86b4c5">ec_gui::GuiController</a>.</p>
 
 </div>
 </div>
-<a id="af7dd3e51508a10667973c36ef7ef48a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7dd3e51508a10667973c36ef7ef48a8">&#9670;&nbsp;</a></span>RemoveAllCallbacks()</h2>
+<a id="ab3c4085477da60677e0a0659f750ead4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c4085477da60677e0a0659f750ead4">&#9670;&nbsp;</a></span>removeAllCallbacks()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::InputListener::RemoveAllCallbacks </td>
+          <td class="memname">void ec::InputListener::removeAllCallbacks </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -427,14 +425,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8903c97def61ce6b9b15f36b26998883"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8903c97def61ce6b9b15f36b26998883">&#9670;&nbsp;</a></span>RemoveCallback()</h2>
+<a id="a8b59eb3a5b89db5a59351cc9ea20c01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b59eb3a5b89db5a59351cc9ea20c01a">&#9670;&nbsp;</a></span>removeCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ec::InputListener::RemoveCallback </td>
+          <td class="memname">bool ec::InputListener::removeCallback </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>id</em>, </td>
@@ -455,14 +453,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5cf00215ffda9b797e7d6954da2acef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5cf00215ffda9b797e7d6954da2acef">&#9670;&nbsp;</a></span>RemoveCallbacksOfType()</h2>
+<a id="a3962c262607b3fc5ad1570c0c0f3a5c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3962c262607b3fc5ad1570c0c0f3a5c9">&#9670;&nbsp;</a></span>removeCallbacksOfType()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::InputListener::RemoveCallbacksOfType </td>
+          <td class="memname">void ec::InputListener::removeCallbacksOfType </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964">EventKey_T</a>&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>

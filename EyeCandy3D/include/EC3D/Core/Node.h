@@ -5,14 +5,14 @@
 
 #include <glm/glm.hpp>
 
-/*
+/**
 * Nodes make up the scene graph
 * They can have multiple child nodes and can point to drawables
 */
 namespace ec
 {
 	class SceneRenderer;
-	class Geometry;
+	class IGeometryAccess;
 	class Drawable;
 
 	class Node : public Transform3D
@@ -25,7 +25,7 @@ namespace ec
 		virtual void render(SceneRenderer& renderer);
 		
 		/** Recursively update global matrices */
-		virtual void updateGlobalMatrices(const glm::mat4& m_parentMat);
+		virtual void updateGlobalMatrices(const glm::mat4& parentMat);
 
 		/**
 		 * Get the current global matrix. This node needs to be
@@ -39,23 +39,31 @@ namespace ec
 		 * Global matrix has to be updated before calling this function!
 		 * If not, the position will be from the last frame.
 		 */
-		const glm::vec3& getGlobalPosition();
+		glm::vec3 getGlobalPosition() const;
 
-		/* Parent */
+		/** Get this node's parent node. */
 		Node* getParent() const;
+		/** Set this node's parent node. */
 		void setParent(Node* parent);
 
-		/* Children */
+		/** Add a new child to this node */
 		void addChild(Node* child);
+		/** Remove an existing child from this node. */
 		bool removeChild(Node* child);
+		/** Remove all child nodes from this node. */
 		void removeChildren();
+		/** Get the number of children nodes. */
 		unsigned int getChildrenCount() const;
+		/** Check if this node has one or more child nodes. */
 		bool hasChildren() const;
 
-		/* Drawable access */
+		/** Get all drawables related to this node. */
 		virtual const std::vector<Drawable*>& getDrawables() const;
+		/** Add a given drawable to this node. */
 		void addDrawable(Drawable* drawable);
+		/** Remove a given drawable from this node. */
 		void removeDrawable(Drawable* drawable);
+		/** Remove all drawables from this node. */
 		void removeDrawables();
 
 	protected:

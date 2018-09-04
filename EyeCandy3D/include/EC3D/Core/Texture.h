@@ -6,7 +6,7 @@
 
 namespace ec
 {
-	/*
+	/**
 	* Encapsulates texture specific structures
 	*/
 	struct TextureTypes
@@ -18,7 +18,7 @@ namespace ec
 			texture_specular,
 			texture_bump
 		};
-		enum class Dimensions : int
+		enum Dimensions : GLenum
 		{
 			texture_2d = GL_TEXTURE_2D,
 			texture_3d = GL_TEXTURE_3D
@@ -38,6 +38,11 @@ namespace ec
 	public:
 		explicit Texture();
 		~Texture();
+
+		/** Activate this texture. */
+		void bind() const;
+		/** Deactivate this texture. */
+		void unbind() const;
 
 		/* Buffer Id access*/
 		void setId(unsigned int id);
@@ -63,7 +68,9 @@ namespace ec
 		void free();
 
 	private:
-		int m_id;
+		bool m_initialized;
+
+		GLuint m_id;
 		std::string m_type;
 
 		TextureTypes::Dimensions m_dimension;

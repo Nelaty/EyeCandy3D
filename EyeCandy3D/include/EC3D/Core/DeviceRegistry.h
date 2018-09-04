@@ -2,6 +2,8 @@
 #include "EC3D/Core/Keyboard.h"
 #include "EC3D/Core/Mouse.h"
 
+#include <memory>
+
 namespace ec
 {
 	class Window;

@@ -1,19 +1,25 @@
 #pragma once
-#include "GuiRenderer.h"
-
 #include <memory>
 
-/*
-* A GUISystem is a collection of GUIs and enables the switching thereof
-*/
+namespace agui
+{
+	class Gui;
+	class OpenGLInput;
+}
+
+
 namespace ec_gui
 {
-	class GuiModel;
 	class GuiController;
 
 	class GuiSystem
 	{
 	public:
+		using Gui_Type = agui::Gui;
+		using Gui_Ptr = std::unique_ptr<Gui_Type>;
+		using Controller_Type = agui::OpenGLInput;
+		using Controller_Ptr = std::unique_ptr<Controller_Type>;
+
 		explicit GuiSystem();
 		GuiSystem(const GuiSystem& guiSystem) = delete;
 		GuiSystem& operator=(const GuiSystem& guiSystem) = delete;
@@ -21,12 +27,11 @@ namespace ec_gui
 		GuiSystem& operator=(GuiSystem&& guiSystem) = default;
 		~GuiSystem();
 
-		/** Get the model, which contains GUI data */
-		GuiModel* getModel() const;
+		/** Get the model, which contains gui data */
+		Gui_Type* getModel() const;
 
 	private:
-		std::unique_ptr<GuiModel> m_guiModel;
-		GuiRenderer m_guiRenderer{};
-		GuiController* m_guiController{};
+		Gui_Ptr m_model;
+		Controller_Ptr m_inputListener{};
 	};
 }

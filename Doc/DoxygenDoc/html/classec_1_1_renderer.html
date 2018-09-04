@@ -80,7 +80,7 @@ Collaboration diagram for ec::Renderer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_renderer__coll__graph.png" border="0" usemap="#ec_1_1_renderer_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_renderer_coll__map" id="ec_1_1_renderer_coll__map">
-<area shape="rect" id="node3" href="classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ Render()\l+ SetScene()\l+ GetScene()\l+ GetFrame()\l+ GetFrame()\l+ SetFrame()\l+ AddRenderingTarget()\l# OnBeginRender()\l# OnRender()\l# OnEndRender()\l}" alt="" coords="169,5,328,244"/>
+<area shape="rect" id="node3" href="classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ render()\l+ setScene()\l+ getScene()\l+ getFrame()\l+ getFrame()\l+ setFrame()\l+ addRenderingTarget()\l# onBeginRender()\l# onRender()\l# onEndRender()\l}" alt="" coords="170,5,327,244"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -90,16 +90,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1bb0d9ff47eabce408daff8ab55bf4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0a97bd174127b670899477a576d1fe6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#ab0a97bd174127b670899477a576d1fe6">~Renderer</a> ()</td></tr>
 <tr class="separator:ab0a97bd174127b670899477a576d1fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe11d20b1d49004bb01bb5db31845803"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#afe11d20b1d49004bb01bb5db31845803">Render</a> (<a class="el" href="classec_1_1_window.html">Window</a> *window)</td></tr>
-<tr class="separator:afe11d20b1d49004bb01bb5db31845803"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c84ae50f78cd6a4ed913d228716ad9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#a8c84ae50f78cd6a4ed913d228716ad9b">ChangeRenderer</a> (const std::string &amp;name)</td></tr>
-<tr class="separator:a8c84ae50f78cd6a4ed913d228716ad9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74fb04d7d75703f5fe018a806fa82d0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#a74fb04d7d75703f5fe018a806fa82d0e">RegisterSceneRenderer</a> (const std::string &amp;name, <a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> *renderer)</td></tr>
-<tr class="separator:a74fb04d7d75703f5fe018a806fa82d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5063a2c741004706dfe6dc143f8168f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#ac5063a2c741004706dfe6dc143f8168f">UnregisterSceneRenderer</a> (const std::string &amp;name)</td></tr>
-<tr class="separator:ac5063a2c741004706dfe6dc143f8168f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc19ec1ee2a41ac4229a75d18c0dc60a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#adc19ec1ee2a41ac4229a75d18c0dc60a">GetSceneRenderer</a> (const std::string &amp;name)</td></tr>
-<tr class="separator:adc19ec1ee2a41ac4229a75d18c0dc60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc57f271196b00c4ec3cae7ad5317ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#aecc57f271196b00c4ec3cae7ad5317ae">render</a> (<a class="el" href="classec_1_1_window.html">Window</a> *window) const</td></tr>
+<tr class="separator:aecc57f271196b00c4ec3cae7ad5317ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb876cb59df2478b52926782e2d0a0a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#abb876cb59df2478b52926782e2d0a0a9">changeRenderer</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:abb876cb59df2478b52926782e2d0a0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e40791070a8fcb7250b4544bdac8725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#a5e40791070a8fcb7250b4544bdac8725">registerSceneRenderer</a> (const std::string &amp;name, <a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> *renderer)</td></tr>
+<tr class="separator:a5e40791070a8fcb7250b4544bdac8725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c853ee4c34b069cc8142db8409abac6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#a5c853ee4c34b069cc8142db8409abac6">unregisterSceneRenderer</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a5c853ee4c34b069cc8142db8409abac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e0c57f9d1f061f97e1fa188d52c477"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_renderer.html#ab4e0c57f9d1f061f97e1fa188d52c477">getSceneRenderer</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:ab4e0c57f9d1f061f97e1fa188d52c477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -143,6 +143,9 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ec::Renderer::~Renderer </td>
@@ -151,19 +154,24 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8c84ae50f78cd6a4ed913d228716ad9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c84ae50f78cd6a4ed913d228716ad9b">&#9670;&nbsp;</a></span>ChangeRenderer()</h2>
+<a id="abb876cb59df2478b52926782e2d0a0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb876cb59df2478b52926782e2d0a0a9">&#9670;&nbsp;</a></span>changeRenderer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Renderer::ChangeRenderer </td>
+          <td class="memname">void ec::Renderer::changeRenderer </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -175,14 +183,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="adc19ec1ee2a41ac4229a75d18c0dc60a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc19ec1ee2a41ac4229a75d18c0dc60a">&#9670;&nbsp;</a></span>GetSceneRenderer()</h2>
+<a id="ab4e0c57f9d1f061f97e1fa188d52c477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e0c57f9d1f061f97e1fa188d52c477">&#9670;&nbsp;</a></span>getSceneRenderer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_scene_renderer.html">ec::SceneRenderer</a> * ec::Renderer::GetSceneRenderer </td>
+          <td class="memname"><a class="el" href="classec_1_1_scene_renderer.html">ec::SceneRenderer</a> * ec::Renderer::getSceneRenderer </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -194,14 +202,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a74fb04d7d75703f5fe018a806fa82d0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74fb04d7d75703f5fe018a806fa82d0e">&#9670;&nbsp;</a></span>RegisterSceneRenderer()</h2>
+<a id="a5e40791070a8fcb7250b4544bdac8725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e40791070a8fcb7250b4544bdac8725">&#9670;&nbsp;</a></span>registerSceneRenderer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Renderer::RegisterSceneRenderer </td>
+          <td class="memname">void ec::Renderer::registerSceneRenderer </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -223,32 +231,32 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afe11d20b1d49004bb01bb5db31845803"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe11d20b1d49004bb01bb5db31845803">&#9670;&nbsp;</a></span>Render()</h2>
+<a id="aecc57f271196b00c4ec3cae7ad5317ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc57f271196b00c4ec3cae7ad5317ae">&#9670;&nbsp;</a></span>render()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Renderer::Render </td>
+          <td class="memname">void ec::Renderer::render </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classec_1_1_window.html">Window</a> *&#160;</td>
           <td class="paramname"><em>window</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac5063a2c741004706dfe6dc143f8168f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5063a2c741004706dfe6dc143f8168f">&#9670;&nbsp;</a></span>UnregisterSceneRenderer()</h2>
+<a id="a5c853ee4c34b069cc8142db8409abac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c853ee4c34b069cc8142db8409abac6">&#9670;&nbsp;</a></span>unregisterSceneRenderer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_scene_renderer.html">ec::SceneRenderer</a> * ec::Renderer::UnregisterSceneRenderer </td>
+          <td class="memname"><a class="el" href="classec_1_1_scene_renderer.html">ec::SceneRenderer</a> * ec::Renderer::unregisterSceneRenderer </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['glm_5fenable_5fexperimental',['GLM_ENABLE_EXPERIMENTAL',['../_camera_8cpp.html#abd75661fe7969e19439052a5f69ba5d1',1,'GLM_ENABLE_EXPERIMENTAL():&#160;Camera.cpp'],['../_transform3_d_8cpp.html#abd75661fe7969e19439052a5f69ba5d1',1,'GLM_ENABLE_EXPERIMENTAL():&#160;Transform3D.cpp']]]
+  ['stb_5fimage_5fimplementation',['STB_IMAGE_IMPLEMENTATION',['../_texture_8cpp.html#a18372412ad2fc3ce1e3240b3cf0efe78',1,'Texture.cpp']]]
 ];

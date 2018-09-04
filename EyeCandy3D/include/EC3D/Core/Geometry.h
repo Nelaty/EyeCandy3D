@@ -1,29 +1,38 @@
 #pragma once
-#include <glm/glm.hpp>
+#include "EC3D/Core/IGeometryAccess.h"
+#include "EC3D/Core/GeometryData.h"
 
-/*
-* Base class for all kinds of geometry.
-*/
 namespace ec
 {
-	class Shader;
-
-	class Geometry
+	class Geometry : public IGeometryAccess
 	{
 	public:
 		virtual ~Geometry();
 
-		/* Render this geometry with a given matrix */
-		virtual void render(Shader* shader, const glm::mat4& model);
+		/** Recalculate vertex normals. */
+		virtual void recalculateNormals();
+
+		/** Get the vertex array object id. */
+		GLuint getVao() const;
+		/** Get the vertex buffer object id. */
+		GLuint getVbo() const;
+		/** Get the element buffer object id. */
+		GLuint getEbo() const;
 
 	protected:
-		/** Called at the beginning of the rendering routine. */
-		virtual void beginRender() = 0;
-		/** The actual rendering of the object. */
-		virtual void onRender() = 0;
-		/** Called at the end of the rendering routine. */
-		virtual void endRender() = 0;
-		
-		explicit Geometry() = default;
+		explicit Geometry(GLenum mode = GL_TRIANGLES, GLenum type = GL_UNSIGNED_INT);
+
+		void beginRender() override;
+		void onRender() override;
+		void endRender() override;
+
+		GeometryData m_data;
+
+		void setMode(GLenum mode);
+		void setType(GLenum type);
+
+	private:
+		GLenum m_mode;
+		GLenum m_type;
 	};
 }

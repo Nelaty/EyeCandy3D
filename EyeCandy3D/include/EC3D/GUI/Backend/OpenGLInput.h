@@ -27,13 +27,13 @@ namespace agui
 		void processEvent(const ec::InputEvent& event) override;
 
 	private:
-		bool shift;
-		bool control;
-		bool alt;
-		bool meta;
+		bool m_shift;
+		bool m_control;
+		bool m_alt;
+		bool m_meta;
 
-		ec::KeyboardEvent prevEvent;
-		std::vector<ec::KeyboardEvent> keyEvents;
+		ec::KeyboardEvent m_prevEvent;
+		std::vector<ec::KeyboardEvent> m_keyEvents;
 
 		MouseInput createMouse(const ec::InputEvent& event);
 		KeyboardInput createKeyboard(const ec::KeyboardEvent& event,

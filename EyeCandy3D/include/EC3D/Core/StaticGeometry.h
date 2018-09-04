@@ -2,9 +2,7 @@
 #include <GL/glew.h>
 
 #include "EC3D/Core/Geometry.h"
-#include "EC3D/Core/Vertex.h"
 
-#include <vector>
 
 namespace ec
 {
@@ -13,30 +11,9 @@ namespace ec
 	public:
 		virtual ~StaticGeometry();
 
-		/* Recalculate vertex normals */
-		virtual void recalculateNormals();
-
-		/* Geometry buffer access */
-		GLuint getVao() const;
-		GLuint getVbo() const;
-		GLuint getEbo() const;
-
 	protected:
-		void beginRender() override;
-		void onRender() override;
-		void endRender() override;
-
-		/* Buffers */
-		GLuint m_vao{};
-		GLuint m_vbo{};
-		GLuint m_ebo{};
-
 		/* Initialize the geometry */
 		virtual void setupMesh();
-
-		/* Vertex and index data */
-		std::vector<Vertex> m_vertices;
-		std::vector<unsigned int> m_indices;
 
 		explicit StaticGeometry();
 	};

@@ -22,7 +22,7 @@ namespace ec
 		/** Uninstall the mouse. */
 		void uninstall();
 
-		EventSource* getEventSource() const;
+		/** Get the window, which is associated with this mouse. */
 		GLFWwindow* getWindow() const;
 
 	private:
@@ -31,8 +31,6 @@ namespace ec
 		static void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
 		static void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 
-		EventSource_Ptr m_eventSource = nullptr;
-		EventQueue* m_eventQueue = nullptr;
 		GLFWwindow* m_window = nullptr;
 	};
 }

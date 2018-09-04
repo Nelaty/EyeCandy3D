@@ -1,17 +1,23 @@
 #pragma once
 #include <GL/glew.h>
 
+#include "EC3D/Core/ResourceRegistry.h"
 #include "EC3D/Core/DeviceRegistry.h"
 #include "EC3D/Core/Renderer.h"
 #include "EC3D/Core/SceneSystem.h"
 #include "EC3D/Core/InputObservable.h"
+#include "EC3D/Core/EventSystem.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
 
 #include "EC3D/Utilities/Timer.h"
 
+#include "EC3D/Core/Geometry.h"
+#include "EC3D/Core/Material.h"
+#include "EC3D/Core/Texture.h"
+#include "EC3D/Core/Drawable.h"
+
+
 #include <glm/glm.hpp>
-
-
 #include <GLFW/glfw3.h>
 
 #include <string>
@@ -24,9 +30,6 @@
 */
 namespace ec
 {
-	class EventQueue;
-	class EventSource;
-
 	class Window
 	{
 	public:
@@ -34,6 +37,12 @@ namespace ec
 		using EventSource_Ptr = std::unique_ptr<EventSource>;
 
 
+		/**
+		 * \brief Window contructor
+		 * \param windowWidth Width of this window in pixels.
+		 * \param windowHeight Height of this window in pixels.
+		 * \param windowTitle Title of this window.
+		 */
 		explicit Window(unsigned int windowWidth,
 						unsigned int windowHeight,
 		                std::string windowTitle);
@@ -52,11 +61,11 @@ namespace ec
 
 		/** Error callback */
 		static void errorCallback(int error, const char* description);
-		/** */
+		/** Window resize callback */
 		virtual void resizeWindow(GLFWwindow* window, int width, int height);
 
-		/** Access to the input observer */
-		InputObservable& getInputObserver();
+		/** Get this window's event system. */
+		EventSystem& getEventSystem();
 
 		/** Access to the shader manager */
 		ShaderManager& getShaderManager();
@@ -64,23 +73,21 @@ namespace ec
 		/** Access to the scene system */
 		SceneSystem& getSceneSystem();
 
-		/** Get the event queue of this window */
-		EventQueue* getEventQueue() const;
-		/** Get the event source of this window */
-		EventSource* getEventSource() const;
-
 		/* Switch between face, wire frame and point mode */
 		void switchToFaceMode() const;
-		void switchToWireframeMode() const;
+		void switchToWireFrameMode() const;
 		void switchToPointMode() const;
 
-		/* Switch between full screen and windowed */
+		/** Switch to windowed mode. */
 		void goWindowed() const;
+		/** Switch to fullscreen mode. */
 		void goFullscreen();
+		/** Close this window. */
 		void closeWindow() const;
 
-		/* Clear Color access */
+		/** Set the current clear color. */
 		void setClearColor(const glm::vec4& clearColor);
+		/** Get the current clear color. */
 		const glm::vec4& getClearColor() const;
 
 		/** Access to window */
@@ -97,18 +104,24 @@ namespace ec
 
 		Timer m_timer;
 		SceneSystem m_sceneSystem;
+		EventSystem m_eventSystem;
 		ShaderManager m_shaderManager;
-		InputObservable m_inputObservable;
 
 		Renderer m_renderer;
-
-		DeviceRegistry m_deviceRegistry;
 
 		double m_frameRate;
 		double m_frameInterval;
 
+		
+
+		ResourceRegistry<Geometry> m_geometryRegistry;
+		ResourceRegistry<Material> m_materialRegistry;
+		ResourceRegistry<Texture> m_textureRegistry;
+		ResourceRegistry<Drawable> m_drawableRegistry;
 	private:
 		void init();
+
+		void makeContextCurrent() const;
 
 		/* Init function implementation */
 		virtual bool initImpl();
@@ -143,11 +156,6 @@ namespace ec
 
 		void initOpenGl();
 		void initAgui();
-
-		void printVersions() const;
-
-		EventQueue_Ptr m_eventQueue;
-		EventSource_Ptr m_eventSource;
 
 		/** The windows resolution before changing to full screen */
 		glm::ivec2 m_windowedResolutionLast;

@@ -9,7 +9,7 @@ namespace ec
 		: m_colorAmbient{0.0f, 0.0f, 0.0f, 0.0f},
 		m_colorDiffuse{0.0f, 0.0f, 0.0f, 0.0f},
 		m_colorSpecular{0.0f, 0.0f, 0.0f, 0.0f},
-		m_colorEmissive{0.0f, 0.0f, 0.0f, 0.0f},
+		m_colorEmission{0.0f, 0.0f, 0.0f, 0.0f},
 		m_shininess{0.0f},
 		m_hasTexture{false}
 	{
@@ -119,17 +119,17 @@ namespace ec
 		m_colorSpecular.a = a;
 	}
 
-	void Material::setColorEmissive(const glm::vec4& color)
+	void Material::setColorEmission(const glm::vec4& color)
 	{
-		m_colorEmissive = color;
+		m_colorEmission = color;
 	}
 
-	void Material::setColorEmissive(const float r, const float g, const float b, const float a)
+	void Material::setColorEmission(const float r, const float g, const float b, const float a)
 	{
-		m_colorEmissive.r = r;
-		m_colorEmissive.g = g;
-		m_colorEmissive.b = b;
-		m_colorEmissive.a = a;
+		m_colorEmission.r = r;
+		m_colorEmission.g = g;
+		m_colorEmission.b = b;
+		m_colorEmission.a = a;
 	}
 
 	const glm::vec4& Material::getColorAmbient() const
@@ -147,9 +147,9 @@ namespace ec
 		return m_colorSpecular;
 	}
 
-	const glm::vec4& Material::getColorEmissive() const
+	const glm::vec4& Material::getColorEmission() const
 	{
-		return m_colorEmissive;
+		return m_colorEmission;
 	}
 
 	void Material::setShininess(const float shininess)

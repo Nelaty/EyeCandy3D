@@ -78,8 +78,6 @@ $(function() {
 Collaboration diagram for ec::EventQueue:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_event_queue__coll__graph.png" border="0" usemap="#ec_1_1_event_queue_coll__map" alt="Collaboration graph"/></div>
-<map name="ec_1_1_event_queue_coll__map" id="ec_1_1_event_queue_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -88,10 +86,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aee3a6823b58d2fbf23a5148d28dc6d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98fb5b9cf781f87dee6443831dc42e65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_event_queue.html#a98fb5b9cf781f87dee6443831dc42e65">~EventQueue</a> ()</td></tr>
 <tr class="separator:a98fb5b9cf781f87dee6443831dc42e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15813a52ffb9bc0f1cd161fdc6d651c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_event_queue.html#a15813a52ffb9bc0f1cd161fdc6d651c9">PushEvent</a> (const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;event)</td></tr>
-<tr class="separator:a15813a52ffb9bc0f1cd161fdc6d651c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8f80c9b10f94d621c9cbc9bbc2718ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_event_queue.html#ab8f80c9b10f94d621c9cbc9bbc2718ff">PopEvent</a> (<a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;outEvent)</td></tr>
-<tr class="separator:ab8f80c9b10f94d621c9cbc9bbc2718ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa69f9fd21873ad138b78de33fb867efb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_event_queue.html#aa69f9fd21873ad138b78de33fb867efb">pushEvent</a> (const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;event)</td></tr>
+<tr class="separator:aa69f9fd21873ad138b78de33fb867efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58cdf15f7320b9eb70fd5937a68f3656"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_event_queue.html#a58cdf15f7320b9eb70fd5937a68f3656">popEvent</a> (<a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;outEvent)</td></tr>
+<tr class="separator:a58cdf15f7320b9eb70fd5937a68f3656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aee3a6823b58d2fbf23a5148d28dc6d2d"></a>
@@ -125,6 +123,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ec::EventQueue::~EventQueue </td>
@@ -133,19 +134,24 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab8f80c9b10f94d621c9cbc9bbc2718ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8f80c9b10f94d621c9cbc9bbc2718ff">&#9670;&nbsp;</a></span>PopEvent()</h2>
+<a id="a58cdf15f7320b9eb70fd5937a68f3656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58cdf15f7320b9eb70fd5937a68f3656">&#9670;&nbsp;</a></span>popEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ec::EventQueue::PopEvent </td>
+          <td class="memname">bool ec::EventQueue::popEvent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>outEvent</em></td><td>)</td>
@@ -156,14 +162,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a15813a52ffb9bc0f1cd161fdc6d651c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15813a52ffb9bc0f1cd161fdc6d651c9">&#9670;&nbsp;</a></span>PushEvent()</h2>
+<a id="aa69f9fd21873ad138b78de33fb867efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa69f9fd21873ad138b78de33fb867efb">&#9670;&nbsp;</a></span>pushEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::EventQueue::PushEvent </td>
+          <td class="memname">void ec::EventQueue::pushEvent </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>

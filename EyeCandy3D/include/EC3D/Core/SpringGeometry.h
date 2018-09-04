@@ -1,9 +1,9 @@
 #pragma once
-#include "EC3D/Core/Geometry.h"
+#include "EC3D/Core/IGeometryAccess.h"
 
 namespace ec
 {
-	class SpringGeometry : public Geometry
+	class SpringGeometry : public IGeometryAccess
 	{
 	public:
 		explicit SpringGeometry();

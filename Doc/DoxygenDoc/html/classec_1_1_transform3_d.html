@@ -80,8 +80,8 @@ Inheritance diagram for ec::Transform3D:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_transform3_d__inherit__graph.png" border="0" usemap="#ec_1_1_transform3_d_inherit__map" alt="Inheritance graph"/></div>
 <map name="ec_1_1_transform3_d_inherit__map" id="ec_1_1_transform3_d_inherit__map">
-<area shape="rect" id="node2" href="classec_1_1_node.html" title="{ec::Node\n|# m_parent\l# m_children\l# m_drawables\l|+ Node()\l+ ~Node()\l+ Render()\l+ UpdateGlobalMatrices()\l+ GetGlobalMat()\l+ GetGlobalPosition()\l+ GetParent()\l+ SetParent()\l+ AddChild()\l+ RemoveChild()\land 7 more...\l}" alt="" coords="13,321,184,575"/>
-<area shape="rect" id="node3" href="classec_1_1_camera.html" title="{ec::Camera\n||+ Camera()\l+ Camera()\l+ ~Camera()\l+ ChangeAspectRatio()\l+ UpdateLocalMat()\l+ UpdateGlobalMatrices()\l+ GetView()\l+ GetProjection()\l+ SetProjectionOrtho()\l+ SetProjectionPerspective()\land 9 more...\l}" alt="" coords="5,623,192,847"/>
+<area shape="rect" id="node2" href="classec_1_1_node.html" title="{ec::Node\n|# m_parent\l# m_children\l# m_drawables\l|+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="14,321,182,575"/>
+<area shape="rect" id="node3" href="classec_1_1_camera.html" title="{ec::Camera\n||+ Camera()\l+ Camera()\l+ ~Camera()\l+ changeAspectRatio()\l+ updateLocalMat()\l+ updateGlobalMatrices()\l+ getView()\l+ getProjection()\l+ setProjectionOrtho()\l+ setProjectionPerspective()\land 9 more...\l}" alt="" coords="5,623,191,847"/>
 </map>
 </div>
 <div class="dynheader">
@@ -92,94 +92,96 @@ Collaboration diagram for ec::Transform3D:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aec13468ee4386a737b62c780086e9f95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#aec13468ee4386a737b62c780086e9f95">Transform3D</a> (const glm::vec3 &amp;position=glm::vec3(0.0f), const glm::vec3 &amp;scale=glm::vec3(1.0f), const glm::vec3 &amp;orientation=conf::g_coordinate_system_orientation)</td></tr>
-<tr class="separator:aec13468ee4386a737b62c780086e9f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1df4b7afcf78aef64719b2302cfac864"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a1df4b7afcf78aef64719b2302cfac864">~Transform3D</a> ()</td></tr>
+<tr class="memitem:adb5c661621922b1a3a6e6433ce1c79f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#adb5c661621922b1a3a6e6433ce1c79f6">Transform3D</a> (const glm::vec3 &amp;position=glm::vec3(0.0f), const glm::vec3 &amp;scale=glm::vec3(1.0f), const glm::vec3 &amp;orientation=conf::g_coordinateSystemOrientation)</td></tr>
+<tr class="separator:adb5c661621922b1a3a6e6433ce1c79f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df4b7afcf78aef64719b2302cfac864"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a1df4b7afcf78aef64719b2302cfac864">~Transform3D</a> ()</td></tr>
 <tr class="separator:a1df4b7afcf78aef64719b2302cfac864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9af1af38089385c5b2100fe5f98f33ca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a9af1af38089385c5b2100fe5f98f33ca">UpdateLocalMat</a> ()</td></tr>
-<tr class="separator:a9af1af38089385c5b2100fe5f98f33ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69a9688cbe54695c5798eb532b7f1a30"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a69a9688cbe54695c5798eb532b7f1a30">GetLocalPosition</a> ()</td></tr>
-<tr class="separator:a69a9688cbe54695c5798eb532b7f1a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39bf61001742803f82e888e2b64a58f4"><td class="memItemLeft" align="right" valign="top">const glm::mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a39bf61001742803f82e888e2b64a58f4">GetLocalMat</a> () const</td></tr>
-<tr class="separator:a39bf61001742803f82e888e2b64a58f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace4e850baa2cbbbbcbe12613eb6851a8"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ace4e850baa2cbbbbcbe12613eb6851a8">GetUpVector</a> () const</td></tr>
-<tr class="separator:ace4e850baa2cbbbbcbe12613eb6851a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50b05aae5350602938a0df871764e8c6"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a50b05aae5350602938a0df871764e8c6">GetForwardVector</a> () const</td></tr>
-<tr class="separator:a50b05aae5350602938a0df871764e8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71b999a8cf046109562a5335c9af7c77"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a71b999a8cf046109562a5335c9af7c77">GetTranslation</a> () const</td></tr>
-<tr class="separator:a71b999a8cf046109562a5335c9af7c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae95b9e3b8b535ae7ab0e109ea82b4585"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ae95b9e3b8b535ae7ab0e109ea82b4585">GetTranslationX</a> () const</td></tr>
-<tr class="separator:ae95b9e3b8b535ae7ab0e109ea82b4585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59f4bf735a15afa5dad75106e15e8691"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a59f4bf735a15afa5dad75106e15e8691">GetTranslationY</a> () const</td></tr>
-<tr class="separator:a59f4bf735a15afa5dad75106e15e8691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85f04530ab18f8266e8741eca1e69315"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a85f04530ab18f8266e8741eca1e69315">GetTranslationZ</a> () const</td></tr>
-<tr class="separator:a85f04530ab18f8266e8741eca1e69315"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a553b6e61a45aae2661bcb5568613a32a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a553b6e61a45aae2661bcb5568613a32a">Translate</a> (const float x, const float y, const float z)</td></tr>
-<tr class="separator:a553b6e61a45aae2661bcb5568613a32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9935de1ebeecdd4bfd58073c1ea1b854"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a9935de1ebeecdd4bfd58073c1ea1b854">Translate</a> (const glm::vec3 &amp;v)</td></tr>
-<tr class="separator:a9935de1ebeecdd4bfd58073c1ea1b854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c1e55c9edcd7cb53199fd05ba111099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a0c1e55c9edcd7cb53199fd05ba111099">TranslateX</a> (const float x)</td></tr>
-<tr class="separator:a0c1e55c9edcd7cb53199fd05ba111099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae95b02e45148ca35e98ae54d23b01904"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ae95b02e45148ca35e98ae54d23b01904">TranslateY</a> (const float y)</td></tr>
-<tr class="separator:ae95b02e45148ca35e98ae54d23b01904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33c653dddfd16ec7481f1b1313a4505e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a33c653dddfd16ec7481f1b1313a4505e">TranslateZ</a> (const float z)</td></tr>
-<tr class="separator:a33c653dddfd16ec7481f1b1313a4505e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a2ebde1bdb7b79e080deaee7555e251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a3a2ebde1bdb7b79e080deaee7555e251">SetTranslation</a> (const glm::vec3 &amp;translation)</td></tr>
-<tr class="separator:a3a2ebde1bdb7b79e080deaee7555e251"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14c627a2eea894334e652ba9046bdcae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a14c627a2eea894334e652ba9046bdcae">SetTranslation</a> (const float x, const float y, const float z)</td></tr>
-<tr class="separator:a14c627a2eea894334e652ba9046bdcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a150e25babd8e2aeeb650c768e4d5d448"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a150e25babd8e2aeeb650c768e4d5d448">SetTranslationX</a> (const float x)</td></tr>
-<tr class="separator:a150e25babd8e2aeeb650c768e4d5d448"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93cbe1baa33972865b10554fbacfddec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a93cbe1baa33972865b10554fbacfddec">SetTranslationY</a> (const float y)</td></tr>
-<tr class="separator:a93cbe1baa33972865b10554fbacfddec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7a125c99afbd7e53cf7b905c2ab1db4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#af7a125c99afbd7e53cf7b905c2ab1db4">SetTranslationZ</a> (const float z)</td></tr>
-<tr class="separator:af7a125c99afbd7e53cf7b905c2ab1db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84df51411133b3402b75fa05bd51faae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a84df51411133b3402b75fa05bd51faae">TranslateLocal</a> (const float x, const float y, const float z)</td></tr>
-<tr class="separator:a84df51411133b3402b75fa05bd51faae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44ece37c7f56329840c2f92ae695e9a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a44ece37c7f56329840c2f92ae695e9a2">TranslateLocal</a> (const glm::vec3 &amp;v)</td></tr>
-<tr class="separator:a44ece37c7f56329840c2f92ae695e9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2675da2f17fe145cc199412d85777d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ae2675da2f17fe145cc199412d85777d5">Rotate</a> (const glm::quat &amp;rot)</td></tr>
-<tr class="separator:ae2675da2f17fe145cc199412d85777d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaaea3ccdff9e23f1edf6f9fed054afe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#acaaea3ccdff9e23f1edf6f9fed054afe">Rotate</a> (float angle, const glm::vec3 &amp;axis)</td></tr>
-<tr class="separator:acaaea3ccdff9e23f1edf6f9fed054afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04e4eaf695ba795bac09e8fa43c0a462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a04e4eaf695ba795bac09e8fa43c0a462">RotateX</a> (const float angle)</td></tr>
-<tr class="separator:a04e4eaf695ba795bac09e8fa43c0a462"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71e31dbecd1bfad8754c7b3bca691876"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a71e31dbecd1bfad8754c7b3bca691876">RotateY</a> (const float angle)</td></tr>
-<tr class="separator:a71e31dbecd1bfad8754c7b3bca691876"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff76dc65f161ff8401976561772dd2fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#aff76dc65f161ff8401976561772dd2fc">RotateZ</a> (const float angle)</td></tr>
-<tr class="separator:aff76dc65f161ff8401976561772dd2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5995f2c01e062a715f8a3181dd11f04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#af5995f2c01e062a715f8a3181dd11f04">RotateXLocal</a> (const float angle)</td></tr>
-<tr class="separator:af5995f2c01e062a715f8a3181dd11f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a593767a5127e4156c309b3613a162b42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a593767a5127e4156c309b3613a162b42">RotateYLocal</a> (const float angle)</td></tr>
-<tr class="separator:a593767a5127e4156c309b3613a162b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba0aba873f12438d20f059bd86702135"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#aba0aba873f12438d20f059bd86702135">RotateZLocal</a> (const float angle)</td></tr>
-<tr class="separator:aba0aba873f12438d20f059bd86702135"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8819e33e87e8a8cf0086c156b0072a4d"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a8819e33e87e8a8cf0086c156b0072a4d">GetScale</a> () const</td></tr>
-<tr class="separator:a8819e33e87e8a8cf0086c156b0072a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34c610a94a2802100447d053a7866b85"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a34c610a94a2802100447d053a7866b85">GetScaleX</a> () const</td></tr>
-<tr class="separator:a34c610a94a2802100447d053a7866b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfa421cde566209e669eba461cdafb16"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#abfa421cde566209e669eba461cdafb16">GetScaleY</a> () const</td></tr>
-<tr class="separator:abfa421cde566209e669eba461cdafb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4c302baa33386b27eecb1cd4c627573"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ae4c302baa33386b27eecb1cd4c627573">GetScaleZ</a> () const</td></tr>
-<tr class="separator:ae4c302baa33386b27eecb1cd4c627573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f6909d1f35cc5c4d4340e6fe56d5e4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a6f6909d1f35cc5c4d4340e6fe56d5e4d">Scale</a> (const glm::vec3 &amp;val)</td></tr>
-<tr class="separator:a6f6909d1f35cc5c4d4340e6fe56d5e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17289ae542625db691f2d4944c8213fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a17289ae542625db691f2d4944c8213fb">ScaleX</a> (const float sx)</td></tr>
-<tr class="separator:a17289ae542625db691f2d4944c8213fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b85b17f0879d8f5f0f14746d6a13f51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a8b85b17f0879d8f5f0f14746d6a13f51">ScaleY</a> (const float sy)</td></tr>
-<tr class="separator:a8b85b17f0879d8f5f0f14746d6a13f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabfade728cf9193d14ab5e726c8ddd0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#aabfade728cf9193d14ab5e726c8ddd0f">ScaleZ</a> (const float sz)</td></tr>
-<tr class="separator:aabfade728cf9193d14ab5e726c8ddd0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac60d767a4f53241ef68726530da0b984"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ac60d767a4f53241ef68726530da0b984">SetScale</a> (const glm::vec3 &amp;val)</td></tr>
-<tr class="separator:ac60d767a4f53241ef68726530da0b984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3a8b4e7a97700c4761bfadbd6a6b9ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ac3a8b4e7a97700c4761bfadbd6a6b9ec">SetScale</a> (const float sx, const float sy, const float sz)</td></tr>
-<tr class="separator:ac3a8b4e7a97700c4761bfadbd6a6b9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae846994da07971f9d56b33d29cd65088"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ae846994da07971f9d56b33d29cd65088">SetScaleX</a> (const float sx)</td></tr>
-<tr class="separator:ae846994da07971f9d56b33d29cd65088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fc713c7032ef473b7c6cc73e323e54f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a2fc713c7032ef473b7c6cc73e323e54f">SetScaleY</a> (const float sy)</td></tr>
-<tr class="separator:a2fc713c7032ef473b7c6cc73e323e54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e6dcd189fb5e4300e63a6eaeb20eece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a7e6dcd189fb5e4300e63a6eaeb20eece">SetScaleZ</a> (const float sz)</td></tr>
-<tr class="separator:a7e6dcd189fb5e4300e63a6eaeb20eece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68d259da063ea2aff48720ae55870445"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a68d259da063ea2aff48720ae55870445">updateLocalMat</a> ()</td></tr>
+<tr class="separator:a68d259da063ea2aff48720ae55870445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ce5285f9481b5615c084b9f892fdb8"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a69ce5285f9481b5615c084b9f892fdb8">getLocalPosition</a> ()</td></tr>
+<tr class="separator:a69ce5285f9481b5615c084b9f892fdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aa0ac4df795971dad499a0d12348d07"><td class="memItemLeft" align="right" valign="top">const glm::mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a8aa0ac4df795971dad499a0d12348d07">getLocalMat</a> () const</td></tr>
+<tr class="separator:a8aa0ac4df795971dad499a0d12348d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8bdfb3bbc688a9a920ccb4d452d8962"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#af8bdfb3bbc688a9a920ccb4d452d8962">getUpVector</a> () const</td></tr>
+<tr class="separator:af8bdfb3bbc688a9a920ccb4d452d8962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4f5c1122a5191ad2a4628a43a76a7c"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#afc4f5c1122a5191ad2a4628a43a76a7c">getForwardVector</a> () const</td></tr>
+<tr class="separator:afc4f5c1122a5191ad2a4628a43a76a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b5f3bfbeb73eb4f445b1941b8e359d"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a73b5f3bfbeb73eb4f445b1941b8e359d">getTranslation</a> () const</td></tr>
+<tr class="separator:a73b5f3bfbeb73eb4f445b1941b8e359d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0371b75ed67d59665967846d9cc6827"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ac0371b75ed67d59665967846d9cc6827">getTranslationX</a> () const</td></tr>
+<tr class="separator:ac0371b75ed67d59665967846d9cc6827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d2aca82a3b8944815801963f32ab8c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a18d2aca82a3b8944815801963f32ab8c">getTranslationY</a> () const</td></tr>
+<tr class="separator:a18d2aca82a3b8944815801963f32ab8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7ec019acf68cb930db1a7db79ef97f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a5d7ec019acf68cb930db1a7db79ef97f">getTranslationZ</a> () const</td></tr>
+<tr class="separator:a5d7ec019acf68cb930db1a7db79ef97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c143bdc0bf020940b9b6bd7e2a01d45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a9c143bdc0bf020940b9b6bd7e2a01d45">translate</a> (float x, float y, float z)</td></tr>
+<tr class="separator:a9c143bdc0bf020940b9b6bd7e2a01d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0290297c16ee5ce4f6cf2855fd26aa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ae0290297c16ee5ce4f6cf2855fd26aa0">translate</a> (const glm::vec3 &amp;v)</td></tr>
+<tr class="separator:ae0290297c16ee5ce4f6cf2855fd26aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e8e6da470c6a080b669cd619e8554ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a6e8e6da470c6a080b669cd619e8554ef">translateX</a> (float x)</td></tr>
+<tr class="separator:a6e8e6da470c6a080b669cd619e8554ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c9d7ff73b744c480914b7d2aaabf81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ab0c9d7ff73b744c480914b7d2aaabf81">translateY</a> (float y)</td></tr>
+<tr class="separator:ab0c9d7ff73b744c480914b7d2aaabf81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ea4d1c69ec17c2ce4c1d8b4068639a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a13ea4d1c69ec17c2ce4c1d8b4068639a">translateZ</a> (float z)</td></tr>
+<tr class="separator:a13ea4d1c69ec17c2ce4c1d8b4068639a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2866183fe28eb5e5360d156830b00655"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a2866183fe28eb5e5360d156830b00655">setTranslation</a> (const glm::vec3 &amp;translation)</td></tr>
+<tr class="separator:a2866183fe28eb5e5360d156830b00655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2671c96409a11a74d9c7cb96d96b274b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a2671c96409a11a74d9c7cb96d96b274b">setTranslation</a> (float x, float y, float z)</td></tr>
+<tr class="separator:a2671c96409a11a74d9c7cb96d96b274b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51d65455864ed3595a53c40d2f576067"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a51d65455864ed3595a53c40d2f576067">setTranslationX</a> (float x)</td></tr>
+<tr class="separator:a51d65455864ed3595a53c40d2f576067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d5eab59374d5e900c17c02a4c64b2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#aa9d5eab59374d5e900c17c02a4c64b2f">setTranslationY</a> (float y)</td></tr>
+<tr class="separator:aa9d5eab59374d5e900c17c02a4c64b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeddca7f4f74afd8394810222684fad30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#aeddca7f4f74afd8394810222684fad30">setTranslationZ</a> (float z)</td></tr>
+<tr class="separator:aeddca7f4f74afd8394810222684fad30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32ee07603a9531e77b189185cbd40e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#aa32ee07603a9531e77b189185cbd40e4">translateLocal</a> (float x, float y, float z)</td></tr>
+<tr class="separator:aa32ee07603a9531e77b189185cbd40e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8769dc2eb4f1cd467d8e39c85decdd10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a8769dc2eb4f1cd467d8e39c85decdd10">translateLocal</a> (const glm::vec3 &amp;v)</td></tr>
+<tr class="separator:a8769dc2eb4f1cd467d8e39c85decdd10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24885ce6a9f002a00f7c263e4076ea6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a24885ce6a9f002a00f7c263e4076ea6b">rotate</a> (const glm::quat &amp;rot)</td></tr>
+<tr class="separator:a24885ce6a9f002a00f7c263e4076ea6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9787bc7e772a5ef4f9a7ed36be1ae10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ac9787bc7e772a5ef4f9a7ed36be1ae10">rotate</a> (float angle, const glm::vec3 &amp;axis)</td></tr>
+<tr class="separator:ac9787bc7e772a5ef4f9a7ed36be1ae10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620c1729b027b54d0cabe03a8cdc9253"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a620c1729b027b54d0cabe03a8cdc9253">rotateX</a> (float angle)</td></tr>
+<tr class="separator:a620c1729b027b54d0cabe03a8cdc9253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e365a26befa6aabeb2e0b3ca680dd4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a3e365a26befa6aabeb2e0b3ca680dd4f">rotateY</a> (float angle)</td></tr>
+<tr class="separator:a3e365a26befa6aabeb2e0b3ca680dd4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb339cf9f8c44fa6db954eb82af63c5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#afb339cf9f8c44fa6db954eb82af63c5b">rotateZ</a> (float angle)</td></tr>
+<tr class="separator:afb339cf9f8c44fa6db954eb82af63c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7124a324cea1d06b438248003d332ee2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a7124a324cea1d06b438248003d332ee2">rotateXLocal</a> (float angle)</td></tr>
+<tr class="separator:a7124a324cea1d06b438248003d332ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc79987e5fc4c805c5ff479d2c8b624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#abfc79987e5fc4c805c5ff479d2c8b624">rotateYLocal</a> (float angle)</td></tr>
+<tr class="separator:abfc79987e5fc4c805c5ff479d2c8b624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9079ea3fc1c171f2e70fb489c804fc52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a9079ea3fc1c171f2e70fb489c804fc52">rotateZLocal</a> (float angle)</td></tr>
+<tr class="separator:a9079ea3fc1c171f2e70fb489c804fc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5f0e26d19bbb99a4624784d3024e654"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ab5f0e26d19bbb99a4624784d3024e654">getScale</a> () const</td></tr>
+<tr class="separator:ab5f0e26d19bbb99a4624784d3024e654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ecc00577cd57f15ed63926a712cdcb1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a7ecc00577cd57f15ed63926a712cdcb1">getScaleX</a> () const</td></tr>
+<tr class="separator:a7ecc00577cd57f15ed63926a712cdcb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99763688e60bc36134390327344f5df0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a99763688e60bc36134390327344f5df0">getScaleY</a> () const</td></tr>
+<tr class="separator:a99763688e60bc36134390327344f5df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad79cc7092172c384e46b426059928672"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ad79cc7092172c384e46b426059928672">getScaleZ</a> () const</td></tr>
+<tr class="separator:ad79cc7092172c384e46b426059928672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4636cea71bac0aa965bc567e649e03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a3f4636cea71bac0aa965bc567e649e03">scale</a> (float sx, float sy, float sz)</td></tr>
+<tr class="separator:a3f4636cea71bac0aa965bc567e649e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ddb66479416948acf2406f544aaaa0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a5ddb66479416948acf2406f544aaaa0f">scale</a> (const glm::vec3 &amp;val)</td></tr>
+<tr class="separator:a5ddb66479416948acf2406f544aaaa0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b859bc4f4b47e9d4b1e322c811a9e29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a3b859bc4f4b47e9d4b1e322c811a9e29">scaleX</a> (float sx)</td></tr>
+<tr class="separator:a3b859bc4f4b47e9d4b1e322c811a9e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b15e39c5a79379c361fb515a163c6de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a2b15e39c5a79379c361fb515a163c6de">scaleY</a> (float sy)</td></tr>
+<tr class="separator:a2b15e39c5a79379c361fb515a163c6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b556423d4c5dffd55f40685b0cb777"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a61b556423d4c5dffd55f40685b0cb777">scaleZ</a> (float sz)</td></tr>
+<tr class="separator:a61b556423d4c5dffd55f40685b0cb777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c2d1832acc0b0b52e217de4efa4d91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#af8c2d1832acc0b0b52e217de4efa4d91">setScale</a> (const glm::vec3 &amp;val)</td></tr>
+<tr class="separator:af8c2d1832acc0b0b52e217de4efa4d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604f8cab4d669b713e04b57a7cc57c0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a604f8cab4d669b713e04b57a7cc57c0c">setScale</a> (float sx, float sy, float sz)</td></tr>
+<tr class="separator:a604f8cab4d669b713e04b57a7cc57c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2c6aded239ad20e1c155a5dee60506"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ada2c6aded239ad20e1c155a5dee60506">setScaleX</a> (float sx)</td></tr>
+<tr class="separator:ada2c6aded239ad20e1c155a5dee60506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599ea97d84a88467abec94a30339f73e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a599ea97d84a88467abec94a30339f73e">setScaleY</a> (float sy)</td></tr>
+<tr class="separator:a599ea97d84a88467abec94a30339f73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a71c829c953e5585623696fd7a4624d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a1a71c829c953e5585623696fd7a4624d">setScaleZ</a> (float sz)</td></tr>
+<tr class="separator:a1a71c829c953e5585623696fd7a4624d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -193,8 +195,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a8eb8cecaa5ec8273e49c9487e0f6b935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aec13468ee4386a737b62c780086e9f95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec13468ee4386a737b62c780086e9f95">&#9670;&nbsp;</a></span>Transform3D()</h2>
+<a id="adb5c661621922b1a3a6e6433ce1c79f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb5c661621922b1a3a6e6433ce1c79f6">&#9670;&nbsp;</a></span>Transform3D()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +220,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const glm::vec3 &amp;&#160;</td>
-          <td class="paramname"><em>orientation</em> = <code>conf::g_coordinate_system_orientation</code>&#160;</td>
+          <td class="paramname"><em>orientation</em> = <code>conf::g_coordinateSystemOrientation</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -240,6 +242,9 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ec::Transform3D::~Transform3D </td>
@@ -248,19 +253,24 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a50b05aae5350602938a0df871764e8c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50b05aae5350602938a0df871764e8c6">&#9670;&nbsp;</a></span>GetForwardVector()</h2>
+<a id="afc4f5c1122a5191ad2a4628a43a76a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4f5c1122a5191ad2a4628a43a76a7c">&#9670;&nbsp;</a></span>getForwardVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const glm::vec3 &amp; ec::Transform3D::GetForwardVector </td>
+          <td class="memname">const glm::vec3 &amp; ec::Transform3D::getForwardVector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -271,14 +281,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a39bf61001742803f82e888e2b64a58f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39bf61001742803f82e888e2b64a58f4">&#9670;&nbsp;</a></span>GetLocalMat()</h2>
+<a id="a8aa0ac4df795971dad499a0d12348d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aa0ac4df795971dad499a0d12348d07">&#9670;&nbsp;</a></span>getLocalMat()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const glm::mat4 &amp; ec::Transform3D::GetLocalMat </td>
+          <td class="memname">const glm::mat4 &amp; ec::Transform3D::getLocalMat </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -289,14 +299,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a69a9688cbe54695c5798eb532b7f1a30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69a9688cbe54695c5798eb532b7f1a30">&#9670;&nbsp;</a></span>GetLocalPosition()</h2>
+<a id="a69ce5285f9481b5615c084b9f892fdb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ce5285f9481b5615c084b9f892fdb8">&#9670;&nbsp;</a></span>getLocalPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const glm::vec3 &amp; ec::Transform3D::GetLocalPosition </td>
+          <td class="memname">const glm::vec3 &amp; ec::Transform3D::getLocalPosition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -307,14 +317,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8819e33e87e8a8cf0086c156b0072a4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8819e33e87e8a8cf0086c156b0072a4d">&#9670;&nbsp;</a></span>GetScale()</h2>
+<a id="ab5f0e26d19bbb99a4624784d3024e654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5f0e26d19bbb99a4624784d3024e654">&#9670;&nbsp;</a></span>getScale()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const glm::vec3 &amp; ec::Transform3D::GetScale </td>
+          <td class="memname">const glm::vec3 &amp; ec::Transform3D::getScale </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -325,14 +335,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a34c610a94a2802100447d053a7866b85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34c610a94a2802100447d053a7866b85">&#9670;&nbsp;</a></span>GetScaleX()</h2>
+<a id="a7ecc00577cd57f15ed63926a712cdcb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ecc00577cd57f15ed63926a712cdcb1">&#9670;&nbsp;</a></span>getScaleX()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float ec::Transform3D::GetScaleX </td>
+          <td class="memname">float ec::Transform3D::getScaleX </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -343,14 +353,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abfa421cde566209e669eba461cdafb16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfa421cde566209e669eba461cdafb16">&#9670;&nbsp;</a></span>GetScaleY()</h2>
+<a id="a99763688e60bc36134390327344f5df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99763688e60bc36134390327344f5df0">&#9670;&nbsp;</a></span>getScaleY()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float ec::Transform3D::GetScaleY </td>
+          <td class="memname">float ec::Transform3D::getScaleY </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -361,14 +371,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae4c302baa33386b27eecb1cd4c627573"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4c302baa33386b27eecb1cd4c627573">&#9670;&nbsp;</a></span>GetScaleZ()</h2>
+<a id="ad79cc7092172c384e46b426059928672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad79cc7092172c384e46b426059928672">&#9670;&nbsp;</a></span>getScaleZ()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float ec::Transform3D::GetScaleZ </td>
+          <td class="memname">float ec::Transform3D::getScaleZ </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -379,14 +389,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a71b999a8cf046109562a5335c9af7c77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71b999a8cf046109562a5335c9af7c77">&#9670;&nbsp;</a></span>GetTranslation()</h2>
+<a id="a73b5f3bfbeb73eb4f445b1941b8e359d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b5f3bfbeb73eb4f445b1941b8e359d">&#9670;&nbsp;</a></span>getTranslation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const glm::vec3 &amp; ec::Transform3D::GetTranslation </td>
+          <td class="memname">const glm::vec3 &amp; ec::Transform3D::getTranslation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -397,14 +407,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae95b9e3b8b535ae7ab0e109ea82b4585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae95b9e3b8b535ae7ab0e109ea82b4585">&#9670;&nbsp;</a></span>GetTranslationX()</h2>
+<a id="ac0371b75ed67d59665967846d9cc6827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0371b75ed67d59665967846d9cc6827">&#9670;&nbsp;</a></span>getTranslationX()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float ec::Transform3D::GetTranslationX </td>
+          <td class="memname">float ec::Transform3D::getTranslationX </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -415,14 +425,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a59f4bf735a15afa5dad75106e15e8691"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59f4bf735a15afa5dad75106e15e8691">&#9670;&nbsp;</a></span>GetTranslationY()</h2>
+<a id="a18d2aca82a3b8944815801963f32ab8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18d2aca82a3b8944815801963f32ab8c">&#9670;&nbsp;</a></span>getTranslationY()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float ec::Transform3D::GetTranslationY </td>
+          <td class="memname">float ec::Transform3D::getTranslationY </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -433,14 +443,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a85f04530ab18f8266e8741eca1e69315"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85f04530ab18f8266e8741eca1e69315">&#9670;&nbsp;</a></span>GetTranslationZ()</h2>
+<a id="a5d7ec019acf68cb930db1a7db79ef97f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d7ec019acf68cb930db1a7db79ef97f">&#9670;&nbsp;</a></span>getTranslationZ()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float ec::Transform3D::GetTranslationZ </td>
+          <td class="memname">float ec::Transform3D::getTranslationZ </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -451,14 +461,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ace4e850baa2cbbbbcbe12613eb6851a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace4e850baa2cbbbbcbe12613eb6851a8">&#9670;&nbsp;</a></span>GetUpVector()</h2>
+<a id="af8bdfb3bbc688a9a920ccb4d452d8962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8bdfb3bbc688a9a920ccb4d452d8962">&#9670;&nbsp;</a></span>getUpVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const glm::vec3 &amp; ec::Transform3D::GetUpVector </td>
+          <td class="memname">const glm::vec3 &amp; ec::Transform3D::getUpVector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -469,14 +479,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae2675da2f17fe145cc199412d85777d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2675da2f17fe145cc199412d85777d5">&#9670;&nbsp;</a></span>Rotate() <span class="overload">[1/2]</span></h2>
+<a id="a24885ce6a9f002a00f7c263e4076ea6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24885ce6a9f002a00f7c263e4076ea6b">&#9670;&nbsp;</a></span>rotate() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::Rotate </td>
+          <td class="memname">void ec::Transform3D::rotate </td>
           <td>(</td>
           <td class="paramtype">const glm::quat &amp;&#160;</td>
           <td class="paramname"><em>rot</em></td><td>)</td>
@@ -488,14 +498,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="acaaea3ccdff9e23f1edf6f9fed054afe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaaea3ccdff9e23f1edf6f9fed054afe">&#9670;&nbsp;</a></span>Rotate() <span class="overload">[2/2]</span></h2>
+<a id="ac9787bc7e772a5ef4f9a7ed36be1ae10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9787bc7e772a5ef4f9a7ed36be1ae10">&#9670;&nbsp;</a></span>rotate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::Rotate </td>
+          <td class="memname">void ec::Transform3D::rotate </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>angle</em>, </td>
@@ -517,16 +527,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a04e4eaf695ba795bac09e8fa43c0a462"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04e4eaf695ba795bac09e8fa43c0a462">&#9670;&nbsp;</a></span>RotateX()</h2>
+<a id="a620c1729b027b54d0cabe03a8cdc9253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a620c1729b027b54d0cabe03a8cdc9253">&#9670;&nbsp;</a></span>rotateX()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::RotateX </td>
+          <td class="memname">void ec::Transform3D::rotateX </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>angle</em></td><td>)</td>
           <td></td>
         </tr>
@@ -536,16 +546,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af5995f2c01e062a715f8a3181dd11f04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5995f2c01e062a715f8a3181dd11f04">&#9670;&nbsp;</a></span>RotateXLocal()</h2>
+<a id="a7124a324cea1d06b438248003d332ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7124a324cea1d06b438248003d332ee2">&#9670;&nbsp;</a></span>rotateXLocal()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::RotateXLocal </td>
+          <td class="memname">void ec::Transform3D::rotateXLocal </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>angle</em></td><td>)</td>
           <td></td>
         </tr>
@@ -555,16 +565,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a71e31dbecd1bfad8754c7b3bca691876"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71e31dbecd1bfad8754c7b3bca691876">&#9670;&nbsp;</a></span>RotateY()</h2>
+<a id="a3e365a26befa6aabeb2e0b3ca680dd4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e365a26befa6aabeb2e0b3ca680dd4f">&#9670;&nbsp;</a></span>rotateY()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::RotateY </td>
+          <td class="memname">void ec::Transform3D::rotateY </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>angle</em></td><td>)</td>
           <td></td>
         </tr>
@@ -574,16 +584,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a593767a5127e4156c309b3613a162b42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a593767a5127e4156c309b3613a162b42">&#9670;&nbsp;</a></span>RotateYLocal()</h2>
+<a id="abfc79987e5fc4c805c5ff479d2c8b624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc79987e5fc4c805c5ff479d2c8b624">&#9670;&nbsp;</a></span>rotateYLocal()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::RotateYLocal </td>
+          <td class="memname">void ec::Transform3D::rotateYLocal </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>angle</em></td><td>)</td>
           <td></td>
         </tr>
@@ -593,16 +603,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aff76dc65f161ff8401976561772dd2fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff76dc65f161ff8401976561772dd2fc">&#9670;&nbsp;</a></span>RotateZ()</h2>
+<a id="afb339cf9f8c44fa6db954eb82af63c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb339cf9f8c44fa6db954eb82af63c5b">&#9670;&nbsp;</a></span>rotateZ()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::RotateZ </td>
+          <td class="memname">void ec::Transform3D::rotateZ </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>angle</em></td><td>)</td>
           <td></td>
         </tr>
@@ -612,16 +622,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aba0aba873f12438d20f059bd86702135"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba0aba873f12438d20f059bd86702135">&#9670;&nbsp;</a></span>RotateZLocal()</h2>
+<a id="a9079ea3fc1c171f2e70fb489c804fc52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9079ea3fc1c171f2e70fb489c804fc52">&#9670;&nbsp;</a></span>rotateZLocal()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::RotateZLocal </td>
+          <td class="memname">void ec::Transform3D::rotateZLocal </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>angle</em></td><td>)</td>
           <td></td>
         </tr>
@@ -631,14 +641,49 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f6909d1f35cc5c4d4340e6fe56d5e4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f6909d1f35cc5c4d4340e6fe56d5e4d">&#9670;&nbsp;</a></span>Scale()</h2>
+<a id="a3f4636cea71bac0aa965bc567e649e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f4636cea71bac0aa965bc567e649e03">&#9670;&nbsp;</a></span>scale() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::Scale </td>
+          <td class="memname">void ec::Transform3D::scale </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Multiplicative scaling of the current scale. </p>
+
+</div>
+</div>
+<a id="a5ddb66479416948acf2406f544aaaa0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ddb66479416948acf2406f544aaaa0f">&#9670;&nbsp;</a></span>scale() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Transform3D::scale </td>
           <td>(</td>
           <td class="paramtype">const glm::vec3 &amp;&#160;</td>
           <td class="paramname"><em>val</em></td><td>)</td>
@@ -646,75 +691,75 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Multiplicatively scaling of the current scale. </p>
+<p>Multiplicative scaling of the current scale. </p>
 
 </div>
 </div>
-<a id="a17289ae542625db691f2d4944c8213fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17289ae542625db691f2d4944c8213fb">&#9670;&nbsp;</a></span>ScaleX()</h2>
+<a id="a3b859bc4f4b47e9d4b1e322c811a9e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b859bc4f4b47e9d4b1e322c811a9e29">&#9670;&nbsp;</a></span>scaleX()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::ScaleX </td>
+          <td class="memname">void ec::Transform3D::scaleX </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>sx</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Multiplicatively scale the x scale component. </p>
+<p>Multiplicative scaling of the x-scale component. </p>
 
 </div>
 </div>
-<a id="a8b85b17f0879d8f5f0f14746d6a13f51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b85b17f0879d8f5f0f14746d6a13f51">&#9670;&nbsp;</a></span>ScaleY()</h2>
+<a id="a2b15e39c5a79379c361fb515a163c6de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b15e39c5a79379c361fb515a163c6de">&#9670;&nbsp;</a></span>scaleY()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::ScaleY </td>
+          <td class="memname">void ec::Transform3D::scaleY </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>sy</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Multiplicatively scale the y scale component. </p>
+<p>Multiplicative scaling of y-scale component. </p>
 
 </div>
 </div>
-<a id="aabfade728cf9193d14ab5e726c8ddd0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabfade728cf9193d14ab5e726c8ddd0f">&#9670;&nbsp;</a></span>ScaleZ()</h2>
+<a id="a61b556423d4c5dffd55f40685b0cb777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b556423d4c5dffd55f40685b0cb777">&#9670;&nbsp;</a></span>scaleZ()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::ScaleZ </td>
+          <td class="memname">void ec::Transform3D::scaleZ </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>sz</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Multiplicatively scale the z scale component. </p>
+<p>Multiplicative scaling of z-scale component. </p>
 
 </div>
 </div>
-<a id="ac60d767a4f53241ef68726530da0b984"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac60d767a4f53241ef68726530da0b984">&#9670;&nbsp;</a></span>SetScale() <span class="overload">[1/2]</span></h2>
+<a id="af8c2d1832acc0b0b52e217de4efa4d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c2d1832acc0b0b52e217de4efa4d91">&#9670;&nbsp;</a></span>setScale() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::SetScale </td>
+          <td class="memname">void ec::Transform3D::setScale </td>
           <td>(</td>
           <td class="paramtype">const glm::vec3 &amp;&#160;</td>
           <td class="paramname"><em>val</em></td><td>)</td>
@@ -726,28 +771,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac3a8b4e7a97700c4761bfadbd6a6b9ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3a8b4e7a97700c4761bfadbd6a6b9ec">&#9670;&nbsp;</a></span>SetScale() <span class="overload">[2/2]</span></h2>
+<a id="a604f8cab4d669b713e04b57a7cc57c0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a604f8cab4d669b713e04b57a7cc57c0c">&#9670;&nbsp;</a></span>setScale() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::SetScale </td>
+          <td class="memname">void ec::Transform3D::setScale </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>sx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>sy</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>sz</em>&#160;</td>
         </tr>
         <tr>
@@ -761,16 +806,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae846994da07971f9d56b33d29cd65088"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae846994da07971f9d56b33d29cd65088">&#9670;&nbsp;</a></span>SetScaleX()</h2>
+<a id="ada2c6aded239ad20e1c155a5dee60506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2c6aded239ad20e1c155a5dee60506">&#9670;&nbsp;</a></span>setScaleX()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::SetScaleX </td>
+          <td class="memname">void ec::Transform3D::setScaleX </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>sx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -780,16 +825,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2fc713c7032ef473b7c6cc73e323e54f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fc713c7032ef473b7c6cc73e323e54f">&#9670;&nbsp;</a></span>SetScaleY()</h2>
+<a id="a599ea97d84a88467abec94a30339f73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599ea97d84a88467abec94a30339f73e">&#9670;&nbsp;</a></span>setScaleY()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::SetScaleY </td>
+          <td class="memname">void ec::Transform3D::setScaleY </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>sy</em></td><td>)</td>
           <td></td>
         </tr>
@@ -799,16 +844,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a7e6dcd189fb5e4300e63a6eaeb20eece"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e6dcd189fb5e4300e63a6eaeb20eece">&#9670;&nbsp;</a></span>SetScaleZ()</h2>
+<a id="a1a71c829c953e5585623696fd7a4624d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a71c829c953e5585623696fd7a4624d">&#9670;&nbsp;</a></span>setScaleZ()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::SetScaleZ </td>
+          <td class="memname">void ec::Transform3D::setScaleZ </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>sz</em></td><td>)</td>
           <td></td>
         </tr>
@@ -818,14 +863,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3a2ebde1bdb7b79e080deaee7555e251"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a2ebde1bdb7b79e080deaee7555e251">&#9670;&nbsp;</a></span>SetTranslation() <span class="overload">[1/2]</span></h2>
+<a id="a2866183fe28eb5e5360d156830b00655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2866183fe28eb5e5360d156830b00655">&#9670;&nbsp;</a></span>setTranslation() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::SetTranslation </td>
+          <td class="memname">void ec::Transform3D::setTranslation </td>
           <td>(</td>
           <td class="paramtype">const glm::vec3 &amp;&#160;</td>
           <td class="paramname"><em>translation</em></td><td>)</td>
@@ -837,28 +882,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a14c627a2eea894334e652ba9046bdcae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14c627a2eea894334e652ba9046bdcae">&#9670;&nbsp;</a></span>SetTranslation() <span class="overload">[2/2]</span></h2>
+<a id="a2671c96409a11a74d9c7cb96d96b274b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2671c96409a11a74d9c7cb96d96b274b">&#9670;&nbsp;</a></span>setTranslation() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::SetTranslation </td>
+          <td class="memname">void ec::Transform3D::setTranslation </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>z</em>&#160;</td>
         </tr>
         <tr>
@@ -872,16 +917,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a150e25babd8e2aeeb650c768e4d5d448"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a150e25babd8e2aeeb650c768e4d5d448">&#9670;&nbsp;</a></span>SetTranslationX()</h2>
+<a id="a51d65455864ed3595a53c40d2f576067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51d65455864ed3595a53c40d2f576067">&#9670;&nbsp;</a></span>setTranslationX()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::SetTranslationX </td>
+          <td class="memname">void ec::Transform3D::setTranslationX </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -891,16 +936,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a93cbe1baa33972865b10554fbacfddec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93cbe1baa33972865b10554fbacfddec">&#9670;&nbsp;</a></span>SetTranslationY()</h2>
+<a id="aa9d5eab59374d5e900c17c02a4c64b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d5eab59374d5e900c17c02a4c64b2f">&#9670;&nbsp;</a></span>setTranslationY()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::SetTranslationY </td>
+          <td class="memname">void ec::Transform3D::setTranslationY </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>y</em></td><td>)</td>
           <td></td>
         </tr>
@@ -910,16 +955,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af7a125c99afbd7e53cf7b905c2ab1db4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7a125c99afbd7e53cf7b905c2ab1db4">&#9670;&nbsp;</a></span>SetTranslationZ()</h2>
+<a id="aeddca7f4f74afd8394810222684fad30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeddca7f4f74afd8394810222684fad30">&#9670;&nbsp;</a></span>setTranslationZ()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::SetTranslationZ </td>
+          <td class="memname">void ec::Transform3D::setTranslationZ </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>z</em></td><td>)</td>
           <td></td>
         </tr>
@@ -929,28 +974,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a553b6e61a45aae2661bcb5568613a32a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a553b6e61a45aae2661bcb5568613a32a">&#9670;&nbsp;</a></span>Translate() <span class="overload">[1/2]</span></h2>
+<a id="a9c143bdc0bf020940b9b6bd7e2a01d45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c143bdc0bf020940b9b6bd7e2a01d45">&#9670;&nbsp;</a></span>translate() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::Translate </td>
+          <td class="memname">void ec::Transform3D::translate </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>z</em>&#160;</td>
         </tr>
         <tr>
@@ -964,14 +1009,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9935de1ebeecdd4bfd58073c1ea1b854"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9935de1ebeecdd4bfd58073c1ea1b854">&#9670;&nbsp;</a></span>Translate() <span class="overload">[2/2]</span></h2>
+<a id="ae0290297c16ee5ce4f6cf2855fd26aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0290297c16ee5ce4f6cf2855fd26aa0">&#9670;&nbsp;</a></span>translate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::Translate </td>
+          <td class="memname">void ec::Transform3D::translate </td>
           <td>(</td>
           <td class="paramtype">const glm::vec3 &amp;&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
@@ -983,28 +1028,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a84df51411133b3402b75fa05bd51faae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84df51411133b3402b75fa05bd51faae">&#9670;&nbsp;</a></span>TranslateLocal() <span class="overload">[1/2]</span></h2>
+<a id="aa32ee07603a9531e77b189185cbd40e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa32ee07603a9531e77b189185cbd40e4">&#9670;&nbsp;</a></span>translateLocal() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::TranslateLocal </td>
+          <td class="memname">void ec::Transform3D::translateLocal </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>z</em>&#160;</td>
         </tr>
         <tr>
@@ -1018,14 +1063,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a44ece37c7f56329840c2f92ae695e9a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44ece37c7f56329840c2f92ae695e9a2">&#9670;&nbsp;</a></span>TranslateLocal() <span class="overload">[2/2]</span></h2>
+<a id="a8769dc2eb4f1cd467d8e39c85decdd10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8769dc2eb4f1cd467d8e39c85decdd10">&#9670;&nbsp;</a></span>translateLocal() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::TranslateLocal </td>
+          <td class="memname">void ec::Transform3D::translateLocal </td>
           <td>(</td>
           <td class="paramtype">const glm::vec3 &amp;&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
@@ -1037,16 +1082,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0c1e55c9edcd7cb53199fd05ba111099"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c1e55c9edcd7cb53199fd05ba111099">&#9670;&nbsp;</a></span>TranslateX()</h2>
+<a id="a6e8e6da470c6a080b669cd619e8554ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e8e6da470c6a080b669cd619e8554ef">&#9670;&nbsp;</a></span>translateX()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::TranslateX </td>
+          <td class="memname">void ec::Transform3D::translateX </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1056,16 +1101,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae95b02e45148ca35e98ae54d23b01904"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae95b02e45148ca35e98ae54d23b01904">&#9670;&nbsp;</a></span>TranslateY()</h2>
+<a id="ab0c9d7ff73b744c480914b7d2aaabf81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0c9d7ff73b744c480914b7d2aaabf81">&#9670;&nbsp;</a></span>translateY()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::TranslateY </td>
+          <td class="memname">void ec::Transform3D::translateY </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>y</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1075,16 +1120,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a33c653dddfd16ec7481f1b1313a4505e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33c653dddfd16ec7481f1b1313a4505e">&#9670;&nbsp;</a></span>TranslateZ()</h2>
+<a id="a13ea4d1c69ec17c2ce4c1d8b4068639a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13ea4d1c69ec17c2ce4c1d8b4068639a">&#9670;&nbsp;</a></span>translateZ()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::TranslateZ </td>
+          <td class="memname">void ec::Transform3D::translateZ </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>z</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1094,8 +1139,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9af1af38089385c5b2100fe5f98f33ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9af1af38089385c5b2100fe5f98f33ca">&#9670;&nbsp;</a></span>UpdateLocalMat()</h2>
+<a id="a68d259da063ea2aff48720ae55870445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d259da063ea2aff48720ae55870445">&#9670;&nbsp;</a></span>updateLocalMat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1104,7 +1149,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Transform3D::UpdateLocalMat </td>
+          <td class="memname">void ec::Transform3D::updateLocalMat </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1118,7 +1163,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>This function should be called once before accessing the local matrix, if a prior transformation has been executed. Create a new local mat from the current position, rotation and scale. </p>
 
-<p>Reimplemented in <a class="el" href="classec_1_1_camera.html#ab9b2d59d1755a56d67c13a5539b7e033">ec::Camera</a>.</p>
+<p>Reimplemented in <a class="el" href="classec_1_1_camera.html#acff95ac4ca039715d67c83111d03b8c1">ec::Camera</a>.</p>
 
 </div>
 </div>

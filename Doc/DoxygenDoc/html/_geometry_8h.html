@@ -72,18 +72,16 @@ $(function() {
 <div class="title">Geometry.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_vertex_8h_source.html">Vertex.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_texture_8h_source.html">Texture.h</a>&quot;</code><br />
-<code>#include &lt;glm/glm.hpp&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;gl/glew.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_i_geometry_access_8h_source.html">EC3D/Core/IGeometryAccess.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_geometry_data_8h_source.html">EC3D/Core/GeometryData.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Geometry.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_geometry_8h__incl.png" border="0" usemap="#_d_1_2_library_2_documents_2_job_2_forschungsmaster_2_projekte_2_eye_candy3_d_2_eye_candy3_d_2include_2_e_c3_d_2_core_2_geometry_8h" alt=""/></div>
 <map name="_d_1_2_library_2_documents_2_job_2_forschungsmaster_2_projekte_2_eye_candy3_d_2_eye_candy3_d_2include_2_e_c3_d_2_core_2_geometry_8h" id="_d_1_2_library_2_documents_2_job_2_forschungsmaster_2_projekte_2_eye_candy3_d_2_eye_candy3_d_2include_2_e_c3_d_2_core_2_geometry_8h">
-<area shape="rect" id="node2" href="_vertex_8h.html" title="Vertex.h" alt="" coords="11,124,82,151"/>
-<area shape="rect" id="node4" href="_texture_8h.html" title="Texture.h" alt="" coords="209,124,285,151"/>
+<area shape="rect" id="node2" href="_i_geometry_access_8h.html" title="EC3D/Core/IGeometryAccess.h" alt="" coords="5,124,212,151"/>
+<area shape="rect" id="node4" href="_geometry_data_8h.html" title="EC3D/Core/GeometryData.h" alt="" coords="237,124,423,151"/>
+<area shape="rect" id="node6" href="_vertex_8h.html" title="EC3D/Core/Vertex.h" alt="" coords="257,199,397,225"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -91,24 +89,30 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_geometry_8h__dep__incl.png" border="0" usemap="#_d_1_2_library_2_documents_2_job_2_forschungsmaster_2_projekte_2_eye_candy3_d_2_eye_candy3_d_2include_2_e_c3_d_2_core_2_geometry_8hdep" alt=""/></div>
 <map name="_d_1_2_library_2_documents_2_job_2_forschungsmaster_2_projekte_2_eye_candy3_d_2_eye_candy3_d_2include_2_e_c3_d_2_core_2_geometry_8hdep" id="_d_1_2_library_2_documents_2_job_2_forschungsmaster_2_projekte_2_eye_candy3_d_2_eye_candy3_d_2include_2_e_c3_d_2_core_2_geometry_8hdep">
-<area shape="rect" id="node2" href="_dynamic_geometry_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/DynamicGeometry.h" alt="" coords="143,124,411,195"/>
-<area shape="rect" id="node6" href="_resource_registry_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/ResourceRegistry.h" alt="" coords="435,124,697,195"/>
-<area shape="rect" id="node7" href="_spring_geometry_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/SpringGeometry.h" alt="" coords="721,124,976,195"/>
-<area shape="rect" id="node8" href="_static_geometry_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/StaticGeometry.h" alt="" coords="1001,124,1251,195"/>
-<area shape="rect" id="node17" href="_drawable_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Drawable.cpp" alt="" coords="1276,124,1501,195"/>
-<area shape="rect" id="node18" href="_geometry_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Geometry.cpp" alt="" coords="1525,124,1751,195"/>
-<area shape="rect" id="node19" href="_node_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Node.cpp" alt="" coords="1775,124,2000,195"/>
+<area shape="rect" id="node2" href="_dynamic_geometry_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/DynamicGeometry.h" alt="" coords="300,124,568,195"/>
+<area shape="rect" id="node6" href="_static_geometry_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/StaticGeometry.h" alt="" coords="1121,124,1371,195"/>
+<area shape="rect" id="node15" href="_core_2_window_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/Window.h" alt="" coords="2397,124,2623,195"/>
+<area shape="rect" id="node25" href="_geometry_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Geometry.cpp" alt="" coords="2647,124,2872,195"/>
 <area shape="rect" id="node3" href="_dynamic_line_geometry_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/DynamicLineGeometry.h" alt="" coords="5,243,297,313"/>
 <area shape="rect" id="node5" href="_dynamic_geometry_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/DynamicGeometry.cpp" alt="" coords="321,243,547,313"/>
 <area shape="rect" id="node4" href="_dynamic_line_geometry_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/DynamicLineGeometry.cpp" alt="" coords="29,361,274,432"/>
-<area shape="rect" id="node9" href="_cube_mesh_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/CubeMesh.h" alt="" coords="597,243,823,313"/>
-<area shape="rect" id="node11" href="_rectangle_mesh_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/RectangleMesh.h" alt="" coords="861,243,1111,313"/>
-<area shape="rect" id="node14" href="_sphere_mesh_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/SphereMesh.h" alt="" coords="1136,243,1369,313"/>
-<area shape="rect" id="node16" href="_static_geometry_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/StaticGeometry.cpp" alt="" coords="1393,243,1619,313"/>
-<area shape="rect" id="node10" href="_cube_mesh_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/CubeMesh.cpp" alt="" coords="501,361,727,432"/>
-<area shape="rect" id="node12" href="_rectangle_mesh_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/RectangleMesh.cpp" alt="" coords="751,361,976,432"/>
-<area shape="rect" id="node13" href="_theme_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/GUI/Theme.cpp" alt="" coords="1000,361,1225,432"/>
-<area shape="rect" id="node15" href="_sphere_mesh_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/SphereMesh.cpp" alt="" coords="1249,361,1475,432"/>
+<area shape="rect" id="node7" href="_cube_geometry_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/CubeGeometry.h" alt="" coords="571,243,817,313"/>
+<area shape="rect" id="node9" href="_rectangle_mesh_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/RectangleMesh.h" alt="" coords="842,243,1093,313"/>
+<area shape="rect" id="node12" href="_sphere_geometry_8h.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/include/EC3D/Core/SphereGeometry.h" alt="" coords="1117,243,1375,313"/>
+<area shape="rect" id="node14" href="_static_geometry_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/StaticGeometry.cpp" alt="" coords="1400,243,1625,313"/>
+<area shape="rect" id="node8" href="_cube_geometry_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/CubeGeometry.cpp" alt="" coords="483,361,708,432"/>
+<area shape="rect" id="node10" href="_rectangle_mesh_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/RectangleMesh.cpp" alt="" coords="732,361,957,432"/>
+<area shape="rect" id="node11" href="_theme_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/GUI/Theme.cpp" alt="" coords="981,361,1207,432"/>
+<area shape="rect" id="node13" href="_sphere_geometry_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/SphereGeometry.cpp" alt="" coords="1231,361,1456,432"/>
+<area shape="rect" id="node16" href="_application_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Application.cpp" alt="" coords="1649,243,1875,313"/>
+<area shape="rect" id="node17" href="_cursor_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Cursor.cpp" alt="" coords="1899,243,2124,313"/>
+<area shape="rect" id="node18" href="_device_registry_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/DeviceRegistry.cpp" alt="" coords="2148,243,2373,313"/>
+<area shape="rect" id="node19" href="_keyboard_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Keyboard.cpp" alt="" coords="2397,243,2623,313"/>
+<area shape="rect" id="node20" href="_mouse_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Mouse.cpp" alt="" coords="2647,243,2872,313"/>
+<area shape="rect" id="node21" href="_scene_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Scene.cpp" alt="" coords="2896,243,3121,313"/>
+<area shape="rect" id="node22" href="_scene_renderer_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/SceneRenderer.cpp" alt="" coords="3145,243,3371,313"/>
+<area shape="rect" id="node23" href="_scene_system_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/SceneSystem.cpp" alt="" coords="3395,243,3620,313"/>
+<area shape="rect" id="node24" href="_core_2_window_8cpp.html" title="D:/Library/Documents\l/Job/Forschungsmaster\l/Projekte/EyeCandy3D/EyeCandy3\lD/src/Core/Window.cpp" alt="" coords="3644,243,3869,313"/>
 </map>
 </div>
 </div>

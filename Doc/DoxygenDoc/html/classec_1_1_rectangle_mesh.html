@@ -79,8 +79,9 @@ Inheritance diagram for ec::RectangleMesh:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_rectangle_mesh__inherit__graph.png" border="0" usemap="#ec_1_1_rectangle_mesh_inherit__map" alt="Inheritance graph"/></div>
 <map name="ec_1_1_rectangle_mesh_inherit__map" id="ec_1_1_rectangle_mesh_inherit__map">
-<area shape="rect" id="node2" href="classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n|# m_VAO\l# m_VBO\l# m_EBO\l# m_vertices\l# m_indices\l|+ ~StaticGeometry()\l+ RecalculateNormals()\l+ GetVAO()\l+ GetVBO()\l+ GetEBO()\l# BeginRender()\l# OnRender()\l# EndRender()\l# SetupMesh()\l# StaticGeometry()\l}" alt="" coords="5,204,164,472"/>
-<area shape="rect" id="node3" href="classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ Render()\l# BeginRender()\l# OnRender()\l# EndRender()\l# Geometry()\l}" alt="" coords="27,5,142,156"/>
+<area shape="rect" id="node2" href="classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n||+ ~StaticGeometry()\l# setupMesh()\l# StaticGeometry()\l}" alt="" coords="12,476,153,583"/>
+<area shape="rect" id="node3" href="classec_1_1_geometry.html" title="{ec::Geometry\n|# m_data\l|+ ~Geometry()\l+ recalculateNormals()\l+ getVao()\l+ getVbo()\l+ getEbo()\l# Geometry()\l# beginRender()\l# onRender()\l# endRender()\l# setMode()\l# setType()\l}" alt="" coords="6,204,159,428"/>
+<area shape="rect" id="node4" href="classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="5,5,160,156"/>
 </map>
 </div>
 <div class="dynheader">
@@ -88,67 +89,71 @@ Collaboration diagram for ec::RectangleMesh:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_rectangle_mesh__coll__graph.png" border="0" usemap="#ec_1_1_rectangle_mesh_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_rectangle_mesh_coll__map" id="ec_1_1_rectangle_mesh_coll__map">
-<area shape="rect" id="node2" href="classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n||+ ~StaticGeometry()\l+ RecalculateNormals()\l+ GetVAO()\l+ GetVBO()\l+ GetEBO()\l# BeginRender()\l# OnRender()\l# EndRender()\l# SetupMesh()\l# StaticGeometry()\l}" alt="" coords="219,248,378,457"/>
-<area shape="rect" id="node3" href="classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ Render()\l# BeginRender()\l# OnRender()\l# EndRender()\l# Geometry()\l}" alt="" coords="5,5,120,156"/>
+<area shape="rect" id="node2" href="classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n||+ ~StaticGeometry()\l# setupMesh()\l# StaticGeometry()\l}" alt="" coords="67,735,208,841"/>
+<area shape="rect" id="node3" href="classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ recalculateNormals()\l+ getVao()\l+ getVbo()\l+ getEbo()\l# Geometry()\l# beginRender()\l# onRender()\l# endRender()\l# setMode()\l# setType()\l}" alt="" coords="61,461,214,685"/>
+<area shape="rect" id="node4" href="classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="5,211,160,362"/>
+<area shape="rect" id="node5" href="structec_1_1_geometry_data.html" title="{ec::GeometryData\n||+ GeometryData()\l+ ~GeometryData()\l+ bind()\l+ unbind()\l+ resizeBuffers()\l+ initBufferObjects()\l+ buffersInitialized()\l+ releaseMemory()\l+ updateVertexData()\l+ updateIndexData()\l+ update()\l}" alt="" coords="184,175,331,399"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa75e834f688d15a8ec8162e7a9ed1c05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_rectangle_mesh.html#aa75e834f688d15a8ec8162e7a9ed1c05">RectangleMesh</a> (const float uniform=1.0f)</td></tr>
-<tr class="separator:aa75e834f688d15a8ec8162e7a9ed1c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fe73fb3ef2979cb3d7230aaeffeecdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_rectangle_mesh.html#a7fe73fb3ef2979cb3d7230aaeffeecdd">RectangleMesh</a> (const float width, const float height)</td></tr>
-<tr class="separator:a7fe73fb3ef2979cb3d7230aaeffeecdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31c484c4657eccf50e15ad60d0ed876"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_rectangle_mesh.html#af31c484c4657eccf50e15ad60d0ed876">RectangleMesh</a> (float uniform=1.0f)</td></tr>
+<tr class="separator:af31c484c4657eccf50e15ad60d0ed876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30efa01609b3ff8d8f3d6139509b0c8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_rectangle_mesh.html#a30efa01609b3ff8d8f3d6139509b0c8c">RectangleMesh</a> (float width, float height)</td></tr>
+<tr class="separator:a30efa01609b3ff8d8f3d6139509b0c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a520388a70dadc70155b2ade95f06d110"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_rectangle_mesh.html#a520388a70dadc70155b2ade95f06d110">~RectangleMesh</a> ()</td></tr>
 <tr class="separator:a520388a70dadc70155b2ade95f06d110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classec_1_1_static_geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classec_1_1_static_geometry')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classec_1_1_static_geometry.html">ec::StaticGeometry</a></td></tr>
 <tr class="memitem:a47d1f09c1042762be9a9d4a492db2366 inherit pub_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a47d1f09c1042762be9a9d4a492db2366">~StaticGeometry</a> ()</td></tr>
 <tr class="separator:a47d1f09c1042762be9a9d4a492db2366 inherit pub_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e353f9962bb222229c59658097a129a inherit pub_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a5e353f9962bb222229c59658097a129a">RecalculateNormals</a> ()</td></tr>
-<tr class="separator:a5e353f9962bb222229c59658097a129a inherit pub_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae82f6d9fbad1e36e7bd97ed0aac94134 inherit pub_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#ae82f6d9fbad1e36e7bd97ed0aac94134">GetVAO</a> () const</td></tr>
-<tr class="separator:ae82f6d9fbad1e36e7bd97ed0aac94134 inherit pub_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a395f7523179090b1d42e176b40cc996b inherit pub_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a395f7523179090b1d42e176b40cc996b">GetVBO</a> () const</td></tr>
-<tr class="separator:a395f7523179090b1d42e176b40cc996b inherit pub_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafa07962d6488eb976146bc7d6351ec1 inherit pub_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#aafa07962d6488eb976146bc7d6351ec1">GetEBO</a> () const</td></tr>
-<tr class="separator:aafa07962d6488eb976146bc7d6351ec1 inherit pub_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classec_1_1_geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classec_1_1_geometry')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classec_1_1_geometry.html">ec::Geometry</a></td></tr>
 <tr class="memitem:a964c581313da2be51a3c78d3be7f48b3 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a964c581313da2be51a3c78d3be7f48b3">~Geometry</a> ()</td></tr>
 <tr class="separator:a964c581313da2be51a3c78d3be7f48b3 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de70c6fd7391ec0555b2df57912b177 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a8de70c6fd7391ec0555b2df57912b177">Render</a> (<a class="el" href="classec_1_1_shader.html">Shader</a> *shader, const glm::mat4 &amp;model)</td></tr>
-<tr class="separator:a8de70c6fd7391ec0555b2df57912b177 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228d4a0fa01a17379f24aee2c769b501 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a228d4a0fa01a17379f24aee2c769b501">recalculateNormals</a> ()</td></tr>
+<tr class="separator:a228d4a0fa01a17379f24aee2c769b501 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a89baad39d4f2b2c4e9774d952dce9 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a91a89baad39d4f2b2c4e9774d952dce9">getVao</a> () const</td></tr>
+<tr class="separator:a91a89baad39d4f2b2c4e9774d952dce9 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad5d4311d16462099b8f9d084d99dd4 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#abad5d4311d16462099b8f9d084d99dd4">getVbo</a> () const</td></tr>
+<tr class="separator:abad5d4311d16462099b8f9d084d99dd4 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d956ff01a7b6648ede8982e0a461ae0 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a5d956ff01a7b6648ede8982e0a461ae0">getEbo</a> () const</td></tr>
+<tr class="separator:a5d956ff01a7b6648ede8982e0a461ae0 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classec_1_1_i_geometry_access"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classec_1_1_i_geometry_access')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classec_1_1_i_geometry_access.html">ec::IGeometryAccess</a></td></tr>
+<tr class="memitem:a786b4a8489f1c7fd6c4c2685fc53e7dc inherit pub_methods_classec_1_1_i_geometry_access"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_i_geometry_access.html#a786b4a8489f1c7fd6c4c2685fc53e7dc">~IGeometryAccess</a> ()</td></tr>
+<tr class="separator:a786b4a8489f1c7fd6c4c2685fc53e7dc inherit pub_methods_classec_1_1_i_geometry_access"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a478e674624120a644c05be9be4e386b8 inherit pub_methods_classec_1_1_i_geometry_access"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_i_geometry_access.html#a478e674624120a644c05be9be4e386b8">render</a> (<a class="el" href="classec_1_1_shader.html">Shader</a> *shader, const glm::mat4 &amp;model)</td></tr>
+<tr class="separator:a478e674624120a644c05be9be4e386b8 inherit pub_methods_classec_1_1_i_geometry_access"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classec_1_1_static_geometry"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classec_1_1_static_geometry')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classec_1_1_static_geometry.html">ec::StaticGeometry</a></td></tr>
-<tr class="memitem:a58dfe3cc7d91f3bcf99d83b038cf5f1d inherit pro_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a58dfe3cc7d91f3bcf99d83b038cf5f1d">BeginRender</a> () override</td></tr>
-<tr class="separator:a58dfe3cc7d91f3bcf99d83b038cf5f1d inherit pro_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa10330a07bc5ccd18d0d61c4c965bccd inherit pro_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#aa10330a07bc5ccd18d0d61c4c965bccd">OnRender</a> () override</td></tr>
-<tr class="separator:aa10330a07bc5ccd18d0d61c4c965bccd inherit pro_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a66505344ad1a9eac31da2cf8171ea9 inherit pro_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a2a66505344ad1a9eac31da2cf8171ea9">EndRender</a> () override</td></tr>
-<tr class="separator:a2a66505344ad1a9eac31da2cf8171ea9 inherit pro_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b45ea19c8ca6662d90993f29648049d inherit pro_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a7b45ea19c8ca6662d90993f29648049d">SetupMesh</a> ()</td></tr>
-<tr class="separator:a7b45ea19c8ca6662d90993f29648049d inherit pro_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971d3c59c50d0ae540b95ecb77d5a05a inherit pro_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a971d3c59c50d0ae540b95ecb77d5a05a">setupMesh</a> ()</td></tr>
+<tr class="separator:a971d3c59c50d0ae540b95ecb77d5a05a inherit pro_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad707c706ce148f5c9d6d8ddb2321807b inherit pro_methods_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#ad707c706ce148f5c9d6d8ddb2321807b">StaticGeometry</a> ()</td></tr>
 <tr class="separator:ad707c706ce148f5c9d6d8ddb2321807b inherit pro_methods_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classec_1_1_geometry"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classec_1_1_geometry')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classec_1_1_geometry.html">ec::Geometry</a></td></tr>
-<tr class="memitem:a409c80ac243a5eb27c2a98b17cc8b3e9 inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a409c80ac243a5eb27c2a98b17cc8b3e9">Geometry</a> ()</td></tr>
-<tr class="separator:a409c80ac243a5eb27c2a98b17cc8b3e9 inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classec_1_1_static_geometry"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classec_1_1_static_geometry')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classec_1_1_static_geometry.html">ec::StaticGeometry</a></td></tr>
-<tr class="memitem:a7334854b00afa43e3ce02ce2e0600631 inherit pro_attribs_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a7334854b00afa43e3ce02ce2e0600631">m_VAO</a></td></tr>
-<tr class="separator:a7334854b00afa43e3ce02ce2e0600631 inherit pro_attribs_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14a581a93ea66ca97c79d554390fbd7b inherit pro_attribs_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a14a581a93ea66ca97c79d554390fbd7b">m_VBO</a></td></tr>
-<tr class="separator:a14a581a93ea66ca97c79d554390fbd7b inherit pro_attribs_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cb4320862c6051fbef63b04ffb2333b inherit pro_attribs_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a8cb4320862c6051fbef63b04ffb2333b">m_EBO</a></td></tr>
-<tr class="separator:a8cb4320862c6051fbef63b04ffb2333b inherit pro_attribs_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7407d00e3c3a4157cc3a3d1ac5000631 inherit pro_attribs_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structec_1_1_vertex.html">Vertex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a7407d00e3c3a4157cc3a3d1ac5000631">m_vertices</a></td></tr>
-<tr class="separator:a7407d00e3c3a4157cc3a3d1ac5000631 inherit pro_attribs_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a4c4722d3fe82b4b78dd23782c17862 inherit pro_attribs_classec_1_1_static_geometry"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_static_geometry.html#a0a4c4722d3fe82b4b78dd23782c17862">m_indices</a></td></tr>
-<tr class="separator:a0a4c4722d3fe82b4b78dd23782c17862 inherit pro_attribs_classec_1_1_static_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae22c6b54c7c534249ee08b3fb77a70 inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#aeae22c6b54c7c534249ee08b3fb77a70">Geometry</a> (GLenum mode=GL_TRIANGLES, GLenum type=GL_UNSIGNED_INT)</td></tr>
+<tr class="separator:aeae22c6b54c7c534249ee08b3fb77a70 inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca5f0e52e7c2e4b352ede1a6e7c3f5b inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#aeca5f0e52e7c2e4b352ede1a6e7c3f5b">beginRender</a> () override</td></tr>
+<tr class="separator:aeca5f0e52e7c2e4b352ede1a6e7c3f5b inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f166e70fc880e88092f29ef46afb836 inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a1f166e70fc880e88092f29ef46afb836">onRender</a> () override</td></tr>
+<tr class="separator:a1f166e70fc880e88092f29ef46afb836 inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0352702162501df185517e84c3b02bd inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#ae0352702162501df185517e84c3b02bd">endRender</a> () override</td></tr>
+<tr class="separator:ae0352702162501df185517e84c3b02bd inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f80cd4d4c22b108c33b9030e91467b inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#ad4f80cd4d4c22b108c33b9030e91467b">setMode</a> (GLenum mode)</td></tr>
+<tr class="separator:ad4f80cd4d4c22b108c33b9030e91467b inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c3da280ff11e86a8b07d18a23e0880 inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a12c3da280ff11e86a8b07d18a23e0880">setType</a> (GLenum type)</td></tr>
+<tr class="separator:a12c3da280ff11e86a8b07d18a23e0880 inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classec_1_1_i_geometry_access"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classec_1_1_i_geometry_access')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classec_1_1_i_geometry_access.html">ec::IGeometryAccess</a></td></tr>
+<tr class="memitem:aaf9faa0f583e89aa0b27db7cecbb7c6e inherit pro_methods_classec_1_1_i_geometry_access"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_i_geometry_access.html#aaf9faa0f583e89aa0b27db7cecbb7c6e">IGeometryAccess</a> ()</td></tr>
+<tr class="separator:aaf9faa0f583e89aa0b27db7cecbb7c6e inherit pro_methods_classec_1_1_i_geometry_access"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classec_1_1_geometry"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classec_1_1_geometry')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classec_1_1_geometry.html">ec::Geometry</a></td></tr>
+<tr class="memitem:aeb72a472b242d92496f0283cfee17fac inherit pro_attribs_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structec_1_1_geometry_data.html">GeometryData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#aeb72a472b242d92496f0283cfee17fac">m_data</a></td></tr>
+<tr class="separator:aeb72a472b242d92496f0283cfee17fac inherit pro_attribs_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa75e834f688d15a8ec8162e7a9ed1c05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa75e834f688d15a8ec8162e7a9ed1c05">&#9670;&nbsp;</a></span>RectangleMesh() <span class="overload">[1/2]</span></h2>
+<a id="af31c484c4657eccf50e15ad60d0ed876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31c484c4657eccf50e15ad60d0ed876">&#9670;&nbsp;</a></span>RectangleMesh() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,7 +164,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">ec::RectangleMesh::RectangleMesh </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>uniform</em> = <code>1.0f</code></td><td>)</td>
           <td></td>
         </tr>
@@ -173,8 +178,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a7fe73fb3ef2979cb3d7230aaeffeecdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fe73fb3ef2979cb3d7230aaeffeecdd">&#9670;&nbsp;</a></span>RectangleMesh() <span class="overload">[2/2]</span></h2>
+<a id="a30efa01609b3ff8d8f3d6139509b0c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30efa01609b3ff8d8f3d6139509b0c8c">&#9670;&nbsp;</a></span>RectangleMesh() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,13 +190,13 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">ec::RectangleMesh::RectangleMesh </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>width</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>height</em>&#160;</td>
         </tr>
         <tr>
@@ -227,7 +232,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

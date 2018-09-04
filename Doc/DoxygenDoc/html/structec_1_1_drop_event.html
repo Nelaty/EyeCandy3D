@@ -79,20 +79,18 @@ $(function() {
 Collaboration diagram for ec::DropEvent:</div>
 <div class="dyncontent">
 <div class="center"><img src="structec_1_1_drop_event__coll__graph.png" border="0" usemap="#ec_1_1_drop_event_coll__map" alt="Collaboration graph"/></div>
-<map name="ec_1_1_drop_event_coll__map" id="ec_1_1_drop_event_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ae6f5be022c3809bc204c365dc11cbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structec_1_1_drop_event.html#a6ae6f5be022c3809bc204c365dc11cbc">DropEvent</a> ()</td></tr>
 <tr class="separator:a6ae6f5be022c3809bc204c365dc11cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a747bca8a2d976f326dd9eb6d18bd8712"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structec_1_1_drop_event.html#a747bca8a2d976f326dd9eb6d18bd8712">DropEvent</a> (int x, int y, GLFWwindow *window, const int <a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964ae2942a04780e223b215eb8b663cf5353">count</a>, const char **paths)</td></tr>
-<tr class="separator:a747bca8a2d976f326dd9eb6d18bd8712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955d74612461f4100890101ddd1c2528"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structec_1_1_drop_event.html#a955d74612461f4100890101ddd1c2528">DropEvent</a> (int x, int y, GLFWwindow *window, int <a class="el" href="namespaceec.html#a5de6bdb8c4b2ed6e590e721ec998f964ae2942a04780e223b215eb8b663cf5353">count</a>, const char **paths)</td></tr>
+<tr class="separator:a955d74612461f4100890101ddd1c2528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad68bca5b7ca0c65690fc85d682d057db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structec_1_1_drop_event.html#ad68bca5b7ca0c65690fc85d682d057db">~DropEvent</a> ()</td></tr>
 <tr class="separator:ad68bca5b7ca0c65690fc85d682d057db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a027a7f2198874f6a2267b7c22f9ff2b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structec_1_1_drop_event.html#a027a7f2198874f6a2267b7c22f9ff2b7">Print</a> () const</td></tr>
-<tr class="separator:a027a7f2198874f6a2267b7c22f9ff2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cda7eaf944e0b94f49a8523c7da2656"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structec_1_1_drop_event.html#a6cda7eaf944e0b94f49a8523c7da2656">print</a> () const</td></tr>
+<tr class="separator:a6cda7eaf944e0b94f49a8523c7da2656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -133,8 +131,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a747bca8a2d976f326dd9eb6d18bd8712"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a747bca8a2d976f326dd9eb6d18bd8712">&#9670;&nbsp;</a></span>DropEvent() <span class="overload">[2/2]</span></h2>
+<a id="a955d74612461f4100890101ddd1c2528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955d74612461f4100890101ddd1c2528">&#9670;&nbsp;</a></span>DropEvent() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +161,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>count</em>, </td>
         </tr>
         <tr>
@@ -192,6 +190,9 @@ Public Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ec::DropEvent::~DropEvent </td>
@@ -200,19 +201,24 @@ Public Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a027a7f2198874f6a2267b7c22f9ff2b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a027a7f2198874f6a2267b7c22f9ff2b7">&#9670;&nbsp;</a></span>Print()</h2>
+<a id="a6cda7eaf944e0b94f49a8523c7da2656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cda7eaf944e0b94f49a8523c7da2656">&#9670;&nbsp;</a></span>print()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::DropEvent::Print </td>
+          <td class="memname">void ec::DropEvent::print </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

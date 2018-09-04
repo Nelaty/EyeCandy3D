@@ -29,6 +29,12 @@ namespace ec
 		m_activeRenderer = renderer;
 	}
 
+	void Renderer::changeRenderer(SceneRenderer* renderer)
+	{
+		m_lastRenderer = m_activeRenderer;
+		m_activeRenderer = renderer;
+	}
+
 	void Renderer::registerSceneRenderer(const std::string& name, SceneRenderer* renderer)
 	{
 		if(getSceneRenderer(name)) return;

@@ -24,6 +24,11 @@ namespace ec
 		 * The renderer has to be registered.
 		 */
 		void changeRenderer(const std::string& name);
+		/**
+		* Change the current scene renderer to a given on.
+		* The given renderer doesn't have to be registered
+		*/
+		void changeRenderer(SceneRenderer* renderer);
 
 		/** Register a new scene renderer. */
 		void registerSceneRenderer(const std::string& name, SceneRenderer* renderer);

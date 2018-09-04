@@ -48,6 +48,8 @@ namespace ec
 		for(const auto& it : cameras)
 		{
 			auto* scene = it->getScene();
+			if(scene == nullptr) continue;
+
 			auto* rootNode = scene->getRoot();
 			rootNode->render(*this);
 

@@ -1,11 +1,13 @@
 #pragma once
+#include "EC3D/Common/Common.h"
+
 #include <functional>
 #include <string>
 
 namespace utl
 {
-	/* Profiling precisions, which data can be represented in */
-	enum class ProfilingPrecision
+	/** Profiling precisions, which data can be represented in */
+	enum class EC3D_DECLSPEC ProfilingPrecision
 	{
 		second,
 		millisecond,
@@ -13,8 +15,8 @@ namespace utl
 		nanosecond
 	};
 
-	/* Bundles results from profiling */
-	struct ProfilingData
+	/** Bundles results from profiling */
+	struct EC3D_DECLSPEC ProfilingData
 	{	
 	public:
 		void print() const;
@@ -33,7 +35,7 @@ namespace utl
 	};
 
 	/* Profile a single function */
-	ProfilingData profileFunction(const std::function<void()>& f,
-								  unsigned int loops = 1,
-								  ProfilingPrecision precision = ProfilingPrecision::millisecond);
+	EC3D_DECLSPEC ProfilingData profileFunction(const std::function<void()>& f,
+												unsigned int loops = 1,
+												ProfilingPrecision precision = ProfilingPrecision::millisecond);
 }

@@ -1,4 +1,5 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 
 #include <GLFW/glfw3.h>
 
@@ -8,7 +9,7 @@ namespace ec
 {
 	namespace key
 	{
-		enum EC_KEY_KEYBOARD : int
+		enum EC3D_DECLSPEC EC_KEY_KEYBOARD : int
 		{
 			// A - Z
 			A = GLFW_KEY_A,
@@ -276,7 +277,7 @@ namespace ec
 			{KEY_LAST, "key_last"}
 		};
 
-		enum EC_KEY_MOUSE
+		enum EC3D_DECLSPEC EC_KEY_MOUSE
 		{
 			MOUSE_1 = GLFW_MOUSE_BUTTON_1,
 			MOUSE_2 = GLFW_MOUSE_BUTTON_2,
@@ -311,7 +312,7 @@ namespace ec
 			{MOUSE_LAST, "mouse_last"}
 		};
 
-		enum EC_KEYMOD : int
+		enum EC3D_DECLSPEC EC_KEYMOD : int
 		{
 			SHIFT = GLFW_MOD_SHIFT,
 			SHIFT_LEFT = GLFW_KEY_LEFT_SHIFT,

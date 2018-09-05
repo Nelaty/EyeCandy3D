@@ -1,13 +1,14 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 
 struct GLFWwindow;
 
 namespace ec
 {
-	/*
+	/**
 	* Enumeration entries for every kind of input event
 	*/
-	enum class InputType : unsigned char
+	enum class EC3D_DECLSPEC InputType : unsigned char
 	{
 		mouse_move = 0,
 		mouse_scroll,
@@ -31,7 +32,7 @@ namespace ec
 		count // Keep at end! - Number of event types
 	};
 
-	enum class DisplayOrientation
+	enum class EC3D_DECLSPEC DisplayOrientation
 	{
 		rotated_0,
 		rotated_90,
@@ -41,7 +42,7 @@ namespace ec
 		face_down
 	};
 
-	struct DisplayEvent
+	struct EC3D_DECLSPEC DisplayEvent
 	{
 		explicit DisplayEvent();
 		explicit DisplayEvent(GLFWwindow* window,
@@ -60,7 +61,7 @@ namespace ec
 		DisplayOrientation m_orientation;
 	};
 
-	struct KeyboardEvent
+	struct EC3D_DECLSPEC KeyboardEvent
 	{
 		explicit KeyboardEvent();
 		explicit KeyboardEvent(GLFWwindow* window,
@@ -86,7 +87,7 @@ namespace ec
 		bool superPressed() const;
 	};
 
-	struct MouseEvent
+	struct EC3D_DECLSPEC MouseEvent
 	{
 		explicit MouseEvent();
 		explicit MouseEvent(GLFWwindow* window,
@@ -124,7 +125,7 @@ namespace ec
 		bool superPressed() const;
 	};
 
-	struct JoystickEvent
+	struct EC3D_DECLSPEC JoystickEvent
 	{
 		explicit JoystickEvent();
 		explicit JoystickEvent(GLFWwindow* window, int joystick, int event);
@@ -137,7 +138,7 @@ namespace ec
 		int m_event;
 	};
 
-	struct DropEvent
+	struct EC3D_DECLSPEC DropEvent
 	{
 		explicit DropEvent();
 		explicit DropEvent(int x, int y,
@@ -159,7 +160,7 @@ namespace ec
 		const char** m_paths;
 	};
 
-	union EventData
+	union EC3D_DECLSPEC EventData
 	{
 		explicit EventData();
 		~EventData();
@@ -175,7 +176,7 @@ namespace ec
 	* Group all input events to make transfer easy and save memory 
 	* by only holding the event, which is currently active
 	*/
-	struct InputEvent
+	struct EC3D_DECLSPEC InputEvent
 	{
 		explicit InputEvent();
 		explicit InputEvent(InputType type);

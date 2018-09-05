@@ -1,4 +1,6 @@
 #pragma once
+#include "EC3D/Common/Common.h"
+
 #include "EC3D/Core/InputObservable.h"
 #include "EC3D/Core/DeviceRegistry.h"
 
@@ -8,7 +10,7 @@ namespace ec
 {
 	class Window;
 
-	class EventSystem
+	class EC3D_DECLSPEC EventSystem
 	{
 	public:
 		explicit EventSystem(Window* window);

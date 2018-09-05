@@ -1,12 +1,14 @@
 #pragma once
+#include "EC3D/Common/Common.h"
+
 #include <glm/glm.hpp>
 
 namespace utl
 {
-	/*
-		* Equally distributed random number generator.
+	/**
+	* Equally distributed random number generator.
 	*/
-	class Random
+	class EC3D_DECLSPEC Random
 	{
 	public:
 		/** Seed the random number generator with the current time. */

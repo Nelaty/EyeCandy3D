@@ -1,5 +1,6 @@
 #pragma once
 #include <GL/glew.h>
+#include "EC3D/Common/Common.h"
 
 #include <memory>
 #include <map>
@@ -14,7 +15,7 @@ namespace ec
 	/**
 	 * An application is the main class of a program.
 	 */
-	class Application
+	class EC3D_DECLSPEC Application
 	{
 	public:
 		using Window_Ptr = std::unique_ptr<Window>;

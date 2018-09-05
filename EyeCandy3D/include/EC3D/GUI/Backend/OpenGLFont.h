@@ -1,5 +1,6 @@
 #pragma once
 #include "Agui/BaseTypes.hpp"
+#include "EC3D/Common/Common.h"
 
 namespace ec
 {
@@ -8,7 +9,7 @@ namespace ec
 
 namespace agui
 {
-	class OpenGLFont : public Font
+	class EC3D_DECLSPEC OpenGLFont : public Font
 	{
 	public:
 		explicit OpenGLFont();
@@ -19,21 +20,23 @@ namespace agui
 							agui::Color borderColor = agui::Color());
 		virtual ~OpenGLFont();
 		
-		virtual void setFont(ec::FontTextureAtlas* font, const std::string &path, bool autoFree = false);
+		virtual void setFont(ec::FontTextureAtlas* font, 
+							 const std::string &path, 
+							 bool autoFree = false);
 		ec::FontTextureAtlas* getFont() const;
 
-		virtual int getLineHeight() const override;
-		virtual int getHeight() const override;
-		virtual int getTextWidth(const std::string &text) const override;
-		virtual const std::string& getPath() const override;
+		int getLineHeight() const override;
+		int getHeight() const override;
+		int getTextWidth(const std::string &text) const override;
+		const std::string& getPath() const override;
 
-		virtual void reload(const std::string &fileName,
-			int height, 
-			FontFlags fontFlags = FONT_DEFAULT_FLAGS,
-			float borderWidth = 0,
-			agui::Color borderColor = agui::Color()) override;
+		void reload(const std::string &fileName,
+					int height, 
+					FontFlags fontFlags = FONT_DEFAULT_FLAGS,
+					float borderWidth = 0,
+					agui::Color borderColor = agui::Color()) override;
 
-		virtual void free() override;
+		void free() override;
 
 	private:
 		ec::FontTextureAtlas* font;

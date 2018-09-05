@@ -1,4 +1,6 @@
 #pragma once
+#include "EC3D/Common/Common.h"
+
 #include <glm/glm.hpp>
 
 namespace ec
@@ -7,7 +9,7 @@ namespace ec
 	 * A viewport defines a rectangular area into which a camera renders.
 	 * For every point (x,y) inside this area: x = [0,1], y = [0,1] applies.
 	 */
-	class Viewport
+	class EC3D_DECLSPEC Viewport
 	{
 	public:
 		explicit Viewport(const glm::vec2& position = glm::vec2(0.0f),

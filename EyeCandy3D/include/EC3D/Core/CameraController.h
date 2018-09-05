@@ -1,5 +1,6 @@
 #pragma once
 #include "InputListener.h"
+#include "EC3D/Common/Common.h"
 #include "InputEvent.h"
 
 #include <glm/glm.hpp>
@@ -12,7 +13,7 @@ namespace ec
 {
 	class Camera;
 
-	class CameraController : public InputListener
+	class EC3D_DECLSPEC CameraController : public InputListener
 	{
 	public:
 		explicit CameraController();

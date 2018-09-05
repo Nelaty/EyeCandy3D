@@ -1,5 +1,6 @@
 #pragma once
 #include <GL/glew.h>
+#include "EC3D/Common/Common.h"
 
 #include "EC3D/Core/Vertex.h"
 
@@ -7,7 +8,7 @@
 
 namespace ec
 {
-	class GeometryData
+	class EC3D_DECLSPEC GeometryData
 	{
 	public:
 		GeometryData();

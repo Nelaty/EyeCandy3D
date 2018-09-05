@@ -13,11 +13,11 @@ namespace agui
 	{
 	}
 
-	OpenGLFont::OpenGLFont(const std::string &fileName, 
-						   int height, 
-						   FontFlags fontFlags, 
-						   float borderWidth, 
-						   agui::Color borderColor)
+	OpenGLFont::OpenGLFont(const std::string &fileName,
+	                       const int height,
+	                       const FontFlags fontFlags,
+	                       const float borderWidth,
+	                       const agui::Color borderColor)
 	{
 		font = nullptr;
 		reload(fileName,
@@ -35,7 +35,9 @@ namespace agui
 		}
 	}
 
-	void OpenGLFont::setFont(ec::FontTextureAtlas* font, const std::string &path, bool autoFree)
+	void OpenGLFont::setFont(ec::FontTextureAtlas* font, 
+							 const std::string &path,
+	                         const bool autoFree)
 	{
 		if(autoFree)
 		{

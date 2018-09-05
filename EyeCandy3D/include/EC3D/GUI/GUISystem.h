@@ -1,4 +1,6 @@
 #pragma once
+#include "EC3D/Common/Common.h"
+
 #include <memory>
 
 namespace agui
@@ -12,7 +14,7 @@ namespace ec_gui
 {
 	class GuiController;
 
-	class GuiSystem
+	class EC3D_DECLSPEC GuiSystem
 	{
 	public:
 		using Gui_Type = agui::Gui;

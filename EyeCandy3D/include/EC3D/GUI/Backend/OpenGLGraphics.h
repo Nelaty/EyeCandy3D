@@ -1,7 +1,7 @@
 #pragma once
 #include <GL/glew.h>
-
 #include "Agui/Graphics.hpp"
+#include "EC3D/Common/Common.h"
 
 #include <corecrt_math_defines.h>
 
@@ -10,7 +10,7 @@
  */
 namespace agui
 {
-	class OpenGLGraphics : public Graphics
+	class EC3D_DECLSPEC OpenGLGraphics : public Graphics
 	{
 	public:
 		explicit OpenGLGraphics();
@@ -52,11 +52,11 @@ namespace agui
 		void drawFilledCircle(const Point &center,float radius,const Color &color) override;
 		void drawLine(const Point &start, const Point &end,	const Color &color) override;
 
-		virtual void setTargetImage(const Image *target) override;
-		virtual void resetTargetImage() override;
+		void setTargetImage(const Image *target) override;
+		void resetTargetImage() override;
 
 	protected:
-		virtual void setClippingRectangle(const Rectangle &rect) override;
+		void setClippingRectangle(const Rectangle &rect) override;
 
 		static constexpr int s_circleStepsNum = 20;
 		static constexpr float s_circleStep = 2 * M_PI / s_circleStepsNum;

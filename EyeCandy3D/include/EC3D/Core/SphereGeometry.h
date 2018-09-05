@@ -1,9 +1,10 @@
 #pragma once
 #include "EC3D/Core/StaticGeometry.h"
+#include "EC3D/Common/Common.h"
 
 namespace ec
 {
-	class SphereGeometry : public StaticGeometry
+	class EC3D_DECLSPEC SphereGeometry : public StaticGeometry
 	{
 	public:
 		explicit SphereGeometry(float radius = 1.0f, int latitude = 20, int longitude = 20);

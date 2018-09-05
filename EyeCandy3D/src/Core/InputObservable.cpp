@@ -45,7 +45,7 @@ namespace ec
 
 	void InputObservable::unregisterAllInputListeners()
 	{
-		m_inputListeners = InputListeners_T();
+		m_inputListeners = InputListeners_Type();
 	}
 
 	void InputObservable::informAll()
@@ -138,7 +138,7 @@ namespace ec
 
 	void InputObservable::clearEvents()
 	{
-		m_events = Events_T();
+		m_events = Events_Type();
 	}
 
 	InputObservable::InputObservable()

@@ -1,12 +1,13 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 
-/*
-* A font character holds information to a specific character of a
-* specific font.
-*/
 namespace ec
 {
-	struct FontCharacter
+	/**
+	* A font character holds information to a specific character of a
+	* specific font.
+	*/
+	struct EC3D_DECLSPEC FontCharacter
 	{
 		float m_advanceX;
 		float m_advanceY;

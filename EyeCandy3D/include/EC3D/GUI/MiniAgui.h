@@ -1,4 +1,5 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 
 namespace agui
 {
@@ -9,7 +10,7 @@ namespace agui
 
 namespace ec
 {
-	class MiniAgui
+	class EC3D_DECLSPEC MiniAgui
 	{
 	public:
 		static void init();

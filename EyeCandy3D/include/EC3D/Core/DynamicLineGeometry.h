@@ -1,5 +1,6 @@
 #pragma once
 #include <GL/glew.h>
+#include "EC3D/Common/Common.h"
 
 #include "EC3D/Core/DynamicGeometry.h"
 
@@ -7,7 +8,7 @@ namespace ec
 {
 	class Node;
 
-	class DynamicLineGeometry : public DynamicGeometry
+	class EC3D_DECLSPEC DynamicLineGeometry : public DynamicGeometry
 	{
 	public:
 		explicit DynamicLineGeometry(Node* start, Node* end, float lineWidth = 1.0f);

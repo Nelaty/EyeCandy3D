@@ -1,4 +1,5 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 #include "EC3D/Core/Frame.h"
 
 #include <glm/glm.hpp>
@@ -18,7 +19,7 @@ namespace ec
 	class ShaderManager;
 	class Window;
 
-	class SceneRenderer
+	class EC3D_DECLSPEC SceneRenderer
 	{
 	private:
 		struct RenderContext

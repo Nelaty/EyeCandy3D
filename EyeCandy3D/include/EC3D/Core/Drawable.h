@@ -1,5 +1,6 @@
 #pragma once
 #include <GL/glew.h>
+#include "EC3D/Common/Common.h"
 
 #include <glm/glm.hpp>
 
@@ -13,7 +14,7 @@ namespace ec
 	class Material;
 	class Shader;
 
-	class Drawable
+	class EC3D_DECLSPEC Drawable
 	{
 	public:
 		explicit Drawable();

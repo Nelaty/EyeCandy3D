@@ -1,13 +1,17 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 
-/*
-* Math utility functions
-*/
+
 
 namespace utl
 {
+	/**
+	 * \brief Check if a given number is a prime number.
+	 * \param number The number to be examined.
+	 * \return True if the number is a prime number, false otherwise.
+	 */
 	template<class T>
-	bool isPrime(T number)
+	EC3D_DECLSPEC bool isPrime(T number)
 	{
 		if(number < 4)
 		{

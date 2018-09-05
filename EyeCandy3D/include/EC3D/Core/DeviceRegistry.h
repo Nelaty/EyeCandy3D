@@ -1,4 +1,6 @@
 #pragma once
+#include "EC3D/Common/Common.h"
+
 #include "EC3D/Core/Keyboard.h"
 #include "EC3D/Core/Mouse.h"
 
@@ -8,7 +10,7 @@ namespace ec
 {
 	class Window;
 
-	class DeviceRegistry
+	class EC3D_DECLSPEC DeviceRegistry
 	{
 	public:
 		explicit DeviceRegistry(Window* window);

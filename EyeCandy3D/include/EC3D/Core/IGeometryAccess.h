@@ -1,4 +1,6 @@
 #pragma once
+#include "EC3D/Common/Common.h"
+
 #include <glm/glm.hpp>
 
 /*
@@ -8,7 +10,7 @@ namespace ec
 {
 	class Shader;
 
-	class IGeometryAccess
+	class EC3D_DECLSPEC IGeometryAccess
 	{
 	public:
 		virtual ~IGeometryAccess();

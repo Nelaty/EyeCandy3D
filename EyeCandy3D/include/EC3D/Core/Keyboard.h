@@ -1,4 +1,6 @@
 #pragma once
+#include "EC3D/Common/Common.h"
+
 #include <memory>
 #include <map>
 
@@ -10,7 +12,7 @@ namespace ec
 	class EventSource;
 	class EventQueue;
 
-	class Keyboard
+	class EC3D_DECLSPEC Keyboard
 	{
 	public: 
 		using EventSource_Ptr = std::unique_ptr<EventSource>;

@@ -1,5 +1,6 @@
 #pragma once
-#include "InputListener.h"
+#include "EC3D/Core/InputListener.h"
+#include "EC3D/Common/Common.h"
 
 #include <functional>
 
@@ -10,7 +11,7 @@ namespace ec
 {
 	class Scene;
 
-	class SceneController : public InputListener
+	class EC3D_DECLSPEC SceneController : public InputListener
 	{
 	public:
 		explicit SceneController(std::string controllerName);

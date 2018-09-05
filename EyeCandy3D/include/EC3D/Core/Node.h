@@ -1,5 +1,6 @@
 #pragma once
-#include "Transform3D.h"
+#include "EC3D/Core/Transform3D.h"
+#include "EC3D/Common/Common.h"
 
 #include <vector>
 
@@ -15,7 +16,7 @@ namespace ec
 	class IGeometryAccess;
 	class Drawable;
 
-	class Node : public Transform3D
+	class EC3D_DECLSPEC Node : public Transform3D
 	{
 	public:
 		explicit Node(Node* parent = nullptr);

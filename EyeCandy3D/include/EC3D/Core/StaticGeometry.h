@@ -1,12 +1,13 @@
 #pragma once
 #include <GL/glew.h>
+#include "EC3D/Common/Common.h"
 
 #include "EC3D/Core/Geometry.h"
 
 
 namespace ec
 {
-	class StaticGeometry : public Geometry
+	class EC3D_DECLSPEC StaticGeometry : public Geometry
 	{
 	public:
 		virtual ~StaticGeometry();

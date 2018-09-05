@@ -1,4 +1,5 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 #include "EC3D/Core/SceneRenderer.h"
 
 #include <map>
@@ -11,7 +12,7 @@ namespace ec
 	 * A Renderer is responsible for rendering storing and using
 	 * scene renderers.
 	 */
-	class Renderer
+	class EC3D_DECLSPEC Renderer
 	{
 	public:
 		explicit Renderer();

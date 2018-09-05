@@ -1,4 +1,6 @@
 #pragma once
+#include "EC3D/Common/Common.h"
+
 #include <memory>
 
 struct GLFWwindow;
@@ -9,7 +11,7 @@ namespace ec
 	class EventSource;
 	class EventQueue;
 
-	class Mouse
+	class EC3D_DECLSPEC Mouse
 	{
 	public:
 		using EventSource_Ptr = std::unique_ptr<EventSource>;

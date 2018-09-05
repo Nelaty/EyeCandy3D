@@ -1,5 +1,6 @@
 #pragma once
 #include <GL/glew.h>
+#include "EC3D/Common/Common.h"
 
 #include "EC3D/Core/ResourceRegistry.h"
 #include "EC3D/Core/DeviceRegistry.h"
@@ -30,7 +31,7 @@
 */
 namespace ec
 {
-	class Window
+	class EC3D_DECLSPEC Window
 	{
 	public:
 		using EventQueue_Ptr = std::unique_ptr<EventQueue>;

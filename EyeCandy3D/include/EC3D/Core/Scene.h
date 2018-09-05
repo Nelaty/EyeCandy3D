@@ -1,5 +1,6 @@
 #pragma once
-#include "SceneRenderer.h"
+#include "EC3D/Common/Common.h"
+#include "EC3D/Core/SceneRenderer.h"
 
 #include <string>
 #include <memory>
@@ -16,7 +17,7 @@ namespace ec
 	class SceneSystem;
 	class Node;
 
-	class Scene
+	class EC3D_DECLSPEC Scene
 	{
 	public:
 		explicit Scene(std::string name);

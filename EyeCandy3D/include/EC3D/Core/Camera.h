@@ -1,5 +1,6 @@
 #pragma once
 #include "Node.h"
+#include "EC3D/Common/Common.h"
 
 #include "Viewport.h"
 #include "CameraType.h"
@@ -15,7 +16,7 @@ namespace ec
 	* to render the related scene. It contains a viewport, which defines
 	* the area of the render target the scene should be rendered into.
 	*/
-	class Camera : public Node
+	class EC3D_DECLSPEC Camera : public Node
 	{
 	public:
 		explicit Camera(Scene* scene);

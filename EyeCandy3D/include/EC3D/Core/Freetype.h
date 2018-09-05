@@ -1,5 +1,6 @@
 #pragma once
 #include <GL/glew.h>
+#include "EC3D/Common/Common.h"
 
 #include <map>
 #include <string>
@@ -19,7 +20,7 @@ namespace ec
 	class Shader;
 	class FontTextureAtlas;
 
-	class Freetype
+	class EC3D_DECLSPEC Freetype
 	{
 	public:
 		explicit Freetype(Shader* shader);

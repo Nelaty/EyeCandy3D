@@ -1,10 +1,11 @@
 #pragma once
 #include "EC3D/Core/IGeometryAccess.h"
+#include "EC3D/Common/Common.h"
 #include "EC3D/Core/GeometryData.h"
 
 namespace ec
 {
-	class Geometry : public IGeometryAccess
+	class EC3D_DECLSPEC Geometry : public IGeometryAccess
 	{
 	public:
 		virtual ~Geometry();

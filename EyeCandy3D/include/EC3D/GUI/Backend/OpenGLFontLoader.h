@@ -1,9 +1,10 @@
 #pragma once
 #include "Agui/FontLoader.hpp"
+#include "EC3D/Common/Common.h"
 
 namespace agui
 {
-	class OpenGLFontLoader : public FontLoader
+	class EC3D_DECLSPEC OpenGLFontLoader : public FontLoader
 	{
 	public:
 		explicit OpenGLFontLoader();

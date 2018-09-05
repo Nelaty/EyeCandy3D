@@ -1,10 +1,11 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 
 #include <GLFW/glfw3.h>
 
 namespace ec
 {
-	enum class StandardCursorType : int
+	enum class EC3D_DECLSPEC StandardCursorType : int
 	{
 		arrow = GLFW_ARROW_CURSOR,
 		ibeam = GLFW_IBEAM_CURSOR,
@@ -16,7 +17,7 @@ namespace ec
 
 	class Window;
 
-	class Cursor
+	class EC3D_DECLSPEC Cursor
 	{
 	public:
 		explicit Cursor(StandardCursorType type);

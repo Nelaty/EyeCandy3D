@@ -1,4 +1,5 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 
 #include <vector>
 
@@ -11,7 +12,7 @@ namespace ec
 	 * cameras are stored, determines the order in which will be 
 	 * rendered.
 	 */
-	class Frame
+	class EC3D_DECLSPEC Frame
 	{
 	public:
 		explicit Frame();

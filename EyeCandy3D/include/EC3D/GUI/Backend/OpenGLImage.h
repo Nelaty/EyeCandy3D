@@ -1,13 +1,13 @@
 #pragma once
-
 #include "Agui/BaseTypes.hpp"
+#include "EC3D/Common/Common.h"
 
 #include "EC3D/Core/Texture.h"
 
 namespace agui
 {
 	/** OpenGL back end for images used by Agui */
-	class OpenGLImage : public Image
+	class EC3D_DECLSPEC OpenGLImage : public Image
 	{		
 	public:
 		explicit OpenGLImage();

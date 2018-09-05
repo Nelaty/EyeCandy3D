@@ -1,12 +1,14 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 
-/*
-* Track the time passed since the timer was initialized last
-* and the time between calls.
-*/
+
 namespace ec
 {
-	class Timer
+	/**
+	* Track the time passed since the timer was initialized last
+	* and the time between calls.
+	*/
+	class EC3D_DECLSPEC Timer
 	{
 	public:
 		explicit Timer();

@@ -1,6 +1,7 @@
 #pragma once
 #include "Agui/Input.hpp"
 #include "EC3D/Core/InputListener.h"
+#include "EC3D/Common/Common.h"
 
 #include "EC3D/Core/InputEvent.h"
 
@@ -14,7 +15,7 @@ namespace agui
 	 * so it can actually receive input.
 	 */
 
-	class OpenGLInput : public Input, public ec::InputListener
+	class EC3D_DECLSPEC OpenGLInput : public Input, public ec::InputListener
 	{
 		
 	public:

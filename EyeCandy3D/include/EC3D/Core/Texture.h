@@ -1,5 +1,6 @@
 #pragma once
 #include <GL/glew.h>
+#include "EC3D/Common/Common.h"
 
 #include <map>
 #include <string>
@@ -9,7 +10,7 @@ namespace ec
 	/**
 	* Encapsulates texture specific structures
 	*/
-	struct TextureTypes
+	struct EC3D_DECLSPEC TextureTypes
 	{
 	public:
 		enum class Type
@@ -30,10 +31,10 @@ namespace ec
 		static const std::map<Type, std::string> s_textureTypes;
 	};
 
-	/*
+	/**
 	* Create and destroy textures on the GPU and enable them for OpenGL
 	*/
-	class Texture
+	class EC3D_DECLSPEC Texture
 	{
 	public:
 		explicit Texture();
@@ -44,24 +45,24 @@ namespace ec
 		/** Deactivate this texture. */
 		void unbind() const;
 
-		/* Buffer Id access*/
+		/** Buffer Id access*/
 		void setId(unsigned int id);
 		int getId() const;
 
-		/* Texture type access */
+		/** Texture type access */
 		void setType(const std::string& type);
 		const std::string& getType() const;
 
-		/* Texture dimension access */
+		/** Texture dimension access */
 		TextureTypes::Dimensions getDimensions() const;
 
-		/* Create 2D texture */
+		/** Create 2D texture */
 		bool textureFromFile(const char* path, const std::string& type);
 	
-		/* Create a 3D texture */
+		/** Create a 3D texture */
 		bool cubeMapFromFile(const char* path, const std::string& type);
 
-		/* Check if this texture has been initialized */
+		/** Check if this texture has been initialized */
 		bool isInitialized() const;
 
 		/** Deallocation of texture memory */

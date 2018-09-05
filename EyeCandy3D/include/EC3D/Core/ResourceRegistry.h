@@ -1,4 +1,6 @@
 #pragma once
+#include "EC3D/Common/Common.h"
+
 #include <string>
 #include <map>
 #include <memory>
@@ -6,7 +8,7 @@
 namespace ec
 {
 	template<class Resource>
-	class ResourceRegistry
+	class EC3D_DECLSPEC ResourceRegistry
 	{
 	public:
 		using Resource_Ptr = Resource*;

@@ -1,10 +1,10 @@
 #pragma once
-
 #include "Agui/ImageLoader.hpp"
+#include "EC3D/Common/Common.h"
 
 namespace agui 
 {
-	class OpenGLImageLoader : public ImageLoader
+	class EC3D_DECLSPEC OpenGLImageLoader : public ImageLoader
 	{
 	public:
 		explicit OpenGLImageLoader();

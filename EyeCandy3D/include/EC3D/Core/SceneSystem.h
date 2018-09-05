@@ -1,5 +1,6 @@
 #pragma once
-#include "SceneRenderer.h"
+#include "EC3D/Common/Common.h"
+#include "EC3D/Core/SceneRenderer.h"
 
 #include <vector>
 #include <memory>
@@ -15,7 +16,7 @@ namespace ec
 	class SceneController;
 	class Window;
 
-	class SceneSystem
+	class EC3D_DECLSPEC SceneSystem
 	{
 	public:
 		explicit SceneSystem(Window* window);

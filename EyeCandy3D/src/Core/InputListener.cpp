@@ -25,13 +25,13 @@ namespace ec
 		return m_enabled;
 	}
 
-	void InputListener::addCallback(const std::string& id, EventKey_T key, std::function<void()> callback)
+	void InputListener::addCallback(const std::string& id, EventKey_Type key, std::function<void()> callback)
 	{
 		const auto cbPair = std::make_pair(id, callback);
 		m_eventCallbacks[key].push_back(cbPair);
 	}
 
-	bool InputListener::removeCallback(const std::string& id, EventKey_T key)
+	bool InputListener::removeCallback(const std::string& id, EventKey_Type key)
 	{
 		auto& cbContainer = m_eventCallbacks[key];
 		const auto foundCb = std::remove_if(cbContainer.begin(), cbContainer.end(), 
@@ -43,7 +43,7 @@ namespace ec
 		return foundCb != cbContainer.end();
 	}
 
-	void InputListener::removeCallbacksOfType(EventKey_T key)
+	void InputListener::removeCallbacksOfType(EventKey_Type key)
 	{
 		auto& cbContainer = m_eventCallbacks[key];
 		cbContainer.clear();
@@ -57,7 +57,7 @@ namespace ec
 		}
 	}
 
-	bool InputListener::isCallbackRegistered(const std::string& id, EventKey_T key)
+	bool InputListener::isCallbackRegistered(const std::string& id, EventKey_Type key)
 	{
 		auto& cbContainer = m_eventCallbacks[key];
 		const auto foundCb = std::find_if(cbContainer.begin(), cbContainer.end(),

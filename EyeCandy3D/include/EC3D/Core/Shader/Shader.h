@@ -1,24 +1,33 @@
 #pragma once
 #include <GL/glew.h>
+#include "EC3D/Common/Common.h"
 
 #include <glm/glm.hpp>
 
 #include <string>
 
-/*
-* Bundles vertex, fragment shader, geometry, tessellation control and
-* tessellation evaluation shaders.
-* IGeometry and tessellation shaders are optional.
-*
-* Includes are allowed in shader sources and referenced files will be
-* inlined.
-*/
 
 namespace ec
 {
-	class Shader
+	/**
+	* Bundles vertex, fragment shader, geometry, tessellation control and
+	* tessellation evaluation shaders.
+	* Geometry and tessellation shaders are optional.
+	*
+	* Includes are allowed in shader sources. Included files will be
+	* inlined. -> "#include "filepath""
+	*/
+	class EC3D_DECLSPEC Shader
 	{
 	public:
+		/**
+		 * \brief Shader contructor.
+		 * \param vertPath Path to vertex shader source.
+		 * \param fragPath Path to fragment shader source.
+		 * \param geomPath Path to geometry shader source.
+		 * \param tessCtrlPath Path to tessellation control shader source.
+		 * \param tessEvalPath Path to tessellation evaluation shader source.
+		 */
 		Shader(const std::string& vertPath,
 		       const std::string& fragPath,
 		       const std::string& geomPath = "",
@@ -26,8 +35,9 @@ namespace ec
 		       const std::string& tessEvalPath = "");
 		~Shader();
 
-		/* Activate this program */
+		/** Activate this shader program. */
 		void bind() const;
+		/** Deactivate this shader program. */
 		void unbind() const;
 
 		/* Uniform single */
@@ -53,23 +63,23 @@ namespace ec
 		GLuint getProgram() const;
 
 	private:
-		/* Read file content from path */
+		/** Read file content from path */
 		std::string readFile(const std::string& filepath);
 
-		/* Parse a line for comments and includes */
+		/** Parse a line for comments and includes */
 		std::string parseLine(const std::string& line, const std::string& directory);
 
-		/* Get the positions of a substring in another string */
+		/** Get the positions of a substring in another string */
 		std::string getFileStringPositions(unsigned int pos, const std::string& str, unsigned int& start,
 		                                   unsigned int& end);
 
-		/* Check a shader id for errors */
+		/** Check a shader id for errors */
 		GLint checkError(GLuint shader, const char* shaderName);
 
-		/* Compile a shader source */
+		/** Compile a shader source */
 		GLint compileShader(GLuint shader, const char* path, const char* source, const char* shaderName);
 
-		/* Load in shader sources and compile and link them */
+		/** Load in shader sources and compile and link them */
 		void loadCompileLinkShader(const std::string& vertPath,
 		                           const std::string& fragPath,
 		                           const std::string& geomPath,

@@ -1,16 +1,18 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 
 #include <string>
 #include <fstream>
 #include <ctime>
 
-/*
-* A file logger offers various formatting options on how and
-* what to write to a file.
-*/
+
 namespace utl
 {
-	class FileLogger
+	/**
+	* A file logger offers various formatting options on how and
+	* what to write to a file.
+	*/
+	class EC3D_DECLSPEC FileLogger
 	{
 	public:
 		explicit FileLogger();

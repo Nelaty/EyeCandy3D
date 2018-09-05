@@ -1,19 +1,20 @@
 #pragma once
 #include <GL/glew.h>
+#include "EC3D/Common/Common.h"
 
 #include "FontCharacter.h"
 
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
-/*
-* Saves all font characters of a specific font.
-* Font characters will be saved on a single texture, so it can be
-* used for rendering text.
-*/
 namespace ec
 {
-	class FontTextureAtlas
+	/**
+	* Saves all font characters of a specific font.
+	* Font characters will be saved on a single texture, so it can be
+	* used for rendering text.
+	*/
+	class EC3D_DECLSPEC FontTextureAtlas
 	{
 	public:
 		FontTextureAtlas(FT_Face face, int h, GLuint tUniform);

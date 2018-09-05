@@ -1,5 +1,6 @@
 #pragma once
 #include "Agui/CursorProvider.hpp"
+#include "EC3D/Common/Common.h"
 
 #include "EC3D/Core/Cursor.h"
 
@@ -7,13 +8,13 @@
 
 namespace agui
 {
-	class OpenGLCursorProvider : public CursorProvider
+	class EC3D_DECLSPEC OpenGLCursorProvider : public CursorProvider
 	{
 	public:
 		OpenGLCursorProvider();
 		virtual ~OpenGLCursorProvider();
 		
-		virtual bool setCursor(CursorEnum cursor) override;
+		bool setCursor(CursorEnum cursor) override;
 
 	private:
 		/** 

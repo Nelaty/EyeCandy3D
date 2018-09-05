@@ -1,4 +1,5 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 
 #include <map>
 #include <string>
@@ -11,7 +12,7 @@ namespace ec
 {
 	class Shader;
 
-	class ShaderManager
+	class EC3D_DECLSPEC ShaderManager
 	{
 	public:
 		explicit ShaderManager();

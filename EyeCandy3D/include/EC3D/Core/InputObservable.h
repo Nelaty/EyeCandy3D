@@ -1,4 +1,5 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 #include "InputEvent.h"
 
 #include <vector>
@@ -10,11 +11,11 @@ namespace ec
 {
 	class InputListener;
 
-	class InputObservable
+	class EC3D_DECLSPEC InputObservable
 	{
 	public:
-		using InputListeners_T = std::vector<InputListener*>;
-		using Events_T = std::vector<InputEvent>;
+		using InputListeners_Type = std::vector<InputListener*>;
+		using Events_Type = std::vector<InputEvent>;
 
 
 		explicit InputObservable();
@@ -58,8 +59,8 @@ namespace ec
 
 		InputEvent prepareEvent(const InputEvent& event);
 
-		InputListeners_T m_inputListeners;
-		Events_T m_events;
+		InputListeners_Type m_inputListeners;
+		Events_Type m_events;
 
 		/** Previous mouse event */
 		MouseEvent m_prevMouseEvent;

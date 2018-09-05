@@ -1,5 +1,6 @@
 #pragma once
-#include "Texture.h"
+#include "EC3D/Common/Common.h"
+#include "EC3D/Core/Texture.h"
 
 #include <vector>
 
@@ -12,7 +13,7 @@ namespace ec
 {
 	class Shader;
 
-	class Material
+	class EC3D_DECLSPEC Material
 	{
 	public:
 		explicit Material();

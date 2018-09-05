@@ -1,11 +1,12 @@
 #pragma once
+#include "EC3D/Common/Common.h"
 #include "EC3D/Common/Config.h"
 
 #include <glm/glm.hpp>
 
 namespace ec
 {
-	class Transform3D
+	class EC3D_DECLSPEC Transform3D
 	{
 	public:
 		explicit Transform3D(const glm::vec3& position = glm::vec3(0.0f),

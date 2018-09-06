@@ -113,8 +113,6 @@ namespace ec
 		double m_frameRate;
 		double m_frameInterval;
 
-		
-
 		ResourceRegistry<Geometry> m_geometryRegistry;
 		ResourceRegistry<Material> m_materialRegistry;
 		ResourceRegistry<Texture> m_textureRegistry;

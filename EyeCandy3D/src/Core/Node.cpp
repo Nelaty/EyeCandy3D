@@ -67,6 +67,7 @@ namespace ec
 
 	void Node::addChild(Node* child)
 	{
+		//child->setParent(this);
 		m_children.push_back(child);
 	}
 
@@ -79,6 +80,7 @@ namespace ec
 		if(foundChild != m_children.end())
 		{
 			m_children.erase(foundChild);
+			child->setParent(nullptr);
 			return true;
 		}
 		return false;
@@ -86,6 +88,10 @@ namespace ec
 
 	void Node::removeChildren()
 	{
+		for(auto& it : m_children)
+		{
+			it->setParent(nullptr);
+		}
 		m_children = std::vector<Node*>();
 	}
 

@@ -47,6 +47,11 @@ namespace ec
 		return m_localMat;
 	}
 
+	void Transform3D::setLocalMat(const glm::mat4& mat)
+	{
+		m_localMat = mat;
+	}
+
 	const glm::vec3& Transform3D::getUpVector() const
 	{
 		return m_up;

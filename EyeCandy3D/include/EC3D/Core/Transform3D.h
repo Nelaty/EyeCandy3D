@@ -27,13 +27,15 @@ namespace ec
 		 * Performance critical, since the local matrix has to be updated.
 		 */
 		const glm::vec3& getLocalPosition();
-
-		/** Get the current view matrix. */
-		const glm::mat4& getLocalMat() const;
+		
 		/** Get the current up vector. */
 		const glm::vec3& getUpVector() const;
 		/** Get the current forward vector. */
 		const glm::vec3& getForwardVector() const;
+		/** Get the current view matrix. */
+		const glm::mat4& getLocalMat() const;
+		/** Set the current transformation. */
+		void setLocalMat(const glm::mat4& mat);
 
 		/** 
 		 * Get the current translation 

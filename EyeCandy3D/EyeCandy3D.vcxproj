@@ -26,6 +26,7 @@
   <ItemGroup>
     <ClInclude Include="include\EC3D\Common\Common.h" />
     <ClInclude Include="include\EC3D\Common\Config.h" />
+    <ClInclude Include="include\EC3D\Core\CylinderGeometry.h" />
     <ClInclude Include="include\EC3D\Gui\MiniAgui.h" />
     <ClInclude Include="include\EC3D\Core\Application.h" />
     <ClInclude Include="include\EC3D\Core\Camera.h" />
@@ -51,7 +52,7 @@
     <ClInclude Include="include\EC3D\Core\DynamicLineGeometry.h" />
     <ClInclude Include="include\EC3D\Core\Material.h" />
     <ClInclude Include="include\EC3D\Core\Node.h" />
-    <ClInclude Include="include\EC3D\Core\RectangleMesh.h" />
+    <ClInclude Include="include\EC3D\Core\RectangleGeometry.h" />
     <ClInclude Include="include\EC3D\Core\Renderer.h" />
     <ClInclude Include="include\EC3D\Core\ResourceRegistry.h" />
     <ClInclude Include="include\EC3D\Core\ResourceType.h" />
@@ -91,6 +92,7 @@
     <ClCompile Include="src\Core\Camera.cpp" />
     <ClCompile Include="src\Core\CameraController.cpp" />
     <ClCompile Include="src\Core\CubeGeometry.cpp" />
+    <ClCompile Include="src\Core\CylinderGeometry.cpp" />
     <ClCompile Include="src\Core\DeviceRegistry.cpp" />
     <ClCompile Include="src\Core\Drawable.cpp" />
     <ClCompile Include="src\Core\DynamicGeometry.cpp" />
@@ -109,7 +111,7 @@
     <ClCompile Include="src\Core\Material.cpp" />
     <ClCompile Include="src\Core\Mouse.cpp" />
     <ClCompile Include="src\Core\Node.cpp" />
-    <ClCompile Include="src\Core\RectangleMesh.cpp" />
+    <ClCompile Include="src\Core\RectangleGeometry.cpp" />
     <ClCompile Include="src\Core\Renderer.cpp" />
     <ClCompile Include="src\Core\Scene.cpp" />
     <ClCompile Include="src\Core\SceneController.cpp" />

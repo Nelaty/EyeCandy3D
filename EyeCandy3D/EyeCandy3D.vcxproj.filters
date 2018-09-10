@@ -32,7 +32,6 @@
     <ClInclude Include="include\EC3D\Core\InputObservable.h" />
     <ClInclude Include="include\EC3D\Core\Material.h" />
     <ClInclude Include="include\EC3D\Core\Node.h" />
-    <ClInclude Include="include\EC3D\Core\RectangleMesh.h" />
     <ClInclude Include="include\EC3D\Core\Scene.h" />
     <ClInclude Include="include\EC3D\Core\SceneController.h" />
     <ClInclude Include="include\EC3D\Core\SceneRenderer.h" />
@@ -79,6 +78,8 @@
     <ClInclude Include="include\EC3D\Gui\Backend\OpenGLInput.h" />
     <ClInclude Include="include\EC3D\Gui\GUISystem.h" />
     <ClInclude Include="include\EC3D\Gui\MiniAgui.h" />
+    <ClInclude Include="include\EC3D\Core\CylinderGeometry.h" />
+    <ClInclude Include="include\EC3D\Core\RectangleGeometry.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -92,7 +93,6 @@
     <ClCompile Include="src\Core\InputObservable.cpp" />
     <ClCompile Include="src\Core\Material.cpp" />
     <ClCompile Include="src\Core\Node.cpp" />
-    <ClCompile Include="src\Core\RectangleMesh.cpp" />
     <ClCompile Include="src\Core\Scene.cpp" />
     <ClCompile Include="src\Core\SceneController.cpp" />
     <ClCompile Include="src\Core\SceneRenderer.cpp" />
@@ -132,5 +132,7 @@
     <ClCompile Include="src\Gui\Backend\OpenGLInput.cpp" />
     <ClCompile Include="src\Gui\GUISystem.cpp" />
     <ClCompile Include="src\Gui\MiniAgui.cpp" />
+    <ClCompile Include="src\Core\CylinderGeometry.cpp" />
+    <ClCompile Include="src\Core\RectangleGeometry.cpp" />
   </ItemGroup>
 </Project>

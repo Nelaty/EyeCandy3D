@@ -22,7 +22,8 @@ public:
 private:
 	void constructTestSg();
 	void sphereTest();
-	
+	void cylinderTest();
+	void rectangleTest();
 
 
 	ec::Window* m_window;

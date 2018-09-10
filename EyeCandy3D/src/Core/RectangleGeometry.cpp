@@ -1,25 +1,25 @@
-#include "EC3D/Core/RectangleMesh.h"
+#include "EC3D/Core/RectangleGeometry.h"
 #include "EC3D/Core/Shader/Shader.h"
 
 namespace ec
 {
 
 
-	RectangleMesh::RectangleMesh(const float uniform)
+	RectangleGeometry::RectangleGeometry(const float uniform)
 	{
 		init(uniform, uniform);
 		StaticGeometry::setupMesh();
 	}
 
-	RectangleMesh::RectangleMesh(const float width, const float height)
+	RectangleGeometry::RectangleGeometry(const float width, const float height)
 	{
 		init(width, height);
 	}
 
-	RectangleMesh::~RectangleMesh()
+	RectangleGeometry::~RectangleGeometry()
 	= default;
 
-	void RectangleMesh::init(const float width, const float height)
+	void RectangleGeometry::init(const float width, const float height)
 	{
 		m_data.resizeBuffers(4, 6);
 
@@ -30,24 +30,21 @@ namespace ec
 		auto& indices = m_data.m_indices;
 
 		// Initialize vertices
-		// 0,0---0,1
-		// |      |
-		// 1,0---1,1
 		vertices[0].m_position = glm::vec3(-halfWidth, -halfHeight, 0.0f);
 		vertices[0].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
-		vertices[0].m_texCoords = glm::vec2(1.0f, 1.0f);
+		vertices[0].m_texCoords = glm::vec2(0.0f, 0.0f);
 
 		vertices[1].m_position = glm::vec3(halfWidth, -halfHeight, 0.0f);
 		vertices[1].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
-		vertices[1].m_texCoords = glm::vec2(0.0f, 1.0f);
+		vertices[1].m_texCoords = glm::vec2(1.0f, 0.0f);
 
 		vertices[2].m_position = glm::vec3(halfWidth, halfHeight, 0.0f);
 		vertices[2].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
-		vertices[2].m_texCoords = glm::vec2(0.0f, 0.0f);
+		vertices[2].m_texCoords = glm::vec2(1.0f, 1.0f);
 
 		vertices[3].m_position = glm::vec3(-halfWidth, halfHeight, 0.0f);
 		vertices[3].m_normal = glm::vec3(0.0f, 0.0f, 1.0f);
-		vertices[3].m_texCoords = glm::vec2(1.0f, 0.0f);
+		vertices[3].m_texCoords = glm::vec2(0.0f, 1.0f);
 
 		// Initialize index list
 		indices.push_back(0);

@@ -6,6 +6,9 @@
 #include "EC3D/Core/Drawable.h"
 #include "EC3D/Core/CubeGeometry.h"
 #include "EC3D/Core/SphereGeometry.h"
+#include "EC3D/Core/CylinderGeometry.h"
+#include "EC3D/Core/RectangleGeometry.h"
+
 #include "EC3D/Core/Material.h"
 #include "EC3D/Core/Shader/Shader.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
@@ -25,7 +28,9 @@ ExampleScene::~ExampleScene() = default;
 void ExampleScene::init()
 {
 	constructTestSg();
-	sphereTest();
+	//sphereTest();
+	cylinderTest();
+	//rectangleTest();
 }
 
 void ExampleScene::tick(const float timeDelta)
@@ -117,4 +122,41 @@ void ExampleScene::sphereTest()
 
 	auto* rootNode = this->getRoot();
 	rootNode->addChild(sphereNode);
+}
+
+void ExampleScene::cylinderTest()
+{
+	auto& shaderManager = m_window->getShaderManager();
+
+	auto* cylinderMesh = new CylinderGeometry();
+	auto* shader = shaderManager.getShader("basic");
+	auto* woodMat = new Material();
+	woodMat->addDiffuseTextureFromPath("../Resources/Textures/sand_00.jpg");
+
+	auto* drawable = new Drawable(cylinderMesh, woodMat, shader);
+	auto* node = new Node(nullptr);
+
+	node->addDrawable(drawable);
+
+	auto* rootNode = this->getRoot();
+	rootNode->addChild(node);
+}
+
+void ExampleScene::rectangleTest()
+{
+	auto& shaderManager = m_window->getShaderManager();
+
+	auto* rectangleMesh = new RectangleGeometry(3.0f);
+	auto* shader = shaderManager.getShader("basic");
+	auto* woodMat = new Material();
+	woodMat->addDiffuseTextureFromPath("../Resources/Textures/sand_00.jpg");
+
+	auto* drawable = new Drawable(rectangleMesh, woodMat, shader);
+	auto* node = new Node(nullptr);
+
+	node->addDrawable(drawable);
+	node->rotateX(-glm::radians(45.0f));
+
+	auto* rootNode = this->getRoot();
+	rootNode->addChild(node);
 }

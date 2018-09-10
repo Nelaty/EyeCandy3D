@@ -12,7 +12,7 @@ int main(int argc, char** argv)
 
 	ec::Application app(width, height, title, "asd");
 	app.createWindow<ExampleWindow>(width, height, "Example Window", "example");
-	app.createWindow<ExampleWindow>(width, height, "Example Window 2", "example2");
+	//app.createWindow<ExampleWindow>(width, height, "Example Window 2", "example2");
 	ec::MiniAgui::init();
 	app.startMainLoop();
 }

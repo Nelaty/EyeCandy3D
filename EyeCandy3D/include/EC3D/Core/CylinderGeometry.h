@@ -6,7 +6,7 @@ namespace ec
 	class CylinderGeometry : public StaticGeometry
 	{
 	public:
-		explicit CylinderGeometry(float radius = 0.5f, 
+		explicit CylinderGeometry(float radius = 1.0f, 
 								  float height = 1.0f,
 								  int latitude = 15, 
 								  int longitude = 15);

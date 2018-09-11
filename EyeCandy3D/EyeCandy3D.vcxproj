@@ -48,7 +48,6 @@
     <ClInclude Include="include\EC3D\Core\InputObservable.h" />
     <ClInclude Include="include\EC3D\Core\InputListener.h" />
     <ClInclude Include="include\EC3D\Core\Keyboard.h" />
-    <ClInclude Include="include\EC3D\Core\keycodes.h" />
     <ClInclude Include="include\EC3D\Core\DynamicLineGeometry.h" />
     <ClInclude Include="include\EC3D\Core\Material.h" />
     <ClInclude Include="include\EC3D\Core\Node.h" />
@@ -208,7 +207,7 @@
     <OutDir>$(SolutionDir)Build\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir);</IncludePath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
-    <IntDir>$(SolutionDir)Bin$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)Bin\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Build\$(PlatformShortName)\$(Configuration)\</OutDir>

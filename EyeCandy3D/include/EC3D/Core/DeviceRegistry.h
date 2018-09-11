@@ -17,24 +17,28 @@ namespace ec
 		~DeviceRegistry();
 
 		/** Install every device */
-		void installAll();
+		void installAll() const;
 		/** Uninstall every device */
-		void uninstallAll();
+		void uninstallAll() const;
 
 		/** Install a keyboard device */
-		void installKeyboard();
+		void installKeyboard() const;
 		/** Uninstall a keyboard device */
-		void uninstallKeyboard();
+		void uninstallKeyboard() const;
+		/** Get the currently used keyboard */
+		Keyboard* getKeyboard() const;
 
 		/** Install a mouse device */
-		void installMouse();
+		void installMouse() const;
 		/** Uninstall a mouse device */
-		void uninstallMouse();
+		void uninstallMouse() const;
+		/** Get the currently used mouse */
+		Mouse* getMouse() const;
 
 	private:
 		Window* m_window;
 
-		Keyboard m_keyboard;
-		Mouse m_mouse;
+		std::unique_ptr<Keyboard> m_keyboard;
+		std::unique_ptr<Mouse> m_mouse;
 	};
 }

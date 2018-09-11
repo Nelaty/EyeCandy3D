@@ -1,5 +1,6 @@
 #include "EC3D/Utilities/Timer.h"
 
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 namespace ec

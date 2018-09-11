@@ -52,7 +52,6 @@
     <ClInclude Include="include\EC3D\Core\ResourceType.h" />
     <ClInclude Include="include\EC3D\Core\CameraType.h" />
     <ClInclude Include="include\EC3D\Core\Transform3D.h" />
-    <ClInclude Include="include\EC3D\Core\keycodes.h" />
     <ClInclude Include="include\EC3D\Core\Cursor.h" />
     <ClInclude Include="include\EC3D\Core\SpringGeometry.h" />
     <ClInclude Include="include\EC3D\Core\DynamicLineGeometry.h" />

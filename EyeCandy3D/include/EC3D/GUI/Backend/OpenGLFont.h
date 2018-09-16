@@ -5,17 +5,14 @@
 namespace ec
 {
 	class FontTextureAtlas;
-}
 
-namespace agui
-{
-	class EC3D_DECLSPEC OpenGLFont : public Font
+	class EC3D_DECLSPEC OpenGLFont : public agui::Font
 	{
 	public:
 		explicit OpenGLFont();
 		explicit OpenGLFont(const std::string &fileName,
 							int height,
-							FontFlags fontFlags = FONT_DEFAULT_FLAGS,
+		                    agui::FontFlags fontFlags = agui::FONT_DEFAULT_FLAGS,
 							float borderWidth = 0,
 							agui::Color borderColor = agui::Color());
 		virtual ~OpenGLFont();
@@ -31,8 +28,8 @@ namespace agui
 		const std::string& getPath() const override;
 
 		void reload(const std::string &fileName,
-					int height, 
-					FontFlags fontFlags = FONT_DEFAULT_FLAGS,
+					int height,
+		            agui::FontFlags fontFlags = agui::FONT_DEFAULT_FLAGS,
 					float borderWidth = 0,
 					agui::Color borderColor = agui::Color()) override;
 

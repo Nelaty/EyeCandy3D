@@ -1,6 +1,6 @@
 #include "EC3D/GUI/Backend/OpenGLCursorProvider.h"
 
-namespace agui
+namespace ec
 {
 
 	OpenGLCursorProvider::OpenGLCursorProvider()
@@ -11,39 +11,39 @@ namespace agui
 	OpenGLCursorProvider::~OpenGLCursorProvider()
 	= default;
 
-	bool OpenGLCursorProvider::setCursor(CursorEnum cursor)
+	bool OpenGLCursorProvider::setCursor(const CursorEnum cursor)
 	{
 		switch(cursor)
 		{
-			case CursorProvider::DEFAULT_CURSOR:
+			case agui::CursorProvider::DEFAULT_CURSOR:
 				return changeCursor(ec::StandardCursorType::arrow);
-			case CursorProvider::ARROW_CURSOR:
+			case agui::CursorProvider::ARROW_CURSOR:
 				return changeCursor(ec::StandardCursorType::arrow);
-			case CursorProvider::BUSY_CURSOR:
+			case agui::CursorProvider::BUSY_CURSOR:
 				return changeCursor(ec::StandardCursorType::arrow);
-			case CursorProvider::QUESTION_CURSOR:
+			case agui::CursorProvider::QUESTION_CURSOR:
 				return changeCursor(ec::StandardCursorType::arrow);
-			case CursorProvider::EDIT_CURSOR:
+			case agui::CursorProvider::EDIT_CURSOR:
 				return changeCursor(ec::StandardCursorType::ibeam);
-			case CursorProvider::MOVE_CURSOR:
+			case agui::CursorProvider::MOVE_CURSOR:
 				return changeCursor(ec::StandardCursorType::arrow);
-			case CursorProvider::RESIZE_N_CURSOR:
+			case agui::CursorProvider::RESIZE_N_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-			case CursorProvider::RESIZE_W_CURSOR:
+			case agui::CursorProvider::RESIZE_W_CURSOR:
 				return changeCursor(ec::StandardCursorType::horizontal_resize);
-			case CursorProvider::RESIZE_S_CURSOR:
+			case agui::CursorProvider::RESIZE_S_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-			case CursorProvider::RESIZE_E_CURSOR:
+			case agui::CursorProvider::RESIZE_E_CURSOR:
 				return changeCursor(ec::StandardCursorType::horizontal_resize);
-			case CursorProvider::RESIZE_NW_CURSOR:
+			case agui::CursorProvider::RESIZE_NW_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-			case CursorProvider::RESIZE_SW_CURSOR:
+			case agui::CursorProvider::RESIZE_SW_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-			case CursorProvider::RESIZE_SE_CURSOR:
+			case agui::CursorProvider::RESIZE_SE_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-			case CursorProvider::RESIZE_NE_CURSOR:
+			case agui::CursorProvider::RESIZE_NE_CURSOR:
 				return changeCursor(ec::StandardCursorType::vertical_resize);
-			case CursorProvider::LINK_CURSOR:
+			case agui::CursorProvider::LINK_CURSOR:
 				return changeCursor(ec::StandardCursorType::hand);
 			default:
 				break;

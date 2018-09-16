@@ -1,6 +1,6 @@
 #include "EC3D/GUI/Backend/OpenGLImage.h"
 
-namespace agui
+namespace ec
 {
 	OpenGLImage::OpenGLImage()
 		= default;
@@ -35,7 +35,7 @@ namespace agui
 		return {};
 	}
 
-	void OpenGLImage::setPixel(int x, int y, const Color& color)
+	void OpenGLImage::setPixel(int x, int y, const agui::Color& color)
 	{
 		/// \todo implement
 	}

@@ -1,7 +1,7 @@
 #include "EC3D/GUI/Backend/OpenGLImageLoader.h"
 #include "EC3D/GUI/Backend/OpenGLImage.h"
 
-namespace agui
+namespace ec
 {
 	
 	OpenGLImageLoader::OpenGLImageLoader()

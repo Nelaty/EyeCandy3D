@@ -3,13 +3,14 @@
 
 namespace agui
 {
-	class OpenGLImageLoader;
-	class OpenGLFontLoader;
 	class Font;
 }
 
 namespace ec
 {
+	class OpenGLImageLoader;
+	class OpenGLFontLoader;
+
 	class EC3D_DECLSPEC MiniAgui
 	{
 	public:
@@ -19,8 +20,8 @@ namespace ec
 		explicit MiniAgui();
 		~MiniAgui();
 	
-		static agui::OpenGLImageLoader* s_imageLoader;
-		static agui::OpenGLFontLoader* s_fontLoader;
+		static OpenGLImageLoader* s_imageLoader;
+		static OpenGLFontLoader* s_fontLoader;
 		static agui::Font* s_font;
 	};
 }

@@ -3,6 +3,7 @@
 
 #include <map>
 #include <string>
+#include <vector>
 #include <memory>
 
 /**
@@ -11,14 +12,35 @@
 namespace ec
 {
 	class Shader;
+	class ShaderTimed;
 
 	class EC3D_DECLSPEC ShaderManager
 	{
 	public:
+		using Shader_Ptr = std::unique_ptr<Shader>;
+		using ShaderTimed_Ptr = std::unique_ptr<ShaderTimed>;
+
 		explicit ShaderManager();
 		~ShaderManager();
 
-		/** Try to add a new shader */
+		/** 
+		 * Update times of timed shaders and uniforms of all shaders.
+		 */
+		void update(float time, float timeDelta);
+
+		/**
+		 * Add an existing shader.
+		 */
+		bool addShader(const std::string& shaderName, Shader_Ptr shader);
+
+		/**
+		 * Add an existing shader, which will be updated continuously.
+		 */
+		bool addShader(const std::string& shaderName, ShaderTimed_Ptr shader);
+
+		/** 
+		 * Create and add a new shader
+		 */
 		bool addShader(const std::string& shaderName, 
 					   const std::string& vertPath,
 					   const std::string& fragPath,
@@ -40,5 +62,6 @@ namespace ec
 
 	private:
 		std::map<std::string, std::unique_ptr<Shader>> m_shader;
+		std::vector<ShaderTimed*> m_shaderTimed;
 	};
 }

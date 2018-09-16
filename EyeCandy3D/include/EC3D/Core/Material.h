@@ -42,8 +42,8 @@ namespace ec
 		* return: true -> successfully added
 		*/
 		bool addDiffuseTextureFromPath(const char* path);
-		bool addSpecularTextureFromPath(const char* path);
-		bool addBumpTextureFromPath(const char* path);
+		//bool addSpecularTextureFromPath(const char* path);
+		//bool addBumpTextureFromPath(const char* path);
 
 		/* Flat color manipulation functions */
 		void setColorAmbient(const glm::vec4& color);

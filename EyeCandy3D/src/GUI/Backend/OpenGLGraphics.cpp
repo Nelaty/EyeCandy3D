@@ -1,12 +1,17 @@
 #include "EC3D/GUI/Backend/OpenGLGraphics.h"
 
+#include "EC3D/Core/Camera.h"
+#include "EC3D/Core/Viewport.h"
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-namespace agui
+namespace ec
 {	
-	OpenGLGraphics::OpenGLGraphics()
-	= default;
+	OpenGLGraphics::OpenGLGraphics(Camera* camera)
+		: m_camera{camera}
+	{
+	}
 
 	OpenGLGraphics::~OpenGLGraphics()
 	= default;
@@ -23,68 +28,71 @@ namespace agui
 
 	agui::Dimension OpenGLGraphics::getDisplaySize()
 	{
-		int width = 0;
-		int height = 0;
+		auto width = 0;
+		auto height = 0;
 		auto* context = glfwGetCurrentContext();
 		if(context)
 		{
-			glfwGetWindowSize(context, &width, &height);
+			glfwGetFramebufferSize(context, &width, &height);
 		}
 		return {width, height};
 	}
 
-	Rectangle OpenGLGraphics::getClippingRectangle()
+	agui::Rectangle OpenGLGraphics::getClippingRectangle()
 	{
+		const auto& view = m_camera->getViewport();
+		const auto& pos = view.getPosition();
+		const auto& size = view.getSize();
+
 		auto width = 0;
 		auto height = 0;
-		auto x = 0;
-		auto y = 0;
 		auto* context = glfwGetCurrentContext();
 		if(context)
 		{
-			glfwGetWindowSize(context, &width, &height);
-			glfwGetWindowPos(context, &x, &y);
+			glfwGetFramebufferSize(context, &width, &height);
 		}
-		return {x, y, width, height};
+
+		return agui::Rectangle(pos.x * width, pos.y * height,
+							   size.x * width, size.y * height);
 	}
 
-	void OpenGLGraphics::drawImage(const Image *bmp, 
-								   const Point &position,
-								   const Point &regionStart,
-								   const Dimension &regionSize,
+	void OpenGLGraphics::drawImage(const agui::Image *bmp, 
+								   const agui::Point &position,
+								   const agui::Point &regionStart,
+								   const agui::Dimension &regionSize,
 								   const float &opacity)
 	{
 
 	}
 
-	void OpenGLGraphics::drawImage(const Image *bmp, 
-								   const Point &position, 
+	void OpenGLGraphics::drawImage(const agui::Image *bmp, 
+								   const agui::Point &position, 
 								   const float &opacity)
 	{
 
 	}
 
-	void OpenGLGraphics::drawScaledImage(const Image *bmp,
-										 const Point &position,
-										 const Point &regionStart,
-										 const Dimension &regionScale, 
-										 const Dimension &scale, 
+	void OpenGLGraphics::drawScaledImage(const agui::Image *bmp,
+										 const agui::Point &position,
+										 const agui::Point &regionStart,
+										 const agui::Dimension &regionScale, 
+										 const agui::Dimension &scale, 
 										 const float &opacity)
 	{
 
 	}
 
-	void OpenGLGraphics::drawText(const Point &position, 
+	void OpenGLGraphics::drawText(const agui::Point &position, 
 								  const char* text,
-								  const Color &color,
-								  const Font *font, 
-								  AlignmentEnum align)
+								  const agui::Color &color,
+								  const agui::Font *font,
+	                              agui::AlignmentEnum align)
 	{
 
 	}
 
-	void OpenGLGraphics::drawRectangle(const Rectangle &rect,
-									   const Color &color)
+	void OpenGLGraphics::drawRectangle(const agui::Rectangle &rect,
+									   const agui::Color &color)
 	{
 		glBegin(GL_LINE_LOOP);
 		glColor4f(color.getR(), color.getG(), color.getB(), color.getA());
@@ -95,8 +103,8 @@ namespace agui
 		glEnd();
 	}
 
-	void OpenGLGraphics::drawFilledRectangle(const Rectangle &rect,
-											 const Color &color)
+	void OpenGLGraphics::drawFilledRectangle(const agui::Rectangle &rect,
+											 const agui::Color &color)
 	{
 		glBegin(GL_POLYGON);
 		glColor4f(color.getR(), color.getG(), color.getB(), color.getA());	
@@ -107,15 +115,15 @@ namespace agui
 		glEnd();
 	}
 
-	void OpenGLGraphics::drawPixel(const Point &point,
-								   const Color &color)
+	void OpenGLGraphics::drawPixel(const agui::Point &point,
+								   const agui::Color &color)
 	{
 
 	}
 
-	void OpenGLGraphics::drawCircle(const Point &center, 
+	void OpenGLGraphics::drawCircle(const agui::Point &center, 
 									float radius, 
-									const Color &color)
+									const agui::Color &color)
 	{
 		const float x = center.getX();
 		const float y = center.getY();
@@ -143,9 +151,9 @@ namespace agui
 		glEnd();
 	}
 
-	void OpenGLGraphics::drawFilledCircle(const Point &center,
+	void OpenGLGraphics::drawFilledCircle(const agui::Point &center,
 										  float radius, 
-										  const Color &color)
+										  const agui::Color &color)
 	{
 		const float x = center.getX();
 		const float y = center.getY();
@@ -162,9 +170,9 @@ namespace agui
 		glEnd();
 	}
 
-	void OpenGLGraphics::drawLine(const Point &start, 
-								  const Point &end, 
-								  const Color &color)
+	void OpenGLGraphics::drawLine(const agui::Point &start,
+								  const agui::Point &end,
+								  const agui::Color &color)
 	{
 		glBegin(GL_LINE);
 		glColor4f(color.getR(), color.getG(), color.getB(), color.getA());
@@ -173,7 +181,7 @@ namespace agui
 		glEnd();
 	}
 
-	void OpenGLGraphics::setTargetImage(const Image *target)
+	void OpenGLGraphics::setTargetImage(const agui::Image *target)
 	{
 
 	}
@@ -183,7 +191,7 @@ namespace agui
 
 	}
 
-	void OpenGLGraphics::setClippingRectangle(const Rectangle &rect)
+	void OpenGLGraphics::setClippingRectangle(const agui::Rectangle &rect)
 	{
 
 	}

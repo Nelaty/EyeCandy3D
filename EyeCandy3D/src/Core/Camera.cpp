@@ -44,8 +44,11 @@ namespace ec
 	{
 		__super::updateGlobalMatrices(parentMat);
 
-		m_view = glm::lookAt(m_position,
-							 m_forwardVector + m_position,
+		glm::vec4 temp(0.0f, 0.0f, -1.0f, 1.0f);
+		glm::vec3 position = getGlobalMat() * temp;
+
+		m_view = glm::lookAt(position,
+							 position + m_forwardVector,
 							 m_up);
 	}
 

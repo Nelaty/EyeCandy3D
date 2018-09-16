@@ -2,7 +2,7 @@
 #include "EC3D/Core/FontTextureAtlas.h"
 
 
-namespace agui
+namespace ec
 {
 	
 	OpenGLFont::OpenGLFont()
@@ -15,7 +15,7 @@ namespace agui
 
 	OpenGLFont::OpenGLFont(const std::string &fileName,
 	                       const int height,
-	                       const FontFlags fontFlags,
+	                       const agui::FontFlags fontFlags,
 	                       const float borderWidth,
 	                       const agui::Color borderColor)
 	{
@@ -46,7 +46,7 @@ namespace agui
 		this->font = font;
 		if(!font)
 		{
-			throw Exception("OpenGLFont::setFont: Given font was null!\n");
+			throw agui::Exception("OpenGLFont::setFont: Given font was null!\n");
 		}
 
 		this->autoFree = autoFree;
@@ -86,7 +86,7 @@ namespace agui
 
 	void OpenGLFont::reload(const std::string &fileName,
 							int height,
-							FontFlags fontFlags, 
+	                        agui::FontFlags fontFlags, 
 							float borderWidth, 
 							agui::Color borderColor)
 	{

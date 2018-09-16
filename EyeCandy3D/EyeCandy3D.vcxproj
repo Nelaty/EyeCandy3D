@@ -27,6 +27,7 @@
     <ClInclude Include="include\EC3D\Common\Common.h" />
     <ClInclude Include="include\EC3D\Common\Config.h" />
     <ClInclude Include="include\EC3D\Core\CylinderGeometry.h" />
+    <ClInclude Include="include\EC3D\Core\Shader\ShaderTimed.h" />
     <ClInclude Include="include\EC3D\Gui\MiniAgui.h" />
     <ClInclude Include="include\EC3D\Core\Application.h" />
     <ClInclude Include="include\EC3D\Core\Camera.h" />
@@ -118,6 +119,7 @@
     <ClCompile Include="src\Core\SceneSystem.cpp" />
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
     <ClCompile Include="src\Core\Shader\ShaderManager.cpp" />
+    <ClCompile Include="src\Core\Shader\ShaderTimed.cpp" />
     <ClCompile Include="src\Core\SphereGeometry.cpp" />
     <ClCompile Include="src\Core\SpringGeometry.cpp" />
     <ClCompile Include="src\Core\StaticGeometry.cpp" />

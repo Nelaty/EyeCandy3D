@@ -89,7 +89,12 @@ namespace ec
 	{
 		makeContextCurrent();
 
-		/* Render here */
+		// Update shaders
+		const auto timeDelta = static_cast<float>(m_timer.getTimeDelta());
+		const auto time = static_cast<float>(m_timer.getTime());
+		m_shaderManager.update(time, timeDelta);
+
+		// Render everything in this window
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glClearColor(m_clearColor.r, m_clearColor.g, m_clearColor.b, m_clearColor.a);
 
@@ -101,7 +106,7 @@ namespace ec
 		glDisable(GL_DEPTH_TEST);
 		glDisable(GL_BLEND);
 
-		/* Swap front and back buffers */
+		// Swap front and back buffers
 		glfwSwapBuffers(m_window);
 	}
 

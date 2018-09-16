@@ -6,9 +6,9 @@
 
 #include <map>
 
-namespace agui
+namespace ec
 {
-	class EC3D_DECLSPEC OpenGLCursorProvider : public CursorProvider
+	class EC3D_DECLSPEC OpenGLCursorProvider : public agui::CursorProvider
 	{
 	public:
 		OpenGLCursorProvider();

@@ -1,5 +1,6 @@
 #include "EC3D/Core/Shader/ShaderManager.h"
 #include "EC3D/Core/Shader/Shader.h"
+#include "EC3D/Core/Shader/ShaderTimed.h"
 
 #include <utility>
 
@@ -10,6 +11,36 @@ namespace ec
 
 	ShaderManager::~ShaderManager()
 	= default;
+
+	void ShaderManager::update(const float time, const float timeDelta)
+	{
+		for(auto& it : m_shader)
+		{
+			it.second->setUniforms();
+		}
+		for(auto& it : m_shaderTimed)
+		{
+			it->update(time, timeDelta);
+		}
+	}
+
+	bool ShaderManager::addShader(const std::string& shaderName, 
+								  Shader_Ptr shader)
+	{
+		m_shader.insert(std::make_pair(shaderName, std::move(shader)));
+		return true;
+	}
+
+	bool ShaderManager::addShader(const std::string& shaderName, 
+								  ShaderTimed_Ptr shader)
+	{
+		m_shader.insert(std::make_pair(shaderName,
+									   static_cast<Shader_Ptr>(std::move(shader))));
+		auto temp = static_cast<ShaderTimed*>(m_shader[shaderName].get());
+		m_shaderTimed.push_back(temp);
+		return true;
+	}
+
 
 	bool ShaderManager::addShader(const std::string& shaderName,
 								  const std::string& vertPath,

@@ -7,7 +7,7 @@
 
 #include <vector>
 
-namespace agui
+namespace ec
 {
 	/**
 	 * OpenGL GUI back end class for input. It needs to be a agui::Input
@@ -15,7 +15,7 @@ namespace agui
 	 * so it can actually receive input.
 	 */
 
-	class EC3D_DECLSPEC OpenGLInput : public Input, public ec::InputListener
+	class EC3D_DECLSPEC OpenGLInput : public agui::Input, public ec::InputListener
 	{
 		
 	public:
@@ -36,13 +36,13 @@ namespace agui
 		ec::KeyboardEvent m_prevEvent;
 		std::vector<ec::KeyboardEvent> m_keyEvents;
 
-		MouseInput createMouse(const ec::InputEvent& event);
-		KeyboardInput createKeyboard(const ec::KeyboardEvent& event,
+		agui::MouseInput createMouse(const ec::InputEvent& event);
+		agui::KeyboardInput createKeyboard(const ec::KeyboardEvent& event,
 									 bool isKeyDown,
 									 bool isRepeat );
 
-		ExtendedKeyEnum getExtendedKey(int key) const;
+		agui::ExtendedKeyEnum getExtendedKey(int key) const;
 		bool isModifierKey(int key);
-		KeyEnum getKeyFromKeycode(int keycode) const;
+		agui::KeyEnum getKeyFromKeycode(int keycode) const;
 	};
 }

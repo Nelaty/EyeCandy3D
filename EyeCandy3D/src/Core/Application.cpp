@@ -59,7 +59,6 @@ namespace ec
 	bool Application::initImpl()
 	{		
 		initOpenGl();
-		MiniAgui::init();
 
 		return true;
 	}

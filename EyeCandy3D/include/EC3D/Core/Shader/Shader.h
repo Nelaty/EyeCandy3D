@@ -33,34 +33,44 @@ namespace ec
 		       const std::string& geomPath = "",
 		       const std::string& tessCtrlPath = "",
 		       const std::string& tessEvalPath = "");
-		~Shader();
+		virtual ~Shader();
 
 		/** Activate this shader program. */
 		void bind() const;
 		/** Deactivate this shader program. */
 		void unbind() const;
 
-		/* Uniform single */
+		/** Set single boolean uniform */
 		void setBool(const char* uniformName, bool val) const;
+		/** Set single int uniform */
 		void setInt(const char* uniformName, int val) const;
+		/** Set single float uniform */
 		void setFloat(const char* uniformName, float val) const;
+		/** Set single double uniform */
 		void setDouble(const char* uniformName, double val) const;
 
-		/* Uniform vector */
+		/** Uniform 2D-vector uniform */
 		void setVec2(const char* uniformName, const glm::vec2& v) const;
+		/** Uniform 3D-vector uniform */
 		void setVec3(const char* uniformName, const glm::vec3& v) const;
+		/** Uniform 4D-vector uniform */
 		void setVec4(const char* uniformName, const glm::vec4& v) const;
 
-		/* Uniform matrix */
+		/** Uniform 2D-matrix uniform */
 		void setMat2(const char* uniformName, const glm::mat2& m) const;
+		/** Uniform 3D-matrix uniform */
 		void setMat3(const char* uniformName, const glm::mat3& m) const;
+		/** Uniform 4D-matrix uniform */
 		void setMat4(const char* uniformName, const glm::mat4& m) const;
 
-		/* Get the uniform location by name */
+		/** Get the uniform location by name */
 		GLuint getUniformLocation(const char* uniformName) const;
 
-		/* Get the program identifier */
+		/** Get the program identifier */
 		GLuint getProgram() const;
+
+		/** Can be overloaded to wrap uniform calls. */
+		virtual void setUniforms();
 
 	private:
 		/** Read file content from path */

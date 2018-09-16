@@ -57,7 +57,3 @@ namespace conf_shader
 	static const char* g_modelKey = "model";
 	static const char* g_viewKey = "view";
 }
-
-
-
-	

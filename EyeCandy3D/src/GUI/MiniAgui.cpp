@@ -13,11 +13,11 @@ namespace ec
 	void MiniAgui::init()
 	{
 		// Set the image loader
-		s_imageLoader = new agui::OpenGLImageLoader();
+		s_imageLoader = new OpenGLImageLoader();
 		agui::Image::setImageLoader(s_imageLoader);
 
 		// Set the font loader
-		s_fontLoader = new agui::OpenGLFontLoader();
+		s_fontLoader = new OpenGLFontLoader();
 		agui::Font::setFontLoader(s_fontLoader);
 
 		// Allegro does not automatically premultiply alpha so let Agui do it
@@ -26,22 +26,10 @@ namespace ec
 		// Setting a global font is required and failure to do so will crash.
 		s_font = agui::Font::load("../Resources/Fonts/proza-libre/ProzaLibre-Regular.ttf", 16);
 		agui::Widget::setGlobalFont(s_font);
-
-		////////////////////////////////////////////////////////////////////////
-		// \todo move to own gui class construction
-		//Instance the gui
-		//gui = new agui::Gui();
-
-		//Set the input and graphics handler
-		//auto inputHandler = new agui::OpenGLInput();
-		//gui->setInput(inputHandler);
-		//auto graphicsHandler = new agui::OpenGLGraphics();
-		//gui->setGraphics(graphicsHandler);
-		////////////////////////////////////////////////////////////////////////
 	}
 
-	agui::OpenGLImageLoader* MiniAgui::s_imageLoader = nullptr;
-	agui::OpenGLFontLoader* MiniAgui::s_fontLoader = nullptr;
+	OpenGLImageLoader* MiniAgui::s_imageLoader = nullptr;
+	OpenGLFontLoader* MiniAgui::s_fontLoader = nullptr;
 	agui::Font* MiniAgui::s_font = nullptr;
 
 	MiniAgui::MiniAgui()

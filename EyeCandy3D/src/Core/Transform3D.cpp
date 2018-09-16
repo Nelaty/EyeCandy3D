@@ -30,7 +30,14 @@ namespace ec
 		glm::mat4 rotMat(1.0f);
 		rotMat[0] = glm::vec4(glm::cross(m_forwardVector, m_up), 0.0f);
 		rotMat[1] = glm::vec4(m_up, 0.0f);
-		rotMat[2] = glm::vec4(m_forwardVector, 0.0f);		
+
+		#ifdef EC3D_RIGHT_HANDED_COORDINATE_SYSTEM
+		rotMat[2] = glm::vec4(-m_forwardVector, 0.0f);		
+		#else 
+		#ifdef EC3D_LEFT_HANDED_COORDINATE_SYSTEM
+		rotMat[2] = glm::vec4(m_forwardVector, 0.0f);
+		#endif
+		#endif
 
 		m_localMat *= rotMat;
 		m_localMat = glm::scale(m_localMat, m_scale);

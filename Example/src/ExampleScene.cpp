@@ -54,7 +54,7 @@ void ExampleScene::constructTestSg()
 
 	// Create new materials and load textures
 	auto* woodMat = new Material();
-	woodMat->addDiffuseTextureFromPath("../Resources/Textures/wood.jpg");
+	woodMat->addDiffuseTextureFromPath("../Resources/Textures/wood_00.jpg");
 	auto* wallMat00 = new Material();
 	wallMat00->addDiffuseTextureFromPath("../Resources/Textures/wall_00.jpg");
 	auto* wallMat01 = new Material();
@@ -86,7 +86,7 @@ void ExampleScene::constructTestSg()
 	m_right->scale(glm::vec3(width, height, length));
 
 	m_backside->addDrawable(wall00Cube);
-	m_backside->translateZ(translation);
+	m_backside->translateZ(-translation);
 	m_backside->scale(glm::vec3(length, height, width));
 
 	m_bottom->addDrawable(woodCube);

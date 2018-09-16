@@ -2,6 +2,7 @@
 #include "EC3D/Core/Scene.h"
 
 #include <string>
+#include <glm/glm.hpp>
 
 namespace ec
 {

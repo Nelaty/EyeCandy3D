@@ -91,6 +91,10 @@ namespace ec
 		return m_program;
 	}
 
+	void Shader::setUniforms()
+	{
+	}
+
 	std::string Shader::readFile(const std::string& filepath)
 	{
 		std::string content;

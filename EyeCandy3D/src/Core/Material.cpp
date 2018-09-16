@@ -57,12 +57,15 @@ namespace ec
 	{
 		Texture texture;
 		const auto result = texture.textureFromFile(path, conf_shader::g_textureDiffuse);
-		m_textures.push_back(texture);
-		m_hasTexture = true;
+		if(result)
+		{
+			m_textures.push_back(texture);
+			m_hasTexture = true;
+		}
 		return result;
 	}
 
-	bool Material::addSpecularTextureFromPath(const char* path)
+	/*bool Material::addSpecularTextureFromPath(const char* path)
 	{
 		Texture texture;
 		const auto result = texture.textureFromFile(path, conf_shader::g_textureSpecular);
@@ -78,7 +81,7 @@ namespace ec
 		m_textures.push_back(texture);
 		m_hasTexture = true;
 		return result;
-	}
+	}*/
 
 	void Material::setColorAmbient(const glm::vec4& color)
 	{

@@ -13,6 +13,7 @@
 #include "EC3D/Core/Shader/Shader.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
 #include "EC3D/Utilities/Random.h"
+#include "EC3D/Core/CircleGeometry.h"
 
 using namespace ec;
 
@@ -29,8 +30,9 @@ void ExampleScene::init()
 {
 	constructTestSg();
 	//sphereTest();
-	cylinderTest();
+	//cylinderTest();
 	//rectangleTest();
+	circleTest();
 }
 
 void ExampleScene::tick(const float timeDelta)
@@ -39,8 +41,8 @@ void ExampleScene::tick(const float timeDelta)
 	float min = 0.0f;
 	float max = 0.1f;
 
-	m_right->rotate(utl::Random::randomFloat(min, max),
-					utl::Random::randomVec3(0.0f, 1.0f));
+	m_right->rotate(ec::Random::randomFloat(min, max),
+					ec::Random::randomVec3(0.0f, 1.0f));
 	*/
 }
 
@@ -146,7 +148,7 @@ void ExampleScene::rectangleTest()
 {
 	auto& shaderManager = m_window->getShaderManager();
 
-	auto* rectangleMesh = new RectangleGeometry(3.0f);
+	auto* rectangleMesh = new RectangleGeometry(1.0f);
 	auto* shader = shaderManager.getShader("basic");
 	auto* woodMat = new Material();
 	woodMat->addDiffuseTextureFromPath("../Resources/Textures/sand_00.jpg");
@@ -155,7 +157,26 @@ void ExampleScene::rectangleTest()
 	auto* node = new Node(nullptr);
 
 	node->addDrawable(drawable);
-	node->rotateX(-glm::radians(45.0f));
+	node->rotateZ(-glm::radians(45.0f));
+
+	auto* rootNode = this->getRoot();
+	rootNode->addChild(node);
+}
+
+void ExampleScene::circleTest()
+{
+	auto& shaderManager = m_window->getShaderManager();
+
+	auto* circleMesh = new CircleGeometry(1.0f);
+	auto* shader = shaderManager.getShader("basic");
+	auto* woodMat = new Material();
+	woodMat->addDiffuseTextureFromPath("../Resources/Textures/sand_00.jpg");
+
+	auto* drawable = new Drawable(circleMesh, woodMat, shader);
+	auto* node = new Node(nullptr);
+
+	node->addDrawable(drawable);
+	node->rotateZ(-glm::radians(45.0f));
 
 	auto* rootNode = this->getRoot();
 	rootNode->addChild(node);

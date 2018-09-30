@@ -2,8 +2,11 @@
 #include <GL/glew.h>
 #include "Agui/Graphics.hpp"
 #include "EC3D/Common/Common.h"
+#include "EC3D/Gui/GuiRenderContext.h"
 
 #include <corecrt_math_defines.h>
+
+#include "EC3D/Core/RectangleGeometry.h"
 
 /**
  * OpenGL GUI back end class for graphics and drawing.
@@ -20,6 +23,8 @@ namespace ec
 		
 		void _beginPaint() override;
 		void _endPaint() override;
+
+		void setRenderContext(const GuiRenderContext& context);
 
 		agui::Dimension getDisplaySize()  override;
 		agui::Rectangle getClippingRectangle()  override;
@@ -61,6 +66,15 @@ namespace ec
 		void setClippingRectangle(const agui::Rectangle &rect) override;
 
 		Camera* m_camera;
+
+		agui::Rectangle m_clipping;
+		/////////////////////////////////////
+		// TEST
+		glm::mat4 m_rectModel;
+		RectangleGeometry* m_rectangleGeo;
+		/////////////////////////////////////
+
+		GuiRenderContext m_context;
 
 		static constexpr int s_circleStepsNum = 20;
 		static constexpr float s_circleStep = 2 * M_PI / s_circleStepsNum;

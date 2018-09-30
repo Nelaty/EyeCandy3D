@@ -34,6 +34,9 @@ namespace ec
 		explicit SceneRenderer();
 		~SceneRenderer();
 
+		/** Update guis */
+		void tick();
+
 		/* Render the currently active scene */
 		void render(Window* window);
 

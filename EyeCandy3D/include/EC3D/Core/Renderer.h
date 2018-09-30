@@ -3,10 +3,12 @@
 #include "EC3D/Core/SceneRenderer.h"
 
 #include <map>
+#include "EC3D/Gui/GuiRenderer.h"
 
 namespace ec
 {
 	class Window;
+	class Freetype;
 
 	/**
 	 * A Renderer is responsible for rendering storing and using
@@ -15,10 +17,13 @@ namespace ec
 	class EC3D_DECLSPEC Renderer
 	{
 	public:
-		explicit Renderer();
+		explicit Renderer(Window* window);
 		~Renderer();
 
-		void render(Window* window) const;
+		void init(Shader* guiShader, Shader* textShader) const;
+
+		void tick();
+		void render() const;
 
 		/** 
 		 * Change to an active renderer with the given name. 
@@ -45,10 +50,15 @@ namespace ec
 		*/
 		SceneRenderer* getSceneRenderer(const std::string& name);
 
-	protected:		
+	protected:
+		void renderGui() const;
+
+		Window* m_window;
+
 		SceneRenderer* m_activeRenderer;
 		SceneRenderer* m_lastRenderer;
 
+		std::unique_ptr<GuiRenderer> m_guiRenderer;
 		std::map<std::string, SceneRenderer*> m_renderer;
 	};
 }

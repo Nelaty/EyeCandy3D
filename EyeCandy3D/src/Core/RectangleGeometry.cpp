@@ -21,10 +21,13 @@ namespace ec
 
 	void RectangleGeometry::init(const float width, const float height)
 	{
+		m_width = width;
+		m_height = height;
+
 		m_data.resizeBuffers(4, 6);
 
-		const auto halfWidth = width;
-		const auto halfHeight = height;
+		const auto halfWidth = 0.5f * width;
+		const auto halfHeight = 0.5f * height;
 
 		auto& vertices = m_data.m_vertices;
 		auto& indices = m_data.m_indices;
@@ -54,5 +57,15 @@ namespace ec
 		indices.push_back(2);
 		indices.push_back(3);
 		indices.push_back(0);
+	}
+
+	float RectangleGeometry::getWidth() const
+	{
+		return m_width;
+	}
+
+	float RectangleGeometry::getHeight() const
+	{
+		return m_height;
 	}
 }

@@ -4,6 +4,7 @@
 
 #include "Viewport.h"
 #include "CameraType.h"
+#include "EC3D/Gui/GuiSystem.h"
 
 #include <glm/glm.hpp>
 
@@ -36,6 +37,7 @@ namespace ec
 		 */
 		void updateLocalMat() override;
 
+		/** Recursively update global matrices */
 		void updateGlobalMatrices(const glm::mat4& parentMat) override;
 
 		/** Get the current view matrix */
@@ -69,24 +71,38 @@ namespace ec
 		/** Access to the related scene */
 		Scene* getScene() const;
 
+		/** Get the current viewport. */
+		Viewport& getViewport();
+		/** Get the current viewport. */
 		const Viewport& getViewport() const;
+		/** Change the current viewport. */
 		void setViewport(const Viewport& viewport);
+
+		/** Get this camera's gui system. */
+		const GuiSystem& getGuiSystem() const;
+		/** Get this camera's gui system. */
+		GuiSystem& getGuiSystem();
 
 	private:
 		void init();
 
 		CameraType m_type;
+		
+		Viewport m_viewport;
+		Scene* m_scene;
 
+		GuiSystem m_guiSystem;
+
+		//@{
+		/** Projection matrix attribute */
 		float m_aspect;
-
 		float m_fov;
+
 		float m_near;
 		float m_far;
+		//@}
 
 		glm::mat4 m_view;
 		glm::mat4 m_projection;
-	
-		Viewport m_viewport;
-		Scene* m_scene;
 	};
 }

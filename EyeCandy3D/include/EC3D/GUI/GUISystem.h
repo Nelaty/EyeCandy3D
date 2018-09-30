@@ -14,8 +14,10 @@ namespace ec
 	class OpenGLGraphics;
 
 	class GuiController;
-	class InputObservable;
 	class Camera;
+	class Window;
+
+	struct GuiRenderContext;
 	
 	class EC3D_DECLSPEC GuiSystem
 	{
@@ -35,7 +37,7 @@ namespace ec
 		~GuiSystem();
 
 		/** Render the current gui or none if not existent */
-		void render();
+		void render(const GuiRenderContext& context) const;
 
 		/** Set the model */
 		void setModel(Gui_Ptr gui);
@@ -43,12 +45,19 @@ namespace ec
 		/** Get the model, which contains gui data */
 		Gui_Type* getModel() const;
 
-	private:
+		/** Get the OpenGl graphics handler. */
+		GraphicsHandler_Type* getGraphicsHandler() const;
+
+		/** Enables the gui to receive events. */
 		void registerInputListener() const;
+		/** Disables events for this gui. */
 		void unregisterInputListener() const;
 
+	private:
+		void initTestGui();
+
 		Camera* m_camera;
-		InputObservable* m_inputObservable;
+		Window* m_window;
 
 		Gui_Ptr m_model;
 		Controller_Ptr m_inputListener{};

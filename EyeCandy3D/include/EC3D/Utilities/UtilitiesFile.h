@@ -7,7 +7,7 @@
 /**
 * File utility functions
 */
-namespace utl
+namespace ec
 {
 	EC3D_DECLSPEC std::string getFileContentString(const char* filepath);
 	EC3D_DECLSPEC std::vector<std::string> getFileContentSeparatedString(const char* filepath);

@@ -41,7 +41,7 @@ namespace ec
 		virtual void informAll();
 
 		/** Set the previous mouse event */
-		void setLastPrevMouseEvent(const MouseEvent& event);
+		void setPrevMouseEvent(const MouseEvent& event);
 		/** Get the previous mouse event */
 		const MouseEvent& getPrevMouseEvent() const;
 

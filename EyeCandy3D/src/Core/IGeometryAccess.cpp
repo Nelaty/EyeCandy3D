@@ -6,7 +6,7 @@ namespace ec
 	IGeometryAccess::~IGeometryAccess()
 	= default;
 
-	void IGeometryAccess::render(Shader* shader, const glm::mat4& model)
+	void IGeometryAccess::render()
 	{
 		beginRender();
 		onRender();

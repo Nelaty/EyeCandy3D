@@ -4,7 +4,7 @@
 #include <utility>
 #include <ctime>
 
-namespace utl
+namespace ec
 {
 	void Random::seed()
 	{

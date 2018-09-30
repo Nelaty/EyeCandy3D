@@ -6,7 +6,7 @@
 #include <ctime>
 
 
-namespace utl
+namespace ec
 {
 	/**
 	* A file logger offers various formatting options on how and
@@ -87,7 +87,7 @@ namespace utl
 
 
 	template<class T, class... Args>
-	void utl::FileLogger::append(T arg, Args... args)
+	void ec::FileLogger::append(T arg, Args... args)
 	{
 		if(m_out.is_open())
 		{
@@ -97,7 +97,7 @@ namespace utl
 	}
 
 	template<class T>
-	void utl::FileLogger::append(T arg)
+	void ec::FileLogger::append(T arg)
 	{
 		if(m_out.is_open())
 		{

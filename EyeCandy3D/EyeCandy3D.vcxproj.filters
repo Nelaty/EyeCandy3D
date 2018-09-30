@@ -80,6 +80,12 @@
     <ClInclude Include="include\EC3D\Core\CylinderGeometry.h" />
     <ClInclude Include="include\EC3D\Core\RectangleGeometry.h" />
     <ClInclude Include="include\EC3D\Core\Shader\ShaderTimed.h" />
+    <ClInclude Include="include\EC3D\Core\WindowCreationHints.h" />
+    <ClInclude Include="include\EC3D\GUI\GuiRenderer.h" />
+    <ClInclude Include="include\EC3D\GUI\GuiRenderContext.h" />
+    <ClInclude Include="include\EC3D\GUI\GuiPrimitive.h" />
+    <ClInclude Include="include\EC3D\Core\CircleGeometry.h" />
+    <ClInclude Include="include\EC3D\Core\LineGeometry.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -135,5 +141,9 @@
     <ClCompile Include="src\Core\CylinderGeometry.cpp" />
     <ClCompile Include="src\Core\RectangleGeometry.cpp" />
     <ClCompile Include="src\Core\Shader\ShaderTimed.cpp" />
+    <ClCompile Include="src\Core\WindowCreationHints.cpp" />
+    <ClCompile Include="src\Core\GuiRenderer.cpp" />
+    <ClCompile Include="src\Core\CircleGeometry.cpp" />
+    <ClCompile Include="src\Core\LineGeometry.cpp" />
   </ItemGroup>
 </Project>

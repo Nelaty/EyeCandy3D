@@ -20,9 +20,9 @@ namespace ec
 		Resource* registerResource(Resource_Ptr resource, const std::string& key);
 		Resource_Ptr unregisterResource(const std::string& key);
 
-		Resource* getResource(const std::string& key);
-		bool isRegistered(const std::string& key);
-		bool isRegistered(Resource* resource);
+		Resource* getResource(const std::string& key) const;
+		bool isRegistered(const std::string& key) const;
+		bool isRegistered(Resource* resource) const;
 
 	private:
 		Resource_Container m_resources;

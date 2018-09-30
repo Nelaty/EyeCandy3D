@@ -16,7 +16,7 @@ namespace ec
 		virtual ~IGeometryAccess();
 
 		/* Render this geometry with a given matrix */
-		virtual void render(Shader* shader, const glm::mat4& model);
+		virtual void render();
 
 	protected:
 		/** Called at the beginning of the rendering routine. */

@@ -23,8 +23,27 @@ namespace ec
 		init(width, height, depth);
 	}
 
+	float CubeGeometry::getWidth() const
+	{
+		return m_width;
+	}
+
+	float CubeGeometry::getHeight() const
+	{
+		return m_height;
+	}
+
+	float CubeGeometry::getDepth() const
+	{
+		return m_depth;
+	}
+
 	void CubeGeometry::init(const float width, const float height, const float depth)
 	{
+		m_width = width;
+		m_height = height;
+		m_depth = depth;
+
 		m_data.resizeBuffers(8, 36);
 
 		auto& vertices = m_data.m_vertices;

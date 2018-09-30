@@ -3,7 +3,7 @@
 
 #include <glm/glm.hpp>
 
-namespace utl
+namespace ec
 {
 	/**
 	* Equally distributed random number generator.

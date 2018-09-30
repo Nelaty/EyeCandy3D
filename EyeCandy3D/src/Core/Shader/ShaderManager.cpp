@@ -64,8 +64,8 @@ namespace ec
 
 	Shader* ShaderManager::getShader(const char* shaderName) const
 	{
-		Shader* shader = m_shader.find(shaderName)->second.get();
-		return shader ? shader : nullptr;
+		const auto shader = m_shader.find(shaderName);
+		return shader != m_shader.end() ? shader->second.get() : nullptr;
 	}
 
 	bool ShaderManager::switchShaderProgram(const char* shaderName) const

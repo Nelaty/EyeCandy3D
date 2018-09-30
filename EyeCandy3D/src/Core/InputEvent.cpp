@@ -1,4 +1,5 @@
 #include "EC3D/Core/InputEvent.h"
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -91,13 +92,15 @@ namespace ec
 	DisplayEvent::DisplayEvent(GLFWwindow* window,
 							   int x, int y, 
 							   int width, int height,
-							   DisplayOrientation orientation)
+							   DisplayOrientation orientation,
+							   GLFWmonitor* monitor)
 		: m_window{window},
 		m_x{x},
 		m_y{y},
 		m_width{width},
 		m_height{height},
-		m_orientation{orientation}
+		m_orientation{orientation},
+		m_monitor(monitor)
 	{
 	}
 

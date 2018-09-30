@@ -4,7 +4,7 @@
 #include <functional>
 #include <string>
 
-namespace utl
+namespace ec
 {
 	/** Profiling precisions, which data can be represented in */
 	enum class EC3D_DECLSPEC ProfilingPrecision

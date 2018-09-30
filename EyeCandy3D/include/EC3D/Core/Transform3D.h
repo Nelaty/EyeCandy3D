@@ -100,6 +100,9 @@ namespace ec
 		/** Rotate around the local z axis by a given angle */
 		void rotateZLocal(float angle);
 
+		/** Set the rotation matrix. */
+		void setRotation(const glm::mat3& rotationMatrix);
+
 		/** Get the current scale. */
 		const glm::vec3& getScale() const;
 		/** Get the x component of the scale. */
@@ -113,6 +116,8 @@ namespace ec
 		void scale(float sx, float sy, float sz);
 		/** Multiplicative scaling of the current scale. */
 		void scale(const glm::vec3& val);
+		/** Multiplicative, uniform scaling of all scale-components. */
+		void scale(float uniform);
 		/** Multiplicative scaling of the x-scale component. */
 		void scaleX(float sx);
 		/** Multiplicative scaling of y-scale component. */
@@ -124,6 +129,8 @@ namespace ec
 		void setScale(const glm::vec3& val);
 		/** Assign the given value to the current scale. */
 		void setScale(float sx, float sy, float sz);
+		/** Assign the given value to all scale-components. */
+		void setScale(float uniform);
 		/** Assign the given value to the current x-scale component. */
 		void setScaleX(float sx);
 		/** Assign the given value to the current x-scale component. */

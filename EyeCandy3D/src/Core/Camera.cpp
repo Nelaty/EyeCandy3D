@@ -10,7 +10,8 @@ namespace ec
 {
 	Camera::Camera(Scene* scene)
 		: Node(nullptr),
-		m_scene{scene}
+		m_scene{scene},
+		m_guiSystem(this)
 	{
 		init();
 	}	
@@ -18,7 +19,8 @@ namespace ec
 	Camera::Camera(Scene* scene, const Viewport& viewport)
 		: Node(nullptr),
 		m_viewport{viewport},
-		m_scene{scene}		
+		m_scene{scene},
+		m_guiSystem(this)
 	{
 		init();
 	}
@@ -114,6 +116,11 @@ namespace ec
 		return m_scene;
 	}
 
+	Viewport& Camera::getViewport()
+	{
+		return m_viewport;
+	}
+
 	const ec::Viewport& Camera::getViewport() const
 	{
 		return m_viewport;
@@ -122,6 +129,16 @@ namespace ec
 	void Camera::setViewport(const Viewport& viewport)
 	{
 		m_viewport = viewport;
+	}
+
+	const GuiSystem& Camera::getGuiSystem() const
+	{
+		return m_guiSystem;
+	}
+
+	GuiSystem& Camera::getGuiSystem()
+	{
+		return m_guiSystem;
 	}
 
 	void Camera::init()

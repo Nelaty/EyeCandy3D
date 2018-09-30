@@ -2,6 +2,7 @@
 #include "EC3D/Common/Common.h"
 
 struct GLFWwindow;
+struct GLFWmonitor;
 
 namespace ec
 {
@@ -27,6 +28,11 @@ namespace ec
 		resize,
 		lost_focus,
 		gained_focus,
+		restored,
+		minimized,
+		window_move,
+		monitor_connected,
+		monitor_disconnected,
 		closed,
 
 		count // Keep at end! - Number of event types
@@ -48,11 +54,13 @@ namespace ec
 		explicit DisplayEvent(GLFWwindow* window,
 							  int x, int y,
 							  int width, int height,
-							  DisplayOrientation orientation = DisplayOrientation::rotated_0);
+							  DisplayOrientation orientation = DisplayOrientation::rotated_0,
+							  GLFWmonitor* monitor = nullptr);
 
 		void print() const;
 
 		GLFWwindow* m_window;
+		GLFWmonitor* m_monitor;
 
 		int m_x;
 		int m_y;

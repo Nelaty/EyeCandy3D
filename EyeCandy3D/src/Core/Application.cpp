@@ -6,32 +6,37 @@
 #include <glm/glm.hpp>
 
 
-
 namespace ec
 {
-	Application::Application(const unsigned int windowWidth, 
-							 const unsigned int windowHeight,
-							 const std::string& windowTitle,
-							 const std::string& windowName)
+	Application::Application(const unsigned int windowWidth,
+	                         const unsigned int windowHeight,
+	                         const std::string& windowTitle,
+	                         const std::string& windowName)
 		: m_running{true}
 	{
-		utl::Random::seed();
+		ec::Random::seed();
 	}
 
 	Application::~Application() = default;
 
 	void Application::startMainLoop()
 	{
-		while(m_running)
+		while (m_running)
 		{
 			mainLoopImpl();
+			closeDeadWindows();
 		}
 		cleanup();
 	}
 
+	void Application::kill()
+	{
+		m_running = false;
+	}
+
 	void Application::tick()
 	{
-		for(auto& it : m_windows)
+		for (auto& it : m_windows)
 		{
 			it.second->tickMeta();
 		}
@@ -39,16 +44,53 @@ namespace ec
 
 	void Application::render()
 	{
-		for(auto& it : m_windows)
+		for (auto& it : m_windows)
 		{
 			it.second->render();
 		}
+	}
+
+	void Application::closeDeadWindows()
+	{
+		for (auto it = m_windows.begin(); it != m_windows.end();)
+		{
+			auto* window = it->second.get();
+			if (window->shouldClose())
+			{
+				window->destroy();
+				it = m_windows.erase(it);
+			}
+			else
+			{
+				++it;
+			}
+		}
+	}
+
+	void Application::monitorCallback(GLFWmonitor* monitor, const int event)
+	{
+		if(event == GLFW_CONNECTED)
+		{
+			if(s_monitorConnectedCallback)
+			{
+				s_monitorConnectedCallback(monitor);
+			}			
+		}
+		else
+		{
+			if(s_monitorDisconnectedCallback)
+			{
+				s_monitorDisconnectedCallback(monitor);
+			}
+		}	
 	}
 
 	void Application::init()
 	{
 		const auto initSuccessful = initImpl();
 		printVersions();
+	
+		glfwSetMonitorCallback(Application::monitorCallback);
 	}
 
 	void Application::cleanup()
@@ -57,7 +99,7 @@ namespace ec
 	}
 
 	bool Application::initImpl()
-	{		
+	{
 		initOpenGl();
 
 		return true;
@@ -69,7 +111,7 @@ namespace ec
 		render();
 
 		// Poll & process events
-		glfwPollEvents();		
+		glfwPollEvents();
 	}
 
 	void Application::initOpenGl()
@@ -81,17 +123,30 @@ namespace ec
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	}
 
-	void Application::printVersions() const
+	void Application::printVersions()
 	{
 		auto major = 0;
 		auto minor = 0;
 
 		sscanf_s(reinterpret_cast<const char*>(glGetString(GL_VERSION)), "%d.%d",
-				 &major, &minor);
+		         &major, &minor);
 
 		printf("LIBRARY VERSIONS\n\n");
 		printf("OpenGL v%d.%d\n", major, minor);
 		printf("GLEW v%s\n", glewGetString(GLEW_VERSION));
 		printf("GLFW v%d.%d.%d\n", GLFW_VERSION_MAJOR, GLFW_VERSION_MINOR, GLFW_VERSION_REVISION);
 	}
+
+	void Application::setMonitorConnectedCallback(const std::function<void(GLFWmonitor*)>& cb)
+	{
+		s_monitorConnectedCallback = cb;
+	}
+
+	void Application::setMonitorDisconnectedCallback(const std::function<void(GLFWmonitor*)>& cb)
+	{
+		s_monitorDisconnectedCallback = cb;
+	}
+
+	std::function<void(GLFWmonitor*)> Application::s_monitorConnectedCallback = nullptr;
+	std::function<void(GLFWmonitor*)> Application::s_monitorDisconnectedCallback = nullptr;
 }

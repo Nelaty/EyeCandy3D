@@ -46,12 +46,12 @@ namespace ec
 		/** Prepare drawable for rendering. */
 		virtual void beginRender(const glm::mat4& model);
 		/** Render the drawable. */
-		virtual void render(Shader* shader, const glm::mat4& model);
+		virtual void render();
 		/** Finalize the rendering. */
 		virtual void endRender();
 
 		/** Transfer material data to the shader. */
-		void setMaterialUniforms(Shader* shader, Material* material) const;
+		static void setMaterialUniforms(Shader* shader, Material* material);
 
 		IGeometryAccess* m_geometry;
 		Material* m_material;

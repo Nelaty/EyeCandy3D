@@ -3,7 +3,7 @@
 
 
 
-namespace utl
+namespace ec
 {
 	/**
 	 * \brief Check if a given number is a prime number.

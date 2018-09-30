@@ -28,21 +28,15 @@ namespace ec
 		void processEvent(const ec::InputEvent& event) override;
 
 	private:
-		bool m_shift;
-		bool m_control;
-		bool m_alt;
-		bool m_meta;
+		static agui::MouseInput createMouse(const ec::InputEvent& event,
+									 InputType inputType);
+		static agui::KeyboardInput createKeyboard(const ec::InputEvent& event, 
+										   InputType inputType,
+										   bool isKeyDown,
+										   bool isRepeat );
 
-		ec::KeyboardEvent m_prevEvent;
-		std::vector<ec::KeyboardEvent> m_keyEvents;
-
-		agui::MouseInput createMouse(const ec::InputEvent& event);
-		agui::KeyboardInput createKeyboard(const ec::KeyboardEvent& event,
-									 bool isKeyDown,
-									 bool isRepeat );
-
-		agui::ExtendedKeyEnum getExtendedKey(int key) const;
-		bool isModifierKey(int key);
-		agui::KeyEnum getKeyFromKeycode(int keycode) const;
+		static agui::ExtendedKeyEnum getExtendedKey(int key);
+		static bool isModifierKey(int key);
+		static agui::KeyEnum getKeyFromKeycode(int keycode);
 	};
 }

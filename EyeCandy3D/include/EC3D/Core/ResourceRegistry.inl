@@ -37,7 +37,7 @@ namespace ec
 	}
 
 	template<class Resource>
-	Resource* ResourceRegistry<Resource>::getResource(const std::string& key)
+	Resource* ResourceRegistry<Resource>::getResource(const std::string& key) const
 	{
 		auto foundResource = m_resources.find(key);
 		if(foundResource == m_resources.end())
@@ -48,14 +48,14 @@ namespace ec
 	}	
 
 	template<class Resource>
-	bool ResourceRegistry<Resource>::isRegistered(const std::string& key)
+	bool ResourceRegistry<Resource>::isRegistered(const std::string& key) const
 	{
 		return getResource(key) != nullptr;
 	}
 
 
 	template<class Resource>
-	bool ResourceRegistry<Resource>::isRegistered(Resource* resource)
+	bool ResourceRegistry<Resource>::isRegistered(Resource* resource) const
 	{
 		for(const auto& it : m_resources)
 		{

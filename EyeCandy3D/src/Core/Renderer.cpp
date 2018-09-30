@@ -1,22 +1,42 @@
 #include "EC3D/Core/Renderer.h"
+#include "EC3D/Core/Window.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
+
+#include "EC3D/Core/Frame.h"
+#include "EC3D/Core/Camera.h"
 
 namespace ec
 {
-	Renderer::Renderer()
-		: m_activeRenderer{nullptr},
+	Renderer::Renderer(Window* window)
+		: m_window(window),
+		m_activeRenderer{nullptr},
 		m_lastRenderer{nullptr}
 	{
+		m_guiRenderer = std::make_unique<GuiRenderer>(window);
 	}
 
 	Renderer::~Renderer()
 	= default;
 
-	void Renderer::render(Window* window) const
+	void Renderer::init(Shader* guiShader, Shader* textShader) const
+	{
+		m_guiRenderer->init(guiShader, textShader);
+	}
+
+	void Renderer::tick()
 	{
 		if(m_activeRenderer)
 		{
-			m_activeRenderer->render(window);
+			m_activeRenderer->tick();
+		}
+	}
+
+	void Renderer::render() const
+	{
+		if(m_activeRenderer)
+		{
+			m_activeRenderer->render(m_window);
+			renderGui();
 		}		
 	}
 
@@ -49,11 +69,8 @@ namespace ec
 		{
 			return nullptr;
 		}
-		else
-		{
-			m_renderer.erase(foundRenderer);
-			return foundRenderer->second;
-		}
+		m_renderer.erase(foundRenderer);
+		return foundRenderer->second;
 	}
 
 	ec::SceneRenderer* Renderer::getSceneRenderer(const std::string& name)
@@ -67,4 +84,12 @@ namespace ec
 		return foundRenderer->second;
 	}
 
+	void Renderer::renderGui() const
+	{
+		const auto& cameras = m_activeRenderer->getFrame().getCameras();
+		for(auto& it : cameras)
+		{
+			m_guiRenderer->render(it->getGuiSystem());
+		}
+	}
 }

@@ -5,7 +5,7 @@
 #include <sstream>
 #include <iterator>
 
-namespace utl
+namespace ec
 {
 	std::string getFileContentString(const char* filepath)
 	{

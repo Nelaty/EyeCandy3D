@@ -26,6 +26,8 @@ ExampleWindow::ExampleWindow(unsigned int width, unsigned int height, const std:
 	dynamicGeoTest();
 	// Render everything as a wire frame
 	// SwitchToWireframeMode();
+	
+	//->setIcon("icon.png");// , "icon_small.png");
 }
 
 ExampleWindow::~ExampleWindow() = default;
@@ -61,6 +63,8 @@ void ExampleWindow::initCameras()
 	m_camera3->setTranslation(glm::vec3(0.0f, 0.0f, -30.0f));
 
 	// Init camera viewports
+	//m_camera->setViewport(Viewport(glm::vec2(0.0, 0.0), glm::vec2(1.0f, 1.0f)));
+
 	m_camera->setViewport(Viewport(glm::vec2(0.0, 0.0), glm::vec2(0.75f, 1.0f)));
 	m_camera2->setViewport(Viewport(glm::vec2(0.75, 0.5), glm::vec2(0.25f, 0.5f)));
 	m_camera3->setViewport(Viewport(glm::vec2(0.75, 0.0), glm::vec2(0.25f, 0.5f)));
@@ -76,10 +80,10 @@ void ExampleWindow::initCameras()
 	m_exampleRenderer->setFrame(exampleFrame);
 
 	// Register the scene renderer with the main renderer
-	m_renderer.registerSceneRenderer("example", m_exampleRenderer);
+	m_renderer->registerSceneRenderer("example", m_exampleRenderer);
 	// Tell the main renderer to use the example scene renderer, 
 	// which was registered in the last step.
-	m_renderer.changeRenderer("example");
+	m_renderer->changeRenderer("example");
 }
 
 void ExampleWindow::initScenes()
@@ -122,6 +126,9 @@ void ExampleWindow::initShaders()
 	m_shaderManager.addShader("text",
 							  path + "text.vert",
 							  path + "text.frag");
+
+	m_renderer->init(m_shaderManager.getShader("gui"),
+					 m_shaderManager.getShader("text"));
 }
 
 void ExampleWindow::dynamicGeoTest()

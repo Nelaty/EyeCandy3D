@@ -17,7 +17,15 @@ namespace ec
 
 		void resize(float width, float height, float depth);
 
+		float getWidth() const;
+		float getHeight() const;
+		float getDepth() const;
+
 	private:
 		void init(float width, float height, float depth);
+
+		float m_width;
+		float m_height;
+		float m_depth;
 	};
 }

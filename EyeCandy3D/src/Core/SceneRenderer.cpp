@@ -10,6 +10,7 @@
 #include "EC3D/Core/Shader/Shader.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
 
+#include "Agui/Agui.hpp"
 
 namespace ec
 {
@@ -19,6 +20,15 @@ namespace ec
 	}
 
 	SceneRenderer::~SceneRenderer() = default;
+
+	void SceneRenderer::tick()
+	{
+		auto& cameras = m_frame.getCameras();
+		for(auto& it : cameras)
+		{
+			it->getGuiSystem().getModel()->logic();
+		}
+	}
 
 	void SceneRenderer::onBeginRender(RenderContext& context)
 	{
@@ -99,7 +109,7 @@ namespace ec
 
 	void SceneRenderer::updateViewport(RenderContext& context, Camera* camera) const
 	{
-		const auto windowSize = context.m_window->getWindowResolution();
+		const auto windowSize = context.m_window->getResolution();
 		const auto ratio = static_cast<float>(windowSize.x) / 
 			static_cast<float>(windowSize.y);
 

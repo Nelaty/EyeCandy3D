@@ -75,6 +75,11 @@ namespace ec
 		m_cameras.clear();
 	}
 
+	std::vector<Camera*>& Frame::getCameras()
+	{
+		return m_cameras;
+	}
+
 	const std::vector<Camera*>& Frame::getCameras() const
 	{
 		return m_cameras;

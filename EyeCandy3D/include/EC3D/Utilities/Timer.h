@@ -21,13 +21,13 @@ namespace ec
 		void resetTimeDelta();
 
 		/** Get time since the start of the timer or last reset */
-		double getTime() const;
+		static double getTime();
+		/** Set the timer to a specific time. */
+		static void setTime(double time);
 		/** Get time between calls */
 		double getTimeDelta();
 
 	private:
-		double m_start{};
-
 		double m_timeDeltaFirst{};
 		double m_timeDeltaLast{};
 	};

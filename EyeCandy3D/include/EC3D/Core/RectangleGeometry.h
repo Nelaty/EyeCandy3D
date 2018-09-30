@@ -15,5 +15,12 @@ namespace ec
 		virtual ~RectangleGeometry();
 
 		void init(float width, float height);
+
+		float getWidth() const;
+		float getHeight() const;
+
+	private:
+		float m_width;
+		float m_height;
 	};
 }

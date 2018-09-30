@@ -55,6 +55,8 @@ namespace ec
 		void clear();
 
 		/** Get all registered cameras */
+		std::vector<Camera*>& getCameras();
+		/** Get all registered cameras */
 		const std::vector<Camera*>& getCameras() const;
 
 	private:

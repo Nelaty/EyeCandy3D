@@ -43,13 +43,13 @@ namespace ec
 	void Drawable::render(const glm::mat4& model)
 	{
 		beginRender(model);
-		render(m_shader, model);
+		render();
 		endRender();
 	}
 
-	void Drawable::render(Shader* shader, const glm::mat4& model)
+	void Drawable::render()
 	{
-		m_geometry->render(shader, model);
+		m_geometry->render();
 	}
 
 	void Drawable::endRender()
@@ -57,7 +57,7 @@ namespace ec
 		m_shader->unbind();
 	}
 
-	void Drawable::setMaterialUniforms(Shader* shader, Material* material) const
+	void Drawable::setMaterialUniforms(Shader* shader, Material* material)
 	{
 		if(material)
 		{

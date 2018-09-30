@@ -25,6 +25,7 @@ private:
 	void sphereTest();
 	void cylinderTest();
 	void rectangleTest();
+	void circleTest();
 
 
 	ec::Window* m_window;

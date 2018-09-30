@@ -3,6 +3,7 @@
 #include "EC3D/Common/Common.h"
 
 #include "EC3D/Core/DynamicGeometry.h"
+#include "EC3D/Core/CubeGeometry.h"
 
 namespace ec
 {
@@ -11,7 +12,7 @@ namespace ec
 	class EC3D_DECLSPEC DynamicLineGeometry : public DynamicGeometry
 	{
 	public:
-		explicit DynamicLineGeometry(Node* start, Node* end, float lineWidth = 1.0f);
+		explicit DynamicLineGeometry(Node* start, Node* end, float lineWidth = 0.05f);
 		~DynamicLineGeometry();
 
 		/* Start node access */
@@ -27,10 +28,12 @@ namespace ec
 		float getLineWidth() const;
 
 	protected:
-
-		void beginRender() override;
 		void onRender() override;
-		void endRender() override;
+
+		void init();
+		bool initVertices();
+		void initTexCoords();
+		void initIndices();
 
 	private:
 		Node* m_start;

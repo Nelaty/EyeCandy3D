@@ -2,6 +2,7 @@
 #include "EC3D/Core/InputListener.h"
 
 #include <algorithm>
+#include <GLFW/glfw3.h>
 
 namespace ec
 {	
@@ -60,7 +61,7 @@ namespace ec
 		clearEvents();
 	}
 
-	void InputObservable::setLastPrevMouseEvent(const MouseEvent& event)
+	void InputObservable::setPrevMouseEvent(const MouseEvent& event)
 	{
 		m_prevMouseEvent = event;
 	}
@@ -92,19 +93,32 @@ namespace ec
 
 	ec::InputEvent InputObservable::prepareEvent(const InputEvent& event)
 	{
-		auto result = event;
+		auto preparedEvent = event;
 
+		preparedEvent.m_timestamp = glfwGetTime();
+	
 		switch(event.m_type)
 		{
 			case InputType::mouse_move:
 			{
-				setLastPrevMouseEvent(event.m_event.m_mouse);
+				auto& mouseEvent = preparedEvent.m_event.m_mouse;
+				mouseEvent.m_dx = mouseEvent.m_x - m_prevMouseEvent.m_x;
+				mouseEvent.m_dy = mouseEvent.m_y - m_prevMouseEvent.m_y;
+				mouseEvent.m_button = m_prevMouseEvent.m_button;
+				mouseEvent.m_mods = m_prevMouseEvent.m_mods;
+				mouseEvent.m_pressure = m_prevMouseEvent.m_pressure;
+
+				setPrevMouseEvent(event.m_event.m_mouse);
 				break;
 			}
 			case InputType::mouse_button_released:
 			case InputType::mouse_button_pressed:
 			{
-				setLastPrevMouseEvent(event.m_event.m_mouse);
+				auto& mouseEvent = preparedEvent.m_event.m_mouse;
+				mouseEvent.m_x = m_prevMouseEvent.m_x;
+				mouseEvent.m_y = m_prevMouseEvent.m_y;
+
+				setPrevMouseEvent(event.m_event.m_mouse);
 				break;
 			}
 			case InputType::key_pressed:
@@ -133,7 +147,7 @@ namespace ec
 			}
 		}
 
-		return result;
+		return preparedEvent;
 	}
 
 	void InputObservable::clearEvents()

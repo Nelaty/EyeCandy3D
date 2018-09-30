@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-namespace utl
+namespace ec
 {
 	FileLogger::FileLogger()
 		: m_indentationFill{' '}

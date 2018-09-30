@@ -163,7 +163,7 @@ namespace ec
 		m_up = glm::normalize(rot * m_up);
 	}
 
-	void Transform3D::rotate(float angle, const glm::vec3& axis)
+	void Transform3D::rotate(const float angle, const glm::vec3& axis)
 	{
 		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
@@ -211,6 +211,12 @@ namespace ec
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
 	}
 
+	void Transform3D::setRotation(const glm::mat3& rotationMatrix)
+	{
+		m_up = glm::normalize(rotationMatrix[1]);
+		m_forwardVector = glm::normalize(rotationMatrix[2]);
+	}
+
 	const glm::vec3& Transform3D::getScale() const
 	{
 		return m_scale;
@@ -236,7 +242,12 @@ namespace ec
 		m_scale *= val;
 	}
 
-	void Transform3D::scale(float sx, float sy, float sz)
+	void Transform3D::scale(const float uniform)
+	{
+		m_scale *= uniform;
+	}
+
+	void Transform3D::scale(const float sx, const float sy, const float sz)
 	{
 		m_scale.x *= sx;
 		m_scale.y *= sy;
@@ -268,6 +279,13 @@ namespace ec
 		m_scale.x = sx;
 		m_scale.y = sy;
 		m_scale.z = sz;
+	}
+
+	void Transform3D::setScale(const float uniform)
+	{
+		m_scale.x = uniform;
+		m_scale.y = uniform;
+		m_scale.z = uniform;
 	}
 
 	void Transform3D::setScaleX(const float sx)

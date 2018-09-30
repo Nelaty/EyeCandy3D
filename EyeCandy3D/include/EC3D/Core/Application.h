@@ -5,8 +5,10 @@
 #include <memory>
 #include <map>
 #include <string>
+#include <functional>
 
 #include <type_traits>
+#include "WindowCreationHints.h"
 
 namespace ec
 {
@@ -37,6 +39,9 @@ namespace ec
 		/** Should be called to start the application */
 		virtual void startMainLoop();
 
+		/** Stop the application. */
+		virtual void kill();
+
 		/** Update all windows */
 		virtual void tick();
 		/** Render all windows */
@@ -46,13 +51,18 @@ namespace ec
 		virtual bool initImpl();
 
 		/** Initialize OpenGL. */
-		void initOpenGl();
+		static void initOpenGl();
 
 		/** Main loop function implementation */
 		virtual void mainLoopImpl();
 
 		/** Print the versions of used libraries to console. */
-		void printVersions() const;
+		static void printVersions();
+
+		/** Set the call back for when a new monitor connects. */
+		static void setMonitorConnectedCallback(const std::function<void(GLFWmonitor*)>& cb);
+		/** Set the call back for when a monitor disconnects. */
+		static void setMonitorDisconnectedCallback(const std::function<void(GLFWmonitor*)>& cb);
 
 		/**
 		 * Create a new window and add it to the current list of windows.
@@ -61,6 +71,7 @@ namespace ec
 		 * \param height Height of the window in pixels.
 		 * \param title Title of the window.
 		 * \param name Identifier of the window.
+		 * \param hints Hints for the window to be created.
 		 * \return nullptr if a window with the given name already exists, pointer to the newly created window otherwise.
 		 */
 		template<class WindowClass>
@@ -69,13 +80,27 @@ namespace ec
 		createWindow(unsigned int width,
 		             unsigned int height,
 		             const std::string& title,
-		             const std::string& name);
+		             const std::string& name,
+					 WindowCreationHints hints = WindowCreationHints());
 
+	protected:
+		/** Destroy all windows, which shall be closed. */
+		virtual void closeDeadWindows();
+
+		/**
+		* The monitor callback is called when a monitor is connected or
+		* disconnected.
+		*/
+		static void monitorCallback(GLFWmonitor* monitor, int event);
+	
 	private:
 		/** Initialize this application. */
 		void init();
 		/** Cleanup remaining resources. */
 		static void cleanup();
+
+		static std::function<void(GLFWmonitor*)> s_monitorConnectedCallback;
+		static std::function<void(GLFWmonitor*)> s_monitorDisconnectedCallback;
 
 		bool m_running;
 
@@ -85,9 +110,11 @@ namespace ec
 	template <class WindowClass>
 	typename std::enable_if<std::is_constructible<
 		WindowClass, unsigned int, unsigned int, const std::string&>::value, WindowClass>::type*
-	Application::createWindow(
-		unsigned width, unsigned height, const std::string& title,
-		const std::string& name)
+	Application::createWindow(unsigned width, 
+							  unsigned height, 
+							  const std::string& title,
+							  const std::string& name,
+							  WindowCreationHints hints)
 	{
 		using WindowClass_Ptr = std::unique_ptr<WindowClass>;
 
@@ -98,6 +125,7 @@ namespace ec
 			return nullptr;
 		}
 
+		hints.setHints();
 		WindowClass_Ptr window = std::make_unique<WindowClass>(width, height, title);
 		m_windows[name] = std::move(window);
 

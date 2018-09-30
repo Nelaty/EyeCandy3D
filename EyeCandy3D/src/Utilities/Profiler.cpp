@@ -2,7 +2,7 @@
 
 #include <chrono>
 
-namespace utl
+namespace ec
 {
 	namespace
 	{
@@ -71,7 +71,7 @@ namespace utl
 		}
 	}
 
-	utl::ProfilingPrecision ProfilingData::getPrecision() const
+	ec::ProfilingPrecision ProfilingData::getPrecision() const
 	{
 		return m_precision;
 	}

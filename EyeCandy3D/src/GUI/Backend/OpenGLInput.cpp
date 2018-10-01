@@ -4,7 +4,6 @@
 #include <GLFW/glfw3.h>
 #include "EC3D/Core/Mouse.h"
 #include "EC3D/Core/Keyboard.h"
-#include "../../../../../../EyeCandy3D/External/Agui-master/include/Agui/EventArgs.hpp"
 
 namespace ec
 {

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{6F6F4863-B81B-48FC-AD56-DA802F05363A}</ProjectGuid>
+    <RootNamespace>Agui</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <TargetName>agui</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <TargetName>agui</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <TargetName>agui</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <TargetName>agui</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./include/</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./include/</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./include/</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./include/</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Agui\ActionEvent.hpp" />
+    <ClInclude Include="include\Agui\ActionListener.hpp" />
+    <ClInclude Include="include\Agui\Agui.hpp" />
+    <ClInclude Include="include\Agui\BaseTypes.hpp" />
+    <ClInclude Include="include\Agui\BlinkingEvent.hpp" />
+    <ClInclude Include="include\Agui\BorderLayout.hpp" />
+    <ClInclude Include="include\Agui\Clipboard\Clipboard.hpp" />
+    <ClInclude Include="include\Agui\Clipboard\OSXClipboard.hpp" />
+    <ClInclude Include="include\Agui\Clipboard\WinClipboard.hpp" />
+    <ClInclude Include="include\Agui\Color.hpp" />
+    <ClInclude Include="include\Agui\CursorProvider.hpp" />
+    <ClInclude Include="include\Agui\Dimension.hpp" />
+    <ClInclude Include="include\Agui\EmptyWidget.hpp" />
+    <ClInclude Include="include\Agui\Enumerations.hpp" />
+    <ClInclude Include="include\Agui\EventArgs.hpp" />
+    <ClInclude Include="include\Agui\FlowLayout.hpp" />
+    <ClInclude Include="include\Agui\FocusListener.hpp" />
+    <ClInclude Include="include\Agui\FocusManager.hpp" />
+    <ClInclude Include="include\Agui\Font.hpp" />
+    <ClInclude Include="include\Agui\FontLoader.hpp" />
+    <ClInclude Include="include\Agui\Graphics.hpp" />
+    <ClInclude Include="include\Agui\GridLayout.hpp" />
+    <ClInclude Include="include\Agui\Gui.hpp" />
+    <ClInclude Include="include\Agui\Image.hpp" />
+    <ClInclude Include="include\Agui\ImageLoader.hpp" />
+    <ClInclude Include="include\Agui\Input.hpp" />
+    <ClInclude Include="include\Agui\KeyboardListener.hpp" />
+    <ClInclude Include="include\Agui\Layout.hpp" />
+    <ClInclude Include="include\Agui\MouseListener.hpp" />
+    <ClInclude Include="include\Agui\Platform.hpp" />
+    <ClInclude Include="include\Agui\Point.hpp" />
+    <ClInclude Include="include\Agui\Rectangle.hpp" />
+    <ClInclude Include="include\Agui\ResizableBorderLayout.hpp" />
+    <ClInclude Include="include\Agui\ResizableText.hpp" />
+    <ClInclude Include="include\Agui\SelectionListener.hpp" />
+    <ClInclude Include="include\Agui\TableLayout.hpp" />
+    <ClInclude Include="include\Agui\TapListener.hpp" />
+    <ClInclude Include="include\Agui\TopContainer.hpp" />
+    <ClInclude Include="include\Agui\Transform.hpp" />
+    <ClInclude Include="include\Agui\UTF8.hpp" />
+    <ClInclude Include="include\Agui\Widget.hpp" />
+    <ClInclude Include="include\Agui\WidgetListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Button\Button.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Button\ButtonGroup.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Button\ButtonListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\CheckBox\CheckBox.hpp" />
+    <ClInclude Include="include\Agui\Widgets\CheckBox\CheckBoxListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\DropDown\DropDown.hpp" />
+    <ClInclude Include="include\Agui\Widgets\DropDown\DropDownListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Frame\Frame.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Frame\FrameListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\ImageWidget\ImageWidget.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Label\Label.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Label\LabelListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\ListBox\ListBox.hpp" />
+    <ClInclude Include="include\Agui\Widgets\ListBox\ListBoxListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\PopUp\PopUpMenu.hpp" />
+    <ClInclude Include="include\Agui\Widgets\PopUp\PopUpMenuItem.hpp" />
+    <ClInclude Include="include\Agui\Widgets\RadioButton\RadioButton.hpp" />
+    <ClInclude Include="include\Agui\Widgets\RadioButton\RadioButtonGroup.hpp" />
+    <ClInclude Include="include\Agui\Widgets\RadioButton\RadioButtonListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\ScrollBar\HScrollBar.hpp" />
+    <ClInclude Include="include\Agui\Widgets\ScrollBar\HScrollBarListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\ScrollBar\VScrollBar.hpp" />
+    <ClInclude Include="include\Agui\Widgets\ScrollBar\VScrollBarListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\ScrollPane\ScrollPane.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Slider\Slider.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Slider\SliderListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Tab\Tab.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Tab\TabbedPane.hpp" />
+    <ClInclude Include="include\Agui\Widgets\Tab\TabbedPaneListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\TextBox\ExtendedTextBox.hpp" />
+    <ClInclude Include="include\Agui\Widgets\TextBox\TextBox.hpp" />
+    <ClInclude Include="include\Agui\Widgets\TextBox\TextBoxListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\TextField\TextField.hpp" />
+    <ClInclude Include="include\Agui\Widgets\TextField\TextFieldListener.hpp" />
+    <ClInclude Include="include\Agui\Widgets\ToolTip\ToolTip.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Agui\ActionEvent.cpp" />
+    <ClCompile Include="src\Agui\ActionListener.cpp" />
+    <ClCompile Include="src\Agui\BaseTypes.cpp" />
+    <ClCompile Include="src\Agui\BlinkingEvent.cpp" />
+    <ClCompile Include="src\Agui\BorderLayout.cpp" />
+    <ClCompile Include="src\Agui\Clipboard\Clipboard.cpp" />
+    <ClCompile Include="src\Agui\Clipboard\WinClipboard.cpp" />
+    <ClCompile Include="src\Agui\Color.cpp" />
+    <ClCompile Include="src\Agui\CursorProvider.cpp" />
+    <ClCompile Include="src\Agui\Dimension.cpp" />
+    <ClCompile Include="src\Agui\EmptyWidget.cpp" />
+    <ClCompile Include="src\Agui\EventArgs.cpp" />
+    <ClCompile Include="src\Agui\FlowLayout.cpp" />
+    <ClCompile Include="src\Agui\FocusListener.cpp" />
+    <ClCompile Include="src\Agui\FocusManager.cpp" />
+    <ClCompile Include="src\Agui\Font.cpp" />
+    <ClCompile Include="src\Agui\Graphics.cpp" />
+    <ClCompile Include="src\Agui\GridLayout.cpp" />
+    <ClCompile Include="src\Agui\Gui.cpp" />
+    <ClCompile Include="src\Agui\Image.cpp" />
+    <ClCompile Include="src\Agui\Input.cpp" />
+    <ClCompile Include="src\Agui\KeyboardListener.cpp" />
+    <ClCompile Include="src\Agui\Layout.cpp" />
+    <ClCompile Include="src\Agui\MouseListener.cpp" />
+    <ClCompile Include="src\Agui\Point.cpp" />
+    <ClCompile Include="src\Agui\Rectangle.cpp" />
+    <ClCompile Include="src\Agui\ResizableBorderLayout.cpp" />
+    <ClCompile Include="src\Agui\ResizableText.cpp" />
+    <ClCompile Include="src\Agui\SelectionListener.cpp" />
+    <ClCompile Include="src\Agui\TableLayout.cpp" />
+    <ClCompile Include="src\Agui\TapListener.cpp" />
+    <ClCompile Include="src\Agui\TopContainer.cpp" />
+    <ClCompile Include="src\Agui\Transform.cpp" />
+    <ClCompile Include="src\Agui\Widget.cpp" />
+    <ClCompile Include="src\Agui\WidgetListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Button\Button.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Button\ButtonGroup.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Button\ButtonListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\CheckBox\CheckBox.cpp" />
+    <ClCompile Include="src\Agui\Widgets\CheckBox\CheckBoxListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\DropDown\DropDown.cpp" />
+    <ClCompile Include="src\Agui\Widgets\DropDown\DropDownListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Frame\Frame.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Frame\FrameListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\ImageWidget\ImageWidget.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Label\Label.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Label\LabelListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\ListBox\ListBox.cpp" />
+    <ClCompile Include="src\Agui\Widgets\ListBox\ListBoxListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\PopUp\PopUpMenu.cpp" />
+    <ClCompile Include="src\Agui\Widgets\PopUp\PopUpMenuItem.cpp" />
+    <ClCompile Include="src\Agui\Widgets\RadioButton\RadioButton.cpp" />
+    <ClCompile Include="src\Agui\Widgets\RadioButton\RadioButtonGroup.cpp" />
+    <ClCompile Include="src\Agui\Widgets\RadioButton\RadioButtonListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\ScrollBar\HScrollBar.cpp" />
+    <ClCompile Include="src\Agui\Widgets\ScrollBar\HScrollBarListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\ScrollBar\VScrollBar.cpp" />
+    <ClCompile Include="src\Agui\Widgets\ScrollBar\VScrollBarListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\ScrollPane\ScrollPane.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Slider\Slider.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Slider\SliderListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Tab\Tab.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Tab\TabbedPane.cpp" />
+    <ClCompile Include="src\Agui\Widgets\Tab\TabbedPaneListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\TextBox\ExtendedTextBox.cpp" />
+    <ClCompile Include="src\Agui\Widgets\TextBox\TextBox.cpp" />
+    <ClCompile Include="src\Agui\Widgets\TextBox\TextBoxListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\TextField\TextField.cpp" />
+    <ClCompile Include="src\Agui\Widgets\TextField\TextFieldListener.cpp" />
+    <ClCompile Include="src\Agui\Widgets\ToolTip\ToolTip.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

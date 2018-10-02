@@ -43,7 +43,7 @@
     <ClInclude Include="include\EC3D\GUI\Listener\GenericLabelListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericListBoxListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericRadioButtonListener.h" />
-    <ClInclude Include="include\EC3D\GUI\Listener\GenericScrollBarListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericHScrollBarListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericSliderListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTabbedPaneListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTextBoxListener.h" />
@@ -160,7 +160,7 @@
     <ClCompile Include="src\GUI\Listener\GenericLabelListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericListBoxListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericRadioButtonListener.cpp" />
-    <ClCompile Include="src\GUI\Listener\GenericScrollBarListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericHScrollBarListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericSliderListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericTabbedPaneListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericTextBoxListener.cpp" />

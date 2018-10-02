@@ -150,6 +150,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\ExampleGui.cpp" />
     <ClCompile Include="src\ExampleScene.cpp" />
     <ClCompile Include="src\ExampleWindow.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -158,6 +159,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\ExampleGui.h" />
     <ClInclude Include="src\ExampleScene.h" />
     <ClInclude Include="src\ExampleWindow.h" />
   </ItemGroup>

@@ -10,6 +10,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ExampleWindow.cpp" />
     <ClCompile Include="src\ExampleScene.cpp" />
+    <ClCompile Include="src\ExampleGui.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -17,5 +18,6 @@
   <ItemGroup>
     <ClInclude Include="src\ExampleWindow.h" />
     <ClInclude Include="src\ExampleScene.h" />
+    <ClInclude Include="src\ExampleGui.h" />
   </ItemGroup>
 </Project>

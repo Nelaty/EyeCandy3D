@@ -14,9 +14,12 @@ namespace ec
 		explicit RectangleGeometry(float width, float height);
 		virtual ~RectangleGeometry();
 
+		/** Change rectangle dimensions */
 		void init(float width, float height);
 
+		/** Get the width of the rectangle */
 		float getWidth() const;
+		/** Get the height of the rectangle */
 		float getHeight() const;
 
 	private:

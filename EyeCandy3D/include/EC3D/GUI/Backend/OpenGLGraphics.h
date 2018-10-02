@@ -1,12 +1,18 @@
 #pragma once
 #include <GL/glew.h>
 #include "Agui/Graphics.hpp"
+
 #include "EC3D/Common/Common.h"
 #include "EC3D/Gui/GuiRenderContext.h"
+#include "EC3D/Gui/GuiPrimitiveRenderer.h"
+
+#include "EC3D/Core/RectangleGeometry.h"
+#include "EC3D/Core/CircleGeometry.h"
 
 #include <corecrt_math_defines.h>
 
-#include "EC3D/Core/RectangleGeometry.h"
+
+#include   <memory>
 
 /**
  * OpenGL GUI back end class for graphics and drawing.
@@ -65,16 +71,16 @@ namespace ec
 	protected:
 		void setClippingRectangle(const agui::Rectangle &rect) override;
 
+		void initGeometries();
+
 		Camera* m_camera;
 
-		agui::Rectangle m_clipping;
-		/////////////////////////////////////
-		// TEST
-		glm::mat4 m_rectModel;
-		RectangleGeometry* m_rectangleGeo;
-		/////////////////////////////////////
-
 		GuiRenderContext m_context;
+		agui::Rectangle m_clippingRect;
+	
+		GuiPrimitiveRenderer m_primitiveRenderer;
+		std::unique_ptr<RectangleGeometry> m_rectangleGeometry;
+		std::unique_ptr<CircleGeometry> m_circleGeometry;
 
 		static constexpr int s_circleStepsNum = 20;
 		static constexpr float s_circleStep = 2 * M_PI / s_circleStepsNum;

@@ -1,4 +1,6 @@
-#include "EC3D/GUI/Backend/OpenGLGraphics.h"
+#include "EC3D/Gui/Backend/OpenGLGraphics.h"
+#include "EC3D/Gui/Backend/OpenGLImage.h"
+#include "EC3D/Gui/GuiShaderInfoObject.h"
 
 #include "EC3D/Core/Camera.h"
 #include "EC3D/Core/Viewport.h"
@@ -14,7 +16,7 @@ namespace ec
 	OpenGLGraphics::OpenGLGraphics(Camera* camera)
 		: m_camera{camera}
 	{
-		m_rectangleGeo = new RectangleGeometry(2.0f);
+		initGeometries();
 	}
 
 	OpenGLGraphics::~OpenGLGraphics()
@@ -28,6 +30,7 @@ namespace ec
 			shader->bind();
 
 			auto dimensions = getDisplaySize();
+			auto viewSize = m_camera->getViewport().getSize();
 			/*const auto mat = glm::ortho(0,
 										dimensions.getWidth(),
 										dimensions.getHeight(),
@@ -37,9 +40,10 @@ namespace ec
 			*/
 			shader->setInt("uWindowWidth", dimensions.getWidth());
 			shader->setInt("uWindowHeight", dimensions.getHeight());
-			
+
 			glViewport(0, 0,
-					   dimensions.getWidth(), dimensions.getHeight());
+					   dimensions.getWidth(),
+					   dimensions.getHeight());
 		}
 	}
 
@@ -77,6 +81,7 @@ namespace ec
 		auto width = 0;
 		auto height = 0;
 		auto* context = glfwGetCurrentContext();
+
 		if(context)
 		{
 			glfwGetFramebufferSize(context, &width, &height);
@@ -92,6 +97,7 @@ namespace ec
 								   const agui::Dimension &regionSize,
 								   const float &opacity)
 	{
+		const auto* image = static_cast<const OpenGLImage*>(bmp);
 
 	}
 
@@ -99,6 +105,7 @@ namespace ec
 								   const agui::Point &position, 
 								   const float &opacity)
 	{
+		const auto* image = static_cast<const OpenGLImage*>(bmp);
 
 	}
 
@@ -109,6 +116,8 @@ namespace ec
 										 const agui::Dimension &scale, 
 										 const float &opacity)
 	{
+		const auto* image = static_cast<const OpenGLImage*>(bmp);
+
 
 	}
 
@@ -136,21 +145,15 @@ namespace ec
 	void OpenGLGraphics::drawFilledRectangle(const agui::Rectangle &rect,
 											 const agui::Color &color)
 	{
-		/*m_rectModel = glm::mat4(1);
-		m_rectModel = glm::translate(m_rectModel, glm::vec3(rect.getX(), rect.getY(), 0));
-		m_rectModel = glm::scale(m_rectModel, glm::vec3(rect.getWidth(), rect.getHeight(), 1));*/
+		GuiShaderInfoObject obj;
+		obj.m_position = {rect.getX(), rect.getY()};
+		obj.m_size = {rect.getWidth(), rect.getHeight()};
+		obj.m_clippingRect = m_clippingRect;
+		obj.m_color = {color.getR(), color.getG(), color.getB(), color.getA()};
 
-		glm::vec2 position(rect.getX() + rect.getWidth() + m_clipping.getX() * 2, 
-						   rect.getY() + -rect.getHeight() + m_clipping.getY() * 2);
-
-		//m_context.m_guiShader->setMat4("model", m_rectModel);
-		m_context.m_guiShader->setVec2("uPosition", position);
-		m_context.m_guiShader->setVec2("uScale", glm::vec2(rect.getWidth(), rect.getHeight()));
-		m_context.m_guiShader->setVec4("uColor", glm::vec4(color.getR(), color.getG(), color.getB(), color.getA()));
-		//m_context.m_guiShader->unbind();
-
-
-		m_rectangleGeo->render();
+		m_primitiveRenderer.render(m_context.m_guiShader,
+								   obj,
+								   m_rectangleGeometry.get());
 	}
 
 	void OpenGLGraphics::drawPixel(const agui::Point &point,
@@ -160,7 +163,7 @@ namespace ec
 	}
 
 	void OpenGLGraphics::drawCircle(const agui::Point &center, 
-									float radius, 
+									const float radius, 
 									const agui::Color &color)
 	{
 		const float x = center.getX();
@@ -190,22 +193,18 @@ namespace ec
 	}
 
 	void OpenGLGraphics::drawFilledCircle(const agui::Point &center,
-										  float radius, 
+										  const float radius, 
 										  const agui::Color &color)
 	{
-		const float x = center.getX();
-		const float y = center.getY();
+		GuiShaderInfoObject obj;
+		obj.m_position = {center.getX(), center.getY()};
+		obj.m_size = {radius, radius};
+		obj.m_clippingRect = m_clippingRect;
+		obj.m_color = {color.getR(), color.getG(), color.getB(), color.getA()};
 
-		glBegin(GL_TRIANGLE_FAN);
-		glColor4f(color.getR(), color.getG(), color.getB(), color.getA());
-		glVertex2f(x, y);
-
-		for(auto i = 0; i < s_circleStepsNum; ++i)
-		{
-			const auto angle = i * s_circleStep;
-			glVertex2f(x + cos(angle) * radius, y + sin(angle) * radius);
-		}
-		glEnd();
+		m_primitiveRenderer.render(m_context.m_guiShader,
+								   obj,
+								   m_circleGeometry.get());
 	}
 
 	void OpenGLGraphics::drawLine(const agui::Point &start,
@@ -231,7 +230,12 @@ namespace ec
 
 	void OpenGLGraphics::setClippingRectangle(const agui::Rectangle &rect)
 	{
-		m_clipping = rect;
+		m_clippingRect = rect;
 	}
 
+	void OpenGLGraphics::initGeometries()
+	{
+		m_rectangleGeometry = std::make_unique<RectangleGeometry>(2.0f);
+		m_circleGeometry = std::make_unique<CircleGeometry>(1.0f, 20);
+	}
 }

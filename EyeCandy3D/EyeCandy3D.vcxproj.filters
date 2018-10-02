@@ -83,9 +83,23 @@
     <ClInclude Include="include\EC3D\Core\WindowCreationHints.h" />
     <ClInclude Include="include\EC3D\GUI\GuiRenderer.h" />
     <ClInclude Include="include\EC3D\GUI\GuiRenderContext.h" />
-    <ClInclude Include="include\EC3D\GUI\GuiPrimitive.h" />
     <ClInclude Include="include\EC3D\Core\CircleGeometry.h" />
     <ClInclude Include="include\EC3D\Core\LineGeometry.h" />
+    <ClInclude Include="include\EC3D\GUI\GuiPrimitiveRenderer.h" />
+    <ClInclude Include="include\EC3D\GUI\GuiShaderInfoObject.h" />
+    <ClInclude Include="include\EC3D\Core\LineStripGeometry.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericButtonListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericCheckBoxListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericDropDownListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericFrameListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericLabelListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericListBoxListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericRadioButtonListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericScrollBarListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericSliderListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericTabbedPaneListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericTextBoxListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericTextFieldListener.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -142,8 +156,22 @@
     <ClCompile Include="src\Core\RectangleGeometry.cpp" />
     <ClCompile Include="src\Core\Shader\ShaderTimed.cpp" />
     <ClCompile Include="src\Core\WindowCreationHints.cpp" />
-    <ClCompile Include="src\Core\GuiRenderer.cpp" />
     <ClCompile Include="src\Core\CircleGeometry.cpp" />
     <ClCompile Include="src\Core\LineGeometry.cpp" />
+    <ClCompile Include="src\GUI\GuiRenderer.cpp" />
+    <ClCompile Include="src\GUI\GuiPrimitiveRenderer.cpp" />
+    <ClCompile Include="src\Core\LineStripGeometry.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericButtonListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericDropDownListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericCheckBoxListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericFrameListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericLabelListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericListBoxListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericRadioButtonListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericScrollBarListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericSliderListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericTabbedPaneListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericTextBoxListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericTextFieldListener.cpp" />
   </ItemGroup>
 </Project>

@@ -47,6 +47,8 @@ namespace ec
 
 		/** Get the OpenGl graphics handler. */
 		GraphicsHandler_Type* getGraphicsHandler() const;
+		/** Get the OpenGl input handler. */
+		Controller_Type* getInputHandler() const;
 
 		/** Enables the gui to receive events. */
 		void registerInputListener() const;
@@ -54,8 +56,6 @@ namespace ec
 		void unregisterInputListener() const;
 
 	private:
-		void initTestGui();
-
 		Camera* m_camera;
 		Window* m_window;
 

@@ -10,8 +10,8 @@ namespace ec
 
 	void DynamicGeometry::beginRender()
 	{
-		update();
 		__super::beginRender();
+		update();
 	}
 
 	void DynamicGeometry::update()

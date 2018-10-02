@@ -25,7 +25,7 @@ namespace ec
 		 * Passes vertex and index data to the GPU. 
 		 * \return False if buffers are already initialized, true otherwise.
 		 */
-		bool initBufferObjects(GLenum usage = GL_DYNAMIC_COPY);
+		bool initBufferObjects(GLenum usage = GL_STATIC_DRAW);
 
 		/** 
 		 * Check if buffer objects are initialized.

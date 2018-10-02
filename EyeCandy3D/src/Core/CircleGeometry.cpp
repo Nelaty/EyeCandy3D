@@ -23,9 +23,9 @@ namespace ec
 		return m_sectionCount;
 	}
 
-	void CircleGeometry::init(float radius, int sectionCount)
+	void CircleGeometry::init(const float radius, const int sectionCount)
 	{
-		assert(sectionCount >= 3);
+		assert(sectionCount > 2);
 		assert(radius > 0.0f);
 
 		m_radius = radius;

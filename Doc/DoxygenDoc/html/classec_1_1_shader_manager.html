@@ -66,6 +66,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classec_1_1_shader_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -80,12 +81,25 @@ Collaboration diagram for ec::ShaderManager:</div>
 <div class="center"><img src="classec_1_1_shader_manager__coll__graph.png" border="0" usemap="#ec_1_1_shader_manager_coll__map" alt="Collaboration graph"/></div>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a55148a133c8ead8c61a0370dfba2d132"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a55148a133c8ead8c61a0370dfba2d132">Shader_Ptr</a> = std::unique_ptr&lt; <a class="el" href="classec_1_1_shader.html">Shader</a> &gt;</td></tr>
+<tr class="separator:a55148a133c8ead8c61a0370dfba2d132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43eaaa56325923c6cb6280f83f8ca08a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a43eaaa56325923c6cb6280f83f8ca08a">ShaderTimed_Ptr</a> = std::unique_ptr&lt; <a class="el" href="classec_1_1_shader_timed.html">ShaderTimed</a> &gt;</td></tr>
+<tr class="separator:a43eaaa56325923c6cb6280f83f8ca08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6064ffe0b832b2744eeb83a6aef563b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a6064ffe0b832b2744eeb83a6aef563b7">ShaderManager</a> ()</td></tr>
 <tr class="separator:a6064ffe0b832b2744eeb83a6aef563b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afda0f442e5f6194cfd4253b9def34f0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#afda0f442e5f6194cfd4253b9def34f0a">~ShaderManager</a> ()</td></tr>
 <tr class="separator:afda0f442e5f6194cfd4253b9def34f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5dc847819a1e8d154d8fd0280e488c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#ac5dc847819a1e8d154d8fd0280e488c1">update</a> (float time, float timeDelta)</td></tr>
+<tr class="separator:ac5dc847819a1e8d154d8fd0280e488c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36bdf3a039a5a542ef4ea381ab5613ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a36bdf3a039a5a542ef4ea381ab5613ca">addShader</a> (const std::string &amp;shaderName, <a class="el" href="classec_1_1_shader_manager.html#a55148a133c8ead8c61a0370dfba2d132">Shader_Ptr</a> shader)</td></tr>
+<tr class="separator:a36bdf3a039a5a542ef4ea381ab5613ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a720a9aca4f9dfe076a8f3f7cde58aedf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a720a9aca4f9dfe076a8f3f7cde58aedf">addShader</a> (const std::string &amp;shaderName, <a class="el" href="classec_1_1_shader_manager.html#a43eaaa56325923c6cb6280f83f8ca08a">ShaderTimed_Ptr</a> shader)</td></tr>
+<tr class="separator:a720a9aca4f9dfe076a8f3f7cde58aedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81a63a18679d10c93e75b11ded25e8f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a81a63a18679d10c93e75b11ded25e8f0">addShader</a> (const std::string &amp;shaderName, const std::string &amp;vertPath, const std::string &amp;fragPath, const std::string &amp;geomPath=&quot;&quot;, const std::string &amp;tessCtrlPath=&quot;&quot;, const std::string &amp;tessEvalPath=&quot;&quot;)</td></tr>
 <tr class="separator:a81a63a18679d10c93e75b11ded25e8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e1390b9c15a6809ef07a10bac4112c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_shader.html">Shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#a3e1390b9c15a6809ef07a10bac4112c7">getShader</a> (const char *shaderName) const</td></tr>
@@ -95,6 +109,35 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af42171dd2256a130b056d772e3190da0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader_manager.html#af42171dd2256a130b056d772e3190da0">switchShaderProgram</a> (const char *shaderName) const</td></tr>
 <tr class="separator:af42171dd2256a130b056d772e3190da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a55148a133c8ead8c61a0370dfba2d132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55148a133c8ead8c61a0370dfba2d132">&#9670;&nbsp;</a></span>Shader_Ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classec_1_1_shader_manager.html#a55148a133c8ead8c61a0370dfba2d132">ec::ShaderManager::Shader_Ptr</a> =  std::unique_ptr&lt;<a class="el" href="classec_1_1_shader.html">Shader</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43eaaa56325923c6cb6280f83f8ca08a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43eaaa56325923c6cb6280f83f8ca08a">&#9670;&nbsp;</a></span>ShaderTimed_Ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classec_1_1_shader_manager.html#a43eaaa56325923c6cb6280f83f8ca08a">ec::ShaderManager::ShaderTimed_Ptr</a> =  std::unique_ptr&lt;<a class="el" href="classec_1_1_shader_timed.html">ShaderTimed</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6064ffe0b832b2744eeb83a6aef563b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6064ffe0b832b2744eeb83a6aef563b7">&#9670;&nbsp;</a></span>ShaderManager()</h2>
@@ -147,8 +190,66 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a36bdf3a039a5a542ef4ea381ab5613ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36bdf3a039a5a542ef4ea381ab5613ca">&#9670;&nbsp;</a></span>addShader() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ec::ShaderManager::addShader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shaderName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classec_1_1_shader_manager.html#a55148a133c8ead8c61a0370dfba2d132">Shader_Ptr</a>&#160;</td>
+          <td class="paramname"><em>shader</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add an existing shader. </p>
+
+</div>
+</div>
+<a id="a720a9aca4f9dfe076a8f3f7cde58aedf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a720a9aca4f9dfe076a8f3f7cde58aedf">&#9670;&nbsp;</a></span>addShader() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ec::ShaderManager::addShader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shaderName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classec_1_1_shader_manager.html#a43eaaa56325923c6cb6280f83f8ca08a">ShaderTimed_Ptr</a>&#160;</td>
+          <td class="paramname"><em>shader</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add an existing shader, which will be updated continuously. </p>
+
+</div>
+</div>
 <a id="a81a63a18679d10c93e75b11ded25e8f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81a63a18679d10c93e75b11ded25e8f0">&#9670;&nbsp;</a></span>addShader()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a63a18679d10c93e75b11ded25e8f0">&#9670;&nbsp;</a></span>addShader() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +297,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Try to add a new shader </p>
+<p>Create and add a new shader </p>
 
 </div>
 </div>
@@ -256,9 +357,38 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac5dc847819a1e8d154d8fd0280e488c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5dc847819a1e8d154d8fd0280e488c1">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::ShaderManager::update </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeDelta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Update times of timed shaders and uniforms of all shaders. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/Shader/<a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/src/Core/Shader/<a class="el" href="_shader_manager_8cpp.html">ShaderManager.cpp</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/Shader/<a class="el" href="_shader_manager_8h_source.html">ShaderManager.h</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/Shader/<a class="el" href="_shader_manager_8cpp.html">ShaderManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

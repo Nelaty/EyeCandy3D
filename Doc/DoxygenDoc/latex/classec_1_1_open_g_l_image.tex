@@ -1,0 +1,134 @@
+\hypertarget{classec_1_1_open_g_l_image}{}\section{ec\+:\+:Open\+G\+L\+Image Class Reference}
+\label{classec_1_1_open_g_l_image}\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+
+
+{\ttfamily \#include $<$Open\+G\+L\+Image.\+h$>$}
+
+
+
+Inheritance diagram for ec\+:\+:Open\+G\+L\+Image\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classec_1_1_open_g_l_image__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+:\+:Open\+G\+L\+Image\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classec_1_1_open_g_l_image__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_open_g_l_image_a57aeab8be0ef8c1572b19b0eb4467bf0}{Open\+G\+L\+Image}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_open_g_l_image_ac63966260eada2eb626534b04db40b4a}{Open\+G\+L\+Image}} (const std\+::string \&file\+Name, bool convert\+Mask=false)
+\item 
+virtual \mbox{\hyperlink{classec_1_1_open_g_l_image_ab8d25ab0565a0708cba90722122b7cd3}{$\sim$\+Open\+G\+L\+Image}} ()
+\item 
+int \mbox{\hyperlink{classec_1_1_open_g_l_image_ada8d04e018cf00e02f1ca0f2af00b0e0}{get\+Width}} () const override
+\item 
+int \mbox{\hyperlink{classec_1_1_open_g_l_image_a49fdec86e0dbd02fb682e212905eafd9}{get\+Height}} () const override
+\item 
+agui\+::\+Color \mbox{\hyperlink{classec_1_1_open_g_l_image_aa9212bc11a88995ba31f3e83cfe843f6}{get\+Pixel}} (int x, int y) const override
+\item 
+void \mbox{\hyperlink{classec_1_1_open_g_l_image_a0f10c45c14e5092b1b7b5a57d09f2682}{set\+Pixel}} (int x, int y, const agui\+::\+Color \&color) override
+\item 
+void \mbox{\hyperlink{classec_1_1_open_g_l_image_ac2ac8ff7716843a697e269e172788961}{set\+Texture}} (const \mbox{\hyperlink{classec_1_1_texture}{ec\+::\+Texture}} \&texture, bool auto\+Free=false)
+\item 
+const \mbox{\hyperlink{classec_1_1_texture}{ec\+::\+Texture}} \& \mbox{\hyperlink{classec_1_1_open_g_l_image_a227cab9aa935512020183717b76356c2}{get\+Texture}} () const
+\item 
+bool \mbox{\hyperlink{classec_1_1_open_g_l_image_a5d441f3a70726dcf21ab70e2edbbdf9d}{is\+Auto\+Freeing}} () const override
+\item 
+void \mbox{\hyperlink{classec_1_1_open_g_l_image_acd8aed2a9b14c2bb4f47e2d204895f7e}{free}} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+GL back end for images used by Agui 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_open_g_l_image_a57aeab8be0ef8c1572b19b0eb4467bf0}\label{classec_1_1_open_g_l_image_a57aeab8be0ef8c1572b19b0eb4467bf0}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!Open\+G\+L\+Image@{Open\+G\+L\+Image}}
+\index{Open\+G\+L\+Image@{Open\+G\+L\+Image}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{Open\+G\+L\+Image()}{OpenGLImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ec\+::\+Open\+G\+L\+Image\+::\+Open\+G\+L\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classec_1_1_open_g_l_image_ac63966260eada2eb626534b04db40b4a}\label{classec_1_1_open_g_l_image_ac63966260eada2eb626534b04db40b4a}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!Open\+G\+L\+Image@{Open\+G\+L\+Image}}
+\index{Open\+G\+L\+Image@{Open\+G\+L\+Image}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{Open\+G\+L\+Image()}{OpenGLImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ec\+::\+Open\+G\+L\+Image\+::\+Open\+G\+L\+Image (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{bool}]{convert\+Mask = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_open_g_l_image_ab8d25ab0565a0708cba90722122b7cd3}\label{classec_1_1_open_g_l_image_ab8d25ab0565a0708cba90722122b7cd3}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!````~Open\+G\+L\+Image@{$\sim$\+Open\+G\+L\+Image}}
+\index{````~Open\+G\+L\+Image@{$\sim$\+Open\+G\+L\+Image}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{$\sim$\+Open\+G\+L\+Image()}{~OpenGLImage()}}
+{\footnotesize\ttfamily ec\+::\+Open\+G\+L\+Image\+::$\sim$\+Open\+G\+L\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_open_g_l_image_acd8aed2a9b14c2bb4f47e2d204895f7e}\label{classec_1_1_open_g_l_image_acd8aed2a9b14c2bb4f47e2d204895f7e}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!free@{free}}
+\index{free@{free}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void ec\+::\+Open\+G\+L\+Image\+::free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Free memory allocated by the texture \mbox{\Hypertarget{classec_1_1_open_g_l_image_a49fdec86e0dbd02fb682e212905eafd9}\label{classec_1_1_open_g_l_image_a49fdec86e0dbd02fb682e212905eafd9}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily int ec\+::\+Open\+G\+L\+Image\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the height of the texture. \mbox{\Hypertarget{classec_1_1_open_g_l_image_aa9212bc11a88995ba31f3e83cfe843f6}\label{classec_1_1_open_g_l_image_aa9212bc11a88995ba31f3e83cfe843f6}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!get\+Pixel@{get\+Pixel}}
+\index{get\+Pixel@{get\+Pixel}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{get\+Pixel()}{getPixel()}}
+{\footnotesize\ttfamily agui\+::\+Color ec\+::\+Open\+G\+L\+Image\+::get\+Pixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the color of a pixel at a given position \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]implement \end{DoxyRefDesc}
+\mbox{\Hypertarget{classec_1_1_open_g_l_image_a227cab9aa935512020183717b76356c2}\label{classec_1_1_open_g_l_image_a227cab9aa935512020183717b76356c2}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!get\+Texture@{get\+Texture}}
+\index{get\+Texture@{get\+Texture}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{get\+Texture()}{getTexture()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classec_1_1_texture}{ec\+::\+Texture}} \& ec\+::\+Open\+G\+L\+Image\+::get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the current texture. \mbox{\Hypertarget{classec_1_1_open_g_l_image_ada8d04e018cf00e02f1ca0f2af00b0e0}\label{classec_1_1_open_g_l_image_ada8d04e018cf00e02f1ca0f2af00b0e0}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily int ec\+::\+Open\+G\+L\+Image\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Get the width of the texture. \mbox{\Hypertarget{classec_1_1_open_g_l_image_a5d441f3a70726dcf21ab70e2edbbdf9d}\label{classec_1_1_open_g_l_image_a5d441f3a70726dcf21ab70e2edbbdf9d}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!is\+Auto\+Freeing@{is\+Auto\+Freeing}}
+\index{is\+Auto\+Freeing@{is\+Auto\+Freeing}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{is\+Auto\+Freeing()}{isAutoFreeing()}}
+{\footnotesize\ttfamily bool ec\+::\+Open\+G\+L\+Image\+::is\+Auto\+Freeing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Check if the texture gets automatically deallocated \mbox{\Hypertarget{classec_1_1_open_g_l_image_a0f10c45c14e5092b1b7b5a57d09f2682}\label{classec_1_1_open_g_l_image_a0f10c45c14e5092b1b7b5a57d09f2682}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!set\+Pixel@{set\+Pixel}}
+\index{set\+Pixel@{set\+Pixel}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{set\+Pixel()}{setPixel()}}
+{\footnotesize\ttfamily void ec\+::\+Open\+G\+L\+Image\+::set\+Pixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{const agui\+::\+Color \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Set a pixel of the texture at a given position \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]implement \end{DoxyRefDesc}
+\mbox{\Hypertarget{classec_1_1_open_g_l_image_ac2ac8ff7716843a697e269e172788961}\label{classec_1_1_open_g_l_image_ac2ac8ff7716843a697e269e172788961}} 
+\index{ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}!set\+Texture@{set\+Texture}}
+\index{set\+Texture@{set\+Texture}!ec\+::\+Open\+G\+L\+Image@{ec\+::\+Open\+G\+L\+Image}}
+\subsubsection{\texorpdfstring{set\+Texture()}{setTexture()}}
+{\footnotesize\ttfamily void ec\+::\+Open\+G\+L\+Image\+::set\+Texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_texture}{ec\+::\+Texture}} \&}]{texture,  }\item[{bool}]{auto\+Free = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Set the texture to a given one. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\+Backend/\mbox{\hyperlink{_open_g_l_image_8h}{Open\+G\+L\+Image.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\+Backend/\mbox{\hyperlink{_open_g_l_image_8cpp}{Open\+G\+L\+Image.\+cpp}}\end{DoxyCompactItemize}

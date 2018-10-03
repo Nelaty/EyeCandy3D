@@ -1,4 +1,4 @@
 <map id="ec::Camera" name="ec::Camera">
 <area shape="rect" id="node2" href="$classec_1_1_node.html" title="{ec::Node\n|# m_parent\l# m_children\l# m_drawables\l|+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="14,321,182,575"/>
-<area shape="rect" id="node3" href="$classec_1_1_transform3_d.html" title="{ec::Transform3D\n|# m_up\l# m_position\l# m_forwardVector\l# m_scale\l|+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getLocalMat()\l+ getUpVector()\l+ getForwardVector()\l+ getTranslation()\l+ getTranslationX()\l+ getTranslationY()\land 35 more...\l}" alt="" coords="26,5,170,273"/>
+<area shape="rect" id="node3" href="$classec_1_1_transform3_d.html" title="{ec::Transform3D\n|# m_up\l# m_position\l# m_forwardVector\l# m_scale\l|+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getUpVector()\l+ getForwardVector()\l+ getLocalMat()\l+ setLocalMat()\l+ getTranslation()\l+ getTranslationX()\land 39 more...\l}" alt="" coords="26,5,170,273"/>
 </map>

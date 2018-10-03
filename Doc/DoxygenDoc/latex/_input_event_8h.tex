@@ -1,5 +1,13 @@
-\hypertarget{_input_event_8h}{}\section{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\+Input\+Event.h File Reference}
-\label{_input_event_8h}\index{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\+Input\+Event.\+h@{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\+Input\+Event.\+h}}
+\hypertarget{_input_event_8h}{}\section{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\+Input\+Event.h File Reference}
+\label{_input_event_8h}\index{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\+Input\+Event.\+h@{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\+Input\+Event.\+h}}
+{\ttfamily \#include \char`\"{}E\+C3\+D/\+Common/\+Common.\+h\char`\"{}}\newline
+Include dependency graph for Input\+Event.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{_input_event_8h__incl}
+\end{center}
+\end{figure}
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -29,38 +37,91 @@ struct \mbox{\hyperlink{structec_1_1_input_event}{ec\+::\+Input\+Event}}
 \item 
  \mbox{\hyperlink{namespaceec}{ec}}
 \end{DoxyCompactItemize}
-\subsection*{Enumerations}
+\subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964}{ec\+::\+Input\+Type}} \+: unsigned char \{ \newline
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a03f85558f24cc469dac5df2fdc8fd117}{ec\+::\+Input\+Type\+::mouse\+\_\+move}} = 0, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a6fda8ddfe16d2314d571fd69f5d5e9ff}{ec\+::\+Input\+Type\+::mouse\+\_\+scroll}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a41bc07e96e66c3decc6bcb84741efbd2}{ec\+::\+Input\+Type\+::mouse\+\_\+enter}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a88ad28b301ac29cf34aa69a9ff8dd4c8}{ec\+::\+Input\+Type\+::mouse\+\_\+left}}, 
-\newline
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a8285417800ef72bf8102466fe9e71cff}{ec\+::\+Input\+Type\+::mouse\+\_\+button\+\_\+pressed}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964aacdcff0ecfa7718eae6d7a9cb79f060d}{ec\+::\+Input\+Type\+::mouse\+\_\+button\+\_\+released}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a2ed69833bf8cb33c80eaf0daa892400e}{ec\+::\+Input\+Type\+::joystick}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964ae394504187ed264fde32ad8f24ad7fba}{ec\+::\+Input\+Type\+::key\+\_\+pressed}}, 
-\newline
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a54b6fde34ab4a8893fdd008d95331436}{ec\+::\+Input\+Type\+::key\+\_\+released}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a1cb251ec0d568de6a929b520c4aed8d1}{ec\+::\+Input\+Type\+::text}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a6e9d25362c485bc3c90c818dfac5dc49}{ec\+::\+Input\+Type\+::drop}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964adc3d3b1a336fbbd51585e31c95f45c83}{ec\+::\+Input\+Type\+::resize}}, 
-\newline
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964ac3e76686badae4b6d625c39e41b23521}{ec\+::\+Input\+Type\+::lost\+\_\+focus}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a4a46fc9d3e3456efe6a3980f2f3fbcc0}{ec\+::\+Input\+Type\+::gained\+\_\+focus}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964a349e686330723975502e9ef4f939a5ac}{ec\+::\+Input\+Type\+::closed}}, 
-\mbox{\hyperlink{namespaceec_a5de6bdb8c4b2ed6e590e721ec998f964ae2942a04780e223b215eb8b663cf5353}{ec\+::\+Input\+Type\+::count}}
- \}
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_ae2d697393ea83b34b18ab14eb5dacbca}{ec\+::\+Input\+Type}}
 \item 
-enum \mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719}{ec\+::\+Display\+Orientation}} \{ \newline
-\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719a138734ec961f603af1c8233366d1ec6d}{ec\+::\+Display\+Orientation\+::rotated\+\_\+0}}, 
-\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719aec349ea1d66d24d897e8216bab84c85f}{ec\+::\+Display\+Orientation\+::rotated\+\_\+90}}, 
-\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719ae84f3f92048f8219a04b51d77b6c2d15}{ec\+::\+Display\+Orientation\+::rotated\+\_\+180}}, 
-\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719adab7f6e1e1c34743edbe7724bdfeaac9}{ec\+::\+Display\+Orientation\+::rotated\+\_\+270}}, 
-\newline
-\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719a44eab28cf52a20d532ede6171589aab4}{ec\+::\+Display\+Orientation\+::face\+\_\+up}}, 
-\mbox{\hyperlink{namespaceec_a1492d2e603a780e281848af6a4bad719ab6e43090c35d607589e26c65aa3423a0}{ec\+::\+Display\+Orientation\+::face\+\_\+down}}
- \}
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a7fb336f49377247955ebd3f6658ba50b}{ec\+::mouse\+\_\+scroll}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a7b76ba0c0ae46329abe1fc22115ab729}{ec\+::mouse\+\_\+enter}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a5fd84b2204156e6d2e500dfd83ea2b4b}{ec\+::mouse\+\_\+left}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a4b2a6409d34d7e07233d26b19bf3540c}{ec\+::mouse\+\_\+button\+\_\+pressed}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_af6e3c23e9650c9ecfd41cfd817f1a068}{ec\+::mouse\+\_\+button\+\_\+released}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a48a4c5a1e957c8419028491291e37634}{ec\+::joystick}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a6db9eda8a1039ccbbc883b1156c6c838}{ec\+::key\+\_\+pressed}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a8ec308d52dd60f3bc270fc07a113bd67}{ec\+::key\+\_\+released}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a0bdee24285d69deca899e166b29c0150}{ec\+::text}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_ac1c8382601881db68a89d49d959b3fb8}{ec\+::drop}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a84e452d7f020435b50e2c18e7cdca968}{ec\+::resize}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_af038c649a7c43904c7d37ba129f1b346}{ec\+::lost\+\_\+focus}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a1e2dd185f2ea6b2729b32fec30917a0e}{ec\+::gained\+\_\+focus}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_af316093f3fa4161f332a168bd91d598e}{ec\+::restored}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a5886b41b06c3a2522782c1129b38569d}{ec\+::minimized}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a435bfb057b6ec7278b405d423194057b}{ec\+::window\+\_\+move}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a2a1f0b9f84e0ccf8a264a846b5ca23ff}{ec\+::monitor\+\_\+connected}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_ac7da3b2ff7c2bb148e07798a9e8e51f4}{ec\+::monitor\+\_\+disconnected}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a50f9b2ea9dbfffe311ceb6f857573272}{ec\+::closed}}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{namespaceec_a4dc8d59c4e90842e057344aefde0efbd}{ec\+::count}}
+\item 
+\mbox{\hyperlink{_input_event_8h_a69ce17c829030355847d745e3ca3b9f3}{rotated\+\_\+0}}
+\item 
+\mbox{\hyperlink{_input_event_8h_afc0edc7d9fe8f6bf0477a001aa1fd784}{rotated\+\_\+90}}
+\item 
+\mbox{\hyperlink{_input_event_8h_ad8a60722d2105780e6a0bf49b6ae9d92}{rotated\+\_\+180}}
+\item 
+\mbox{\hyperlink{_input_event_8h_ae68255e4c76543578cba62b7515f6630}{rotated\+\_\+270}}
+\item 
+\mbox{\hyperlink{_input_event_8h_ae437f4c4b41859406faafe5f5b57d32a}{face\+\_\+up}}
 \end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_input_event_8h_ae437f4c4b41859406faafe5f5b57d32a}\label{_input_event_8h_ae437f4c4b41859406faafe5f5b57d32a}} 
+\index{Input\+Event.\+h@{Input\+Event.\+h}!face\+\_\+up@{face\+\_\+up}}
+\index{face\+\_\+up@{face\+\_\+up}!Input\+Event.\+h@{Input\+Event.\+h}}
+\subsubsection{\texorpdfstring{face\+\_\+up}{face\_up}}
+{\footnotesize\ttfamily face\+\_\+up}
+
+\mbox{\Hypertarget{_input_event_8h_a69ce17c829030355847d745e3ca3b9f3}\label{_input_event_8h_a69ce17c829030355847d745e3ca3b9f3}} 
+\index{Input\+Event.\+h@{Input\+Event.\+h}!rotated\+\_\+0@{rotated\+\_\+0}}
+\index{rotated\+\_\+0@{rotated\+\_\+0}!Input\+Event.\+h@{Input\+Event.\+h}}
+\subsubsection{\texorpdfstring{rotated\+\_\+0}{rotated\_0}}
+{\footnotesize\ttfamily rotated\+\_\+0}
+
+\mbox{\Hypertarget{_input_event_8h_ad8a60722d2105780e6a0bf49b6ae9d92}\label{_input_event_8h_ad8a60722d2105780e6a0bf49b6ae9d92}} 
+\index{Input\+Event.\+h@{Input\+Event.\+h}!rotated\+\_\+180@{rotated\+\_\+180}}
+\index{rotated\+\_\+180@{rotated\+\_\+180}!Input\+Event.\+h@{Input\+Event.\+h}}
+\subsubsection{\texorpdfstring{rotated\+\_\+180}{rotated\_180}}
+{\footnotesize\ttfamily rotated\+\_\+180}
+
+\mbox{\Hypertarget{_input_event_8h_ae68255e4c76543578cba62b7515f6630}\label{_input_event_8h_ae68255e4c76543578cba62b7515f6630}} 
+\index{Input\+Event.\+h@{Input\+Event.\+h}!rotated\+\_\+270@{rotated\+\_\+270}}
+\index{rotated\+\_\+270@{rotated\+\_\+270}!Input\+Event.\+h@{Input\+Event.\+h}}
+\subsubsection{\texorpdfstring{rotated\+\_\+270}{rotated\_270}}
+{\footnotesize\ttfamily rotated\+\_\+270}
+
+\mbox{\Hypertarget{_input_event_8h_afc0edc7d9fe8f6bf0477a001aa1fd784}\label{_input_event_8h_afc0edc7d9fe8f6bf0477a001aa1fd784}} 
+\index{Input\+Event.\+h@{Input\+Event.\+h}!rotated\+\_\+90@{rotated\+\_\+90}}
+\index{rotated\+\_\+90@{rotated\+\_\+90}!Input\+Event.\+h@{Input\+Event.\+h}}
+\subsubsection{\texorpdfstring{rotated\+\_\+90}{rotated\_90}}
+{\footnotesize\ttfamily rotated\+\_\+90}
+

@@ -68,6 +68,9 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classec_1_1_application-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ec::Application Class Reference</div>  </div>
@@ -95,29 +98,46 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abe00fd469062e9710bfda9f9d13765f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad541044a8fc0ff8d6c3fc57220109a50"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#ad541044a8fc0ff8d6c3fc57220109a50">startMainLoop</a> ()</td></tr>
 <tr class="separator:ad541044a8fc0ff8d6c3fc57220109a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4c494f47bc187ddc2bb5411aa063a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a2a4c494f47bc187ddc2bb5411aa063a3">kill</a> ()</td></tr>
+<tr class="separator:a2a4c494f47bc187ddc2bb5411aa063a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a036ae53bcbf708c7a01deb199feeccdf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a036ae53bcbf708c7a01deb199feeccdf">tick</a> ()</td></tr>
 <tr class="separator:a036ae53bcbf708c7a01deb199feeccdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fe5dcd06017ba4322eca3adec47e03e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a4fe5dcd06017ba4322eca3adec47e03e">render</a> ()</td></tr>
 <tr class="separator:a4fe5dcd06017ba4322eca3adec47e03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1460d7083c312271285747a7cc03f7e8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a1460d7083c312271285747a7cc03f7e8">initImpl</a> ()</td></tr>
 <tr class="separator:a1460d7083c312271285747a7cc03f7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d6ef43e247b541017fa82e001c42995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a8d6ef43e247b541017fa82e001c42995">initOpenGl</a> ()</td></tr>
-<tr class="separator:a8d6ef43e247b541017fa82e001c42995"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a970bf73d58fbf89647125267d5c54a73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a970bf73d58fbf89647125267d5c54a73">initAgui</a> ()</td></tr>
-<tr class="separator:a970bf73d58fbf89647125267d5c54a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad32692a6e65a00346ab2992eba3a86e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#ad32692a6e65a00346ab2992eba3a86e7">mainLoopImpl</a> ()</td></tr>
 <tr class="separator:ad32692a6e65a00346ab2992eba3a86e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a04a15ddb8e4e2f15d40b6ddb92455e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a6a04a15ddb8e4e2f15d40b6ddb92455e">printVersions</a> () const</td></tr>
-<tr class="separator:a6a04a15ddb8e4e2f15d40b6ddb92455e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a465270af2a0bb6d34b813683bacfa808"><td class="memTemplParams" colspan="2">template&lt;class WindowClass &gt; </td></tr>
-<tr class="memitem:a465270af2a0bb6d34b813683bacfa808"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_constructible&lt; WindowClass, unsigned int, unsigned int, const std::string &amp; &gt;::value, WindowClass &gt;::type *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a465270af2a0bb6d34b813683bacfa808">createWindow</a> (unsigned int width, unsigned int height, const std::string &amp;title, const std::string &amp;name)</td></tr>
-<tr class="separator:a465270af2a0bb6d34b813683bacfa808"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8227078a50aca68da1a340656c52579"><td class="memTemplParams" colspan="2">template&lt;class WindowClass &gt; </td></tr>
-<tr class="memitem:ae8227078a50aca68da1a340656c52579"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_constructible&lt; WindowClass, unsigned int, unsigned int, const std::string &amp; &gt;::value, WindowClass &gt;::type *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#ae8227078a50aca68da1a340656c52579">createWindow</a> (unsigned width, unsigned height, const std::string &amp;title, const std::string &amp;name)</td></tr>
-<tr class="separator:ae8227078a50aca68da1a340656c52579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af103b97a3296f63ec0597756628e26f9"><td class="memTemplParams" colspan="2">template&lt;class WindowClass &gt; </td></tr>
+<tr class="memitem:af103b97a3296f63ec0597756628e26f9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_constructible&lt; WindowClass, unsigned int, unsigned int, const std::string &amp; &gt;::value, WindowClass &gt;::type *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#af103b97a3296f63ec0597756628e26f9">createWindow</a> (unsigned int width, unsigned int height, const std::string &amp;title, const std::string &amp;name, <a class="el" href="structec_1_1_window_creation_hints.html">WindowCreationHints</a> hints=<a class="el" href="structec_1_1_window_creation_hints.html">WindowCreationHints</a>())</td></tr>
+<tr class="separator:af103b97a3296f63ec0597756628e26f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85fa865bee513c973b317edc1ac6ec35"><td class="memTemplParams" colspan="2">template&lt;class WindowClass &gt; </td></tr>
+<tr class="memitem:a85fa865bee513c973b317edc1ac6ec35"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_constructible&lt; WindowClass, unsigned int, unsigned int, const std::string &amp; &gt;::value, WindowClass &gt;::type *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a85fa865bee513c973b317edc1ac6ec35">createWindow</a> (unsigned width, unsigned height, const std::string &amp;title, const std::string &amp;name, <a class="el" href="structec_1_1_window_creation_hints.html">WindowCreationHints</a> hints)</td></tr>
+<tr class="separator:a85fa865bee513c973b317edc1ac6ec35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8d6ef43e247b541017fa82e001c42995"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a8d6ef43e247b541017fa82e001c42995">initOpenGl</a> ()</td></tr>
+<tr class="separator:a8d6ef43e247b541017fa82e001c42995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a329a3b03c23e5aba31bbbb175930dbae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a329a3b03c23e5aba31bbbb175930dbae">printVersions</a> ()</td></tr>
+<tr class="separator:a329a3b03c23e5aba31bbbb175930dbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a3c539d9fef8d51ce3c32b63d11b495"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#a9a3c539d9fef8d51ce3c32b63d11b495">setMonitorConnectedCallback</a> (const std::function&lt; void(GLFWmonitor *)&gt; &amp;cb)</td></tr>
+<tr class="separator:a9a3c539d9fef8d51ce3c32b63d11b495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc0a3dd9509ade9a6297b816d07441d6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#acc0a3dd9509ade9a6297b816d07441d6">setMonitorDisconnectedCallback</a> (const std::function&lt; void(GLFWmonitor *)&gt; &amp;cb)</td></tr>
+<tr class="separator:acc0a3dd9509ade9a6297b816d07441d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ad6a3915f4ea913bf392a03fbd3548d99"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#ad6a3915f4ea913bf392a03fbd3548d99">closeDeadWindows</a> ()</td></tr>
+<tr class="separator:ad6a3915f4ea913bf392a03fbd3548d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:adaeb3f63d8e850d7b83f1c1b61bc73d1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_application.html#adaeb3f63d8e850d7b83f1c1b61bc73d1">monitorCallback</a> (GLFWmonitor *monitor, int event)</td></tr>
+<tr class="separator:adaeb3f63d8e850d7b83f1c1b61bc73d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An application is the main class of a program. ..... </p>
+<div class="textblock"><p>An application is the main class of a program. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="af1e09a0f1b603eab8d3245d8b8075ad5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1e09a0f1b603eab8d3245d8b8075ad5">&#9670;&nbsp;</a></span>Window_Ptr</h2>
@@ -219,8 +239,34 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a465270af2a0bb6d34b813683bacfa808"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a465270af2a0bb6d34b813683bacfa808">&#9670;&nbsp;</a></span>createWindow() <span class="overload">[1/2]</span></h2>
+<a id="ad6a3915f4ea913bf392a03fbd3548d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a3915f4ea913bf392a03fbd3548d99">&#9670;&nbsp;</a></span>closeDeadWindows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::closeDeadWindows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destroy all windows, which shall be closed. </p>
+
+</div>
+</div>
+<a id="af103b97a3296f63ec0597756628e26f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af103b97a3296f63ec0597756628e26f9">&#9670;&nbsp;</a></span>createWindow() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +295,13 @@ template&lt;class WindowClass &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structec_1_1_window_creation_hints.html">WindowCreationHints</a>&#160;</td>
+          <td class="paramname"><em>hints</em> = <code><a class="el" href="structec_1_1_window_creation_hints.html">WindowCreationHints</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -260,7 +312,7 @@ template&lt;class WindowClass &gt; </div>
 </div><div class="memdoc">
 <p>Create a new window and add it to the current list of windows. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">WindowClass</td><td>Needs to be derived from <a class="el" href="classec_1_1_window.html">Window</a>. </td></tr>
+    <tr><td class="paramname">WindowClass</td><td>Needs to have constructor with a signature of: (unsigned, unsigned, const std::string&amp;) </td></tr>
   </table>
   </dd>
 </dl>
@@ -270,6 +322,7 @@ template&lt;class WindowClass &gt; </div>
     <tr><td class="paramname">height</td><td>Height of the window in pixels. </td></tr>
     <tr><td class="paramname">title</td><td>Title of the window. </td></tr>
     <tr><td class="paramname">name</td><td>Identifier of the window. </td></tr>
+    <tr><td class="paramname">hints</td><td>Hints for the window to be created. </td></tr>
   </table>
   </dd>
 </dl>
@@ -277,8 +330,8 @@ template&lt;class WindowClass &gt; </div>
 
 </div>
 </div>
-<a id="ae8227078a50aca68da1a340656c52579"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8227078a50aca68da1a340656c52579">&#9670;&nbsp;</a></span>createWindow() <span class="overload">[2/2]</span></h2>
+<a id="a85fa865bee513c973b317edc1ac6ec35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85fa865bee513c973b317edc1ac6ec35">&#9670;&nbsp;</a></span>createWindow() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,7 +360,13 @@ template&lt;class WindowClass &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structec_1_1_window_creation_hints.html">WindowCreationHints</a>&#160;</td>
+          <td class="paramname"><em>hints</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -316,24 +375,6 @@ template&lt;class WindowClass &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a970bf73d58fbf89647125267d5c54a73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a970bf73d58fbf89647125267d5c54a73">&#9670;&nbsp;</a></span>initAgui()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ec::Application::initAgui </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Initialize Agui GUI-Library. </p>
 
 </div>
 </div>
@@ -368,6 +409,9 @@ template&lt;class WindowClass &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ec::Application::initOpenGl </td>
@@ -376,8 +420,39 @@ template&lt;class WindowClass &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Initialize OpenGL. </p>
+
+</div>
+</div>
+<a id="a2a4c494f47bc187ddc2bb5411aa063a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4c494f47bc187ddc2bb5411aa063a3">&#9670;&nbsp;</a></span>kill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::kill </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stop the application. </p>
 
 </div>
 </div>
@@ -407,19 +482,64 @@ template&lt;class WindowClass &gt; </div>
 
 </div>
 </div>
-<a id="a6a04a15ddb8e4e2f15d40b6ddb92455e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a04a15ddb8e4e2f15d40b6ddb92455e">&#9670;&nbsp;</a></span>printVersions()</h2>
+<a id="adaeb3f63d8e850d7b83f1c1b61bc73d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaeb3f63d8e850d7b83f1c1b61bc73d1">&#9670;&nbsp;</a></span>monitorCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::monitorCallback </td>
+          <td>(</td>
+          <td class="paramtype">GLFWmonitor *&#160;</td>
+          <td class="paramname"><em>monitor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The monitor callback is called when a monitor is connected or disconnected. </p>
+
+</div>
+</div>
+<a id="a329a3b03c23e5aba31bbbb175930dbae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329a3b03c23e5aba31bbbb175930dbae">&#9670;&nbsp;</a></span>printVersions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ec::Application::printVersions </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Print the versions of used libraries to console. </p>
 
@@ -448,6 +568,60 @@ template&lt;class WindowClass &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Render all windows </p>
+
+</div>
+</div>
+<a id="a9a3c539d9fef8d51ce3c32b63d11b495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a3c539d9fef8d51ce3c32b63d11b495">&#9670;&nbsp;</a></span>setMonitorConnectedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::setMonitorConnectedCallback </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(GLFWmonitor *)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the call back for when a new monitor connects. </p>
+
+</div>
+</div>
+<a id="acc0a3dd9509ade9a6297b816d07441d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0a3dd9509ade9a6297b816d07441d6">&#9670;&nbsp;</a></span>setMonitorDisconnectedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Application::setMonitorDisconnectedCallback </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(GLFWmonitor *)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the call back for when a monitor disconnects. </p>
 
 </div>
 </div>
@@ -504,8 +678,8 @@ template&lt;class WindowClass &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_application_8h_source.html">Application.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_application_8cpp.html">Application.cpp</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_application_8h_source.html">Application.h</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_application_8cpp.html">Application.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

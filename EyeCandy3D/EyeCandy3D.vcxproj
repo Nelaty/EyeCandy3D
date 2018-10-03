@@ -36,6 +36,7 @@
     <ClInclude Include="include\EC3D\GUI\GuiRenderContext.h" />
     <ClInclude Include="include\EC3D\GUI\GuiRenderer.h" />
     <ClInclude Include="include\EC3D\GUI\GuiShaderInfoObject.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericActionListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericButtonListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericCheckBoxListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericDropDownListener.h" />
@@ -49,6 +50,7 @@
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTextBoxListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTextFieldListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericVScrollBarListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericWidgetListener.h" />
     <ClInclude Include="include\EC3D\Gui\MiniAgui.h" />
     <ClInclude Include="include\EC3D\Core\Application.h" />
     <ClInclude Include="include\EC3D\Core\Camera.h" />
@@ -154,6 +156,7 @@
     <ClCompile Include="src\Core\Viewport.cpp" />
     <ClCompile Include="src\Core\Window.cpp" />
     <ClCompile Include="src\Core\WindowCreationHints.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericActionListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericButtonListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericCheckBoxListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericDropDownListener.cpp" />
@@ -167,6 +170,7 @@
     <ClCompile Include="src\GUI\Listener\GenericTextBoxListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericTextFieldListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericVScrollBarListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericWidgetListener.cpp" />
     <ClCompile Include="src\Gui\MiniAgui.cpp" />
     <ClCompile Include="src\Gui\Backend\OpenGLCursorProvider.cpp" />
     <ClCompile Include="src\Gui\Backend\OpenGLFont.cpp" />

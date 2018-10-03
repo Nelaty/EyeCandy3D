@@ -101,6 +101,8 @@
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTextBoxListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTextFieldListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericVScrollBarListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericWidgetListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericActionListener.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -175,5 +177,7 @@
     <ClCompile Include="src\GUI\Listener\GenericTextFieldListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericHScrollBarListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericVScrollBarListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericActionListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericWidgetListener.cpp" />
   </ItemGroup>
 </Project>

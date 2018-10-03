@@ -24,11 +24,19 @@ void \mbox{\hyperlink{classec_1_1_timer_a0f712ea9fa17c4657a877b9322219aa3}{reset
 \item 
 void \mbox{\hyperlink{classec_1_1_timer_a9c0d47620b70d0d7f392a9837601dad3}{reset\+Time\+Delta}} ()
 \item 
-double \mbox{\hyperlink{classec_1_1_timer_a70c1b163f49e71696a632f2d43bec957}{get\+Time}} () const
-\item 
 double \mbox{\hyperlink{classec_1_1_timer_a17b6b8d3cf83bb86df9164160b791016}{get\+Time\+Delta}} ()
 \end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classec_1_1_timer_afdd04188d609cf55b9546d32a89f52dc}{get\+Time}} ()
+\item 
+static void \mbox{\hyperlink{classec_1_1_timer_ab1731ad2f23bc4b37a6bc5b061846dd6}{set\+Time}} (double time)
+\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Track the time passed since the timer was initialized last and the time between calls. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classec_1_1_timer_afa10f411221610c507291183b6b6aa56}\label{classec_1_1_timer_afa10f411221610c507291183b6b6aa56}} 
@@ -46,11 +54,11 @@ double \mbox{\hyperlink{classec_1_1_timer_a17b6b8d3cf83bb86df9164160b791016}{get
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_timer_a70c1b163f49e71696a632f2d43bec957}\label{classec_1_1_timer_a70c1b163f49e71696a632f2d43bec957}} 
+\mbox{\Hypertarget{classec_1_1_timer_afdd04188d609cf55b9546d32a89f52dc}\label{classec_1_1_timer_afdd04188d609cf55b9546d32a89f52dc}} 
 \index{ec\+::\+Timer@{ec\+::\+Timer}!get\+Time@{get\+Time}}
 \index{get\+Time@{get\+Time}!ec\+::\+Timer@{ec\+::\+Timer}}
 \subsubsection{\texorpdfstring{get\+Time()}{getTime()}}
-{\footnotesize\ttfamily double ec\+::\+Timer\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily double ec\+::\+Timer\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 Get time since the start of the timer or last reset \mbox{\Hypertarget{classec_1_1_timer_a17b6b8d3cf83bb86df9164160b791016}\label{classec_1_1_timer_a17b6b8d3cf83bb86df9164160b791016}} 
 \index{ec\+::\+Timer@{ec\+::\+Timer}!get\+Time\+Delta@{get\+Time\+Delta}}
@@ -70,9 +78,15 @@ Reset the whole timer \mbox{\Hypertarget{classec_1_1_timer_a9c0d47620b70d0d7f392
 \subsubsection{\texorpdfstring{reset\+Time\+Delta()}{resetTimeDelta()}}
 {\footnotesize\ttfamily void ec\+::\+Timer\+::reset\+Time\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Only reset the time since the last access of time delta 
+Only reset the time since the last access of time delta \mbox{\Hypertarget{classec_1_1_timer_ab1731ad2f23bc4b37a6bc5b061846dd6}\label{classec_1_1_timer_ab1731ad2f23bc4b37a6bc5b061846dd6}} 
+\index{ec\+::\+Timer@{ec\+::\+Timer}!set\+Time@{set\+Time}}
+\index{set\+Time@{set\+Time}!ec\+::\+Timer@{ec\+::\+Timer}}
+\subsubsection{\texorpdfstring{set\+Time()}{setTime()}}
+{\footnotesize\ttfamily void ec\+::\+Timer\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set the timer to a specific time. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\mbox{\hyperlink{_timer_8h}{Timer.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Utilities/\mbox{\hyperlink{_timer_8cpp}{Timer.\+cpp}}\end{DoxyCompactItemize}
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\mbox{\hyperlink{_timer_8h}{Timer.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Utilities/\mbox{\hyperlink{_timer_8cpp}{Timer.\+cpp}}\end{DoxyCompactItemize}

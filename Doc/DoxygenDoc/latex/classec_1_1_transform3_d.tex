@@ -33,11 +33,13 @@ virtual void \mbox{\hyperlink{classec_1_1_transform3_d_a68d259da063ea2aff48720ae
 \item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_a69ce5285f9481b5615c084b9f892fdb8}{get\+Local\+Position}} ()
 \item 
-const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_transform3_d_a8aa0ac4df795971dad499a0d12348d07}{get\+Local\+Mat}} () const
-\item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_af8bdfb3bbc688a9a920ccb4d452d8962}{get\+Up\+Vector}} () const
 \item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_afc4f5c1122a5191ad2a4628a43a76a7c}{get\+Forward\+Vector}} () const
+\item 
+const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_transform3_d_a8aa0ac4df795971dad499a0d12348d07}{get\+Local\+Mat}} () const
+\item 
+void \mbox{\hyperlink{classec_1_1_transform3_d_a5cc1409f0c09910a701dcd294e797498}{set\+Local\+Mat}} (const glm\+::mat4 \&mat)
 \item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_a73b5f3bfbeb73eb4f445b1941b8e359d}{get\+Translation}} () const
 \item 
@@ -87,6 +89,8 @@ void \mbox{\hyperlink{classec_1_1_transform3_d_abfc79987e5fc4c805c5ff479d2c8b624
 \item 
 void \mbox{\hyperlink{classec_1_1_transform3_d_a9079ea3fc1c171f2e70fb489c804fc52}{rotate\+Z\+Local}} (float angle)
 \item 
+void \mbox{\hyperlink{classec_1_1_transform3_d_adc80d3f045c44c02bec2f2c1db2144db}{set\+Rotation}} (const glm\+::mat3 \&rotation\+Matrix)
+\item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_ab5f0e26d19bbb99a4624784d3024e654}{get\+Scale}} () const
 \item 
 float \mbox{\hyperlink{classec_1_1_transform3_d_a7ecc00577cd57f15ed63926a712cdcb1}{get\+ScaleX}} () const
@@ -99,6 +103,8 @@ void \mbox{\hyperlink{classec_1_1_transform3_d_a3f4636cea71bac0aa965bc567e649e03
 \item 
 void \mbox{\hyperlink{classec_1_1_transform3_d_a5ddb66479416948acf2406f544aaaa0f}{scale}} (const glm\+::vec3 \&val)
 \item 
+void \mbox{\hyperlink{classec_1_1_transform3_d_af4798de480a697351333d068a90ab69e}{scale}} (float uniform)
+\item 
 void \mbox{\hyperlink{classec_1_1_transform3_d_a3b859bc4f4b47e9d4b1e322c811a9e29}{scaleX}} (float sx)
 \item 
 void \mbox{\hyperlink{classec_1_1_transform3_d_a2b15e39c5a79379c361fb515a163c6de}{scaleY}} (float sy)
@@ -108,6 +114,8 @@ void \mbox{\hyperlink{classec_1_1_transform3_d_a61b556423d4c5dffd55f40685b0cb777
 void \mbox{\hyperlink{classec_1_1_transform3_d_af8c2d1832acc0b0b52e217de4efa4d91}{set\+Scale}} (const glm\+::vec3 \&val)
 \item 
 void \mbox{\hyperlink{classec_1_1_transform3_d_a604f8cab4d669b713e04b57a7cc57c0c}{set\+Scale}} (float sx, float sy, float sz)
+\item 
+void \mbox{\hyperlink{classec_1_1_transform3_d_a2bdde49d328296d1a77586ee00f4bf4e}{set\+Scale}} (float uniform)
 \item 
 void \mbox{\hyperlink{classec_1_1_transform3_d_ada2c6aded239ad20e1c155a5dee60506}{set\+ScaleX}} (float sx)
 \item 
@@ -267,16 +275,22 @@ Rotate around the z axis by a given angle. \mbox{\Hypertarget{classec_1_1_transf
 Rotate around the local z axis by a given angle \mbox{\Hypertarget{classec_1_1_transform3_d_a3f4636cea71bac0aa965bc567e649e03}\label{classec_1_1_transform3_d_a3f4636cea71bac0aa965bc567e649e03}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!scale@{scale}}
 \index{scale@{scale}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
-\subsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::scale (\begin{DoxyParamCaption}\item[{float}]{sx,  }\item[{float}]{sy,  }\item[{float}]{sz }\end{DoxyParamCaption})}
 
 Multiplicative scaling of the current scale. \mbox{\Hypertarget{classec_1_1_transform3_d_a5ddb66479416948acf2406f544aaaa0f}\label{classec_1_1_transform3_d_a5ddb66479416948acf2406f544aaaa0f}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!scale@{scale}}
 \index{scale@{scale}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
-\subsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\subsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::scale (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{val }\end{DoxyParamCaption})}
 
-Multiplicative scaling of the current scale. \mbox{\Hypertarget{classec_1_1_transform3_d_a3b859bc4f4b47e9d4b1e322c811a9e29}\label{classec_1_1_transform3_d_a3b859bc4f4b47e9d4b1e322c811a9e29}} 
+Multiplicative scaling of the current scale. \mbox{\Hypertarget{classec_1_1_transform3_d_af4798de480a697351333d068a90ab69e}\label{classec_1_1_transform3_d_af4798de480a697351333d068a90ab69e}} 
+\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!scale@{scale}}
+\index{scale@{scale}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
+\subsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::scale (\begin{DoxyParamCaption}\item[{float}]{uniform }\end{DoxyParamCaption})}
+
+Multiplicative, uniform scaling of all scale-\/components. \mbox{\Hypertarget{classec_1_1_transform3_d_a3b859bc4f4b47e9d4b1e322c811a9e29}\label{classec_1_1_transform3_d_a3b859bc4f4b47e9d4b1e322c811a9e29}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!scaleX@{scaleX}}
 \index{scaleX@{scaleX}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{scale\+X()}{scaleX()}}
@@ -294,19 +308,37 @@ Multiplicative scaling of y-\/scale component. \mbox{\Hypertarget{classec_1_1_tr
 \subsubsection{\texorpdfstring{scale\+Z()}{scaleZ()}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::scaleZ (\begin{DoxyParamCaption}\item[{float}]{sz }\end{DoxyParamCaption})}
 
-Multiplicative scaling of z-\/scale component. \mbox{\Hypertarget{classec_1_1_transform3_d_af8c2d1832acc0b0b52e217de4efa4d91}\label{classec_1_1_transform3_d_af8c2d1832acc0b0b52e217de4efa4d91}} 
+Multiplicative scaling of z-\/scale component. \mbox{\Hypertarget{classec_1_1_transform3_d_a5cc1409f0c09910a701dcd294e797498}\label{classec_1_1_transform3_d_a5cc1409f0c09910a701dcd294e797498}} 
+\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!set\+Local\+Mat@{set\+Local\+Mat}}
+\index{set\+Local\+Mat@{set\+Local\+Mat}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
+\subsubsection{\texorpdfstring{set\+Local\+Mat()}{setLocalMat()}}
+{\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::set\+Local\+Mat (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{mat }\end{DoxyParamCaption})}
+
+Set the current transformation. \mbox{\Hypertarget{classec_1_1_transform3_d_adc80d3f045c44c02bec2f2c1db2144db}\label{classec_1_1_transform3_d_adc80d3f045c44c02bec2f2c1db2144db}} 
+\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
+\subsubsection{\texorpdfstring{set\+Rotation()}{setRotation()}}
+{\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::set\+Rotation (\begin{DoxyParamCaption}\item[{const glm\+::mat3 \&}]{rotation\+Matrix }\end{DoxyParamCaption})}
+
+Set the rotation matrix. \mbox{\Hypertarget{classec_1_1_transform3_d_af8c2d1832acc0b0b52e217de4efa4d91}\label{classec_1_1_transform3_d_af8c2d1832acc0b0b52e217de4efa4d91}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!set\+Scale@{set\+Scale}}
 \index{set\+Scale@{set\+Scale}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
-\subsubsection{\texorpdfstring{set\+Scale()}{setScale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{set\+Scale()}{setScale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::set\+Scale (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{val }\end{DoxyParamCaption})}
 
 Assign the given value to the current scale. \mbox{\Hypertarget{classec_1_1_transform3_d_a604f8cab4d669b713e04b57a7cc57c0c}\label{classec_1_1_transform3_d_a604f8cab4d669b713e04b57a7cc57c0c}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!set\+Scale@{set\+Scale}}
 \index{set\+Scale@{set\+Scale}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
-\subsubsection{\texorpdfstring{set\+Scale()}{setScale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\subsubsection{\texorpdfstring{set\+Scale()}{setScale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{sx,  }\item[{float}]{sy,  }\item[{float}]{sz }\end{DoxyParamCaption})}
 
-Assign the given value to the current scale. \mbox{\Hypertarget{classec_1_1_transform3_d_ada2c6aded239ad20e1c155a5dee60506}\label{classec_1_1_transform3_d_ada2c6aded239ad20e1c155a5dee60506}} 
+Assign the given value to the current scale. \mbox{\Hypertarget{classec_1_1_transform3_d_a2bdde49d328296d1a77586ee00f4bf4e}\label{classec_1_1_transform3_d_a2bdde49d328296d1a77586ee00f4bf4e}} 
+\index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!set\+Scale@{set\+Scale}}
+\index{set\+Scale@{set\+Scale}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
+\subsubsection{\texorpdfstring{set\+Scale()}{setScale()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{uniform }\end{DoxyParamCaption})}
+
+Assign the given value to all scale-\/components. \mbox{\Hypertarget{classec_1_1_transform3_d_ada2c6aded239ad20e1c155a5dee60506}\label{classec_1_1_transform3_d_ada2c6aded239ad20e1c155a5dee60506}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!set\+ScaleX@{set\+ScaleX}}
 \index{set\+ScaleX@{set\+ScaleX}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{set\+Scale\+X()}{setScaleX()}}
@@ -437,5 +469,5 @@ Reimplemented in \mbox{\hyperlink{classec_1_1_camera_acff95ac4ca039715d67c83111d
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_transform3_d_8h}{Transform3\+D.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_transform3_d_8cpp}{Transform3\+D.\+cpp}}\end{DoxyCompactItemize}
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_transform3_d_8h}{Transform3\+D.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_transform3_d_8cpp}{Transform3\+D.\+cpp}}\end{DoxyCompactItemize}

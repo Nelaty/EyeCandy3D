@@ -109,12 +109,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a91b0fa34611e9637ea2c0795a720b355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1227f72ea04032d4e757ac4b5b0845a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_resource_registry.html#a77cf5381229bff47d251603c783115fe">Resource_Ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#ae1227f72ea04032d4e757ac4b5b0845a">unregisterResource</a> (const std::string &amp;key)</td></tr>
 <tr class="separator:ae1227f72ea04032d4e757ac4b5b0845a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d34ac75347419b656d63ddd2728154"><td class="memItemLeft" align="right" valign="top">Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#af5d34ac75347419b656d63ddd2728154">getResource</a> (const std::string &amp;key)</td></tr>
-<tr class="separator:af5d34ac75347419b656d63ddd2728154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04957125997e1ec7c84a663c6a309287"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a04957125997e1ec7c84a663c6a309287">isRegistered</a> (const std::string &amp;key)</td></tr>
-<tr class="separator:a04957125997e1ec7c84a663c6a309287"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe562e4ce5819ae3d57c3dc9e58b16a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#abe562e4ce5819ae3d57c3dc9e58b16a4">isRegistered</a> (Resource *resource)</td></tr>
-<tr class="separator:abe562e4ce5819ae3d57c3dc9e58b16a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2901efec7bcd829a007b041bd5ad2c1f"><td class="memItemLeft" align="right" valign="top">Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a2901efec7bcd829a007b041bd5ad2c1f">getResource</a> (const std::string &amp;key) const</td></tr>
+<tr class="separator:a2901efec7bcd829a007b041bd5ad2c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3279c60abcb023aad726eeac2a998d2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a3279c60abcb023aad726eeac2a998d2c">isRegistered</a> (const std::string &amp;key) const</td></tr>
+<tr class="separator:a3279c60abcb023aad726eeac2a998d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c59e97bcfe2562c8f26d92855834bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#ae9c59e97bcfe2562c8f26d92855834bf">isRegistered</a> (Resource *resource) const</td></tr>
+<tr class="separator:ae9c59e97bcfe2562c8f26d92855834bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a0a2b5090a2bbc638a04a2c283812b956"></a>
@@ -205,8 +205,8 @@ template&lt;class Resource &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af5d34ac75347419b656d63ddd2728154"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5d34ac75347419b656d63ddd2728154">&#9670;&nbsp;</a></span>getResource()</h2>
+<a id="a2901efec7bcd829a007b041bd5ad2c1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2901efec7bcd829a007b041bd5ad2c1f">&#9670;&nbsp;</a></span>getResource()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,15 +218,15 @@ template&lt;class Resource &gt; </div>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a04957125997e1ec7c84a663c6a309287"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04957125997e1ec7c84a663c6a309287">&#9670;&nbsp;</a></span>isRegistered() <span class="overload">[1/2]</span></h2>
+<a id="a3279c60abcb023aad726eeac2a998d2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3279c60abcb023aad726eeac2a998d2c">&#9670;&nbsp;</a></span>isRegistered() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,15 +238,15 @@ template&lt;class Resource &gt; </div>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="abe562e4ce5819ae3d57c3dc9e58b16a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe562e4ce5819ae3d57c3dc9e58b16a4">&#9670;&nbsp;</a></span>isRegistered() <span class="overload">[2/2]</span></h2>
+<a id="ae9c59e97bcfe2562c8f26d92855834bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c59e97bcfe2562c8f26d92855834bf">&#9670;&nbsp;</a></span>isRegistered() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +258,7 @@ template&lt;class Resource&gt; </div>
           <td>(</td>
           <td class="paramtype">Resource *&#160;</td>
           <td class="paramname"><em>resource</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -316,8 +316,8 @@ template&lt;class Resource &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_resource_registry_8h_source.html">ResourceRegistry.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_resource_registry_8inl.html">ResourceRegistry.inl</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_resource_registry_8h_source.html">ResourceRegistry.h</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_resource_registry_8inl.html">ResourceRegistry.inl</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

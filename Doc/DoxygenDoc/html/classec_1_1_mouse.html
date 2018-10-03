@@ -68,6 +68,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classec_1_1_mouse-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ec::Mouse Class Reference</div>  </div>
@@ -98,6 +100,46 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afee0caa17130a35f9b94523776a6fffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7daf494a5600c6ffa5278e201b68963f"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#a7daf494a5600c6ffa5278e201b68963f">getWindow</a> () const</td></tr>
 <tr class="separator:a7daf494a5600c6ffa5278e201b68963f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac78aee81c618536c76a74852d344128d"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#ac78aee81c618536c76a74852d344128d">getCursorPos</a> () const</td></tr>
+<tr class="separator:ac78aee81c618536c76a74852d344128d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5fd51a99aae2800604ecc5cb01ae21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#a3d5fd51a99aae2800604ecc5cb01ae21">isKeyDown</a> (<a class="el" href="classec_1_1_mouse.html#acabdd3509adc381e415c60b29554e2fb">Mouse::EC_KEY_MOUSE</a> key) const</td></tr>
+<tr class="separator:a3d5fd51a99aae2800604ecc5cb01ae21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e7b2dc5f3b7b9ea2a348fa7a44fb629"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#a0e7b2dc5f3b7b9ea2a348fa7a44fb629">isKeyUp</a> (<a class="el" href="classec_1_1_mouse.html#acabdd3509adc381e415c60b29554e2fb">Mouse::EC_KEY_MOUSE</a> key) const</td></tr>
+<tr class="separator:a0e7b2dc5f3b7b9ea2a348fa7a44fb629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8ea44f894f0467851d1a12747f8a5e4b"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#a8ea44f894f0467851d1a12747f8a5e4b">mouseKeyToString</a> (<a class="el" href="classec_1_1_mouse.html#acabdd3509adc381e415c60b29554e2fb">EC_KEY_MOUSE</a> mouseCode)</td></tr>
+<tr class="separator:a8ea44f894f0467851d1a12747f8a5e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c43132b82c3d730515c3f6c8cf9e142"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#a6c43132b82c3d730515c3f6c8cf9e142">keycodeIsMouse</a> (int keycode)</td></tr>
+<tr class="separator:a6c43132b82c3d730515c3f6c8cf9e142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:acabdd3509adc381e415c60b29554e2fb"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#acabdd3509adc381e415c60b29554e2fb">EC_KEY_MOUSE</a>: int { MOUSE_1 = GLFW_MOUSE_BUTTON_1</td></tr>
+<tr class="separator:acabdd3509adc381e415c60b29554e2fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6758e2f7cbc1a68f7a06fe47658da0"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#abc6758e2f7cbc1a68f7a06fe47658da0">MOUSE_2</a> = GLFW_MOUSE_BUTTON_2</td></tr>
+<tr class="separator:abc6758e2f7cbc1a68f7a06fe47658da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8f14fad2bb8f10a8511f123fad6d57"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#aef8f14fad2bb8f10a8511f123fad6d57">MOUSE_3</a> = GLFW_MOUSE_BUTTON_3</td></tr>
+<tr class="separator:aef8f14fad2bb8f10a8511f123fad6d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3294f278dbfb84d2c0583428db4fbf68"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#a3294f278dbfb84d2c0583428db4fbf68">MOUSE_4</a> = GLFW_MOUSE_BUTTON_4</td></tr>
+<tr class="separator:a3294f278dbfb84d2c0583428db4fbf68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09bfd1f313adb3d6a7a7b2b2be3f2775"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#a09bfd1f313adb3d6a7a7b2b2be3f2775">MOUSE_5</a> = GLFW_MOUSE_BUTTON_5</td></tr>
+<tr class="separator:a09bfd1f313adb3d6a7a7b2b2be3f2775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad43b84bc1128a214fd0cbbdbcbbf79f2"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#ad43b84bc1128a214fd0cbbdbcbbf79f2">MOUSE_6</a> = GLFW_MOUSE_BUTTON_6</td></tr>
+<tr class="separator:ad43b84bc1128a214fd0cbbdbcbbf79f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f2eeab8dc21a68af82e877dd980cad"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#ab7f2eeab8dc21a68af82e877dd980cad">MOUSE_7</a> = GLFW_MOUSE_BUTTON_7</td></tr>
+<tr class="separator:ab7f2eeab8dc21a68af82e877dd980cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e689eef8a2d016daf1a1ab1827a2bb"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#ad8e689eef8a2d016daf1a1ab1827a2bb">MOUSE_8</a> = GLFW_MOUSE_BUTTON_8</td></tr>
+<tr class="separator:ad8e689eef8a2d016daf1a1ab1827a2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad36d2595387f7a090615c4ee6012f2ef"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#ad36d2595387f7a090615c4ee6012f2ef">MOUSE_LAST</a> = GLFW_MOUSE_BUTTON_LAST</td></tr>
+<tr class="separator:ad36d2595387f7a090615c4ee6012f2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475b1f4a649a42df221e6bc70c65ad95"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#a475b1f4a649a42df221e6bc70c65ad95">MOUSE_LEFT</a> = GLFW_MOUSE_BUTTON_LEFT</td></tr>
+<tr class="separator:a475b1f4a649a42df221e6bc70c65ad95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a433aac3a68d060b7f330976e5855ddad"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#a433aac3a68d060b7f330976e5855ddad">MOUSE_RIGHT</a> = GLFW_MOUSE_BUTTON_RIGHT</td></tr>
+<tr class="separator:a433aac3a68d060b7f330976e5855ddad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fbdf11d1d258a805821e37141f95131"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_mouse.html#a0fbdf11d1d258a805821e37141f95131">MOUSE_MIDDLE</a></td></tr>
+<tr class="separator:a0fbdf11d1d258a805821e37141f95131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a6aa210c1821f23f8685a544a587ae11a"></a>
@@ -166,6 +208,24 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac78aee81c618536c76a74852d344128d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac78aee81c618536c76a74852d344128d">&#9670;&nbsp;</a></span>getCursorPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::ivec2 ec::Mouse::getCursorPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current position of the cursor in window coordinates. </p>
+
+</div>
+</div>
 <a id="a7daf494a5600c6ffa5278e201b68963f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7daf494a5600c6ffa5278e201b68963f">&#9670;&nbsp;</a></span>getWindow()</h2>
 
@@ -203,6 +263,96 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a3d5fd51a99aae2800604ecc5cb01ae21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d5fd51a99aae2800604ecc5cb01ae21">&#9670;&nbsp;</a></span>isKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ec::Mouse::isKeyDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classec_1_1_mouse.html#acabdd3509adc381e415c60b29554e2fb">Mouse::EC_KEY_MOUSE</a>&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if a mouse button is being pressed. </p>
+
+</div>
+</div>
+<a id="a0e7b2dc5f3b7b9ea2a348fa7a44fb629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e7b2dc5f3b7b9ea2a348fa7a44fb629">&#9670;&nbsp;</a></span>isKeyUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ec::Mouse::isKeyUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classec_1_1_mouse.html#acabdd3509adc381e415c60b29554e2fb">Mouse::EC_KEY_MOUSE</a>&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if a mouse button is being released. </p>
+
+</div>
+</div>
+<a id="a6c43132b82c3d730515c3f6c8cf9e142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c43132b82c3d730515c3f6c8cf9e142">&#9670;&nbsp;</a></span>keycodeIsMouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ec::Mouse::keycodeIsMouse </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keycode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ea44f894f0467851d1a12747f8a5e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea44f894f0467851d1a12747f8a5e4b">&#9670;&nbsp;</a></span>mouseKeyToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* ec::Mouse::mouseKeyToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classec_1_1_mouse.html#acabdd3509adc381e415c60b29554e2fb">EC_KEY_MOUSE</a>&#160;</td>
+          <td class="paramname"><em>mouseCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="afee0caa17130a35f9b94523776a6fffb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afee0caa17130a35f9b94523776a6fffb">&#9670;&nbsp;</a></span>uninstall()</h2>
 
@@ -221,9 +371,178 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acabdd3509adc381e415c60b29554e2fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acabdd3509adc381e415c60b29554e2fb">&#9670;&nbsp;</a></span>EC_KEY_MOUSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::EC_KEY_MOUSE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc6758e2f7cbc1a68f7a06fe47658da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc6758e2f7cbc1a68f7a06fe47658da0">&#9670;&nbsp;</a></span>MOUSE_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_2 = GLFW_MOUSE_BUTTON_2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef8f14fad2bb8f10a8511f123fad6d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef8f14fad2bb8f10a8511f123fad6d57">&#9670;&nbsp;</a></span>MOUSE_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_3 = GLFW_MOUSE_BUTTON_3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3294f278dbfb84d2c0583428db4fbf68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3294f278dbfb84d2c0583428db4fbf68">&#9670;&nbsp;</a></span>MOUSE_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_4 = GLFW_MOUSE_BUTTON_4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09bfd1f313adb3d6a7a7b2b2be3f2775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09bfd1f313adb3d6a7a7b2b2be3f2775">&#9670;&nbsp;</a></span>MOUSE_5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_5 = GLFW_MOUSE_BUTTON_5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad43b84bc1128a214fd0cbbdbcbbf79f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad43b84bc1128a214fd0cbbdbcbbf79f2">&#9670;&nbsp;</a></span>MOUSE_6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_6 = GLFW_MOUSE_BUTTON_6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7f2eeab8dc21a68af82e877dd980cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f2eeab8dc21a68af82e877dd980cad">&#9670;&nbsp;</a></span>MOUSE_7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_7 = GLFW_MOUSE_BUTTON_7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8e689eef8a2d016daf1a1ab1827a2bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e689eef8a2d016daf1a1ab1827a2bb">&#9670;&nbsp;</a></span>MOUSE_8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_8 = GLFW_MOUSE_BUTTON_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad36d2595387f7a090615c4ee6012f2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad36d2595387f7a090615c4ee6012f2ef">&#9670;&nbsp;</a></span>MOUSE_LAST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_LAST = GLFW_MOUSE_BUTTON_LAST</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a475b1f4a649a42df221e6bc70c65ad95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475b1f4a649a42df221e6bc70c65ad95">&#9670;&nbsp;</a></span>MOUSE_LEFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_LEFT = GLFW_MOUSE_BUTTON_LEFT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fbdf11d1d258a805821e37141f95131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fbdf11d1d258a805821e37141f95131">&#9670;&nbsp;</a></span>MOUSE_MIDDLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_MIDDLE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= GLFW_MOUSE_BUTTON_MIDDLE</div><div class="line">        }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a433aac3a68d060b7f330976e5855ddad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a433aac3a68d060b7f330976e5855ddad">&#9670;&nbsp;</a></span>MOUSE_RIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a> ec::Mouse::MOUSE_RIGHT = GLFW_MOUSE_BUTTON_RIGHT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_mouse_8h_source.html">Mouse.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_mouse_8cpp.html">Mouse.cpp</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_mouse_8h_source.html">Mouse.h</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_mouse_8cpp.html">Mouse.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

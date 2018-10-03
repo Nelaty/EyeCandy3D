@@ -1,16 +1,18 @@
 var searchData=
 [
-  ['w',['W',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885eaa91e0fc66be3927fcb2035bda555f3df',1,'ec::key']]],
-  ['widget',['Widget',['../classec__gui_1_1_widget.html',1,'ec_gui::Widget'],['../classec__gui_1_1_widget.html#a9371f37c8a4825bc11058c0624641575',1,'ec_gui::Widget::Widget()']]],
-  ['widget_2ecpp',['Widget.cpp',['../_widget_8cpp.html',1,'']]],
-  ['widget_2eh',['Widget.h',['../_widget_8h.html',1,'']]],
-  ['widget_5ftp',['Widget_TP',['../classec__gui_1_1_gui.html#af2df87aa1795fe5b141e1137084f7822',1,'ec_gui::Gui']]],
-  ['window',['Window',['../classec__gui_1_1_window.html',1,'ec_gui::Window'],['../classec_1_1_window.html',1,'ec::Window'],['../classec_1_1_window.html#a01bb029fa4964caf70553c5ca806d8cc',1,'ec::Window::Window()'],['../classec__gui_1_1_window.html#a7841453949917ebed1df39cbd1f77532',1,'ec_gui::Window::Window()']]],
-  ['window_2ecpp',['Window.cpp',['../_core_2_window_8cpp.html',1,'(Global Namespace)'],['../_g_u_i_2_window_8cpp.html',1,'(Global Namespace)']]],
-  ['window_2eh',['Window.h',['../_core_2_window_8h.html',1,'(Global Namespace)'],['../_g_u_i_2_window_8h.html',1,'(Global Namespace)']]],
+  ['w',['W',['../classec_1_1_keyboard.html#a6b7df6b9d699a9cab8c1283623a12333',1,'ec::Keyboard']]],
+  ['window',['Window',['../classec_1_1_window.html',1,'ec::Window'],['../classec_1_1_window.html#a01bb029fa4964caf70553c5ca806d8cc',1,'ec::Window::Window()']]],
+  ['window_2ecpp',['Window.cpp',['../_window_8cpp.html',1,'']]],
+  ['window_2eh',['Window.h',['../_window_8h.html',1,'']]],
+  ['window_5fmove',['window_move',['../namespaceec.html#a435bfb057b6ec7278b405d423194057b',1,'ec']]],
   ['window_5fptr',['Window_Ptr',['../classec_1_1_application.html#af1e09a0f1b603eab8d3245d8b8075ad5',1,'ec::Application']]],
-  ['world_5f1',['WORLD_1',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885eabe6c01fcad340d78fd6d64f64e704af7',1,'ec::key']]],
-  ['world_5f2',['WORLD_2',['../namespaceec_1_1key.html#ac49d098597e8f5e9284c02c97029885eafbd7bd41938e5d24018b2b7c961c7457',1,'ec::key']]],
-  ['writetofile',['writeToFile',['../classutl_1_1_file_logger.html#ac08928c13abec9fc8677ce286a382361',1,'utl::FileLogger']]],
-  ['writetofilelocal',['writeToFileLocal',['../namespaceutl.html#a39cf4bd9ebce7d12a9acca32edc2ac8d',1,'utl']]]
+  ['windowcreationhints',['WindowCreationHints',['../structec_1_1_window_creation_hints.html',1,'ec']]],
+  ['windowcreationhints_2ecpp',['WindowCreationHints.cpp',['../_window_creation_hints_8cpp.html',1,'']]],
+  ['windowcreationhints_2eh',['WindowCreationHints.h',['../_window_creation_hints_8h.html',1,'']]],
+  ['wordwrappedchanged',['wordWrappedChanged',['../classec_1_1_generic_text_box_listener.html#a96cdc8f0e3932f1cfbe2fd6888818452',1,'ec::GenericTextBoxListener']]],
+  ['wordwrappedchanged_5fcallback',['WordWrappedChanged_Callback',['../classec_1_1_generic_text_box_listener.html#aa94d95c932df4d70fe03c501520f0d16',1,'ec::GenericTextBoxListener']]],
+  ['world_5f1',['WORLD_1',['../classec_1_1_keyboard.html#a1eb7d04d0c734fb8fef4d8386fb7a4d0',1,'ec::Keyboard']]],
+  ['world_5f2',['WORLD_2',['../classec_1_1_keyboard.html#aab87be510c1ae98007e98afa30952918',1,'ec::Keyboard']]],
+  ['writetofile',['writeToFile',['../classec_1_1_file_logger.html#a834c7fef56181f49afd88657fe2162fe',1,'ec::FileLogger']]],
+  ['writetofilelocal',['writeToFileLocal',['../namespaceec.html#aaae259d9413b28eb2a234fccc4e63985',1,'ec']]]
 ];

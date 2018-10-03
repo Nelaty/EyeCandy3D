@@ -1,0 +1,205 @@
+\hypertarget{classec_1_1_generic_radio_button_listener}{}\section{ec\+:\+:Generic\+Radio\+Button\+Listener Class Reference}
+\label{classec_1_1_generic_radio_button_listener}\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+
+
+{\ttfamily \#include $<$Generic\+Radio\+Button\+Listener.\+h$>$}
+
+
+
+Inheritance diagram for ec\+:\+:Generic\+Radio\+Button\+Listener\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classec_1_1_generic_radio_button_listener__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+:\+:Generic\+Radio\+Button\+Listener\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classec_1_1_generic_radio_button_listener__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_ab56b850f44f5d460dff301eef04d430b}{Radio\+Button\+State\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Radio\+Button $\ast$source, agui\+::\+Radio\+Button\+::\+Radio\+Button\+State\+Enum state)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_aa2ce6fc7dec8cfb263608c59f6eb338f}{Checked\+State\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Radio\+Button $\ast$source, agui\+::\+Radio\+Button\+::\+Radio\+Button\+Checked\+Enum state)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a3e8ead6a08363f220625d2f856b9213d}{Text\+Alignment\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Radio\+Button $\ast$source, agui\+::\+Area\+Alignment\+Enum alignment)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a5abb2fecaaf86a6a0b5c0ce355cdbcb6}{Radio\+Button\+Alignment\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Radio\+Button $\ast$source, bool auto\+Sizing)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_adc874051d63443a9eb1ab194a1730306}{Is\+Autosizing\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Radio\+Button $\ast$source, bool auto\+Sizing)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_aa760bb857feacd099dadc0a1b182c40f}{Death\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Radio\+Button $\ast$source)$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a8774f775095744c1ed25d81dc1332395}{Generic\+Radio\+Button\+Listener}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_generic_radio_button_listener_aec9a1695248927929f3338e9e433514d}{$\sim$\+Generic\+Radio\+Button\+Listener}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a46d33dd2ab5a18b479da3935c5a6d896}{set\+Radio\+Button\+State\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_ab56b850f44f5d460dff301eef04d430b}{Radio\+Button\+State\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_af8f3df6e03ab0cc97ad27bbf8c1ead9a}{set\+Checked\+State\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_aa2ce6fc7dec8cfb263608c59f6eb338f}{Checked\+State\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a90c75e6db58773ab30347174e40d33ae}{set\+Text\+Alignment\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a3e8ead6a08363f220625d2f856b9213d}{Text\+Alignment\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_abefce61c2b790e4947370d4b2fd2b381}{set\+Radio\+Button\+Alignment\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a5abb2fecaaf86a6a0b5c0ce355cdbcb6}{Radio\+Button\+Alignment\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a3ea25db33823e0f051be69ab1552bfed}{set\+Is\+Autosizing\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_adc874051d63443a9eb1ab194a1730306}{Is\+Autosizing\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a3af49983e6fb684a7e5a6c8fa8bd14ad}{set\+Death\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_aa760bb857feacd099dadc0a1b182c40f}{Death\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a6bf0c1bac860be217d9ca235613263b7}{radio\+Button\+State\+Changed}} (agui\+::\+Radio\+Button $\ast$source, agui\+::\+Radio\+Button\+::\+Radio\+Button\+State\+Enum state) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_aa63b18d180a67d43d15311b351cbafb0}{checked\+State\+Changed}} (agui\+::\+Radio\+Button $\ast$source, agui\+::\+Radio\+Button\+::\+Radio\+Button\+Checked\+Enum state) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a324705c5155f71e01104399b12a95b8f}{text\+Alignment\+Changed}} (agui\+::\+Radio\+Button $\ast$source, agui\+::\+Area\+Alignment\+Enum alignment) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_ac325d7d75fc038078368ab34addb1793}{radio\+Button\+Alignment\+Changed}} (agui\+::\+Radio\+Button $\ast$source, agui\+::\+Area\+Alignment\+Enum alignment) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a41958342697556ad6aad28d03bbd1d51}{is\+Autosizing\+Changed}} (agui\+::\+Radio\+Button $\ast$source, bool auto\+Sizing) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_ab5fee70ab046379a87fd047a77de64df}{death}} (agui\+::\+Radio\+Button $\ast$source) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_aa2ce6fc7dec8cfb263608c59f6eb338f}\label{classec_1_1_generic_radio_button_listener_aa2ce6fc7dec8cfb263608c59f6eb338f}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!Checked\+State\+Changed\+\_\+\+Callback@{Checked\+State\+Changed\+\_\+\+Callback}}
+\index{Checked\+State\+Changed\+\_\+\+Callback@{Checked\+State\+Changed\+\_\+\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{Checked\+State\+Changed\+\_\+\+Callback}{CheckedStateChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_aa2ce6fc7dec8cfb263608c59f6eb338f}{ec\+::\+Generic\+Radio\+Button\+Listener\+::\+Checked\+State\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Radio\+Button$\ast$ source, agui\+::\+Radio\+Button\+::\+Radio\+Button\+Checked\+Enum state)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_aa760bb857feacd099dadc0a1b182c40f}\label{classec_1_1_generic_radio_button_listener_aa760bb857feacd099dadc0a1b182c40f}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!Death\+\_\+\+Callback@{Death\+\_\+\+Callback}}
+\index{Death\+\_\+\+Callback@{Death\+\_\+\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{Death\+\_\+\+Callback}{Death\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_aa760bb857feacd099dadc0a1b182c40f}{ec\+::\+Generic\+Radio\+Button\+Listener\+::\+Death\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Radio\+Button$\ast$ source)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_adc874051d63443a9eb1ab194a1730306}\label{classec_1_1_generic_radio_button_listener_adc874051d63443a9eb1ab194a1730306}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!Is\+Autosizing\+Changed\+\_\+\+Callback@{Is\+Autosizing\+Changed\+\_\+\+Callback}}
+\index{Is\+Autosizing\+Changed\+\_\+\+Callback@{Is\+Autosizing\+Changed\+\_\+\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{Is\+Autosizing\+Changed\+\_\+\+Callback}{IsAutosizingChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_adc874051d63443a9eb1ab194a1730306}{ec\+::\+Generic\+Radio\+Button\+Listener\+::\+Is\+Autosizing\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Radio\+Button$\ast$ source, bool auto\+Sizing)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_a5abb2fecaaf86a6a0b5c0ce355cdbcb6}\label{classec_1_1_generic_radio_button_listener_a5abb2fecaaf86a6a0b5c0ce355cdbcb6}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!Radio\+Button\+Alignment\+Changed\+\_\+\+Callback@{Radio\+Button\+Alignment\+Changed\+\_\+\+Callback}}
+\index{Radio\+Button\+Alignment\+Changed\+\_\+\+Callback@{Radio\+Button\+Alignment\+Changed\+\_\+\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{Radio\+Button\+Alignment\+Changed\+\_\+\+Callback}{RadioButtonAlignmentChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a5abb2fecaaf86a6a0b5c0ce355cdbcb6}{ec\+::\+Generic\+Radio\+Button\+Listener\+::\+Radio\+Button\+Alignment\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Radio\+Button$\ast$ source, bool auto\+Sizing)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_ab56b850f44f5d460dff301eef04d430b}\label{classec_1_1_generic_radio_button_listener_ab56b850f44f5d460dff301eef04d430b}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!Radio\+Button\+State\+Changed\+\_\+\+Callback@{Radio\+Button\+State\+Changed\+\_\+\+Callback}}
+\index{Radio\+Button\+State\+Changed\+\_\+\+Callback@{Radio\+Button\+State\+Changed\+\_\+\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{Radio\+Button\+State\+Changed\+\_\+\+Callback}{RadioButtonStateChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_ab56b850f44f5d460dff301eef04d430b}{ec\+::\+Generic\+Radio\+Button\+Listener\+::\+Radio\+Button\+State\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Radio\+Button$\ast$ source, agui\+::\+Radio\+Button\+::\+Radio\+Button\+State\+Enum state)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_a3e8ead6a08363f220625d2f856b9213d}\label{classec_1_1_generic_radio_button_listener_a3e8ead6a08363f220625d2f856b9213d}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!Text\+Alignment\+Changed\+\_\+\+Callback@{Text\+Alignment\+Changed\+\_\+\+Callback}}
+\index{Text\+Alignment\+Changed\+\_\+\+Callback@{Text\+Alignment\+Changed\+\_\+\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{Text\+Alignment\+Changed\+\_\+\+Callback}{TextAlignmentChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a3e8ead6a08363f220625d2f856b9213d}{ec\+::\+Generic\+Radio\+Button\+Listener\+::\+Text\+Alignment\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Radio\+Button$\ast$ source, agui\+::\+Area\+Alignment\+Enum alignment)$>$}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_a8774f775095744c1ed25d81dc1332395}\label{classec_1_1_generic_radio_button_listener_a8774f775095744c1ed25d81dc1332395}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!Generic\+Radio\+Button\+Listener@{Generic\+Radio\+Button\+Listener}}
+\index{Generic\+Radio\+Button\+Listener@{Generic\+Radio\+Button\+Listener}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{Generic\+Radio\+Button\+Listener()}{GenericRadioButtonListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Radio\+Button\+Listener\+::\+Generic\+Radio\+Button\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_aec9a1695248927929f3338e9e433514d}\label{classec_1_1_generic_radio_button_listener_aec9a1695248927929f3338e9e433514d}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!````~Generic\+Radio\+Button\+Listener@{$\sim$\+Generic\+Radio\+Button\+Listener}}
+\index{````~Generic\+Radio\+Button\+Listener@{$\sim$\+Generic\+Radio\+Button\+Listener}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{$\sim$\+Generic\+Radio\+Button\+Listener()}{~GenericRadioButtonListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Radio\+Button\+Listener\+::$\sim$\+Generic\+Radio\+Button\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_aa63b18d180a67d43d15311b351cbafb0}\label{classec_1_1_generic_radio_button_listener_aa63b18d180a67d43d15311b351cbafb0}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!checked\+State\+Changed@{checked\+State\+Changed}}
+\index{checked\+State\+Changed@{checked\+State\+Changed}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{checked\+State\+Changed()}{checkedStateChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::checked\+State\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Radio\+Button $\ast$}]{source,  }\item[{agui\+::\+Radio\+Button\+::\+Radio\+Button\+Checked\+Enum}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_ab5fee70ab046379a87fd047a77de64df}\label{classec_1_1_generic_radio_button_listener_ab5fee70ab046379a87fd047a77de64df}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!death@{death}}
+\index{death@{death}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{death()}{death()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::death (\begin{DoxyParamCaption}\item[{agui\+::\+Radio\+Button $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_a41958342697556ad6aad28d03bbd1d51}\label{classec_1_1_generic_radio_button_listener_a41958342697556ad6aad28d03bbd1d51}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!is\+Autosizing\+Changed@{is\+Autosizing\+Changed}}
+\index{is\+Autosizing\+Changed@{is\+Autosizing\+Changed}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{is\+Autosizing\+Changed()}{isAutosizingChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::is\+Autosizing\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Radio\+Button $\ast$}]{source,  }\item[{bool}]{auto\+Sizing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_ac325d7d75fc038078368ab34addb1793}\label{classec_1_1_generic_radio_button_listener_ac325d7d75fc038078368ab34addb1793}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!radio\+Button\+Alignment\+Changed@{radio\+Button\+Alignment\+Changed}}
+\index{radio\+Button\+Alignment\+Changed@{radio\+Button\+Alignment\+Changed}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{radio\+Button\+Alignment\+Changed()}{radioButtonAlignmentChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::radio\+Button\+Alignment\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Radio\+Button $\ast$}]{source,  }\item[{agui\+::\+Area\+Alignment\+Enum}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_a6bf0c1bac860be217d9ca235613263b7}\label{classec_1_1_generic_radio_button_listener_a6bf0c1bac860be217d9ca235613263b7}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!radio\+Button\+State\+Changed@{radio\+Button\+State\+Changed}}
+\index{radio\+Button\+State\+Changed@{radio\+Button\+State\+Changed}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{radio\+Button\+State\+Changed()}{radioButtonStateChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::radio\+Button\+State\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Radio\+Button $\ast$}]{source,  }\item[{agui\+::\+Radio\+Button\+::\+Radio\+Button\+State\+Enum}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_af8f3df6e03ab0cc97ad27bbf8c1ead9a}\label{classec_1_1_generic_radio_button_listener_af8f3df6e03ab0cc97ad27bbf8c1ead9a}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!set\+Checked\+State\+Changed\+Callback@{set\+Checked\+State\+Changed\+Callback}}
+\index{set\+Checked\+State\+Changed\+Callback@{set\+Checked\+State\+Changed\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{set\+Checked\+State\+Changed\+Callback()}{setCheckedStateChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::set\+Checked\+State\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_aa2ce6fc7dec8cfb263608c59f6eb338f}{Checked\+State\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_a3af49983e6fb684a7e5a6c8fa8bd14ad}\label{classec_1_1_generic_radio_button_listener_a3af49983e6fb684a7e5a6c8fa8bd14ad}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!set\+Death\+Callback@{set\+Death\+Callback}}
+\index{set\+Death\+Callback@{set\+Death\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{set\+Death\+Callback()}{setDeathCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::set\+Death\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_aa760bb857feacd099dadc0a1b182c40f}{Death\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_a3ea25db33823e0f051be69ab1552bfed}\label{classec_1_1_generic_radio_button_listener_a3ea25db33823e0f051be69ab1552bfed}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!set\+Is\+Autosizing\+Changed\+Callback@{set\+Is\+Autosizing\+Changed\+Callback}}
+\index{set\+Is\+Autosizing\+Changed\+Callback@{set\+Is\+Autosizing\+Changed\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{set\+Is\+Autosizing\+Changed\+Callback()}{setIsAutosizingChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::set\+Is\+Autosizing\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_adc874051d63443a9eb1ab194a1730306}{Is\+Autosizing\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_abefce61c2b790e4947370d4b2fd2b381}\label{classec_1_1_generic_radio_button_listener_abefce61c2b790e4947370d4b2fd2b381}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!set\+Radio\+Button\+Alignment\+Callback@{set\+Radio\+Button\+Alignment\+Callback}}
+\index{set\+Radio\+Button\+Alignment\+Callback@{set\+Radio\+Button\+Alignment\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{set\+Radio\+Button\+Alignment\+Callback()}{setRadioButtonAlignmentCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::set\+Radio\+Button\+Alignment\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a5abb2fecaaf86a6a0b5c0ce355cdbcb6}{Radio\+Button\+Alignment\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_a46d33dd2ab5a18b479da3935c5a6d896}\label{classec_1_1_generic_radio_button_listener_a46d33dd2ab5a18b479da3935c5a6d896}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!set\+Radio\+Button\+State\+Changed\+Callback@{set\+Radio\+Button\+State\+Changed\+Callback}}
+\index{set\+Radio\+Button\+State\+Changed\+Callback@{set\+Radio\+Button\+State\+Changed\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{set\+Radio\+Button\+State\+Changed\+Callback()}{setRadioButtonStateChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::set\+Radio\+Button\+State\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_ab56b850f44f5d460dff301eef04d430b}{Radio\+Button\+State\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_a90c75e6db58773ab30347174e40d33ae}\label{classec_1_1_generic_radio_button_listener_a90c75e6db58773ab30347174e40d33ae}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!set\+Text\+Alignment\+Changed\+Callback@{set\+Text\+Alignment\+Changed\+Callback}}
+\index{set\+Text\+Alignment\+Changed\+Callback@{set\+Text\+Alignment\+Changed\+Callback}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{set\+Text\+Alignment\+Changed\+Callback()}{setTextAlignmentChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::set\+Text\+Alignment\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_radio_button_listener_a3e8ead6a08363f220625d2f856b9213d}{Text\+Alignment\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_radio_button_listener_a324705c5155f71e01104399b12a95b8f}\label{classec_1_1_generic_radio_button_listener_a324705c5155f71e01104399b12a95b8f}} 
+\index{ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}!text\+Alignment\+Changed@{text\+Alignment\+Changed}}
+\index{text\+Alignment\+Changed@{text\+Alignment\+Changed}!ec\+::\+Generic\+Radio\+Button\+Listener@{ec\+::\+Generic\+Radio\+Button\+Listener}}
+\subsubsection{\texorpdfstring{text\+Alignment\+Changed()}{textAlignmentChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Radio\+Button\+Listener\+::text\+Alignment\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Radio\+Button $\ast$}]{source,  }\item[{agui\+::\+Area\+Alignment\+Enum}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\+Listener/\mbox{\hyperlink{_generic_radio_button_listener_8h}{Generic\+Radio\+Button\+Listener.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\+Listener/\mbox{\hyperlink{_generic_radio_button_listener_8cpp}{Generic\+Radio\+Button\+Listener.\+cpp}}\end{DoxyCompactItemize}

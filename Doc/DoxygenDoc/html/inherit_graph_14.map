@@ -1,11 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classec_1_1_i_geometry_access.html" title="ec::IGeometryAccess" alt="" coords="5,81,153,108"/>
-<area shape="rect" id="node2" href="$classec_1_1_geometry.html" title="ec::Geometry" alt="" coords="220,56,321,83"/>
-<area shape="rect" id="node9" href="$classec_1_1_spring_geometry.html" title="ec::SpringGeometry" alt="" coords="201,107,340,133"/>
-<area shape="rect" id="node3" href="$classec_1_1_dynamic_geometry.html" title="ec::DynamicGeometry" alt="" coords="388,19,540,45"/>
-<area shape="rect" id="node5" href="$classec_1_1_static_geometry.html" title="ec::StaticGeometry" alt="" coords="397,95,531,121"/>
-<area shape="rect" id="node4" href="$classec_1_1_dynamic_line_geometry.html" title="ec::DynamicLineGeometry" alt="" coords="588,5,764,32"/>
-<area shape="rect" id="node6" href="$classec_1_1_cube_geometry.html" title="ec::CubeGeometry" alt="" coords="611,56,741,83"/>
-<area shape="rect" id="node7" href="$classec_1_1_rectangle_mesh.html" title="ec::RectangleMesh" alt="" coords="609,107,743,133"/>
-<area shape="rect" id="node8" href="$classec_1_1_sphere_geometry.html" title="ec::SphereGeometry" alt="" coords="605,157,747,184"/>
+<area shape="rect" id="node2" href="$classec_1_1_generic_button_listener.html" title="ec::GenericButtonListener" alt="" coords="160,5,333,32"/>
 </map>

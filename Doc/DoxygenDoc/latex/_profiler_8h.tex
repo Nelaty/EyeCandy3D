@@ -1,12 +1,13 @@
-\hypertarget{_profiler_8h}{}\section{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\+Profiler.h File Reference}
-\label{_profiler_8h}\index{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\+Profiler.\+h@{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\+Profiler.\+h}}
+\hypertarget{_profiler_8h}{}\section{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\+Profiler.h File Reference}
+\label{_profiler_8h}\index{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\+Profiler.\+h@{D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\+Profiler.\+h}}
+{\ttfamily \#include \char`\"{}E\+C3\+D/\+Common/\+Common.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$functional$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 Include dependency graph for Profiler.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=249pt]{_profiler_8h__incl}
+\includegraphics[width=350pt]{_profiler_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
@@ -19,24 +20,45 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structutl_1_1_profiling_data}{utl\+::\+Profiling\+Data}}
+struct \mbox{\hyperlink{structec_1_1_profiling_data}{ec\+::\+Profiling\+Data}}
 \end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \mbox{\hyperlink{namespaceutl}{utl}}
-\end{DoxyCompactItemize}
-\subsection*{Enumerations}
-\begin{DoxyCompactItemize}
-\item 
-enum \mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707}{utl\+::\+Profiling\+Precision}} \{ \mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707aa9f0e61a137d86aa9db53465e0801612}{utl\+::\+Profiling\+Precision\+::second}}, 
-\mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707a407aa8403e413c457b081a9dc095a285}{utl\+::\+Profiling\+Precision\+::millisecond}}, 
-\mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707af4b6d59819445e05b152c708db4ede10}{utl\+::\+Profiling\+Precision\+::microsecond}}, 
-\mbox{\hyperlink{namespaceutl_ad221bb3fac593651670bdc0263b92707a0d7938bf86d4dc7a82f872433a9e1a1c}{utl\+::\+Profiling\+Precision\+::nanosecond}}
- \}
+ \mbox{\hyperlink{namespaceec}{ec}}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-Profiling\+Data \mbox{\hyperlink{namespaceutl_a7a49e569588dd5840a41906b2b347380}{utl\+::profile\+Function}} (const std\+::function$<$ void()$>$ \&f, unsigned int loops=1, Profiling\+Precision precision=Profiling\+Precision\+::millisecond)
+\mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} Profiling\+Data \mbox{\hyperlink{namespaceec_a9cbcabe8cfdb73cc1b1bf12985d0bb49}{ec\+::profile\+Function}} (const std\+::function$<$ void()$>$ \&f, unsigned int loops=1, Profiling\+Precision precision=\mbox{\hyperlink{_profiler_8h_ad14d98cdcfa4397ac3a0af6ce942c55d}{Profiling\+Precision\+::millisecond}})
 \end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_profiler_8h_acfd440223f806c44323dbd1053b99123}{second}}
+\item 
+\mbox{\hyperlink{_profiler_8h_ad14d98cdcfa4397ac3a0af6ce942c55d}{millisecond}}
+\item 
+\mbox{\hyperlink{_profiler_8h_aec46df66b2e4c26c5340d523471db40f}{microsecond}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_profiler_8h_aec46df66b2e4c26c5340d523471db40f}\label{_profiler_8h_aec46df66b2e4c26c5340d523471db40f}} 
+\index{Profiler.\+h@{Profiler.\+h}!microsecond@{microsecond}}
+\index{microsecond@{microsecond}!Profiler.\+h@{Profiler.\+h}}
+\subsubsection{\texorpdfstring{microsecond}{microsecond}}
+{\footnotesize\ttfamily microsecond}
+
+\mbox{\Hypertarget{_profiler_8h_ad14d98cdcfa4397ac3a0af6ce942c55d}\label{_profiler_8h_ad14d98cdcfa4397ac3a0af6ce942c55d}} 
+\index{Profiler.\+h@{Profiler.\+h}!millisecond@{millisecond}}
+\index{millisecond@{millisecond}!Profiler.\+h@{Profiler.\+h}}
+\subsubsection{\texorpdfstring{millisecond}{millisecond}}
+{\footnotesize\ttfamily millisecond}
+
+\mbox{\Hypertarget{_profiler_8h_acfd440223f806c44323dbd1053b99123}\label{_profiler_8h_acfd440223f806c44323dbd1053b99123}} 
+\index{Profiler.\+h@{Profiler.\+h}!second@{second}}
+\index{second@{second}!Profiler.\+h@{Profiler.\+h}}
+\subsubsection{\texorpdfstring{second}{second}}
+{\footnotesize\ttfamily second}
+

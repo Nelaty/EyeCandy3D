@@ -75,6 +75,14 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_shader_8h_source.html">Shader.h</a>&gt;</code></p>
 <div class="dynheader">
+Inheritance diagram for ec::Shader:</div>
+<div class="dyncontent">
+<div class="center"><img src="classec_1_1_shader__inherit__graph.png" border="0" usemap="#ec_1_1_shader_inherit__map" alt="Inheritance graph"/></div>
+<map name="ec_1_1_shader_inherit__map" id="ec_1_1_shader_inherit__map">
+<area shape="rect" id="node2" href="classec_1_1_shader_timed.html" title="{ec::ShaderTimed\n||+ ShaderTimed()\l+ ~ShaderTimed()\l+ update()\l}" alt="" coords="5,277,132,384"/>
+</map>
+</div>
+<div class="dynheader">
 Collaboration diagram for ec::Shader:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_shader__coll__graph.png" border="0" usemap="#ec_1_1_shader_coll__map" alt="Collaboration graph"/></div>
@@ -83,8 +91,9 @@ Collaboration diagram for ec::Shader:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a564a98ae49d2c050dc2221d56d54ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader.html#a3a564a98ae49d2c050dc2221d56d54ca">Shader</a> (const std::string &amp;vertPath, const std::string &amp;fragPath, const std::string &amp;geomPath=&quot;&quot;, const std::string &amp;tessCtrlPath=&quot;&quot;, const std::string &amp;tessEvalPath=&quot;&quot;)</td></tr>
+<tr class="memdesc:a3a564a98ae49d2c050dc2221d56d54ca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classec_1_1_shader.html">Shader</a> contructor.  <a href="#a3a564a98ae49d2c050dc2221d56d54ca">More...</a><br /></td></tr>
 <tr class="separator:a3a564a98ae49d2c050dc2221d56d54ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac448e8be5b0b2030a6d71ac5725d9157"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader.html#ac448e8be5b0b2030a6d71ac5725d9157">~Shader</a> ()</td></tr>
+<tr class="memitem:ac448e8be5b0b2030a6d71ac5725d9157"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader.html#ac448e8be5b0b2030a6d71ac5725d9157">~Shader</a> ()</td></tr>
 <tr class="separator:ac448e8be5b0b2030a6d71ac5725d9157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa845ca62b0ccfbe7a07440fdf7641147"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader.html#aa845ca62b0ccfbe7a07440fdf7641147">bind</a> () const</td></tr>
 <tr class="separator:aa845ca62b0ccfbe7a07440fdf7641147"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,8 +123,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a90fc22094d5f262c31e03066b71a88e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54164ed1a5d74d390f70bcfa59aa8799"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader.html#a54164ed1a5d74d390f70bcfa59aa8799">getProgram</a> () const</td></tr>
 <tr class="separator:a54164ed1a5d74d390f70bcfa59aa8799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d674dadf35f9fba8d3ec75d0a916935"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_shader.html#a2d674dadf35f9fba8d3ec75d0a916935">setUniforms</a> ()</td></tr>
+<tr class="separator:a2d674dadf35f9fba8d3ec75d0a916935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Bundles vertex, fragment shader, geometry, tessellation control and tessellation evaluation shaders. <a class="el" href="classec_1_1_geometry.html">Geometry</a> and tessellation shaders are optional.</p>
+<p>Includes are allowed in shader sources. Included files will be inlined. -&gt; "#include "filepath"" </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3a564a98ae49d2c050dc2221d56d54ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a564a98ae49d2c050dc2221d56d54ca">&#9670;&nbsp;</a></span>Shader()</h2>
 
@@ -160,6 +174,18 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classec_1_1_shader.html">Shader</a> contructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertPath</td><td>Path to vertex shader source. </td></tr>
+    <tr><td class="paramname">fragPath</td><td>Path to fragment shader source. </td></tr>
+    <tr><td class="paramname">geomPath</td><td>Path to geometry shader source. </td></tr>
+    <tr><td class="paramname">tessCtrlPath</td><td>Path to tessellation control shader source. </td></tr>
+    <tr><td class="paramname">tessEvalPath</td><td>Path to tessellation evaluation shader source. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ac448e8be5b0b2030a6d71ac5725d9157"></a>
@@ -180,7 +206,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -202,6 +228,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Activate this shader program. </p>
 
 </div>
 </div>
@@ -219,6 +246,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the program identifier </p>
 
 </div>
 </div>
@@ -237,6 +265,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the uniform location by name </p>
 
 </div>
 </div>
@@ -265,6 +294,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set single boolean uniform </p>
 
 </div>
 </div>
@@ -293,6 +323,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set single double uniform </p>
 
 </div>
 </div>
@@ -321,6 +352,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set single float uniform </p>
 
 </div>
 </div>
@@ -349,6 +381,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set single int uniform </p>
 
 </div>
 </div>
@@ -377,6 +410,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Uniform 2D-matrix uniform </p>
 
 </div>
 </div>
@@ -405,6 +439,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Uniform 3D-matrix uniform </p>
 
 </div>
 </div>
@@ -433,6 +468,33 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Uniform 4D-matrix uniform </p>
+
+</div>
+</div>
+<a id="a2d674dadf35f9fba8d3ec75d0a916935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d674dadf35f9fba8d3ec75d0a916935">&#9670;&nbsp;</a></span>setUniforms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ec::Shader::setUniforms </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Can be overloaded to wrap uniform calls. </p>
 
 </div>
 </div>
@@ -461,6 +523,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Uniform 2D-vector uniform </p>
 
 </div>
 </div>
@@ -489,6 +552,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Uniform 3D-vector uniform </p>
 
 </div>
 </div>
@@ -517,6 +581,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Uniform 4D-vector uniform </p>
 
 </div>
 </div>
@@ -534,12 +599,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Deactivate this shader program. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/Shader/<a class="el" href="_shader_8h_source.html">Shader.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/src/Core/Shader/<a class="el" href="_shader_8cpp.html">Shader.cpp</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/Shader/<a class="el" href="_shader_8h_source.html">Shader.h</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/Shader/<a class="el" href="_shader_8cpp.html">Shader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

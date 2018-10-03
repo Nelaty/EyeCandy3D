@@ -1,6 +1,5 @@
 <map id="ec::InputListener" name="ec::InputListener">
-<area shape="rect" id="node2" href="$classagui_1_1_open_g_l_input.html" title="{agui::OpenGLInput\n||+ OpenGLInput()\l+ ~OpenGLInput()\l+ getTime()\l# processEvent()\l}" alt="" coords="5,365,136,487"/>
-<area shape="rect" id="node3" href="$classec_1_1_camera_controller.html" title="{ec::CameraController\n||+ CameraController()\l+ CameraController()\l+ ~CameraController()\l+ tick()\l+ reset()\l+ setCamera()\l+ getCamera()\l# processEvent()\l# processMouseMovement()\l# processMouseButtonDown()\l# processMouseButtonUp()\l# processKeyDownInput()\l# processKeyUpInput()\l# processScrollInput()\l}" alt="" coords="161,292,357,560"/>
-<area shape="rect" id="node4" href="$classec_1_1_scene_controller.html" title="{ec::SceneController\n||+ SceneController()\l+ ~SceneController()\l+ getName()\l}" alt="" coords="381,373,523,479"/>
-<area shape="rect" id="node5" href="$classec__gui_1_1_gui_controller.html" title="{ec_gui::GuiController\n||+ GuiController()\l+ ~GuiController()\l+ getGuiSystem()\l+ setGuiSystem()\l# processEvent()\l}" alt="" coords="547,358,690,494"/>
+<area shape="rect" id="node2" href="$classec_1_1_camera_controller.html" title="{ec::CameraController\n||+ CameraController()\l+ CameraController()\l+ ~CameraController()\l+ tick()\l+ reset()\l+ setCamera()\l+ getCamera()\l# processEvent()\l# processMouseMovement()\l# processMouseButtonDown()\l# processMouseButtonUp()\l# processKeyDownInput()\l# processKeyUpInput()\l# processScrollInput()\l}" alt="" coords="5,292,201,560"/>
+<area shape="rect" id="node3" href="$classec_1_1_open_g_l_input.html" title="{ec::OpenGLInput\n||+ OpenGLInput()\l+ ~OpenGLInput()\l+ getTime()\l# processEvent()\l}" alt="" coords="225,365,352,487"/>
+<area shape="rect" id="node4" href="$classec_1_1_scene_controller.html" title="{ec::SceneController\n||+ SceneController()\l+ ~SceneController()\l+ getName()\l}" alt="" coords="376,373,519,479"/>
 </map>

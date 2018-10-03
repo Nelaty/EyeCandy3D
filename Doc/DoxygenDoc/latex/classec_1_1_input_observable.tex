@@ -16,9 +16,9 @@ Collaboration diagram for ec\+:\+:Input\+Observable\+:\nopagebreak
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{classec_1_1_input_observable_a99717b2918621597db89d9ede34ddded}{Input\+Listeners\+\_\+T}} = std\+::vector$<$ \mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$ $>$
+using \mbox{\hyperlink{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}{Input\+Listeners\+\_\+\+Type}} = std\+::vector$<$ \mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$ $>$
 \item 
-using \mbox{\hyperlink{classec_1_1_input_observable_a9b63c8acbcbfc0f99d2964493ac52925}{Events\+\_\+T}} = std\+::vector$<$ \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} $>$
+using \mbox{\hyperlink{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}{Events\+\_\+\+Type}} = std\+::vector$<$ \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} $>$
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -39,7 +39,7 @@ virtual void \mbox{\hyperlink{classec_1_1_input_observable_ac8d3ed43a3b26601e271
 \item 
 virtual void \mbox{\hyperlink{classec_1_1_input_observable_ac8ac61eaebb95010e8a12bb1e6348391}{inform\+All}} ()
 \item 
-void \mbox{\hyperlink{classec_1_1_input_observable_abcd9d6067210ea7751824b619147a65c}{set\+Last\+Prev\+Mouse\+Event}} (const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&event)
+void \mbox{\hyperlink{classec_1_1_input_observable_acf16d74cb1f51ee631e017280fff8052}{set\+Prev\+Mouse\+Event}} (const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&event)
 \item 
 const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \& \mbox{\hyperlink{classec_1_1_input_observable_abf9f1388171a99581a0a4100bbf2d11b}{get\+Prev\+Mouse\+Event}} () const
 \item 
@@ -61,9 +61,9 @@ virtual void \mbox{\hyperlink{classec_1_1_input_observable_a799c88abda6814473fe4
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classec_1_1_input_observable_a99717b2918621597db89d9ede34ddded}{Input\+Listeners\+\_\+T}} \mbox{\hyperlink{classec_1_1_input_observable_aa11756df5cac4e93ace9db3f6c8817c4}{m\+\_\+input\+Listeners}}
+\mbox{\hyperlink{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}{Input\+Listeners\+\_\+\+Type}} \mbox{\hyperlink{classec_1_1_input_observable_a05b1b085184216601228522319efbe56}{m\+\_\+input\+Listeners}}
 \item 
-\mbox{\hyperlink{classec_1_1_input_observable_a9b63c8acbcbfc0f99d2964493ac52925}{Events\+\_\+T}} \mbox{\hyperlink{classec_1_1_input_observable_af83e9f99bec60cdce82b129fa457c6ab}{m\+\_\+events}}
+\mbox{\hyperlink{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}{Events\+\_\+\+Type}} \mbox{\hyperlink{classec_1_1_input_observable_a26f25d660227364fe1a1be19671af09e}{m\+\_\+events}}
 \item 
 \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \mbox{\hyperlink{classec_1_1_input_observable_a99e8c1484fe87503096e681d8bd3b75f}{m\+\_\+prev\+Mouse\+Event}}
 \item 
@@ -74,17 +74,17 @@ virtual void \mbox{\hyperlink{classec_1_1_input_observable_a799c88abda6814473fe4
 
 
 \subsection{Member Typedef Documentation}
-\mbox{\Hypertarget{classec_1_1_input_observable_a9b63c8acbcbfc0f99d2964493ac52925}\label{classec_1_1_input_observable_a9b63c8acbcbfc0f99d2964493ac52925}} 
-\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Events\+\_\+T@{Events\+\_\+T}}
-\index{Events\+\_\+T@{Events\+\_\+T}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
-\subsubsection{\texorpdfstring{Events\+\_\+T}{Events\_T}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_observable_a9b63c8acbcbfc0f99d2964493ac52925}{ec\+::\+Input\+Observable\+::\+Events\+\_\+T}} =  std\+::vector$<$\mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}}$>$}
+\mbox{\Hypertarget{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}\label{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Events\+\_\+\+Type@{Events\+\_\+\+Type}}
+\index{Events\+\_\+\+Type@{Events\+\_\+\+Type}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{Events\+\_\+\+Type}{Events\_Type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}{ec\+::\+Input\+Observable\+::\+Events\+\_\+\+Type}} =  std\+::vector$<$\mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}}$>$}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_a99717b2918621597db89d9ede34ddded}\label{classec_1_1_input_observable_a99717b2918621597db89d9ede34ddded}} 
-\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Input\+Listeners\+\_\+T@{Input\+Listeners\+\_\+T}}
-\index{Input\+Listeners\+\_\+T@{Input\+Listeners\+\_\+T}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
-\subsubsection{\texorpdfstring{Input\+Listeners\+\_\+T}{InputListeners\_T}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_observable_a99717b2918621597db89d9ede34ddded}{ec\+::\+Input\+Observable\+::\+Input\+Listeners\+\_\+T}} =  std\+::vector$<$\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}}$\ast$$>$}
+\mbox{\Hypertarget{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}\label{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!Input\+Listeners\+\_\+\+Type@{Input\+Listeners\+\_\+\+Type}}
+\index{Input\+Listeners\+\_\+\+Type@{Input\+Listeners\+\_\+\+Type}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{Input\+Listeners\+\_\+\+Type}{InputListeners\_Type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}{ec\+::\+Input\+Observable\+::\+Input\+Listeners\+\_\+\+Type}} =  std\+::vector$<$\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}}$\ast$$>$}
 
 
 
@@ -158,13 +158,7 @@ Inform all input listeners about all accumulated events \mbox{\Hypertarget{class
 \subsubsection{\texorpdfstring{register\+Input\+Listener()}{registerInputListener()}}
 {\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::register\+Input\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$}]{input\+Listener }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Register a new or remove an old listener \mbox{\Hypertarget{classec_1_1_input_observable_abcd9d6067210ea7751824b619147a65c}\label{classec_1_1_input_observable_abcd9d6067210ea7751824b619147a65c}} 
-\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!set\+Last\+Prev\+Mouse\+Event@{set\+Last\+Prev\+Mouse\+Event}}
-\index{set\+Last\+Prev\+Mouse\+Event@{set\+Last\+Prev\+Mouse\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
-\subsubsection{\texorpdfstring{set\+Last\+Prev\+Mouse\+Event()}{setLastPrevMouseEvent()}}
-{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::set\+Last\+Prev\+Mouse\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})}
-
-Set the previous mouse event \mbox{\Hypertarget{classec_1_1_input_observable_a55c7310a50dc873f69c2246bbeeed3e6}\label{classec_1_1_input_observable_a55c7310a50dc873f69c2246bbeeed3e6}} 
+Register a new or remove an old listener \mbox{\Hypertarget{classec_1_1_input_observable_a55c7310a50dc873f69c2246bbeeed3e6}\label{classec_1_1_input_observable_a55c7310a50dc873f69c2246bbeeed3e6}} 
 \index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!set\+Prev\+Display\+Event@{set\+Prev\+Display\+Event}}
 \index{set\+Prev\+Display\+Event@{set\+Prev\+Display\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
 \subsubsection{\texorpdfstring{set\+Prev\+Display\+Event()}{setPrevDisplayEvent()}}
@@ -176,7 +170,13 @@ Set the previous keyboard event \mbox{\Hypertarget{classec_1_1_input_observable_
 \subsubsection{\texorpdfstring{set\+Prev\+Keyboard\+Event()}{setPrevKeyboardEvent()}}
 {\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::set\+Prev\+Keyboard\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \&}]{event }\end{DoxyParamCaption})}
 
-Set the previous keyboard event \mbox{\Hypertarget{classec_1_1_input_observable_ac8d3ed43a3b26601e2710e3758248620}\label{classec_1_1_input_observable_ac8d3ed43a3b26601e2710e3758248620}} 
+Set the previous keyboard event \mbox{\Hypertarget{classec_1_1_input_observable_acf16d74cb1f51ee631e017280fff8052}\label{classec_1_1_input_observable_acf16d74cb1f51ee631e017280fff8052}} 
+\index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!set\+Prev\+Mouse\+Event@{set\+Prev\+Mouse\+Event}}
+\index{set\+Prev\+Mouse\+Event@{set\+Prev\+Mouse\+Event}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
+\subsubsection{\texorpdfstring{set\+Prev\+Mouse\+Event()}{setPrevMouseEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::set\+Prev\+Mouse\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+Set the previous mouse event \mbox{\Hypertarget{classec_1_1_input_observable_ac8d3ed43a3b26601e2710e3758248620}\label{classec_1_1_input_observable_ac8d3ed43a3b26601e2710e3758248620}} 
 \index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!unregister\+All\+Input\+Listeners@{unregister\+All\+Input\+Listeners}}
 \index{unregister\+All\+Input\+Listeners@{unregister\+All\+Input\+Listeners}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
 \subsubsection{\texorpdfstring{unregister\+All\+Input\+Listeners()}{unregisterAllInputListeners()}}
@@ -191,17 +191,17 @@ Clears the input listener list \mbox{\Hypertarget{classec_1_1_input_observable_a
 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{classec_1_1_input_observable_af83e9f99bec60cdce82b129fa457c6ab}\label{classec_1_1_input_observable_af83e9f99bec60cdce82b129fa457c6ab}} 
+\mbox{\Hypertarget{classec_1_1_input_observable_a26f25d660227364fe1a1be19671af09e}\label{classec_1_1_input_observable_a26f25d660227364fe1a1be19671af09e}} 
 \index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!m\+\_\+events@{m\+\_\+events}}
 \index{m\+\_\+events@{m\+\_\+events}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
 \subsubsection{\texorpdfstring{m\+\_\+events}{m\_events}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_observable_a9b63c8acbcbfc0f99d2964493ac52925}{Events\+\_\+T}} ec\+::\+Input\+Observable\+::m\+\_\+events\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}{Events\+\_\+\+Type}} ec\+::\+Input\+Observable\+::m\+\_\+events\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classec_1_1_input_observable_aa11756df5cac4e93ace9db3f6c8817c4}\label{classec_1_1_input_observable_aa11756df5cac4e93ace9db3f6c8817c4}} 
+\mbox{\Hypertarget{classec_1_1_input_observable_a05b1b085184216601228522319efbe56}\label{classec_1_1_input_observable_a05b1b085184216601228522319efbe56}} 
 \index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!m\+\_\+input\+Listeners@{m\+\_\+input\+Listeners}}
 \index{m\+\_\+input\+Listeners@{m\+\_\+input\+Listeners}!ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}}
 \subsubsection{\texorpdfstring{m\+\_\+input\+Listeners}{m\_inputListeners}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_observable_a99717b2918621597db89d9ede34ddded}{Input\+Listeners\+\_\+T}} ec\+::\+Input\+Observable\+::m\+\_\+input\+Listeners\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}{Input\+Listeners\+\_\+\+Type}} ec\+::\+Input\+Observable\+::m\+\_\+input\+Listeners\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classec_1_1_input_observable_ae480593ec25d98ea00b0b7a9aa6cba32}\label{classec_1_1_input_observable_ae480593ec25d98ea00b0b7a9aa6cba32}} 
 \index{ec\+::\+Input\+Observable@{ec\+::\+Input\+Observable}!m\+\_\+prev\+Display\+Event@{m\+\_\+prev\+Display\+Event}}
@@ -225,5 +225,5 @@ Previous mouse event
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_input_observable_8h}{Input\+Observable.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_input_observable_8cpp}{Input\+Observable.\+cpp}}\end{DoxyCompactItemize}
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_input_observable_8h}{Input\+Observable.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_input_observable_8cpp}{Input\+Observable.\+cpp}}\end{DoxyCompactItemize}

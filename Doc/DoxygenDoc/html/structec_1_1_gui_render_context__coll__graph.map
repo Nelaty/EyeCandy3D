@@ -1,0 +1,4 @@
+<map id="ec::GuiRenderContext" name="ec::GuiRenderContext">
+<area shape="rect" id="node2" href="$classec_1_1_freetype.html" title="{ec::Freetype\n||+ Freetype()\l+ ~Freetype()\l+ renderText()\l+ addFontFace()\l+ addFontTextureAtlas()\l+ getFontTextureAtlas()\l}" alt="" coords="5,42,168,193"/>
+<area shape="rect" id="node3" href="$classec_1_1_shader.html" title="{ec::Shader\n||+ Shader()\l+ ~Shader()\l+ bind()\l+ unbind()\l+ setBool()\l+ setInt()\l+ setFloat()\l+ setDouble()\l+ setVec2()\l+ setVec3()\land 7 more...\l}" alt="" coords="193,5,293,229"/>
+</map>

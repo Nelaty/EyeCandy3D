@@ -80,7 +80,7 @@ Inheritance diagram for ec::Camera:</div>
 <div class="center"><img src="classec_1_1_camera__inherit__graph.png" border="0" usemap="#ec_1_1_camera_inherit__map" alt="Inheritance graph"/></div>
 <map name="ec_1_1_camera_inherit__map" id="ec_1_1_camera_inherit__map">
 <area shape="rect" id="node2" href="classec_1_1_node.html" title="{ec::Node\n|# m_parent\l# m_children\l# m_drawables\l|+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="14,321,182,575"/>
-<area shape="rect" id="node3" href="classec_1_1_transform3_d.html" title="{ec::Transform3D\n|# m_up\l# m_position\l# m_forwardVector\l# m_scale\l|+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getLocalMat()\l+ getUpVector()\l+ getForwardVector()\l+ getTranslation()\l+ getTranslationX()\l+ getTranslationY()\land 35 more...\l}" alt="" coords="26,5,170,273"/>
+<area shape="rect" id="node3" href="classec_1_1_transform3_d.html" title="{ec::Transform3D\n|# m_up\l# m_position\l# m_forwardVector\l# m_scale\l|+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getUpVector()\l+ getForwardVector()\l+ getLocalMat()\l+ setLocalMat()\l+ getTranslation()\l+ getTranslationX()\land 39 more...\l}" alt="" coords="26,5,170,273"/>
 </map>
 </div>
 <div class="dynheader">
@@ -89,7 +89,7 @@ Collaboration diagram for ec::Camera:</div>
 <div class="center"><img src="classec_1_1_camera__coll__graph.png" border="0" usemap="#ec_1_1_camera_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_camera_coll__map" id="ec_1_1_camera_coll__map">
 <area shape="rect" id="node2" href="classec_1_1_node.html" title="{ec::Node\n||+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="172,476,340,700"/>
-<area shape="rect" id="node3" href="classec_1_1_transform3_d.html" title="{ec::Transform3D\n||+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getLocalMat()\l+ getUpVector()\l+ getForwardVector()\l+ getTranslation()\l+ getTranslationX()\l+ getTranslationY()\land 35 more...\l}" alt="" coords="5,189,149,413"/>
+<area shape="rect" id="node3" href="classec_1_1_transform3_d.html" title="{ec::Transform3D\n||+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getUpVector()\l+ getForwardVector()\l+ getLocalMat()\l+ setLocalMat()\l+ getTranslation()\l+ getTranslationX()\land 39 more...\l}" alt="" coords="5,189,149,413"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -129,10 +129,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6555d47e1c17caf67cf8683b4cbaca4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33ad8a16eff39b34db86c6dbf2bbabe4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera.html#a33ad8a16eff39b34db86c6dbf2bbabe4">getScene</a> () const</td></tr>
 <tr class="separator:a33ad8a16eff39b34db86c6dbf2bbabe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f2f4a745112c095d17480959a70eb16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_viewport.html">Viewport</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera.html#a1f2f4a745112c095d17480959a70eb16">getViewport</a> ()</td></tr>
+<tr class="separator:a1f2f4a745112c095d17480959a70eb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb2920a7a634aadcaca579eaf3fc1ad0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classec_1_1_viewport.html">Viewport</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera.html#adb2920a7a634aadcaca579eaf3fc1ad0">getViewport</a> () const</td></tr>
 <tr class="separator:adb2920a7a634aadcaca579eaf3fc1ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fc6f03041f6c0ee897c9596039d424d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera.html#a3fc6f03041f6c0ee897c9596039d424d">setViewport</a> (const <a class="el" href="classec_1_1_viewport.html">Viewport</a> &amp;viewport)</td></tr>
 <tr class="separator:a3fc6f03041f6c0ee897c9596039d424d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96f6414127f336eb9079ad30df80d1a7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classec_1_1_gui_system.html">GuiSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera.html#a96f6414127f336eb9079ad30df80d1a7">getGuiSystem</a> () const</td></tr>
+<tr class="separator:a96f6414127f336eb9079ad30df80d1a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af91683c492e0094127f169a4927945"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_gui_system.html">GuiSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera.html#a3af91683c492e0094127f169a4927945">getGuiSystem</a> ()</td></tr>
+<tr class="separator:a3af91683c492e0094127f169a4927945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classec_1_1_node"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classec_1_1_node')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classec_1_1_node.html">ec::Node</a></td></tr>
 <tr class="memitem:a38582758606734f5f3a0e5c6d3dc0200 inherit pub_methods_classec_1_1_node"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#a38582758606734f5f3a0e5c6d3dc0200">Node</a> (<a class="el" href="classec_1_1_node.html">Node</a> *parent=nullptr)</td></tr>
 <tr class="separator:a38582758606734f5f3a0e5c6d3dc0200 inherit pub_methods_classec_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,9 +166,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae1626b695c7c5f15af399772b51d0a5a inherit pub_methods_classec_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2403cd39000eceffdec878133f621e3a inherit pub_methods_classec_1_1_node"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classec_1_1_drawable.html">Drawable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#a2403cd39000eceffdec878133f621e3a">getDrawables</a> () const</td></tr>
 <tr class="separator:a2403cd39000eceffdec878133f621e3a inherit pub_methods_classec_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef615bcf1c24225838e00c15d03dc707 inherit pub_methods_classec_1_1_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#aef615bcf1c24225838e00c15d03dc707">addDrawable</a> (<a class="el" href="classec_1_1_drawable.html">Drawable</a> *<a class="el" href="namespaceec.html#ae4420ccd0f79418a5ce075e43909289fac571a3227368b17e0ecc38a2a417e201">drawable</a>)</td></tr>
+<tr class="memitem:aef615bcf1c24225838e00c15d03dc707 inherit pub_methods_classec_1_1_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#aef615bcf1c24225838e00c15d03dc707">addDrawable</a> (<a class="el" href="classec_1_1_drawable.html">Drawable</a> *<a class="el" href="_resource_type_8h.html#a0e08bf97f986b1083a00d3f004fb04f7">drawable</a>)</td></tr>
 <tr class="separator:aef615bcf1c24225838e00c15d03dc707 inherit pub_methods_classec_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cd4bc1df04ee734dd11ebe0b9079434 inherit pub_methods_classec_1_1_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#a9cd4bc1df04ee734dd11ebe0b9079434">removeDrawable</a> (<a class="el" href="classec_1_1_drawable.html">Drawable</a> *<a class="el" href="namespaceec.html#ae4420ccd0f79418a5ce075e43909289fac571a3227368b17e0ecc38a2a417e201">drawable</a>)</td></tr>
+<tr class="memitem:a9cd4bc1df04ee734dd11ebe0b9079434 inherit pub_methods_classec_1_1_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#a9cd4bc1df04ee734dd11ebe0b9079434">removeDrawable</a> (<a class="el" href="classec_1_1_drawable.html">Drawable</a> *<a class="el" href="_resource_type_8h.html#a0e08bf97f986b1083a00d3f004fb04f7">drawable</a>)</td></tr>
 <tr class="separator:a9cd4bc1df04ee734dd11ebe0b9079434 inherit pub_methods_classec_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57fd7f0d158527df372880399ca48002 inherit pub_methods_classec_1_1_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_node.html#a57fd7f0d158527df372880399ca48002">removeDrawables</a> ()</td></tr>
 <tr class="separator:a57fd7f0d158527df372880399ca48002 inherit pub_methods_classec_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,12 +179,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1df4b7afcf78aef64719b2302cfac864 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69ce5285f9481b5615c084b9f892fdb8 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a69ce5285f9481b5615c084b9f892fdb8">getLocalPosition</a> ()</td></tr>
 <tr class="separator:a69ce5285f9481b5615c084b9f892fdb8 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aa0ac4df795971dad499a0d12348d07 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">const glm::mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a8aa0ac4df795971dad499a0d12348d07">getLocalMat</a> () const</td></tr>
-<tr class="separator:a8aa0ac4df795971dad499a0d12348d07 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8bdfb3bbc688a9a920ccb4d452d8962 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#af8bdfb3bbc688a9a920ccb4d452d8962">getUpVector</a> () const</td></tr>
 <tr class="separator:af8bdfb3bbc688a9a920ccb4d452d8962 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc4f5c1122a5191ad2a4628a43a76a7c inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#afc4f5c1122a5191ad2a4628a43a76a7c">getForwardVector</a> () const</td></tr>
 <tr class="separator:afc4f5c1122a5191ad2a4628a43a76a7c inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aa0ac4df795971dad499a0d12348d07 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">const glm::mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a8aa0ac4df795971dad499a0d12348d07">getLocalMat</a> () const</td></tr>
+<tr class="separator:a8aa0ac4df795971dad499a0d12348d07 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc1409f0c09910a701dcd294e797498 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a5cc1409f0c09910a701dcd294e797498">setLocalMat</a> (const glm::mat4 &amp;mat)</td></tr>
+<tr class="separator:a5cc1409f0c09910a701dcd294e797498 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73b5f3bfbeb73eb4f445b1941b8e359d inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a73b5f3bfbeb73eb4f445b1941b8e359d">getTranslation</a> () const</td></tr>
 <tr class="separator:a73b5f3bfbeb73eb4f445b1941b8e359d inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0371b75ed67d59665967846d9cc6827 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ac0371b75ed67d59665967846d9cc6827">getTranslationX</a> () const</td></tr>
@@ -227,6 +235,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abfc79987e5fc4c805c5ff479d2c8b624 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9079ea3fc1c171f2e70fb489c804fc52 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a9079ea3fc1c171f2e70fb489c804fc52">rotateZLocal</a> (float angle)</td></tr>
 <tr class="separator:a9079ea3fc1c171f2e70fb489c804fc52 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc80d3f045c44c02bec2f2c1db2144db inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#adc80d3f045c44c02bec2f2c1db2144db">setRotation</a> (const glm::mat3 &amp;rotationMatrix)</td></tr>
+<tr class="separator:adc80d3f045c44c02bec2f2c1db2144db inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5f0e26d19bbb99a4624784d3024e654 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ab5f0e26d19bbb99a4624784d3024e654">getScale</a> () const</td></tr>
 <tr class="separator:ab5f0e26d19bbb99a4624784d3024e654 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ecc00577cd57f15ed63926a712cdcb1 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a7ecc00577cd57f15ed63926a712cdcb1">getScaleX</a> () const</td></tr>
@@ -239,6 +249,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3f4636cea71bac0aa965bc567e649e03 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ddb66479416948acf2406f544aaaa0f inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a5ddb66479416948acf2406f544aaaa0f">scale</a> (const glm::vec3 &amp;val)</td></tr>
 <tr class="separator:a5ddb66479416948acf2406f544aaaa0f inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4798de480a697351333d068a90ab69e inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#af4798de480a697351333d068a90ab69e">scale</a> (float uniform)</td></tr>
+<tr class="separator:af4798de480a697351333d068a90ab69e inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b859bc4f4b47e9d4b1e322c811a9e29 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a3b859bc4f4b47e9d4b1e322c811a9e29">scaleX</a> (float sx)</td></tr>
 <tr class="separator:a3b859bc4f4b47e9d4b1e322c811a9e29 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b15e39c5a79379c361fb515a163c6de inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a2b15e39c5a79379c361fb515a163c6de">scaleY</a> (float sy)</td></tr>
@@ -249,6 +261,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af8c2d1832acc0b0b52e217de4efa4d91 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a604f8cab4d669b713e04b57a7cc57c0c inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a604f8cab4d669b713e04b57a7cc57c0c">setScale</a> (float sx, float sy, float sz)</td></tr>
 <tr class="separator:a604f8cab4d669b713e04b57a7cc57c0c inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bdde49d328296d1a77586ee00f4bf4e inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a2bdde49d328296d1a77586ee00f4bf4e">setScale</a> (float uniform)</td></tr>
+<tr class="separator:a2bdde49d328296d1a77586ee00f4bf4e inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada2c6aded239ad20e1c155a5dee60506 inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#ada2c6aded239ad20e1c155a5dee60506">setScaleX</a> (float sx)</td></tr>
 <tr class="separator:ada2c6aded239ad20e1c155a5dee60506 inherit pub_methods_classec_1_1_transform3_d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a599ea97d84a88467abec94a30339f73e inherit pub_methods_classec_1_1_transform3_d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_transform3_d.html#a599ea97d84a88467abec94a30339f73e">setScaleY</a> (float sy)</td></tr>
@@ -421,6 +435,42 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a96f6414127f336eb9079ad30df80d1a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96f6414127f336eb9079ad30df80d1a7">&#9670;&nbsp;</a></span>getGuiSystem() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classec_1_1_gui_system.html">GuiSystem</a> &amp; ec::Camera::getGuiSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get this camera's gui system. </p>
+
+</div>
+</div>
+<a id="a3af91683c492e0094127f169a4927945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3af91683c492e0094127f169a4927945">&#9670;&nbsp;</a></span>getGuiSystem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classec_1_1_gui_system.html">GuiSystem</a> &amp; ec::Camera::getGuiSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get this camera's gui system. </p>
+
+</div>
+</div>
 <a id="a02786d8adecb275e6182cf166b65edb4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02786d8adecb275e6182cf166b65edb4">&#9670;&nbsp;</a></span>getNear()</h2>
 
@@ -493,8 +543,26 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a1f2f4a745112c095d17480959a70eb16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f2f4a745112c095d17480959a70eb16">&#9670;&nbsp;</a></span>getViewport() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classec_1_1_viewport.html">Viewport</a> &amp; ec::Camera::getViewport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current viewport. </p>
+
+</div>
+</div>
 <a id="adb2920a7a634aadcaca579eaf3fc1ad0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb2920a7a634aadcaca579eaf3fc1ad0">&#9670;&nbsp;</a></span>getViewport()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2920a7a634aadcaca579eaf3fc1ad0">&#9670;&nbsp;</a></span>getViewport() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -507,6 +575,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the current viewport. </p>
 
 </div>
 </div>
@@ -623,6 +692,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Change the current viewport. </p>
 
 </div>
 </div>
@@ -684,8 +754,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_camera_8h_source.html">Camera.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_camera_8cpp.html">Camera.cpp</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_camera_8h_source.html">Camera.h</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_camera_8cpp.html">Camera.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

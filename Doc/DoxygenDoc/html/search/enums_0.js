@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cameratype',['CameraType',['../namespaceec.html#aeb1f95f6e5d6c17c5a67f68e44746ac4',1,'ec']]]
+  ['dimensions',['Dimensions',['../structec_1_1_texture_types.html#ac0e07f24452fa28dd8e6e33a224842fc',1,'ec::TextureTypes']]]
 ];

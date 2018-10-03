@@ -1,7 +1,10 @@
 <map id="ec::StaticGeometry" name="ec::StaticGeometry">
-<area shape="rect" id="node4" href="$classec_1_1_cube_geometry.html" title="{ec::CubeGeometry\n||+ CubeGeometry()\l+ CubeGeometry()\l+ ~CubeGeometry()\l+ resize()\l}" alt="" coords="5,645,143,767"/>
-<area shape="rect" id="node5" href="$classec_1_1_rectangle_mesh.html" title="{ec::RectangleMesh\n||+ RectangleMesh()\l+ RectangleMesh()\l+ ~RectangleMesh()\l}" alt="" coords="167,653,307,759"/>
-<area shape="rect" id="node6" href="$classec_1_1_sphere_geometry.html" title="{ec::SphereGeometry\n||+ SphereGeometry()\l+ ~SphereGeometry()\l+ resize()\l+ getRadius()\l+ getLatitude()\l+ getLongitude()\l}" alt="" coords="331,631,479,781"/>
-<area shape="rect" id="node2" href="$classec_1_1_geometry.html" title="{ec::Geometry\n|# m_data\l|+ ~Geometry()\l+ recalculateNormals()\l+ getVao()\l+ getVbo()\l+ getEbo()\l# Geometry()\l# beginRender()\l# onRender()\l# endRender()\l# setMode()\l# setType()\l}" alt="" coords="160,204,313,428"/>
-<area shape="rect" id="node3" href="$classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="159,5,314,156"/>
+<area shape="rect" id="node4" href="$classec_1_1_circle_geometry.html" title="{ec::CircleGeometry\n||+ CircleGeometry()\l+ ~CircleGeometry()\l+ init()\l+ getRadius()\l+ getSectionCount()\l}" alt="" coords="5,645,145,781"/>
+<area shape="rect" id="node5" href="$classec_1_1_cube_geometry.html" title="{ec::CubeGeometry\n||+ CubeGeometry()\l+ CubeGeometry()\l+ ~CubeGeometry()\l+ resize()\l+ getWidth()\l+ getHeight()\l+ getDepth()\l}" alt="" coords="169,631,307,796"/>
+<area shape="rect" id="node6" href="$classec_1_1_cylinder_geometry.html" title="{ec::CylinderGeometry\n||+ CylinderGeometry()\l+ ~CylinderGeometry()\l+ init()\l}" alt="" coords="331,660,486,767"/>
+<area shape="rect" id="node7" href="$classec_1_1_line_geometry.html" title="{ec::LineGeometry\n||+ LineGeometry()\l+ ~LineGeometry()\l+ getStart()\l+ getEnd()\l+ recalculateNormals()\l}" alt="" coords="511,645,664,781"/>
+<area shape="rect" id="node8" href="$classec_1_1_rectangle_geometry.html" title="{ec::RectangleGeometry\n||+ RectangleGeometry()\l+ RectangleGeometry()\l+ ~RectangleGeometry()\l+ init()\l+ getWidth()\l+ getHeight()\l}" alt="" coords="689,638,854,789"/>
+<area shape="rect" id="node9" href="$classec_1_1_sphere_geometry.html" title="{ec::SphereGeometry\n||+ SphereGeometry()\l+ ~SphereGeometry()\l+ resize()\l+ getRadius()\l+ getLatitude()\l+ getLongitude()\l}" alt="" coords="879,638,1027,789"/>
+<area shape="rect" id="node2" href="$classec_1_1_geometry.html" title="{ec::Geometry\n|# m_data\l|+ ~Geometry()\l+ recalculateNormals()\l+ getVao()\l+ getVbo()\l+ getEbo()\l# Geometry()\l# beginRender()\l# onRender()\l# endRender()\l# setMode()\l# setType()\l}" alt="" coords="421,204,575,428"/>
+<area shape="rect" id="node3" href="$classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="421,5,575,156"/>
 </map>

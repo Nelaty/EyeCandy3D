@@ -68,6 +68,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classec_1_1_drawable-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -81,9 +82,9 @@ Collaboration diagram for ec::Drawable:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_drawable__coll__graph.png" border="0" usemap="#ec_1_1_drawable_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_drawable_coll__map" id="ec_1_1_drawable_coll__map">
-<area shape="rect" id="node2" href="classec_1_1_material.html" title="{ec::Material\n||+ Material()\l+ ~Material()\l+ addTexture()\l+ removeTexture()\l+ getTexture()\l+ getTextures()\l+ setHasTexture()\l+ hasTexture()\l+ addDiffuseTextureFromPath()\l+ addSpecularTextureFromPath()\land 15 more...\l}" alt="" coords="5,5,220,229"/>
-<area shape="rect" id="node3" href="classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="245,42,399,193"/>
-<area shape="rect" id="node4" href="classec_1_1_shader.html" title="{ec::Shader\n||+ Shader()\l+ ~Shader()\l+ bind()\l+ unbind()\l+ setBool()\l+ setInt()\l+ setFloat()\l+ setDouble()\l+ setVec2()\l+ setVec3()\land 6 more...\l}" alt="" coords="424,5,524,229"/>
+<area shape="rect" id="node2" href="classec_1_1_material.html" title="{ec::Material\n||+ Material()\l+ ~Material()\l+ addTexture()\l+ removeTexture()\l+ getTexture()\l+ getTextures()\l+ setHasTexture()\l+ hasTexture()\l+ addDiffuseTextureFromPath()\l+ setColorAmbient()\land 13 more...\l}" alt="" coords="5,5,208,229"/>
+<area shape="rect" id="node3" href="classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="232,42,387,193"/>
+<area shape="rect" id="node4" href="classec_1_1_shader.html" title="{ec::Shader\n||+ Shader()\l+ ~Shader()\l+ bind()\l+ unbind()\l+ setBool()\l+ setInt()\l+ setFloat()\l+ setDouble()\l+ setVec2()\l+ setVec3()\land 7 more...\l}" alt="" coords="411,5,511,229"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -91,19 +92,19 @@ Collaboration diagram for ec::Drawable:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adb3c4e7b4d3d510489a26b3d1a8094a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#adb3c4e7b4d3d510489a26b3d1a8094a2">Drawable</a> ()</td></tr>
 <tr class="separator:adb3c4e7b4d3d510489a26b3d1a8094a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a6fee8a6543e001ee2943bda72e17cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a1a6fee8a6543e001ee2943bda72e17cd">Drawable</a> (<a class="el" href="classec_1_1_i_geometry_access.html">IGeometryAccess</a> *<a class="el" href="namespaceec.html#ae4420ccd0f79418a5ce075e43909289faed7daeb157cd9b31e53896ad3c771a26">geometry</a>, <a class="el" href="classec_1_1_material.html">Material</a> *<a class="el" href="namespaceec.html#ae4420ccd0f79418a5ce075e43909289faeec34d804c9ce6c89cff596be555e6a4">material</a>, <a class="el" href="classec_1_1_shader.html">Shader</a> *shader)</td></tr>
+<tr class="memitem:a1a6fee8a6543e001ee2943bda72e17cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a1a6fee8a6543e001ee2943bda72e17cd">Drawable</a> (<a class="el" href="classec_1_1_i_geometry_access.html">IGeometryAccess</a> *<a class="el" href="_resource_type_8h.html#af12fe3e5d8da3d7bd4c76e44cca2319c">geometry</a>, <a class="el" href="classec_1_1_material.html">Material</a> *<a class="el" href="_resource_type_8h.html#a16f6cac2c88eef38bdba4f004e042542">material</a>, <a class="el" href="classec_1_1_shader.html">Shader</a> *shader)</td></tr>
 <tr class="separator:a1a6fee8a6543e001ee2943bda72e17cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a82e5cd6d6a47ad86ed42cfdda512d8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a4a82e5cd6d6a47ad86ed42cfdda512d8">~Drawable</a> ()</td></tr>
 <tr class="separator:a4a82e5cd6d6a47ad86ed42cfdda512d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac494c72b1b0396dbe25a822da4e328a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#ac494c72b1b0396dbe25a822da4e328a9">init</a> (<a class="el" href="classec_1_1_i_geometry_access.html">IGeometryAccess</a> *<a class="el" href="namespaceec.html#ae4420ccd0f79418a5ce075e43909289faed7daeb157cd9b31e53896ad3c771a26">geometry</a>, <a class="el" href="classec_1_1_material.html">Material</a> *<a class="el" href="namespaceec.html#ae4420ccd0f79418a5ce075e43909289faeec34d804c9ce6c89cff596be555e6a4">material</a>, <a class="el" href="classec_1_1_shader.html">Shader</a> *shader)</td></tr>
+<tr class="memitem:ac494c72b1b0396dbe25a822da4e328a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#ac494c72b1b0396dbe25a822da4e328a9">init</a> (<a class="el" href="classec_1_1_i_geometry_access.html">IGeometryAccess</a> *<a class="el" href="_resource_type_8h.html#af12fe3e5d8da3d7bd4c76e44cca2319c">geometry</a>, <a class="el" href="classec_1_1_material.html">Material</a> *<a class="el" href="_resource_type_8h.html#a16f6cac2c88eef38bdba4f004e042542">material</a>, <a class="el" href="classec_1_1_shader.html">Shader</a> *shader)</td></tr>
 <tr class="separator:ac494c72b1b0396dbe25a822da4e328a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9d3345bd308fce8c99adbfc12c53106"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#ac9d3345bd308fce8c99adbfc12c53106">render</a> (const glm::mat4 &amp;model)</td></tr>
 <tr class="separator:ac9d3345bd308fce8c99adbfc12c53106"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76bcb843ef5ced898724fa79a9b20250"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a76bcb843ef5ced898724fa79a9b20250">setGeometry</a> (<a class="el" href="classec_1_1_i_geometry_access.html">IGeometryAccess</a> *<a class="el" href="namespaceec.html#ae4420ccd0f79418a5ce075e43909289faed7daeb157cd9b31e53896ad3c771a26">geometry</a>)</td></tr>
+<tr class="memitem:a76bcb843ef5ced898724fa79a9b20250"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a76bcb843ef5ced898724fa79a9b20250">setGeometry</a> (<a class="el" href="classec_1_1_i_geometry_access.html">IGeometryAccess</a> *<a class="el" href="_resource_type_8h.html#af12fe3e5d8da3d7bd4c76e44cca2319c">geometry</a>)</td></tr>
 <tr class="separator:a76bcb843ef5ced898724fa79a9b20250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49a90aac40736ff3c182196c2b86c2f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_i_geometry_access.html">IGeometryAccess</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a49a90aac40736ff3c182196c2b86c2f3">getGeometry</a> () const</td></tr>
 <tr class="separator:a49a90aac40736ff3c182196c2b86c2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fc7868639a83830d4b60dfad85a0826"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a0fc7868639a83830d4b60dfad85a0826">setMaterial</a> (<a class="el" href="classec_1_1_material.html">Material</a> *<a class="el" href="namespaceec.html#ae4420ccd0f79418a5ce075e43909289faeec34d804c9ce6c89cff596be555e6a4">material</a>)</td></tr>
+<tr class="memitem:a0fc7868639a83830d4b60dfad85a0826"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a0fc7868639a83830d4b60dfad85a0826">setMaterial</a> (<a class="el" href="classec_1_1_material.html">Material</a> *<a class="el" href="_resource_type_8h.html#a16f6cac2c88eef38bdba4f004e042542">material</a>)</td></tr>
 <tr class="separator:a0fc7868639a83830d4b60dfad85a0826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac74210aca5428bedbf8af7abe9adbcc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_material.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#ac74210aca5428bedbf8af7abe9adbcc1">getMaterial</a> () const</td></tr>
 <tr class="separator:ac74210aca5428bedbf8af7abe9adbcc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,12 +117,15 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a9cb72c1eda19a82c849a291e7d45f2b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a9cb72c1eda19a82c849a291e7d45f2b8">beginRender</a> (const glm::mat4 &amp;model)</td></tr>
 <tr class="separator:a9cb72c1eda19a82c849a291e7d45f2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a328de693753d863f567e64f1ff6acfd4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a328de693753d863f567e64f1ff6acfd4">render</a> (<a class="el" href="classec_1_1_shader.html">Shader</a> *shader, const glm::mat4 &amp;model)</td></tr>
-<tr class="separator:a328de693753d863f567e64f1ff6acfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da17eae29c09e49d1a8c2c48e85f88a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a7da17eae29c09e49d1a8c2c48e85f88a">render</a> ()</td></tr>
+<tr class="separator:a7da17eae29c09e49d1a8c2c48e85f88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf99119cd72054a55d91a7605aa62e32"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#abf99119cd72054a55d91a7605aa62e32">endRender</a> ()</td></tr>
 <tr class="separator:abf99119cd72054a55d91a7605aa62e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94739c3f22a3f52edb0a7213d4b16907"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#a94739c3f22a3f52edb0a7213d4b16907">setMaterialUniforms</a> (<a class="el" href="classec_1_1_shader.html">Shader</a> *shader, <a class="el" href="classec_1_1_material.html">Material</a> *<a class="el" href="namespaceec.html#ae4420ccd0f79418a5ce075e43909289faeec34d804c9ce6c89cff596be555e6a4">material</a>) const</td></tr>
-<tr class="separator:a94739c3f22a3f52edb0a7213d4b16907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:af2b64f8e6faa71bee8cccb14387d8432"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_drawable.html#af2b64f8e6faa71bee8cccb14387d8432">setMaterialUniforms</a> (<a class="el" href="classec_1_1_shader.html">Shader</a> *shader, <a class="el" href="classec_1_1_material.html">Material</a> *<a class="el" href="_resource_type_8h.html#a16f6cac2c88eef38bdba4f004e042542">material</a>)</td></tr>
+<tr class="separator:af2b64f8e6faa71bee8cccb14387d8432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -395,8 +399,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a328de693753d863f567e64f1ff6acfd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a328de693753d863f567e64f1ff6acfd4">&#9670;&nbsp;</a></span>render() <span class="overload">[2/2]</span></h2>
+<a id="a7da17eae29c09e49d1a8c2c48e85f88a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da17eae29c09e49d1a8c2c48e85f88a">&#9670;&nbsp;</a></span>render() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,19 +411,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ec::Drawable::render </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classec_1_1_shader.html">Shader</a> *&#160;</td>
-          <td class="paramname"><em>shader</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const glm::mat4 &amp;&#160;</td>
-          <td class="paramname"><em>model</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -470,8 +463,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a94739c3f22a3f52edb0a7213d4b16907"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94739c3f22a3f52edb0a7213d4b16907">&#9670;&nbsp;</a></span>setMaterialUniforms()</h2>
+<a id="af2b64f8e6faa71bee8cccb14387d8432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b64f8e6faa71bee8cccb14387d8432">&#9670;&nbsp;</a></span>setMaterialUniforms()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -494,12 +487,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -594,8 +587,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_drawable_8h_source.html">Drawable.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_drawable_8cpp.html">Drawable.cpp</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_drawable_8h_source.html">Drawable.h</a></li>
+<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_drawable_8cpp.html">Drawable.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

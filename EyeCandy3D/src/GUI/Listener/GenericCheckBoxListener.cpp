@@ -55,11 +55,11 @@ namespace ec
 	}
 
 	void GenericCheckBoxListener::checkedStateChanged(agui::CheckBox* source,
-	                                                  const agui::CheckBox::CheckBoxCheckedEnum state)
+	                                                  const agui::CheckBox::CheckBoxCheckedEnum checked)
 	{
 		if (m_checkedStateChangedCb)
 		{
-			m_checkedStateChangedCb(source, state);
+			m_checkedStateChangedCb(source, checked);
 		}	
 	}
 

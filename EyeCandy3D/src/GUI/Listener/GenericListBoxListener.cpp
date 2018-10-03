@@ -49,8 +49,7 @@ namespace ec
 		m_multiselectChangedCb = callback;
 	}
 
-	void GenericListBoxListener::setMultiselectExtendedChangedCallback(
-		const MultiselectExtendedChanged_Callback& callback)
+	void GenericListBoxListener::setMultiselectExtendedChangedCallback(const MultiselectExtendedChanged_Callback& callback)
 	{
 		m_multiselectExtendedChangedCb = callback;
 	}
@@ -70,23 +69,26 @@ namespace ec
 		m_deathCb = callback;
 	}
 
-	void GenericListBoxListener::itemAdded(agui::ListBox* listBox, const std::string& str)
+	void GenericListBoxListener::itemAdded(agui::ListBox* listBox, 
+										   const std::string& item)
 	{
 		if(m_itemAddedCb)
 		{
-			m_itemAddedCb(listBox, str);
+			m_itemAddedCb(listBox, item);
 		}
 	}
 
-	void GenericListBoxListener::itemRemoved(agui::ListBox* listBox, const std::string& str)
+	void GenericListBoxListener::itemRemoved(agui::ListBox* listBox, 
+											 const std::string& item)
 	{
 		if(m_itemRemovedCb)
 		{
-			m_itemRemovedCb(listBox, str);
+			m_itemRemovedCb(listBox, item);
 		}
 	}
 
-	void GenericListBoxListener::sortedChanged(agui::ListBox* source, bool sorted)
+	void GenericListBoxListener::sortedChanged(agui::ListBox* source, 
+											   const bool sorted)
 	{
 		if(m_sortedChangedCb)
 		{
@@ -94,7 +96,8 @@ namespace ec
 		}
 	}
 
-	void GenericListBoxListener::rSortedChanged(agui::ListBox* source, bool rSorted)
+	void GenericListBoxListener::rSortedChanged(agui::ListBox* source, 
+												const bool rSorted)
 	{
 		if(m_rSortedChangedCb)
 		{
@@ -102,7 +105,8 @@ namespace ec
 		}
 	}
 
-	void GenericListBoxListener::hoverIndexChanged(agui::ListBox* source, int index)
+	void GenericListBoxListener::hoverIndexChanged(agui::ListBox* source,
+												   const int index)
 	{
 		if(m_hoverIndexChangedCb)
 		{
@@ -110,7 +114,8 @@ namespace ec
 		}
 	}
 
-	void GenericListBoxListener::multiselectChanged(agui::ListBox* source, bool multiselect)
+	void GenericListBoxListener::multiselectChanged(agui::ListBox* source, 
+													const bool multiselect)
 	{
 		if(m_multiselectChangedCb)
 		{
@@ -118,7 +123,8 @@ namespace ec
 		}
 	}
 
-	void GenericListBoxListener::multiselectExtendedChanged(agui::ListBox* source, bool multiselect)
+	void GenericListBoxListener::multiselectExtendedChanged(agui::ListBox* source, 
+															const bool multiselect)
 	{
 		if(m_multiselectExtendedChangedCb)
 		{
@@ -126,7 +132,8 @@ namespace ec
 		}
 	}	
 
-	void GenericListBoxListener::itemHeightChanged(agui::ListBox* source, int height)
+	void GenericListBoxListener::itemHeightChanged(agui::ListBox* source, 
+												   const int height)
 	{
 		if(m_itemHeightChangedCb)
 		{
@@ -134,7 +141,8 @@ namespace ec
 		}
 	}
 
-	void GenericListBoxListener::mouseWheelSelectionChanged(agui::ListBox* source, bool mWSelection)
+	void GenericListBoxListener::mouseWheelSelectionChanged(agui::ListBox* source,
+															const bool mWSelection)
 	{
 		if(m_mouseWheelSelectChangedCb)
 		{

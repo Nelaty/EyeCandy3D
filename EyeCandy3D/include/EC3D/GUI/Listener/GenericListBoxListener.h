@@ -8,8 +8,8 @@ namespace ec
 	class GenericListBoxListener : public agui::ListBoxListener
 	{
 	public:
-		using ItemAdded_Callback = std::function<void(agui::ListBox* listBox, const std::string& str)>;
-		using ItemRemoved_Callback = std::function<void(agui::ListBox* listBox, const std::string& str)>;
+		using ItemAdded_Callback = std::function<void(agui::ListBox* listBox, const std::string& item)>;
+		using ItemRemoved_Callback = std::function<void(agui::ListBox* listBox, const std::string& item)>;
 		using SortedChanged_Callback = std::function<void(agui::ListBox* source, bool sorted)>;
 		using RSortedChanged_Callback = std::function<void(agui::ListBox* source, bool rSorted)>;
 		using HoverIndexChanged_Callback = std::function<void(agui::ListBox* source, int index)>;
@@ -33,10 +33,8 @@ namespace ec
 		void setMouseWheelSelectChangedCallback(const MouseWheelSelectChanged_Callback& callback);
 		void setDeathCallback(const Death_Callback& callback);
 
-		/// \todo: What does the string do??
-		void itemAdded(agui::ListBox* listBox, const std::string& str) override;
-		/// \todo: What does the string do??
-		void itemRemoved(agui::ListBox* listBox, const std::string& str) override;
+		void itemAdded(agui::ListBox* listBox, const std::string& item) override;
+		void itemRemoved(agui::ListBox* listBox, const std::string& item) override;
 		void sortedChanged(agui::ListBox* source, bool sorted) override;
 		void rSortedChanged(agui::ListBox* source, bool rSorted) override;
 		void hoverIndexChanged(agui::ListBox* source, int index) override;

@@ -8,12 +8,12 @@ namespace ec
 	class GenericCheckBoxListener : public agui::CheckBoxListener
 	{
 	public:
-		using CheckBoxStateChanged_Callback = std::function<void(agui::CheckBox*, agui::CheckBox::CheckBoxStateEnum)>;
-		using CheckedStateChanged_Callback = std::function<void(agui::CheckBox*, agui::CheckBox::CheckBoxCheckedEnum)>;
-		using Death_Callback = std::function<void(agui::CheckBox*)>;
-		using TextAlignmentChanged_Callback = std::function<void(agui::CheckBox*, agui::AreaAlignmentEnum)>;
-		using CheckBoxAlignmentChanged_Callback = std::function<void(agui::CheckBox*, agui::AreaAlignmentEnum)>;
-		using IsAutosizingChanged_Callback = std::function<void(agui::CheckBox*, bool)>;
+		using CheckBoxStateChanged_Callback = std::function<void(agui::CheckBox* source, agui::CheckBox::CheckBoxStateEnum state)>;
+		using CheckedStateChanged_Callback = std::function<void(agui::CheckBox* source, agui::CheckBox::CheckBoxCheckedEnum checked)>;
+		using Death_Callback = std::function<void(agui::CheckBox* source)>;
+		using TextAlignmentChanged_Callback = std::function<void(agui::CheckBox* source, agui::AreaAlignmentEnum alignment)>;
+		using CheckBoxAlignmentChanged_Callback = std::function<void(agui::CheckBox* source, agui::AreaAlignmentEnum alignment)>;
+		using IsAutosizingChanged_Callback = std::function<void(agui::CheckBox* source, bool autoSizing)>;
 		
 		explicit GenericCheckBoxListener();
 		~GenericCheckBoxListener();
@@ -25,10 +25,8 @@ namespace ec
 		void setCheckBoxAlignmentChangedCallback(const CheckBoxAlignmentChanged_Callback& callback);
 		void setIsAutosizingChangedCallback(const IsAutosizingChanged_Callback& callback);
 
-
-
 		void checkBoxStateChanged(agui::CheckBox* source, agui::CheckBox::CheckBoxStateEnum state) override;
-		void checkedStateChanged(agui::CheckBox* source, agui::CheckBox::CheckBoxCheckedEnum state) override;
+		void checkedStateChanged(agui::CheckBox* source, agui::CheckBox::CheckBoxCheckedEnum checked) override;
 		void death(agui::CheckBox* source) override;
 		void textAlignmentChanged(agui::CheckBox* source, agui::AreaAlignmentEnum alignment) override;
 		void checkBoxAlignmentChanged(agui::CheckBox* source, agui::AreaAlignmentEnum alignment) override;

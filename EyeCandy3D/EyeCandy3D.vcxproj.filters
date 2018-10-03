@@ -92,6 +92,7 @@
     <ClInclude Include="include\EC3D\GUI\Listener\GenericCheckBoxListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericDropDownListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericFrameListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericHScrollBarListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericLabelListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericListBoxListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericRadioButtonListener.h" />
@@ -99,7 +100,7 @@
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTabbedPaneListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTextBoxListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTextFieldListener.h" />
-    <ClInclude Include="include\EC3D\GUI\Listener\GenericHScrollBarListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericVScrollBarListener.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -173,5 +174,6 @@
     <ClCompile Include="src\GUI\Listener\GenericTextBoxListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericTextFieldListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericHScrollBarListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericVScrollBarListener.cpp" />
   </ItemGroup>
 </Project>

@@ -14,68 +14,72 @@ namespace ec
 	GenericButtonListener::~GenericButtonListener()
 	= default;
 
-	void GenericButtonListener::setButtonChangedCallback(const ButtonChangedCallback_Type& callback)
+	void GenericButtonListener::setButtonChangedCallback(const ButtonChanged_Callback& callback)
 	{
 		m_buttonChangedCb = callback;
 	}
 
-	void GenericButtonListener::setStateChangedCallback(const ToggleStateChangedCallback_Type& callback)
+	void GenericButtonListener::setStateChangedCallback(const ToggleStateChanged_Callback& callback)
 	{
 		m_toggleStateChanged = callback;
 	}
 
-	void GenericButtonListener::setDeathCallback(const DeathCallback_Type& callback)
+	void GenericButtonListener::setDeathCallback(const Death_Callback& callback)
 	{
 		m_deathCb = callback;
 	}
 
-	void GenericButtonListener::setIsToggleButtonChanged(const IsToggleButtonChangedCallback_Type& callback)
+	void GenericButtonListener::setIsToggleButtonChanged(const IsToggleButtonChanged_Callback& callback)
 	{
 		m_isToggleButtonChangedCb = callback;
 	}
 
-	void GenericButtonListener::setTextAlignmentChanged(const TextAlignmentChangedCallback_Type& callback)
+	void GenericButtonListener::setTextAlignmentChanged(const TextAlignmentChanged_Callback& callback)
 	{
 		m_textAlignmentChangedCb = callback;
 	}
 
-	void GenericButtonListener::buttonStateChanged(agui::Button* button, agui::Button::ButtonStateEnum state)
+	void GenericButtonListener::buttonStateChanged(agui::Button* source,
+												   const agui::Button::ButtonStateEnum state)
 	{
 		if(m_buttonChangedCb)
 		{
-			m_buttonChangedCb(button, state);
+			m_buttonChangedCb(source, state);
 		}
 	}
 
-	void GenericButtonListener::toggleStateChanged(agui::Button* button, bool down)
+	void GenericButtonListener::toggleStateChanged(agui::Button* source, 
+												   const bool down)
 	{
 		if(m_toggleStateChanged)
 		{
-			m_toggleStateChanged(button, down);
+			m_toggleStateChanged(source, down);
 		}
 	}
 
-	void GenericButtonListener::death(agui::Button* button)
+	void GenericButtonListener::death(agui::Button* source)
 	{
 		if(m_deathCb)
 		{
-			m_deathCb(button);
+			m_deathCb(source);
 		}
 	}
 
-	void GenericButtonListener::isToggleButtonChanged(agui::Button* button, bool down)
+	void GenericButtonListener::isToggleButtonChanged(agui::Button* source,
+													  const bool down)
 	{
 		if(m_isToggleButtonChangedCb)
 		{
-			m_isToggleButtonChangedCb(button, down);
+			m_isToggleButtonChangedCb(source, down);
 		}
 	}
 
-	void GenericButtonListener::textAlignmentChanged(agui::Button* button, agui::AreaAlignmentEnum alignment)
+	void GenericButtonListener::textAlignmentChanged(agui::Button* source, 
+													 const agui::AreaAlignmentEnum alignment)
 	{
 		if(m_textAlignmentChangedCb)
 		{
-			m_textAlignmentChangedCb(button, alignment);
+			m_textAlignmentChangedCb(source, alignment);
 		}
 	}
 }

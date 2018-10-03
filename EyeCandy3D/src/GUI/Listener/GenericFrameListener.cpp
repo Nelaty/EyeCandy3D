@@ -71,7 +71,8 @@ namespace ec
 		}
 	}
 
-	void GenericFrameListener::contentChildAdded(agui::Frame* frame, agui::Widget* widget)
+	void GenericFrameListener::contentChildAdded(agui::Frame* frame, 
+												 agui::Widget* widget)
 	{
 		if(m_contentChildAddedCb)
 		{
@@ -79,7 +80,8 @@ namespace ec
 		}
 	}
 
-	void GenericFrameListener::contentChildRemoved(agui::Frame* frame, agui::Widget* widget)
+	void GenericFrameListener::contentChildRemoved(agui::Frame* frame, 
+												   agui::Widget* widget)
 	{
 		if(m_contentChildRemovedCb)
 		{
@@ -87,7 +89,8 @@ namespace ec
 		}
 	}
 
-	void GenericFrameListener::topMarginChanged(agui::Frame* frame, int topMargin)
+	void GenericFrameListener::topMarginChanged(agui::Frame* frame,
+												const int topMargin)
 	{
 		if(m_topMarginChangedCb)
 		{
@@ -95,7 +98,8 @@ namespace ec
 		}
 	}
 
-	void GenericFrameListener::bottomMarginChanged(agui::Frame* frame, int bottomMargin)
+	void GenericFrameListener::bottomMarginChanged(agui::Frame* frame, 
+												   const int bottomMargin)
 	{
 		if(m_bottomMarginChangedCb)
 		{
@@ -103,7 +107,8 @@ namespace ec
 		}
 	}
 
-	void GenericFrameListener::leftMarginChanged(agui::Frame* frame, int leftMargin)
+	void GenericFrameListener::leftMarginChanged(agui::Frame* frame, 
+												 const int leftMargin)
 	{
 		if(m_leftMarginChangedCb)
 		{
@@ -111,7 +116,8 @@ namespace ec
 		}
 	}
 
-	void GenericFrameListener::rightMarginChanged(agui::Frame* frame, int rightMargin)
+	void GenericFrameListener::rightMarginChanged(agui::Frame* frame, 
+												  const int rightMargin)
 	{
 		if(m_rightMarginChangedCb)
 		{
@@ -119,19 +125,21 @@ namespace ec
 		}
 	}
 
-	void GenericFrameListener::resizableChanged(agui::Frame* frame, int var)
+	void GenericFrameListener::resizableChanged(agui::Frame* frame,
+												const int val)
 	{
 		if(m_resizableChangedCb)
 		{
-			m_resizableChangedCb(frame, var);
+			m_resizableChangedCb(frame, val);
 		}
 	}
 
-	void GenericFrameListener::movableChanged(agui::Frame* frame, int var)
+	void GenericFrameListener::movableChanged(agui::Frame* frame,
+											  const int val)
 	{
 		if(m_movableChangedCb)
 		{
-			m_movableChangedCb(frame, var);
+			m_movableChangedCb(frame, val);
 		}
 	}
 }

@@ -27,7 +27,8 @@ namespace ec
 		m_deathCb = callback;
 	}
 
-	void GenericLabelListener::alignmentChanged(agui::Label* source, agui::AreaAlignmentEnum alignment)
+	void GenericLabelListener::alignmentChanged(agui::Label* source,
+												const agui::AreaAlignmentEnum alignment)
 	{
 		if(m_alignmentChangedCb)
 		{
@@ -35,7 +36,8 @@ namespace ec
 		}
 	}
 
-	void GenericLabelListener::isAutosizingChanged(agui::Label* source, bool autosizing)
+	void GenericLabelListener::isAutosizingChanged(agui::Label* source,
+												   const bool autosizing)
 	{
 		if(m_isAutosizingChangedCb)
 		{

@@ -31,8 +31,7 @@ namespace ec
 		m_textAlignmentChangedCb = callback;
 	}
 
-	void GenericRadioButtonListener::setRadioButtonAlignmentCallback(
-		const RadioButtonAlignmentChanged_Callback& callback)
+	void GenericRadioButtonListener::setRadioButtonAlignmentCallback(const RadioButtonAlignmentChanged_Callback& callback)
 	{
 		m_radioButtonAlignmentChangedCb = callback;
 	}
@@ -48,7 +47,7 @@ namespace ec
 	}
 
 	void GenericRadioButtonListener::radioButtonStateChanged(agui::RadioButton* source,
-		agui::RadioButton::RadioButtonStateEnum state)
+															 const agui::RadioButton::RadioButtonStateEnum state)
 	{
 		if(m_radioButtonStateChangedCb)
 		{
@@ -57,7 +56,7 @@ namespace ec
 	}
 
 	void GenericRadioButtonListener::checkedStateChanged(agui::RadioButton* source,
-		agui::RadioButton::RadioButtonCheckedEnum state)
+														 const agui::RadioButton::RadioButtonCheckedEnum state)
 	{
 		if(m_checkedStateChangedCb)
 		{
@@ -65,7 +64,8 @@ namespace ec
 		}
 	}
 
-	void GenericRadioButtonListener::textAlignmentChanged(agui::RadioButton* source, agui::AreaAlignmentEnum alignment)
+	void GenericRadioButtonListener::textAlignmentChanged(agui::RadioButton* source, 
+														  const agui::AreaAlignmentEnum alignment)
 	{
 		if(m_textAlignmentChangedCb)
 		{
@@ -74,7 +74,7 @@ namespace ec
 	}
 
 	void GenericRadioButtonListener::radioButtonAlignmentChanged(agui::RadioButton* source,
-		agui::AreaAlignmentEnum alignment)
+																 const agui::AreaAlignmentEnum alignment)
 	{
 		if(m_radioButtonAlignmentChangedCb)
 		{
@@ -82,7 +82,8 @@ namespace ec
 		}
 	}
 
-	void GenericRadioButtonListener::isAutosizingChanged(agui::RadioButton* source, bool autoSizing)
+	void GenericRadioButtonListener::isAutosizingChanged(agui::RadioButton* source,
+														 const bool autoSizing)
 	{
 		if(m_isAutosizingChangedCb)
 		{

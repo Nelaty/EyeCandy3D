@@ -8,13 +8,13 @@ namespace ec
 	class GenericDropDownListener : public agui::DropDownListener
 	{
 	public:
-		using DeathCallback_Callback = std::function<void(agui::DropDown*)>;
-		using DropDownShown_Callback = std::function<void(agui::DropDown*)>;
-		using DropDownHidden_Callback = std::function<void(agui::DropDown*)>;
-		using ResizeToWidestItemChanged_Callback = std::function<void(agui::DropDown*, bool)>;
-		using MaxDropDownHeightChanged_Callback = std::function<void(agui::DropDown*, int)>;
-		using ItemAdded_Callback = std::function<void(agui::DropDown*, const std::string&)>;
-		using ItemRemoved_Callback = std::function<void(agui::DropDown*, const std::string&)>;
+		using DeathCallback_Callback = std::function<void(agui::DropDown* source)>;
+		using DropDownShown_Callback = std::function<void(agui::DropDown* source)>;
+		using DropDownHidden_Callback = std::function<void(agui::DropDown* source)>;
+		using ResizeToWidestItemChanged_Callback = std::function<void(agui::DropDown* source, bool resize)>;
+		using MaxDropDownHeightChanged_Callback = std::function<void(agui::DropDown* source, int height)>;
+		using ItemAdded_Callback = std::function<void(agui::DropDown* source, const std::string& item)>;
+		using ItemRemoved_Callback = std::function<void(agui::DropDown* source, const std::string& item)>;
 
 		explicit GenericDropDownListener();
 		~GenericDropDownListener();

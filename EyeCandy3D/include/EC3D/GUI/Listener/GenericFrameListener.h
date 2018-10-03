@@ -8,15 +8,15 @@ namespace ec
 	class GenericFrameListener : public agui::FrameListener
 	{
 	public:
-		using Death_Callback = std::function<void(agui::Frame*)>;
-		using ContentChildAdded_Callback = std::function<void(agui::Frame*, agui::Widget*)>;
-		using ContentChildRemoved_Callback = std::function<void(agui::Frame*, agui::Widget*)>;
-		using TopMarginChanged_Callback = std::function<void(agui::Frame*, int)>;
-		using BottomMarginChanged_Callback = std::function<void(agui::Frame*, int)>;
-		using LeftMarginChanged_Callback = std::function<void(agui::Frame*, int)>;
-		using RightMarginChanged_Callback = std::function<void(agui::Frame*, int)>;
-		using ResizableChanged_Callback = std::function<void(agui::Frame*, int)>;
-		using MovableChanged_Callback = std::function<void(agui::Frame*, int)>;
+		using Death_Callback = std::function<void(agui::Frame* frame)>;
+		using ContentChildAdded_Callback = std::function<void(agui::Frame* frame, agui::Widget* widget)>;
+		using ContentChildRemoved_Callback = std::function<void(agui::Frame* frame, agui::Widget* widget)>;
+		using TopMarginChanged_Callback = std::function<void(agui::Frame* frame, int topMargin)>;
+		using BottomMarginChanged_Callback = std::function<void(agui::Frame* frame, int bottomMargin)>;
+		using LeftMarginChanged_Callback = std::function<void(agui::Frame* frame, int leftMargin)>;
+		using RightMarginChanged_Callback = std::function<void(agui::Frame* frame, int rightMargin)>;
+		using ResizableChanged_Callback = std::function<void(agui::Frame* frame, int val)>;
+		using MovableChanged_Callback = std::function<void(agui::Frame* frame, int val)>;
 
 		explicit GenericFrameListener();
 		~GenericFrameListener();
@@ -38,10 +38,8 @@ namespace ec
 		void bottomMarginChanged(agui::Frame* frame, int bottomMargin) override;
 		void leftMarginChanged(agui::Frame* frame, int leftMargin) override;
 		void rightMarginChanged(agui::Frame* frame, int rightMargin) override;
-		/// \todo: what does this int do??
-		void resizableChanged(agui::Frame* frame, int var) override;
-		/// \todo: what does this int do??
-		void movableChanged(agui::Frame* frame, int var) override;
+		void resizableChanged(agui::Frame* frame, int val) override;
+		void movableChanged(agui::Frame* frame, int val) override;
 
 	private:
 		Death_Callback m_deathCb;

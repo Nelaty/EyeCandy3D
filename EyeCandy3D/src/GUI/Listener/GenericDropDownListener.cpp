@@ -75,7 +75,8 @@ namespace ec
 		}
 	}
 
-	void GenericDropDownListener::resizeToWidestItemChanged(agui::DropDown* source, bool resize)
+	void GenericDropDownListener::resizeToWidestItemChanged(agui::DropDown* source,
+															const bool resize)
 	{
 		if(m_resizeToWidestItemChangedCb)
 		{
@@ -83,7 +84,8 @@ namespace ec
 		}
 	}
 
-	void GenericDropDownListener::maxDropDownHeightChanged(agui::DropDown* source, int height)
+	void GenericDropDownListener::maxDropDownHeightChanged(agui::DropDown* source,
+														   const int height)
 	{
 		if(m_maxDropDownHeightChangedCb)
 		{
@@ -91,7 +93,8 @@ namespace ec
 		}
 	}
 
-	void GenericDropDownListener::itemAdded(agui::DropDown* source, const std::string& item)
+	void GenericDropDownListener::itemAdded(agui::DropDown* source, 
+											const std::string& item)
 	{
 		if(m_itemAddedCb)
 		{
@@ -99,7 +102,8 @@ namespace ec
 		}
 	}
 
-	void GenericDropDownListener::itemRemoved(agui::DropDown* source, const std::string& item)
+	void GenericDropDownListener::itemRemoved(agui::DropDown* source,
+											  const std::string& item)
 	{
 		if(m_itemRemovedCb)
 		{

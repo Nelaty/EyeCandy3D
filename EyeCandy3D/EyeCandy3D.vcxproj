@@ -48,6 +48,7 @@
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTabbedPaneListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTextBoxListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericTextFieldListener.h" />
+    <ClInclude Include="include\EC3D\GUI\Listener\GenericVScrollBarListener.h" />
     <ClInclude Include="include\EC3D\Gui\MiniAgui.h" />
     <ClInclude Include="include\EC3D\Core\Application.h" />
     <ClInclude Include="include\EC3D\Core\Camera.h" />
@@ -165,6 +166,7 @@
     <ClCompile Include="src\GUI\Listener\GenericTabbedPaneListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericTextBoxListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericTextFieldListener.cpp" />
+    <ClCompile Include="src\GUI\Listener\GenericVScrollBarListener.cpp" />
     <ClCompile Include="src\Gui\MiniAgui.cpp" />
     <ClCompile Include="src\Gui\Backend\OpenGLCursorProvider.cpp" />
     <ClCompile Include="src\Gui\Backend\OpenGLFont.cpp" />

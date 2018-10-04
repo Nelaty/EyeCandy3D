@@ -29,6 +29,7 @@
     <ClInclude Include="include\EC3D\Core\CircleGeometry.h" />
     <ClInclude Include="include\EC3D\Core\CylinderGeometry.h" />
     <ClInclude Include="include\EC3D\Core\LineGeometry.h" />
+    <ClInclude Include="include\EC3D\Core\LineGeometryFactory.h" />
     <ClInclude Include="include\EC3D\Core\LineStripGeometry.h" />
     <ClInclude Include="include\EC3D\Core\Shader\ShaderTimed.h" />
     <ClInclude Include="include\EC3D\Core\WindowCreationHints.h" />
@@ -127,6 +128,7 @@
     <ClCompile Include="src\Core\Freetype.cpp" />
     <ClCompile Include="src\Core\Geometry.cpp" />
     <ClCompile Include="src\Core\GeometryData.cpp" />
+    <ClCompile Include="src\Core\LineGeometryFactory.cpp" />
     <ClCompile Include="src\Core\LineStripGeometry.cpp" />
     <ClCompile Include="src\GUI\GuiPrimitiveRenderer.cpp" />
     <ClCompile Include="src\GUI\GuiRenderer.cpp" />

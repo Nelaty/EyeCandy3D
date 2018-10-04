@@ -1,4 +1,5 @@
 #include "ExampleGui.h"
+#include "EC3D/Gui/Backend/OpenGLImage.h"
 
 ExampleGui::ExampleGui()
 {
@@ -11,28 +12,52 @@ void ExampleGui::init()
 {
 	initListener();
 
-	auto flowLayout = new agui::FlowLayout();
-	flowLayout->setVerticalSpacing(120);
-	flowLayout->setHorizontalSpacing(20);
-	this->add(flowLayout);
+	m_flowLayout = new agui::FlowLayout();
+	this->add(m_flowLayout);
 
-	auto button = new agui::Button();
-	button->setSize(50, 100);
-	button->addButtonListener(m_buttonListener);
-	flowLayout->add(button);
+	auto image = new ec::OpenGLImage("Resources/widgetImage.png");
 
-	auto button2 = new agui::Button();
-	button2->setSize(100, 50);
-	button2->addButtonListener(m_buttonListener);
-	flowLayout->add(button2);
+	m_imageWidget = new agui::ImageWidget(image);
+	m_imageWidget->setSize(agui::Dimension(100, 100));
+	//m_flowLayout->add(m_imageWidget);
 
-	for (int i = 0; i < 20; ++i)
+	m_slider = new agui::Slider();
+	m_slider->setSize(100, 36);
+	m_slider->setMaxValue(255);
+	m_slider->setMarkerSize(agui::Dimension(10, 30));
+	m_flowLayout->add(m_slider);
+
+	m_verticalScrollBar = new agui::VScrollBar();
+	m_verticalScrollBar->setSize(agui::Dimension(10, 200));
+	m_verticalScrollBar->setMinValue(10);
+	m_verticalScrollBar->setMinValue(200);
+	m_verticalScrollBar->setValue(200);
+	m_flowLayout->add(m_verticalScrollBar);
+
+	for(int i = 0; i < 2; ++i)
 	{
 		auto b = new agui::Button();
 		b->setSize(50, 50);
 		b->addButtonListener(m_buttonListener);
-		flowLayout->add(b);
+		b->setBackColor(agui::Color(255, 255, 0, (255 * i) / 4));
+		m_flowLayout->add(b);
 	}
+
+	auto button = new agui::Button();
+	button->setSize(50, 100);
+	button->setBackColor(agui::Color(255, 0, 0, 120));
+	button->addButtonListener(m_buttonListener);
+	m_flowLayout->add(button);
+
+	auto button2 = new agui::Button();
+	button2->setSize(100, 50);
+	button2->addButtonListener(m_buttonListener);
+	m_flowLayout->add(button2);
+
+	m_frame = new agui::Frame();
+	m_frame->setSize(200, 200);
+	m_frame->setLocation(50, -200);
+	//this->add(m_frame);
 }
 
 void ExampleGui::initListener()

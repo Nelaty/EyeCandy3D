@@ -26,17 +26,23 @@ namespace ec
 
 	void Material::removeTexture(const Texture& texture)
 	{
-
+		for(auto it = m_textures.begin(); it != m_textures.end(); ++it)
+		{
+			if((*it) == texture)
+			{
+				m_textures.erase(it);
+				if(m_textures.empty())
+				{
+					m_hasTexture = false;
+				}
+				return;
+			}
+		}
 	}
 
 	const std::vector<Texture>& Material::getTextures() const
 	{
 		return m_textures;
-	}
-
-	void Material::setHasTexture(const bool hasTexture)
-	{
-		m_hasTexture = hasTexture;
 	}
 
 	bool Material::hasTexture() const
@@ -59,8 +65,7 @@ namespace ec
 		const auto result = texture.textureFromFile(path, conf_shader::g_textureDiffuse);
 		if(result)
 		{
-			m_textures.push_back(texture);
-			m_hasTexture = true;
+			addTexture(texture);
 		}
 		return result;
 	}

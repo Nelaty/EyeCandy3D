@@ -32,7 +32,6 @@ namespace ec
 		const std::vector<Texture>& getTextures() const;
 
 		/* */
-		void setHasTexture(bool hasTexture);
 		bool hasTexture() const;
 
 		/* 

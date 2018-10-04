@@ -103,6 +103,7 @@
     <ClInclude Include="include\EC3D\GUI\Listener\GenericVScrollBarListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericWidgetListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericActionListener.h" />
+    <ClInclude Include="include\EC3D\Core\LineGeometryFactory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -179,5 +180,6 @@
     <ClCompile Include="src\GUI\Listener\GenericVScrollBarListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericActionListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericWidgetListener.cpp" />
+    <ClCompile Include="src\Core\LineGeometryFactory.cpp" />
   </ItemGroup>
 </Project>

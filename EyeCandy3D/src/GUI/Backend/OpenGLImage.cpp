@@ -21,12 +21,12 @@ namespace ec
 
 	int OpenGLImage::getWidth() const
 	{
-		return m_width;
+		return m_texture.getWidth();
 	}
 
 	int OpenGLImage::getHeight() const
 	{
-		return m_height;
+		return m_texture.getHeight();
 	}
 
 	agui::Color OpenGLImage::getPixel(int x, int y) const

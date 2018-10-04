@@ -35,12 +35,8 @@ namespace ec
 	class EC3D_DECLSPEC Window
 	{
 	public:
-		using EventQueue_Ptr = std::unique_ptr<EventQueue>;
-		using EventSource_Ptr = std::unique_ptr<EventSource>;
-
-
 		/**
-		 * \brief Window contructor
+		 * \brief Window constructor
 		 * \param windowWidth Width of this window in pixels.
 		 * \param windowHeight Height of this window in pixels.
 		 * \param windowTitle Title of this window.
@@ -81,8 +77,7 @@ namespace ec
 		/** Switch to windowed mode. */
 		void goWindowed() const;
 		/** Switch to fullscreen mode. */
-		void goFullscreen();
-		
+		void goFullscreen();		
 
 		/** Set the current clear color. */
 		void setClearColor(const glm::vec4& clearColor);
@@ -161,8 +156,8 @@ namespace ec
 		/** Check if this window is visible. */
 		bool isVisible() const;
 
-		//@{
 		/** Window attribute function (context related attributes) */
+		///@{	
 		int getContextApi() const;
 		int getContextCreationApi() const;
 		std::array<int, 3> getContextVersion() const;
@@ -170,10 +165,10 @@ namespace ec
 		bool isOpenGlDebugContext() const;
 		int getOpenGlProfile() const;
 		int getContextRobustnessStrategies() const;
-		//@}
+		///@}
 
-		//@{
 		/** Window attribute function (frame buffer related attributes) */
+		///@{	
 		static int getRedBits();
 		static int getGreenBits();
 		static int getBlueBits();
@@ -181,7 +176,7 @@ namespace ec
 		static int getDepthBits();
 		static int getStencilBits();
 		static int getMsaaSamples();
-		//@}
+		///@}
 
 		/** Buffer swapping */
 		void swapBuffers() const;

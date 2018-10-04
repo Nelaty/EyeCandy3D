@@ -8,10 +8,14 @@ layout (location = 2) in vec2 texCoordsIn;
 
 uniform vec2 uPosition;
 uniform vec2 uScale;
-uniform float uRotation;
 
 uniform int uWindowWidth;
 uniform int uWindowHeight;
+
+uniform bool uHasTexture;
+uniform sampler2D uTexture;
+uniform vec2 uTexRegionStart;
+uniform vec2 uTexRegionScale;
 
 out vec2 texCoords;
 out vec3 normal;
@@ -24,6 +28,11 @@ void main(void)
 	
 	float positionX = (uPosition.x * oneOverWindowWidth) + (positionIn.x * oneOverWindowWidth) * uScale.x;
 	float positionY = (uPosition.y * oneOverWindowWidth) + (positionIn.y * oneOverWindowWidth) * uScale.y;
+	
+	if(uHasTexture)
+	{
+		
+	}
 	
 	float offsetX = -1.0;
 	float offsetY = +1.0;

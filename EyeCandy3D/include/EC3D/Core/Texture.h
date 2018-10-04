@@ -40,6 +40,9 @@ namespace ec
 		explicit Texture();
 		~Texture();
 
+		/** Check if both texture ids are the same. */
+		bool operator==(const Texture& texture) const;
+
 		/** Activate this texture. */
 		void bind() const;
 		/** Deactivate this texture. */
@@ -62,6 +65,13 @@ namespace ec
 		/** Create a 3D texture */
 		bool cubeMapFromFile(const char* path, const std::string& type);
 
+		/** Get texture height in pixels. */
+		int getWidth() const;
+		/** Get texture width in pixels. */
+		int getHeight() const;
+		/** Get number of bytes used per pixel. */
+		int getComponentNum() const;
+
 		/** Check if this texture has been initialized */
 		bool isInitialized() const;
 
@@ -73,6 +83,10 @@ namespace ec
 
 		GLuint m_id;
 		std::string m_type;
+
+		int m_width;
+		int m_height;
+		int m_componentNum;
 
 		TextureTypes::Dimensions m_dimension;
 	};

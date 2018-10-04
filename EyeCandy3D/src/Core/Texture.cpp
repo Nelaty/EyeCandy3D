@@ -8,12 +8,20 @@ namespace ec
 	Texture::Texture()
 		: m_initialized{false},
 		m_id(0), 
+		m_width(0),
+		m_height(0),
+		m_componentNum(0),
 		m_dimension()
 	{
 	}
 
 	Texture::~Texture()
 	= default;
+
+	bool Texture::operator==(const Texture& texture) const
+	{
+		return getId() == texture.getId();
+	}
 
 	void Texture::bind() const
 	{
@@ -61,24 +69,23 @@ namespace ec
 
 		glGenTextures(1, &m_id);
 
-		int width, height, nrComponents;
 		auto result = false;
 
-		auto* data = stbi_load(path, &width, &height, &nrComponents, 0);
+		auto* data = stbi_load(path, &m_width, &m_height, &m_componentNum, 0);
 		if(data)
 		{
 			result = true;
 
 			GLenum format;
-			if(nrComponents == 1)
+			if(m_componentNum == 1)
 			{
 				format = GL_RED;
 			}
-			else if(nrComponents == 3)
+			else if(m_componentNum == 3)
 			{
 				format = GL_RGB;
 			}
-			else if(nrComponents == 4)
+			else if(m_componentNum == 4)
 			{
 				format = GL_RGBA;
 			}
@@ -90,7 +97,7 @@ namespace ec
 			if(result)
 			{
 				glBindTexture(GL_TEXTURE_2D, m_id);
-				glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+				glTexImage2D(GL_TEXTURE_2D, 0, format, m_width, m_height, 0, format, GL_UNSIGNED_BYTE, data);
 				glGenerateMipmap(GL_TEXTURE_2D);
 
 				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
@@ -125,20 +132,18 @@ namespace ec
 
 		glGenTextures(1, &m_id);
 
-		int width, height, nrChannels;
 		auto result = false;
-
-		auto* data = stbi_load(path, &width, &height, &nrChannels, 0);
+		auto* data = stbi_load(path, &m_width, &m_height, &m_componentNum, 0);
 		if(data)
 		{
 			glBindTexture(GL_TEXTURE_CUBE_MAP, m_id);
 
-			glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-			glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_X, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-			glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_Y, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-			glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_Y, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-			glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_Z, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-			glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_Z, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+			glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X, 0, GL_RGB, m_width, m_height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+			glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_X, 0, GL_RGB, m_width, m_height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+			glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_Y, 0, GL_RGB, m_width, m_height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+			glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_Y, 0, GL_RGB, m_width, m_height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+			glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_Z, 0, GL_RGB, m_width, m_height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+			glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_Z, 0, GL_RGB, m_width, m_height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
 
 			glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 			glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -162,6 +167,21 @@ namespace ec
 		return result;
 	}
 
+	int Texture::getWidth() const
+	{
+		return m_width;
+	}
+
+	int Texture::getHeight() const
+	{
+		return m_height;
+	}
+
+	int Texture::getComponentNum() const
+	{
+		return m_componentNum;
+	}
+
 	bool Texture::isInitialized() const
 	{
 		return m_initialized;
@@ -173,6 +193,11 @@ namespace ec
 		
 		glDeleteTextures(1, &m_id);
 		m_initialized = false;
+
+		m_width = 0;
+		m_height = 0;
+		m_componentNum = 0;
+		m_type = "";
 	}
 
 	const std::string& TextureTypes::getTypeString(const Type type)

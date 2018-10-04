@@ -31,7 +31,9 @@ namespace ec
 		shader->setBool("uHasTexture", info.m_usesTexture);
 		if(info.m_usesTexture)
 		{
-			
+			glActiveTexture(GL_TEXTURE0);
+			shader->setInt("material.uTexture", info.m_texture.getId());
+			info.m_texture.bind();
 		}
 
 		/*m_rectModel = glm::mat4(1);

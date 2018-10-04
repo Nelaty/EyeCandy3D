@@ -47,6 +47,7 @@ namespace ec
 
 		/**
 		 * Remove a given camera from the frame.
+		 * \param camera The camera to be removed.
 		 * \return True if the given camera is registered, false otherwise.
 		 */
 		bool removeCamera(Camera* camera);

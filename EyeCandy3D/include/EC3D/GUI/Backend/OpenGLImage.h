@@ -14,9 +14,9 @@ namespace ec
 		explicit OpenGLImage(const std::string& fileName, bool convertMask = false);
 		virtual ~OpenGLImage();
 		
-		/** Get the width of the texture. */
+		/** Get the width of the texture in pixels. */
 		int getWidth() const override;
-		/** Get the height of the texture. */
+		/** Get the height of the texture in pixels. */
 		int getHeight() const override;
 		
 		/** Get the color of a pixel at a given position */
@@ -37,8 +37,6 @@ namespace ec
 	private:
 		ec::Texture m_texture;
 
-		int m_width = 0;
-		int m_height = 0;
 		bool m_autoFree = false;
 	};
 }

@@ -15,8 +15,7 @@ namespace ec
 	GenericRadioButtonListener::~GenericRadioButtonListener()
 	= default;
 
-	void GenericRadioButtonListener::setRadioButtonStateChangedCallback(
-		const RadioButtonStateChanged_Callback& callback)
+	void GenericRadioButtonListener::setRadioButtonStateChangedCallback(const RadioButtonStateChanged_Callback& callback)
 	{
 		m_radioButtonStateChangedCb = callback;
 	}

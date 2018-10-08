@@ -35,16 +35,25 @@ namespace ec
 		static glm::vec2 randomVec2();
 		/** Calculate a random 2D vector. */
 		static glm::vec2 randomVec2(float min, float max);
+		/** Calculate a random 2D vector. */
+		static glm::vec2 randomVec2(const glm::vec2& min, 
+									const glm::vec2& max);
 
 		/** Calculate a random 3D vector. */
 		static glm::vec3 randomVec3();
 		/** Calculate a random 3D vector. */
 		static glm::vec3 randomVec3(float min, float max);
+		/** Calculate a random 3D vector. */
+		static glm::vec3 randomVec3(const glm::vec3& min,
+									const glm::vec3& max);
 
 		/** Calculate a random 4D vector. */
 		static glm::vec4 randomVec4();
 		/** Calculate a random 4D vector. */
 		static glm::vec4 randomVec4(float min, float max);
+		/** Calculate a random 4D vector. */
+		static glm::vec4 randomVec4(const glm::vec4& min,
+									const glm::vec4& max);
 
 		/** 
 		 * Get a random boolean value. 

@@ -36,9 +36,19 @@ namespace ec
 		glUniform1i(glGetUniformLocation(m_program, uniformName), static_cast<int>(val));
 	}
 
+	void Shader::setBool(const int uniformLocation, const bool val) const
+	{
+		glUniform1i(uniformLocation, static_cast<int>(val));
+	}
+
 	void ec::Shader::setInt(const char* uniformName, const int val) const
 	{
 		glUniform1i(glGetUniformLocation(m_program, uniformName), val);
+	}
+
+	void Shader::setInt(const int uniformLocation, const int val) const
+	{
+		glUniform1i(uniformLocation, static_cast<int>(val));
 	}
 
 	void ec::Shader::setFloat(const char* uniformName, const float val) const
@@ -46,9 +56,19 @@ namespace ec
 		glUniform1f(glGetUniformLocation(m_program, uniformName), val);
 	}
 
+	void Shader::setFloat(const int uniformLocation, const float val) const
+	{
+		glUniform1f(uniformLocation, val);
+	}
+
 	void ec::Shader::setDouble(const char* uniformName, const double val) const
 	{
 		glUniform1d(glGetUniformLocation(m_program, uniformName), val);
+	}
+
+	void Shader::setDouble(const int uniformLocation, const double val) const
+	{
+		glUniform1d(uniformLocation, val);
 	}
 
 	void ec::Shader::setVec2(const char* uniformName, const glm::vec2& v) const
@@ -56,9 +76,19 @@ namespace ec
 		glUniform2fv(glGetUniformLocation(m_program, uniformName), 1, glm::value_ptr(v));
 	}
 
+	void Shader::setVec2(const int uniformLocation, const glm::vec2& v) const
+	{
+		glUniform2fv(uniformLocation, 1, glm::value_ptr(v));
+	}
+
 	void ec::Shader::setVec3(const char* uniformName, const glm::vec3& v) const
 	{
 		glUniform3fv(glGetUniformLocation(m_program, uniformName), 1, glm::value_ptr(v));
+	}
+
+	void Shader::setVec3(const int uniformLocation, const glm::vec3& v) const
+	{
+		glUniform3fv(uniformLocation, 1, glm::value_ptr(v));
 	}
 
 	void ec::Shader::setVec4(const char* uniformName, const glm::vec4& v) const
@@ -66,9 +96,19 @@ namespace ec
 		glUniform4fv(glGetUniformLocation(m_program, uniformName), 1, glm::value_ptr(v));
 	}
 
+	void Shader::setVec4(const int uniformLocation, const glm::vec4& v) const
+	{
+		glUniform4fv(uniformLocation, 1, glm::value_ptr(v));
+	}
+
 	void ec::Shader::setMat2(const char* uniformName, const glm::mat2& m) const
 	{
 		glUniformMatrix2fv(glGetUniformLocation(m_program, uniformName), 1, GL_FALSE, glm::value_ptr(m));
+	}
+
+	void Shader::setMat2(const int uniformLocation, const glm::mat2& m) const
+	{
+		glUniformMatrix2fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(m));
 	}
 
 	void ec::Shader::setMat3(const char* uniformName, const glm::mat3& m) const
@@ -76,9 +116,19 @@ namespace ec
 		glUniformMatrix3fv(glGetUniformLocation(m_program, uniformName), 1, GL_FALSE, glm::value_ptr(m));
 	}
 
+	void Shader::setMat3(const int uniformLocation, const glm::mat3& m) const
+	{
+		glUniformMatrix3fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(m));
+	}
+
 	void ec::Shader::setMat4(const char* uniformName, const glm::mat4& m) const
 	{
 		glUniformMatrix4fv(glGetUniformLocation(m_program, uniformName), 1, GL_FALSE, glm::value_ptr(m));
+	}
+
+	void Shader::setMat4(const int uniformLocation, const glm::mat4& m) const
+	{
+		glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(m));
 	}
 
 	GLuint ec::Shader::getUniformLocation(const char* uniformName) const

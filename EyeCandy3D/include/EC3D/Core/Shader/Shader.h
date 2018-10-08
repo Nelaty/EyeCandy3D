@@ -40,28 +40,58 @@ namespace ec
 		/** Deactivate this shader program. */
 		void unbind() const;
 
-		/** Set single boolean uniform */
+		/** Set single boolean uniform*/
+		///@{
 		void setBool(const char* uniformName, bool val) const;
+		void setBool(int uniformLocation, bool val) const;
+		///@}
 		/** Set single int uniform */
+		///@{
 		void setInt(const char* uniformName, int val) const;
+		void setInt(int uniformLocation, int val) const;
+		///@}
 		/** Set single float uniform */
+		///@{
 		void setFloat(const char* uniformName, float val) const;
+		void setFloat(int uniformLocation, float val) const;
+		///@}
 		/** Set single double uniform */
+		///@{
 		void setDouble(const char* uniformName, double val) const;
+		void setDouble(int uniformLocation, double val) const;
+		///@}
 
-		/** Uniform 2D-vector uniform */
+		/** Single 2D-vector uniform */
+		///@{
 		void setVec2(const char* uniformName, const glm::vec2& v) const;
-		/** Uniform 3D-vector uniform */
+		void setVec2(int uniformLocation, const glm::vec2& v) const;
+		///@}
+		/** Single 3D-vector uniform */
+		///@{
 		void setVec3(const char* uniformName, const glm::vec3& v) const;
-		/** Uniform 4D-vector uniform */
+		void setVec3(int uniformLocation, const glm::vec3& v) const;
+		///@}
+		/** Single 4D-vector uniform */
+		///@{
 		void setVec4(const char* uniformName, const glm::vec4& v) const;
+		void setVec4(int uniformLocation, const glm::vec4& v) const;
+		///@}
 
-		/** Uniform 2D-matrix uniform */
+		/** Single 2D-matrix uniform */
+		///@{
 		void setMat2(const char* uniformName, const glm::mat2& m) const;
-		/** Uniform 3D-matrix uniform */
+		void setMat2(int uniformLocation, const glm::mat2& m) const;
+		///@}
+		/** Single 3D-matrix uniform */
+		///@{
 		void setMat3(const char* uniformName, const glm::mat3& m) const;
-		/** Uniform 4D-matrix uniform */
+		void setMat3(int uniformLocation, const glm::mat3& m) const;
+		///@}
+		/** Single 4D-matrix uniform */
+		///@{
 		void setMat4(const char* uniformName, const glm::mat4& m) const;
+		void setMat4(int uniformLocation, const glm::mat4& m) const;
+		///@}
 
 		/** Get the uniform location by name */
 		GLuint getUniformLocation(const char* uniformName) const;

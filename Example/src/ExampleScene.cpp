@@ -31,8 +31,8 @@ void ExampleScene::init()
 	constructTestSg();
 	//sphereTest();
 	//cylinderTest();
-	//rectangleTest();
-	circleTest();
+	rectangleTest();
+	//circleTest();
 }
 
 void ExampleScene::tick(const float timeDelta)
@@ -152,7 +152,7 @@ void ExampleScene::rectangleTest()
 	auto* shader = shaderManager.getShader("basic");
 	auto* woodMat = new Material();
 	woodMat->addDiffuseTextureFromPath("../Resources/Textures/sand_00.jpg");
-
+	
 	auto* drawable = new Drawable(rectangleMesh, woodMat, shader);
 	auto* node = new Node(nullptr);
 

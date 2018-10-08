@@ -18,8 +18,8 @@ void ExampleGui::init()
 	auto image = new ec::OpenGLImage("Resources/widgetImage.png");
 
 	m_imageWidget = new agui::ImageWidget(image);
-	m_imageWidget->setSize(agui::Dimension(100, 100));
-	//m_flowLayout->add(m_imageWidget);
+	//m_imageWidget->setSize(agui::Dimension(100, 100));
+	m_flowLayout->add(m_imageWidget);
 
 	m_slider = new agui::Slider();
 	m_slider->setSize(100, 36);

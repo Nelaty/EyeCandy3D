@@ -44,6 +44,7 @@ namespace ec
 		vertices[0].m_texCoords = glm::vec2(0.5f, 0.5f);
 
 		const float circleStep = 2 * M_PI / sectionCount;
+		const float oneOnverRadius = 0.5f * (1.0f / radius);
 		for(int i = 1; i <= sectionCount; ++i)
 		{
 			const auto angle = i * circleStep;
@@ -55,7 +56,7 @@ namespace ec
 			vertices[i].m_position.y = sin(angle) * radius;
 
 			vertices[i].m_normal = normal;
-			vertices[i].m_texCoords = (0.5f * position) + 0.5f;
+			vertices[i].m_texCoords = oneOnverRadius * position + 0.5f;
 		}
 
 		// Init indices

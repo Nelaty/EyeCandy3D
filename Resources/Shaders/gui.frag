@@ -12,12 +12,20 @@ uniform vec2 uTexRegionScale;
 in vec2 texCoords;
 in vec3 normal;
 
+uniform bool uIsText;
+
 out vec4 fragColor;
 
 const float colorMap = 255.0 / 255.0;
 
 void main(void)
 {
+	if(uIsText)
+	{
+		fragColor = vec4(uColor.rgb, texture2D(uTexture, uv).r);
+		return;
+	}
+
 	if(uHasTexture)
 	{
 		fragColor = texture(uTexture, texCoords);

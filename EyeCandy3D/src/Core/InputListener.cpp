@@ -25,15 +25,17 @@ namespace ec
 		return m_enabled;
 	}
 
-	void InputListener::addCallback(const std::string& id, EventKey_Type key, std::function<void()> callback)
+	void InputListener::addCallback(const std::string& id, 
+									EventKey_Type key, 
+									std::function<void()> callback)
 	{
 		const auto cbPair = std::make_pair(id, callback);
-		m_eventCallbacks[key].push_back(cbPair);
+		m_callbackContainers[static_cast<int>(key)].emplace_back(EventCallback_Type(id, callback));
 	}
 
 	bool InputListener::removeCallback(const std::string& id, EventKey_Type key)
 	{
-		auto& cbContainer = m_eventCallbacks[key];
+		auto& cbContainer = m_callbackContainers[static_cast<int>(key)];
 		const auto foundCb = std::remove_if(cbContainer.begin(), cbContainer.end(), 
 											[&](const auto& pair) -> bool
 		{
@@ -45,21 +47,21 @@ namespace ec
 
 	void InputListener::removeCallbacksOfType(EventKey_Type key)
 	{
-		auto& cbContainer = m_eventCallbacks[key];
+		auto& cbContainer = m_callbackContainers[static_cast<int>(key)];
 		cbContainer.clear();
 	}
 
 	void InputListener::removeAllCallbacks()
 	{
-		for(auto& it : m_eventCallbacks)
+		for(auto& it : m_callbackContainers)
 		{
-			it.second.clear();
+			it.clear();
 		}
 	}
 
 	bool InputListener::isCallbackRegistered(const std::string& id, EventKey_Type key)
 	{
-		auto& cbContainer = m_eventCallbacks[key];
+		auto& cbContainer = m_callbackContainers[static_cast<int>(key)];
 		const auto foundCb = std::find_if(cbContainer.begin(), cbContainer.end(),
 									[&](const auto& pair) -> bool
 		{
@@ -76,7 +78,7 @@ namespace ec
 
 	void InputListener::processEvent(const InputEvent& event)
 	{
-		auto& cbContainer = m_eventCallbacks[event.m_type];
+		auto& cbContainer = m_callbackContainers[static_cast<int>(event.m_type)];
 		for(const auto& it : cbContainer)
 		{
 			it.second();

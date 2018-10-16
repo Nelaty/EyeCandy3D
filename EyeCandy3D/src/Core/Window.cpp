@@ -63,22 +63,6 @@ namespace ec
 		glfwMakeContextCurrent(m_window);
 	}
 
-	/*void Window::startMainLoop()
-	{
-		if(!m_initSuccessful)
-		{
-			printf("The simulation hasn't been initialized!\n");
-			return;
-		}
-
-		m_timer.reset();
-		while(!glfwWindowShouldClose(m_window))
-		{
-			mainLoopImpl();
-		}
-		glfwTerminate();
-	}*/
-
 	void Window::tickMeta()
 	{
 		const auto timeDelta = static_cast<float>(m_timer.getTimeDelta());

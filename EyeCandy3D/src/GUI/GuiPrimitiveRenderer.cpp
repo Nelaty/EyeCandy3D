@@ -28,6 +28,7 @@ namespace ec
 		shader->setVec2("uScale", info.m_size);
 		shader->setVec4("uColor", info.m_color);
 
+		shader->setBool("uIsText", info.m_isText);
 		shader->setBool("uHasTexture", info.m_usesTexture);
 		if(info.m_usesTexture)
 		{

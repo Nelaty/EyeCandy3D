@@ -4,8 +4,8 @@
 
 #include <vector>
 #include <functional>
-#include <map>
 #include <utility>
+#include <array>
 
 /*
 * InputListener gets informed about InputEvents from an InputObservable
@@ -18,7 +18,8 @@ namespace ec
 		using EventKey_Type = InputType;
 		using EventCallback_Type = std::pair<std::string, std::function<void()>>;
 		using EventCallbackContainer_Type = std::vector<EventCallback_Type>;
-		using EventCallbackMap_Type = std::map<EventKey_Type, EventCallbackContainer_Type>;
+		using CallbackContainerMap_Type = std::array<EventCallbackContainer_Type, static_cast<int>(InputType::count)>;
+
 
 		virtual ~InputListener();
 		
@@ -51,7 +52,9 @@ namespace ec
 		/* Automatically called, when informed about an event */
 		virtual void processEvent(const InputEvent& event);
 
-		EventCallbackMap_Type m_eventCallbacks;
+		//EventCallbackMap_Type m_eventCallbacks;
+
+		CallbackContainerMap_Type m_callbackContainers;
 
 		bool m_enabled;
 	};

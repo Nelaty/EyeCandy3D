@@ -17,11 +17,24 @@ uniform sampler2D uTexture;
 uniform vec2 uTexRegionStart;
 uniform vec2 uTexRegionScale;
 
+uniform bool uIsText;
+
 out vec2 texCoords;
 out vec3 normal;
 
 void main(void)
 {
+	if(uIsText)
+	{
+		// TODO: How to pass uv pos to shader?
+		// xy -> uv position
+		// zw -> screen position
+		vec4(0.0) uvPos;
+		gl_Position = vec4(uvPos.xy, 0, 1);
+		texCoords = uvPos.zw;
+		return;
+	}
+	
 	
 	float oneOverWindowWidth = 1.0 / uWindowWidth;
 	float oneOverWindowHeight = 1.0 / uWindowHeight;

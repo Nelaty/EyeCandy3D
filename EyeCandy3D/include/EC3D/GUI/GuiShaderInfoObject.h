@@ -17,5 +17,6 @@ namespace ec
 
 		Texture m_texture;
 		bool m_usesTexture{false};
+		bool m_isText{false};
 	};
 }

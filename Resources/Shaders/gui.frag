@@ -22,13 +22,13 @@ void main(void)
 {
 	if(uIsText)
 	{
-		fragColor = vec4(uColor.rgb, texture2D(uTexture, uv).r);
+		fragColor = vec4(uColor.rgb, texture2D(uTexture, texCoords).r);
 		return;
 	}
 
 	if(uHasTexture)
 	{
-		fragColor = texture(uTexture, texCoords);
+		fragColor = texture2D(uTexture, texCoords);
 		//fragColor = vec4(texCoords, 0.0, 1.0);
 	}
 	else

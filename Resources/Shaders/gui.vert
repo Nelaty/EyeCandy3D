@@ -29,7 +29,7 @@ void main(void)
 		// TODO: How to pass uv pos to shader?
 		// xy -> uv position
 		// zw -> screen position
-		vec4(0.0) uvPos;
+		vec4 uvPos = vec4(0.0);
 		gl_Position = vec4(uvPos.xy, 0, 1);
 		texCoords = uvPos.zw;
 		return;

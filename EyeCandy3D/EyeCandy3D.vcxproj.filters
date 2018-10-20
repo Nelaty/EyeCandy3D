@@ -104,6 +104,13 @@
     <ClInclude Include="include\EC3D\GUI\Listener\GenericWidgetListener.h" />
     <ClInclude Include="include\EC3D\GUI\Listener\GenericActionListener.h" />
     <ClInclude Include="include\EC3D\Core\LineGeometryFactory.h" />
+    <ClInclude Include="include\EC3D\Core\DirectionalLight.h" />
+    <ClInclude Include="include\EC3D\Core\Light.h" />
+    <ClInclude Include="include\EC3D\Core\LightSystem.h" />
+    <ClInclude Include="include\EC3D\Core\LightType.h" />
+    <ClInclude Include="include\EC3D\Core\OmniLight.h" />
+    <ClInclude Include="include\EC3D\Core\PointLight.h" />
+    <ClInclude Include="include\EC3D\Core\SpotLight.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -181,5 +188,11 @@
     <ClCompile Include="src\GUI\Listener\GenericActionListener.cpp" />
     <ClCompile Include="src\GUI\Listener\GenericWidgetListener.cpp" />
     <ClCompile Include="src\Core\LineGeometryFactory.cpp" />
+    <ClCompile Include="src\Core\DirectionalLight.cpp" />
+    <ClCompile Include="src\Core\Light.cpp" />
+    <ClCompile Include="src\Core\LightSystem.cpp" />
+    <ClCompile Include="src\Core\PointLight.cpp" />
+    <ClCompile Include="src\Core\OmniLight.cpp" />
+    <ClCompile Include="src\Core\SpotLight.cpp" />
   </ItemGroup>
 </Project>

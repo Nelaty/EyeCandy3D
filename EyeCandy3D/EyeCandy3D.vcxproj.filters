@@ -39,10 +39,8 @@
     <ClInclude Include="include\EC3D\Core\Texture.h" />
     <ClInclude Include="include\EC3D\Core\Vertex.h" />
     <ClInclude Include="include\EC3D\Core\Window.h" />
-    <ClInclude Include="include\EC3D\Utilities\FileLogger.h" />
     <ClInclude Include="include\EC3D\Utilities\Profiler.h" />
     <ClInclude Include="include\EC3D\Utilities\Timer.h" />
-    <ClInclude Include="include\EC3D\Utilities\UtilitiesFile.h" />
     <ClInclude Include="include\EC3D\Utilities\UtilitiesMath.h" />
     <ClInclude Include="include\EC3D\Core\InputListener.h" />
     <ClInclude Include="include\EC3D\Core\Frame.h" />
@@ -111,6 +109,9 @@
     <ClInclude Include="include\EC3D\Core\OmniLight.h" />
     <ClInclude Include="include\EC3D\Core\PointLight.h" />
     <ClInclude Include="include\EC3D\Core\SpotLight.h" />
+    <ClInclude Include="include\EC3D\Utilities\Logger.h" />
+    <ClInclude Include="include\EC3D\Utilities\FileSystem.h" />
+    <ClInclude Include="include\EC3D\Utilities\SystemTime.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -130,10 +131,8 @@
     <ClCompile Include="src\Core\SceneSystem.cpp" />
     <ClCompile Include="src\Core\Texture.cpp" />
     <ClCompile Include="src\Core\Window.cpp" />
-    <ClCompile Include="src\Utilities\FileLogger.cpp" />
     <ClCompile Include="src\Utilities\Profiler.cpp" />
     <ClCompile Include="src\Utilities\Timer.cpp" />
-    <ClCompile Include="src\Utilities\UtilitiesFile.cpp" />
     <ClCompile Include="src\Core\InputListener.cpp" />
     <ClCompile Include="src\Core\Frame.cpp" />
     <ClCompile Include="src\Core\Viewport.cpp" />
@@ -194,5 +193,8 @@
     <ClCompile Include="src\Core\PointLight.cpp" />
     <ClCompile Include="src\Core\OmniLight.cpp" />
     <ClCompile Include="src\Core\SpotLight.cpp" />
+    <ClCompile Include="src\Utilities\Logger.cpp" />
+    <ClCompile Include="src\Utilities\FileSystem.cpp" />
+    <ClCompile Include="src\Utilities\SystemTime.cpp" />
   </ItemGroup>
 </Project>

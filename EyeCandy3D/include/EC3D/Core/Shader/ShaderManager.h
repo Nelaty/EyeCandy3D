@@ -7,7 +7,7 @@
 #include <memory>
 
 /**
-* Manages a collection of shaders.
+* \brief Manages a collection of shaders.
 */
 namespace ec
 {

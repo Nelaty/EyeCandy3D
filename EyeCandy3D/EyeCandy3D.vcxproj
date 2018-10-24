@@ -110,11 +110,12 @@
     <ClInclude Include="include\EC3D\Gui\Backend\OpenGLInput.h" />
     <ClInclude Include="include\EC3D\Gui\GUISystem.h" />
     <ClInclude Include="include\EC3D\Core\Mouse.h" />
-    <ClInclude Include="include\EC3D\Utilities\FileLogger.h" />
+    <ClInclude Include="include\EC3D\Utilities\FileSystem.h" />
+    <ClInclude Include="include\EC3D\Utilities\Logger.h" />
     <ClInclude Include="include\EC3D\Utilities\Profiler.h" />
     <ClInclude Include="include\EC3D\Utilities\Random.h" />
+    <ClInclude Include="include\EC3D\Utilities\SystemTime.h" />
     <ClInclude Include="include\EC3D\Utilities\Timer.h" />
-    <ClInclude Include="include\EC3D\Utilities\UtilitiesFile.h" />
     <ClInclude Include="include\EC3D\Utilities\UtilitiesMath.h" />
     <ClInclude Include="include\EC3D\Core\StaticGeometry.h" />
   </ItemGroup>
@@ -195,11 +196,12 @@
     <ClCompile Include="src\Gui\Backend\OpenGLImageLoader.cpp" />
     <ClCompile Include="src\Gui\Backend\OpenGLInput.cpp" />
     <ClCompile Include="src\Gui\GUISystem.cpp" />
-    <ClCompile Include="src\Utilities\FileLogger.cpp" />
+    <ClCompile Include="src\Utilities\FileSystem.cpp" />
+    <ClCompile Include="src\Utilities\Logger.cpp" />
     <ClCompile Include="src\Utilities\Profiler.cpp" />
     <ClCompile Include="src\Utilities\Random.cpp" />
+    <ClCompile Include="src\Utilities\SystemTime.cpp" />
     <ClCompile Include="src\Utilities\Timer.cpp" />
-    <ClCompile Include="src\Utilities\UtilitiesFile.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

@@ -17,6 +17,14 @@ namespace ec
 	CylinderGeometry::~CylinderGeometry()
 	= default;
 
+	void CylinderGeometry::resize(const float radius, 
+								  const float height,
+								  const int latitude,
+								  const int longitude)
+	{
+		init(radius, height, latitude, longitude);
+	}
+
 	void CylinderGeometry::init(const float radius, 
 								const float height, 
 								const int latitude, 
@@ -57,7 +65,7 @@ namespace ec
 
 		// x-z coordinates are the same for vertices in a vertical line
 		std::vector<glm::vec3> positions(m_longitude);
-		const float circleStep = 2.0f * M_PI / m_longitude;
+		const float circleStep = 2.0f * float(M_PI) / float(m_longitude);
 		for(auto i = 0; i < m_longitude; ++i)
 		{
 			positions[i].x = m_radius * cos(circleStep * i);
@@ -84,7 +92,7 @@ namespace ec
 		auto& indices = m_data.m_indices;
 		
 		const auto vertexNum = m_data.m_vertices.size();
-		const auto indexMax = vertexNum - 1;
+		const unsigned indexMax = unsigned(vertexNum - 1);
 		indices.reserve(vertexNum * 3);
 
 		// Top row sectors only contain triangles

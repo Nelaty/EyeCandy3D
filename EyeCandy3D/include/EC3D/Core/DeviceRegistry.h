@@ -16,23 +16,39 @@ namespace ec
 		explicit DeviceRegistry(Window* window);
 		~DeviceRegistry();
 
-		/** Install every device */
+		/** 
+		 * \brief Install every device.
+		 */
 		void installAll() const;
-		/** Uninstall every device */
+		/** 
+		 * \brief Uninstall every device.
+		 */
 		void uninstallAll() const;
 
-		/** Install a keyboard device */
+		/** 
+		 * \brief Install a keyboard device.
+		 */
 		void installKeyboard() const;
-		/** Uninstall a keyboard device */
+		/** 
+		 * \brief Uninstall a keyboard device.
+		 */
 		void uninstallKeyboard() const;
-		/** Get the currently used keyboard */
+		/** 
+		 * \brief Get the currently used keyboard.
+		 */
 		Keyboard* getKeyboard() const;
 
-		/** Install a mouse device */
+		/** 
+		 * \brief Install a mouse device.
+		 */
 		void installMouse() const;
-		/** Uninstall a mouse device */
+		/** 
+		 * \brief Uninstall a mouse device.
+		 */
 		void uninstallMouse() const;
-		/** Get the currently used mouse */
+		/** 
+		 * \brief Get the currently used mouse.
+		 */
 		Mouse* getMouse() const;
 
 	private:

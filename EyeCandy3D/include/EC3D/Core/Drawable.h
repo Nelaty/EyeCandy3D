@@ -4,20 +4,27 @@
 
 #include <glm/glm.hpp>
 
-/*
-* Core class for rendering geometry data with a certain material and 
-* shader.
-*/
+
 namespace ec
 {
 	class IGeometryAccess;
 	class Material;
 	class Shader;
 
+	/**
+	 * \brief Core class for rendering geometry data with a certain material and
+	 * shader.
+	 */
 	class EC3D_DECLSPEC Drawable
 	{
 	public:
 		explicit Drawable();
+		/**
+		 * \brief Drawable constructor.
+		 * \param geometry The geometry to render onto.
+		 * \param material Color information.
+		 * \param shader 
+		 */
 		explicit Drawable(IGeometryAccess* geometry, Material* material, Shader* shader);
 		virtual ~Drawable();
 

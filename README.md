@@ -28,8 +28,8 @@ Additional dependencies directories:
 * *Build*
 
 ## 3. Documentation
-* [Doxygen](https://nelaty.github.io/EyeCandy3D/Doc/DoxygenDoc/html/index.html)
-* [User manual](https://nelaty.github.io/EyeCandy3D/Doc/UserManual/EyeCandy3D_UserManual.pdf)
+* [Doxygen](https://nelaty.github.io/EyeCandy3D/DoxygenDoc/html/index.html)
+* [User manual](https://nelaty.github.io/EyeCandy3D/UserManual/EyeCandy3D_UserManual.pdf)
 
 
 **Doxygen note:**

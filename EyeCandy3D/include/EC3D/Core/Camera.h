@@ -13,7 +13,7 @@ namespace ec
 	class Scene;
 
 	/**
-	* A camera encapsulates a view and a projection matrix. It is used
+	* \brief A camera encapsulates a view and a projection matrix. It is used
 	* to render the related scene. It contains a viewport, which defines
 	* the area of the render target the scene should be rendered into.
 	*/
@@ -37,50 +37,82 @@ namespace ec
 		 */
 		void updateLocalMat() override;
 
-		/** Recursively update global matrices */
+		/** 
+		 * \brief Recursively update global matrices.
+		 */
 		void updateGlobalMatrices(const glm::mat4& parentMat) override;
 
-		/** Get the current view matrix */
+		/** 
+		 * \brief Get the current view matrix.
+		 */
 		const glm::mat4& getView() const;
-		/** Get the current projection matrix */
+		/** 
+		 * \brief Get the current projection matrix.
+		 */
 		const glm::mat4& getProjection() const;
 
-		/** Change to orthogonal projection */
+		/** 
+		 *\brief Change to orthogonal projection.
+		 */
 		void setProjectionOrtho();
-		/** Change to perspective projection */
+		/** 
+		 * \brief Change to perspective projection.
+		 */
 		void setProjectionPerspective();
 
 		/** 
-		 * Set the fov
+		 * \biref Set the field of view.
 		 * \param fov FOV in radians 
 		 */
 		void setFov(float fov);
-		/** Get the current fov in radians */
+		/** 
+		 * \brief Get the current fov in radians.
+		 */
 		float getFov() const;
 
-		/** Set the near plane */
+		/** 
+		 * \brief Set the near plane.
+		 */
 		void setNear(float near);
-		/** Get the current near plane */
+		/** 
+		 * \brief Get the current near plane. 
+		 */
 		float getNear() const;
 
-		/** Set the far plane */
+		/**
+		 * \brief Set the far plane.
+		 */
 		void setFar(float far);		
-		/** Get the current far plane */
+		/** 
+		 * \brief Get the current far plane.
+		 */
 		float getFar() const;
 
-		/** Access to the related scene */
+		/**
+		 * \brief Access to the related scene.
+		 */
 		Scene* getScene() const;
 
-		/** Get the current viewport. */
+		/** 
+		 * \brief Get the current viewport. 
+		 */
 		Viewport& getViewport();
-		/** Get the current viewport. */
+		/**
+		 * \brief Get the current viewport. 
+		 */
 		const Viewport& getViewport() const;
-		/** Change the current viewport. */
+		/** 
+		 * \brief Change the current viewport. 
+		 */
 		void setViewport(const Viewport& viewport);
 
-		/** Get this camera's gui system. */
+		/** 
+		 * \brief Get this camera's gui system.
+		 */
 		const GuiSystem& getGuiSystem() const;
-		/** Get this camera's gui system. */
+		/**
+		 * \brief Get this camera's gui system. 
+		 */
 		GuiSystem& getGuiSystem();
 
 	private:

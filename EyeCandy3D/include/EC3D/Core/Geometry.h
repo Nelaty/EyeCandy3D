@@ -10,7 +10,9 @@ namespace ec
 	public:
 		virtual ~Geometry();
 
-		/** Recalculate vertex normals. */
+		/** 
+		 * \brief Recalculate vertex normals. 
+		 */
 		virtual void recalculateNormals();
 
 		/** Get the vertex array object id. */

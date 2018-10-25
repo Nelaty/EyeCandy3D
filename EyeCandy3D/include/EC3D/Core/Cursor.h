@@ -6,6 +6,9 @@
 
 namespace ec
 {
+	/**
+	 * \brief Describes all standard cursor types provided by GLFW.
+	 */
 	enum class EC3D_DECLSPEC StandardCursorType : int
 	{
 		arrow = GLFW_ARROW_CURSOR,
@@ -18,6 +21,9 @@ namespace ec
 
 	class Window;
 
+	/**
+	 * \brief A cursor describes the bitmap used for a cursor.
+	 */
 	class EC3D_DECLSPEC Cursor
 	{
 	public:

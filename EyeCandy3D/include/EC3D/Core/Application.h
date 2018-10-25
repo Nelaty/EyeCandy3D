@@ -36,32 +36,54 @@ namespace ec
 							 const std::string& windowName);
 		~Application();
 
-		/** Should be called to start the application */
+		/** 
+		 * \brief Should be called to start the application.
+		 */
 		virtual void startMainLoop();
 
-		/** Stop the application. */
+		/** 
+		 * \brief Stop the application. 
+		 */
 		virtual void kill();
 
-		/** Update all windows */
+		/** 
+		 * \brief Update all windows. 
+		 */
 		virtual void tick();
-		/** Render all windows */
+		/** 
+		 * \brief Render all windows.
+		 */
 		virtual void render();
 
-		/** Init function implementation. */
+		/** 
+		 * \brief Init function implementation. 
+		 */
 		virtual bool initImpl();
 
-		/** Initialize OpenGL. */
+		/** 
+		 * \brief Initialize OpenGL. 
+		 */
 		static void initOpenGl();
 
-		/** Main loop function implementation */
+		/**
+		 * \brief Main loop function implementation.
+		 */
 		virtual void mainLoopImpl();
 
-		/** Print the versions of used libraries to console. */
+		/** 
+		 * \brief Print the versions of used libraries to console. 
+		 */
 		static void printVersions();
 
-		/** Set the call back for when a new monitor connects. */
+		/** 
+		 * \brief Set the callback for when a new monitor connects.
+		 * \param cb The new monitor connected callback.
+		 */
 		static void setMonitorConnectedCallback(const std::function<void(GLFWmonitor*)>& cb);
-		/** Set the call back for when a monitor disconnects. */
+		/** 
+		 * \brief Set the callback for when a monitor disconnects. 
+		 * \param cb The new monitor disconnected callback.
+		 */
 		static void setMonitorDisconnectedCallback(const std::function<void(GLFWmonitor*)>& cb);
 
 		/**
@@ -84,12 +106,16 @@ namespace ec
 					 WindowCreationHints hints = WindowCreationHints());
 
 	protected:
-		/** Destroy all windows, which shall be closed. */
+		/** 
+		 * \brief Destroy all windows, which shall be closed. 
+		 */
 		virtual void closeDeadWindows();
 
 		/**
-		* The monitor callback is called when a monitor is connected or
-		* disconnected.
+		* \brief The monitor callback is called when a monitor is 
+		* connected or disconnected.
+		* \param monitor The monitor that was (dis)connected
+		* \event 
 		*/
 		static void monitorCallback(GLFWmonitor* monitor, int event);
 	

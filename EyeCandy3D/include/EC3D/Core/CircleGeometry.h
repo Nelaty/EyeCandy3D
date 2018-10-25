@@ -3,22 +3,37 @@
 
 namespace ec
 {
+	/**
+	 * \brief Concrete static geometry that represents a circle.
+	 */
 	class CircleGeometry : public StaticGeometry
 	{
 	public:
-		explicit CircleGeometry(float radius = 1.0f, int sectionCount = 20);
+		/**
+		 * \brief CircleGeometry constructor.
+		 * \param radius The initial radius. [>0]
+		 * \param sectionCount The initial number of triangles used
+		 * to approximate this circle. [>2]
+		 */
+		explicit CircleGeometry(float radius = 1.0f, 
+								int sectionCount = 20);
 		~CircleGeometry();
 
 		/**
 		 * \brief Change the circle geometry
-		 * \param radius Needs to be > 0.0f
-		 * \param sectionCount Needs to be > 2
+		 * \param radius The circle radius. [>0]
+		 * \param sectionCount The number of triangles used
+		 * to approximate this circle. [>2]
 		 */
 		void init(float radius, int sectionCount);
 
-		/** Get the radius of the circle */
+		/** 
+		 * \brief Get the radius of the circle.
+		 */
 		float getRadius() const;
-		/** Get the number of sections used to approximate the circle */
+		/** 
+		 * \brief Get the number of sections used to approximate the circle. 
+		 */
 		int getSectionCount() const;
 
 	private:

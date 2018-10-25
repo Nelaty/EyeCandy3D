@@ -20,33 +20,64 @@ namespace ec
 		explicit CameraController(Camera* camera);
 		~CameraController();
 
-		/* Apply camera movement */
+		/**
+		 * \brief Apply camera movement.
+		 */
 		void tick(float timeDelta);
 
-		/** Reset camera to initial state */
+		/** 
+		 * \brief Reset camera to initial state.
+		 */
 		void reset();
 
-		/* Camera access */
+		/**
+		 * \brief Set the currently controlled camera.
+		 */
 		void setCamera(Camera* camera);
+		/**
+		 * \return The currently controlled camera.
+		 */
 		Camera* getCamera() const;
 
 	protected:
+		/**
+		 * \brief Process event to update camera movement.
+		 * \param event An input event.
+		 */
 		void processEvent(const InputEvent& event) override;
 
-		/* Routines for different input types */
+		/**
+		 * \brief Used to rotate the camera with a mouse.
+		 */
 		void processMouseMovement(const MouseEvent& event);
+		/**
+		 * \brief Enables camera rotation by mouse.
+		 */
 		void processMouseButtonDown(const MouseEvent& event);
+		/**
+		 * \brief Disables camera rotation by mouse.
+		 */
 		void processMouseButtonUp(const MouseEvent& event);
 
+		/**
+		 * \brief Enable linear movement.
+		 */
 		void processKeyDownInput(const KeyboardEvent& event);
+		/**
+		 * \brief Disable linear movement.
+		 */
 		void processKeyUpInput(const KeyboardEvent&  event);
+		/**
+		 * \brief Change fov.
+		 */
 		void processScrollInput(const MouseEvent& event) const;
 
 	private:
-		/* Initializes the camera controller */
+		/**
+		 * \brief Initializes the camera controller.
+		 */
 		void init();
 
-		/* Active camera */
 		Camera* m_camera;
 
 		/* Maximal and current linear velocity */

@@ -1,0 +1,5 @@
+<map id="ec::SpotLight" name="ec::SpotLight">
+<area shape="rect" id="node2" href="$classec_1_1_light.html" title="Abstract light source. " alt="" coords="35,623,144,817"/>
+<area shape="rect" id="node3" href="$classec_1_1_node.html" title="{ec::Node\n|# m_parent\l# m_children\l# m_drawables\l|+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="5,321,173,575"/>
+<area shape="rect" id="node4" href="$classec_1_1_transform3_d.html" title="{ec::Transform3D\n|# m_up\l# m_position\l# m_forwardVector\l# m_scale\l|+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getUpVector()\l+ getForwardVector()\l+ getLocalMat()\l+ setLocalMat()\l+ getTranslation()\l+ getTranslationX()\land 39 more...\l}" alt="" coords="17,5,161,273"/>
+</map>

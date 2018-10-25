@@ -1,0 +1,106 @@
+\hypertarget{classec_1_1_logger}{}\section{ec\+:\+:Logger Class Reference}
+\label{classec_1_1_logger}\index{ec\+::\+Logger@{ec\+::\+Logger}}
+
+
+Log messages to console and create log files.  
+
+
+
+
+{\ttfamily \#include $<$Logger.\+h$>$}
+
+
+
+Collaboration diagram for ec\+:\+:Logger\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classec_1_1_logger__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_logger_a64b616307b97bab0181814a5f9258e9f}{Logger}} (\mbox{\hyperlink{namespaceec_a4b0151aefd16631c24dd6464fd331e4b}{Logging\+Depth}} depth=\mbox{\hyperlink{namespaceec_a4b0151aefd16631c24dd6464fd331e4baa181a603769c1f98ad927e7367c7aa51}{Logging\+Depth\+::all}}, const std\+::string \&log\+Dir=\char`\"{}Logs\char`\"{})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_logger}{Logger}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_logger_acc4668ba16f1368b352237df41af79d5}{$\sim$\+Logger}} ()
+\item 
+bool \mbox{\hyperlink{classec_1_1_logger_aaa61f62bc64a30b72c9a0c8cd8d61102}{open\+Log\+File}} (const std\+::string \&log\+File=\char`\"{}\char`\"{}, bool overwrite=false)
+\begin{DoxyCompactList}\small\item\em Open another file for logging. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_logger_a9d90ffbfc32f3f6f56c9c3eaf50ee81d}{log}} (const std\+::string \&msg, \mbox{\hyperlink{namespaceec_a67e511e8b22e1051ea392cb2f68315d8}{Logging\+Category}} category=\mbox{\hyperlink{namespaceec_a67e511e8b22e1051ea392cb2f68315d8acaf9b6b99962bf5c2264824231d7a40c}{Logging\+Category\+::info}})
+\begin{DoxyCompactList}\small\item\em Log a message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Log messages to console and create log files. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_logger_a64b616307b97bab0181814a5f9258e9f}\label{classec_1_1_logger_a64b616307b97bab0181814a5f9258e9f}} 
+\index{ec\+::\+Logger@{ec\+::\+Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!ec\+::\+Logger@{ec\+::\+Logger}}
+\subsubsection{\texorpdfstring{Logger()}{Logger()}}
+{\footnotesize\ttfamily ec\+::\+Logger\+::\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceec_a4b0151aefd16631c24dd6464fd331e4b}{Logging\+Depth}}}]{depth = {\ttfamily \mbox{\hyperlink{namespaceec_a4b0151aefd16631c24dd6464fd331e4baa181a603769c1f98ad927e7367c7aa51}{Logging\+Depth\+::all}}},  }\item[{const std\+::string \&}]{log\+Dir = {\ttfamily \char`\"{}Logs\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classec_1_1_logger}{Logger}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth} & Depth with which messages will be logged \\
+\hline
+{\em log\+Dir} & The directory in which new logs will be created \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_logger_acc4668ba16f1368b352237df41af79d5}\label{classec_1_1_logger_acc4668ba16f1368b352237df41af79d5}} 
+\index{ec\+::\+Logger@{ec\+::\+Logger}!````~Logger@{$\sim$\+Logger}}
+\index{````~Logger@{$\sim$\+Logger}!ec\+::\+Logger@{ec\+::\+Logger}}
+\subsubsection{\texorpdfstring{$\sim$\+Logger()}{~Logger()}}
+{\footnotesize\ttfamily ec\+::\+Logger\+::$\sim$\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_logger_a9d90ffbfc32f3f6f56c9c3eaf50ee81d}\label{classec_1_1_logger_a9d90ffbfc32f3f6f56c9c3eaf50ee81d}} 
+\index{ec\+::\+Logger@{ec\+::\+Logger}!log@{log}}
+\index{log@{log}!ec\+::\+Logger@{ec\+::\+Logger}}
+\subsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void ec\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg,  }\item[{\mbox{\hyperlink{namespaceec_a67e511e8b22e1051ea392cb2f68315d8}{Logging\+Category}}}]{category = {\ttfamily \mbox{\hyperlink{namespaceec_a67e511e8b22e1051ea392cb2f68315d8acaf9b6b99962bf5c2264824231d7a40c}{Logging\+Category\+::info}}} }\end{DoxyParamCaption})}
+
+
+
+Log a message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to log \\
+\hline
+{\em category} & The category of the message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_logger_aaa61f62bc64a30b72c9a0c8cd8d61102}\label{classec_1_1_logger_aaa61f62bc64a30b72c9a0c8cd8d61102}} 
+\index{ec\+::\+Logger@{ec\+::\+Logger}!open\+Log\+File@{open\+Log\+File}}
+\index{open\+Log\+File@{open\+Log\+File}!ec\+::\+Logger@{ec\+::\+Logger}}
+\subsubsection{\texorpdfstring{open\+Log\+File()}{openLogFile()}}
+{\footnotesize\ttfamily bool ec\+::\+Logger\+::open\+Log\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{log\+File = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{overwrite = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Open another file for logging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+File} & File path to the log file \\
+\hline
+{\em overwrite} & Overwrite an existing file if set to true \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the log file was opened, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\mbox{\hyperlink{_logger_8h}{Logger.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Utilities/\mbox{\hyperlink{_logger_8cpp}{Logger.\+cpp}}\end{DoxyCompactItemize}

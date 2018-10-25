@@ -1,0 +1,4 @@
+<map id="ec::Light" name="ec::Light">
+<area shape="rect" id="node2" href="$classec_1_1_node.html" title="{ec::Node\n||+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="122,476,290,700"/>
+<area shape="rect" id="node3" href="$classec_1_1_transform3_d.html" title="{ec::Transform3D\n||+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getUpVector()\l+ getForwardVector()\l+ getLocalMat()\l+ setLocalMat()\l+ getTranslation()\l+ getTranslationX()\land 39 more...\l}" alt="" coords="40,189,184,413"/>
+</map>

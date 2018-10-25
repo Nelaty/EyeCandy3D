@@ -2,6 +2,11 @@
 \label{classec_1_1_font_texture_atlas}\index{ec\+::\+Font\+Texture\+Atlas@{ec\+::\+Font\+Texture\+Atlas}}
 
 
+Saves all font characters of a specific font. Font characters will be saved on a single texture, so it can be used for rendering text.  
+
+
+
+
 {\ttfamily \#include $<$Font\+Texture\+Atlas.\+h$>$}
 
 
@@ -17,15 +22,15 @@ Collaboration diagram for ec\+:\+:Font\+Texture\+Atlas\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classec_1_1_font_texture_atlas_abf42f99b2562130eb9b347c895cf14f3}{Font\+Texture\+Atlas}} (F\+T\+\_\+\+Face face, int h, G\+Luint t\+Uniform)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_font_texture_atlas_a9e520505ca5bd5b9cabe27448d285449}{$\sim$\+Font\+Texture\+Atlas}} ()
 \item 
 int \mbox{\hyperlink{classec_1_1_font_texture_atlas_a9259106785594dcf52a86120faf2abdf}{get\+Width}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the font texture width. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classec_1_1_font_texture_atlas_aa6e4a6f124b7fed58783c48c78300244}{get\+Height}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the font texture height. \end{DoxyCompactList}\item 
 const \mbox{\hyperlink{structec_1_1_font_character}{Font\+Character}} \& \mbox{\hyperlink{classec_1_1_font_texture_atlas_a4587f2074d6295364a6ab7bac4a5846d}{get\+Char}} (int index) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get a font character. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -45,6 +50,21 @@ Saves all font characters of a specific font. Font characters will be saved on a
 \subsubsection{\texorpdfstring{Font\+Texture\+Atlas()}{FontTextureAtlas()}}
 {\footnotesize\ttfamily ec\+::\+Font\+Texture\+Atlas\+::\+Font\+Texture\+Atlas (\begin{DoxyParamCaption}\item[{F\+T\+\_\+\+Face}]{face,  }\item[{int}]{h,  }\item[{G\+Luint}]{t\+Uniform }\end{DoxyParamCaption})}
 
+
+
+\mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & The Font face. \\
+\hline
+{\em h} & Height of the font. \\
+\hline
+{\em t\+Uniform} & \mbox{\hyperlink{classec_1_1_texture}{Texture}} uniform location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]\+: height h isn\textquotesingle{}t actually used. \end{DoxyRefDesc}
 \mbox{\Hypertarget{classec_1_1_font_texture_atlas_a9e520505ca5bd5b9cabe27448d285449}\label{classec_1_1_font_texture_atlas_a9e520505ca5bd5b9cabe27448d285449}} 
 \index{ec\+::\+Font\+Texture\+Atlas@{ec\+::\+Font\+Texture\+Atlas}!````~Font\+Texture\+Atlas@{$\sim$\+Font\+Texture\+Atlas}}
 \index{````~Font\+Texture\+Atlas@{$\sim$\+Font\+Texture\+Atlas}!ec\+::\+Font\+Texture\+Atlas@{ec\+::\+Font\+Texture\+Atlas}}
@@ -60,17 +80,34 @@ Saves all font characters of a specific font. Font characters will be saved on a
 \subsubsection{\texorpdfstring{get\+Char()}{getChar()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{structec_1_1_font_character}{Font\+Character}} \& ec\+::\+Font\+Texture\+Atlas\+::get\+Char (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
 
+
+
+Get a font character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The position of the character. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classec_1_1_font_texture_atlas_aa6e4a6f124b7fed58783c48c78300244}\label{classec_1_1_font_texture_atlas_aa6e4a6f124b7fed58783c48c78300244}} 
 \index{ec\+::\+Font\+Texture\+Atlas@{ec\+::\+Font\+Texture\+Atlas}!get\+Height@{get\+Height}}
 \index{get\+Height@{get\+Height}!ec\+::\+Font\+Texture\+Atlas@{ec\+::\+Font\+Texture\+Atlas}}
 \subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
 {\footnotesize\ttfamily int ec\+::\+Font\+Texture\+Atlas\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the font texture height. 
+
 \mbox{\Hypertarget{classec_1_1_font_texture_atlas_a9259106785594dcf52a86120faf2abdf}\label{classec_1_1_font_texture_atlas_a9259106785594dcf52a86120faf2abdf}} 
 \index{ec\+::\+Font\+Texture\+Atlas@{ec\+::\+Font\+Texture\+Atlas}!get\+Width@{get\+Width}}
 \index{get\+Width@{get\+Width}!ec\+::\+Font\+Texture\+Atlas@{ec\+::\+Font\+Texture\+Atlas}}
 \subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
 {\footnotesize\ttfamily int ec\+::\+Font\+Texture\+Atlas\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the font texture width. 
 
 
 
@@ -91,5 +128,5 @@ Saves all font characters of a specific font. Font characters will be saved on a
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_font_texture_atlas_8h}{Font\+Texture\+Atlas.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_font_texture_atlas_8cpp}{Font\+Texture\+Atlas.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_font_texture_atlas_8h}{Font\+Texture\+Atlas.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_font_texture_atlas_8cpp}{Font\+Texture\+Atlas.\+cpp}}\end{DoxyCompactItemize}

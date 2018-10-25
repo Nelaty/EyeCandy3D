@@ -1,4 +1,9 @@
 <map id="ec::Transform3D" name="ec::Transform3D">
-<area shape="rect" id="node2" href="$classec_1_1_node.html" title="{ec::Node\n|# m_parent\l# m_children\l# m_drawables\l|+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="14,321,182,575"/>
-<area shape="rect" id="node3" href="$classec_1_1_camera.html" title="{ec::Camera\n||+ Camera()\l+ Camera()\l+ ~Camera()\l+ changeAspectRatio()\l+ updateLocalMat()\l+ updateGlobalMatrices()\l+ getView()\l+ getProjection()\l+ setProjectionOrtho()\l+ setProjectionPerspective()\land 12 more...\l* m_aspect\l* m_fov\l* m_near\l* m_far\l}" alt="" coords="5,623,191,905"/>
+<area shape="rect" id="node2" href="$classec_1_1_node.html" title="{ec::Node\n|# m_parent\l# m_children\l# m_drawables\l|+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="119,321,287,575"/>
+<area shape="rect" id="node3" href="$classec_1_1_camera.html" title="A camera encapsulates a view and a projection matrix. It is used to render the related scene..." alt="" coords="25,623,210,905"/>
+<area shape="rect" id="node4" href="$classec_1_1_light.html" title="Abstract light source. " alt="" coords="235,667,344,861"/>
+<area shape="rect" id="node5" href="$classec_1_1_directional_light.html" title="A light source that emits light in a given direction independently of its position. " alt="" coords="5,975,144,1082"/>
+<area shape="rect" id="node6" href="$classec_1_1_omni_light.html" title="{ec::OmniLight\n||+ OmniLight()\l+ ~OmniLight()\l}" alt="" coords="168,983,277,1075"/>
+<area shape="rect" id="node7" href="$classec_1_1_point_light.html" title="{ec::PointLight\n||+ PointLight()\l+ ~PointLight()\l+ setFalloff()\l+ getFalloff()\l}" alt="" coords="302,968,410,1089"/>
+<area shape="rect" id="node8" href="$classec_1_1_spot_light.html" title="{ec::SpotLight\n||+ SpotLight()\l+ ~SpotLight()\l+ getDirection()\l+ setHalfAngles()\l+ setHalfAngles()\l+ getHalfAngles()\l}" alt="" coords="435,953,557,1104"/>
 </map>

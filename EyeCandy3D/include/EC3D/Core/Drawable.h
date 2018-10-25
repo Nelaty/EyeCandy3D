@@ -23,41 +23,71 @@ namespace ec
 		 * \brief Drawable constructor.
 		 * \param geometry The geometry to render onto.
 		 * \param material Color information.
-		 * \param shader 
+		 * \param shader The shader used for drawing.
 		 */
 		explicit Drawable(IGeometryAccess* geometry, Material* material, Shader* shader);
 		virtual ~Drawable();
 
-		/** Initialize this drawable. Comfort function. */
+		/** 
+		 * \brief Initialize this drawable. Comfort function. 
+		 * \param geometry The geometry to render onto.
+		 * \param material Color information.
+		 * \param shader The shader used for drawing.
+		 */
 		void init(IGeometryAccess* geometry, Material* material, Shader* shader);
 
-		/** Render this drawable. */
+		/** 
+		 * \brief Render this drawable. 
+		 * \param model Transformation of the object to draw.
+		 */
 		virtual void render(const glm::mat4& model);
 
-		/** Set the current geometry. */
+		/** 
+		 * \brief Set the current geometry. 
+		 */
 		void setGeometry(IGeometryAccess* geometry);
-		/** Get the current geometry. */
+		/**
+		 * \brief Get the current geometry. 
+		 */
 		IGeometryAccess* getGeometry() const;
 
-		/** Set the current material. */
+		/** 
+		 * \brief Set the current material. 
+		 */
 		void setMaterial(Material* material);
-		/** Get the current material. */
+		/**
+		 * \brief Get the current material. 
+		 */
 		Material* getMaterial() const;
 
-		/** Set the current shader. */
+		/**
+		 * \brief Set the current shader. 
+		 */
 		void setShader(Shader* shader);
-		/** Get the current shader. */
+		/** 
+		 * \brief Get the current shader. 
+		 */
 		Shader* getShader() const;
 
 	protected:
-		/** Prepare drawable for rendering. */
+		/** 
+		 * \brief Prepare drawable for rendering. 
+		 */
 		virtual void beginRender(const glm::mat4& model);
-		/** Render the drawable. */
+		/** 
+		 * \brief Render the drawable. 
+		 */
 		virtual void render();
-		/** Finalize the rendering. */
+		/** 
+		 * \brief Finalize the rendering. 
+		 */
 		virtual void endRender();
 
-		/** Transfer material data to the shader. */
+		/**
+		 * \brief Transfer material data to the shader. 
+		 * \param shader The shader to pass the data to.
+		 * \param material The material data to pass.
+		 */
 		static void setMaterialUniforms(Shader* shader, Material* material);
 
 		IGeometryAccess* m_geometry;

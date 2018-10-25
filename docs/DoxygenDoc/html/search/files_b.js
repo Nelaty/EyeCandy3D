@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['omnilight_2ecpp',['OmniLight.cpp',['../_omni_light_8cpp.html',1,'']]],
+  ['omnilight_2eh',['OmniLight.h',['../_omni_light_8h.html',1,'']]],
   ['openglcursorprovider_2ecpp',['OpenGLCursorProvider.cpp',['../_open_g_l_cursor_provider_8cpp.html',1,'']]],
   ['openglcursorprovider_2eh',['OpenGLCursorProvider.h',['../_open_g_l_cursor_provider_8h.html',1,'']]],
   ['openglfont_2ecpp',['OpenGLFont.cpp',['../_open_g_l_font_8cpp.html',1,'']]],

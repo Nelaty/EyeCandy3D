@@ -164,6 +164,7 @@
 \input{classec_1_1_cursor}
 \input{classec_1_1_cylinder_geometry}
 \input{classec_1_1_device_registry}
+\input{classec_1_1_directional_light}
 \input{structec_1_1_display_event}
 \input{classec_1_1_drawable}
 \input{structec_1_1_drop_event}
@@ -171,7 +172,7 @@
 \input{classec_1_1_dynamic_line_geometry}
 \input{unionec_1_1_event_data}
 \input{classec_1_1_event_system}
-\input{classec_1_1_file_logger}
+\input{classec_1_1_file_system}
 \input{structec_1_1_font_character}
 \input{classec_1_1_font_texture_atlas}
 \input{classec_1_1_frame}
@@ -205,13 +206,18 @@
 \input{structec_1_1_joystick_event}
 \input{classec_1_1_keyboard}
 \input{structec_1_1_keyboard_event}
+\input{classec_1_1_light}
+\input{classec_1_1_light_system}
 \input{classec_1_1_line_geometry}
+\input{classec_1_1_line_geometry_factory}
 \input{classec_1_1_line_strip_geometry}
+\input{classec_1_1_logger}
 \input{classec_1_1_material}
 \input{classec_1_1_mini_agui}
 \input{classec_1_1_mouse}
 \input{structec_1_1_mouse_event}
 \input{classec_1_1_node}
+\input{classec_1_1_omni_light}
 \input{classec_1_1_open_g_l_cursor_provider}
 \input{classec_1_1_open_g_l_font}
 \input{classec_1_1_open_g_l_font_loader}
@@ -219,6 +225,7 @@
 \input{classec_1_1_open_g_l_image}
 \input{classec_1_1_open_g_l_image_loader}
 \input{classec_1_1_open_g_l_input}
+\input{classec_1_1_point_light}
 \input{structec_1_1_profiling_data}
 \input{classec_1_1_random}
 \input{classec_1_1_rectangle_geometry}
@@ -232,8 +239,10 @@
 \input{classec_1_1_shader_manager}
 \input{classec_1_1_shader_timed}
 \input{classec_1_1_sphere_geometry}
+\input{classec_1_1_spot_light}
 \input{classec_1_1_spring_geometry}
 \input{classec_1_1_static_geometry}
+\input{classec_1_1_system_time}
 \input{classec_1_1_texture}
 \input{structec_1_1_texture_types}
 \input{classec_1_1_timer}
@@ -254,6 +263,7 @@
 \input{_cursor_8h}
 \input{_cylinder_geometry_8h}
 \input{_device_registry_8h}
+\input{_directional_light_8h}
 \input{_drawable_8h}
 \input{_dynamic_geometry_8h}
 \input{_dynamic_line_geometry_8h}
@@ -269,11 +279,17 @@
 \input{_input_listener_8h}
 \input{_input_observable_8h}
 \input{_keyboard_8h}
+\input{_light_8h}
+\input{_light_system_8h}
+\input{_light_type_8h}
 \input{_line_geometry_8h}
+\input{_line_geometry_factory_8h}
 \input{_line_strip_geometry_8h}
 \input{_material_8h}
 \input{_mouse_8h}
 \input{_node_8h}
+\input{_omni_light_8h}
+\input{_point_light_8h}
 \input{_rectangle_geometry_8h}
 \input{_renderer_8h}
 \input{_resource_registry_8h}
@@ -287,6 +303,7 @@
 \input{_shader_manager_8h}
 \input{_shader_timed_8h}
 \input{_sphere_geometry_8h}
+\input{_spot_light_8h}
 \input{_spring_geometry_8h}
 \input{_static_geometry_8h}
 \input{_texture_8h}
@@ -323,11 +340,12 @@
 \input{_generic_v_scroll_bar_listener_8h}
 \input{_generic_widget_listener_8h}
 \input{_mini_agui_8h}
-\input{_file_logger_8h}
+\input{_file_system_8h}
+\input{_logger_8h}
 \input{_profiler_8h}
 \input{_random_8h}
+\input{_system_time_8h}
 \input{_timer_8h}
-\input{_utilities_file_8h}
 \input{_utilities_math_8h}
 \input{_application_8cpp}
 \input{_camera_8cpp}
@@ -337,6 +355,7 @@
 \input{_cursor_8cpp}
 \input{_cylinder_geometry_8cpp}
 \input{_device_registry_8cpp}
+\input{_directional_light_8cpp}
 \input{_drawable_8cpp}
 \input{_dynamic_geometry_8cpp}
 \input{_dynamic_line_geometry_8cpp}
@@ -351,11 +370,16 @@
 \input{_input_listener_8cpp}
 \input{_input_observable_8cpp}
 \input{_keyboard_8cpp}
+\input{_light_8cpp}
+\input{_light_system_8cpp}
 \input{_line_geometry_8cpp}
+\input{_line_geometry_factory_8cpp}
 \input{_line_strip_geometry_8cpp}
 \input{_material_8cpp}
 \input{_mouse_8cpp}
 \input{_node_8cpp}
+\input{_omni_light_8cpp}
+\input{_point_light_8cpp}
 \input{_rectangle_geometry_8cpp}
 \input{_renderer_8cpp}
 \input{_scene_8cpp}
@@ -366,6 +390,7 @@
 \input{_shader_manager_8cpp}
 \input{_shader_timed_8cpp}
 \input{_sphere_geometry_8cpp}
+\input{_spot_light_8cpp}
 \input{_spring_geometry_8cpp}
 \input{_static_geometry_8cpp}
 \input{_texture_8cpp}
@@ -399,11 +424,12 @@
 \input{_generic_v_scroll_bar_listener_8cpp}
 \input{_generic_widget_listener_8cpp}
 \input{_mini_agui_8cpp}
-\input{_file_logger_8cpp}
+\input{_file_system_8cpp}
+\input{_logger_8cpp}
 \input{_profiler_8cpp}
 \input{_random_8cpp}
+\input{_system_time_8cpp}
 \input{_timer_8cpp}
-\input{_utilities_file_8cpp}
 %--- End generated contents ---
 
 % Index

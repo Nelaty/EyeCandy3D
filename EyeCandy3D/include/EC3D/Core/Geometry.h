@@ -5,6 +5,9 @@
 
 namespace ec
 {
+	/**
+	 * \brief Geometry 
+	 */
 	class EC3D_DECLSPEC Geometry : public IGeometryAccess
 	{
 	public:
@@ -15,14 +18,25 @@ namespace ec
 		 */
 		virtual void recalculateNormals();
 
-		/** Get the vertex array object id. */
+		/** 
+		 * \brief Get the vertex array object id. 
+		 */
 		GLuint getVao() const;
-		/** Get the vertex buffer object id. */
+		/** 
+		 * \brief Get the vertex buffer object id. 
+		 */
 		GLuint getVbo() const;
-		/** Get the element buffer object id. */
+		/** 
+		 * \brief Get the element buffer object id. 
+		 */
 		GLuint getEbo() const;
 
 	protected:
+		/**
+		 * \brief Geometry constructor.
+		 * \param mode The kind of primitive to render.
+		 * \param type The data size used for geometry data.
+		 */
 		explicit Geometry(GLenum mode = GL_TRIANGLES, GLenum type = GL_UNSIGNED_INT);
 
 		void beginRender() override;
@@ -31,7 +45,13 @@ namespace ec
 
 		GeometryData m_data;
 
+		/**
+		 * \brief Set type of primitive to render
+		 */
 		void setMode(GLenum mode);
+		/**
+		 * \brief Set the data size used for geometry data.
+		 */
 		void setType(GLenum type);
 
 	private:

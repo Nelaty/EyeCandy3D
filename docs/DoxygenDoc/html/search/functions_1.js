@@ -16,13 +16,11 @@ var searchData=
   ['addscenecontroller',['addSceneController',['../classec_1_1_scene_system.html#a6f59921ccb0a64ead95efc6ef34ffac1',1,'ec::SceneSystem']]],
   ['addshader',['addShader',['../classec_1_1_shader_manager.html#a36bdf3a039a5a542ef4ea381ab5613ca',1,'ec::ShaderManager::addShader(const std::string &amp;shaderName, Shader_Ptr shader)'],['../classec_1_1_shader_manager.html#a720a9aca4f9dfe076a8f3f7cde58aedf',1,'ec::ShaderManager::addShader(const std::string &amp;shaderName, ShaderTimed_Ptr shader)'],['../classec_1_1_shader_manager.html#a81a63a18679d10c93e75b11ded25e8f0',1,'ec::ShaderManager::addShader(const std::string &amp;shaderName, const std::string &amp;vertPath, const std::string &amp;fragPath, const std::string &amp;geomPath=&quot;&quot;, const std::string &amp;tessCtrlPath=&quot;&quot;, const std::string &amp;tessEvalPath=&quot;&quot;)']]],
   ['addtexture',['addTexture',['../classec_1_1_material.html#aad92ada3fcc1f7b66e6bf3b6aeac73b8',1,'ec::Material']]],
-  ['addvertex',['addVertex',['../classec_1_1_line_strip_geometry.html#a8c4384fdfb6f66b18428a1ae8e09b1fc',1,'ec::LineStripGeometry']]],
+  ['addvertex',['addVertex',['../classec_1_1_line_strip_geometry.html#a185da594a28585dabc17874a59cfe7ef',1,'ec::LineStripGeometry']]],
   ['alignmarkerchanged',['alignMarkerChanged',['../classec_1_1_generic_slider_listener.html#a78e74140590b1719b5c529cdfc2ec425',1,'ec::GenericSliderListener']]],
   ['alignmentchanged',['alignmentChanged',['../classec_1_1_generic_label_listener.html#a9e62304bb430f496769ba096dc33e21c',1,'ec::GenericLabelListener']]],
   ['altpressed',['altPressed',['../structec_1_1_keyboard_event.html#afa24be439032cd053aca60cba17b4b32',1,'ec::KeyboardEvent::altPressed()'],['../structec_1_1_mouse_event.html#a2ba39d134d9ece00227d5d10547c2d29',1,'ec::MouseEvent::altPressed()']]],
-  ['append',['append',['../classec_1_1_file_logger.html#a162e3ff242935c9f207a3c1ef6fc1ce7',1,'ec::FileLogger::append(T arg, Args... args)'],['../classec_1_1_file_logger.html#a69b39b1cd6acadbbcd31ec88a5521108',1,'ec::FileLogger::append(T arg)']]],
   ['application',['Application',['../classec_1_1_application.html#af4a94888105d739a2de75be17ce9ad67',1,'ec::Application']]],
-  ['applyindentation',['applyIndentation',['../classec_1_1_file_logger.html#ac7fa97913098a4de47e798b89fb3278d',1,'ec::FileLogger']]],
   ['arrowheightchanged',['arrowHeightChanged',['../classec_1_1_generic_v_scroll_bar_listener.html#ad42d38aab565aae07a4499f9fac0f0fd',1,'ec::GenericVScrollBarListener']]],
   ['arrowwidthchanged',['arrowWidthChanged',['../classec_1_1_generic_h_scroll_bar_listener.html#a2f7ccb2b087483898e92d47516af5d1c',1,'ec::GenericHScrollBarListener']]]
 ];

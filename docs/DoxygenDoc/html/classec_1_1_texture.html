@@ -86,6 +86,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac2551ef676d0c771f35dc470b8a0b237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae567d80654dd09c6b02a38ca8de29ead"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#ae567d80654dd09c6b02a38ca8de29ead">~Texture</a> ()</td></tr>
 <tr class="separator:ae567d80654dd09c6b02a38ca8de29ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00e335380881f3267732186381c777c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#ab00e335380881f3267732186381c777c">operator==</a> (const <a class="el" href="classec_1_1_texture.html">Texture</a> &amp;texture) const</td></tr>
+<tr class="separator:ab00e335380881f3267732186381c777c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e2f0191cfcc85c87edb821508cc06ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a9e2f0191cfcc85c87edb821508cc06ee">bind</a> () const</td></tr>
 <tr class="separator:a9e2f0191cfcc85c87edb821508cc06ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95c72abc5c801df231fc970c6adffdcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a95c72abc5c801df231fc970c6adffdcc">unbind</a> () const</td></tr>
@@ -104,6 +106,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac2461a696b914d1b22192a87d326f480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae84b0f18fa11275f09e4c8ea3dc89e02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#ae84b0f18fa11275f09e4c8ea3dc89e02">cubeMapFromFile</a> (const char *path, const std::string &amp;type)</td></tr>
 <tr class="separator:ae84b0f18fa11275f09e4c8ea3dc89e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c01b293f7fe1b9ee863a1a2e9b64a6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a0c01b293f7fe1b9ee863a1a2e9b64a6f">getWidth</a> () const</td></tr>
+<tr class="separator:a0c01b293f7fe1b9ee863a1a2e9b64a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ff89dd7453c2d09ec10ba8aa58835c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a45ff89dd7453c2d09ec10ba8aa58835c">getHeight</a> () const</td></tr>
+<tr class="separator:a45ff89dd7453c2d09ec10ba8aa58835c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941dc88bd9843fcf8273dc8d8a259c03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a941dc88bd9843fcf8273dc8d8a259c03">getComponentNum</a> () const</td></tr>
+<tr class="separator:a941dc88bd9843fcf8273dc8d8a259c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab81c62fde2f54dfbb5895a421224fcd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#ab81c62fde2f54dfbb5895a421224fcd9">isInitialized</a> () const</td></tr>
 <tr class="separator:ab81c62fde2f54dfbb5895a421224fcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57242daae8cc1ea827848f9b7f7b7fbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_texture.html#a57242daae8cc1ea827848f9b7f7b7fbb">free</a> ()</td></tr>
@@ -228,6 +236,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a941dc88bd9843fcf8273dc8d8a259c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941dc88bd9843fcf8273dc8d8a259c03">&#9670;&nbsp;</a></span>getComponentNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ec::Texture::getComponentNum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get number of bytes used per pixel. </p>
+
+</div>
+</div>
 <a id="a5d1e6d8dd6c98ea036caf2696e47637a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d1e6d8dd6c98ea036caf2696e47637a">&#9670;&nbsp;</a></span>getDimensions()</h2>
 
@@ -243,6 +269,24 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p><a class="el" href="classec_1_1_texture.html">Texture</a> dimension access </p>
+
+</div>
+</div>
+<a id="a45ff89dd7453c2d09ec10ba8aa58835c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ff89dd7453c2d09ec10ba8aa58835c">&#9670;&nbsp;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ec::Texture::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get texture width in pixels. </p>
 
 </div>
 </div>
@@ -280,6 +324,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0c01b293f7fe1b9ee863a1a2e9b64a6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c01b293f7fe1b9ee863a1a2e9b64a6f">&#9670;&nbsp;</a></span>getWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ec::Texture::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get texture height in pixels. </p>
+
+</div>
+</div>
 <a id="ab81c62fde2f54dfbb5895a421224fcd9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab81c62fde2f54dfbb5895a421224fcd9">&#9670;&nbsp;</a></span>isInitialized()</h2>
 
@@ -295,6 +357,25 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Check if this texture has been initialized </p>
+
+</div>
+</div>
+<a id="ab00e335380881f3267732186381c777c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab00e335380881f3267732186381c777c">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ec::Texture::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classec_1_1_texture.html">Texture</a> &amp;&#160;</td>
+          <td class="paramname"><em>texture</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if both texture ids are the same. </p>
 
 </div>
 </div>
@@ -384,8 +465,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_texture_8h_source.html">Texture.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_texture_8cpp.html">Texture.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_texture_8h_source.html">Texture.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_texture_8cpp.html">Texture.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

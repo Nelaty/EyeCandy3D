@@ -17,24 +17,28 @@ namespace ec
 		void bind();
 		void unbind();
 
-		/** Resize vertex and index containers. */
+		/** 
+		 * \brief Resize vertex and index containers.
+		 * \param vertexCount The size of the vertex buffer.
+		 * \param indexCount The size of the index buffer.
+		 */
 		void resizeBuffers(unsigned int vertexCount, unsigned int indexCount);
 
 		/**
-		 * Initializes VAO, VBO and EBO. 
+		 * \brief Initializes VAO, VBO and EBO. 
 		 * Passes vertex and index data to the GPU. 
 		 * \return False if buffers are already initialized, true otherwise.
 		 */
 		bool initBufferObjects(GLenum usage = GL_STATIC_DRAW);
 
 		/** 
-		 * Check if buffer objects are initialized.
+		 * \brief Check if buffer objects are initialized.
 		 * \return True if they are initialized, false otherwise.
 		 */
 		bool buffersInitialized() const;
 
 		/**
-		 * Clears containers and releases memory on the GPU. After 
+		 * \brief Clears containers and releases memory on the GPU. After 
 		 * calling this function, this data object won't be initialized
 		 * any more.
 		 * \return True if buffers are initialized, false otherwise.
@@ -42,30 +46,38 @@ namespace ec
 		bool releaseMemory();
 
 		/**
-		 * Should be called if vertex data has changed. Updates vertices 
+		 * \brief Should be called if vertex data has changed. Updates vertices 
 		 * on the GPU.
 		 */
 		void updateVertexData();
 
 		/**
-		* Should be called if index data has changed. Updates indices
+		* \brief Should be called if index data has changed. Updates indices
 		* on the GPU.
 		*/
 		void updateIndexData();
 
 		/**
-		* Should be called if vertex and index data changed. Updates
+		* \brief Should be called if vertex and index data changed. Updates
 		* vertices and indices on the GPU.
 		*/
 		void update();
 
-		/** Get usage */
+		/**
+		 * \brief Get usage 
+		 */
 		GLenum getUsage() const;
-		/** Get the vao buffer id. */
+		/**
+		 * \brief Get the vao buffer id. 
+		 */
 		GLuint getVao() const;
-		/** Get the vbo buffer id. */
+		/** 
+		 * \brief Get the vbo buffer id.
+		 */
 		GLuint getVbo() const;
-		/** Get the ebo buffer id. */
+		/** 
+		 * \brief Get the ebo buffer id. 
+		 */
 		GLuint getEbo() const;
 
 		std::vector<Vertex> m_vertices;

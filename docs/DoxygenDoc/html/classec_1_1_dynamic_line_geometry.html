@@ -74,14 +74,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Line geometry that adapts to a given start and end point.  
+ <a href="classec_1_1_dynamic_line_geometry.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_dynamic_line_geometry_8h_source.html">DynamicLineGeometry.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ec::DynamicLineGeometry:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_dynamic_line_geometry__inherit__graph.png" border="0" usemap="#ec_1_1_dynamic_line_geometry_inherit__map" alt="Inheritance graph"/></div>
 <map name="ec_1_1_dynamic_line_geometry_inherit__map" id="ec_1_1_dynamic_line_geometry_inherit__map">
-<area shape="rect" id="node2" href="classec_1_1_dynamic_geometry.html" title="{ec::DynamicGeometry\n||+ ~DynamicGeometry()\l# DynamicGeometry()\l# beginRender()\l# update()\l}" alt="" coords="17,476,176,597"/>
-<area shape="rect" id="node3" href="classec_1_1_geometry.html" title="{ec::Geometry\n|# m_data\l|+ ~Geometry()\l+ recalculateNormals()\l+ getVao()\l+ getVbo()\l+ getEbo()\l# Geometry()\l# beginRender()\l# onRender()\l# endRender()\l# setMode()\l# setType()\l}" alt="" coords="20,204,173,428"/>
+<area shape="rect" id="node2" href="classec_1_1_dynamic_geometry.html" title="Kind of geometry that can be changed for every rendering. " alt="" coords="17,476,176,597"/>
+<area shape="rect" id="node3" href="classec_1_1_geometry.html" title="Geometry. " alt="" coords="20,204,173,428"/>
 <area shape="rect" id="node4" href="classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="19,5,174,156"/>
 </map>
 </div>
@@ -90,8 +93,8 @@ Collaboration diagram for ec::DynamicLineGeometry:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_dynamic_line_geometry__coll__graph.png" border="0" usemap="#ec_1_1_dynamic_line_geometry_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_dynamic_line_geometry_coll__map" id="ec_1_1_dynamic_line_geometry_coll__map">
-<area shape="rect" id="node2" href="classec_1_1_dynamic_geometry.html" title="{ec::DynamicGeometry\n||+ ~DynamicGeometry()\l# DynamicGeometry()\l# beginRender()\l# update()\l}" alt="" coords="58,764,217,885"/>
-<area shape="rect" id="node3" href="classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ recalculateNormals()\l+ getVao()\l+ getVbo()\l+ getEbo()\l# Geometry()\l# beginRender()\l# onRender()\l# endRender()\l# setMode()\l# setType()\l}" alt="" coords="61,491,214,715"/>
+<area shape="rect" id="node2" href="classec_1_1_dynamic_geometry.html" title="Kind of geometry that can be changed for every rendering. " alt="" coords="58,764,217,885"/>
+<area shape="rect" id="node3" href="classec_1_1_geometry.html" title="Geometry. " alt="" coords="61,491,214,715"/>
 <area shape="rect" id="node4" href="classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="5,211,160,362"/>
 <area shape="rect" id="node5" href="classec_1_1_geometry_data.html" title="{ec::GeometryData\n||+ GeometryData()\l+ ~GeometryData()\l+ bind()\l+ unbind()\l+ resizeBuffers()\l+ initBufferObjects()\l+ buffersInitialized()\l+ releaseMemory()\l+ updateVertexData()\l+ updateIndexData()\l+ update()\l+ getUsage()\l+ getVao()\l+ getVbo()\l+ getEbo()\l}" alt="" coords="184,145,331,428"/>
 </map>
@@ -100,20 +103,27 @@ Collaboration diagram for ec::DynamicLineGeometry:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ade626d917fab310c550952b7086639bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#ade626d917fab310c550952b7086639bf">DynamicLineGeometry</a> (<a class="el" href="classec_1_1_node.html">Node</a> *start, <a class="el" href="classec_1_1_node.html">Node</a> *end, float lineWidth=0.05f)</td></tr>
+<tr class="memdesc:ade626d917fab310c550952b7086639bf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classec_1_1_dynamic_line_geometry.html" title="Line geometry that adapts to a given start and end point. ">DynamicLineGeometry</a> constructor.  <a href="#ade626d917fab310c550952b7086639bf">More...</a><br /></td></tr>
 <tr class="separator:ade626d917fab310c550952b7086639bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee42706b172e0e76cd290a4ae6897740"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#aee42706b172e0e76cd290a4ae6897740">~DynamicLineGeometry</a> ()</td></tr>
 <tr class="separator:aee42706b172e0e76cd290a4ae6897740"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7354615fc961c1d6d6e9ec09bdb5bdf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#a7354615fc961c1d6d6e9ec09bdb5bdf9">setStart</a> (<a class="el" href="classec_1_1_node.html">Node</a> *start)</td></tr>
+<tr class="memdesc:a7354615fc961c1d6d6e9ec09bdb5bdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the start point of the line.  <a href="#a7354615fc961c1d6d6e9ec09bdb5bdf9">More...</a><br /></td></tr>
 <tr class="separator:a7354615fc961c1d6d6e9ec09bdb5bdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84dfd0f92891d7030790976be8606d98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#a84dfd0f92891d7030790976be8606d98">getStart</a> () const</td></tr>
+<tr class="memdesc:a84dfd0f92891d7030790976be8606d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the start point of the line.  <a href="#a84dfd0f92891d7030790976be8606d98">More...</a><br /></td></tr>
 <tr class="separator:a84dfd0f92891d7030790976be8606d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95e48c0fcda2b81310f99b0dc113701b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#a95e48c0fcda2b81310f99b0dc113701b">setEnd</a> (<a class="el" href="classec_1_1_node.html">Node</a> *end)</td></tr>
+<tr class="memdesc:a95e48c0fcda2b81310f99b0dc113701b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the end point of the line.  <a href="#a95e48c0fcda2b81310f99b0dc113701b">More...</a><br /></td></tr>
 <tr class="separator:a95e48c0fcda2b81310f99b0dc113701b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a877ec687c19743cc67520b5a419bad74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#a877ec687c19743cc67520b5a419bad74">getEnd</a> () const</td></tr>
+<tr class="memdesc:a877ec687c19743cc67520b5a419bad74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the end point of the line.  <a href="#a877ec687c19743cc67520b5a419bad74">More...</a><br /></td></tr>
 <tr class="separator:a877ec687c19743cc67520b5a419bad74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2a5b06e7ea10c771ed17ff0ffce4b3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#ad2a5b06e7ea10c771ed17ff0ffce4b3a">setLineWidth</a> (float lineWidth)</td></tr>
+<tr class="memdesc:ad2a5b06e7ea10c771ed17ff0ffce4b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current line width.  <a href="#ad2a5b06e7ea10c771ed17ff0ffce4b3a">More...</a><br /></td></tr>
 <tr class="separator:ad2a5b06e7ea10c771ed17ff0ffce4b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b32e465ad6a232b96dc3a0cd404ae62"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#a0b32e465ad6a232b96dc3a0cd404ae62">getLineWidth</a> () const</td></tr>
+<tr class="memdesc:a0b32e465ad6a232b96dc3a0cd404ae62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current line width.  <a href="#a0b32e465ad6a232b96dc3a0cd404ae62">More...</a><br /></td></tr>
 <tr class="separator:a0b32e465ad6a232b96dc3a0cd404ae62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classec_1_1_dynamic_geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classec_1_1_dynamic_geometry')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classec_1_1_dynamic_geometry.html">ec::DynamicGeometry</a></td></tr>
 <tr class="memitem:aeed5b7ffd9876f086207dbaf7e5bc6fc inherit pub_methods_classec_1_1_dynamic_geometry"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_geometry.html#aeed5b7ffd9876f086207dbaf7e5bc6fc">~DynamicGeometry</a> ()</td></tr>
@@ -122,50 +132,68 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a964c581313da2be51a3c78d3be7f48b3 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a964c581313da2be51a3c78d3be7f48b3">~Geometry</a> ()</td></tr>
 <tr class="separator:a964c581313da2be51a3c78d3be7f48b3 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a228d4a0fa01a17379f24aee2c769b501 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a228d4a0fa01a17379f24aee2c769b501">recalculateNormals</a> ()</td></tr>
+<tr class="memdesc:a228d4a0fa01a17379f24aee2c769b501 inherit pub_methods_classec_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate vertex normals.  <a href="classec_1_1_geometry.html#a228d4a0fa01a17379f24aee2c769b501">More...</a><br /></td></tr>
 <tr class="separator:a228d4a0fa01a17379f24aee2c769b501 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91a89baad39d4f2b2c4e9774d952dce9 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a91a89baad39d4f2b2c4e9774d952dce9">getVao</a> () const</td></tr>
+<tr class="memdesc:a91a89baad39d4f2b2c4e9774d952dce9 inherit pub_methods_classec_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the vertex array object id.  <a href="classec_1_1_geometry.html#a91a89baad39d4f2b2c4e9774d952dce9">More...</a><br /></td></tr>
 <tr class="separator:a91a89baad39d4f2b2c4e9774d952dce9 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad5d4311d16462099b8f9d084d99dd4 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#abad5d4311d16462099b8f9d084d99dd4">getVbo</a> () const</td></tr>
+<tr class="memdesc:abad5d4311d16462099b8f9d084d99dd4 inherit pub_methods_classec_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the vertex buffer object id.  <a href="classec_1_1_geometry.html#abad5d4311d16462099b8f9d084d99dd4">More...</a><br /></td></tr>
 <tr class="separator:abad5d4311d16462099b8f9d084d99dd4 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d956ff01a7b6648ede8982e0a461ae0 inherit pub_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a5d956ff01a7b6648ede8982e0a461ae0">getEbo</a> () const</td></tr>
+<tr class="memdesc:a5d956ff01a7b6648ede8982e0a461ae0 inherit pub_methods_classec_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the element buffer object id.  <a href="classec_1_1_geometry.html#a5d956ff01a7b6648ede8982e0a461ae0">More...</a><br /></td></tr>
 <tr class="separator:a5d956ff01a7b6648ede8982e0a461ae0 inherit pub_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classec_1_1_i_geometry_access"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classec_1_1_i_geometry_access')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classec_1_1_i_geometry_access.html">ec::IGeometryAccess</a></td></tr>
 <tr class="memitem:a786b4a8489f1c7fd6c4c2685fc53e7dc inherit pub_methods_classec_1_1_i_geometry_access"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_i_geometry_access.html#a786b4a8489f1c7fd6c4c2685fc53e7dc">~IGeometryAccess</a> ()</td></tr>
 <tr class="separator:a786b4a8489f1c7fd6c4c2685fc53e7dc inherit pub_methods_classec_1_1_i_geometry_access"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b6eaf56646bc2b5aa29385aaba02c7d inherit pub_methods_classec_1_1_i_geometry_access"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_i_geometry_access.html#a9b6eaf56646bc2b5aa29385aaba02c7d">render</a> ()</td></tr>
+<tr class="memdesc:a9b6eaf56646bc2b5aa29385aaba02c7d inherit pub_methods_classec_1_1_i_geometry_access"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render this geometry.  <a href="classec_1_1_i_geometry_access.html#a9b6eaf56646bc2b5aa29385aaba02c7d">More...</a><br /></td></tr>
 <tr class="separator:a9b6eaf56646bc2b5aa29385aaba02c7d inherit pub_methods_classec_1_1_i_geometry_access"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab56984cee973ef2a73ff67339014f0cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#ab56984cee973ef2a73ff67339014f0cf">onRender</a> () override</td></tr>
+<tr class="memdesc:ab56984cee973ef2a73ff67339014f0cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actual drawing of the object.  <a href="#ab56984cee973ef2a73ff67339014f0cf">More...</a><br /></td></tr>
 <tr class="separator:ab56984cee973ef2a73ff67339014f0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a015c2ecc62d63de4ddce1f1a23897bc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#a015c2ecc62d63de4ddce1f1a23897bc1">init</a> ()</td></tr>
+<tr class="memdesc:a015c2ecc62d63de4ddce1f1a23897bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the geometry data.  <a href="#a015c2ecc62d63de4ddce1f1a23897bc1">More...</a><br /></td></tr>
 <tr class="separator:a015c2ecc62d63de4ddce1f1a23897bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dced137976fc7b936bc80a8cb350b38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#a4dced137976fc7b936bc80a8cb350b38">initVertices</a> ()</td></tr>
+<tr class="memdesc:a4dced137976fc7b936bc80a8cb350b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize vertex data.  <a href="#a4dced137976fc7b936bc80a8cb350b38">More...</a><br /></td></tr>
 <tr class="separator:a4dced137976fc7b936bc80a8cb350b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af556bfe516c6c93bc515f607bd3840b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#af556bfe516c6c93bc515f607bd3840b6">initTexCoords</a> ()</td></tr>
+<tr class="memdesc:af556bfe516c6c93bc515f607bd3840b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize texture coordinates.  <a href="#af556bfe516c6c93bc515f607bd3840b6">More...</a><br /></td></tr>
 <tr class="separator:af556bfe516c6c93bc515f607bd3840b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af622418944568bc0698d888024d4c2b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_line_geometry.html#af622418944568bc0698d888024d4c2b0">initIndices</a> ()</td></tr>
+<tr class="memdesc:af622418944568bc0698d888024d4c2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize index data.  <a href="#af622418944568bc0698d888024d4c2b0">More...</a><br /></td></tr>
 <tr class="separator:af622418944568bc0698d888024d4c2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classec_1_1_dynamic_geometry"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classec_1_1_dynamic_geometry')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classec_1_1_dynamic_geometry.html">ec::DynamicGeometry</a></td></tr>
 <tr class="memitem:a4b0b6439b7c04f652eb74305abfe3bb9 inherit pro_methods_classec_1_1_dynamic_geometry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_geometry.html#a4b0b6439b7c04f652eb74305abfe3bb9">DynamicGeometry</a> ()</td></tr>
 <tr class="separator:a4b0b6439b7c04f652eb74305abfe3bb9 inherit pro_methods_classec_1_1_dynamic_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4eb49e852a4c300325a288bf9ea4408 inherit pro_methods_classec_1_1_dynamic_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_geometry.html#ae4eb49e852a4c300325a288bf9ea4408">beginRender</a> () override</td></tr>
+<tr class="memdesc:ae4eb49e852a4c300325a288bf9ea4408 inherit pro_methods_classec_1_1_dynamic_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the beginning of the rendering routine.  <a href="classec_1_1_dynamic_geometry.html#ae4eb49e852a4c300325a288bf9ea4408">More...</a><br /></td></tr>
 <tr class="separator:ae4eb49e852a4c300325a288bf9ea4408 inherit pro_methods_classec_1_1_dynamic_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76ddfd59d22b89ada5af4fc57e118dee inherit pro_methods_classec_1_1_dynamic_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_dynamic_geometry.html#a76ddfd59d22b89ada5af4fc57e118dee">update</a> ()</td></tr>
+<tr class="memdesc:a76ddfd59d22b89ada5af4fc57e118dee inherit pro_methods_classec_1_1_dynamic_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update function gets called once at the start of every render cycle.  <a href="classec_1_1_dynamic_geometry.html#a76ddfd59d22b89ada5af4fc57e118dee">More...</a><br /></td></tr>
 <tr class="separator:a76ddfd59d22b89ada5af4fc57e118dee inherit pro_methods_classec_1_1_dynamic_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classec_1_1_geometry"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classec_1_1_geometry')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classec_1_1_geometry.html">ec::Geometry</a></td></tr>
 <tr class="memitem:aeae22c6b54c7c534249ee08b3fb77a70 inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#aeae22c6b54c7c534249ee08b3fb77a70">Geometry</a> (GLenum mode=GL_TRIANGLES, GLenum type=GL_UNSIGNED_INT)</td></tr>
+<tr class="memdesc:aeae22c6b54c7c534249ee08b3fb77a70 inherit pro_methods_classec_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classec_1_1_geometry.html" title="Geometry. ">Geometry</a> constructor.  <a href="classec_1_1_geometry.html#aeae22c6b54c7c534249ee08b3fb77a70">More...</a><br /></td></tr>
 <tr class="separator:aeae22c6b54c7c534249ee08b3fb77a70 inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeca5f0e52e7c2e4b352ede1a6e7c3f5b inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#aeca5f0e52e7c2e4b352ede1a6e7c3f5b">beginRender</a> () override</td></tr>
+<tr class="memdesc:aeca5f0e52e7c2e4b352ede1a6e7c3f5b inherit pro_methods_classec_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the beginning of the rendering routine.  <a href="classec_1_1_geometry.html#aeca5f0e52e7c2e4b352ede1a6e7c3f5b">More...</a><br /></td></tr>
 <tr class="separator:aeca5f0e52e7c2e4b352ede1a6e7c3f5b inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f166e70fc880e88092f29ef46afb836 inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a1f166e70fc880e88092f29ef46afb836">onRender</a> () override</td></tr>
+<tr class="memdesc:a1f166e70fc880e88092f29ef46afb836 inherit pro_methods_classec_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actual drawing of the object.  <a href="classec_1_1_geometry.html#a1f166e70fc880e88092f29ef46afb836">More...</a><br /></td></tr>
 <tr class="separator:a1f166e70fc880e88092f29ef46afb836 inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0352702162501df185517e84c3b02bd inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#ae0352702162501df185517e84c3b02bd">endRender</a> () override</td></tr>
+<tr class="memdesc:ae0352702162501df185517e84c3b02bd inherit pro_methods_classec_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the end of the rendering routine.  <a href="classec_1_1_geometry.html#ae0352702162501df185517e84c3b02bd">More...</a><br /></td></tr>
 <tr class="separator:ae0352702162501df185517e84c3b02bd inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4f80cd4d4c22b108c33b9030e91467b inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#ad4f80cd4d4c22b108c33b9030e91467b">setMode</a> (GLenum mode)</td></tr>
+<tr class="memdesc:ad4f80cd4d4c22b108c33b9030e91467b inherit pro_methods_classec_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set type of primitive to render.  <a href="classec_1_1_geometry.html#ad4f80cd4d4c22b108c33b9030e91467b">More...</a><br /></td></tr>
 <tr class="separator:ad4f80cd4d4c22b108c33b9030e91467b inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12c3da280ff11e86a8b07d18a23e0880 inherit pro_methods_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#a12c3da280ff11e86a8b07d18a23e0880">setType</a> (GLenum type)</td></tr>
+<tr class="memdesc:a12c3da280ff11e86a8b07d18a23e0880 inherit pro_methods_classec_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the data size used for geometry data.  <a href="classec_1_1_geometry.html#a12c3da280ff11e86a8b07d18a23e0880">More...</a><br /></td></tr>
 <tr class="separator:a12c3da280ff11e86a8b07d18a23e0880 inherit pro_methods_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classec_1_1_i_geometry_access"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classec_1_1_i_geometry_access')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classec_1_1_i_geometry_access.html">ec::IGeometryAccess</a></td></tr>
 <tr class="memitem:aaf9faa0f583e89aa0b27db7cecbb7c6e inherit pro_methods_classec_1_1_i_geometry_access"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_i_geometry_access.html#aaf9faa0f583e89aa0b27db7cecbb7c6e">IGeometryAccess</a> ()</td></tr>
@@ -177,7 +205,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:aeb72a472b242d92496f0283cfee17fac inherit pro_attribs_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_geometry_data.html">GeometryData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#aeb72a472b242d92496f0283cfee17fac">m_data</a></td></tr>
 <tr class="separator:aeb72a472b242d92496f0283cfee17fac inherit pro_attribs_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Line geometry that adapts to a given start and end point. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ade626d917fab310c550952b7086639bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade626d917fab310c550952b7086639bf">&#9670;&nbsp;</a></span>DynamicLineGeometry()</h2>
 
@@ -217,6 +247,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classec_1_1_dynamic_line_geometry.html" title="Line geometry that adapts to a given start and end point. ">DynamicLineGeometry</a> constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The start point of the line. </td></tr>
+    <tr><td class="paramname">end</td><td>The end point of the line. </td></tr>
+    <tr><td class="paramname">lineWidth</td><td>The width of the line. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -261,6 +301,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the end point of the line. </p>
+
 </div>
 </div>
 <a id="a0b32e465ad6a232b96dc3a0cd404ae62"></a>
@@ -278,6 +320,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the current line width. </p>
+
 </div>
 </div>
 <a id="a84dfd0f92891d7030790976be8606d98"></a>
@@ -294,6 +338,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the start point of the line. </p>
 
 </div>
 </div>
@@ -320,6 +366,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initialize the geometry data. </p>
+
 </div>
 </div>
 <a id="af622418944568bc0698d888024d4c2b0"></a>
@@ -344,6 +392,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Initialize index data. </p>
 
 </div>
 </div>
@@ -370,6 +420,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initialize texture coordinates. </p>
+
 </div>
 </div>
 <a id="a4dced137976fc7b936bc80a8cb350b38"></a>
@@ -394,7 +446,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>fix initialization </dd></dl>
+
+<p>Initialize vertex data. </p>
+<dl class="section return"><dt>Returns</dt><dd>False if start and end positions are identical. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>fix initialization </dd></dl>
 
 </div>
 </div>
@@ -420,7 +475,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The actual rendering of the object. </p>
+
+<p>The actual drawing of the object. </p>
 
 <p>Implements <a class="el" href="classec_1_1_i_geometry_access.html#a2ee418c9fa4eb266347bae2f0ef8095b">ec::IGeometryAccess</a>.</p>
 
@@ -442,6 +498,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the end point of the line. </p>
+
 </div>
 </div>
 <a id="ad2a5b06e7ea10c771ed17ff0ffce4b3a"></a>
@@ -459,6 +517,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the current line width. </p>
 
 </div>
 </div>
@@ -478,11 +538,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the start point of the line. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_dynamic_line_geometry_8h_source.html">DynamicLineGeometry.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_dynamic_line_geometry_8cpp.html">DynamicLineGeometry.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_dynamic_line_geometry_8h_source.html">DynamicLineGeometry.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_dynamic_line_geometry_8cpp.html">DynamicLineGeometry.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

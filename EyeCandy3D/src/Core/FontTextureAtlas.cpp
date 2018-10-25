@@ -9,6 +9,7 @@ namespace ec
 	                                   const int h,
 	                                   const GLuint tUniform)
 	{
+		/// \todo: height h isn't actually used.
 		init(face, h, tUniform);
 	}
 
@@ -27,13 +28,15 @@ namespace ec
 		return m_height;
 	}
 
-	const FontCharacter&  FontTextureAtlas::getChar(int index) const
+	const FontCharacter&  FontTextureAtlas::getChar(const int index) const
 	{
 		assert(index < 128);
 		return m_characters[index];
 	}
 
-	void FontTextureAtlas::init(FT_Face face, int h, GLuint tUniform)
+	void FontTextureAtlas::init(const FT_Face face,
+								const int h,
+								const GLuint tUniform)
 	{
 		FT_Set_Pixel_Sizes(face, 0, h);
 
@@ -45,7 +48,8 @@ namespace ec
 			" (" << m_width * m_height / 1024 << " KiB) texture atlas.\n";
 	}
 
-	void FontTextureAtlas::loadCharacters(FT_Face face, int h)
+	void FontTextureAtlas::loadCharacters(const FT_Face face, 
+										  int h)
 	{
 		const auto glyphSlot = face->glyph;
 
@@ -82,7 +86,7 @@ namespace ec
 		m_height += rowHeight;
 	}
 
-	void FontTextureAtlas::createAtlasTexture(GLuint tUniform)
+	void FontTextureAtlas::createAtlasTexture(const GLuint tUniform)
 	{
 		// Clear previous errors
 		glGetError(); 
@@ -111,7 +115,7 @@ namespace ec
 		}
 	}
 
-	void FontTextureAtlas::initAtlasTexture(FT_Face face)
+	void FontTextureAtlas::initAtlasTexture(const FT_Face face)
 	{
 		const auto glyphSlot = face->glyph;
 

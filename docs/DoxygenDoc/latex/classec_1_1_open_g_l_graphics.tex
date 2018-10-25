@@ -10,7 +10,7 @@ Inheritance diagram for ec\+:\+:Open\+G\+L\+Graphics\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=203pt]{classec_1_1_open_g_l_graphics__inherit__graph}
+\includegraphics[width=232pt]{classec_1_1_open_g_l_graphics__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -51,7 +51,7 @@ void \mbox{\hyperlink{classec_1_1_open_g_l_graphics_a9aca169aa522b2daca935407d86
 \item 
 void \mbox{\hyperlink{classec_1_1_open_g_l_graphics_abfd38f4ba4c8d04ed80c62c06895ef98}{draw\+Filled\+Rectangle}} (const agui\+::\+Rectangle \&rect, const agui\+::\+Color \&color) override
 \item 
-void \mbox{\hyperlink{classec_1_1_open_g_l_graphics_a3f747db5664a109b28c66de6e092fbcf}{draw\+Pixel}} (const agui\+::\+Point \&point, const agui\+::\+Color \&color) override
+void \mbox{\hyperlink{classec_1_1_open_g_l_graphics_a3f747db5664a109b28c66de6e092fbcf}{draw\+Pixel}} (const agui\+::\+Point \&\mbox{\hyperlink{namespaceec_a30e2a743ebdeb02ac68a6cfa50f629c7a78ee54aa8f813885fe2fe20d232518b9}{point}}, const agui\+::\+Color \&color) override
 \item 
 void \mbox{\hyperlink{classec_1_1_open_g_l_graphics_aeccf106f9e5f5da14db66d39595fc6e9}{draw\+Circle}} (const agui\+::\+Point \&center, float radius, const agui\+::\+Color \&color) override
 \item 
@@ -84,6 +84,12 @@ agui\+::\+Rectangle \mbox{\hyperlink{classec_1_1_open_g_l_graphics_aa45cbffad591
 std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_rectangle_geometry}{Rectangle\+Geometry}} $>$ \mbox{\hyperlink{classec_1_1_open_g_l_graphics_a456769068c3eeca19ea08838c25d62a2}{m\+\_\+rectangle\+Geometry}}
 \item 
 std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_circle_geometry}{Circle\+Geometry}} $>$ \mbox{\hyperlink{classec_1_1_open_g_l_graphics_af6668c5422dd67c532ac9719d8ec406c}{m\+\_\+circle\+Geometry}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_line_strip_geometry}{Line\+Strip\+Geometry}} $>$ \mbox{\hyperlink{classec_1_1_open_g_l_graphics_aa2d2bc4a2c3bab81188ffe5f0ec14445}{m\+\_\+rectangle\+Outline\+Geometry}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_line_strip_geometry}{Line\+Strip\+Geometry}} $>$ \mbox{\hyperlink{classec_1_1_open_g_l_graphics_a06d2fbaca4a675a52610462edf2afe1d}{m\+\_\+circle\+Outline\+Geometry}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_line_geometry}{Line\+Geometry}} $>$ \mbox{\hyperlink{classec_1_1_open_g_l_graphics_afa9f3e8e06db6aa7c2eaaead3234b40f}{m\+\_\+line\+Geometry}}
 \end{DoxyCompactItemize}
 \subsection*{Static Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -239,6 +245,12 @@ static constexpr float \mbox{\hyperlink{classec_1_1_open_g_l_graphics_adba38a812
 \subsubsection{\texorpdfstring{m\+\_\+circle\+Geometry}{m\_circleGeometry}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_circle_geometry}{Circle\+Geometry}}$>$ ec\+::\+Open\+G\+L\+Graphics\+::m\+\_\+circle\+Geometry\hspace{0.3cm}{\ttfamily [protected]}}
 
+\mbox{\Hypertarget{classec_1_1_open_g_l_graphics_a06d2fbaca4a675a52610462edf2afe1d}\label{classec_1_1_open_g_l_graphics_a06d2fbaca4a675a52610462edf2afe1d}} 
+\index{ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}!m\+\_\+circle\+Outline\+Geometry@{m\+\_\+circle\+Outline\+Geometry}}
+\index{m\+\_\+circle\+Outline\+Geometry@{m\+\_\+circle\+Outline\+Geometry}!ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{m\+\_\+circle\+Outline\+Geometry}{m\_circleOutlineGeometry}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_line_strip_geometry}{Line\+Strip\+Geometry}}$>$ ec\+::\+Open\+G\+L\+Graphics\+::m\+\_\+circle\+Outline\+Geometry\hspace{0.3cm}{\ttfamily [protected]}}
+
 \mbox{\Hypertarget{classec_1_1_open_g_l_graphics_aa45cbffad59139ce5f85404b755cc35f}\label{classec_1_1_open_g_l_graphics_aa45cbffad59139ce5f85404b755cc35f}} 
 \index{ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}!m\+\_\+clipping\+Rect@{m\+\_\+clipping\+Rect}}
 \index{m\+\_\+clipping\+Rect@{m\+\_\+clipping\+Rect}!ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}}
@@ -251,6 +263,12 @@ static constexpr float \mbox{\hyperlink{classec_1_1_open_g_l_graphics_adba38a812
 \subsubsection{\texorpdfstring{m\+\_\+context}{m\_context}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_gui_render_context}{Gui\+Render\+Context}} ec\+::\+Open\+G\+L\+Graphics\+::m\+\_\+context\hspace{0.3cm}{\ttfamily [protected]}}
 
+\mbox{\Hypertarget{classec_1_1_open_g_l_graphics_afa9f3e8e06db6aa7c2eaaead3234b40f}\label{classec_1_1_open_g_l_graphics_afa9f3e8e06db6aa7c2eaaead3234b40f}} 
+\index{ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}!m\+\_\+line\+Geometry@{m\+\_\+line\+Geometry}}
+\index{m\+\_\+line\+Geometry@{m\+\_\+line\+Geometry}!ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{m\+\_\+line\+Geometry}{m\_lineGeometry}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_line_geometry}{Line\+Geometry}}$>$ ec\+::\+Open\+G\+L\+Graphics\+::m\+\_\+line\+Geometry\hspace{0.3cm}{\ttfamily [protected]}}
+
 \mbox{\Hypertarget{classec_1_1_open_g_l_graphics_af9728fbde00a35a87752c23e009e3864}\label{classec_1_1_open_g_l_graphics_af9728fbde00a35a87752c23e009e3864}} 
 \index{ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}!m\+\_\+primitive\+Renderer@{m\+\_\+primitive\+Renderer}}
 \index{m\+\_\+primitive\+Renderer@{m\+\_\+primitive\+Renderer}!ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}}
@@ -262,6 +280,12 @@ static constexpr float \mbox{\hyperlink{classec_1_1_open_g_l_graphics_adba38a812
 \index{m\+\_\+rectangle\+Geometry@{m\+\_\+rectangle\+Geometry}!ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}}
 \subsubsection{\texorpdfstring{m\+\_\+rectangle\+Geometry}{m\_rectangleGeometry}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_rectangle_geometry}{Rectangle\+Geometry}}$>$ ec\+::\+Open\+G\+L\+Graphics\+::m\+\_\+rectangle\+Geometry\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_open_g_l_graphics_aa2d2bc4a2c3bab81188ffe5f0ec14445}\label{classec_1_1_open_g_l_graphics_aa2d2bc4a2c3bab81188ffe5f0ec14445}} 
+\index{ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}!m\+\_\+rectangle\+Outline\+Geometry@{m\+\_\+rectangle\+Outline\+Geometry}}
+\index{m\+\_\+rectangle\+Outline\+Geometry@{m\+\_\+rectangle\+Outline\+Geometry}!ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}}
+\subsubsection{\texorpdfstring{m\+\_\+rectangle\+Outline\+Geometry}{m\_rectangleOutlineGeometry}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_line_strip_geometry}{Line\+Strip\+Geometry}}$>$ ec\+::\+Open\+G\+L\+Graphics\+::m\+\_\+rectangle\+Outline\+Geometry\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classec_1_1_open_g_l_graphics_adba38a812344c43364c208caa70985e0}\label{classec_1_1_open_g_l_graphics_adba38a812344c43364c208caa70985e0}} 
 \index{ec\+::\+Open\+G\+L\+Graphics@{ec\+::\+Open\+G\+L\+Graphics}!s\+\_\+circle\+Step@{s\+\_\+circle\+Step}}
@@ -279,5 +303,5 @@ static constexpr float \mbox{\hyperlink{classec_1_1_open_g_l_graphics_adba38a812
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+G\+U\+I/\+Backend/\mbox{\hyperlink{_open_g_l_graphics_8h}{Open\+G\+L\+Graphics.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+G\+U\+I/\+Backend/\mbox{\hyperlink{_open_g_l_graphics_8cpp}{Open\+G\+L\+Graphics.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Gui/\+Backend/\mbox{\hyperlink{_open_g_l_graphics_8h}{Open\+G\+L\+Graphics.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Gui/\+Backend/\mbox{\hyperlink{_open_g_l_graphics_8cpp}{Open\+G\+L\+Graphics.\+cpp}}\end{DoxyCompactItemize}

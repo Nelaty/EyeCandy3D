@@ -101,8 +101,8 @@ Public Types</h2></td></tr>
 <tr class="separator:acc8376886aac460c21a980c411cc1d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d9334fafd46399a39448fe00fad3c2e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a0d9334fafd46399a39448fe00fad3c2e">EventCallbackContainer_Type</a> = std::vector&lt; <a class="el" href="classec_1_1_input_listener.html#acc8376886aac460c21a980c411cc1d15">EventCallback_Type</a> &gt;</td></tr>
 <tr class="separator:a0d9334fafd46399a39448fe00fad3c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74ebbc0d4a31fcda8b6cda624e5ecdd1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a74ebbc0d4a31fcda8b6cda624e5ecdd1">EventCallbackMap_Type</a> = std::map&lt; <a class="el" href="classec_1_1_input_listener.html#af5dfb691564fa8e05fcf7f053e3c532b">EventKey_Type</a>, <a class="el" href="classec_1_1_input_listener.html#a0d9334fafd46399a39448fe00fad3c2e">EventCallbackContainer_Type</a> &gt;</td></tr>
-<tr class="separator:a74ebbc0d4a31fcda8b6cda624e5ecdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0825f1f31a1373c5c03e51da123148"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#abf0825f1f31a1373c5c03e51da123148">CallbackContainerMap_Type</a> = std::array&lt; <a class="el" href="classec_1_1_input_listener.html#a0d9334fafd46399a39448fe00fad3c2e">EventCallbackContainer_Type</a>, static_cast&lt; int &gt;(<a class="el" href="namespaceec.html#a30e2a743ebdeb02ac68a6cfa50f629c7ae2942a04780e223b215eb8b663cf5353">InputType::count</a>)&gt;</td></tr>
+<tr class="separator:abf0825f1f31a1373c5c03e51da123148"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -134,12 +134,26 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a25d3ab10346fa26de7737ded4f1b7318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_listener.html#a74ebbc0d4a31fcda8b6cda624e5ecdd1">EventCallbackMap_Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a25d3ab10346fa26de7737ded4f1b7318">m_eventCallbacks</a></td></tr>
-<tr class="separator:a25d3ab10346fa26de7737ded4f1b7318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4553825c97688ab1827d6f4849c92b61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_listener.html#abf0825f1f31a1373c5c03e51da123148">CallbackContainerMap_Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a4553825c97688ab1827d6f4849c92b61">m_callbackContainers</a></td></tr>
+<tr class="separator:a4553825c97688ab1827d6f4849c92b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af36b5fc46ed59886d73b1613aaef5a47"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#af36b5fc46ed59886d73b1613aaef5a47">m_enabled</a></td></tr>
 <tr class="separator:af36b5fc46ed59886d73b1613aaef5a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="abf0825f1f31a1373c5c03e51da123148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0825f1f31a1373c5c03e51da123148">&#9670;&nbsp;</a></span>CallbackContainerMap_Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classec_1_1_input_listener.html#abf0825f1f31a1373c5c03e51da123148">ec::InputListener::CallbackContainerMap_Type</a> =  std::array&lt;<a class="el" href="classec_1_1_input_listener.html#a0d9334fafd46399a39448fe00fad3c2e">EventCallbackContainer_Type</a>, static_cast&lt;int&gt;(<a class="el" href="namespaceec.html#a30e2a743ebdeb02ac68a6cfa50f629c7ae2942a04780e223b215eb8b663cf5353">InputType::count</a>)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="acc8376886aac460c21a980c411cc1d15"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc8376886aac460c21a980c411cc1d15">&#9670;&nbsp;</a></span>EventCallback_Type</h2>
 
@@ -162,20 +176,6 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="classec_1_1_input_listener.html#a0d9334fafd46399a39448fe00fad3c2e">ec::InputListener::EventCallbackContainer_Type</a> =  std::vector&lt;<a class="el" href="classec_1_1_input_listener.html#acc8376886aac460c21a980c411cc1d15">EventCallback_Type</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a74ebbc0d4a31fcda8b6cda624e5ecdd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74ebbc0d4a31fcda8b6cda624e5ecdd1">&#9670;&nbsp;</a></span>EventCallbackMap_Type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classec_1_1_input_listener.html#a74ebbc0d4a31fcda8b6cda624e5ecdd1">ec::InputListener::EventCallbackMap_Type</a> =  std::map&lt;<a class="el" href="classec_1_1_input_listener.html#af5dfb691564fa8e05fcf7f053e3c532b">EventKey_Type</a>, <a class="el" href="classec_1_1_input_listener.html#a0d9334fafd46399a39448fe00fad3c2e">EventCallbackContainer_Type</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -471,6 +471,28 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4553825c97688ab1827d6f4849c92b61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4553825c97688ab1827d6f4849c92b61">&#9670;&nbsp;</a></span>m_callbackContainers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classec_1_1_input_listener.html#abf0825f1f31a1373c5c03e51da123148">CallbackContainerMap_Type</a> ec::InputListener::m_callbackContainers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af36b5fc46ed59886d73b1613aaef5a47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af36b5fc46ed59886d73b1613aaef5a47">&#9670;&nbsp;</a></span>m_enabled</h2>
 
@@ -493,31 +515,9 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a25d3ab10346fa26de7737ded4f1b7318"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25d3ab10346fa26de7737ded4f1b7318">&#9670;&nbsp;</a></span>m_eventCallbacks</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classec_1_1_input_listener.html#a74ebbc0d4a31fcda8b6cda624e5ecdd1">EventCallbackMap_Type</a> ec::InputListener::m_eventCallbacks</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_input_listener_8h_source.html">InputListener.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_input_listener_8cpp.html">InputListener.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_input_listener_8h_source.html">InputListener.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_input_listener_8cpp.html">InputListener.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -2,6 +2,11 @@
 \label{classec_1_1_dynamic_geometry}\index{ec\+::\+Dynamic\+Geometry@{ec\+::\+Dynamic\+Geometry}}
 
 
+Kind of geometry that can be changed for every rendering.  
+
+
+
+
 {\ttfamily \#include $<$Dynamic\+Geometry.\+h$>$}
 
 
@@ -33,11 +38,14 @@ virtual \mbox{\hyperlink{classec_1_1_dynamic_geometry_aeed5b7ffd9876f086207dbaf7
 \mbox{\hyperlink{classec_1_1_dynamic_geometry_a4b0b6439b7c04f652eb74305abfe3bb9}{Dynamic\+Geometry}} ()
 \item 
 void \mbox{\hyperlink{classec_1_1_dynamic_geometry_ae4eb49e852a4c300325a288bf9ea4408}{begin\+Render}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called at the beginning of the rendering routine. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classec_1_1_dynamic_geometry_a76ddfd59d22b89ada5af4fc57e118dee}{update}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Update function gets called once at the start of every render cycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+Kind of geometry that can be changed for every rendering. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classec_1_1_dynamic_geometry_aeed5b7ffd9876f086207dbaf7e5bc6fc}\label{classec_1_1_dynamic_geometry_aeed5b7ffd9876f086207dbaf7e5bc6fc}} 
@@ -61,7 +69,11 @@ virtual void \mbox{\hyperlink{classec_1_1_dynamic_geometry_a76ddfd59d22b89ada5af
 \subsubsection{\texorpdfstring{begin\+Render()}{beginRender()}}
 {\footnotesize\ttfamily void ec\+::\+Dynamic\+Geometry\+::begin\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
+
+
 Called at the beginning of the rendering routine. 
+
+
 
 Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a17a87aca44e2a23a6185e78262e02652}{ec\+::\+I\+Geometry\+Access}}.
 
@@ -71,9 +83,13 @@ Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a17a87aca44e2a23a6185e
 \subsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void ec\+::\+Dynamic\+Geometry\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
 
+
+
 Update function gets called once at the start of every render cycle. 
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_dynamic_geometry_8h}{Dynamic\+Geometry.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_dynamic_geometry_8cpp}{Dynamic\+Geometry.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_dynamic_geometry_8h}{Dynamic\+Geometry.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_dynamic_geometry_8cpp}{Dynamic\+Geometry.\+cpp}}\end{DoxyCompactItemize}

@@ -17,11 +17,11 @@ Collaboration diagram for ec\+:\+:Freetype\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classec_1_1_freetype_a77da5cdd8b053a5fea7c5ffd78c39418}{Freetype}} (\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$shader)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_freetype}{Freetype}} constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_freetype_a35e8fad09705600cdd263ed3781d299b}{$\sim$\+Freetype}} ()
 \item 
 void \mbox{\hyperlink{classec_1_1_freetype_afef1f61fa4bd8114825c66ac93d3e6bf}{render\+Text}} (const char $\ast$\mbox{\hyperlink{namespaceec_a0bdee24285d69deca899e166b29c0150}{text}}, \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} $\ast$atlas, float x, float y, float sx, float sy, const glm\+::vec4 \&color=glm\+::vec4(0.\+0f, 0.\+0f, 0.\+0f, 1.\+0f)) const
-\item 
+\begin{DoxyCompactList}\small\item\em Render text with a specific \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} at a given position with a given relative scale. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_freetype_a7a10e5515342b70588f76328ac83826d}{add\+Font\+Face}} (const std\+::string \&name, const std\+::string \&filepath)
 \item 
 void \mbox{\hyperlink{classec_1_1_freetype_a1be4b69e2d57689533ddaabdc9042d51}{add\+Font\+Texture\+Atlas}} (const std\+::string \&face, unsigned int size)
@@ -37,6 +37,15 @@ void \mbox{\hyperlink{classec_1_1_freetype_a1be4b69e2d57689533ddaabdc9042d51}{ad
 \subsubsection{\texorpdfstring{Freetype()}{Freetype()}}
 {\footnotesize\ttfamily ec\+::\+Freetype\+::\+Freetype (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{shader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+
+
+\mbox{\hyperlink{classec_1_1_freetype}{Freetype}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & The text shader used for rendering text. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classec_1_1_freetype_a35e8fad09705600cdd263ed3781d299b}\label{classec_1_1_freetype_a35e8fad09705600cdd263ed3781d299b}} 
 \index{ec\+::\+Freetype@{ec\+::\+Freetype}!````~Freetype@{$\sim$\+Freetype}}
 \index{````~Freetype@{$\sim$\+Freetype}!ec\+::\+Freetype@{ec\+::\+Freetype}}
@@ -72,7 +81,24 @@ void \mbox{\hyperlink{classec_1_1_freetype_a1be4b69e2d57689533ddaabdc9042d51}{ad
 
 
 
+Render text with a specific \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} at a given position with a given relative scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The text to draw. \\
+\hline
+{\em atlas} & The font used for drawing \\
+\hline
+{\em x} & X coordinate in screen coordinates. \\
+\hline
+{\em y} & Y coordinate in screen coordinate. \\
+\hline
+{\em sx} & \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_freetype_8h}{Freetype.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_freetype_8cpp}{Freetype.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_freetype_8h}{Freetype.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_freetype_8cpp}{Freetype.\+cpp}}\end{DoxyCompactItemize}

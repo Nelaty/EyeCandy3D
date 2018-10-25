@@ -9,30 +9,68 @@ namespace ec
 {
 	class Node;
 
+	/**
+	 * \brief Line geometry that adapts to a given start and end
+	 * point.
+	 */
 	class EC3D_DECLSPEC DynamicLineGeometry : public DynamicGeometry
 	{
 	public:
+		/**
+		 * \brief DynamicLineGeometry constructor.
+		 * \param start The start point of the line.
+		 * \param end The end point of the line.
+		 * \param lineWidth The width of the line.
+		 */
 		explicit DynamicLineGeometry(Node* start, Node* end, float lineWidth = 0.05f);
 		~DynamicLineGeometry();
 
-		/* Start node access */
+		/**
+		 * \brief Set the start point of the line.
+		 */
 		void setStart(Node* start);
+		/**
+		 * \brief Get the start point of the line.
+		 */
 		Node* getStart() const;
 
-		/* End node access */
+		/**
+		 * \brief Set the end point of the line.
+		 */
 		void setEnd(Node* end);
+		/**
+		 * \brief Get the end point of the line.
+		 */
 		Node* getEnd() const;
 
-		/* Line width access */
+		/**
+		 * \brief Set the current line width.
+		 */
 		void setLineWidth(float lineWidth);
+		/**
+		 * \brief Get the current line width.
+		 */
 		float getLineWidth() const;
 
 	protected:
 		void onRender() override;
 
+		/**
+		 * \brief Initialize the geometry data.
+		 */
 		void init();
+		/**
+		 * \brief Initialize vertex data.
+		 * \return False if start and end positions are identical.
+		 */
 		bool initVertices();
+		/**
+		 * \brief Initialize texture coordinates.
+		 */
 		void initTexCoords();
+		/**
+		 * \brief Initialize index data.
+		 */
 		void initIndices();
 
 	private:

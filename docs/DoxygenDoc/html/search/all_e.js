@@ -1,7 +1,6 @@
 var searchData=
 [
   ['n',['N',['../classec_1_1_keyboard.html#a4dcb87a802eb8775401ae36ac5bd4358',1,'ec::Keyboard']]],
-  ['newline',['newLine',['../classec_1_1_file_logger.html#ae0cb2d06dd86b4fcf4ac89679cfed259',1,'ec::FileLogger']]],
   ['node',['Node',['../classec_1_1_node.html',1,'ec::Node'],['../classec_1_1_node.html#a38582758606734f5f3a0e5c6d3dc0200',1,'ec::Node::Node()']]],
   ['node_2ecpp',['Node.cpp',['../_node_8cpp.html',1,'']]],
   ['node_2eh',['Node.h',['../_node_8h.html',1,'']]],

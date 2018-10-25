@@ -1,10 +1,13 @@
 var searchData=
 [
   ['o',['O',['../classec_1_1_keyboard.html#acc3419f140a0bb0e253c84315d7277c7',1,'ec::Keyboard']]],
+  ['omni',['omni',['../namespaceec.html#a30e2a743ebdeb02ac68a6cfa50f629c7a3aa53cec161c587e51555bdfa5c56eff',1,'ec']]],
+  ['omnilight',['OmniLight',['../classec_1_1_omni_light.html',1,'ec::OmniLight'],['../classec_1_1_omni_light.html#aa0240a42641c82a0363f569fdc312f23',1,'ec::OmniLight::OmniLight()']]],
+  ['omnilight_2ecpp',['OmniLight.cpp',['../_omni_light_8cpp.html',1,'']]],
+  ['omnilight_2eh',['OmniLight.h',['../_omni_light_8h.html',1,'']]],
   ['onbeginrender',['onBeginRender',['../classec_1_1_scene_renderer.html#ad1d418d6caa7ada328ae9648663c2d23',1,'ec::SceneRenderer']]],
   ['onendrender',['onEndRender',['../classec_1_1_scene_renderer.html#ae4c7c5bfe81b36ab18e36c2ea75ea53b',1,'ec::SceneRenderer']]],
   ['onrender',['onRender',['../classec_1_1_dynamic_line_geometry.html#ab56984cee973ef2a73ff67339014f0cf',1,'ec::DynamicLineGeometry::onRender()'],['../classec_1_1_geometry.html#a1f166e70fc880e88092f29ef46afb836',1,'ec::Geometry::onRender()'],['../classec_1_1_i_geometry_access.html#a2ee418c9fa4eb266347bae2f0ef8095b',1,'ec::IGeometryAccess::onRender()'],['../classec_1_1_scene_renderer.html#a3d57e498fde970f039783f7ee8b015fc',1,'ec::SceneRenderer::onRender()']]],
-  ['open',['open',['../classec_1_1_file_logger.html#a5229bec7b392fb723188f80b8c4a776c',1,'ec::FileLogger']]],
   ['openglcursorprovider',['OpenGLCursorProvider',['../classec_1_1_open_g_l_cursor_provider.html',1,'ec::OpenGLCursorProvider'],['../classec_1_1_open_g_l_cursor_provider.html#ab90d6f1d80ef9da141b4f95870ab0255',1,'ec::OpenGLCursorProvider::OpenGLCursorProvider()']]],
   ['openglcursorprovider_2ecpp',['OpenGLCursorProvider.cpp',['../_open_g_l_cursor_provider_8cpp.html',1,'']]],
   ['openglcursorprovider_2eh',['OpenGLCursorProvider.h',['../_open_g_l_cursor_provider_8h.html',1,'']]],
@@ -26,7 +29,9 @@ var searchData=
   ['openglinput',['OpenGLInput',['../classec_1_1_open_g_l_input.html',1,'ec::OpenGLInput'],['../classec_1_1_open_g_l_input.html#a7046406475d576873c287a64ea4d3cb6',1,'ec::OpenGLInput::OpenGLInput()']]],
   ['openglinput_2ecpp',['OpenGLInput.cpp',['../_open_g_l_input_8cpp.html',1,'']]],
   ['openglinput_2eh',['OpenGLInput.h',['../_open_g_l_input_8h.html',1,'']]],
+  ['openlogfile',['openLogFile',['../classec_1_1_logger.html#aaa61f62bc64a30b72c9a0c8cd8d61102',1,'ec::Logger']]],
   ['operator_3d',['operator=',['../classec_1_1_gui_system.html#ad5a367d3f8cb0190ccccfacc61ad1c05',1,'ec::GuiSystem::operator=(const GuiSystem &amp;guiSystem)=delete'],['../classec_1_1_gui_system.html#ac00212035d5b6fbb16f6f4425f0e8926',1,'ec::GuiSystem::operator=(GuiSystem &amp;&amp;guiSystem)=default']]],
+  ['operator_3d_3d',['operator==',['../classec_1_1_texture.html#ab00e335380881f3267732186381c777c',1,'ec::Texture']]],
   ['orientationchanged',['orientationChanged',['../classec_1_1_generic_slider_listener.html#abd487c83f6c8ff029b474d1c28e743c2',1,'ec::GenericSliderListener']]],
   ['orientationchanged_5fcallback',['OrientationChanged_Callback',['../classec_1_1_generic_slider_listener.html#af0bd5763136a162c785fc2e37be42fed',1,'ec::GenericSliderListener']]],
   ['orthogonal',['orthogonal',['../_camera_type_8h.html#ade010780e0984146f6b0a99d3f927f1d',1,'CameraType.h']]]

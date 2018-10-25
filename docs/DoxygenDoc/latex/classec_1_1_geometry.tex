@@ -2,6 +2,11 @@
 \label{classec_1_1_geometry}\index{ec\+::\+Geometry@{ec\+::\+Geometry}}
 
 
+\mbox{\hyperlink{classec_1_1_geometry}{Geometry}}.  
+
+
+
+
 {\ttfamily \#include $<$Geometry.\+h$>$}
 
 
@@ -28,34 +33,37 @@ Collaboration diagram for ec\+:\+:Geometry\+:\nopagebreak
 virtual \mbox{\hyperlink{classec_1_1_geometry_a964c581313da2be51a3c78d3be7f48b3}{$\sim$\+Geometry}} ()
 \item 
 virtual void \mbox{\hyperlink{classec_1_1_geometry_a228d4a0fa01a17379f24aee2c769b501}{recalculate\+Normals}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Recalculate vertex normals. \end{DoxyCompactList}\item 
 G\+Luint \mbox{\hyperlink{classec_1_1_geometry_a91a89baad39d4f2b2c4e9774d952dce9}{get\+Vao}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the vertex array object id. \end{DoxyCompactList}\item 
 G\+Luint \mbox{\hyperlink{classec_1_1_geometry_abad5d4311d16462099b8f9d084d99dd4}{get\+Vbo}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the vertex buffer object id. \end{DoxyCompactList}\item 
 G\+Luint \mbox{\hyperlink{classec_1_1_geometry_a5d956ff01a7b6648ede8982e0a461ae0}{get\+Ebo}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the element buffer object id. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classec_1_1_geometry_aeae22c6b54c7c534249ee08b3fb77a70}{Geometry}} (G\+Lenum mode=G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+ES, G\+Lenum type=G\+L\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_geometry}{Geometry}} constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_geometry_aeca5f0e52e7c2e4b352ede1a6e7c3f5b}{begin\+Render}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called at the beginning of the rendering routine. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_geometry_a1f166e70fc880e88092f29ef46afb836}{on\+Render}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em The actual drawing of the object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_geometry_ae0352702162501df185517e84c3b02bd}{end\+Render}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called at the end of the rendering routine. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_geometry_ad4f80cd4d4c22b108c33b9030e91467b}{set\+Mode}} (G\+Lenum mode)
-\item 
+\begin{DoxyCompactList}\small\item\em Set type of primitive to render. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_geometry_a12c3da280ff11e86a8b07d18a23e0880}{set\+Type}} (G\+Lenum type)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the data size used for geometry data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classec_1_1_geometry_data}{Geometry\+Data}} \mbox{\hyperlink{classec_1_1_geometry_aeb72a472b242d92496f0283cfee17fac}{m\+\_\+data}}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classec_1_1_geometry}{Geometry}}. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classec_1_1_geometry_a964c581313da2be51a3c78d3be7f48b3}\label{classec_1_1_geometry_a964c581313da2be51a3c78d3be7f48b3}} 
@@ -72,6 +80,17 @@ void \mbox{\hyperlink{classec_1_1_geometry_a12c3da280ff11e86a8b07d18a23e0880}{se
 
 
 
+\mbox{\hyperlink{classec_1_1_geometry}{Geometry}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The kind of primitive to render. \\
+\hline
+{\em type} & The data size used for geometry data. \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classec_1_1_geometry_aeca5f0e52e7c2e4b352ede1a6e7c3f5b}\label{classec_1_1_geometry_aeca5f0e52e7c2e4b352ede1a6e7c3f5b}} 
 \index{ec\+::\+Geometry@{ec\+::\+Geometry}!begin\+Render@{begin\+Render}}
@@ -79,7 +98,11 @@ void \mbox{\hyperlink{classec_1_1_geometry_a12c3da280ff11e86a8b07d18a23e0880}{se
 \subsubsection{\texorpdfstring{begin\+Render()}{beginRender()}}
 {\footnotesize\ttfamily void ec\+::\+Geometry\+::begin\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
+
+
 Called at the beginning of the rendering routine. 
+
+
 
 Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a17a87aca44e2a23a6185e78262e02652}{ec\+::\+I\+Geometry\+Access}}.
 
@@ -89,7 +112,11 @@ Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a17a87aca44e2a23a6185e
 \subsubsection{\texorpdfstring{end\+Render()}{endRender()}}
 {\footnotesize\ttfamily void ec\+::\+Geometry\+::end\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
+
+
 Called at the end of the rendering routine. 
+
+
 
 Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a6d3b9c34a8b73aeac26663ef349ce41f}{ec\+::\+I\+Geometry\+Access}}.
 
@@ -99,25 +126,41 @@ Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a6d3b9c34a8b73aeac2666
 \subsubsection{\texorpdfstring{get\+Ebo()}{getEbo()}}
 {\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::get\+Ebo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the element buffer object id. \mbox{\Hypertarget{classec_1_1_geometry_a91a89baad39d4f2b2c4e9774d952dce9}\label{classec_1_1_geometry_a91a89baad39d4f2b2c4e9774d952dce9}} 
+
+
+Get the element buffer object id. 
+
+\mbox{\Hypertarget{classec_1_1_geometry_a91a89baad39d4f2b2c4e9774d952dce9}\label{classec_1_1_geometry_a91a89baad39d4f2b2c4e9774d952dce9}} 
 \index{ec\+::\+Geometry@{ec\+::\+Geometry}!get\+Vao@{get\+Vao}}
 \index{get\+Vao@{get\+Vao}!ec\+::\+Geometry@{ec\+::\+Geometry}}
 \subsubsection{\texorpdfstring{get\+Vao()}{getVao()}}
 {\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::get\+Vao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the vertex array object id. \mbox{\Hypertarget{classec_1_1_geometry_abad5d4311d16462099b8f9d084d99dd4}\label{classec_1_1_geometry_abad5d4311d16462099b8f9d084d99dd4}} 
+
+
+Get the vertex array object id. 
+
+\mbox{\Hypertarget{classec_1_1_geometry_abad5d4311d16462099b8f9d084d99dd4}\label{classec_1_1_geometry_abad5d4311d16462099b8f9d084d99dd4}} 
 \index{ec\+::\+Geometry@{ec\+::\+Geometry}!get\+Vbo@{get\+Vbo}}
 \index{get\+Vbo@{get\+Vbo}!ec\+::\+Geometry@{ec\+::\+Geometry}}
 \subsubsection{\texorpdfstring{get\+Vbo()}{getVbo()}}
 {\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+::get\+Vbo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the vertex buffer object id. \mbox{\Hypertarget{classec_1_1_geometry_a1f166e70fc880e88092f29ef46afb836}\label{classec_1_1_geometry_a1f166e70fc880e88092f29ef46afb836}} 
+
+
+Get the vertex buffer object id. 
+
+\mbox{\Hypertarget{classec_1_1_geometry_a1f166e70fc880e88092f29ef46afb836}\label{classec_1_1_geometry_a1f166e70fc880e88092f29ef46afb836}} 
 \index{ec\+::\+Geometry@{ec\+::\+Geometry}!on\+Render@{on\+Render}}
 \index{on\+Render@{on\+Render}!ec\+::\+Geometry@{ec\+::\+Geometry}}
 \subsubsection{\texorpdfstring{on\+Render()}{onRender()}}
 {\footnotesize\ttfamily void ec\+::\+Geometry\+::on\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
-The actual rendering of the object. 
+
+
+The actual drawing of the object. 
+
+
 
 Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a2ee418c9fa4eb266347bae2f0ef8095b}{ec\+::\+I\+Geometry\+Access}}.
 
@@ -127,9 +170,13 @@ Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a2ee418c9fa4eb266347ba
 \subsubsection{\texorpdfstring{recalculate\+Normals()}{recalculateNormals()}}
 {\footnotesize\ttfamily void ec\+::\+Geometry\+::recalculate\+Normals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
 Recalculate vertex normals. 
 
-Reimplemented in \mbox{\hyperlink{classec_1_1_line_geometry_a7a0b22930aa566c97d5f86f2a8246696}{ec\+::\+Line\+Geometry}}.
+
+
+Reimplemented in \mbox{\hyperlink{classec_1_1_line_strip_geometry_a8b78bf56551a9536f5a2dace78ce4fcd}{ec\+::\+Line\+Strip\+Geometry}}, and \mbox{\hyperlink{classec_1_1_line_geometry_a7a0b22930aa566c97d5f86f2a8246696}{ec\+::\+Line\+Geometry}}.
 
 \mbox{\Hypertarget{classec_1_1_geometry_ad4f80cd4d4c22b108c33b9030e91467b}\label{classec_1_1_geometry_ad4f80cd4d4c22b108c33b9030e91467b}} 
 \index{ec\+::\+Geometry@{ec\+::\+Geometry}!set\+Mode@{set\+Mode}}
@@ -137,11 +184,19 @@ Reimplemented in \mbox{\hyperlink{classec_1_1_line_geometry_a7a0b22930aa566c97d5
 \subsubsection{\texorpdfstring{set\+Mode()}{setMode()}}
 {\footnotesize\ttfamily void ec\+::\+Geometry\+::set\+Mode (\begin{DoxyParamCaption}\item[{G\+Lenum}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+Set type of primitive to render. 
+
 \mbox{\Hypertarget{classec_1_1_geometry_a12c3da280ff11e86a8b07d18a23e0880}\label{classec_1_1_geometry_a12c3da280ff11e86a8b07d18a23e0880}} 
 \index{ec\+::\+Geometry@{ec\+::\+Geometry}!set\+Type@{set\+Type}}
 \index{set\+Type@{set\+Type}!ec\+::\+Geometry@{ec\+::\+Geometry}}
 \subsubsection{\texorpdfstring{set\+Type()}{setType()}}
 {\footnotesize\ttfamily void ec\+::\+Geometry\+::set\+Type (\begin{DoxyParamCaption}\item[{G\+Lenum}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set the data size used for geometry data. 
 
 
 
@@ -156,5 +211,5 @@ Reimplemented in \mbox{\hyperlink{classec_1_1_line_geometry_a7a0b22930aa566c97d5
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_geometry_8h}{Geometry.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_geometry_8cpp}{Geometry.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_geometry_8h}{Geometry.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_geometry_8cpp}{Geometry.\+cpp}}\end{DoxyCompactItemize}

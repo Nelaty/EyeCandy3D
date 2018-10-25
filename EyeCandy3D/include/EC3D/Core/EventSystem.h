@@ -10,6 +10,9 @@ namespace ec
 {
 	class Window;
 
+	/**
+	 * \brief 
+	 */
 	class EC3D_DECLSPEC EventSystem
 	{
 	public:

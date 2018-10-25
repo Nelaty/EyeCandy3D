@@ -92,26 +92,37 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abb54af4b2922eb16973b450d6cf0beae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#abb54af4b2922eb16973b450d6cf0beae">unbind</a> ()</td></tr>
 <tr class="separator:abb54af4b2922eb16973b450d6cf0beae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85ce34e18732d88632310d751a6c2cee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#a85ce34e18732d88632310d751a6c2cee">resizeBuffers</a> (unsigned int vertexCount, unsigned int indexCount)</td></tr>
+<tr class="memdesc:a85ce34e18732d88632310d751a6c2cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize vertex and index containers.  <a href="#a85ce34e18732d88632310d751a6c2cee">More...</a><br /></td></tr>
 <tr class="separator:a85ce34e18732d88632310d751a6c2cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade0586602da2a8917fe55b592ff44a57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#ade0586602da2a8917fe55b592ff44a57">initBufferObjects</a> (GLenum usage=GL_STATIC_DRAW)</td></tr>
+<tr class="memdesc:ade0586602da2a8917fe55b592ff44a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes VAO, VBO and EBO. Passes vertex and index data to the GPU.  <a href="#ade0586602da2a8917fe55b592ff44a57">More...</a><br /></td></tr>
 <tr class="separator:ade0586602da2a8917fe55b592ff44a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23c0090061b5b21b74f070916915ca69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#a23c0090061b5b21b74f070916915ca69">buffersInitialized</a> () const</td></tr>
+<tr class="memdesc:a23c0090061b5b21b74f070916915ca69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if buffer objects are initialized.  <a href="#a23c0090061b5b21b74f070916915ca69">More...</a><br /></td></tr>
 <tr class="separator:a23c0090061b5b21b74f070916915ca69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5df7921c489c60d96a971003c299dcb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#a5df7921c489c60d96a971003c299dcb3">releaseMemory</a> ()</td></tr>
+<tr class="memdesc:a5df7921c489c60d96a971003c299dcb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears containers and releases memory on the GPU. After calling this function, this data object won't be initialized any more.  <a href="#a5df7921c489c60d96a971003c299dcb3">More...</a><br /></td></tr>
 <tr class="separator:a5df7921c489c60d96a971003c299dcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb93c2e5bd5f4656eaa12651cd4927aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#aeb93c2e5bd5f4656eaa12651cd4927aa">updateVertexData</a> ()</td></tr>
+<tr class="memdesc:aeb93c2e5bd5f4656eaa12651cd4927aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should be called if vertex data has changed. Updates vertices on the GPU.  <a href="#aeb93c2e5bd5f4656eaa12651cd4927aa">More...</a><br /></td></tr>
 <tr class="separator:aeb93c2e5bd5f4656eaa12651cd4927aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23fd4a2619691fb7bbd5c0650544cce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#a23fd4a2619691fb7bbd5c0650544cce3">updateIndexData</a> ()</td></tr>
+<tr class="memdesc:a23fd4a2619691fb7bbd5c0650544cce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should be called if index data has changed. Updates indices on the GPU.  <a href="#a23fd4a2619691fb7bbd5c0650544cce3">More...</a><br /></td></tr>
 <tr class="separator:a23fd4a2619691fb7bbd5c0650544cce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8edfa8a7fda52850f072ab845ef38fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#ad8edfa8a7fda52850f072ab845ef38fd">update</a> ()</td></tr>
+<tr class="memdesc:ad8edfa8a7fda52850f072ab845ef38fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should be called if vertex and index data changed. Updates vertices and indices on the GPU.  <a href="#ad8edfa8a7fda52850f072ab845ef38fd">More...</a><br /></td></tr>
 <tr class="separator:ad8edfa8a7fda52850f072ab845ef38fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a237459076c98af454bfc3624eebedc81"><td class="memItemLeft" align="right" valign="top">GLenum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#a237459076c98af454bfc3624eebedc81">getUsage</a> () const</td></tr>
+<tr class="memdesc:a237459076c98af454bfc3624eebedc81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get usage.  <a href="#a237459076c98af454bfc3624eebedc81">More...</a><br /></td></tr>
 <tr class="separator:a237459076c98af454bfc3624eebedc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc8d74fcacf693aad19683387adcfadf"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#abc8d74fcacf693aad19683387adcfadf">getVao</a> () const</td></tr>
+<tr class="memdesc:abc8d74fcacf693aad19683387adcfadf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the vao buffer id.  <a href="#abc8d74fcacf693aad19683387adcfadf">More...</a><br /></td></tr>
 <tr class="separator:abc8d74fcacf693aad19683387adcfadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a067f9cd54e35a1faff1c5011a542eed8"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#a067f9cd54e35a1faff1c5011a542eed8">getVbo</a> () const</td></tr>
+<tr class="memdesc:a067f9cd54e35a1faff1c5011a542eed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the vbo buffer id.  <a href="#a067f9cd54e35a1faff1c5011a542eed8">More...</a><br /></td></tr>
 <tr class="separator:a067f9cd54e35a1faff1c5011a542eed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3f427f933c595b169bd10551d52abc3"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry_data.html#ae3f427f933c595b169bd10551d52abc3">getEbo</a> () const</td></tr>
+<tr class="memdesc:ae3f427f933c595b169bd10551d52abc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ebo buffer id.  <a href="#ae3f427f933c595b169bd10551d52abc3">More...</a><br /></td></tr>
 <tr class="separator:ae3f427f933c595b169bd10551d52abc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -188,7 +199,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if buffer objects are initialized. </p><dl class="section return"><dt>Returns</dt><dd>True if they are initialized, false otherwise. </dd></dl>
+
+<p>Check if buffer objects are initialized. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if they are initialized, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -206,6 +219,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Get the ebo buffer id. </p>
 
 </div>
@@ -224,7 +238,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get usage </p>
+
+<p>Get usage. </p>
 
 </div>
 </div>
@@ -242,6 +257,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Get the vao buffer id. </p>
 
 </div>
@@ -260,6 +276,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Get the vbo buffer id. </p>
 
 </div>
@@ -279,7 +296,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initializes VAO, VBO and EBO. Passes vertex and index data to the GPU. </p><dl class="section return"><dt>Returns</dt><dd>False if buffers are already initialized, true otherwise. </dd></dl>
+
+<p>Initializes VAO, VBO and EBO. Passes vertex and index data to the GPU. </p>
+<dl class="section return"><dt>Returns</dt><dd>False if buffers are already initialized, true otherwise. </dd></dl>
 
 </div>
 </div>
@@ -297,7 +316,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Clears containers and releases memory on the GPU. After calling this function, this data object won't be initialized any more. </p><dl class="section return"><dt>Returns</dt><dd>True if buffers are initialized, false otherwise. </dd></dl>
+
+<p>Clears containers and releases memory on the GPU. After calling this function, this data object won't be initialized any more. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if buffers are initialized, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -326,7 +347,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Resize vertex and index containers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexCount</td><td>The size of the vertex buffer. </td></tr>
+    <tr><td class="paramname">indexCount</td><td>The size of the index buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -361,6 +390,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Should be called if vertex and index data changed. Updates vertices and indices on the GPU. </p>
 
 </div>
@@ -379,6 +409,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Should be called if index data has changed. Updates indices on the GPU. </p>
 
 </div>
@@ -397,6 +428,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Should be called if vertex data has changed. Updates vertices on the GPU. </p>
 
 </div>
@@ -431,8 +463,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_geometry_data_8h_source.html">GeometryData.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_geometry_data_8cpp.html">GeometryData.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_geometry_data_8h_source.html">GeometryData.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_geometry_data_8cpp.html">GeometryData.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

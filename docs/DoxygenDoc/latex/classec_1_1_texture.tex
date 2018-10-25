@@ -10,7 +10,7 @@ Collaboration diagram for ec\+:\+:Texture\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=190pt]{classec_1_1_texture__coll__graph}
+\includegraphics[width=176pt]{classec_1_1_texture__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -19,6 +19,8 @@ Collaboration diagram for ec\+:\+:Texture\+:\nopagebreak
 \mbox{\hyperlink{classec_1_1_texture_ac2551ef676d0c771f35dc470b8a0b237}{Texture}} ()
 \item 
 \mbox{\hyperlink{classec_1_1_texture_ae567d80654dd09c6b02a38ca8de29ead}{$\sim$\+Texture}} ()
+\item 
+bool \mbox{\hyperlink{classec_1_1_texture_ab00e335380881f3267732186381c777c}{operator==}} (const \mbox{\hyperlink{classec_1_1_texture}{Texture}} \&texture) const
 \item 
 void \mbox{\hyperlink{classec_1_1_texture_a9e2f0191cfcc85c87edb821508cc06ee}{bind}} () const
 \item 
@@ -37,6 +39,12 @@ const std\+::string \& \mbox{\hyperlink{classec_1_1_texture_a1c33bc610c0b5c7807f
 bool \mbox{\hyperlink{classec_1_1_texture_ac2461a696b914d1b22192a87d326f480}{texture\+From\+File}} (const char $\ast$path, const std\+::string \&type)
 \item 
 bool \mbox{\hyperlink{classec_1_1_texture_ae84b0f18fa11275f09e4c8ea3dc89e02}{cube\+Map\+From\+File}} (const char $\ast$path, const std\+::string \&type)
+\item 
+int \mbox{\hyperlink{classec_1_1_texture_a0c01b293f7fe1b9ee863a1a2e9b64a6f}{get\+Width}} () const
+\item 
+int \mbox{\hyperlink{classec_1_1_texture_a45ff89dd7453c2d09ec10ba8aa58835c}{get\+Height}} () const
+\item 
+int \mbox{\hyperlink{classec_1_1_texture_a941dc88bd9843fcf8273dc8d8a259c03}{get\+Component\+Num}} () const
 \item 
 bool \mbox{\hyperlink{classec_1_1_texture_ab81c62fde2f54dfbb5895a421224fcd9}{is\+Initialized}} () const
 \item 
@@ -81,13 +89,25 @@ Create a 3D texture \mbox{\Hypertarget{classec_1_1_texture_a57242daae8cc1ea82784
 \subsubsection{\texorpdfstring{free()}{free()}}
 {\footnotesize\ttfamily void ec\+::\+Texture\+::free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Deallocation of texture memory \mbox{\Hypertarget{classec_1_1_texture_a5d1e6d8dd6c98ea036caf2696e47637a}\label{classec_1_1_texture_a5d1e6d8dd6c98ea036caf2696e47637a}} 
+Deallocation of texture memory \mbox{\Hypertarget{classec_1_1_texture_a941dc88bd9843fcf8273dc8d8a259c03}\label{classec_1_1_texture_a941dc88bd9843fcf8273dc8d8a259c03}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!get\+Component\+Num@{get\+Component\+Num}}
+\index{get\+Component\+Num@{get\+Component\+Num}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{get\+Component\+Num()}{getComponentNum()}}
+{\footnotesize\ttfamily int ec\+::\+Texture\+::get\+Component\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of bytes used per pixel. \mbox{\Hypertarget{classec_1_1_texture_a5d1e6d8dd6c98ea036caf2696e47637a}\label{classec_1_1_texture_a5d1e6d8dd6c98ea036caf2696e47637a}} 
 \index{ec\+::\+Texture@{ec\+::\+Texture}!get\+Dimensions@{get\+Dimensions}}
 \index{get\+Dimensions@{get\+Dimensions}!ec\+::\+Texture@{ec\+::\+Texture}}
 \subsubsection{\texorpdfstring{get\+Dimensions()}{getDimensions()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_texture_types_ac0e07f24452fa28dd8e6e33a224842fc}{ec\+::\+Texture\+Types\+::\+Dimensions}} ec\+::\+Texture\+::get\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\hyperlink{classec_1_1_texture}{Texture}} dimension access \mbox{\Hypertarget{classec_1_1_texture_a0097b0b1826d7339ae109a187b6304d5}\label{classec_1_1_texture_a0097b0b1826d7339ae109a187b6304d5}} 
+\mbox{\hyperlink{classec_1_1_texture}{Texture}} dimension access \mbox{\Hypertarget{classec_1_1_texture_a45ff89dd7453c2d09ec10ba8aa58835c}\label{classec_1_1_texture_a45ff89dd7453c2d09ec10ba8aa58835c}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily int ec\+::\+Texture\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get texture width in pixels. \mbox{\Hypertarget{classec_1_1_texture_a0097b0b1826d7339ae109a187b6304d5}\label{classec_1_1_texture_a0097b0b1826d7339ae109a187b6304d5}} 
 \index{ec\+::\+Texture@{ec\+::\+Texture}!get\+Id@{get\+Id}}
 \index{get\+Id@{get\+Id}!ec\+::\+Texture@{ec\+::\+Texture}}
 \subsubsection{\texorpdfstring{get\+Id()}{getId()}}
@@ -99,13 +119,25 @@ Deallocation of texture memory \mbox{\Hypertarget{classec_1_1_texture_a5d1e6d8dd
 \subsubsection{\texorpdfstring{get\+Type()}{getType()}}
 {\footnotesize\ttfamily const std\+::string \& ec\+::\+Texture\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_texture_ab81c62fde2f54dfbb5895a421224fcd9}\label{classec_1_1_texture_ab81c62fde2f54dfbb5895a421224fcd9}} 
+\mbox{\Hypertarget{classec_1_1_texture_a0c01b293f7fe1b9ee863a1a2e9b64a6f}\label{classec_1_1_texture_a0c01b293f7fe1b9ee863a1a2e9b64a6f}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily int ec\+::\+Texture\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get texture height in pixels. \mbox{\Hypertarget{classec_1_1_texture_ab81c62fde2f54dfbb5895a421224fcd9}\label{classec_1_1_texture_ab81c62fde2f54dfbb5895a421224fcd9}} 
 \index{ec\+::\+Texture@{ec\+::\+Texture}!is\+Initialized@{is\+Initialized}}
 \index{is\+Initialized@{is\+Initialized}!ec\+::\+Texture@{ec\+::\+Texture}}
 \subsubsection{\texorpdfstring{is\+Initialized()}{isInitialized()}}
 {\footnotesize\ttfamily bool ec\+::\+Texture\+::is\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Check if this texture has been initialized \mbox{\Hypertarget{classec_1_1_texture_af3555f8dda9a13babcb96d40d4417813}\label{classec_1_1_texture_af3555f8dda9a13babcb96d40d4417813}} 
+Check if this texture has been initialized \mbox{\Hypertarget{classec_1_1_texture_ab00e335380881f3267732186381c777c}\label{classec_1_1_texture_ab00e335380881f3267732186381c777c}} 
+\index{ec\+::\+Texture@{ec\+::\+Texture}!operator==@{operator==}}
+\index{operator==@{operator==}!ec\+::\+Texture@{ec\+::\+Texture}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ec\+::\+Texture\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_texture}{Texture}} \&}]{texture }\end{DoxyParamCaption}) const}
+
+Check if both texture ids are the same. \mbox{\Hypertarget{classec_1_1_texture_af3555f8dda9a13babcb96d40d4417813}\label{classec_1_1_texture_af3555f8dda9a13babcb96d40d4417813}} 
 \index{ec\+::\+Texture@{ec\+::\+Texture}!set\+Id@{set\+Id}}
 \index{set\+Id@{set\+Id}!ec\+::\+Texture@{ec\+::\+Texture}}
 \subsubsection{\texorpdfstring{set\+Id()}{setId()}}
@@ -133,5 +165,5 @@ Deactivate this texture.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_texture_8h}{Texture.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_texture_8cpp}{Texture.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_texture_8h}{Texture.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_texture_8cpp}{Texture.\+cpp}}\end{DoxyCompactItemize}

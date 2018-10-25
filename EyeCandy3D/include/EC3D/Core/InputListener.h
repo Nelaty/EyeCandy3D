@@ -7,8 +7,8 @@
 #include <utility>
 #include <array>
 
-/*
-* InputListener gets informed about InputEvents from an InputObservable
+/**
+* \brief InputListener gets informed about InputEvents from an InputObservable
 */
 namespace ec
 {

@@ -19,7 +19,7 @@ Collaboration diagram for ec\+:\+:Input\+Listener\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=268pt]{classec_1_1_input_listener__coll__graph}
+\includegraphics[width=321pt]{classec_1_1_input_listener__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
@@ -31,7 +31,7 @@ using \mbox{\hyperlink{classec_1_1_input_listener_acc8376886aac460c21a980c411cc1
 \item 
 using \mbox{\hyperlink{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}{Event\+Callback\+Container\+\_\+\+Type}} = std\+::vector$<$ \mbox{\hyperlink{classec_1_1_input_listener_acc8376886aac460c21a980c411cc1d15}{Event\+Callback\+\_\+\+Type}} $>$
 \item 
-using \mbox{\hyperlink{classec_1_1_input_listener_a74ebbc0d4a31fcda8b6cda624e5ecdd1}{Event\+Callback\+Map\+\_\+\+Type}} = std\+::map$<$ \mbox{\hyperlink{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}{Event\+Key\+\_\+\+Type}}, \mbox{\hyperlink{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}{Event\+Callback\+Container\+\_\+\+Type}} $>$
+using \mbox{\hyperlink{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}{Callback\+Container\+Map\+\_\+\+Type}} = std\+::array$<$ \mbox{\hyperlink{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}{Event\+Callback\+Container\+\_\+\+Type}}, static\+\_\+cast$<$ int $>$(\mbox{\hyperlink{namespaceec_a30e2a743ebdeb02ac68a6cfa50f629c7ae2942a04780e223b215eb8b663cf5353}{Input\+Type\+::count}})$>$
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -64,13 +64,19 @@ virtual void \mbox{\hyperlink{classec_1_1_input_listener_a9ceaefc79c6b0b260e8845
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classec_1_1_input_listener_a74ebbc0d4a31fcda8b6cda624e5ecdd1}{Event\+Callback\+Map\+\_\+\+Type}} \mbox{\hyperlink{classec_1_1_input_listener_a25d3ab10346fa26de7737ded4f1b7318}{m\+\_\+event\+Callbacks}}
+\mbox{\hyperlink{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}{Callback\+Container\+Map\+\_\+\+Type}} \mbox{\hyperlink{classec_1_1_input_listener_a4553825c97688ab1827d6f4849c92b61}{m\+\_\+callback\+Containers}}
 \item 
 bool \mbox{\hyperlink{classec_1_1_input_listener_af36b5fc46ed59886d73b1613aaef5a47}{m\+\_\+enabled}}
 \end{DoxyCompactItemize}
 
 
 \subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}\label{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}} 
+\index{ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}!Callback\+Container\+Map\+\_\+\+Type@{Callback\+Container\+Map\+\_\+\+Type}}
+\index{Callback\+Container\+Map\+\_\+\+Type@{Callback\+Container\+Map\+\_\+\+Type}!ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}}
+\subsubsection{\texorpdfstring{Callback\+Container\+Map\+\_\+\+Type}{CallbackContainerMap\_Type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}{ec\+::\+Input\+Listener\+::\+Callback\+Container\+Map\+\_\+\+Type}} =  std\+::array$<$\mbox{\hyperlink{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}{Event\+Callback\+Container\+\_\+\+Type}}, static\+\_\+cast$<$int$>$(\mbox{\hyperlink{namespaceec_a30e2a743ebdeb02ac68a6cfa50f629c7ae2942a04780e223b215eb8b663cf5353}{Input\+Type\+::count}})$>$}
+
 \mbox{\Hypertarget{classec_1_1_input_listener_acc8376886aac460c21a980c411cc1d15}\label{classec_1_1_input_listener_acc8376886aac460c21a980c411cc1d15}} 
 \index{ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}!Event\+Callback\+\_\+\+Type@{Event\+Callback\+\_\+\+Type}}
 \index{Event\+Callback\+\_\+\+Type@{Event\+Callback\+\_\+\+Type}!ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}}
@@ -82,12 +88,6 @@ bool \mbox{\hyperlink{classec_1_1_input_listener_af36b5fc46ed59886d73b1613aaef5a
 \index{Event\+Callback\+Container\+\_\+\+Type@{Event\+Callback\+Container\+\_\+\+Type}!ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}}
 \subsubsection{\texorpdfstring{Event\+Callback\+Container\+\_\+\+Type}{EventCallbackContainer\_Type}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}{ec\+::\+Input\+Listener\+::\+Event\+Callback\+Container\+\_\+\+Type}} =  std\+::vector$<$\mbox{\hyperlink{classec_1_1_input_listener_acc8376886aac460c21a980c411cc1d15}{Event\+Callback\+\_\+\+Type}}$>$}
-
-\mbox{\Hypertarget{classec_1_1_input_listener_a74ebbc0d4a31fcda8b6cda624e5ecdd1}\label{classec_1_1_input_listener_a74ebbc0d4a31fcda8b6cda624e5ecdd1}} 
-\index{ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}!Event\+Callback\+Map\+\_\+\+Type@{Event\+Callback\+Map\+\_\+\+Type}}
-\index{Event\+Callback\+Map\+\_\+\+Type@{Event\+Callback\+Map\+\_\+\+Type}!ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}}
-\subsubsection{\texorpdfstring{Event\+Callback\+Map\+\_\+\+Type}{EventCallbackMap\_Type}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_listener_a74ebbc0d4a31fcda8b6cda624e5ecdd1}{ec\+::\+Input\+Listener\+::\+Event\+Callback\+Map\+\_\+\+Type}} =  std\+::map$<$\mbox{\hyperlink{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}{Event\+Key\+\_\+\+Type}}, \mbox{\hyperlink{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}{Event\+Callback\+Container\+\_\+\+Type}}$>$}
 
 \mbox{\Hypertarget{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}\label{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}} 
 \index{ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}!Event\+Key\+\_\+\+Type@{Event\+Key\+\_\+\+Type}}
@@ -174,21 +174,21 @@ Reimplemented in \mbox{\hyperlink{classec_1_1_camera_controller_af44aad5f80005ea
 
 
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_input_listener_a4553825c97688ab1827d6f4849c92b61}\label{classec_1_1_input_listener_a4553825c97688ab1827d6f4849c92b61}} 
+\index{ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}!m\+\_\+callback\+Containers@{m\+\_\+callback\+Containers}}
+\index{m\+\_\+callback\+Containers@{m\+\_\+callback\+Containers}!ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}}
+\subsubsection{\texorpdfstring{m\+\_\+callback\+Containers}{m\_callbackContainers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}{Callback\+Container\+Map\+\_\+\+Type}} ec\+::\+Input\+Listener\+::m\+\_\+callback\+Containers\hspace{0.3cm}{\ttfamily [protected]}}
+
 \mbox{\Hypertarget{classec_1_1_input_listener_af36b5fc46ed59886d73b1613aaef5a47}\label{classec_1_1_input_listener_af36b5fc46ed59886d73b1613aaef5a47}} 
 \index{ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}!m\+\_\+enabled@{m\+\_\+enabled}}
 \index{m\+\_\+enabled@{m\+\_\+enabled}!ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}}
 \subsubsection{\texorpdfstring{m\+\_\+enabled}{m\_enabled}}
 {\footnotesize\ttfamily bool ec\+::\+Input\+Listener\+::m\+\_\+enabled\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classec_1_1_input_listener_a25d3ab10346fa26de7737ded4f1b7318}\label{classec_1_1_input_listener_a25d3ab10346fa26de7737ded4f1b7318}} 
-\index{ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}!m\+\_\+event\+Callbacks@{m\+\_\+event\+Callbacks}}
-\index{m\+\_\+event\+Callbacks@{m\+\_\+event\+Callbacks}!ec\+::\+Input\+Listener@{ec\+::\+Input\+Listener}}
-\subsubsection{\texorpdfstring{m\+\_\+event\+Callbacks}{m\_eventCallbacks}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_listener_a74ebbc0d4a31fcda8b6cda624e5ecdd1}{Event\+Callback\+Map\+\_\+\+Type}} ec\+::\+Input\+Listener\+::m\+\_\+event\+Callbacks\hspace{0.3cm}{\ttfamily [protected]}}
-
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_input_listener_8h}{Input\+Listener.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_input_listener_8cpp}{Input\+Listener.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_input_listener_8h}{Input\+Listener.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_input_listener_8cpp}{Input\+Listener.\+cpp}}\end{DoxyCompactItemize}

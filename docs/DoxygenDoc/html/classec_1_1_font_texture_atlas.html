@@ -74,6 +74,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Saves all font characters of a specific font. Font characters will be saved on a single texture, so it can be used for rendering text.  
+ <a href="classec_1_1_font_texture_atlas.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_font_texture_atlas_8h_source.html">FontTextureAtlas.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for ec::FontTextureAtlas:</div>
@@ -84,14 +87,18 @@ Collaboration diagram for ec::FontTextureAtlas:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abf42f99b2562130eb9b347c895cf14f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_font_texture_atlas.html#abf42f99b2562130eb9b347c895cf14f3">FontTextureAtlas</a> (FT_Face face, int h, GLuint tUniform)</td></tr>
+<tr class="memdesc:abf42f99b2562130eb9b347c895cf14f3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classec_1_1_font_texture_atlas.html" title="Saves all font characters of a specific font. Font characters will be saved on a single texture...">FontTextureAtlas</a> constructor.  <a href="#abf42f99b2562130eb9b347c895cf14f3">More...</a><br /></td></tr>
 <tr class="separator:abf42f99b2562130eb9b347c895cf14f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e520505ca5bd5b9cabe27448d285449"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_font_texture_atlas.html#a9e520505ca5bd5b9cabe27448d285449">~FontTextureAtlas</a> ()</td></tr>
 <tr class="separator:a9e520505ca5bd5b9cabe27448d285449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9259106785594dcf52a86120faf2abdf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_font_texture_atlas.html#a9259106785594dcf52a86120faf2abdf">getWidth</a> () const</td></tr>
+<tr class="memdesc:a9259106785594dcf52a86120faf2abdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the font texture width.  <a href="#a9259106785594dcf52a86120faf2abdf">More...</a><br /></td></tr>
 <tr class="separator:a9259106785594dcf52a86120faf2abdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6e4a6f124b7fed58783c48c78300244"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_font_texture_atlas.html#aa6e4a6f124b7fed58783c48c78300244">getHeight</a> () const</td></tr>
+<tr class="memdesc:aa6e4a6f124b7fed58783c48c78300244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the font texture height.  <a href="#aa6e4a6f124b7fed58783c48c78300244">More...</a><br /></td></tr>
 <tr class="separator:aa6e4a6f124b7fed58783c48c78300244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4587f2074d6295364a6ab7bac4a5846d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structec_1_1_font_character.html">FontCharacter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_font_texture_atlas.html#a4587f2074d6295364a6ab7bac4a5846d">getChar</a> (int index) const</td></tr>
+<tr class="memdesc:a4587f2074d6295364a6ab7bac4a5846d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a font character.  <a href="#a4587f2074d6295364a6ab7bac4a5846d">More...</a><br /></td></tr>
 <tr class="separator:a4587f2074d6295364a6ab7bac4a5846d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -136,6 +143,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classec_1_1_font_texture_atlas.html" title="Saves all font characters of a specific font. Font characters will be saved on a single texture...">FontTextureAtlas</a> constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">face</td><td>The Font face. </td></tr>
+    <tr><td class="paramname">h</td><td>Height of the font. </td></tr>
+    <tr><td class="paramname">tUniform</td><td><a class="el" href="classec_1_1_texture.html">Texture</a> uniform location. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>: height h isn't actually used. </dd></dl>
+
 </div>
 </div>
 <a id="a9e520505ca5bd5b9cabe27448d285449"></a>
@@ -172,6 +190,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get a font character. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The position of the character. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aa6e4a6f124b7fed58783c48c78300244"></a>
@@ -189,6 +215,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the font texture height. </p>
+
 </div>
 </div>
 <a id="a9259106785594dcf52a86120faf2abdf"></a>
@@ -205,6 +233,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the font texture width. </p>
 
 </div>
 </div>
@@ -238,8 +268,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_font_texture_atlas_8h_source.html">FontTextureAtlas.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_font_texture_atlas_8cpp.html">FontTextureAtlas.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_font_texture_atlas_8h_source.html">FontTextureAtlas.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_font_texture_atlas_8cpp.html">FontTextureAtlas.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

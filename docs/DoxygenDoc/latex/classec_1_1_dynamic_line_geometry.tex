@@ -2,6 +2,11 @@
 \label{classec_1_1_dynamic_line_geometry}\index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}}
 
 
+Line geometry that adapts to a given start and end point.  
+
+
+
+
 {\ttfamily \#include $<$Dynamic\+Line\+Geometry.\+h$>$}
 
 
@@ -26,36 +31,39 @@ Collaboration diagram for ec\+:\+:Dynamic\+Line\+Geometry\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_ade626d917fab310c550952b7086639bf}{Dynamic\+Line\+Geometry}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$start, \mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$end, float line\+Width=0.\+05f)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_dynamic_line_geometry}{Dynamic\+Line\+Geometry}} constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_aee42706b172e0e76cd290a4ae6897740}{$\sim$\+Dynamic\+Line\+Geometry}} ()
 \item 
 void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_a7354615fc961c1d6d6e9ec09bdb5bdf9}{set\+Start}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$start)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the start point of the line. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_a84dfd0f92891d7030790976be8606d98}{get\+Start}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the start point of the line. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_a95e48c0fcda2b81310f99b0dc113701b}{set\+End}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$end)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the end point of the line. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_a877ec687c19743cc67520b5a419bad74}{get\+End}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the end point of the line. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_ad2a5b06e7ea10c771ed17ff0ffce4b3a}{set\+Line\+Width}} (float line\+Width)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the current line width. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_a0b32e465ad6a232b96dc3a0cd404ae62}{get\+Line\+Width}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the current line width. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_ab56984cee973ef2a73ff67339014f0cf}{on\+Render}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em The actual drawing of the object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_a015c2ecc62d63de4ddce1f1a23897bc1}{init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize the geometry data. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_a4dced137976fc7b936bc80a8cb350b38}{init\+Vertices}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize vertex data. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_af556bfe516c6c93bc515f607bd3840b6}{init\+Tex\+Coords}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize texture coordinates. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_af622418944568bc0698d888024d4c2b0}{init\+Indices}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initialize index data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+Line geometry that adapts to a given start and end point. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_ade626d917fab310c550952b7086639bf}\label{classec_1_1_dynamic_line_geometry_ade626d917fab310c550952b7086639bf}} 
@@ -64,6 +72,19 @@ void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_af622418944568bc0698d888
 \subsubsection{\texorpdfstring{Dynamic\+Line\+Geometry()}{DynamicLineGeometry()}}
 {\footnotesize\ttfamily ec\+::\+Dynamic\+Line\+Geometry\+::\+Dynamic\+Line\+Geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{start,  }\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{end,  }\item[{float}]{line\+Width = {\ttfamily 0.05f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+
+
+\mbox{\hyperlink{classec_1_1_dynamic_line_geometry}{Dynamic\+Line\+Geometry}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The start point of the line. \\
+\hline
+{\em end} & The end point of the line. \\
+\hline
+{\em line\+Width} & The width of the line. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_aee42706b172e0e76cd290a4ae6897740}\label{classec_1_1_dynamic_line_geometry_aee42706b172e0e76cd290a4ae6897740}} 
 \index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}!````~Dynamic\+Line\+Geometry@{$\sim$\+Dynamic\+Line\+Geometry}}
 \index{````~Dynamic\+Line\+Geometry@{$\sim$\+Dynamic\+Line\+Geometry}!ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}}
@@ -79,11 +100,19 @@ void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_af622418944568bc0698d888
 \subsubsection{\texorpdfstring{get\+End()}{getEnd()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_node}{ec\+::\+Node}} $\ast$ ec\+::\+Dynamic\+Line\+Geometry\+::get\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the end point of the line. 
+
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_a0b32e465ad6a232b96dc3a0cd404ae62}\label{classec_1_1_dynamic_line_geometry_a0b32e465ad6a232b96dc3a0cd404ae62}} 
 \index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}!get\+Line\+Width@{get\+Line\+Width}}
 \index{get\+Line\+Width@{get\+Line\+Width}!ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}}
 \subsubsection{\texorpdfstring{get\+Line\+Width()}{getLineWidth()}}
 {\footnotesize\ttfamily float ec\+::\+Dynamic\+Line\+Geometry\+::get\+Line\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current line width. 
 
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_a84dfd0f92891d7030790976be8606d98}\label{classec_1_1_dynamic_line_geometry_a84dfd0f92891d7030790976be8606d98}} 
 \index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}!get\+Start@{get\+Start}}
@@ -91,11 +120,19 @@ void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_af622418944568bc0698d888
 \subsubsection{\texorpdfstring{get\+Start()}{getStart()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_node}{ec\+::\+Node}} $\ast$ ec\+::\+Dynamic\+Line\+Geometry\+::get\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the start point of the line. 
+
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_a015c2ecc62d63de4ddce1f1a23897bc1}\label{classec_1_1_dynamic_line_geometry_a015c2ecc62d63de4ddce1f1a23897bc1}} 
 \index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}!init@{init}}
 \index{init@{init}!ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}}
 \subsubsection{\texorpdfstring{init()}{init()}}
 {\footnotesize\ttfamily void ec\+::\+Dynamic\+Line\+Geometry\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialize the geometry data. 
 
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_af622418944568bc0698d888024d4c2b0}\label{classec_1_1_dynamic_line_geometry_af622418944568bc0698d888024d4c2b0}} 
 \index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}!init\+Indices@{init\+Indices}}
@@ -103,11 +140,19 @@ void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_af622418944568bc0698d888
 \subsubsection{\texorpdfstring{init\+Indices()}{initIndices()}}
 {\footnotesize\ttfamily void ec\+::\+Dynamic\+Line\+Geometry\+::init\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+Initialize index data. 
+
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_af556bfe516c6c93bc515f607bd3840b6}\label{classec_1_1_dynamic_line_geometry_af556bfe516c6c93bc515f607bd3840b6}} 
 \index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}!init\+Tex\+Coords@{init\+Tex\+Coords}}
 \index{init\+Tex\+Coords@{init\+Tex\+Coords}!ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}}
 \subsubsection{\texorpdfstring{init\+Tex\+Coords()}{initTexCoords()}}
 {\footnotesize\ttfamily void ec\+::\+Dynamic\+Line\+Geometry\+::init\+Tex\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialize texture coordinates. 
 
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_a4dced137976fc7b936bc80a8cb350b38}\label{classec_1_1_dynamic_line_geometry_a4dced137976fc7b936bc80a8cb350b38}} 
 \index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}!init\+Vertices@{init\+Vertices}}
@@ -115,15 +160,26 @@ void \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_af622418944568bc0698d888
 \subsubsection{\texorpdfstring{init\+Vertices()}{initVertices()}}
 {\footnotesize\ttfamily bool ec\+::\+Dynamic\+Line\+Geometry\+::init\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+Initialize vertex data. 
+
+\begin{DoxyReturn}{Returns}
+False if start and end positions are identical. 
+\end{DoxyReturn}
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]fix initialization \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]fix initialization \end{DoxyRefDesc}
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_ab56984cee973ef2a73ff67339014f0cf}\label{classec_1_1_dynamic_line_geometry_ab56984cee973ef2a73ff67339014f0cf}} 
 \index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}!on\+Render@{on\+Render}}
 \index{on\+Render@{on\+Render}!ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}}
 \subsubsection{\texorpdfstring{on\+Render()}{onRender()}}
 {\footnotesize\ttfamily void ec\+::\+Dynamic\+Line\+Geometry\+::on\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
-The actual rendering of the object. 
+
+
+The actual drawing of the object. 
+
+
 
 Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a2ee418c9fa4eb266347bae2f0ef8095b}{ec\+::\+I\+Geometry\+Access}}.
 
@@ -133,11 +189,19 @@ Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a2ee418c9fa4eb266347ba
 \subsubsection{\texorpdfstring{set\+End()}{setEnd()}}
 {\footnotesize\ttfamily void ec\+::\+Dynamic\+Line\+Geometry\+::set\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$}]{end }\end{DoxyParamCaption})}
 
+
+
+Set the end point of the line. 
+
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_ad2a5b06e7ea10c771ed17ff0ffce4b3a}\label{classec_1_1_dynamic_line_geometry_ad2a5b06e7ea10c771ed17ff0ffce4b3a}} 
 \index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}!set\+Line\+Width@{set\+Line\+Width}}
 \index{set\+Line\+Width@{set\+Line\+Width}!ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}}
 \subsubsection{\texorpdfstring{set\+Line\+Width()}{setLineWidth()}}
 {\footnotesize\ttfamily void ec\+::\+Dynamic\+Line\+Geometry\+::set\+Line\+Width (\begin{DoxyParamCaption}\item[{float}]{line\+Width }\end{DoxyParamCaption})}
+
+
+
+Set the current line width. 
 
 \mbox{\Hypertarget{classec_1_1_dynamic_line_geometry_a7354615fc961c1d6d6e9ec09bdb5bdf9}\label{classec_1_1_dynamic_line_geometry_a7354615fc961c1d6d6e9ec09bdb5bdf9}} 
 \index{ec\+::\+Dynamic\+Line\+Geometry@{ec\+::\+Dynamic\+Line\+Geometry}!set\+Start@{set\+Start}}
@@ -147,7 +211,11 @@ Implements \mbox{\hyperlink{classec_1_1_i_geometry_access_a2ee418c9fa4eb266347ba
 
 
 
+Set the start point of the line. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_dynamic_line_geometry_8h}{Dynamic\+Line\+Geometry.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_dynamic_line_geometry_8cpp}{Dynamic\+Line\+Geometry.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_dynamic_line_geometry_8h}{Dynamic\+Line\+Geometry.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_dynamic_line_geometry_8cpp}{Dynamic\+Line\+Geometry.\+cpp}}\end{DoxyCompactItemize}

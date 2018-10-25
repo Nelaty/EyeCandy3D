@@ -10,7 +10,7 @@ Inheritance diagram for ec\+:\+:Shader\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=175pt]{classec_1_1_shader__inherit__graph}
+\includegraphics[height=550pt]{classec_1_1_shader__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -19,7 +19,7 @@ Collaboration diagram for ec\+:\+:Shader\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=155pt]{classec_1_1_shader__coll__graph}
+\includegraphics[height=550pt]{classec_1_1_shader__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -33,32 +33,92 @@ void \mbox{\hyperlink{classec_1_1_shader_aa845ca62b0ccfbe7a07440fdf7641147}{bind
 \item 
 void \mbox{\hyperlink{classec_1_1_shader_a4d3730787deb6b28d59fc8b6486e5cb3}{unbind}} () const
 \item 
-void \mbox{\hyperlink{classec_1_1_shader_a0705647decc2663477c0abad943490bc}{set\+Bool}} (const char $\ast$uniform\+Name, bool val) const
-\item 
-void \mbox{\hyperlink{classec_1_1_shader_af9d30a0d4f1b2e469fe41a232ebf0614}{set\+Int}} (const char $\ast$uniform\+Name, int val) const
-\item 
-void \mbox{\hyperlink{classec_1_1_shader_ad260a41b380803ac03632cd9d0157e6a}{set\+Float}} (const char $\ast$uniform\+Name, float val) const
-\item 
-void \mbox{\hyperlink{classec_1_1_shader_a096e33dd5ffe44b1f9ea80f4bf7c59ea}{set\+Double}} (const char $\ast$uniform\+Name, double val) const
-\item 
-void \mbox{\hyperlink{classec_1_1_shader_abf4ccc409632dc1fd74d8334b835d8c5}{set\+Vec2}} (const char $\ast$uniform\+Name, const glm\+::vec2 \&v) const
-\item 
-void \mbox{\hyperlink{classec_1_1_shader_acf40e2badbdb021a269c4fec9b4bfb20}{set\+Vec3}} (const char $\ast$uniform\+Name, const glm\+::vec3 \&v) const
-\item 
-void \mbox{\hyperlink{classec_1_1_shader_aa311a1a3aba3a637886b8f019717adc9}{set\+Vec4}} (const char $\ast$uniform\+Name, const glm\+::vec4 \&v) const
-\item 
-void \mbox{\hyperlink{classec_1_1_shader_a47782ae05dace705129f12b9feec03ce}{set\+Mat2}} (const char $\ast$uniform\+Name, const glm\+::mat2 \&m) const
-\item 
-void \mbox{\hyperlink{classec_1_1_shader_abb9b4a0e149edcba5ad255f2393b52bf}{set\+Mat3}} (const char $\ast$uniform\+Name, const glm\+::mat3 \&m) const
-\item 
-void \mbox{\hyperlink{classec_1_1_shader_a2aae545a7c6999a1e27d376e02be5fe4}{set\+Mat4}} (const char $\ast$uniform\+Name, const glm\+::mat4 \&m) const
-\item 
 G\+Luint \mbox{\hyperlink{classec_1_1_shader_a90fc22094d5f262c31e03066b71a88e1}{get\+Uniform\+Location}} (const char $\ast$uniform\+Name) const
 \item 
 G\+Luint \mbox{\hyperlink{classec_1_1_shader_a54164ed1a5d74d390f70bcfa59aa8799}{get\+Program}} () const
 \item 
 virtual void \mbox{\hyperlink{classec_1_1_shader_a2d674dadf35f9fba8d3ec75d0a916935}{set\+Uniforms}} ()
 \end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a0705647decc2663477c0abad943490bc}{set\+Bool}} (const char $\ast$uniform\+Name, bool val) const
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_acb2a56cad426e5c7e51b6912dcfbeefd}{set\+Bool}} (int uniform\+Location, bool val) const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_af9d30a0d4f1b2e469fe41a232ebf0614}{set\+Int}} (const char $\ast$uniform\+Name, int val) const
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a4fa159ab084304c3e5549602d3e37bff}{set\+Int}} (int uniform\+Location, int val) const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_ad260a41b380803ac03632cd9d0157e6a}{set\+Float}} (const char $\ast$uniform\+Name, float val) const
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a71293d86a7e138561506f7315acdb5e7}{set\+Float}} (int uniform\+Location, float val) const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a096e33dd5ffe44b1f9ea80f4bf7c59ea}{set\+Double}} (const char $\ast$uniform\+Name, double val) const
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a8261c215f7716f0b607aee6876b08f6f}{set\+Double}} (int uniform\+Location, double val) const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_abf4ccc409632dc1fd74d8334b835d8c5}{set\+Vec2}} (const char $\ast$uniform\+Name, const glm\+::vec2 \&v) const
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_ae369480a833c4bdb910edf5beb8e4273}{set\+Vec2}} (int uniform\+Location, const glm\+::vec2 \&v) const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_acf40e2badbdb021a269c4fec9b4bfb20}{set\+Vec3}} (const char $\ast$uniform\+Name, const glm\+::vec3 \&v) const
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_ad56db104412fd877ffabcb04601a8e5b}{set\+Vec3}} (int uniform\+Location, const glm\+::vec3 \&v) const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_aa311a1a3aba3a637886b8f019717adc9}{set\+Vec4}} (const char $\ast$uniform\+Name, const glm\+::vec4 \&v) const
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a2876cd885c089ff9f8e3dbb9639931f0}{set\+Vec4}} (int uniform\+Location, const glm\+::vec4 \&v) const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a47782ae05dace705129f12b9feec03ce}{set\+Mat2}} (const char $\ast$uniform\+Name, const glm\+::mat2 \&m) const
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a6b2ee27e91d3f4f9465008df1aad4366}{set\+Mat2}} (int uniform\+Location, const glm\+::mat2 \&m) const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_abb9b4a0e149edcba5ad255f2393b52bf}{set\+Mat3}} (const char $\ast$uniform\+Name, const glm\+::mat3 \&m) const
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a134b5b5da07fba23324b1035d3b246cb}{set\+Mat3}} (int uniform\+Location, const glm\+::mat3 \&m) const
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a2aae545a7c6999a1e27d376e02be5fe4}{set\+Mat4}} (const char $\ast$uniform\+Name, const glm\+::mat4 \&m) const
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_a70b14375c038b9814fe16b8e3ea92a13}{set\+Mat4}} (int uniform\+Location, const glm\+::mat4 \&m) const
+\end{DoxyCompactItemize}
+
 
 
 \subsection{Detailed Description}
@@ -120,46 +180,88 @@ Get the program identifier \mbox{\Hypertarget{classec_1_1_shader_a90fc22094d5f26
 Get the uniform location by name \mbox{\Hypertarget{classec_1_1_shader_a0705647decc2663477c0abad943490bc}\label{classec_1_1_shader_a0705647decc2663477c0abad943490bc}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Bool@{set\+Bool}}
 \index{set\+Bool@{set\+Bool}!ec\+::\+Shader@{ec\+::\+Shader}}
-\subsubsection{\texorpdfstring{set\+Bool()}{setBool()}}
+\subsubsection{\texorpdfstring{set\+Bool()}{setBool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Bool (\begin{DoxyParamCaption}\item[{const char $\ast$}]{uniform\+Name,  }\item[{bool}]{val }\end{DoxyParamCaption}) const}
+
+Set single boolean uniform \mbox{\Hypertarget{classec_1_1_shader_acb2a56cad426e5c7e51b6912dcfbeefd}\label{classec_1_1_shader_acb2a56cad426e5c7e51b6912dcfbeefd}} 
+\index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Bool@{set\+Bool}}
+\index{set\+Bool@{set\+Bool}!ec\+::\+Shader@{ec\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Bool()}{setBool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Bool (\begin{DoxyParamCaption}\item[{int}]{uniform\+Location,  }\item[{bool}]{val }\end{DoxyParamCaption}) const}
 
 Set single boolean uniform \mbox{\Hypertarget{classec_1_1_shader_a096e33dd5ffe44b1f9ea80f4bf7c59ea}\label{classec_1_1_shader_a096e33dd5ffe44b1f9ea80f4bf7c59ea}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Double@{set\+Double}}
 \index{set\+Double@{set\+Double}!ec\+::\+Shader@{ec\+::\+Shader}}
-\subsubsection{\texorpdfstring{set\+Double()}{setDouble()}}
+\subsubsection{\texorpdfstring{set\+Double()}{setDouble()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Double (\begin{DoxyParamCaption}\item[{const char $\ast$}]{uniform\+Name,  }\item[{double}]{val }\end{DoxyParamCaption}) const}
+
+Set single double uniform \mbox{\Hypertarget{classec_1_1_shader_a8261c215f7716f0b607aee6876b08f6f}\label{classec_1_1_shader_a8261c215f7716f0b607aee6876b08f6f}} 
+\index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Double@{set\+Double}}
+\index{set\+Double@{set\+Double}!ec\+::\+Shader@{ec\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Double()}{setDouble()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Double (\begin{DoxyParamCaption}\item[{int}]{uniform\+Location,  }\item[{double}]{val }\end{DoxyParamCaption}) const}
 
 Set single double uniform \mbox{\Hypertarget{classec_1_1_shader_ad260a41b380803ac03632cd9d0157e6a}\label{classec_1_1_shader_ad260a41b380803ac03632cd9d0157e6a}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Float@{set\+Float}}
 \index{set\+Float@{set\+Float}!ec\+::\+Shader@{ec\+::\+Shader}}
-\subsubsection{\texorpdfstring{set\+Float()}{setFloat()}}
+\subsubsection{\texorpdfstring{set\+Float()}{setFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Float (\begin{DoxyParamCaption}\item[{const char $\ast$}]{uniform\+Name,  }\item[{float}]{val }\end{DoxyParamCaption}) const}
+
+Set single float uniform \mbox{\Hypertarget{classec_1_1_shader_a71293d86a7e138561506f7315acdb5e7}\label{classec_1_1_shader_a71293d86a7e138561506f7315acdb5e7}} 
+\index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Float@{set\+Float}}
+\index{set\+Float@{set\+Float}!ec\+::\+Shader@{ec\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Float()}{setFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Float (\begin{DoxyParamCaption}\item[{int}]{uniform\+Location,  }\item[{float}]{val }\end{DoxyParamCaption}) const}
 
 Set single float uniform \mbox{\Hypertarget{classec_1_1_shader_af9d30a0d4f1b2e469fe41a232ebf0614}\label{classec_1_1_shader_af9d30a0d4f1b2e469fe41a232ebf0614}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Int@{set\+Int}}
 \index{set\+Int@{set\+Int}!ec\+::\+Shader@{ec\+::\+Shader}}
-\subsubsection{\texorpdfstring{set\+Int()}{setInt()}}
+\subsubsection{\texorpdfstring{set\+Int()}{setInt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Int (\begin{DoxyParamCaption}\item[{const char $\ast$}]{uniform\+Name,  }\item[{int}]{val }\end{DoxyParamCaption}) const}
+
+Set single int uniform \mbox{\Hypertarget{classec_1_1_shader_a4fa159ab084304c3e5549602d3e37bff}\label{classec_1_1_shader_a4fa159ab084304c3e5549602d3e37bff}} 
+\index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Int@{set\+Int}}
+\index{set\+Int@{set\+Int}!ec\+::\+Shader@{ec\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Int()}{setInt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Int (\begin{DoxyParamCaption}\item[{int}]{uniform\+Location,  }\item[{int}]{val }\end{DoxyParamCaption}) const}
 
 Set single int uniform \mbox{\Hypertarget{classec_1_1_shader_a47782ae05dace705129f12b9feec03ce}\label{classec_1_1_shader_a47782ae05dace705129f12b9feec03ce}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Mat2@{set\+Mat2}}
 \index{set\+Mat2@{set\+Mat2}!ec\+::\+Shader@{ec\+::\+Shader}}
-\subsubsection{\texorpdfstring{set\+Mat2()}{setMat2()}}
+\subsubsection{\texorpdfstring{set\+Mat2()}{setMat2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Mat2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{uniform\+Name,  }\item[{const glm\+::mat2 \&}]{m }\end{DoxyParamCaption}) const}
 
-Uniform 2\+D-\/matrix uniform \mbox{\Hypertarget{classec_1_1_shader_abb9b4a0e149edcba5ad255f2393b52bf}\label{classec_1_1_shader_abb9b4a0e149edcba5ad255f2393b52bf}} 
+Single 2\+D-\/matrix uniform \mbox{\Hypertarget{classec_1_1_shader_a6b2ee27e91d3f4f9465008df1aad4366}\label{classec_1_1_shader_a6b2ee27e91d3f4f9465008df1aad4366}} 
+\index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Mat2@{set\+Mat2}}
+\index{set\+Mat2@{set\+Mat2}!ec\+::\+Shader@{ec\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Mat2()}{setMat2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Mat2 (\begin{DoxyParamCaption}\item[{int}]{uniform\+Location,  }\item[{const glm\+::mat2 \&}]{m }\end{DoxyParamCaption}) const}
+
+Single 2\+D-\/matrix uniform \mbox{\Hypertarget{classec_1_1_shader_abb9b4a0e149edcba5ad255f2393b52bf}\label{classec_1_1_shader_abb9b4a0e149edcba5ad255f2393b52bf}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Mat3@{set\+Mat3}}
 \index{set\+Mat3@{set\+Mat3}!ec\+::\+Shader@{ec\+::\+Shader}}
-\subsubsection{\texorpdfstring{set\+Mat3()}{setMat3()}}
+\subsubsection{\texorpdfstring{set\+Mat3()}{setMat3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Mat3 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{uniform\+Name,  }\item[{const glm\+::mat3 \&}]{m }\end{DoxyParamCaption}) const}
 
-Uniform 3\+D-\/matrix uniform \mbox{\Hypertarget{classec_1_1_shader_a2aae545a7c6999a1e27d376e02be5fe4}\label{classec_1_1_shader_a2aae545a7c6999a1e27d376e02be5fe4}} 
+Single 3\+D-\/matrix uniform \mbox{\Hypertarget{classec_1_1_shader_a134b5b5da07fba23324b1035d3b246cb}\label{classec_1_1_shader_a134b5b5da07fba23324b1035d3b246cb}} 
+\index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Mat3@{set\+Mat3}}
+\index{set\+Mat3@{set\+Mat3}!ec\+::\+Shader@{ec\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Mat3()}{setMat3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Mat3 (\begin{DoxyParamCaption}\item[{int}]{uniform\+Location,  }\item[{const glm\+::mat3 \&}]{m }\end{DoxyParamCaption}) const}
+
+Single 3\+D-\/matrix uniform \mbox{\Hypertarget{classec_1_1_shader_a2aae545a7c6999a1e27d376e02be5fe4}\label{classec_1_1_shader_a2aae545a7c6999a1e27d376e02be5fe4}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Mat4@{set\+Mat4}}
 \index{set\+Mat4@{set\+Mat4}!ec\+::\+Shader@{ec\+::\+Shader}}
-\subsubsection{\texorpdfstring{set\+Mat4()}{setMat4()}}
+\subsubsection{\texorpdfstring{set\+Mat4()}{setMat4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Mat4 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{uniform\+Name,  }\item[{const glm\+::mat4 \&}]{m }\end{DoxyParamCaption}) const}
 
-Uniform 4\+D-\/matrix uniform \mbox{\Hypertarget{classec_1_1_shader_a2d674dadf35f9fba8d3ec75d0a916935}\label{classec_1_1_shader_a2d674dadf35f9fba8d3ec75d0a916935}} 
+Single 4\+D-\/matrix uniform \mbox{\Hypertarget{classec_1_1_shader_a70b14375c038b9814fe16b8e3ea92a13}\label{classec_1_1_shader_a70b14375c038b9814fe16b8e3ea92a13}} 
+\index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Mat4@{set\+Mat4}}
+\index{set\+Mat4@{set\+Mat4}!ec\+::\+Shader@{ec\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Mat4()}{setMat4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Mat4 (\begin{DoxyParamCaption}\item[{int}]{uniform\+Location,  }\item[{const glm\+::mat4 \&}]{m }\end{DoxyParamCaption}) const}
+
+Single 4\+D-\/matrix uniform \mbox{\Hypertarget{classec_1_1_shader_a2d674dadf35f9fba8d3ec75d0a916935}\label{classec_1_1_shader_a2d674dadf35f9fba8d3ec75d0a916935}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Uniforms@{set\+Uniforms}}
 \index{set\+Uniforms@{set\+Uniforms}!ec\+::\+Shader@{ec\+::\+Shader}}
 \subsubsection{\texorpdfstring{set\+Uniforms()}{setUniforms()}}
@@ -168,22 +270,40 @@ Uniform 4\+D-\/matrix uniform \mbox{\Hypertarget{classec_1_1_shader_a2d674dadf35
 Can be overloaded to wrap uniform calls. \mbox{\Hypertarget{classec_1_1_shader_abf4ccc409632dc1fd74d8334b835d8c5}\label{classec_1_1_shader_abf4ccc409632dc1fd74d8334b835d8c5}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Vec2@{set\+Vec2}}
 \index{set\+Vec2@{set\+Vec2}!ec\+::\+Shader@{ec\+::\+Shader}}
-\subsubsection{\texorpdfstring{set\+Vec2()}{setVec2()}}
+\subsubsection{\texorpdfstring{set\+Vec2()}{setVec2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Vec2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{uniform\+Name,  }\item[{const glm\+::vec2 \&}]{v }\end{DoxyParamCaption}) const}
 
-Uniform 2\+D-\/vector uniform \mbox{\Hypertarget{classec_1_1_shader_acf40e2badbdb021a269c4fec9b4bfb20}\label{classec_1_1_shader_acf40e2badbdb021a269c4fec9b4bfb20}} 
+Single 2\+D-\/vector uniform \mbox{\Hypertarget{classec_1_1_shader_ae369480a833c4bdb910edf5beb8e4273}\label{classec_1_1_shader_ae369480a833c4bdb910edf5beb8e4273}} 
+\index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Vec2@{set\+Vec2}}
+\index{set\+Vec2@{set\+Vec2}!ec\+::\+Shader@{ec\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Vec2()}{setVec2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Vec2 (\begin{DoxyParamCaption}\item[{int}]{uniform\+Location,  }\item[{const glm\+::vec2 \&}]{v }\end{DoxyParamCaption}) const}
+
+Single 2\+D-\/vector uniform \mbox{\Hypertarget{classec_1_1_shader_acf40e2badbdb021a269c4fec9b4bfb20}\label{classec_1_1_shader_acf40e2badbdb021a269c4fec9b4bfb20}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Vec3@{set\+Vec3}}
 \index{set\+Vec3@{set\+Vec3}!ec\+::\+Shader@{ec\+::\+Shader}}
-\subsubsection{\texorpdfstring{set\+Vec3()}{setVec3()}}
+\subsubsection{\texorpdfstring{set\+Vec3()}{setVec3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Vec3 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{uniform\+Name,  }\item[{const glm\+::vec3 \&}]{v }\end{DoxyParamCaption}) const}
 
-Uniform 3\+D-\/vector uniform \mbox{\Hypertarget{classec_1_1_shader_aa311a1a3aba3a637886b8f019717adc9}\label{classec_1_1_shader_aa311a1a3aba3a637886b8f019717adc9}} 
+Single 3\+D-\/vector uniform \mbox{\Hypertarget{classec_1_1_shader_ad56db104412fd877ffabcb04601a8e5b}\label{classec_1_1_shader_ad56db104412fd877ffabcb04601a8e5b}} 
+\index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Vec3@{set\+Vec3}}
+\index{set\+Vec3@{set\+Vec3}!ec\+::\+Shader@{ec\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Vec3()}{setVec3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Vec3 (\begin{DoxyParamCaption}\item[{int}]{uniform\+Location,  }\item[{const glm\+::vec3 \&}]{v }\end{DoxyParamCaption}) const}
+
+Single 3\+D-\/vector uniform \mbox{\Hypertarget{classec_1_1_shader_aa311a1a3aba3a637886b8f019717adc9}\label{classec_1_1_shader_aa311a1a3aba3a637886b8f019717adc9}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Vec4@{set\+Vec4}}
 \index{set\+Vec4@{set\+Vec4}!ec\+::\+Shader@{ec\+::\+Shader}}
-\subsubsection{\texorpdfstring{set\+Vec4()}{setVec4()}}
+\subsubsection{\texorpdfstring{set\+Vec4()}{setVec4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Vec4 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{uniform\+Name,  }\item[{const glm\+::vec4 \&}]{v }\end{DoxyParamCaption}) const}
 
-Uniform 4\+D-\/vector uniform \mbox{\Hypertarget{classec_1_1_shader_a4d3730787deb6b28d59fc8b6486e5cb3}\label{classec_1_1_shader_a4d3730787deb6b28d59fc8b6486e5cb3}} 
+Single 4\+D-\/vector uniform \mbox{\Hypertarget{classec_1_1_shader_a2876cd885c089ff9f8e3dbb9639931f0}\label{classec_1_1_shader_a2876cd885c089ff9f8e3dbb9639931f0}} 
+\index{ec\+::\+Shader@{ec\+::\+Shader}!set\+Vec4@{set\+Vec4}}
+\index{set\+Vec4@{set\+Vec4}!ec\+::\+Shader@{ec\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Vec4()}{setVec4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+::set\+Vec4 (\begin{DoxyParamCaption}\item[{int}]{uniform\+Location,  }\item[{const glm\+::vec4 \&}]{v }\end{DoxyParamCaption}) const}
+
+Single 4\+D-\/vector uniform \mbox{\Hypertarget{classec_1_1_shader_a4d3730787deb6b28d59fc8b6486e5cb3}\label{classec_1_1_shader_a4d3730787deb6b28d59fc8b6486e5cb3}} 
 \index{ec\+::\+Shader@{ec\+::\+Shader}!unbind@{unbind}}
 \index{unbind@{unbind}!ec\+::\+Shader@{ec\+::\+Shader}}
 \subsubsection{\texorpdfstring{unbind()}{unbind()}}
@@ -193,5 +313,5 @@ Deactivate this shader program.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\+Shader/\mbox{\hyperlink{_shader_8h}{Shader.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\+Shader/\mbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\+Shader/\mbox{\hyperlink{_shader_8h}{Shader.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\+Shader/\mbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

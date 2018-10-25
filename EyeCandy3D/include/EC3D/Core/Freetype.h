@@ -11,24 +11,33 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
-/*
-* Encapsulates a FreeType Lib instance and manages its initialization.
-* It is used for rendering text and switching fonts.
-*/
 namespace ec
 {
 	class Shader;
 	class FontTextureAtlas;
 
+	/*
+	 * \brief Encapsulates a FreeType Lib instance and manages its 
+	 * initialization. It is used for rendering text and switching fonts.
+	 */
 	class EC3D_DECLSPEC Freetype
 	{
 	public:
+		/**
+		 * \brief Freetype constructor.
+		 * \param shader The text shader used for rendering text.
+		 */
 		explicit Freetype(Shader* shader);
 		~Freetype();
 
-		/* 
-		* Render text with a specific FontTextureAtlas at a certain 
-		* position with a specified relative scale
+		/**
+		* \brief Render text with a specific FontTextureAtlas at a given 
+		* position with a given relative scale.
+		* \param text The text to draw.
+		* \param atlas The font used for drawing
+		* \param x X coordinate in screen coordinates.
+		* \param y Y coordinate in screen coordinate.
+		* \param sx 
 		*/
 		void renderText(const char* text, FontTextureAtlas* atlas, 
 						float x, float y,

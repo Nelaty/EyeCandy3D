@@ -26,17 +26,17 @@ using \mbox{\hyperlink{classec_1_1_application_af1e09a0f1b603eab8d3245d8b8075ad5
 \mbox{\hyperlink{classec_1_1_application_abe00fd469062e9710bfda9f9d13765f3}{$\sim$\+Application}} ()
 \item 
 virtual void \mbox{\hyperlink{classec_1_1_application_ad541044a8fc0ff8d6c3fc57220109a50}{start\+Main\+Loop}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Should be called to start the application. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classec_1_1_application_a2a4c494f47bc187ddc2bb5411aa063a3}{kill}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Stop the application. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classec_1_1_application_a036ae53bcbf708c7a01deb199feeccdf}{tick}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update all windows. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classec_1_1_application_a4fe5dcd06017ba4322eca3adec47e03e}{render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Render all windows. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classec_1_1_application_a1460d7083c312271285747a7cc03f7e8}{init\+Impl}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Init function implementation. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classec_1_1_application_ad32692a6e65a00346ab2992eba3a86e7}{main\+Loop\+Impl}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Main loop function implementation. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Window\+Class $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+constructible$<$ Window\+Class, unsigned int, unsigned int, const std\+::string \& $>$\+::value, Window\+Class $>$\+::type $\ast$ \mbox{\hyperlink{classec_1_1_application_af103b97a3296f63ec0597756628e26f9}{create\+Window}} (unsigned int width, unsigned int height, const std\+::string \&title, const std\+::string \&name, \mbox{\hyperlink{structec_1_1_window_creation_hints}{Window\+Creation\+Hints}} hints=\mbox{\hyperlink{structec_1_1_window_creation_hints}{Window\+Creation\+Hints}}())
 \item 
 {\footnotesize template$<$class Window\+Class $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+constructible$<$ Window\+Class, unsigned int, unsigned int, const std\+::string \& $>$\+::value, Window\+Class $>$\+::type $\ast$ \mbox{\hyperlink{classec_1_1_application_a85fa865bee513c973b317edc1ac6ec35}{create\+Window}} (unsigned width, unsigned height, const std\+::string \&title, const std\+::string \&name, \mbox{\hyperlink{structec_1_1_window_creation_hints}{Window\+Creation\+Hints}} hints)
@@ -45,23 +45,23 @@ virtual void \mbox{\hyperlink{classec_1_1_application_ad32692a6e65a00346ab2992eb
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{classec_1_1_application_a8d6ef43e247b541017fa82e001c42995}{init\+Open\+Gl}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize Open\+GL. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classec_1_1_application_a329a3b03c23e5aba31bbbb175930dbae}{print\+Versions}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Print the versions of used libraries to console. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classec_1_1_application_a9a3c539d9fef8d51ce3c32b63d11b495}{set\+Monitor\+Connected\+Callback}} (const std\+::function$<$ void(G\+L\+F\+Wmonitor $\ast$)$>$ \&cb)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the callback for when a new monitor connects. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classec_1_1_application_acc0a3dd9509ade9a6297b816d07441d6}{set\+Monitor\+Disconnected\+Callback}} (const std\+::function$<$ void(G\+L\+F\+Wmonitor $\ast$)$>$ \&cb)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the callback for when a monitor disconnects. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{classec_1_1_application_ad6a3915f4ea913bf392a03fbd3548d99}{close\+Dead\+Windows}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destroy all windows, which shall be closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{classec_1_1_application_adaeb3f63d8e850d7b83f1c1b61bc73d1}{monitor\+Callback}} (G\+L\+F\+Wmonitor $\ast$monitor, int event)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The monitor callback is called when a monitor is connected or disconnected. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -113,7 +113,11 @@ An application is the main class of a program.
 \subsubsection{\texorpdfstring{close\+Dead\+Windows()}{closeDeadWindows()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::close\+Dead\+Windows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
 
-Destroy all windows, which shall be closed. \mbox{\Hypertarget{classec_1_1_application_af103b97a3296f63ec0597756628e26f9}\label{classec_1_1_application_af103b97a3296f63ec0597756628e26f9}} 
+
+
+Destroy all windows, which shall be closed. 
+
+\mbox{\Hypertarget{classec_1_1_application_af103b97a3296f63ec0597756628e26f9}\label{classec_1_1_application_af103b97a3296f63ec0597756628e26f9}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!create\+Window@{create\+Window}}
 \index{create\+Window@{create\+Window}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{create\+Window()}{createWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -154,69 +158,128 @@ std\+::enable\+\_\+if$<$std\+::is\+\_\+constructible$<$ Window\+Class, unsigned 
 \subsubsection{\texorpdfstring{init\+Impl()}{initImpl()}}
 {\footnotesize\ttfamily bool ec\+::\+Application\+::init\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Init function implementation. \mbox{\Hypertarget{classec_1_1_application_a8d6ef43e247b541017fa82e001c42995}\label{classec_1_1_application_a8d6ef43e247b541017fa82e001c42995}} 
+
+
+Init function implementation. 
+
+\mbox{\Hypertarget{classec_1_1_application_a8d6ef43e247b541017fa82e001c42995}\label{classec_1_1_application_a8d6ef43e247b541017fa82e001c42995}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!init\+Open\+Gl@{init\+Open\+Gl}}
 \index{init\+Open\+Gl@{init\+Open\+Gl}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{init\+Open\+Gl()}{initOpenGl()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::init\+Open\+Gl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Initialize Open\+GL. \mbox{\Hypertarget{classec_1_1_application_a2a4c494f47bc187ddc2bb5411aa063a3}\label{classec_1_1_application_a2a4c494f47bc187ddc2bb5411aa063a3}} 
+
+
+Initialize Open\+GL. 
+
+\mbox{\Hypertarget{classec_1_1_application_a2a4c494f47bc187ddc2bb5411aa063a3}\label{classec_1_1_application_a2a4c494f47bc187ddc2bb5411aa063a3}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!kill@{kill}}
 \index{kill@{kill}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{kill()}{kill()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Stop the application. \mbox{\Hypertarget{classec_1_1_application_ad32692a6e65a00346ab2992eba3a86e7}\label{classec_1_1_application_ad32692a6e65a00346ab2992eba3a86e7}} 
+
+
+Stop the application. 
+
+\mbox{\Hypertarget{classec_1_1_application_ad32692a6e65a00346ab2992eba3a86e7}\label{classec_1_1_application_ad32692a6e65a00346ab2992eba3a86e7}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!main\+Loop\+Impl@{main\+Loop\+Impl}}
 \index{main\+Loop\+Impl@{main\+Loop\+Impl}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{main\+Loop\+Impl()}{mainLoopImpl()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::main\+Loop\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Main loop function implementation \mbox{\Hypertarget{classec_1_1_application_adaeb3f63d8e850d7b83f1c1b61bc73d1}\label{classec_1_1_application_adaeb3f63d8e850d7b83f1c1b61bc73d1}} 
+
+
+Main loop function implementation. 
+
+\mbox{\Hypertarget{classec_1_1_application_adaeb3f63d8e850d7b83f1c1b61bc73d1}\label{classec_1_1_application_adaeb3f63d8e850d7b83f1c1b61bc73d1}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!monitor\+Callback@{monitor\+Callback}}
 \index{monitor\+Callback@{monitor\+Callback}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{monitor\+Callback()}{monitorCallback()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::monitor\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wmonitor $\ast$}]{monitor,  }\item[{int}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
-The monitor callback is called when a monitor is connected or disconnected. \mbox{\Hypertarget{classec_1_1_application_a329a3b03c23e5aba31bbbb175930dbae}\label{classec_1_1_application_a329a3b03c23e5aba31bbbb175930dbae}} 
+
+
+The monitor callback is called when a monitor is connected or disconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monitor} & The monitor that was (dis)connected  \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_application_a329a3b03c23e5aba31bbbb175930dbae}\label{classec_1_1_application_a329a3b03c23e5aba31bbbb175930dbae}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!print\+Versions@{print\+Versions}}
 \index{print\+Versions@{print\+Versions}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{print\+Versions()}{printVersions()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::print\+Versions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Print the versions of used libraries to console. \mbox{\Hypertarget{classec_1_1_application_a4fe5dcd06017ba4322eca3adec47e03e}\label{classec_1_1_application_a4fe5dcd06017ba4322eca3adec47e03e}} 
+
+
+Print the versions of used libraries to console. 
+
+\mbox{\Hypertarget{classec_1_1_application_a4fe5dcd06017ba4322eca3adec47e03e}\label{classec_1_1_application_a4fe5dcd06017ba4322eca3adec47e03e}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!render@{render}}
 \index{render@{render}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{render()}{render()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Render all windows \mbox{\Hypertarget{classec_1_1_application_a9a3c539d9fef8d51ce3c32b63d11b495}\label{classec_1_1_application_a9a3c539d9fef8d51ce3c32b63d11b495}} 
+
+
+Render all windows. 
+
+\mbox{\Hypertarget{classec_1_1_application_a9a3c539d9fef8d51ce3c32b63d11b495}\label{classec_1_1_application_a9a3c539d9fef8d51ce3c32b63d11b495}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!set\+Monitor\+Connected\+Callback@{set\+Monitor\+Connected\+Callback}}
 \index{set\+Monitor\+Connected\+Callback@{set\+Monitor\+Connected\+Callback}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{set\+Monitor\+Connected\+Callback()}{setMonitorConnectedCallback()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::set\+Monitor\+Connected\+Callback (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void(G\+L\+F\+Wmonitor $\ast$)$>$ \&}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Set the call back for when a new monitor connects. \mbox{\Hypertarget{classec_1_1_application_acc0a3dd9509ade9a6297b816d07441d6}\label{classec_1_1_application_acc0a3dd9509ade9a6297b816d07441d6}} 
+
+
+Set the callback for when a new monitor connects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & The new monitor connected callback. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_application_acc0a3dd9509ade9a6297b816d07441d6}\label{classec_1_1_application_acc0a3dd9509ade9a6297b816d07441d6}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!set\+Monitor\+Disconnected\+Callback@{set\+Monitor\+Disconnected\+Callback}}
 \index{set\+Monitor\+Disconnected\+Callback@{set\+Monitor\+Disconnected\+Callback}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{set\+Monitor\+Disconnected\+Callback()}{setMonitorDisconnectedCallback()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::set\+Monitor\+Disconnected\+Callback (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void(G\+L\+F\+Wmonitor $\ast$)$>$ \&}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Set the call back for when a monitor disconnects. \mbox{\Hypertarget{classec_1_1_application_ad541044a8fc0ff8d6c3fc57220109a50}\label{classec_1_1_application_ad541044a8fc0ff8d6c3fc57220109a50}} 
+
+
+Set the callback for when a monitor disconnects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & The new monitor disconnected callback. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_application_ad541044a8fc0ff8d6c3fc57220109a50}\label{classec_1_1_application_ad541044a8fc0ff8d6c3fc57220109a50}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!start\+Main\+Loop@{start\+Main\+Loop}}
 \index{start\+Main\+Loop@{start\+Main\+Loop}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{start\+Main\+Loop()}{startMainLoop()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::start\+Main\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Should be called to start the application \mbox{\Hypertarget{classec_1_1_application_a036ae53bcbf708c7a01deb199feeccdf}\label{classec_1_1_application_a036ae53bcbf708c7a01deb199feeccdf}} 
+
+
+Should be called to start the application. 
+
+\mbox{\Hypertarget{classec_1_1_application_a036ae53bcbf708c7a01deb199feeccdf}\label{classec_1_1_application_a036ae53bcbf708c7a01deb199feeccdf}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!tick@{tick}}
 \index{tick@{tick}!ec\+::\+Application@{ec\+::\+Application}}
 \subsubsection{\texorpdfstring{tick()}{tick()}}
 {\footnotesize\ttfamily void ec\+::\+Application\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Update all windows 
+
+
+Update all windows. 
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_application_8h}{Application.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_application_8cpp}{Application.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_application_8h}{Application.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_application_8cpp}{Application.\+cpp}}\end{DoxyCompactItemize}

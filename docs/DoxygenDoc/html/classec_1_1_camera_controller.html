@@ -80,7 +80,7 @@ Inheritance diagram for ec::CameraController:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_camera_controller__inherit__graph.png" border="0" usemap="#ec_1_1_camera_controller_inherit__map" alt="Inheritance graph"/></div>
 <map name="ec_1_1_camera_controller_inherit__map" id="ec_1_1_camera_controller_inherit__map">
-<area shape="rect" id="node2" href="classec_1_1_input_listener.html" title="{ec::InputListener\n|# m_eventCallbacks\l# m_enabled\l|+ ~InputListener()\l+ inform()\l+ enable()\l+ isEnabled()\l+ addCallback()\l+ removeCallback()\l+ removeCallbacksOfType()\l+ removeAllCallbacks()\l+ isCallbackRegistered()\l# InputListener()\l# processEvent()\l}" alt="" coords="13,5,194,244"/>
+<area shape="rect" id="node2" href="classec_1_1_input_listener.html" title="{ec::InputListener\n|# m_callbackContainers\l# m_enabled\l|+ ~InputListener()\l+ inform()\l+ enable()\l+ isEnabled()\l+ addCallback()\l+ removeCallback()\l+ removeCallbacksOfType()\l+ removeAllCallbacks()\l+ isCallbackRegistered()\l# InputListener()\l# processEvent()\l}" alt="" coords="13,5,194,244"/>
 </map>
 </div>
 <div class="dynheader">
@@ -88,7 +88,7 @@ Collaboration diagram for ec::CameraController:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_camera_controller__coll__graph.png" border="0" usemap="#ec_1_1_camera_controller_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_camera_controller_coll__map" id="ec_1_1_camera_controller_coll__map">
-<area shape="rect" id="node2" href="classec_1_1_input_listener.html" title="{ec::InputListener\n||+ ~InputListener()\l+ inform()\l+ enable()\l+ isEnabled()\l+ addCallback()\l+ removeCallback()\l+ removeCallbacksOfType()\l+ removeAllCallbacks()\l+ isCallbackRegistered()\l# InputListener()\l# processEvent()\l}" alt="" coords="13,175,194,399"/>
+<area shape="rect" id="node2" href="classec_1_1_input_listener.html" title="{ec::InputListener\n||+ ~InputListener()\l+ inform()\l+ enable()\l+ isEnabled()\l+ addCallback()\l+ removeCallback()\l+ removeCallbacksOfType()\l+ removeAllCallbacks()\l+ isCallbackRegistered()\l# InputListener()\l# processEvent()\l}" alt="" coords="100,175,281,399"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -101,10 +101,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3229bd664f0d7d00b90fc3c9a852768c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#a3229bd664f0d7d00b90fc3c9a852768c">~CameraController</a> ()</td></tr>
 <tr class="separator:a3229bd664f0d7d00b90fc3c9a852768c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82055ad6c8797937a8ec17234ab08758"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#a82055ad6c8797937a8ec17234ab08758">tick</a> (float timeDelta)</td></tr>
+<tr class="memdesc:a82055ad6c8797937a8ec17234ab08758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply camera movement.  <a href="#a82055ad6c8797937a8ec17234ab08758">More...</a><br /></td></tr>
 <tr class="separator:a82055ad6c8797937a8ec17234ab08758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10d1642f398f155fa06c4c74961fe91f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#a10d1642f398f155fa06c4c74961fe91f">reset</a> ()</td></tr>
+<tr class="memdesc:a10d1642f398f155fa06c4c74961fe91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset camera to initial state.  <a href="#a10d1642f398f155fa06c4c74961fe91f">More...</a><br /></td></tr>
 <tr class="separator:a10d1642f398f155fa06c4c74961fe91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74d3b80913b69dce0bae61a651c3b49b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#a74d3b80913b69dce0bae61a651c3b49b">setCamera</a> (<a class="el" href="classec_1_1_camera.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:a74d3b80913b69dce0bae61a651c3b49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the currently controlled camera.  <a href="#a74d3b80913b69dce0bae61a651c3b49b">More...</a><br /></td></tr>
 <tr class="separator:a74d3b80913b69dce0bae61a651c3b49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d6e5c646108c0bf5abc25df3dd77c38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#a8d6e5c646108c0bf5abc25df3dd77c38">getCamera</a> () const</td></tr>
 <tr class="separator:a8d6e5c646108c0bf5abc25df3dd77c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,18 +134,25 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:af44aad5f80005eaadf5d637b3b00c6d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#af44aad5f80005eaadf5d637b3b00c6d6">processEvent</a> (const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;event) override</td></tr>
+<tr class="memdesc:af44aad5f80005eaadf5d637b3b00c6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process event to update camera movement.  <a href="#af44aad5f80005eaadf5d637b3b00c6d6">More...</a><br /></td></tr>
 <tr class="separator:af44aad5f80005eaadf5d637b3b00c6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc1490128a5946521a4111938564b42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#a9dc1490128a5946521a4111938564b42">processMouseMovement</a> (const <a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a> &amp;event)</td></tr>
+<tr class="memdesc:a9dc1490128a5946521a4111938564b42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to rotate the camera with a mouse.  <a href="#a9dc1490128a5946521a4111938564b42">More...</a><br /></td></tr>
 <tr class="separator:a9dc1490128a5946521a4111938564b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2d7bd60346a2f23f591b9b5c05550dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#ac2d7bd60346a2f23f591b9b5c05550dc">processMouseButtonDown</a> (const <a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a> &amp;event)</td></tr>
+<tr class="memdesc:ac2d7bd60346a2f23f591b9b5c05550dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables camera rotation by mouse.  <a href="#ac2d7bd60346a2f23f591b9b5c05550dc">More...</a><br /></td></tr>
 <tr class="separator:ac2d7bd60346a2f23f591b9b5c05550dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2a0f763157a655d53538ac9644620dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#af2a0f763157a655d53538ac9644620dd">processMouseButtonUp</a> (const <a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a> &amp;event)</td></tr>
+<tr class="memdesc:af2a0f763157a655d53538ac9644620dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables camera rotation by mouse.  <a href="#af2a0f763157a655d53538ac9644620dd">More...</a><br /></td></tr>
 <tr class="separator:af2a0f763157a655d53538ac9644620dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1e6f226b4af2aa815bd885f71d25c12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#af1e6f226b4af2aa815bd885f71d25c12">processKeyDownInput</a> (const <a class="el" href="structec_1_1_keyboard_event.html">KeyboardEvent</a> &amp;event)</td></tr>
+<tr class="memdesc:af1e6f226b4af2aa815bd885f71d25c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable linear movement.  <a href="#af1e6f226b4af2aa815bd885f71d25c12">More...</a><br /></td></tr>
 <tr class="separator:af1e6f226b4af2aa815bd885f71d25c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac92bb03a95ddf600b4a08b5b043b601e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#ac92bb03a95ddf600b4a08b5b043b601e">processKeyUpInput</a> (const <a class="el" href="structec_1_1_keyboard_event.html">KeyboardEvent</a> &amp;event)</td></tr>
+<tr class="memdesc:ac92bb03a95ddf600b4a08b5b043b601e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable linear movement.  <a href="#ac92bb03a95ddf600b4a08b5b043b601e">More...</a><br /></td></tr>
 <tr class="separator:ac92bb03a95ddf600b4a08b5b043b601e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2f60cde89ba3e982eef28d505927c22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_camera_controller.html#aa2f60cde89ba3e982eef28d505927c22">processScrollInput</a> (const <a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a> &amp;event) const</td></tr>
+<tr class="memdesc:aa2f60cde89ba3e982eef28d505927c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change fov.  <a href="#aa2f60cde89ba3e982eef28d505927c22">More...</a><br /></td></tr>
 <tr class="separator:aa2f60cde89ba3e982eef28d505927c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classec_1_1_input_listener"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classec_1_1_input_listener')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classec_1_1_input_listener.html">ec::InputListener</a></td></tr>
 <tr class="memitem:aa44d25c2b2d3ef5e72611831fd66e10c inherit pro_methods_classec_1_1_input_listener"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#aa44d25c2b2d3ef5e72611831fd66e10c">InputListener</a> ()</td></tr>
@@ -157,11 +167,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:acc8376886aac460c21a980c411cc1d15 inherit pub_types_classec_1_1_input_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d9334fafd46399a39448fe00fad3c2e inherit pub_types_classec_1_1_input_listener"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a0d9334fafd46399a39448fe00fad3c2e">EventCallbackContainer_Type</a> = std::vector&lt; <a class="el" href="classec_1_1_input_listener.html#acc8376886aac460c21a980c411cc1d15">EventCallback_Type</a> &gt;</td></tr>
 <tr class="separator:a0d9334fafd46399a39448fe00fad3c2e inherit pub_types_classec_1_1_input_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74ebbc0d4a31fcda8b6cda624e5ecdd1 inherit pub_types_classec_1_1_input_listener"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a74ebbc0d4a31fcda8b6cda624e5ecdd1">EventCallbackMap_Type</a> = std::map&lt; <a class="el" href="classec_1_1_input_listener.html#af5dfb691564fa8e05fcf7f053e3c532b">EventKey_Type</a>, <a class="el" href="classec_1_1_input_listener.html#a0d9334fafd46399a39448fe00fad3c2e">EventCallbackContainer_Type</a> &gt;</td></tr>
-<tr class="separator:a74ebbc0d4a31fcda8b6cda624e5ecdd1 inherit pub_types_classec_1_1_input_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0825f1f31a1373c5c03e51da123148 inherit pub_types_classec_1_1_input_listener"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#abf0825f1f31a1373c5c03e51da123148">CallbackContainerMap_Type</a> = std::array&lt; <a class="el" href="classec_1_1_input_listener.html#a0d9334fafd46399a39448fe00fad3c2e">EventCallbackContainer_Type</a>, static_cast&lt; int &gt;(<a class="el" href="namespaceec.html#a30e2a743ebdeb02ac68a6cfa50f629c7ae2942a04780e223b215eb8b663cf5353">InputType::count</a>)&gt;</td></tr>
+<tr class="separator:abf0825f1f31a1373c5c03e51da123148 inherit pub_types_classec_1_1_input_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classec_1_1_input_listener"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classec_1_1_input_listener')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classec_1_1_input_listener.html">ec::InputListener</a></td></tr>
-<tr class="memitem:a25d3ab10346fa26de7737ded4f1b7318 inherit pro_attribs_classec_1_1_input_listener"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_listener.html#a74ebbc0d4a31fcda8b6cda624e5ecdd1">EventCallbackMap_Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a25d3ab10346fa26de7737ded4f1b7318">m_eventCallbacks</a></td></tr>
-<tr class="separator:a25d3ab10346fa26de7737ded4f1b7318 inherit pro_attribs_classec_1_1_input_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4553825c97688ab1827d6f4849c92b61 inherit pro_attribs_classec_1_1_input_listener"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_input_listener.html#abf0825f1f31a1373c5c03e51da123148">CallbackContainerMap_Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#a4553825c97688ab1827d6f4849c92b61">m_callbackContainers</a></td></tr>
+<tr class="separator:a4553825c97688ab1827d6f4849c92b61 inherit pro_attribs_classec_1_1_input_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af36b5fc46ed59886d73b1613aaef5a47 inherit pro_attribs_classec_1_1_input_listener"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_listener.html#af36b5fc46ed59886d73b1613aaef5a47">m_enabled</a></td></tr>
 <tr class="separator:af36b5fc46ed59886d73b1613aaef5a47 inherit pro_attribs_classec_1_1_input_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -257,6 +267,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The currently controlled camera. </dd></dl>
 
 </div>
 </div>
@@ -283,6 +294,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Process event to update camera movement. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>An input event. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented from <a class="el" href="classec_1_1_input_listener.html#a9ceaefc79c6b0b260e88454616137840">ec::InputListener</a>.</p>
 
@@ -312,6 +331,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Enable linear movement. </p>
+
 </div>
 </div>
 <a id="ac92bb03a95ddf600b4a08b5b043b601e"></a>
@@ -337,6 +358,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Disable linear movement. </p>
 
 </div>
 </div>
@@ -364,6 +387,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Enables camera rotation by mouse. </p>
+
 </div>
 </div>
 <a id="af2a0f763157a655d53538ac9644620dd"></a>
@@ -389,6 +414,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Disables camera rotation by mouse. </p>
 
 </div>
 </div>
@@ -416,6 +443,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Used to rotate the camera with a mouse. </p>
+
 </div>
 </div>
 <a id="aa2f60cde89ba3e982eef28d505927c22"></a>
@@ -442,6 +471,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Change fov. </p>
+
 </div>
 </div>
 <a id="a10d1642f398f155fa06c4c74961fe91f"></a>
@@ -458,7 +489,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Reset camera to initial state </p>
+
+<p>Reset camera to initial state. </p>
 
 </div>
 </div>
@@ -478,6 +510,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the currently controlled camera. </p>
+
 </div>
 </div>
 <a id="a82055ad6c8797937a8ec17234ab08758"></a>
@@ -496,11 +530,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Apply camera movement. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_camera_controller_8h_source.html">CameraController.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_camera_controller_8cpp.html">CameraController.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_camera_controller_8h_source.html">CameraController.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_camera_controller_8cpp.html">CameraController.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

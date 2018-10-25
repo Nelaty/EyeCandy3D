@@ -8,6 +8,8 @@ var searchData=
   ['shadermanager',['ShaderManager',['../classec_1_1_shader_manager.html',1,'ec']]],
   ['shadertimed',['ShaderTimed',['../classec_1_1_shader_timed.html',1,'ec']]],
   ['spheregeometry',['SphereGeometry',['../classec_1_1_sphere_geometry.html',1,'ec']]],
+  ['spotlight',['SpotLight',['../classec_1_1_spot_light.html',1,'ec']]],
   ['springgeometry',['SpringGeometry',['../classec_1_1_spring_geometry.html',1,'ec']]],
-  ['staticgeometry',['StaticGeometry',['../classec_1_1_static_geometry.html',1,'ec']]]
+  ['staticgeometry',['StaticGeometry',['../classec_1_1_static_geometry.html',1,'ec']]],
+  ['systemtime',['SystemTime',['../classec_1_1_system_time.html',1,'ec']]]
 ];

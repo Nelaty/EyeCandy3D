@@ -3,8 +3,8 @@
 
 #include <glm/glm.hpp>
 
-/*
-* Base class for all kinds of geometry.
+/**
+* \brief Base class for all kinds of geometry.
 */
 namespace ec
 {
@@ -15,15 +15,23 @@ namespace ec
 	public:
 		virtual ~IGeometryAccess();
 
-		/* Render this geometry with a given matrix */
+		/**
+		 * \brief Render this geometry.
+		 */
 		virtual void render();
 
 	protected:
-		/** Called at the beginning of the rendering routine. */
+		/** 
+		 * \brief Called at the beginning of the rendering routine. 
+		 */
 		virtual void beginRender() = 0;
-		/** The actual rendering of the object. */
+		/** 
+		 * \brief The actual drawing of the object. 
+		 */
 		virtual void onRender() = 0;
-		/** Called at the end of the rendering routine. */
+		/** 
+		 * \brief Called at the end of the rendering routine. 
+		 */
 		virtual void endRender() = 0;
 
 		explicit IGeometryAccess();

@@ -4,6 +4,9 @@
 
 namespace ec
 {
+	/**
+	 * \brief Kind of geometry that can be changed for every rendering.
+	 */
 	class EC3D_DECLSPEC DynamicGeometry : public Geometry
 	{
 	public:
@@ -15,7 +18,7 @@ namespace ec
 		void beginRender() override;
 
 		/**
-		 * Update function gets called once at the start of every
+		 * \brief Update function gets called once at the start of every
 		 * render cycle.
 		 */
 		virtual void update();

@@ -6,11 +6,20 @@
 
 
 
+Inheritance diagram for ec\+:\+:Line\+Strip\+Geometry\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_line_strip_geometry__inherit__graph}
+\end{center}
+\end{figure}
+
+
 Collaboration diagram for ec\+:\+:Line\+Strip\+Geometry\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=199pt]{classec_1_1_line_strip_geometry__coll__graph}
+\includegraphics[height=550pt]{classec_1_1_line_strip_geometry__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -22,12 +31,15 @@ Collaboration diagram for ec\+:\+:Line\+Strip\+Geometry\+:\nopagebreak
 \item 
 void \mbox{\hyperlink{classec_1_1_line_strip_geometry_a8dac12c33ec187961ba4ac1573d718a5}{init}} ()
 \item 
-void \mbox{\hyperlink{classec_1_1_line_strip_geometry_a8c4384fdfb6f66b18428a1ae8e09b1fc}{add\+Vertex}} (const \mbox{\hyperlink{structec_1_1_vertex}{Vertex}} \&vertex)
-\item 
-void \mbox{\hyperlink{classec_1_1_line_strip_geometry_ae55bfbf2b8dc1055edc22329601483e0}{set\+Data}} (\mbox{\hyperlink{structec_1_1_vertex}{Vertex}} $\ast$vertices, int \mbox{\hyperlink{namespaceec_a4dc8d59c4e90842e057344aefde0efbd}{count}})
-\item 
 void \mbox{\hyperlink{classec_1_1_line_strip_geometry_abaf125f40af2b979e4b3af3939bb0a0e}{reset}} ()
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_line_strip_geometry_a185da594a28585dabc17874a59cfe7ef}{add\+Vertex}} (const glm\+::vec3 \&vertex)
+\item 
+void \mbox{\hyperlink{classec_1_1_line_strip_geometry_a2649268027055ff190efb0efdc5768a4}{set\+Data}} (glm\+::vec3 $\ast$vertices, int \mbox{\hyperlink{namespaceec_a30e2a743ebdeb02ac68a6cfa50f629c7ae2942a04780e223b215eb8b663cf5353}{count}})
+\item 
+void \mbox{\hyperlink{classec_1_1_line_strip_geometry_a8b78bf56551a9536f5a2dace78ce4fcd}{recalculate\+Normals}} () override
+\begin{DoxyCompactList}\small\item\em Recalculate vertex normals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -35,7 +47,7 @@ void \mbox{\hyperlink{classec_1_1_line_strip_geometry_abaf125f40af2b979e4b3af393
 \index{ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}!Line\+Strip\+Geometry@{Line\+Strip\+Geometry}}
 \index{Line\+Strip\+Geometry@{Line\+Strip\+Geometry}!ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}}
 \subsubsection{\texorpdfstring{Line\+Strip\+Geometry()}{LineStripGeometry()}}
-{\footnotesize\ttfamily ec\+::\+Line\+Strip\+Geometry\+::\+Line\+Strip\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+{\footnotesize\ttfamily ec\+::\+Line\+Strip\+Geometry\+::\+Line\+Strip\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 \mbox{\Hypertarget{classec_1_1_line_strip_geometry_a2fcbc3ebbd2318f00da14dbf7a2c87f3}\label{classec_1_1_line_strip_geometry_a2fcbc3ebbd2318f00da14dbf7a2c87f3}} 
 \index{ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}!````~Line\+Strip\+Geometry@{$\sim$\+Line\+Strip\+Geometry}}
@@ -46,17 +58,31 @@ void \mbox{\hyperlink{classec_1_1_line_strip_geometry_abaf125f40af2b979e4b3af393
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classec_1_1_line_strip_geometry_a8c4384fdfb6f66b18428a1ae8e09b1fc}\label{classec_1_1_line_strip_geometry_a8c4384fdfb6f66b18428a1ae8e09b1fc}} 
+\mbox{\Hypertarget{classec_1_1_line_strip_geometry_a185da594a28585dabc17874a59cfe7ef}\label{classec_1_1_line_strip_geometry_a185da594a28585dabc17874a59cfe7ef}} 
 \index{ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}!add\+Vertex@{add\+Vertex}}
 \index{add\+Vertex@{add\+Vertex}!ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}}
 \subsubsection{\texorpdfstring{add\+Vertex()}{addVertex()}}
-{\footnotesize\ttfamily void ec\+::\+Line\+Strip\+Geometry\+::add\+Vertex (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_vertex}{Vertex}} \&}]{vertex }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ec\+::\+Line\+Strip\+Geometry\+::add\+Vertex (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{vertex }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_line_strip_geometry_a8dac12c33ec187961ba4ac1573d718a5}\label{classec_1_1_line_strip_geometry_a8dac12c33ec187961ba4ac1573d718a5}} 
+Add a new point to this line strip. The first two points define the first section. Each other point builds another line with its predecessor. \mbox{\Hypertarget{classec_1_1_line_strip_geometry_a8dac12c33ec187961ba4ac1573d718a5}\label{classec_1_1_line_strip_geometry_a8dac12c33ec187961ba4ac1573d718a5}} 
 \index{ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}!init@{init}}
 \index{init@{init}!ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}}
 \subsubsection{\texorpdfstring{init()}{init()}}
 {\footnotesize\ttfamily void ec\+::\+Line\+Strip\+Geometry\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Needs to be called after all vertices have been added. \mbox{\Hypertarget{classec_1_1_line_strip_geometry_a8b78bf56551a9536f5a2dace78ce4fcd}\label{classec_1_1_line_strip_geometry_a8b78bf56551a9536f5a2dace78ce4fcd}} 
+\index{ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}!recalculate\+Normals@{recalculate\+Normals}}
+\index{recalculate\+Normals@{recalculate\+Normals}!ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}}
+\subsubsection{\texorpdfstring{recalculate\+Normals()}{recalculateNormals()}}
+{\footnotesize\ttfamily void ec\+::\+Line\+Strip\+Geometry\+::recalculate\+Normals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Recalculate vertex normals. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classec_1_1_geometry_a228d4a0fa01a17379f24aee2c769b501}{ec\+::\+Geometry}}.
 
 \mbox{\Hypertarget{classec_1_1_line_strip_geometry_abaf125f40af2b979e4b3af3939bb0a0e}\label{classec_1_1_line_strip_geometry_abaf125f40af2b979e4b3af3939bb0a0e}} 
 \index{ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}!reset@{reset}}
@@ -64,15 +90,15 @@ void \mbox{\hyperlink{classec_1_1_line_strip_geometry_abaf125f40af2b979e4b3af393
 \subsubsection{\texorpdfstring{reset()}{reset()}}
 {\footnotesize\ttfamily void ec\+::\+Line\+Strip\+Geometry\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_line_strip_geometry_ae55bfbf2b8dc1055edc22329601483e0}\label{classec_1_1_line_strip_geometry_ae55bfbf2b8dc1055edc22329601483e0}} 
+Clear the temporary point list. This does not affect the existing geometry until init is called! \mbox{\Hypertarget{classec_1_1_line_strip_geometry_a2649268027055ff190efb0efdc5768a4}\label{classec_1_1_line_strip_geometry_a2649268027055ff190efb0efdc5768a4}} 
 \index{ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}!set\+Data@{set\+Data}}
 \index{set\+Data@{set\+Data}!ec\+::\+Line\+Strip\+Geometry@{ec\+::\+Line\+Strip\+Geometry}}
 \subsubsection{\texorpdfstring{set\+Data()}{setData()}}
-{\footnotesize\ttfamily void ec\+::\+Line\+Strip\+Geometry\+::set\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structec_1_1_vertex}{Vertex}} $\ast$}]{vertices,  }\item[{int}]{count }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ec\+::\+Line\+Strip\+Geometry\+::set\+Data (\begin{DoxyParamCaption}\item[{glm\+::vec3 $\ast$}]{vertices,  }\item[{int}]{count }\end{DoxyParamCaption})}
 
-
+Set the current point data. Removes existing points. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_line_strip_geometry_8h}{Line\+Strip\+Geometry.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_line_strip_geometry_8cpp}{Line\+Strip\+Geometry.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_line_strip_geometry_8h}{Line\+Strip\+Geometry.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_line_strip_geometry_8cpp}{Line\+Strip\+Geometry.\+cpp}}\end{DoxyCompactItemize}

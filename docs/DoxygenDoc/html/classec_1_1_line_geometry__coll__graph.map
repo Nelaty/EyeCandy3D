@@ -1,6 +1,6 @@
 <map id="ec::LineGeometry" name="ec::LineGeometry">
 <area shape="rect" id="node2" href="$classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n||+ ~StaticGeometry()\l# setupMesh()\l# StaticGeometry()\l}" alt="" coords="67,764,208,871"/>
-<area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="{ec::Geometry\n||+ ~Geometry()\l+ recalculateNormals()\l+ getVao()\l+ getVbo()\l+ getEbo()\l# Geometry()\l# beginRender()\l# onRender()\l# endRender()\l# setMode()\l# setType()\l}" alt="" coords="61,491,214,715"/>
+<area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="Geometry. " alt="" coords="61,491,214,715"/>
 <area shape="rect" id="node4" href="$classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="5,211,160,362"/>
 <area shape="rect" id="node5" href="$classec_1_1_geometry_data.html" title="{ec::GeometryData\n||+ GeometryData()\l+ ~GeometryData()\l+ bind()\l+ unbind()\l+ resizeBuffers()\l+ initBufferObjects()\l+ buffersInitialized()\l+ releaseMemory()\l+ updateVertexData()\l+ updateIndexData()\l+ update()\l+ getUsage()\l+ getVao()\l+ getVbo()\l+ getEbo()\l}" alt="" coords="184,145,331,428"/>
 </map>

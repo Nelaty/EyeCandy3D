@@ -1,0 +1,136 @@
+\hypertarget{classec_1_1_light}{}\section{ec\+:\+:Light Class Reference}
+\label{classec_1_1_light}\index{ec\+::\+Light@{ec\+::\+Light}}
+
+
+Abstract light source.  
+
+
+
+
+{\ttfamily \#include $<$Light.\+h$>$}
+
+
+
+Inheritance diagram for ec\+:\+:Light\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_light__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+:\+:Light\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec_1_1_light__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classec_1_1_light_af9024a28fff2403705d1a6e9cad4a128}{$\sim$\+Light}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_light_ab3a3ade92e06121c965216fb168ef5db}{set\+Color}} (const glm\+::vec3 \&color)
+\item 
+void \mbox{\hyperlink{classec_1_1_light_aaa6d6edfe31b15dc259a8fa0d59ef8de}{set\+Color}} (float r, float g, float b)
+\item 
+const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_light_a3eaa8c20fc0d48588078bd82f13fbaef}{get\+Color}} () const
+\item 
+void \mbox{\hyperlink{classec_1_1_light_ae2b2bbbc88aef9d531627bb90f7b0183}{set\+Intensity}} (float intensity)
+\item 
+float \mbox{\hyperlink{classec_1_1_light_a8380a3371b458030258bcf7a39857e17}{get\+Intensity}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_light_a7816fc3b8f92cd0ac732be6944754995}{Light}} (\mbox{\hyperlink{namespaceec_a30e2a743ebdeb02ac68a6cfa50f629c7}{Light\+Type}} type, float intensity=1.\+0f, const glm\+::vec3 \&color=glm\+::vec3(1.\+0f))
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classec_1_1_light_a7dfc41f1e8f2d7ddad97d60c610c302e}{m\+\_\+color}}
+\item 
+float \mbox{\hyperlink{classec_1_1_light_ac655cc4148d5aa4d052bace97770f3b1}{m\+\_\+intensity}}
+\item 
+const \mbox{\hyperlink{namespaceec_a30e2a743ebdeb02ac68a6cfa50f629c7}{Light\+Type}} \mbox{\hyperlink{classec_1_1_light_ae3d04075982c6c62e7687b214a504c30}{m\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract light source. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_light_af9024a28fff2403705d1a6e9cad4a128}\label{classec_1_1_light_af9024a28fff2403705d1a6e9cad4a128}} 
+\index{ec\+::\+Light@{ec\+::\+Light}!````~Light@{$\sim$\+Light}}
+\index{````~Light@{$\sim$\+Light}!ec\+::\+Light@{ec\+::\+Light}}
+\subsubsection{\texorpdfstring{$\sim$\+Light()}{~Light()}}
+{\footnotesize\ttfamily ec\+::\+Light\+::$\sim$\+Light (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classec_1_1_light_a7816fc3b8f92cd0ac732be6944754995}\label{classec_1_1_light_a7816fc3b8f92cd0ac732be6944754995}} 
+\index{ec\+::\+Light@{ec\+::\+Light}!Light@{Light}}
+\index{Light@{Light}!ec\+::\+Light@{ec\+::\+Light}}
+\subsubsection{\texorpdfstring{Light()}{Light()}}
+{\footnotesize\ttfamily ec\+::\+Light\+::\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceec_a30e2a743ebdeb02ac68a6cfa50f629c7}{Light\+Type}}}]{type,  }\item[{float}]{intensity = {\ttfamily 1.0f},  }\item[{const glm\+::vec3 \&}]{color = {\ttfamily glm\+:\+:vec3(1.0f)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_light_a3eaa8c20fc0d48588078bd82f13fbaef}\label{classec_1_1_light_a3eaa8c20fc0d48588078bd82f13fbaef}} 
+\index{ec\+::\+Light@{ec\+::\+Light}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!ec\+::\+Light@{ec\+::\+Light}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Light\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the emissive color. \mbox{\Hypertarget{classec_1_1_light_a8380a3371b458030258bcf7a39857e17}\label{classec_1_1_light_a8380a3371b458030258bcf7a39857e17}} 
+\index{ec\+::\+Light@{ec\+::\+Light}!get\+Intensity@{get\+Intensity}}
+\index{get\+Intensity@{get\+Intensity}!ec\+::\+Light@{ec\+::\+Light}}
+\subsubsection{\texorpdfstring{get\+Intensity()}{getIntensity()}}
+{\footnotesize\ttfamily float ec\+::\+Light\+::get\+Intensity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the intensity of this light source. \mbox{\Hypertarget{classec_1_1_light_ab3a3ade92e06121c965216fb168ef5db}\label{classec_1_1_light_ab3a3ade92e06121c965216fb168ef5db}} 
+\index{ec\+::\+Light@{ec\+::\+Light}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!ec\+::\+Light@{ec\+::\+Light}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ec\+::\+Light\+::set\+Color (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{color }\end{DoxyParamCaption})}
+
+Set the emissive color. \mbox{\Hypertarget{classec_1_1_light_aaa6d6edfe31b15dc259a8fa0d59ef8de}\label{classec_1_1_light_aaa6d6edfe31b15dc259a8fa0d59ef8de}} 
+\index{ec\+::\+Light@{ec\+::\+Light}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!ec\+::\+Light@{ec\+::\+Light}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Light\+::set\+Color (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+Set the emissive color. \mbox{\Hypertarget{classec_1_1_light_ae2b2bbbc88aef9d531627bb90f7b0183}\label{classec_1_1_light_ae2b2bbbc88aef9d531627bb90f7b0183}} 
+\index{ec\+::\+Light@{ec\+::\+Light}!set\+Intensity@{set\+Intensity}}
+\index{set\+Intensity@{set\+Intensity}!ec\+::\+Light@{ec\+::\+Light}}
+\subsubsection{\texorpdfstring{set\+Intensity()}{setIntensity()}}
+{\footnotesize\ttfamily void ec\+::\+Light\+::set\+Intensity (\begin{DoxyParamCaption}\item[{float}]{intensity }\end{DoxyParamCaption})}
+
+Set the intensity of this light source. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_light_a7dfc41f1e8f2d7ddad97d60c610c302e}\label{classec_1_1_light_a7dfc41f1e8f2d7ddad97d60c610c302e}} 
+\index{ec\+::\+Light@{ec\+::\+Light}!m\+\_\+color@{m\+\_\+color}}
+\index{m\+\_\+color@{m\+\_\+color}!ec\+::\+Light@{ec\+::\+Light}}
+\subsubsection{\texorpdfstring{m\+\_\+color}{m\_color}}
+{\footnotesize\ttfamily glm\+::vec3 ec\+::\+Light\+::m\+\_\+color\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_light_ac655cc4148d5aa4d052bace97770f3b1}\label{classec_1_1_light_ac655cc4148d5aa4d052bace97770f3b1}} 
+\index{ec\+::\+Light@{ec\+::\+Light}!m\+\_\+intensity@{m\+\_\+intensity}}
+\index{m\+\_\+intensity@{m\+\_\+intensity}!ec\+::\+Light@{ec\+::\+Light}}
+\subsubsection{\texorpdfstring{m\+\_\+intensity}{m\_intensity}}
+{\footnotesize\ttfamily float ec\+::\+Light\+::m\+\_\+intensity\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_light_ae3d04075982c6c62e7687b214a504c30}\label{classec_1_1_light_ae3d04075982c6c62e7687b214a504c30}} 
+\index{ec\+::\+Light@{ec\+::\+Light}!m\+\_\+type@{m\+\_\+type}}
+\index{m\+\_\+type@{m\+\_\+type}!ec\+::\+Light@{ec\+::\+Light}}
+\subsubsection{\texorpdfstring{m\+\_\+type}{m\_type}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceec_a30e2a743ebdeb02ac68a6cfa50f629c7}{Light\+Type}} ec\+::\+Light\+::m\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_light_8h}{Light.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_light_8cpp}{Light.\+cpp}}\end{DoxyCompactItemize}

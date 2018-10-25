@@ -25,27 +25,27 @@ void \mbox{\hyperlink{classec_1_1_geometry_data_acb50971e6fbd928172731a3427d2269
 void \mbox{\hyperlink{classec_1_1_geometry_data_abb54af4b2922eb16973b450d6cf0beae}{unbind}} ()
 \item 
 void \mbox{\hyperlink{classec_1_1_geometry_data_a85ce34e18732d88632310d751a6c2cee}{resize\+Buffers}} (unsigned int vertex\+Count, unsigned int index\+Count)
-\item 
+\begin{DoxyCompactList}\small\item\em Resize vertex and index containers. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_geometry_data_ade0586602da2a8917fe55b592ff44a57}{init\+Buffer\+Objects}} (G\+Lenum usage=G\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+R\+AW)
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes V\+AO, V\+BO and E\+BO. Passes vertex and index data to the G\+PU. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_geometry_data_a23c0090061b5b21b74f070916915ca69}{buffers\+Initialized}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Check if buffer objects are initialized. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_geometry_data_a5df7921c489c60d96a971003c299dcb3}{release\+Memory}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Clears containers and releases memory on the G\+PU. After calling this function, this data object won\textquotesingle{}t be initialized any more. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_geometry_data_aeb93c2e5bd5f4656eaa12651cd4927aa}{update\+Vertex\+Data}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Should be called if vertex data has changed. Updates vertices on the G\+PU. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_geometry_data_a23fd4a2619691fb7bbd5c0650544cce3}{update\+Index\+Data}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Should be called if index data has changed. Updates indices on the G\+PU. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_geometry_data_ad8edfa8a7fda52850f072ab845ef38fd}{update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Should be called if vertex and index data changed. Updates vertices and indices on the G\+PU. \end{DoxyCompactList}\item 
 G\+Lenum \mbox{\hyperlink{classec_1_1_geometry_data_a237459076c98af454bfc3624eebedc81}{get\+Usage}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get usage. \end{DoxyCompactList}\item 
 G\+Luint \mbox{\hyperlink{classec_1_1_geometry_data_abc8d74fcacf693aad19683387adcfadf}{get\+Vao}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the vao buffer id. \end{DoxyCompactList}\item 
 G\+Luint \mbox{\hyperlink{classec_1_1_geometry_data_a067f9cd54e35a1faff1c5011a542eed8}{get\+Vbo}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the vbo buffer id. \end{DoxyCompactList}\item 
 G\+Luint \mbox{\hyperlink{classec_1_1_geometry_data_ae3f427f933c595b169bd10551d52abc3}{get\+Ebo}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the ebo buffer id. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -83,7 +83,11 @@ std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classec_1_1_geometry_data_ab3
 \subsubsection{\texorpdfstring{buffers\+Initialized()}{buffersInitialized()}}
 {\footnotesize\ttfamily bool ec\+::\+Geometry\+Data\+::buffers\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Check if buffer objects are initialized. \begin{DoxyReturn}{Returns}
+
+
+Check if buffer objects are initialized. 
+
+\begin{DoxyReturn}{Returns}
 True if they are initialized, false otherwise. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_geometry_data_ae3f427f933c595b169bd10551d52abc3}\label{classec_1_1_geometry_data_ae3f427f933c595b169bd10551d52abc3}} 
@@ -92,31 +96,51 @@ True if they are initialized, false otherwise.
 \subsubsection{\texorpdfstring{get\+Ebo()}{getEbo()}}
 {\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+Data\+::get\+Ebo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the ebo buffer id. \mbox{\Hypertarget{classec_1_1_geometry_data_a237459076c98af454bfc3624eebedc81}\label{classec_1_1_geometry_data_a237459076c98af454bfc3624eebedc81}} 
+
+
+Get the ebo buffer id. 
+
+\mbox{\Hypertarget{classec_1_1_geometry_data_a237459076c98af454bfc3624eebedc81}\label{classec_1_1_geometry_data_a237459076c98af454bfc3624eebedc81}} 
 \index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!get\+Usage@{get\+Usage}}
 \index{get\+Usage@{get\+Usage}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
 \subsubsection{\texorpdfstring{get\+Usage()}{getUsage()}}
 {\footnotesize\ttfamily G\+Lenum ec\+::\+Geometry\+Data\+::get\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get usage \mbox{\Hypertarget{classec_1_1_geometry_data_abc8d74fcacf693aad19683387adcfadf}\label{classec_1_1_geometry_data_abc8d74fcacf693aad19683387adcfadf}} 
+
+
+Get usage. 
+
+\mbox{\Hypertarget{classec_1_1_geometry_data_abc8d74fcacf693aad19683387adcfadf}\label{classec_1_1_geometry_data_abc8d74fcacf693aad19683387adcfadf}} 
 \index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!get\+Vao@{get\+Vao}}
 \index{get\+Vao@{get\+Vao}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
 \subsubsection{\texorpdfstring{get\+Vao()}{getVao()}}
 {\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+Data\+::get\+Vao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the vao buffer id. \mbox{\Hypertarget{classec_1_1_geometry_data_a067f9cd54e35a1faff1c5011a542eed8}\label{classec_1_1_geometry_data_a067f9cd54e35a1faff1c5011a542eed8}} 
+
+
+Get the vao buffer id. 
+
+\mbox{\Hypertarget{classec_1_1_geometry_data_a067f9cd54e35a1faff1c5011a542eed8}\label{classec_1_1_geometry_data_a067f9cd54e35a1faff1c5011a542eed8}} 
 \index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!get\+Vbo@{get\+Vbo}}
 \index{get\+Vbo@{get\+Vbo}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
 \subsubsection{\texorpdfstring{get\+Vbo()}{getVbo()}}
 {\footnotesize\ttfamily G\+Luint ec\+::\+Geometry\+Data\+::get\+Vbo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the vbo buffer id. \mbox{\Hypertarget{classec_1_1_geometry_data_ade0586602da2a8917fe55b592ff44a57}\label{classec_1_1_geometry_data_ade0586602da2a8917fe55b592ff44a57}} 
+
+
+Get the vbo buffer id. 
+
+\mbox{\Hypertarget{classec_1_1_geometry_data_ade0586602da2a8917fe55b592ff44a57}\label{classec_1_1_geometry_data_ade0586602da2a8917fe55b592ff44a57}} 
 \index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!init\+Buffer\+Objects@{init\+Buffer\+Objects}}
 \index{init\+Buffer\+Objects@{init\+Buffer\+Objects}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
 \subsubsection{\texorpdfstring{init\+Buffer\+Objects()}{initBufferObjects()}}
 {\footnotesize\ttfamily bool ec\+::\+Geometry\+Data\+::init\+Buffer\+Objects (\begin{DoxyParamCaption}\item[{G\+Lenum}]{usage = {\ttfamily GL\+\_\+STATIC\+\_\+DRAW} }\end{DoxyParamCaption})}
 
-Initializes V\+AO, V\+BO and E\+BO. Passes vertex and index data to the G\+PU. \begin{DoxyReturn}{Returns}
+
+
+Initializes V\+AO, V\+BO and E\+BO. Passes vertex and index data to the G\+PU. 
+
+\begin{DoxyReturn}{Returns}
 False if buffers are already initialized, true otherwise. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_geometry_data_a5df7921c489c60d96a971003c299dcb3}\label{classec_1_1_geometry_data_a5df7921c489c60d96a971003c299dcb3}} 
@@ -125,7 +149,11 @@ False if buffers are already initialized, true otherwise.
 \subsubsection{\texorpdfstring{release\+Memory()}{releaseMemory()}}
 {\footnotesize\ttfamily bool ec\+::\+Geometry\+Data\+::release\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Clears containers and releases memory on the G\+PU. After calling this function, this data object won\textquotesingle{}t be initialized any more. \begin{DoxyReturn}{Returns}
+
+
+Clears containers and releases memory on the G\+PU. After calling this function, this data object won\textquotesingle{}t be initialized any more. 
+
+\begin{DoxyReturn}{Returns}
 True if buffers are initialized, false otherwise. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_geometry_data_a85ce34e18732d88632310d751a6c2cee}\label{classec_1_1_geometry_data_a85ce34e18732d88632310d751a6c2cee}} 
@@ -134,7 +162,18 @@ True if buffers are initialized, false otherwise.
 \subsubsection{\texorpdfstring{resize\+Buffers()}{resizeBuffers()}}
 {\footnotesize\ttfamily void ec\+::\+Geometry\+Data\+::resize\+Buffers (\begin{DoxyParamCaption}\item[{unsigned int}]{vertex\+Count,  }\item[{unsigned int}]{index\+Count }\end{DoxyParamCaption})}
 
-Resize vertex and index containers. \mbox{\Hypertarget{classec_1_1_geometry_data_abb54af4b2922eb16973b450d6cf0beae}\label{classec_1_1_geometry_data_abb54af4b2922eb16973b450d6cf0beae}} 
+
+
+Resize vertex and index containers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\+Count} & The size of the vertex buffer. \\
+\hline
+{\em index\+Count} & The size of the index buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_geometry_data_abb54af4b2922eb16973b450d6cf0beae}\label{classec_1_1_geometry_data_abb54af4b2922eb16973b450d6cf0beae}} 
 \index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!unbind@{unbind}}
 \index{unbind@{unbind}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
 \subsubsection{\texorpdfstring{unbind()}{unbind()}}
@@ -146,19 +185,31 @@ Resize vertex and index containers. \mbox{\Hypertarget{classec_1_1_geometry_data
 \subsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void ec\+::\+Geometry\+Data\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Should be called if vertex and index data changed. Updates vertices and indices on the G\+PU. \mbox{\Hypertarget{classec_1_1_geometry_data_a23fd4a2619691fb7bbd5c0650544cce3}\label{classec_1_1_geometry_data_a23fd4a2619691fb7bbd5c0650544cce3}} 
+
+
+Should be called if vertex and index data changed. Updates vertices and indices on the G\+PU. 
+
+\mbox{\Hypertarget{classec_1_1_geometry_data_a23fd4a2619691fb7bbd5c0650544cce3}\label{classec_1_1_geometry_data_a23fd4a2619691fb7bbd5c0650544cce3}} 
 \index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!update\+Index\+Data@{update\+Index\+Data}}
 \index{update\+Index\+Data@{update\+Index\+Data}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
 \subsubsection{\texorpdfstring{update\+Index\+Data()}{updateIndexData()}}
 {\footnotesize\ttfamily void ec\+::\+Geometry\+Data\+::update\+Index\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Should be called if index data has changed. Updates indices on the G\+PU. \mbox{\Hypertarget{classec_1_1_geometry_data_aeb93c2e5bd5f4656eaa12651cd4927aa}\label{classec_1_1_geometry_data_aeb93c2e5bd5f4656eaa12651cd4927aa}} 
+
+
+Should be called if index data has changed. Updates indices on the G\+PU. 
+
+\mbox{\Hypertarget{classec_1_1_geometry_data_aeb93c2e5bd5f4656eaa12651cd4927aa}\label{classec_1_1_geometry_data_aeb93c2e5bd5f4656eaa12651cd4927aa}} 
 \index{ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}!update\+Vertex\+Data@{update\+Vertex\+Data}}
 \index{update\+Vertex\+Data@{update\+Vertex\+Data}!ec\+::\+Geometry\+Data@{ec\+::\+Geometry\+Data}}
 \subsubsection{\texorpdfstring{update\+Vertex\+Data()}{updateVertexData()}}
 {\footnotesize\ttfamily void ec\+::\+Geometry\+Data\+::update\+Vertex\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
 Should be called if vertex data has changed. Updates vertices on the G\+PU. 
+
+
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{classec_1_1_geometry_data_ab32858fa60eb5c6859c287d00b14357d}\label{classec_1_1_geometry_data_ab32858fa60eb5c6859c287d00b14357d}} 
@@ -177,5 +228,5 @@ Should be called if vertex data has changed. Updates vertices on the G\+PU.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_geometry_data_8h}{Geometry\+Data.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_geometry_data_8cpp}{Geometry\+Data.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_geometry_data_8h}{Geometry\+Data.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_geometry_data_8cpp}{Geometry\+Data.\+cpp}}\end{DoxyCompactItemize}

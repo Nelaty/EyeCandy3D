@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['filelogger',['FileLogger',['../classec_1_1_file_logger.html#a642ccd2a0b9a9097dc84c758b8c368ce',1,'ec::FileLogger']]],
   ['focus',['focus',['../classec_1_1_window.html#a927c041d6913c385efef327b091d5f4f',1,'ec::Window']]],
   ['fontchanged',['fontChanged',['../classec_1_1_generic_widget_listener.html#abcd4597f2dfede6e884957fa18a2e5a3',1,'ec::GenericWidgetListener']]],
   ['fonttextureatlas',['FontTextureAtlas',['../classec_1_1_font_texture_atlas.html#abf42f99b2562130eb9b347c895cf14f3',1,'ec::FontTextureAtlas']]],

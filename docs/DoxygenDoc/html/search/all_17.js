@@ -1,6 +1,7 @@
 var searchData=
 [
   ['w',['W',['../classec_1_1_keyboard.html#a6b7df6b9d699a9cab8c1283623a12333',1,'ec::Keyboard']]],
+  ['warning',['warning',['../namespaceec.html#a67e511e8b22e1051ea392cb2f68315d8a7b83d3f08fa392b79e3f553b585971cd',1,'ec']]],
   ['window',['Window',['../classec_1_1_window.html',1,'ec::Window'],['../classec_1_1_window.html#a01bb029fa4964caf70553c5ca806d8cc',1,'ec::Window::Window()']]],
   ['window_2ecpp',['Window.cpp',['../_window_8cpp.html',1,'']]],
   ['window_2eh',['Window.h',['../_window_8h.html',1,'']]],
@@ -12,7 +13,5 @@ var searchData=
   ['wordwrappedchanged',['wordWrappedChanged',['../classec_1_1_generic_text_box_listener.html#a96cdc8f0e3932f1cfbe2fd6888818452',1,'ec::GenericTextBoxListener']]],
   ['wordwrappedchanged_5fcallback',['WordWrappedChanged_Callback',['../classec_1_1_generic_text_box_listener.html#aa94d95c932df4d70fe03c501520f0d16',1,'ec::GenericTextBoxListener']]],
   ['world_5f1',['WORLD_1',['../classec_1_1_keyboard.html#a1eb7d04d0c734fb8fef4d8386fb7a4d0',1,'ec::Keyboard']]],
-  ['world_5f2',['WORLD_2',['../classec_1_1_keyboard.html#aab87be510c1ae98007e98afa30952918',1,'ec::Keyboard']]],
-  ['writetofile',['writeToFile',['../classec_1_1_file_logger.html#a834c7fef56181f49afd88657fe2162fe',1,'ec::FileLogger']]],
-  ['writetofilelocal',['writeToFileLocal',['../namespaceec.html#aaae259d9413b28eb2a234fccc4e63985',1,'ec']]]
+  ['world_5f2',['WORLD_2',['../classec_1_1_keyboard.html#aab87be510c1ae98007e98afa30952918',1,'ec::Keyboard']]]
 ];

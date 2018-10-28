@@ -21,7 +21,9 @@
 
 using namespace ec;
 
-ExampleWindow::ExampleWindow(unsigned int width, unsigned int height, const std::string& windowTitle)
+ExampleWindow::ExampleWindow(const unsigned width, 
+							 const unsigned height,
+							 const std::string& windowTitle)
 	: Window(width, height, windowTitle)
 {
 	initShaders();

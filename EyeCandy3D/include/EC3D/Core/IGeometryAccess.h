@@ -3,13 +3,13 @@
 
 #include <glm/glm.hpp>
 
-/**
-* \brief Base class for all kinds of geometry.
-*/
 namespace ec
 {
 	class Shader;
 
+	/**
+	* \brief Base class for all kinds of geometry.
+	*/
 	class EC3D_DECLSPEC IGeometryAccess
 	{
 	public:

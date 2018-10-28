@@ -38,7 +38,7 @@ virtual bool \mbox{\hyperlink{classec_1_1_application_a1460d7083c312271285747a7c
 virtual void \mbox{\hyperlink{classec_1_1_application_ad32692a6e65a00346ab2992eba3a86e7}{main\+Loop\+Impl}} ()
 \begin{DoxyCompactList}\small\item\em Main loop function implementation. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Window\+Class $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+constructible$<$ Window\+Class, unsigned int, unsigned int, const std\+::string \& $>$\+::value, Window\+Class $>$\+::type $\ast$ \mbox{\hyperlink{classec_1_1_application_af103b97a3296f63ec0597756628e26f9}{create\+Window}} (unsigned int width, unsigned int height, const std\+::string \&title, const std\+::string \&name, \mbox{\hyperlink{structec_1_1_window_creation_hints}{Window\+Creation\+Hints}} hints=\mbox{\hyperlink{structec_1_1_window_creation_hints}{Window\+Creation\+Hints}}())
-\item 
+\begin{DoxyCompactList}\small\item\em Create a new window and add it to the current list of windows. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Window\+Class $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+constructible$<$ Window\+Class, unsigned int, unsigned int, const std\+::string \& $>$\+::value, Window\+Class $>$\+::type $\ast$ \mbox{\hyperlink{classec_1_1_application_a85fa865bee513c973b317edc1ac6ec35}{create\+Window}} (unsigned width, unsigned height, const std\+::string \&title, const std\+::string \&name, \mbox{\hyperlink{structec_1_1_window_creation_hints}{Window\+Creation\+Hints}} hints)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
@@ -124,7 +124,11 @@ Destroy all windows, which shall be closed.
 {\footnotesize\ttfamily template$<$class Window\+Class $>$ \\
 std\+::enable\+\_\+if$<$std\+::is\+\_\+constructible$<$ Window\+Class, unsigned int, unsigned int, const std\+::string\&$>$\+::value, Window\+Class$>$\+::type$\ast$ ec\+::\+Application\+::create\+Window (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{const std\+::string \&}]{title,  }\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{structec_1_1_window_creation_hints}{Window\+Creation\+Hints}}}]{hints = {\ttfamily \mbox{\hyperlink{structec_1_1_window_creation_hints}{Window\+Creation\+Hints}}()} }\end{DoxyParamCaption})}
 
+
+
 Create a new window and add it to the current list of windows. 
+
+
 \begin{DoxyTemplParams}{Template Parameters}
 {\em Window\+Class} & Needs to have constructor with a signature of\+: (unsigned, unsigned, const std\+::string\&) \\
 \hline
@@ -162,6 +166,9 @@ std\+::enable\+\_\+if$<$std\+::is\+\_\+constructible$<$ Window\+Class, unsigned 
 
 Init function implementation. 
 
+\begin{DoxyReturn}{Returns}
+True if implementation is successful, false otherwise. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_application_a8d6ef43e247b541017fa82e001c42995}\label{classec_1_1_application_a8d6ef43e247b541017fa82e001c42995}} 
 \index{ec\+::\+Application@{ec\+::\+Application}!init\+Open\+Gl@{init\+Open\+Gl}}
 \index{init\+Open\+Gl@{init\+Open\+Gl}!ec\+::\+Application@{ec\+::\+Application}}
@@ -281,5 +288,5 @@ Update all windows.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_application_8h}{Application.\+h}}\item 
-C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_application_8cpp}{Application.\+cpp}}\end{DoxyCompactItemize}
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_application_8h}{Application.\+h}}\item 
+D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_application_8cpp}{Application.\+cpp}}\end{DoxyCompactItemize}

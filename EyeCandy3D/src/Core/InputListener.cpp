@@ -1,7 +1,5 @@
 #include "EC3D/Core/InputListener.h"
 
-#include <algorithm>
-
 namespace ec
 {
 	InputListener::~InputListener()
@@ -25,29 +23,15 @@ namespace ec
 		return m_enabled;
 	}
 
-	void InputListener::addCallback(const std::string& id, 
-									EventKey_Type key, 
+	void InputListener::addCallback(EventKey_Type key, 
 									std::function<void()> callback)
 	{
-		const auto cbPair = std::make_pair(id, callback);
-		m_callbackContainers[static_cast<int>(key)].emplace_back(EventCallback_Type(id, callback));
-	}
-
-	bool InputListener::removeCallback(const std::string& id, EventKey_Type key)
-	{
-		auto& cbContainer = m_callbackContainers[static_cast<int>(key)];
-		const auto foundCb = std::remove_if(cbContainer.begin(), cbContainer.end(), 
-											[&](const auto& pair) -> bool
-		{
-			return pair.first == id;
-		});
-
-		return foundCb != cbContainer.end();
+		m_callbackContainers[int(key)].emplace_back(callback);
 	}
 
 	void InputListener::removeCallbacksOfType(EventKey_Type key)
 	{
-		auto& cbContainer = m_callbackContainers[static_cast<int>(key)];
+		auto& cbContainer = m_callbackContainers[int(key)];
 		cbContainer.clear();
 	}
 
@@ -59,18 +43,6 @@ namespace ec
 		}
 	}
 
-	bool InputListener::isCallbackRegistered(const std::string& id, EventKey_Type key)
-	{
-		auto& cbContainer = m_callbackContainers[static_cast<int>(key)];
-		const auto foundCb = std::find_if(cbContainer.begin(), cbContainer.end(),
-									[&](const auto& pair) -> bool
-		{
-			return pair.first == id;
-		});
-
-		return foundCb != cbContainer.end();
-	}
-
 	InputListener::InputListener()
 		: m_enabled{true}
 	{
@@ -78,10 +50,10 @@ namespace ec
 
 	void InputListener::processEvent(const InputEvent& event)
 	{
-		auto& cbContainer = m_callbackContainers[static_cast<int>(event.m_type)];
-		for(const auto& it : cbContainer)
+		auto& cbContainer = m_callbackContainers[int(event.m_type)];
+		for(auto& it : cbContainer)
 		{
-			it.second();
+			it(event);
 		}
 	}
 

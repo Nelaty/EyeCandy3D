@@ -4,13 +4,13 @@
 
 #include <vector>
 
-/**
-* InputObservables inform InputListeners about InputEvents
-*/
 namespace ec
 {
 	class InputListener;
 
+	/**
+	* \brief InputObservables inform InputListeners about InputEvents
+	*/
 	class EC3D_DECLSPEC InputObservable
 	{
 	public:
@@ -21,52 +21,79 @@ namespace ec
 		explicit InputObservable();
 		virtual ~InputObservable();
 
-		/* *
-		* Inform the listeners about a new event
-		* The input listener can't check for inputs itself because of the way GLFW works
+		/**
+		* \brief Inform the listeners about a new event.
+		* \param event The event to inform about.
+		* \detailsThe input observable can't check for inputs itself because
+		* of the way GLFW works.
 		*/
 		virtual void receiveEvent(const InputEvent& event);
 
-		/** Register a new or remove an old listener */
+		/** 
+		 * \brief Register a new input listener.
+		 * \param inputListener The input listener to register.
+		 */
 		virtual void registerInputListener(InputListener* inputListener);
+		/**
+		 * \brief Unregister an already registered input listener.
+		 * \param inputListener The input listener to unregister.
+		 * \return True if the inputListener was found, false
+		 * otherwise.
+		 */
 		virtual bool unregisterInputListener(InputListener* inputListener);
 
-		/** Check if this observer contains a specific controller */
+		/** 
+		 * \brief Check if this observer contains a given controller.
+		 * \param inputListener The input listener to search for.
+		 * \return True if the inputListener was found. 
+		 */
 		virtual bool contains(InputListener* inputListener);
 
-		/** Clears the input listener list */
+		/**
+		 * \brief Clears the input listener list. 
+		 */
 		virtual void unregisterAllInputListeners();
 
-		/** Inform all input listeners about all accumulated events */
+		/** 
+		 * \brief Inform all input listeners about all accumulated events.
+		 */
 		virtual void informAll();
 
-		/** Set the previous mouse event */
+		/**
+		 * \brief Set the previous mouse event.
+		 */
 		void setPrevMouseEvent(const MouseEvent& event);
-		/** Get the previous mouse event */
+		/**
+		 * \brief Get the previous mouse event.
+		 */
 		const MouseEvent& getPrevMouseEvent() const;
 
-		/** Set the previous keyboard event */
+		/** 
+		 * \brief Set the previous keyboard event.
+		 */
 		void setPrevKeyboardEvent(const KeyboardEvent& event);
-		/** Get the previous keyboard event */
+		/** 
+		 * \brief Get the previous keyboard event.
+		 */
 		const KeyboardEvent& getPrevKeyboardEvent() const;
 
-		/** Set the previous keyboard event */
+		/** 
+		 * \brief Set the previous keyboard event.
+		 */
 		void setPrevDisplayEvent(const DisplayEvent& event);
-		/** Get the previous keyboard event */
+		/** 
+		 * \brief Get the previous keyboard event.
+		 */
 		const DisplayEvent& getPrevDisplayEvent() const;
 
 	protected:
-
 		InputEvent prepareEvent(const InputEvent& event);
 
 		InputListeners_Type m_inputListeners;
 		Events_Type m_events;
 
-		/** Previous mouse event */
 		MouseEvent m_prevMouseEvent;
-		/** Previous keyboard event */
 		KeyboardEvent m_prevKeyboardEvent;
-		/** Previous display event */
 		DisplayEvent m_prevDisplayEvent;
 
 		virtual void clearEvents();

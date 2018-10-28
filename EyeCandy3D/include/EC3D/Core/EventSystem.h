@@ -4,14 +4,12 @@
 #include "EC3D/Core/InputObservable.h"
 #include "EC3D/Core/DeviceRegistry.h"
 
-#include <memory>
-
 namespace ec
 {
 	class Window;
 
 	/**
-	 * \brief 
+	 * \brief Responsible for the distribution of input events.
 	 */
 	class EC3D_DECLSPEC EventSystem
 	{
@@ -19,33 +17,57 @@ namespace ec
 		explicit EventSystem(Window* window);
 		~EventSystem();
 
+		/**
+		 * \brief Inform event system about a new event.
+		 * \param event The new event.
+		 */
 		void dispatchEvent(const InputEvent& event);
 
+		/**
+		 * \brief Inform input listeners about new events.
+		 */
 		void informAll();
 
-		/** Register a new or remove an old listener */
+		/** 
+		 * \brief Register an input listener.
+		 * \param inputListener The new input listener.
+		 */
 		void registerInputListener(InputListener* inputListener);
+		/**
+		 * \brief Register an already registered input listener.
+		 * \param inputListener The input listener to remove.
+		 * \return True if the input listener was found, false otherwise.
+		 */
 		bool unregisterInputListener(InputListener* inputListener);
 
-		/** Check if this observer contains a specific controller */
+		/** 
+		 * \brief Check if this observer contains a specific input listener.
+		 * \param inputListener The input listener to find.
+		 * \return True if the given listener is registered, false
+		 * otherwise.
+		 */
 		bool contains(InputListener* inputListener);
 
-		/** Clears the input listener list */
+		/** 
+		 * \brief Clears the input listener list.
+		 */
 		void unregisterAllInputListeners();
 
 		/** 
-		 * Check the event queue for new events and inform the
+		 * \brief Check the event queue for new events and inform the
 		 * event observable about them.
 		 */
 		void pollEvents();
 
 		/** 
-		 * Get the window from which this event system receives its
-		 * events.
+		 * \brief Get the window from which this event system receives 
+		 * its events.
 		 */
 		Window* getWindow() const;
 
-		/** Get the device registry. */
+		/** 
+		 * \brief Get the device registry storing the input devices. 
+		 */
 		DeviceRegistry& getDeviceRegistry();
 
 	private:

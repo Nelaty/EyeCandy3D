@@ -15,6 +15,9 @@ namespace ec
 	protected:
 		explicit DynamicGeometry();
 
+		/**
+		 * \brief Update the geometry before rendering.
+		 */
 		void beginRender() override;
 
 		/**

@@ -20,12 +20,12 @@ namespace ec
 
 	int FontTextureAtlas::getWidth() const
 	{
-		return m_width;
+		return m_textureWidth;
 	}
 
 	int FontTextureAtlas::getHeight() const
 	{
-		return m_height;
+		return m_textureHeight;
 	}
 
 	const FontCharacter&  FontTextureAtlas::getChar(const int index) const
@@ -44,8 +44,8 @@ namespace ec
 		createAtlasTexture(tUniform);
 		initAtlasTexture(face);
 
-		std::cout << "Generated a " << m_width << "x " << m_height <<
-			" (" << m_width * m_height / 1024 << " KiB) texture atlas.\n";
+		std::cout << "Generated a " << m_textureWidth << "x " << m_textureHeight <<
+			" (" << m_textureWidth * m_textureHeight / 1024 << " KiB) texture atlas.\n";
 	}
 
 	void FontTextureAtlas::loadCharacters(const FT_Face face, 
@@ -55,8 +55,8 @@ namespace ec
 
 		auto rowWidth = 0;
 		auto rowHeight = 0;
-		m_width = 0;
-		m_height = 0;
+		m_textureWidth = 0;
+		m_textureHeight = 0;
 
 		// Initialize characters with zeros
 		memset(m_characters, 0, sizeof(FontCharacter));
@@ -72,8 +72,8 @@ namespace ec
 
 			if(rowWidth + glyphSlot->bitmap.width + 1 >= s_maxWidth)
 			{
-				m_width = std::fmax(m_width, rowWidth);
-				m_height += rowHeight;
+				m_textureWidth = std::fmax(m_textureWidth, rowWidth);
+				m_textureHeight += rowHeight;
 				rowWidth = 0;
 				rowHeight = 0;
 			}
@@ -82,8 +82,8 @@ namespace ec
 			rowHeight = std::fmax(rowHeight, glyphSlot->bitmap.rows);
 		}
 
-		m_width = std::fmax(m_width, rowWidth);
-		m_height += rowHeight;
+		m_textureWidth = std::fmax(m_textureWidth, rowWidth);
+		m_textureHeight += rowHeight;
 	}
 
 	void FontTextureAtlas::createAtlasTexture(const GLuint tUniform)
@@ -100,7 +100,7 @@ namespace ec
 		m_textureUniform = tUniform;
 
 		// Set texture attributes
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, m_width, m_height, 0, GL_RED, GL_UNSIGNED_BYTE, nullptr);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, m_textureWidth, m_textureHeight, 0, GL_RED, GL_UNSIGNED_BYTE, nullptr);
 		glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
@@ -160,8 +160,8 @@ namespace ec
 			m_characters[i].m_bitmapLeft = glyphSlot->bitmap_left;
 			m_characters[i].m_bitmapTop = glyphSlot->bitmap_top;
 
-			m_characters[i].m_uvOffsetX = offsetX / static_cast<float>(m_width);
-			m_characters[i].m_uvOffsetY = offsetY / static_cast<float>(m_height);
+			m_characters[i].m_uvOffsetX = offsetX / static_cast<float>(m_textureWidth);
+			m_characters[i].m_uvOffsetY = offsetY / static_cast<float>(m_textureHeight);
 
 			// Update row height and position in the row
 			rowHeight = std::fmax(rowHeight, glyphSlot->bitmap.rows);

@@ -57,6 +57,8 @@ namespace ec
 
 		/** 
 		 * \brief Init function implementation. 
+		 * \return True if implementation is successful, false
+		 * otherwise.
 		 */
 		virtual bool initImpl();
 
@@ -87,7 +89,7 @@ namespace ec
 		static void setMonitorDisconnectedCallback(const std::function<void(GLFWmonitor*)>& cb);
 
 		/**
-		 * Create a new window and add it to the current list of windows.
+		 * \brief Create a new window and add it to the current list of windows.
 		 * \tparam WindowClass Needs to have constructor with a signature of: (unsigned, unsigned, const std::string&)
 		 * \param width Width of the window in pixels.
 		 * \param height Height of the window in pixels.
@@ -114,8 +116,8 @@ namespace ec
 		/**
 		* \brief The monitor callback is called when a monitor is 
 		* connected or disconnected.
-		* \param monitor The monitor that was (dis)connected
-		* \event 
+		* \param monitor The monitor that was (dis)connected.
+		* \param event Whether the monitor was turned on or off. 
 		*/
 		static void monitorCallback(GLFWmonitor* monitor, int event);
 	

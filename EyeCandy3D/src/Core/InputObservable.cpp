@@ -51,6 +51,7 @@ namespace ec
 
 	void InputObservable::informAll()
 	{
+		/// \todo: not even doing anything
 		for(const auto& event : m_events)
 		{
 			for(auto& controller : m_inputListeners)

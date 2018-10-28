@@ -10,6 +10,9 @@ namespace ec
 {
 	class Window;
 
+	/**
+	 * \brief Stores all different kinds of input devices.
+	 */
 	class EC3D_DECLSPEC DeviceRegistry
 	{
 	public:

@@ -8,13 +8,23 @@
 
 namespace ec
 {
+	/**
+	 * \brief Encapsulates vertex and index data and knows how to
+	 * create, update and delete OpenGL buffers.
+	 */
 	class EC3D_DECLSPEC GeometryData
 	{
 	public:
 		GeometryData();
 		~GeometryData();
 
+		/**
+		 * \brief Notify OpenGL to use this geometry data.
+		 */
 		void bind();
+		/**
+		 * \brief Notify OpenGL to stop using any geometry data.
+		 */
 		void unbind();
 
 		/** 

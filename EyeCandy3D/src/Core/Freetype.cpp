@@ -111,11 +111,11 @@ namespace ec
 
 		m_textShader->setVec4("inputColor", color);
 
-		glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
+		glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 		glBufferData(GL_ARRAY_BUFFER, coords.size() * sizeof(glm::vec4), coords.data(), GL_DYNAMIC_DRAW);
 
 		//Generate VAO
-		glBindVertexArray(m_VAO);
+		glBindVertexArray(m_vao);
 
 		//Position
 		glEnableVertexAttribArray(0);
@@ -154,7 +154,7 @@ namespace ec
 		atlasName << face << size;
 
 		m_textShader->bind();
-		auto atlas = std::make_unique<FontTextureAtlas>(foundFace->second, size, m_texture);
+		auto atlas = std::make_unique<FontTextureAtlas>(foundFace->second, size, m_textureLocation);
 		auto entryPair = std::make_pair(atlasName.str(), std::move(atlas));
 		m_fontTextureAtlases.insert(std::move(entryPair));
 		m_textShader->unbind();
@@ -177,13 +177,13 @@ namespace ec
 			throw(std::exception("Couldn't initialize freetype!"));
 		}
 	
-		m_colorIN = m_textShader->getUniformLocation("inputColor");
-		m_texture = m_textShader->getUniformLocation("texture");
+		m_colorLocation = m_textShader->getUniformLocation("inputColor");
+		m_textureLocation = m_textShader->getUniformLocation("texture");
 
 		// Create the vertex buffer object
-		glGenBuffers(1, &m_VBO);
-		glGenVertexArrays(1, &m_VAO);
-		glBindVertexArray(m_VAO);
+		glGenBuffers(1, &m_vbo);
+		glGenVertexArrays(1, &m_vao);
+		glBindVertexArray(m_vao);
 		glBindVertexArray(0);
 	}
 }

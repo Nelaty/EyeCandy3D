@@ -12,47 +12,63 @@
 */
 namespace ec
 {
+	/**
+	 * \brief An InputListener can react on incoming events.
+	 * It can either be used as a base class or be filled with callbacks.
+	 */
 	class EC3D_DECLSPEC InputListener
 	{
 	public:
 		using EventKey_Type = InputType;
-		using EventCallback_Type = std::pair<std::string, std::function<void()>>;
+		using EventCallback_Type = std::function<void(const InputEvent& event)>;
 		using EventCallbackContainer_Type = std::vector<EventCallback_Type>;
 		using CallbackContainerMap_Type = std::array<EventCallbackContainer_Type, static_cast<int>(InputType::count)>;
 
 
 		virtual ~InputListener();
 		
-		/* Inform this controller about an event */
+		/**
+		 * \brief Inform this controller about an event.
+		 * \param event The event to process.
+		 */
 		void inform(const InputEvent& event);
 
-		/* Enable or disable the evaluation of input */
+		/**
+		 * \brief Enable or disable the evaluation of input.
+		 * \param enabled If true incoming events will be 
+		 * processed.
+		 */
 		virtual void enable(bool enabled);
+		/**
+		 * \brief Check if this input listener is processing events.
+		 */
 		virtual bool isEnabled() const;
 
 		/* 
-		* Add a new callback 
-		* Key:	Type of the callback
-		* ID:	Identifier of the callback, so it can be retrieved later on
-		*		Needs to be unique for an EventType
+		* \brief Add a new callback.
+		* \param key Type of the callback.
+		* \param callback The new callback.
 		*/
-		void addCallback(const std::string& id, EventKey_Type key, std::function<void()> callback);
+		void addCallback(EventKey_Type key,
+						 std::function<void()> callback);
 
-		/* Remove one specific or multiple callbacks */
-		bool removeCallback(const std::string&, EventKey_Type key);
+		/**
+		 * \brief Remove one specific or multiple callbacks.
+		 * \param key The type of the callbacks to remove. 
+		 */
 		void removeCallbacksOfType(EventKey_Type key);
+		/**
+		 * \brief Remove all registered callbacks.
+		 */
 		void removeAllCallbacks();
-
-		/* Check if a certain callback is already registered */
-		bool isCallbackRegistered(const std::string& id, EventKey_Type key);
 
 	protected:
 		explicit InputListener();
 
-		/* Automatically called, when informed about an event */
+		/**
+		 * \brief Automatically called, when informed about an event.
+		 */
 		virtual void processEvent(const InputEvent& event);
-
-		//EventCallbackMap_Type m_eventCallbacks;
 
 		CallbackContainerMap_Type m_callbackContainers;
 

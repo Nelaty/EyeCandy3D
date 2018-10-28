@@ -39,8 +39,17 @@ namespace ec
 		 */
 		explicit Geometry(GLenum mode = GL_TRIANGLES, GLenum type = GL_UNSIGNED_INT);
 
+		/**
+		* \brief Called at the beginning of the rendering routine.
+		*/
 		void beginRender() override;
+		/**
+		* \brief The actual drawing of the object.
+		*/
 		void onRender() override;
+		/**
+		* \brief Called at the end of the rendering routine.
+		*/
 		void endRender() override;
 
 		GeometryData m_data;

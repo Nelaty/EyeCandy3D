@@ -4,8 +4,8 @@
 namespace ec
 {
 	/**
-	* \brief A font character holds information to a specific character of a
-	* specific font.
+	* \brief A font character holds information about a specific
+	* character of a specific font.
 	*/
 	struct EC3D_DECLSPEC FontCharacter
 	{

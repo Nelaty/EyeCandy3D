@@ -68,14 +68,14 @@ namespace ec
 		 */
 		void initAtlasTexture(FT_Face face);
 
-		/* Width and height of the texture */
-		int m_width;
-		int m_height;
+		int m_textureWidth;
+		int m_textureHeight;
 
-		/* Characters saved in the texture */
 		FontCharacter m_characters[128];
 
-		/* Max width of a font texture atlas */
+		/** 
+		 * \brief Max width of a font texture atlas.
+		 */
 		static constexpr unsigned int s_maxWidth = 128;
 	};
 }

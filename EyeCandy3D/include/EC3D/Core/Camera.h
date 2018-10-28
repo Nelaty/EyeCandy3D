@@ -61,7 +61,7 @@ namespace ec
 		void setProjectionPerspective();
 
 		/** 
-		 * \biref Set the field of view.
+		 * \brief Set the field of view.
 		 * \param fov FOV in radians 
 		 */
 		void setFov(float fov);
@@ -116,6 +116,9 @@ namespace ec
 		GuiSystem& getGuiSystem();
 
 	private:
+		/**
+		 * \brief Initialize the camera with default values.
+		 */
 		void init();
 
 		CameraType m_type;

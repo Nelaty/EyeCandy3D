@@ -38,36 +38,54 @@ namespace ec
 		* \param x X coordinate in screen coordinates.
 		* \param y Y coordinate in screen coordinate.
 		* \param sx 
+		* \param sy
+		* \param color The color of the text.
 		*/
 		void renderText(const char* text, FontTextureAtlas* atlas, 
 						float x, float y,
 						float sx, float sy,
 						const glm::vec4& color = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f)) const;
 
-		/* Add a new font face */
+		/**
+		 * \brief Add a new font face.
+		 * \param name The name of the font.
+		 * \param filepath The path to the font.
+		 */
 		void addFontFace(const std::string& name, const std::string& filepath);
 		
-		/* Add a new texture atlas */
+		/**
+		 * \brief Add a new texture atlas.
+		 * \param face The font to use.
+		 * \param size The size of characters.
+		 */
 		void addFontTextureAtlas(const std::string& face, unsigned int size);
 
-		/* Try to get a existent FontTextureAtlas by name */
+		/**
+		 * \brief Try to get a existent FontTextureAtlas by name.
+		 * \param name The name of the atlas.
+		 * \return The atlas if it was found, nullptr otherwise.
+		 */
 		FontTextureAtlas* getFontTextureAtlas(const std::string& name);
 
 	private:
-		/* Initialization */
+		/**
+		 * \brief Initialize th freetype library.
+		 */
 		void initFreetype();
 
-		/* Shader used for rendering text */
+		/**
+		 * \brief Shader used for rendering text.
+		 */
 		Shader* m_textShader;
 
 		/* Vertex data */
-		GLuint m_VBO;
-		GLuint m_VAO;
+		GLuint m_vbo;
+		GLuint m_vao;
 
 		/* Uniform location */
-		GLuint m_posUV;
-		GLuint m_colorIN;
-		GLuint m_texture;
+		GLuint m_uvPosLocation;
+		GLuint m_colorLocation;
+		GLuint m_textureLocation;
 
 		/* FTLibrary, FTFaces and atlases */
 		FT_Library m_ftLib;

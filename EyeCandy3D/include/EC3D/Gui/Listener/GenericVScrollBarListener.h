@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by
+	 * VScrollBar widgets.
+	 */
 	class GenericVScrollBarListener : public agui::VScrollBarListener
 	{
 	public:

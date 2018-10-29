@@ -1,3 +1,3 @@
 <map id="ec::SceneController" name="ec::SceneController">
-<area shape="rect" id="node2" href="$classec_1_1_input_listener.html" title="{ec::InputListener\n||+ ~InputListener()\l+ inform()\l+ enable()\l+ isEnabled()\l+ addCallback()\l+ removeCallback()\l+ removeCallbacksOfType()\l+ removeAllCallbacks()\l+ isCallbackRegistered()\l# InputListener()\l# processEvent()\l}" alt="" coords="100,175,281,399"/>
+<area shape="rect" id="node2" href="$classec_1_1_input_listener.html" title="An InputListener can react on incoming events. It can either be used as a base class or be filled wit..." alt="" coords="100,175,281,369"/>
 </map>

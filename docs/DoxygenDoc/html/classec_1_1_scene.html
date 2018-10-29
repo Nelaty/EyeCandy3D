@@ -75,53 +75,70 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A scene enables an easy switching of root nodes.  
+ <a href="classec_1_1_scene.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_scene_8h_source.html">Scene.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for ec::Scene:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_scene__coll__graph.png" border="0" usemap="#ec_1_1_scene_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_scene_coll__map" id="ec_1_1_scene_coll__map">
-<area shape="rect" id="node3" href="classec_1_1_scene_system.html" title="{ec::SceneSystem\n||+ SceneSystem()\l+ ~SceneSystem()\l+ tick()\l+ registerScene()\l+ unregisterScene()\l+ getScene()\l+ addSceneController()\l+ removeSceneController()\l+ getSceneController()\l+ getWindow()\l}" alt="" coords="188,483,363,693"/>
-<area shape="rect" id="node4" href="classec_1_1_scene_controller.html" title="{ec::SceneController\n||+ SceneController()\l+ ~SceneController()\l+ getName()\l}" alt="" coords="387,535,529,641"/>
-<area shape="rect" id="node5" href="classec_1_1_input_listener.html" title="{ec::InputListener\n||+ ~InputListener()\l+ inform()\l+ enable()\l+ isEnabled()\l+ addCallback()\l+ removeCallback()\l+ removeCallbacksOfType()\l+ removeAllCallbacks()\l+ isCallbackRegistered()\l# InputListener()\l# processEvent()\l}" alt="" coords="358,175,539,399"/>
-<area shape="rect" id="node9" href="classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ tick()\l+ render()\l+ setScene()\l+ getScene()\l+ getFrame()\l+ getFrame()\l+ setFrame()\l+ addRenderingTarget()\l# onBeginRender()\l# onRender()\l# onEndRender()\l}" alt="" coords="694,461,851,715"/>
+<area shape="rect" id="node3" href="classec_1_1_scene_system.html" title="{ec::SceneSystem\n||+ SceneSystem()\l+ ~SceneSystem()\l+ tick()\l+ registerScene()\l+ unregisterScene()\l+ getScene()\l+ addSceneController()\l+ removeSceneController()\l+ getSceneController()\l+ getWindow()\l}" alt="" coords="188,454,363,663"/>
+<area shape="rect" id="node4" href="classec_1_1_scene_controller.html" title="{ec::SceneController\n||+ SceneController()\l+ ~SceneController()\l+ getName()\l}" alt="" coords="387,505,529,612"/>
+<area shape="rect" id="node5" href="classec_1_1_input_listener.html" title="An InputListener can react on incoming events. It can either be used as a base class or be filled wit..." alt="" coords="358,175,539,369"/>
+<area shape="rect" id="node9" href="classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ tick()\l+ render()\l+ setScene()\l+ getScene()\l+ getFrame()\l+ getFrame()\l+ setFrame()\l+ addRenderingTarget()\l# onBeginRender()\l# onRender()\l# onEndRender()\l}" alt="" coords="694,432,851,685"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9abac0a0de42ff4e9eb6481cf1927754"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a9abac0a0de42ff4e9eb6481cf1927754">Scene</a> (std::string name)</td></tr>
+<tr class="memdesc:a9abac0a0de42ff4e9eb6481cf1927754"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classec_1_1_scene.html" title="A scene enables an easy switching of root nodes. ">Scene</a> constructor.  <a href="#a9abac0a0de42ff4e9eb6481cf1927754">More...</a><br /></td></tr>
 <tr class="separator:a9abac0a0de42ff4e9eb6481cf1927754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25e849d1bd5a9a71af922c3668115cb6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a25e849d1bd5a9a71af922c3668115cb6">~Scene</a> ()</td></tr>
 <tr class="separator:a25e849d1bd5a9a71af922c3668115cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09deb945a2c8255d70a68b0aaddaecb6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a09deb945a2c8255d70a68b0aaddaecb6">tick</a> (float timeDelta)</td></tr>
+<tr class="memdesc:a09deb945a2c8255d70a68b0aaddaecb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update routine.  <a href="#a09deb945a2c8255d70a68b0aaddaecb6">More...</a><br /></td></tr>
 <tr class="separator:a09deb945a2c8255d70a68b0aaddaecb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24c00d38f3b17123f10f02ff77830f62"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a24c00d38f3b17123f10f02ff77830f62">getName</a> () const</td></tr>
+<tr class="memdesc:a24c00d38f3b17123f10f02ff77830f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the scene.  <a href="#a24c00d38f3b17123f10f02ff77830f62">More...</a><br /></td></tr>
 <tr class="separator:a24c00d38f3b17123f10f02ff77830f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef77276f4a386c5b66159ecb1d4d072c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#aef77276f4a386c5b66159ecb1d4d072c">getRoot</a> () const</td></tr>
+<tr class="memdesc:aef77276f4a386c5b66159ecb1d4d072c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the root node.  <a href="#aef77276f4a386c5b66159ecb1d4d072c">More...</a><br /></td></tr>
 <tr class="separator:aef77276f4a386c5b66159ecb1d4d072c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c3bc6848957704f9f45508c13133a91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a8c3bc6848957704f9f45508c13133a91">setSceneController</a> (<a class="el" href="classec_1_1_scene_controller.html">SceneController</a> *sceneController)</td></tr>
+<tr class="memdesc:a8c3bc6848957704f9f45508c13133a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current scene controller.  <a href="#a8c3bc6848957704f9f45508c13133a91">More...</a><br /></td></tr>
 <tr class="separator:a8c3bc6848957704f9f45508c13133a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad562a16db4552e529af7284de0b79304"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_controller.html">SceneController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#ad562a16db4552e529af7284de0b79304">getSceneController</a> () const</td></tr>
+<tr class="memdesc:ad562a16db4552e529af7284de0b79304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current scene controller.  <a href="#ad562a16db4552e529af7284de0b79304">More...</a><br /></td></tr>
 <tr class="separator:ad562a16db4552e529af7284de0b79304"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a000b3820dfcf578ed80bae3bf5f432"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a4a000b3820dfcf578ed80bae3bf5f432">setSceneRenderer</a> (const <a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> &amp;sceneRenderer)</td></tr>
+<tr class="memdesc:a4a000b3820dfcf578ed80bae3bf5f432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current scene renderer.  <a href="#a4a000b3820dfcf578ed80bae3bf5f432">More...</a><br /></td></tr>
 <tr class="separator:a4a000b3820dfcf578ed80bae3bf5f432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f48395e9442f3e6647dd9503050b91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a73f48395e9442f3e6647dd9503050b91">getSceneRenderer</a> ()</td></tr>
+<tr class="memdesc:a73f48395e9442f3e6647dd9503050b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current scene renderer.  <a href="#a73f48395e9442f3e6647dd9503050b91">More...</a><br /></td></tr>
 <tr class="separator:a73f48395e9442f3e6647dd9503050b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87a6277fea206956c0a7175cf308ece0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a87a6277fea206956c0a7175cf308ece0">setSceneSystem</a> (<a class="el" href="classec_1_1_scene_system.html">SceneSystem</a> *sceneSystem)</td></tr>
+<tr class="memdesc:a87a6277fea206956c0a7175cf308ece0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the scene system, in which the scene is contained.  <a href="#a87a6277fea206956c0a7175cf308ece0">More...</a><br /></td></tr>
 <tr class="separator:a87a6277fea206956c0a7175cf308ece0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95b79ca1dc856cb50262ab4b9e72465f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_system.html">SceneSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a95b79ca1dc856cb50262ab4b9e72465f">getSceneSystem</a> () const</td></tr>
+<tr class="memdesc:a95b79ca1dc856cb50262ab4b9e72465f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the scene system, in which the scene is contained.  <a href="#a95b79ca1dc856cb50262ab4b9e72465f">More...</a><br /></td></tr>
 <tr class="separator:a95b79ca1dc856cb50262ab4b9e72465f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1788ac3be0db2d82ee2f8c5fa0cecef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#ab1788ac3be0db2d82ee2f8c5fa0cecef">enable</a> ()</td></tr>
+<tr class="memdesc:ab1788ac3be0db2d82ee2f8c5fa0cecef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable this scene.  <a href="#ab1788ac3be0db2d82ee2f8c5fa0cecef">More...</a><br /></td></tr>
 <tr class="separator:ab1788ac3be0db2d82ee2f8c5fa0cecef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05bf59f23abb809000ad17bdb00cab94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a05bf59f23abb809000ad17bdb00cab94">disable</a> ()</td></tr>
+<tr class="memdesc:a05bf59f23abb809000ad17bdb00cab94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable this scene.  <a href="#a05bf59f23abb809000ad17bdb00cab94">More...</a><br /></td></tr>
 <tr class="separator:a05bf59f23abb809000ad17bdb00cab94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0748d645ee5204e64d674c1b10b26864"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a0748d645ee5204e64d674c1b10b26864">isEnabled</a> () const</td></tr>
+<tr class="memdesc:a0748d645ee5204e64d674c1b10b26864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this scene is enabled.  <a href="#a0748d645ee5204e64d674c1b10b26864">More...</a><br /></td></tr>
 <tr class="separator:a0748d645ee5204e64d674c1b10b26864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a137505b25a213810b1b477ad13daca7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a137505b25a213810b1b477ad13daca7f">initSceneRenderer</a> ()</td></tr>
+<tr class="memdesc:a137505b25a213810b1b477ad13daca7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a scene renderer for this scene.  <a href="#a137505b25a213810b1b477ad13daca7f">More...</a><br /></td></tr>
 <tr class="separator:a137505b25a213810b1b477ad13daca7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -139,7 +156,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aa6a8f71066fc44162b1c80341840d5fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_controller.html">SceneController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#aa6a8f71066fc44162b1c80341840d5fb">m_sceneController</a> = nullptr</td></tr>
 <tr class="separator:aa6a8f71066fc44162b1c80341840d5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A scene enables an easy switching of root nodes. </p>
+<p>It is possible to define an own scene controller, to influence a scene through user input. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9abac0a0de42ff4e9eb6481cf1927754"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9abac0a0de42ff4e9eb6481cf1927754">&#9670;&nbsp;</a></span>Scene()</h2>
 
@@ -163,6 +183,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classec_1_1_scene.html" title="A scene enables an easy switching of root nodes. ">Scene</a> constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the scene. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -206,7 +234,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Disable this scene </p>
+
+<p>Disable this scene. </p>
 
 </div>
 </div>
@@ -224,7 +253,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Enable this scene </p>
+
+<p>Enable this scene. </p>
 
 </div>
 </div>
@@ -243,6 +273,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the name of the scene. </p>
+
 </div>
 </div>
 <a id="aef77276f4a386c5b66159ecb1d4d072c"></a>
@@ -259,6 +291,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the root node. </p>
 
 </div>
 </div>
@@ -277,6 +311,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the current scene controller. </p>
+
 </div>
 </div>
 <a id="a73f48395e9442f3e6647dd9503050b91"></a>
@@ -294,6 +330,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the current scene renderer. </p>
+
 </div>
 </div>
 <a id="a95b79ca1dc856cb50262ab4b9e72465f"></a>
@@ -310,6 +348,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the scene system, in which the scene is contained. </p>
 
 </div>
 </div>
@@ -336,6 +376,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Create a scene renderer for this scene. </p>
+
 </div>
 </div>
 <a id="a0748d645ee5204e64d674c1b10b26864"></a>
@@ -352,7 +394,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if this scene is enabled </p>
+
+<p>Check if this scene is enabled. </p>
 
 </div>
 </div>
@@ -372,6 +415,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the current scene controller. </p>
+
 </div>
 </div>
 <a id="a4a000b3820dfcf578ed80bae3bf5f432"></a>
@@ -390,6 +435,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the current scene renderer. </p>
+
 </div>
 </div>
 <a id="a87a6277fea206956c0a7175cf308ece0"></a>
@@ -407,6 +454,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the scene system, in which the scene is contained. </p>
 
 </div>
 </div>
@@ -433,6 +482,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Update routine. </p>
 
 </div>
 </div>
@@ -570,8 +621,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_scene_8h_source.html">Scene.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_scene_8cpp.html">Scene.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_scene_8h_source.html">Scene.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_scene_8cpp.html">Scene.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

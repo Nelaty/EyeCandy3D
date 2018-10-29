@@ -1,8 +1,8 @@
 <map id="ec::Light" name="ec::Light">
 <area shape="rect" id="node4" href="$classec_1_1_directional_light.html" title="A light source that emits light in a given direction independently of its position. " alt="" coords="5,887,144,994"/>
-<area shape="rect" id="node5" href="$classec_1_1_omni_light.html" title="{ec::OmniLight\n||+ OmniLight()\l+ ~OmniLight()\l}" alt="" coords="168,895,277,987"/>
-<area shape="rect" id="node6" href="$classec_1_1_point_light.html" title="{ec::PointLight\n||+ PointLight()\l+ ~PointLight()\l+ setFalloff()\l+ getFalloff()\l}" alt="" coords="302,880,410,1001"/>
+<area shape="rect" id="node5" href="$classec_1_1_omni_light.html" title="Ambient lighting that acts everywhere. " alt="" coords="168,895,277,987"/>
+<area shape="rect" id="node6" href="$classec_1_1_point_light.html" title="Light source, which emits light omnidirectional from a given position. " alt="" coords="302,880,410,1001"/>
 <area shape="rect" id="node7" href="$classec_1_1_spot_light.html" title="{ec::SpotLight\n||+ SpotLight()\l+ ~SpotLight()\l+ getDirection()\l+ setHalfAngles()\l+ setHalfAngles()\l+ getHalfAngles()\l}" alt="" coords="435,865,557,1016"/>
-<area shape="rect" id="node2" href="$classec_1_1_node.html" title="{ec::Node\n|# m_parent\l# m_children\l# m_drawables\l|+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="205,321,373,575"/>
+<area shape="rect" id="node2" href="$classec_1_1_node.html" title="Nodes make up the scene graph. They represent a directed acyclic graph. " alt="" coords="205,321,373,575"/>
 <area shape="rect" id="node3" href="$classec_1_1_transform3_d.html" title="{ec::Transform3D\n|# m_up\l# m_position\l# m_forwardVector\l# m_scale\l|+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getUpVector()\l+ getForwardVector()\l+ getLocalMat()\l+ setLocalMat()\l+ getTranslation()\l+ getTranslationX()\land 39 more...\l}" alt="" coords="217,5,361,273"/>
 </map>

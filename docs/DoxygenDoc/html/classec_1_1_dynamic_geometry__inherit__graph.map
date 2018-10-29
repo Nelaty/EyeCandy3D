@@ -2,5 +2,5 @@
 <area shape="rect" id="node4" href="$classec_1_1_dynamic_line_geometry.html" title="Line geometry that adapts to a given start and end point. " alt="" coords="5,645,188,899"/>
 <area shape="rect" id="node5" href="$classec_1_1_spring_geometry.html" title="{ec::SpringGeometry\n||+ SpringGeometry()\l+ ~SpringGeometry()\l}" alt="" coords="213,726,357,818"/>
 <area shape="rect" id="node2" href="$classec_1_1_geometry.html" title="Geometry. " alt="" coords="113,204,267,428"/>
-<area shape="rect" id="node3" href="$classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="113,5,267,156"/>
+<area shape="rect" id="node3" href="$classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry. " alt="" coords="113,5,267,156"/>
 </map>

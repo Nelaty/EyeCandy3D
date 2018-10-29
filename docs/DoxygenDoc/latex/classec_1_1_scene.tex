@@ -2,6 +2,11 @@
 \label{classec_1_1_scene}\index{ec\+::\+Scene@{ec\+::\+Scene}}
 
 
+A scene enables an easy switching of root nodes.  
+
+
+
+
 {\ttfamily \#include $<$Scene.\+h$>$}
 
 
@@ -17,38 +22,38 @@ Collaboration diagram for ec\+:\+:Scene\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classec_1_1_scene_a9abac0a0de42ff4e9eb6481cf1927754}{Scene}} (std\+::string name)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_scene}{Scene}} constructor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classec_1_1_scene_a25e849d1bd5a9a71af922c3668115cb6}{$\sim$\+Scene}} ()
 \item 
 virtual void \mbox{\hyperlink{classec_1_1_scene_a09deb945a2c8255d70a68b0aaddaecb6}{tick}} (float time\+Delta)
-\item 
+\begin{DoxyCompactList}\small\item\em Update routine. \end{DoxyCompactList}\item 
 const std\+::string \& \mbox{\hyperlink{classec_1_1_scene_a24c00d38f3b17123f10f02ff77830f62}{get\+Name}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the name of the scene. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_aef77276f4a386c5b66159ecb1d4d072c}{get\+Root}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the root node. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_scene_a8c3bc6848957704f9f45508c13133a91}{set\+Scene\+Controller}} (\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$scene\+Controller)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the current scene controller. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_ad562a16db4552e529af7284de0b79304}{get\+Scene\+Controller}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the current scene controller. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_scene_a4a000b3820dfcf578ed80bae3bf5f432}{set\+Scene\+Renderer}} (const \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \&scene\+Renderer)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the current scene renderer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \& \mbox{\hyperlink{classec_1_1_scene_a73f48395e9442f3e6647dd9503050b91}{get\+Scene\+Renderer}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get the current scene renderer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_scene_a87a6277fea206956c0a7175cf308ece0}{set\+Scene\+System}} (\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$scene\+System)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the scene system, in which the scene is contained. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_a95b79ca1dc856cb50262ab4b9e72465f}{get\+Scene\+System}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the scene system, in which the scene is contained. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_scene_ab1788ac3be0db2d82ee2f8c5fa0cecef}{enable}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Enable this scene. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_scene_a05bf59f23abb809000ad17bdb00cab94}{disable}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Disable this scene. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_scene_a0748d645ee5204e64d674c1b10b26864}{is\+Enabled}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if this scene is enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classec_1_1_scene_a137505b25a213810b1b477ad13daca7f}{init\+Scene\+Renderer}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Create a scene renderer for this scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -66,6 +71,11 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_node}{Node}} $>$ \mbox{\h
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+A scene enables an easy switching of root nodes. 
+
+It is possible to define an own scene controller, to influence a scene through user input. 
+
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classec_1_1_scene_a9abac0a0de42ff4e9eb6481cf1927754}\label{classec_1_1_scene_a9abac0a0de42ff4e9eb6481cf1927754}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!Scene@{Scene}}
@@ -73,6 +83,15 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_node}{Node}} $>$ \mbox{\h
 \subsubsection{\texorpdfstring{Scene()}{Scene()}}
 {\footnotesize\ttfamily ec\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+
+
+\mbox{\hyperlink{classec_1_1_scene}{Scene}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the scene. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classec_1_1_scene_a25e849d1bd5a9a71af922c3668115cb6}\label{classec_1_1_scene_a25e849d1bd5a9a71af922c3668115cb6}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!````~Scene@{$\sim$\+Scene}}
 \index{````~Scene@{$\sim$\+Scene}!ec\+::\+Scene@{ec\+::\+Scene}}
@@ -88,17 +107,29 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_node}{Node}} $>$ \mbox{\h
 \subsubsection{\texorpdfstring{disable()}{disable()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Disable this scene \mbox{\Hypertarget{classec_1_1_scene_ab1788ac3be0db2d82ee2f8c5fa0cecef}\label{classec_1_1_scene_ab1788ac3be0db2d82ee2f8c5fa0cecef}} 
+
+
+Disable this scene. 
+
+\mbox{\Hypertarget{classec_1_1_scene_ab1788ac3be0db2d82ee2f8c5fa0cecef}\label{classec_1_1_scene_ab1788ac3be0db2d82ee2f8c5fa0cecef}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!enable@{enable}}
 \index{enable@{enable}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{enable()}{enable()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Enable this scene \mbox{\Hypertarget{classec_1_1_scene_a24c00d38f3b17123f10f02ff77830f62}\label{classec_1_1_scene_a24c00d38f3b17123f10f02ff77830f62}} 
+
+
+Enable this scene. 
+
+\mbox{\Hypertarget{classec_1_1_scene_a24c00d38f3b17123f10f02ff77830f62}\label{classec_1_1_scene_a24c00d38f3b17123f10f02ff77830f62}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!get\+Name@{get\+Name}}
 \index{get\+Name@{get\+Name}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{get\+Name()}{getName()}}
 {\footnotesize\ttfamily const std\+::string \& ec\+::\+Scene\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the name of the scene. 
 
 \mbox{\Hypertarget{classec_1_1_scene_aef77276f4a386c5b66159ecb1d4d072c}\label{classec_1_1_scene_aef77276f4a386c5b66159ecb1d4d072c}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!get\+Root@{get\+Root}}
@@ -106,11 +137,19 @@ Enable this scene \mbox{\Hypertarget{classec_1_1_scene_a24c00d38f3b17123f10f02ff
 \subsubsection{\texorpdfstring{get\+Root()}{getRoot()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_node}{ec\+::\+Node}} $\ast$ ec\+::\+Scene\+::get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the root node. 
+
 \mbox{\Hypertarget{classec_1_1_scene_ad562a16db4552e529af7284de0b79304}\label{classec_1_1_scene_ad562a16db4552e529af7284de0b79304}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!get\+Scene\+Controller@{get\+Scene\+Controller}}
 \index{get\+Scene\+Controller@{get\+Scene\+Controller}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{get\+Scene\+Controller()}{getSceneController()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_controller}{ec\+::\+Scene\+Controller}} $\ast$ ec\+::\+Scene\+::get\+Scene\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current scene controller. 
 
 \mbox{\Hypertarget{classec_1_1_scene_a73f48395e9442f3e6647dd9503050b91}\label{classec_1_1_scene_a73f48395e9442f3e6647dd9503050b91}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!get\+Scene\+Renderer@{get\+Scene\+Renderer}}
@@ -118,11 +157,19 @@ Enable this scene \mbox{\Hypertarget{classec_1_1_scene_a24c00d38f3b17123f10f02ff
 \subsubsection{\texorpdfstring{get\+Scene\+Renderer()}{getSceneRenderer()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_renderer}{ec\+::\+Scene\+Renderer}} \& ec\+::\+Scene\+::get\+Scene\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Get the current scene renderer. 
+
 \mbox{\Hypertarget{classec_1_1_scene_a95b79ca1dc856cb50262ab4b9e72465f}\label{classec_1_1_scene_a95b79ca1dc856cb50262ab4b9e72465f}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!get\+Scene\+System@{get\+Scene\+System}}
 \index{get\+Scene\+System@{get\+Scene\+System}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{get\+Scene\+System()}{getSceneSystem()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_system}{ec\+::\+Scene\+System}} $\ast$ ec\+::\+Scene\+::get\+Scene\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the scene system, in which the scene is contained. 
 
 \mbox{\Hypertarget{classec_1_1_scene_a137505b25a213810b1b477ad13daca7f}\label{classec_1_1_scene_a137505b25a213810b1b477ad13daca7f}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!init\+Scene\+Renderer@{init\+Scene\+Renderer}}
@@ -130,17 +177,29 @@ Enable this scene \mbox{\Hypertarget{classec_1_1_scene_a24c00d38f3b17123f10f02ff
 \subsubsection{\texorpdfstring{init\+Scene\+Renderer()}{initSceneRenderer()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+::init\+Scene\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+Create a scene renderer for this scene. 
+
 \mbox{\Hypertarget{classec_1_1_scene_a0748d645ee5204e64d674c1b10b26864}\label{classec_1_1_scene_a0748d645ee5204e64d674c1b10b26864}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!is\+Enabled@{is\+Enabled}}
 \index{is\+Enabled@{is\+Enabled}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{is\+Enabled()}{isEnabled()}}
 {\footnotesize\ttfamily bool ec\+::\+Scene\+::is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Check if this scene is enabled \mbox{\Hypertarget{classec_1_1_scene_a8c3bc6848957704f9f45508c13133a91}\label{classec_1_1_scene_a8c3bc6848957704f9f45508c13133a91}} 
+
+
+Check if this scene is enabled. 
+
+\mbox{\Hypertarget{classec_1_1_scene_a8c3bc6848957704f9f45508c13133a91}\label{classec_1_1_scene_a8c3bc6848957704f9f45508c13133a91}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!set\+Scene\+Controller@{set\+Scene\+Controller}}
 \index{set\+Scene\+Controller@{set\+Scene\+Controller}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{set\+Scene\+Controller()}{setSceneController()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+::set\+Scene\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$}]{scene\+Controller }\end{DoxyParamCaption})}
+
+
+
+Set the current scene controller. 
 
 \mbox{\Hypertarget{classec_1_1_scene_a4a000b3820dfcf578ed80bae3bf5f432}\label{classec_1_1_scene_a4a000b3820dfcf578ed80bae3bf5f432}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!set\+Scene\+Renderer@{set\+Scene\+Renderer}}
@@ -148,17 +207,29 @@ Check if this scene is enabled \mbox{\Hypertarget{classec_1_1_scene_a8c3bc684895
 \subsubsection{\texorpdfstring{set\+Scene\+Renderer()}{setSceneRenderer()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+::set\+Scene\+Renderer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} \&}]{scene\+Renderer }\end{DoxyParamCaption})}
 
+
+
+Set the current scene renderer. 
+
 \mbox{\Hypertarget{classec_1_1_scene_a87a6277fea206956c0a7175cf308ece0}\label{classec_1_1_scene_a87a6277fea206956c0a7175cf308ece0}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!set\+Scene\+System@{set\+Scene\+System}}
 \index{set\+Scene\+System@{set\+Scene\+System}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{set\+Scene\+System()}{setSceneSystem()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+::set\+Scene\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene_system}{Scene\+System}} $\ast$}]{scene\+System }\end{DoxyParamCaption})}
 
+
+
+Set the scene system, in which the scene is contained. 
+
 \mbox{\Hypertarget{classec_1_1_scene_a09deb945a2c8255d70a68b0aaddaecb6}\label{classec_1_1_scene_a09deb945a2c8255d70a68b0aaddaecb6}} 
 \index{ec\+::\+Scene@{ec\+::\+Scene}!tick@{tick}}
 \index{tick@{tick}!ec\+::\+Scene@{ec\+::\+Scene}}
 \subsubsection{\texorpdfstring{tick()}{tick()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+::tick (\begin{DoxyParamCaption}\item[{float}]{time\+Delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update routine. 
 
 
 
@@ -203,5 +274,5 @@ Check if this scene is enabled \mbox{\Hypertarget{classec_1_1_scene_a8c3bc684895
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_scene_8h}{Scene.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_scene_8h}{Scene.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}

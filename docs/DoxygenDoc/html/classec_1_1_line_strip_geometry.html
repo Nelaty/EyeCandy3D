@@ -73,6 +73,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Describes the geometry of a line strip.  
+ <a href="classec_1_1_line_strip_geometry.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_line_strip_geometry_8h_source.html">LineStripGeometry.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ec::LineStripGeometry:</div>
@@ -81,7 +84,7 @@ Inheritance diagram for ec::LineStripGeometry:</div>
 <map name="ec_1_1_line_strip_geometry_inherit__map" id="ec_1_1_line_strip_geometry_inherit__map">
 <area shape="rect" id="node2" href="classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n||+ ~StaticGeometry()\l# setupMesh()\l# StaticGeometry()\l}" alt="" coords="14,476,155,583"/>
 <area shape="rect" id="node3" href="classec_1_1_geometry.html" title="Geometry. " alt="" coords="8,204,161,428"/>
-<area shape="rect" id="node4" href="classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="7,5,162,156"/>
+<area shape="rect" id="node4" href="classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry. " alt="" coords="7,5,162,156"/>
 </map>
 </div>
 <div class="dynheader">
@@ -91,8 +94,8 @@ Collaboration diagram for ec::LineStripGeometry:</div>
 <map name="ec_1_1_line_strip_geometry_coll__map" id="ec_1_1_line_strip_geometry_coll__map">
 <area shape="rect" id="node2" href="classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n||+ ~StaticGeometry()\l# setupMesh()\l# StaticGeometry()\l}" alt="" coords="67,764,208,871"/>
 <area shape="rect" id="node3" href="classec_1_1_geometry.html" title="Geometry. " alt="" coords="61,491,214,715"/>
-<area shape="rect" id="node4" href="classec_1_1_i_geometry_access.html" title="{ec::IGeometryAccess\n||+ ~IGeometryAccess()\l+ render()\l# beginRender()\l# onRender()\l# endRender()\l# IGeometryAccess()\l}" alt="" coords="5,211,160,362"/>
-<area shape="rect" id="node5" href="classec_1_1_geometry_data.html" title="{ec::GeometryData\n||+ GeometryData()\l+ ~GeometryData()\l+ bind()\l+ unbind()\l+ resizeBuffers()\l+ initBufferObjects()\l+ buffersInitialized()\l+ releaseMemory()\l+ updateVertexData()\l+ updateIndexData()\l+ update()\l+ getUsage()\l+ getVao()\l+ getVbo()\l+ getEbo()\l}" alt="" coords="184,145,331,428"/>
+<area shape="rect" id="node4" href="classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry. " alt="" coords="5,211,160,362"/>
+<area shape="rect" id="node5" href="classec_1_1_geometry_data.html" title="Encapsulates vertex and index data and knows how to create, update and delete OpenGL buffers..." alt="" coords="184,145,331,428"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -103,12 +106,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2fcbc3ebbd2318f00da14dbf7a2c87f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_line_strip_geometry.html#a2fcbc3ebbd2318f00da14dbf7a2c87f3">~LineStripGeometry</a> ()</td></tr>
 <tr class="separator:a2fcbc3ebbd2318f00da14dbf7a2c87f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dac12c33ec187961ba4ac1573d718a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_line_strip_geometry.html#a8dac12c33ec187961ba4ac1573d718a5">init</a> ()</td></tr>
+<tr class="memdesc:a8dac12c33ec187961ba4ac1573d718a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needs to be called after all vertices have been added.  <a href="#a8dac12c33ec187961ba4ac1573d718a5">More...</a><br /></td></tr>
 <tr class="separator:a8dac12c33ec187961ba4ac1573d718a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaf125f40af2b979e4b3af3939bb0a0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_line_strip_geometry.html#abaf125f40af2b979e4b3af3939bb0a0e">reset</a> ()</td></tr>
+<tr class="memdesc:abaf125f40af2b979e4b3af3939bb0a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the temporary point list.  <a href="#abaf125f40af2b979e4b3af3939bb0a0e">More...</a><br /></td></tr>
 <tr class="separator:abaf125f40af2b979e4b3af3939bb0a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a185da594a28585dabc17874a59cfe7ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_line_strip_geometry.html#a185da594a28585dabc17874a59cfe7ef">addVertex</a> (const glm::vec3 &amp;vertex)</td></tr>
+<tr class="memdesc:a185da594a28585dabc17874a59cfe7ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new point to this line strip.  <a href="#a185da594a28585dabc17874a59cfe7ef">More...</a><br /></td></tr>
 <tr class="separator:a185da594a28585dabc17874a59cfe7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2649268027055ff190efb0efdc5768a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_line_strip_geometry.html#a2649268027055ff190efb0efdc5768a4">setData</a> (glm::vec3 *vertices, int <a class="el" href="namespaceec.html#a30e2a743ebdeb02ac68a6cfa50f629c7ae2942a04780e223b215eb8b663cf5353">count</a>)</td></tr>
+<tr class="memdesc:a2649268027055ff190efb0efdc5768a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current point data. Removes existing points.  <a href="#a2649268027055ff190efb0efdc5768a4">More...</a><br /></td></tr>
 <tr class="separator:a2649268027055ff190efb0efdc5768a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b78bf56551a9536f5a2dace78ce4fcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_line_strip_geometry.html#a8b78bf56551a9536f5a2dace78ce4fcd">recalculateNormals</a> () override</td></tr>
 <tr class="memdesc:a8b78bf56551a9536f5a2dace78ce4fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate vertex normals.  <a href="#a8b78bf56551a9536f5a2dace78ce4fcd">More...</a><br /></td></tr>
@@ -168,7 +175,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:aeb72a472b242d92496f0283cfee17fac inherit pro_attribs_classec_1_1_geometry"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_geometry_data.html">GeometryData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_geometry.html#aeb72a472b242d92496f0283cfee17fac">m_data</a></td></tr>
 <tr class="separator:aeb72a472b242d92496f0283cfee17fac inherit pro_attribs_classec_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Describes the geometry of a line strip. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad93597cb912f407b6e7be3f3d377cc4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad93597cb912f407b6e7be3f3d377cc4d">&#9670;&nbsp;</a></span>LineStripGeometry()</h2>
 
@@ -235,7 +244,9 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add a new point to this line strip. The first two points define the first section. Each other point builds another line with its predecessor. </p>
+
+<p>Add a new point to this line strip. </p>
+<p>The first two points define the first section. Each other point builds another line with its predecessor. </p>
 
 </div>
 </div>
@@ -253,6 +264,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Needs to be called after all vertices have been added. </p>
 
 </div>
@@ -300,7 +312,9 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Clear the temporary point list. This does not affect the existing geometry until init is called! </p>
+
+<p>Clear the temporary point list. </p>
+<p>This does not affect the existing geometry until init is called! </p>
 
 </div>
 </div>
@@ -329,13 +343,14 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Set the current point data. Removes existing points. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_line_strip_geometry_8h_source.html">LineStripGeometry.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_line_strip_geometry_8cpp.html">LineStripGeometry.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_line_strip_geometry_8h_source.html">LineStripGeometry.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_line_strip_geometry_8cpp.html">LineStripGeometry.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

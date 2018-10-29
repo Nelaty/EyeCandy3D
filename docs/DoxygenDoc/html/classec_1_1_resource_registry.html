@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>EyeCandy3D: ec::ResourceRegistry&lt; Resource &gt; Class Template Reference</title>
+<title>EyeCandy3D: ec::ResourceRegistry&lt; Resource_Type, Key_Type &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,79 +70,99 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classec_1_1_resource_registry-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ec::ResourceRegistry&lt; Resource &gt; Class Template Reference</div>  </div>
+<div class="title">ec::ResourceRegistry&lt; Resource_Type, Key_Type &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>Templated registry that stores key value pairs.  
+ <a href="classec_1_1_resource_registry.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_resource_registry_8h_source.html">ResourceRegistry.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for ec::ResourceRegistry&lt; Resource &gt;:</div>
+Inheritance diagram for ec::ResourceRegistry&lt; Resource_Type, Key_Type &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classec_1_1_resource_registry__inherit__graph.png" border="0" usemap="#ec_1_1_resource_registry_3_01_resource_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="ec_1_1_resource_registry_3_01_resource_01_4_inherit__map" id="ec_1_1_resource_registry_3_01_resource_01_4_inherit__map">
-<area shape="rect" id="node2" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Drawable \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="5,248,160,428"/>
-<area shape="rect" id="node3" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Geometry \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="184,248,339,428"/>
-<area shape="rect" id="node4" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Material \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="363,248,517,428"/>
-<area shape="rect" id="node5" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Texture \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="541,248,696,428"/>
+<div class="center"><img src="classec_1_1_resource_registry__inherit__graph.png" border="0" usemap="#ec_1_1_resource_registry_3_01_resource___type_00_01_key___type_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="ec_1_1_resource_registry_3_01_resource___type_00_01_key___type_01_4_inherit__map" id="ec_1_1_resource_registry_3_01_resource___type_00_01_key___type_01_4_inherit__map">
+<area shape="rect" id="node2" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Drawable \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="5,263,160,443"/>
+<area shape="rect" id="node3" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Geometry \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="184,263,339,443"/>
+<area shape="rect" id="node4" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Material \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="363,263,517,443"/>
+<area shape="rect" id="node5" href="classec_1_1_resource_registry.html" title="{ec::ResourceRegistry\l\&lt; ec::Texture \&gt;\n||+ ResourceRegistry()\l+ ~ResourceRegistry()\l+ registerResource()\l+ unregisterResource()\l+ getResource()\l+ isRegistered()\l+ isRegistered()\l}" alt="" coords="541,263,696,443"/>
 </map>
 </div>
 <div class="dynheader">
-Collaboration diagram for ec::ResourceRegistry&lt; Resource &gt;:</div>
+Collaboration diagram for ec::ResourceRegistry&lt; Resource_Type, Key_Type &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classec_1_1_resource_registry__coll__graph.png" border="0" usemap="#ec_1_1_resource_registry_3_01_resource_01_4_coll__map" alt="Collaboration graph"/></div>
+<div class="center"><img src="classec_1_1_resource_registry__coll__graph.png" border="0" usemap="#ec_1_1_resource_registry_3_01_resource___type_00_01_key___type_01_4_coll__map" alt="Collaboration graph"/></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a77cf5381229bff47d251603c783115fe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a77cf5381229bff47d251603c783115fe">Resource_Ptr</a> = Resource *</td></tr>
-<tr class="separator:a77cf5381229bff47d251603c783115fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a2b5090a2bbc638a04a2c283812b956"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a0a2b5090a2bbc638a04a2c283812b956">Resource_Container</a> = std::map&lt; std::string, <a class="el" href="classec_1_1_resource_registry.html#a77cf5381229bff47d251603c783115fe">Resource_Ptr</a> &gt;</td></tr>
-<tr class="separator:a0a2b5090a2bbc638a04a2c283812b956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3069d67662599730165c5d0df3043c9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#aa3069d67662599730165c5d0df3043c9">Resource_Ptr</a> = Resource_Type *</td></tr>
+<tr class="separator:aa3069d67662599730165c5d0df3043c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87de43830e4ff17a2883ee2f10c368e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#ae87de43830e4ff17a2883ee2f10c368e">Resource_Container</a> = std::map&lt; Key_Type, <a class="el" href="classec_1_1_resource_registry.html#aa3069d67662599730165c5d0df3043c9">Resource_Ptr</a> &gt;</td></tr>
+<tr class="separator:ae87de43830e4ff17a2883ee2f10c368e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9e0fdc82b578be6f0477f61116d5b361"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a9e0fdc82b578be6f0477f61116d5b361">ResourceRegistry</a> ()</td></tr>
-<tr class="separator:a9e0fdc82b578be6f0477f61116d5b361"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3153d0d76d45905833bafab53341731"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#aa3153d0d76d45905833bafab53341731">~ResourceRegistry</a> ()</td></tr>
-<tr class="separator:aa3153d0d76d45905833bafab53341731"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b0fa34611e9637ea2c0795a720b355"><td class="memItemLeft" align="right" valign="top">Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a91b0fa34611e9637ea2c0795a720b355">registerResource</a> (<a class="el" href="classec_1_1_resource_registry.html#a77cf5381229bff47d251603c783115fe">Resource_Ptr</a> resource, const std::string &amp;key)</td></tr>
-<tr class="separator:a91b0fa34611e9637ea2c0795a720b355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1227f72ea04032d4e757ac4b5b0845a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_resource_registry.html#a77cf5381229bff47d251603c783115fe">Resource_Ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#ae1227f72ea04032d4e757ac4b5b0845a">unregisterResource</a> (const std::string &amp;key)</td></tr>
-<tr class="separator:ae1227f72ea04032d4e757ac4b5b0845a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2901efec7bcd829a007b041bd5ad2c1f"><td class="memItemLeft" align="right" valign="top">Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a2901efec7bcd829a007b041bd5ad2c1f">getResource</a> (const std::string &amp;key) const</td></tr>
-<tr class="separator:a2901efec7bcd829a007b041bd5ad2c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3279c60abcb023aad726eeac2a998d2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a3279c60abcb023aad726eeac2a998d2c">isRegistered</a> (const std::string &amp;key) const</td></tr>
-<tr class="separator:a3279c60abcb023aad726eeac2a998d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9c59e97bcfe2562c8f26d92855834bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#ae9c59e97bcfe2562c8f26d92855834bf">isRegistered</a> (Resource *resource) const</td></tr>
-<tr class="separator:ae9c59e97bcfe2562c8f26d92855834bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab460d164b940e5b08dfbe0b9e27263"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a8ab460d164b940e5b08dfbe0b9e27263">ResourceRegistry</a> ()</td></tr>
+<tr class="separator:a8ab460d164b940e5b08dfbe0b9e27263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2ee8793e4fa32075be7ce3a59fe472"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a3b2ee8793e4fa32075be7ce3a59fe472">~ResourceRegistry</a> ()</td></tr>
+<tr class="separator:a3b2ee8793e4fa32075be7ce3a59fe472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64545efa3e392204f02ebe388b2a54a6"><td class="memItemLeft" align="right" valign="top">Resource_Type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a64545efa3e392204f02ebe388b2a54a6">registerResource</a> (<a class="el" href="classec_1_1_resource_registry.html#aa3069d67662599730165c5d0df3043c9">Resource_Ptr</a> resource, const Key_Type &amp;key)</td></tr>
+<tr class="memdesc:a64545efa3e392204f02ebe388b2a54a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new key-value pair.  <a href="#a64545efa3e392204f02ebe388b2a54a6">More...</a><br /></td></tr>
+<tr class="separator:a64545efa3e392204f02ebe388b2a54a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a637ecd8b81f8efe21b7c5153213b8213"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_resource_registry.html#aa3069d67662599730165c5d0df3043c9">Resource_Ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a637ecd8b81f8efe21b7c5153213b8213">unregisterResource</a> (const Key_Type &amp;key)</td></tr>
+<tr class="memdesc:a637ecd8b81f8efe21b7c5153213b8213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister an already registered resource.  <a href="#a637ecd8b81f8efe21b7c5153213b8213">More...</a><br /></td></tr>
+<tr class="separator:a637ecd8b81f8efe21b7c5153213b8213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec3d2c20682a59f944fcf145e23103e"><td class="memItemLeft" align="right" valign="top">Resource_Type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a8ec3d2c20682a59f944fcf145e23103e">getResource</a> (const Key_Type &amp;key) const</td></tr>
+<tr class="memdesc:a8ec3d2c20682a59f944fcf145e23103e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to a registered resource.  <a href="#a8ec3d2c20682a59f944fcf145e23103e">More...</a><br /></td></tr>
+<tr class="separator:a8ec3d2c20682a59f944fcf145e23103e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe08f6227ad0e2263b65a807cef44cf4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#afe08f6227ad0e2263b65a807cef44cf4">isRegistered</a> (const Key_Type &amp;key) const</td></tr>
+<tr class="memdesc:afe08f6227ad0e2263b65a807cef44cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a resource is registered.  <a href="#afe08f6227ad0e2263b65a807cef44cf4">More...</a><br /></td></tr>
+<tr class="separator:afe08f6227ad0e2263b65a807cef44cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390baad918714b91edc22670d1f72fd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_resource_registry.html#a390baad918714b91edc22670d1f72fd9">isRegistered</a> (Resource_Type *resource) const</td></tr>
+<tr class="memdesc:a390baad918714b91edc22670d1f72fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a resource is registered.  <a href="#a390baad918714b91edc22670d1f72fd9">More...</a><br /></td></tr>
+<tr class="separator:a390baad918714b91edc22670d1f72fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a0a2b5090a2bbc638a04a2c283812b956"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a2b5090a2bbc638a04a2c283812b956">&#9670;&nbsp;</a></span>Resource_Container</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class Resource_Type, class Key_Type = ::std::string&gt;<br />
+class ec::ResourceRegistry&lt; Resource_Type, Key_Type &gt;</h3>
+
+<p>Templated registry that stores key value pairs. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Resource_Type</td><td>The type of the resources to store. </td></tr>
+    <tr><td class="paramname">Key_Type</td><td>The resource key, used to retrieve a resource. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ae87de43830e4ff17a2883ee2f10c368e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae87de43830e4ff17a2883ee2f10c368e">&#9670;&nbsp;</a></span>Resource_Container</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Resource&gt; </div>
+template&lt;class Resource_Type, class Key_Type = ::std::string&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource &gt;::<a class="el" href="classec_1_1_resource_registry.html#a0a2b5090a2bbc638a04a2c283812b956">Resource_Container</a> =  std::map&lt;std::string, <a class="el" href="classec_1_1_resource_registry.html#a77cf5381229bff47d251603c783115fe">Resource_Ptr</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource_Type, Key_Type &gt;::<a class="el" href="classec_1_1_resource_registry.html#ae87de43830e4ff17a2883ee2f10c368e">Resource_Container</a> =  std::map&lt;Key_Type, <a class="el" href="classec_1_1_resource_registry.html#aa3069d67662599730165c5d0df3043c9">Resource_Ptr</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a77cf5381229bff47d251603c783115fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77cf5381229bff47d251603c783115fe">&#9670;&nbsp;</a></span>Resource_Ptr</h2>
+<a id="aa3069d67662599730165c5d0df3043c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3069d67662599730165c5d0df3043c9">&#9670;&nbsp;</a></span>Resource_Ptr</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Resource&gt; </div>
+template&lt;class Resource_Type, class Key_Type = ::std::string&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource &gt;::<a class="el" href="classec_1_1_resource_registry.html#a77cf5381229bff47d251603c783115fe">Resource_Ptr</a> =  Resource*</td>
+          <td class="memname">using <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource_Type, Key_Type &gt;::<a class="el" href="classec_1_1_resource_registry.html#aa3069d67662599730165c5d0df3043c9">Resource_Ptr</a> =  Resource_Type*</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -150,19 +170,19 @@ template&lt;class Resource&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9e0fdc82b578be6f0477f61116d5b361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e0fdc82b578be6f0477f61116d5b361">&#9670;&nbsp;</a></span>ResourceRegistry()</h2>
+<a id="a8ab460d164b940e5b08dfbe0b9e27263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab460d164b940e5b08dfbe0b9e27263">&#9670;&nbsp;</a></span>ResourceRegistry()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Resource &gt; </div>
+template&lt;class Resource , class Key_Type &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource &gt;::<a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a> </td>
+          <td class="memname"><a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource, Key_Type &gt;::<a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -177,19 +197,19 @@ template&lt;class Resource &gt; </div>
 
 </div>
 </div>
-<a id="aa3153d0d76d45905833bafab53341731"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3153d0d76d45905833bafab53341731">&#9670;&nbsp;</a></span>~ResourceRegistry()</h2>
+<a id="a3b2ee8793e4fa32075be7ce3a59fe472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b2ee8793e4fa32075be7ce3a59fe472">&#9670;&nbsp;</a></span>~ResourceRegistry()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Resource &gt; </div>
+template&lt;class Resource , class Key_Type &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource &gt;::~<a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a> </td>
+          <td class="memname"><a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource, Key_Type &gt;::~<a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -205,56 +225,74 @@ template&lt;class Resource &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2901efec7bcd829a007b041bd5ad2c1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2901efec7bcd829a007b041bd5ad2c1f">&#9670;&nbsp;</a></span>getResource()</h2>
+<a id="a8ec3d2c20682a59f944fcf145e23103e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec3d2c20682a59f944fcf145e23103e">&#9670;&nbsp;</a></span>getResource()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Resource &gt; </div>
+template&lt;class Resource , class Key_Type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Resource * <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource &gt;::getResource </td>
+          <td class="memname">Resource * <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource, Key_Type &gt;::getResource </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const Key_Type &amp;&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get a reference to a registered resource. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key of the resource to retrieve. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the resource if it was found, nullptr otherwise. </dd></dl>
+
 </div>
 </div>
-<a id="a3279c60abcb023aad726eeac2a998d2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3279c60abcb023aad726eeac2a998d2c">&#9670;&nbsp;</a></span>isRegistered() <span class="overload">[1/2]</span></h2>
+<a id="afe08f6227ad0e2263b65a807cef44cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe08f6227ad0e2263b65a807cef44cf4">&#9670;&nbsp;</a></span>isRegistered() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Resource &gt; </div>
+template&lt;class Resource , class Key_Type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource &gt;::isRegistered </td>
+          <td class="memname">bool <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource, Key_Type &gt;::isRegistered </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const Key_Type &amp;&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Check if a resource is registered. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key associated with the resource. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if it is registered, false otherwise. </dd></dl>
+
 </div>
 </div>
-<a id="ae9c59e97bcfe2562c8f26d92855834bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9c59e97bcfe2562c8f26d92855834bf">&#9670;&nbsp;</a></span>isRegistered() <span class="overload">[2/2]</span></h2>
+<a id="a390baad918714b91edc22670d1f72fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a390baad918714b91edc22670d1f72fd9">&#9670;&nbsp;</a></span>isRegistered() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Resource&gt; </div>
+template&lt;class Resource, class Key_Type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource &gt;::isRegistered </td>
+          <td class="memname">bool <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource, Key_Type &gt;::isRegistered </td>
           <td>(</td>
           <td class="paramtype">Resource *&#160;</td>
           <td class="paramname"><em>resource</em></td><td>)</td>
@@ -263,26 +301,35 @@ template&lt;class Resource&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Check if a resource is registered. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to check against. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if it is registered, false otherwise. </dd></dl>
+
 </div>
 </div>
-<a id="a91b0fa34611e9637ea2c0795a720b355"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91b0fa34611e9637ea2c0795a720b355">&#9670;&nbsp;</a></span>registerResource()</h2>
+<a id="a64545efa3e392204f02ebe388b2a54a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64545efa3e392204f02ebe388b2a54a6">&#9670;&nbsp;</a></span>registerResource()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Resource &gt; </div>
+template&lt;class Resource , class Key_Type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Resource * <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource &gt;::registerResource </td>
+          <td class="memname">Resource * <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource, Key_Type &gt;::registerResource </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classec_1_1_resource_registry.html#a77cf5381229bff47d251603c783115fe">Resource_Ptr</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classec_1_1_resource_registry.html#aa3069d67662599730165c5d0df3043c9">Resource_Ptr</a>&#160;</td>
           <td class="paramname"><em>resource</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const Key_Type &amp;&#160;</td>
           <td class="paramname"><em>key</em>&#160;</td>
         </tr>
         <tr>
@@ -293,31 +340,50 @@ template&lt;class Resource &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Register a new key-value pair. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>The resource to save. </td></tr>
+    <tr><td class="paramname">key</td><td>The key to bind with the resource. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The resource if it was found, nullptr otherwise. </dd></dl>
+
 </div>
 </div>
-<a id="ae1227f72ea04032d4e757ac4b5b0845a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1227f72ea04032d4e757ac4b5b0845a">&#9670;&nbsp;</a></span>unregisterResource()</h2>
+<a id="a637ecd8b81f8efe21b7c5153213b8213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a637ecd8b81f8efe21b7c5153213b8213">&#9670;&nbsp;</a></span>unregisterResource()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Resource &gt; </div>
+template&lt;class Resource , class Key_Type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a>&lt; Resource &gt;::<a class="el" href="classec_1_1_resource_registry.html#a77cf5381229bff47d251603c783115fe">Resource_Ptr</a> <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource &gt;::unregisterResource </td>
+          <td class="memname"><a class="el" href="classec_1_1_resource_registry.html">ResourceRegistry</a>&lt; Resource, Key_Type &gt;::<a class="el" href="classec_1_1_resource_registry.html#aa3069d67662599730165c5d0df3043c9">Resource_Ptr</a> <a class="el" href="classec_1_1_resource_registry.html">ec::ResourceRegistry</a>&lt; Resource, Key_Type &gt;::unregisterResource </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const Key_Type &amp;&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Unregister an already registered resource. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key of the resource to unregister. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The resource if it was found, nullptr otherwise. </dd></dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_resource_registry_8h_source.html">ResourceRegistry.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_resource_registry_8inl.html">ResourceRegistry.inl</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_resource_registry_8h_source.html">ResourceRegistry.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_resource_registry_8inl.html">ResourceRegistry.inl</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

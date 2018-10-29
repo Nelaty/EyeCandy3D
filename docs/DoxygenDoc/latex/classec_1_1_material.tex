@@ -2,6 +2,11 @@
 \label{classec_1_1_material}\index{ec\+::\+Material@{ec\+::\+Material}}
 
 
+A material contains all relevant information to color an object.  
+
+
+
+
 {\ttfamily \#include $<$Material.\+h$>$}
 
 
@@ -21,35 +26,19 @@ Collaboration diagram for ec\+:\+:Material\+:\nopagebreak
 virtual \mbox{\hyperlink{classec_1_1_material_aec5bd3f3ef761f49a5028b415a9de52e}{$\sim$\+Material}} ()
 \item 
 void \mbox{\hyperlink{classec_1_1_material_aad92ada3fcc1f7b66e6bf3b6aeac73b8}{add\+Texture}} (const \mbox{\hyperlink{classec_1_1_texture}{Texture}} \&texture)
-\item 
-void \mbox{\hyperlink{classec_1_1_material_a83a673bcbcdef42bcea99939e5d6ff03}{remove\+Texture}} (const \mbox{\hyperlink{classec_1_1_texture}{Texture}} \&texture)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a new texture to this material. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classec_1_1_material_aa22a00f6a91e7f0daff6885e4e0944d3}{remove\+Texture}} (const \mbox{\hyperlink{classec_1_1_texture}{Texture}} \&texture)
+\begin{DoxyCompactList}\small\item\em Remove a given texture associated with this material. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_texture}{Texture}} $\ast$ \mbox{\hyperlink{classec_1_1_material_a8679615f24284e809f213b882bec81bf}{get\+Texture}} (unsigned int index)
-\item 
+\begin{DoxyCompactList}\small\item\em Try to get a texture at the specified index. \end{DoxyCompactList}\item 
 const std\+::vector$<$ \mbox{\hyperlink{classec_1_1_texture}{Texture}} $>$ \& \mbox{\hyperlink{classec_1_1_material_a95d74f12ec9d69a764a249e36b6b857c}{get\+Textures}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get all textures associated with this material. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_material_a961612ff2caee16d5d4b8f9b74042cf2}{has\+Texture}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Check if this material is currently using any textures. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_material_a15b5c4adb903b16c25ad312963027924}{add\+Diffuse\+Texture\+From\+Path}} (const char $\ast$path)
-\item 
-void \mbox{\hyperlink{classec_1_1_material_afdd82441b5b2168161a17824e4a90f6f}{set\+Color\+Ambient}} (const glm\+::vec4 \&color)
-\item 
-void \mbox{\hyperlink{classec_1_1_material_a4ee41422a7625ac8a9f8a5e52bb18cf7}{set\+Color\+Ambient}} (float r, float g, float b, float a)
-\item 
-void \mbox{\hyperlink{classec_1_1_material_a22b711323a849e2ff6f9ffb871402a3e}{set\+Color\+Diffuse}} (const glm\+::vec4 \&color)
-\item 
-void \mbox{\hyperlink{classec_1_1_material_aa86e76b930ffffd45076465eff08bf27}{set\+Color\+Diffuse}} (float r, float g, float b, float a)
-\item 
-void \mbox{\hyperlink{classec_1_1_material_a947f0946ff806852e1733b1e95a03489}{set\+Color\+Specular}} (const glm\+::vec4 \&color)
-\item 
-void \mbox{\hyperlink{classec_1_1_material_aa62e40f0571c25eb097f03c74849f918}{set\+Color\+Specular}} (float r, float g, float b, float a)
-\item 
-void \mbox{\hyperlink{classec_1_1_material_a77ac7702af54e4c8a7301387bea159dd}{set\+Color\+Emission}} (const glm\+::vec4 \&color)
-\item 
-void \mbox{\hyperlink{classec_1_1_material_a6fa0dfb1c76b2c9b07fbd2b28021010c}{set\+Color\+Emission}} (float r, float g, float b, float a)
-\item 
+\begin{DoxyCompactList}\small\item\em Comfort functions to create and add specific texture types to this material. \end{DoxyCompactList}\item 
 const glm\+::vec4 \& \mbox{\hyperlink{classec_1_1_material_a68e143f6390ae7e9bc6c080853191f94}{get\+Color\+Ambient}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get color function. \end{DoxyCompactList}\item 
 const glm\+::vec4 \& \mbox{\hyperlink{classec_1_1_material_a6156c82b63756da91d013b5eb39fccf5}{get\+Color\+Diffuse}} () const
 \item 
 const glm\+::vec4 \& \mbox{\hyperlink{classec_1_1_material_a0a4a766b22c9adeffdff5c0d5140167e}{get\+Color\+Specular}} () const
@@ -57,10 +46,33 @@ const glm\+::vec4 \& \mbox{\hyperlink{classec_1_1_material_a0a4a766b22c9adeffdff
 const glm\+::vec4 \& \mbox{\hyperlink{classec_1_1_material_af6a4a55683956cd0b06d0a8de1dc4b9f}{get\+Color\+Emission}} () const
 \item 
 void \mbox{\hyperlink{classec_1_1_material_a4b9efb15466a547d4579566dfb1e558f}{set\+Shininess}} (float shininess)
-\item 
+\begin{DoxyCompactList}\small\item\em @\mbox{]} \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classec_1_1_material_a125ba490c4191f8f6fe77e76934ed33a}{get\+Shininess}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the currently used shininess coefficient. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_material_afdd82441b5b2168161a17824e4a90f6f}{set\+Color\+Ambient}} (const glm\+::vec4 \&color)
+\begin{DoxyCompactList}\small\item\em Color manipulation function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_material_a4ee41422a7625ac8a9f8a5e52bb18cf7}{set\+Color\+Ambient}} (float r, float g, float b, float a)
+\begin{DoxyCompactList}\small\item\em Color manipulation function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_material_a22b711323a849e2ff6f9ffb871402a3e}{set\+Color\+Diffuse}} (const glm\+::vec4 \&color)
+\begin{DoxyCompactList}\small\item\em Color manipulation function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_material_aa86e76b930ffffd45076465eff08bf27}{set\+Color\+Diffuse}} (float r, float g, float b, float a)
+\begin{DoxyCompactList}\small\item\em Color manipulation function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_material_a947f0946ff806852e1733b1e95a03489}{set\+Color\+Specular}} (const glm\+::vec4 \&color)
+\begin{DoxyCompactList}\small\item\em Color manipulation function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_material_aa62e40f0571c25eb097f03c74849f918}{set\+Color\+Specular}} (float r, float g, float b, float a)
+\begin{DoxyCompactList}\small\item\em Color manipulation function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_material_a77ac7702af54e4c8a7301387bea159dd}{set\+Color\+Emission}} (const glm\+::vec4 \&color)
+\begin{DoxyCompactList}\small\item\em Color manipulation function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_material_a6fa0dfb1c76b2c9b07fbd2b28021010c}{set\+Color\+Emission}} (float r, float g, float b, float a)
+\begin{DoxyCompactList}\small\item\em Color manipulation function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+
+\subsection{Detailed Description}
+A material contains all relevant information to color an object. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classec_1_1_material_a259d88ca352df2d284380f0b37052652}\label{classec_1_1_material_a259d88ca352df2d284380f0b37052652}} 
@@ -84,11 +96,22 @@ float \mbox{\hyperlink{classec_1_1_material_a125ba490c4191f8f6fe77e76934ed33a}{g
 \subsubsection{\texorpdfstring{add\+Diffuse\+Texture\+From\+Path()}{addDiffuseTextureFromPath()}}
 {\footnotesize\ttfamily bool ec\+::\+Material\+::add\+Diffuse\+Texture\+From\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
 
+
+
+Comfort functions to create and add specific texture types to this material. 
+
+If a texture is supposed to be used by different materials, it should be created outside this class and added via Add\+Texture \begin{DoxyReturn}{Returns}
+True if the texture was successfully added, false otherwise. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_material_aad92ada3fcc1f7b66e6bf3b6aeac73b8}\label{classec_1_1_material_aad92ada3fcc1f7b66e6bf3b6aeac73b8}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!add\+Texture@{add\+Texture}}
 \index{add\+Texture@{add\+Texture}!ec\+::\+Material@{ec\+::\+Material}}
 \subsubsection{\texorpdfstring{add\+Texture()}{addTexture()}}
 {\footnotesize\ttfamily void ec\+::\+Material\+::add\+Texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_texture}{Texture}} \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+Add a new texture to this material. 
 
 \mbox{\Hypertarget{classec_1_1_material_a68e143f6390ae7e9bc6c080853191f94}\label{classec_1_1_material_a68e143f6390ae7e9bc6c080853191f94}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!get\+Color\+Ambient@{get\+Color\+Ambient}}
@@ -96,7 +119,11 @@ float \mbox{\hyperlink{classec_1_1_material_a125ba490c4191f8f6fe77e76934ed33a}{g
 \subsubsection{\texorpdfstring{get\+Color\+Ambient()}{getColorAmbient()}}
 {\footnotesize\ttfamily const glm\+::vec4 \& ec\+::\+Material\+::get\+Color\+Ambient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_material_a6156c82b63756da91d013b5eb39fccf5}\label{classec_1_1_material_a6156c82b63756da91d013b5eb39fccf5}} 
+
+
+Get color function. 
+
+@\mbox{[} \mbox{\Hypertarget{classec_1_1_material_a6156c82b63756da91d013b5eb39fccf5}\label{classec_1_1_material_a6156c82b63756da91d013b5eb39fccf5}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!get\+Color\+Diffuse@{get\+Color\+Diffuse}}
 \index{get\+Color\+Diffuse@{get\+Color\+Diffuse}!ec\+::\+Material@{ec\+::\+Material}}
 \subsubsection{\texorpdfstring{get\+Color\+Diffuse()}{getColorDiffuse()}}
@@ -120,11 +147,19 @@ float \mbox{\hyperlink{classec_1_1_material_a125ba490c4191f8f6fe77e76934ed33a}{g
 \subsubsection{\texorpdfstring{get\+Shininess()}{getShininess()}}
 {\footnotesize\ttfamily float ec\+::\+Material\+::get\+Shininess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the currently used shininess coefficient. 
+
 \mbox{\Hypertarget{classec_1_1_material_a8679615f24284e809f213b882bec81bf}\label{classec_1_1_material_a8679615f24284e809f213b882bec81bf}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!get\+Texture@{get\+Texture}}
 \index{get\+Texture@{get\+Texture}!ec\+::\+Material@{ec\+::\+Material}}
 \subsubsection{\texorpdfstring{get\+Texture()}{getTexture()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_texture}{ec\+::\+Texture}} $\ast$ ec\+::\+Material\+::get\+Texture (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Try to get a texture at the specified index. 
 
 \mbox{\Hypertarget{classec_1_1_material_a95d74f12ec9d69a764a249e36b6b857c}\label{classec_1_1_material_a95d74f12ec9d69a764a249e36b6b857c}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!get\+Textures@{get\+Textures}}
@@ -132,23 +167,42 @@ float \mbox{\hyperlink{classec_1_1_material_a125ba490c4191f8f6fe77e76934ed33a}{g
 \subsubsection{\texorpdfstring{get\+Textures()}{getTextures()}}
 {\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classec_1_1_texture}{Texture}} $>$ \& ec\+::\+Material\+::get\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get all textures associated with this material. 
+
 \mbox{\Hypertarget{classec_1_1_material_a961612ff2caee16d5d4b8f9b74042cf2}\label{classec_1_1_material_a961612ff2caee16d5d4b8f9b74042cf2}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!has\+Texture@{has\+Texture}}
 \index{has\+Texture@{has\+Texture}!ec\+::\+Material@{ec\+::\+Material}}
 \subsubsection{\texorpdfstring{has\+Texture()}{hasTexture()}}
 {\footnotesize\ttfamily bool ec\+::\+Material\+::has\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_material_a83a673bcbcdef42bcea99939e5d6ff03}\label{classec_1_1_material_a83a673bcbcdef42bcea99939e5d6ff03}} 
+
+
+Check if this material is currently using any textures. 
+
+\mbox{\Hypertarget{classec_1_1_material_aa22a00f6a91e7f0daff6885e4e0944d3}\label{classec_1_1_material_aa22a00f6a91e7f0daff6885e4e0944d3}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!remove\+Texture@{remove\+Texture}}
 \index{remove\+Texture@{remove\+Texture}!ec\+::\+Material@{ec\+::\+Material}}
 \subsubsection{\texorpdfstring{remove\+Texture()}{removeTexture()}}
-{\footnotesize\ttfamily void ec\+::\+Material\+::remove\+Texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_texture}{Texture}} \&}]{texture }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool ec\+::\+Material\+::remove\+Texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_texture}{Texture}} \&}]{texture }\end{DoxyParamCaption})}
 
+
+
+Remove a given texture associated with this material. 
+
+\begin{DoxyReturn}{Returns}
+True if the texture was found, false otherwise. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_material_afdd82441b5b2168161a17824e4a90f6f}\label{classec_1_1_material_afdd82441b5b2168161a17824e4a90f6f}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!set\+Color\+Ambient@{set\+Color\+Ambient}}
 \index{set\+Color\+Ambient@{set\+Color\+Ambient}!ec\+::\+Material@{ec\+::\+Material}}
 \subsubsection{\texorpdfstring{set\+Color\+Ambient()}{setColorAmbient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Material\+::set\+Color\+Ambient (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Color manipulation function. 
 
 \mbox{\Hypertarget{classec_1_1_material_a4ee41422a7625ac8a9f8a5e52bb18cf7}\label{classec_1_1_material_a4ee41422a7625ac8a9f8a5e52bb18cf7}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!set\+Color\+Ambient@{set\+Color\+Ambient}}
@@ -156,11 +210,19 @@ float \mbox{\hyperlink{classec_1_1_material_a125ba490c4191f8f6fe77e76934ed33a}{g
 \subsubsection{\texorpdfstring{set\+Color\+Ambient()}{setColorAmbient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void ec\+::\+Material\+::set\+Color\+Ambient (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
 
+
+
+Color manipulation function. 
+
 \mbox{\Hypertarget{classec_1_1_material_a22b711323a849e2ff6f9ffb871402a3e}\label{classec_1_1_material_a22b711323a849e2ff6f9ffb871402a3e}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!set\+Color\+Diffuse@{set\+Color\+Diffuse}}
 \index{set\+Color\+Diffuse@{set\+Color\+Diffuse}!ec\+::\+Material@{ec\+::\+Material}}
 \subsubsection{\texorpdfstring{set\+Color\+Diffuse()}{setColorDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Material\+::set\+Color\+Diffuse (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Color manipulation function. 
 
 \mbox{\Hypertarget{classec_1_1_material_aa86e76b930ffffd45076465eff08bf27}\label{classec_1_1_material_aa86e76b930ffffd45076465eff08bf27}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!set\+Color\+Diffuse@{set\+Color\+Diffuse}}
@@ -168,11 +230,19 @@ float \mbox{\hyperlink{classec_1_1_material_a125ba490c4191f8f6fe77e76934ed33a}{g
 \subsubsection{\texorpdfstring{set\+Color\+Diffuse()}{setColorDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void ec\+::\+Material\+::set\+Color\+Diffuse (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
 
+
+
+Color manipulation function. 
+
 \mbox{\Hypertarget{classec_1_1_material_a77ac7702af54e4c8a7301387bea159dd}\label{classec_1_1_material_a77ac7702af54e4c8a7301387bea159dd}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!set\+Color\+Emission@{set\+Color\+Emission}}
 \index{set\+Color\+Emission@{set\+Color\+Emission}!ec\+::\+Material@{ec\+::\+Material}}
 \subsubsection{\texorpdfstring{set\+Color\+Emission()}{setColorEmission()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Material\+::set\+Color\+Emission (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Color manipulation function. 
 
 \mbox{\Hypertarget{classec_1_1_material_a6fa0dfb1c76b2c9b07fbd2b28021010c}\label{classec_1_1_material_a6fa0dfb1c76b2c9b07fbd2b28021010c}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!set\+Color\+Emission@{set\+Color\+Emission}}
@@ -180,17 +250,29 @@ float \mbox{\hyperlink{classec_1_1_material_a125ba490c4191f8f6fe77e76934ed33a}{g
 \subsubsection{\texorpdfstring{set\+Color\+Emission()}{setColorEmission()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void ec\+::\+Material\+::set\+Color\+Emission (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
 
+
+
+Color manipulation function. 
+
 \mbox{\Hypertarget{classec_1_1_material_a947f0946ff806852e1733b1e95a03489}\label{classec_1_1_material_a947f0946ff806852e1733b1e95a03489}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!set\+Color\+Specular@{set\+Color\+Specular}}
 \index{set\+Color\+Specular@{set\+Color\+Specular}!ec\+::\+Material@{ec\+::\+Material}}
 \subsubsection{\texorpdfstring{set\+Color\+Specular()}{setColorSpecular()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Material\+::set\+Color\+Specular (\begin{DoxyParamCaption}\item[{const glm\+::vec4 \&}]{color }\end{DoxyParamCaption})}
 
+
+
+Color manipulation function. 
+
 \mbox{\Hypertarget{classec_1_1_material_aa62e40f0571c25eb097f03c74849f918}\label{classec_1_1_material_aa62e40f0571c25eb097f03c74849f918}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!set\+Color\+Specular@{set\+Color\+Specular}}
 \index{set\+Color\+Specular@{set\+Color\+Specular}!ec\+::\+Material@{ec\+::\+Material}}
 \subsubsection{\texorpdfstring{set\+Color\+Specular()}{setColorSpecular()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void ec\+::\+Material\+::set\+Color\+Specular (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Color manipulation function. 
 
 \mbox{\Hypertarget{classec_1_1_material_a4b9efb15466a547d4579566dfb1e558f}\label{classec_1_1_material_a4b9efb15466a547d4579566dfb1e558f}} 
 \index{ec\+::\+Material@{ec\+::\+Material}!set\+Shininess@{set\+Shininess}}
@@ -200,7 +282,11 @@ float \mbox{\hyperlink{classec_1_1_material_a125ba490c4191f8f6fe77e76934ed33a}{g
 
 
 
+@\mbox{]} 
+
+Set the currently used shininess coefficient. 
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_material_8h}{Material.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_material_8cpp}{Material.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_material_8h}{Material.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_material_8cpp}{Material.\+cpp}}\end{DoxyCompactItemize}

@@ -16,9 +16,15 @@ namespace ec
 	class EventSource;
 	class EventQueue;
 
+	/**
+	 * \brief Represents a physical mouse.
+	 */
 	class EC3D_DECLSPEC Mouse
 	{
 	public:
+		/**
+		 * \brief Collection of all mouse buttons
+		 */
 		enum EC3D_DECLSPEC EC_KEY_MOUSE : int
 		{
 			MOUSE_1 = GLFW_MOUSE_BUTTON_1,
@@ -30,39 +36,78 @@ namespace ec
 			MOUSE_7 = GLFW_MOUSE_BUTTON_7,
 			MOUSE_8 = GLFW_MOUSE_BUTTON_8,
 
-			MOUSE_LAST = GLFW_MOUSE_BUTTON_LAST,
 			MOUSE_LEFT = GLFW_MOUSE_BUTTON_LEFT,
 			MOUSE_RIGHT = GLFW_MOUSE_BUTTON_RIGHT,
-			MOUSE_MIDDLE = GLFW_MOUSE_BUTTON_MIDDLE
+			MOUSE_MIDDLE = GLFW_MOUSE_BUTTON_MIDDLE,
+			MOUSE_LAST = GLFW_MOUSE_BUTTON_LAST
 		};
+
+		/**
+		 * \brief Convert a mouse button code to its string
+		 * representation.
+		 */
 		static const char* mouseKeyToString(EC_KEY_MOUSE mouseCode);
+		/**
+		 * \brief Check if a keycode is representing a mouse button.
+		 */
 		static bool keycodeIsMouse(int keycode);
 
+	public:
 		using EventSource_Ptr = std::unique_ptr<EventSource>;
 
 		explicit Mouse();
 		~Mouse();
 
-		/** Install the mouse, which generates mouse events. */
+		/**
+		 * \brief Install the mouse, which generates mouse events.
+		 * \param window The window, which should create mouse events.
+		 */
 		void install(Window* window);
-		/** Uninstall the mouse. */
+		/** 
+		 * \brief Uninstall the mouse.
+		 */
 		void uninstall();
 
-		/** Get the window, which is associated with this mouse. */
+		/** 
+		 * \brief Get the window, which is associated with this mouse.
+		 */
 		GLFWwindow* getWindow() const;
 
-		/** Get the current position of the cursor in window coordinates. */
+		/** 
+		 * \brief Get the current position of the cursor in window 
+		 * coordinates. 
+		 */
 		glm::ivec2 getCursorPos() const;
 
-		/** Check if a mouse button is being pressed. */
+		/**
+		 * \brief Check if a mouse button is being pressed. 
+		 */
 		bool isKeyDown(Mouse::EC_KEY_MOUSE key) const;
-		/** Check if a mouse button is being released. */
+		/** 
+		 * \brief Check if a mouse button is being released. 
+		 */
 		bool isKeyUp(Mouse::EC_KEY_MOUSE key) const;
 
 	private:
+		/**
+		 * \brief Will be called, when the cursor position changes
+		 * inside a window.
+		 */
 		static void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
+		/**
+		 * \brief Will be called, when the cursor enters or leaves
+		 * a window.
+		 */
 		static void cursorEnterCallback(GLFWwindow* window, int entered);
+		/**
+		 * \brief Will be called, when a mouse button was pressed
+		 * inside a window.
+		 */
 		static void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+		/**
+		 * \brief Will be called, when the scroll wheel was used
+		 * inside a window.
+		 */
 		static void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 
 		GLFWwindow* m_window = nullptr;

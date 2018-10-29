@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by
+	 * Slider widgets.
+	 */
 	class GenericSliderListener : public agui::SliderListener
 	{
 	public:

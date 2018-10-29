@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by Frame
+	 * widgets.
+	 */
 	class GenericFrameListener : public agui::FrameListener
 	{
 	public:

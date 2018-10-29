@@ -50,7 +50,7 @@ namespace ec
 		* \param callback The new callback.
 		*/
 		void addCallback(EventKey_Type key,
-						 std::function<void()> callback);
+						 EventCallback_Type callback);
 
 		/**
 		 * \brief Remove one specific or multiple callbacks.

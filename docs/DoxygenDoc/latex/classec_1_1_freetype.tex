@@ -23,11 +23,11 @@ Collaboration diagram for ec\+:\+:Freetype\+:\nopagebreak
 void \mbox{\hyperlink{classec_1_1_freetype_afef1f61fa4bd8114825c66ac93d3e6bf}{render\+Text}} (const char $\ast$\mbox{\hyperlink{namespaceec_a0bdee24285d69deca899e166b29c0150}{text}}, \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} $\ast$atlas, float x, float y, float sx, float sy, const glm\+::vec4 \&color=glm\+::vec4(0.\+0f, 0.\+0f, 0.\+0f, 1.\+0f)) const
 \begin{DoxyCompactList}\small\item\em Render text with a specific \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} at a given position with a given relative scale. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_freetype_a7a10e5515342b70588f76328ac83826d}{add\+Font\+Face}} (const std\+::string \&name, const std\+::string \&filepath)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a new font face. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_freetype_a1be4b69e2d57689533ddaabdc9042d51}{add\+Font\+Texture\+Atlas}} (const std\+::string \&face, unsigned int size)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a new texture atlas. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} $\ast$ \mbox{\hyperlink{classec_1_1_freetype_a3e0a8937ec0ceb33495598da59b2c4f3}{get\+Font\+Texture\+Atlas}} (const std\+::string \&name)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Try to get a existent \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -61,18 +61,52 @@ void \mbox{\hyperlink{classec_1_1_freetype_a1be4b69e2d57689533ddaabdc9042d51}{ad
 \subsubsection{\texorpdfstring{add\+Font\+Face()}{addFontFace()}}
 {\footnotesize\ttfamily void ec\+::\+Freetype\+::add\+Font\+Face (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})}
 
+
+
+Add a new font face. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the font. \\
+\hline
+{\em filepath} & The path to the font. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classec_1_1_freetype_a1be4b69e2d57689533ddaabdc9042d51}\label{classec_1_1_freetype_a1be4b69e2d57689533ddaabdc9042d51}} 
 \index{ec\+::\+Freetype@{ec\+::\+Freetype}!add\+Font\+Texture\+Atlas@{add\+Font\+Texture\+Atlas}}
 \index{add\+Font\+Texture\+Atlas@{add\+Font\+Texture\+Atlas}!ec\+::\+Freetype@{ec\+::\+Freetype}}
 \subsubsection{\texorpdfstring{add\+Font\+Texture\+Atlas()}{addFontTextureAtlas()}}
 {\footnotesize\ttfamily void ec\+::\+Freetype\+::add\+Font\+Texture\+Atlas (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{face,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
 
+
+
+Add a new texture atlas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & The font to use. \\
+\hline
+{\em size} & The size of characters. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classec_1_1_freetype_a3e0a8937ec0ceb33495598da59b2c4f3}\label{classec_1_1_freetype_a3e0a8937ec0ceb33495598da59b2c4f3}} 
 \index{ec\+::\+Freetype@{ec\+::\+Freetype}!get\+Font\+Texture\+Atlas@{get\+Font\+Texture\+Atlas}}
 \index{get\+Font\+Texture\+Atlas@{get\+Font\+Texture\+Atlas}!ec\+::\+Freetype@{ec\+::\+Freetype}}
 \subsubsection{\texorpdfstring{get\+Font\+Texture\+Atlas()}{getFontTextureAtlas()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} $\ast$ ec\+::\+Freetype\+::get\+Font\+Texture\+Atlas (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
 
+
+
+Try to get a existent \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the atlas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The atlas if it was found, nullptr otherwise. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_freetype_afef1f61fa4bd8114825c66ac93d3e6bf}\label{classec_1_1_freetype_afef1f61fa4bd8114825c66ac93d3e6bf}} 
 \index{ec\+::\+Freetype@{ec\+::\+Freetype}!render\+Text@{render\+Text}}
 \index{render\+Text@{render\+Text}!ec\+::\+Freetype@{ec\+::\+Freetype}}
@@ -95,10 +129,14 @@ Render text with a specific \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Fon
 \hline
 {\em sx} & \\
 \hline
+{\em sy} & \\
+\hline
+{\em color} & The color of the text. \\
+\hline
 \end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_freetype_8h}{Freetype.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_freetype_8cpp}{Freetype.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_freetype_8h}{Freetype.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_freetype_8cpp}{Freetype.\+cpp}}\end{DoxyCompactItemize}

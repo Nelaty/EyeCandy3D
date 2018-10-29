@@ -5,6 +5,10 @@ namespace ec
 {
 	class LineStripGeometry;
 
+	/**
+	 * \brief Create geometries, which are made out of multiple
+	 * lines.
+	 */
 	class LineGeometryFactory
 	{
 	public:

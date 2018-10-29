@@ -109,7 +109,7 @@ var searchData=
   ['getradius',['getRadius',['../classec_1_1_circle_geometry.html#a7926a1f020f9b4998e0d4be0912b7b80',1,'ec::CircleGeometry::getRadius()'],['../classec_1_1_sphere_geometry.html#a297fbaec8341dbb2dd0023b0d90d4e24',1,'ec::SphereGeometry::getRadius()']]],
   ['getredbits',['getRedBits',['../classec_1_1_window.html#aac6cd3cb2a9d033e41bbd04e84a7be14',1,'ec::Window']]],
   ['getresolution',['getResolution',['../classec_1_1_window.html#a6ae374e668f695a5388f03e2ab6d0b58',1,'ec::Window']]],
-  ['getresource',['getResource',['../classec_1_1_resource_registry.html#a2901efec7bcd829a007b041bd5ad2c1f',1,'ec::ResourceRegistry']]],
+  ['getresource',['getResource',['../classec_1_1_resource_registry.html#a8ec3d2c20682a59f944fcf145e23103e',1,'ec::ResourceRegistry']]],
   ['getroot',['getRoot',['../classec_1_1_scene.html#aef77276f4a386c5b66159ecb1d4d072c',1,'ec::Scene']]],
   ['getscale',['getScale',['../classec_1_1_transform3_d.html#ab5f0e26d19bbb99a4624784d3024e654',1,'ec::Transform3D']]],
   ['getscalex',['getScaleX',['../classec_1_1_transform3_d.html#a7ecc00577cd57f15ed63926a712cdcb1',1,'ec::Transform3D']]],

@@ -14,9 +14,15 @@ namespace ec
 	class EventSource;
 	class EventQueue;
 
+	/**
+	 * \brief Representation of a physical keyboard.
+	 */
 	class EC3D_DECLSPEC Keyboard
 	{
 	public:
+		/**
+		 * \brief Contains all possible types of keys on a keyboard.
+		 */
 		enum EC3D_DECLSPEC EC_KEY_KEYBOARD : int
 		{
 			// A - Z
@@ -168,7 +174,15 @@ namespace ec
 			KEY_LAST = GLFW_KEY_LAST
 		};
 
+		/**
+		 * \brief Convert a keycode to its string representation.
+		 */
 		static const char* keyboardKeyToString(EC_KEY_KEYBOARD keyboardCode);
+		/**
+		 * \brief Check if a keycode is representing a key on the
+		 * keyboard.
+		 * \brief keycode 
+		 */
 		static bool keycodeIsKey(int keycode);
 
 	public: 
@@ -177,21 +191,41 @@ namespace ec
 		explicit Keyboard();
 		~Keyboard();
 
-		/** Install the keyboard, which generates keyboard events. */
+		/**
+		 * \brief Install the keyboard, which generates keyboard
+		 * events. 
+		 * \param window The window, for which keyboard events will
+		 * now be generated.
+		 */
 		void install(Window* window);
-		/** Uninstall the keyboard. */
+		/**
+		 * \brief Uninstall the keyboard. 
+		 */
 		void uninstall();
 
-		/** Get the window, which is associated with this keyboard. */
+		/** 
+		 * \brief Get the window, which is associated with this keyboard. 
+		 */
 		GLFWwindow* getWindow() const;
 
-		/** Check if a keyboard button is being pressed. */
+		/**
+		 * \brief Check if a keyboard button is being pressed.
+		 */
 		bool isKeyDown(Keyboard::EC_KEY_KEYBOARD key) const;
-		/** Check if a keyboard button is being released. */
+		/** 
+		 * \brief Check if a keyboard button is being released. 
+		 */
 		bool isKeyUp(Keyboard::EC_KEY_KEYBOARD key) const;
 	
 	private:
+		/**
+		 * \brief Key callback which can be associated with a window.
+		 */
 		static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+		/**
+		 * \brief Char mods callback which can be associated with a
+		 * window.
+		 */
 		static void charModsCallback(GLFWwindow* window, unsigned int codepoint, int mods);
 	
 		GLFWwindow* m_window = nullptr;

@@ -73,6 +73,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Contains a collection of different light sources.  
+ <a href="classec_1_1_light_system.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_light_system_8h_source.html">LightSystem.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for ec::LightSystem:</div>
@@ -87,13 +90,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a945503a2b607e87f13f87e5f95d157ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_light_system.html#a945503a2b607e87f13f87e5f95d157ef">~LightSystem</a> ()</td></tr>
 <tr class="separator:a945503a2b607e87f13f87e5f95d157ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6569ed0dd8a15a461358add2ee514f92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_light_system.html#a6569ed0dd8a15a461358add2ee514f92">enable</a> (<a class="el" href="classec_1_1_shader.html">Shader</a> *shader)</td></tr>
+<tr class="memdesc:a6569ed0dd8a15a461358add2ee514f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass lights to given shader.  <a href="#a6569ed0dd8a15a461358add2ee514f92">More...</a><br /></td></tr>
 <tr class="separator:a6569ed0dd8a15a461358add2ee514f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedb1b50a5920e42732e53f8eb8a5410d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_light_system.html#aedb1b50a5920e42732e53f8eb8a5410d">registerLight</a> (<a class="el" href="classec_1_1_light.html">Light</a> *light)</td></tr>
-<tr class="separator:aedb1b50a5920e42732e53f8eb8a5410d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df705359d32cee10426c23a3ae95fad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_light_system.html#a5df705359d32cee10426c23a3ae95fad">registerLight</a> (<a class="el" href="classec_1_1_light.html">Light</a> *light)</td></tr>
+<tr class="memdesc:a5df705359d32cee10426c23a3ae95fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new light source.  <a href="#a5df705359d32cee10426c23a3ae95fad">More...</a><br /></td></tr>
+<tr class="separator:a5df705359d32cee10426c23a3ae95fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1bd930134d6305a5666a165fc41d0f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_light_system.html#ab1bd930134d6305a5666a165fc41d0f5">unregisterLight</a> (<a class="el" href="classec_1_1_light.html">Light</a> *light)</td></tr>
+<tr class="memdesc:ab1bd930134d6305a5666a165fc41d0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister an already registered light source.  <a href="#ab1bd930134d6305a5666a165fc41d0f5">More...</a><br /></td></tr>
 <tr class="separator:ab1bd930134d6305a5666a165fc41d0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains a collection of different light sources. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>: not implemented yet </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac4139d25af9956b05e4d74db83f10ede"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4139d25af9956b05e4d74db83f10ede">&#9670;&nbsp;</a></span>LightSystem()</h2>
 
@@ -112,7 +121,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -124,6 +133,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ec::LightSystem::~LightSystem </td>
@@ -132,6 +144,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -152,18 +169,25 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Pass lights to given shader. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shader</td><td>The shader to pass the light information to. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="aedb1b50a5920e42732e53f8eb8a5410d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedb1b50a5920e42732e53f8eb8a5410d">&#9670;&nbsp;</a></span>registerLight()</h2>
+<a id="a5df705359d32cee10426c23a3ae95fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5df705359d32cee10426c23a3ae95fad">&#9670;&nbsp;</a></span>registerLight()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::LightSystem::registerLight </td>
+          <td class="memname">bool ec::LightSystem::registerLight </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classec_1_1_light.html">Light</a> *&#160;</td>
           <td class="paramname"><em>light</em></td><td>)</td>
@@ -171,6 +195,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Register a new light source. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">light</td><td>The light source to register. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if the lights source is already registered, true otherwise. </dd></dl>
 
 </div>
 </div>
@@ -190,10 +223,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Unregister an already registered light source. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">light</td><td>The light source to unregister. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if the lights source wasn't found, true otherwise. </dd></dl>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_light_system_8h_source.html">LightSystem.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_light_system_8h_source.html">LightSystem.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_light_system_8cpp.html">LightSystem.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

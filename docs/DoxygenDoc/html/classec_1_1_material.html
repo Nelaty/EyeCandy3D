@@ -73,6 +73,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>A material contains all relevant information to color an object.  
+ <a href="classec_1_1_material.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_material_8h_source.html">Material.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for ec::Material:</div>
@@ -87,34 +90,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec5bd3f3ef761f49a5028b415a9de52e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#aec5bd3f3ef761f49a5028b415a9de52e">~Material</a> ()</td></tr>
 <tr class="separator:aec5bd3f3ef761f49a5028b415a9de52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad92ada3fcc1f7b66e6bf3b6aeac73b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#aad92ada3fcc1f7b66e6bf3b6aeac73b8">addTexture</a> (const <a class="el" href="classec_1_1_texture.html">Texture</a> &amp;texture)</td></tr>
+<tr class="memdesc:aad92ada3fcc1f7b66e6bf3b6aeac73b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new texture to this material.  <a href="#aad92ada3fcc1f7b66e6bf3b6aeac73b8">More...</a><br /></td></tr>
 <tr class="separator:aad92ada3fcc1f7b66e6bf3b6aeac73b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83a673bcbcdef42bcea99939e5d6ff03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a83a673bcbcdef42bcea99939e5d6ff03">removeTexture</a> (const <a class="el" href="classec_1_1_texture.html">Texture</a> &amp;texture)</td></tr>
-<tr class="separator:a83a673bcbcdef42bcea99939e5d6ff03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22a00f6a91e7f0daff6885e4e0944d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#aa22a00f6a91e7f0daff6885e4e0944d3">removeTexture</a> (const <a class="el" href="classec_1_1_texture.html">Texture</a> &amp;texture)</td></tr>
+<tr class="memdesc:aa22a00f6a91e7f0daff6885e4e0944d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a given texture associated with this material.  <a href="#aa22a00f6a91e7f0daff6885e4e0944d3">More...</a><br /></td></tr>
+<tr class="separator:aa22a00f6a91e7f0daff6885e4e0944d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8679615f24284e809f213b882bec81bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a8679615f24284e809f213b882bec81bf">getTexture</a> (unsigned int index)</td></tr>
+<tr class="memdesc:a8679615f24284e809f213b882bec81bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to get a texture at the specified index.  <a href="#a8679615f24284e809f213b882bec81bf">More...</a><br /></td></tr>
 <tr class="separator:a8679615f24284e809f213b882bec81bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95d74f12ec9d69a764a249e36b6b857c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classec_1_1_texture.html">Texture</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a95d74f12ec9d69a764a249e36b6b857c">getTextures</a> () const</td></tr>
+<tr class="memdesc:a95d74f12ec9d69a764a249e36b6b857c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all textures associated with this material.  <a href="#a95d74f12ec9d69a764a249e36b6b857c">More...</a><br /></td></tr>
 <tr class="separator:a95d74f12ec9d69a764a249e36b6b857c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a961612ff2caee16d5d4b8f9b74042cf2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a961612ff2caee16d5d4b8f9b74042cf2">hasTexture</a> () const</td></tr>
+<tr class="memdesc:a961612ff2caee16d5d4b8f9b74042cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this material is currently using any textures.  <a href="#a961612ff2caee16d5d4b8f9b74042cf2">More...</a><br /></td></tr>
 <tr class="separator:a961612ff2caee16d5d4b8f9b74042cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15b5c4adb903b16c25ad312963027924"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a15b5c4adb903b16c25ad312963027924">addDiffuseTextureFromPath</a> (const char *path)</td></tr>
+<tr class="memdesc:a15b5c4adb903b16c25ad312963027924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comfort functions to create and add specific texture types to this material.  <a href="#a15b5c4adb903b16c25ad312963027924">More...</a><br /></td></tr>
 <tr class="separator:a15b5c4adb903b16c25ad312963027924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdd82441b5b2168161a17824e4a90f6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#afdd82441b5b2168161a17824e4a90f6f">setColorAmbient</a> (const glm::vec4 &amp;color)</td></tr>
-<tr class="separator:afdd82441b5b2168161a17824e4a90f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ee41422a7625ac8a9f8a5e52bb18cf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a4ee41422a7625ac8a9f8a5e52bb18cf7">setColorAmbient</a> (float r, float g, float b, float a)</td></tr>
-<tr class="separator:a4ee41422a7625ac8a9f8a5e52bb18cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22b711323a849e2ff6f9ffb871402a3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a22b711323a849e2ff6f9ffb871402a3e">setColorDiffuse</a> (const glm::vec4 &amp;color)</td></tr>
-<tr class="separator:a22b711323a849e2ff6f9ffb871402a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa86e76b930ffffd45076465eff08bf27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#aa86e76b930ffffd45076465eff08bf27">setColorDiffuse</a> (float r, float g, float b, float a)</td></tr>
-<tr class="separator:aa86e76b930ffffd45076465eff08bf27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a947f0946ff806852e1733b1e95a03489"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a947f0946ff806852e1733b1e95a03489">setColorSpecular</a> (const glm::vec4 &amp;color)</td></tr>
-<tr class="separator:a947f0946ff806852e1733b1e95a03489"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa62e40f0571c25eb097f03c74849f918"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#aa62e40f0571c25eb097f03c74849f918">setColorSpecular</a> (float r, float g, float b, float a)</td></tr>
-<tr class="separator:aa62e40f0571c25eb097f03c74849f918"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77ac7702af54e4c8a7301387bea159dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a77ac7702af54e4c8a7301387bea159dd">setColorEmission</a> (const glm::vec4 &amp;color)</td></tr>
-<tr class="separator:a77ac7702af54e4c8a7301387bea159dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fa0dfb1c76b2c9b07fbd2b28021010c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a6fa0dfb1c76b2c9b07fbd2b28021010c">setColorEmission</a> (float r, float g, float b, float a)</td></tr>
-<tr class="separator:a6fa0dfb1c76b2c9b07fbd2b28021010c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68e143f6390ae7e9bc6c080853191f94"><td class="memItemLeft" align="right" valign="top">const glm::vec4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a68e143f6390ae7e9bc6c080853191f94">getColorAmbient</a> () const</td></tr>
+<tr class="memdesc:a68e143f6390ae7e9bc6c080853191f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color function.  <a href="#a68e143f6390ae7e9bc6c080853191f94">More...</a><br /></td></tr>
 <tr class="separator:a68e143f6390ae7e9bc6c080853191f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6156c82b63756da91d013b5eb39fccf5"><td class="memItemLeft" align="right" valign="top">const glm::vec4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a6156c82b63756da91d013b5eb39fccf5">getColorDiffuse</a> () const</td></tr>
 <tr class="separator:a6156c82b63756da91d013b5eb39fccf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,11 +117,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6a4a55683956cd0b06d0a8de1dc4b9f"><td class="memItemLeft" align="right" valign="top">const glm::vec4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#af6a4a55683956cd0b06d0a8de1dc4b9f">getColorEmission</a> () const</td></tr>
 <tr class="separator:af6a4a55683956cd0b06d0a8de1dc4b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b9efb15466a547d4579566dfb1e558f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a4b9efb15466a547d4579566dfb1e558f">setShininess</a> (float shininess)</td></tr>
+<tr class="memdesc:a4b9efb15466a547d4579566dfb1e558f"><td class="mdescLeft">&#160;</td><td class="mdescRight">@]  <a href="#a4b9efb15466a547d4579566dfb1e558f">More...</a><br /></td></tr>
 <tr class="separator:a4b9efb15466a547d4579566dfb1e558f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a125ba490c4191f8f6fe77e76934ed33a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a125ba490c4191f8f6fe77e76934ed33a">getShininess</a> () const</td></tr>
+<tr class="memdesc:a125ba490c4191f8f6fe77e76934ed33a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the currently used shininess coefficient.  <a href="#a125ba490c4191f8f6fe77e76934ed33a">More...</a><br /></td></tr>
 <tr class="separator:a125ba490c4191f8f6fe77e76934ed33a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:afdd82441b5b2168161a17824e4a90f6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#afdd82441b5b2168161a17824e4a90f6f">setColorAmbient</a> (const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:afdd82441b5b2168161a17824e4a90f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color manipulation function.  <a href="#afdd82441b5b2168161a17824e4a90f6f">More...</a><br /></td></tr>
+<tr class="separator:afdd82441b5b2168161a17824e4a90f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee41422a7625ac8a9f8a5e52bb18cf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a4ee41422a7625ac8a9f8a5e52bb18cf7">setColorAmbient</a> (float r, float g, float b, float a)</td></tr>
+<tr class="memdesc:a4ee41422a7625ac8a9f8a5e52bb18cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color manipulation function.  <a href="#a4ee41422a7625ac8a9f8a5e52bb18cf7">More...</a><br /></td></tr>
+<tr class="separator:a4ee41422a7625ac8a9f8a5e52bb18cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b711323a849e2ff6f9ffb871402a3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a22b711323a849e2ff6f9ffb871402a3e">setColorDiffuse</a> (const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a22b711323a849e2ff6f9ffb871402a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color manipulation function.  <a href="#a22b711323a849e2ff6f9ffb871402a3e">More...</a><br /></td></tr>
+<tr class="separator:a22b711323a849e2ff6f9ffb871402a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86e76b930ffffd45076465eff08bf27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#aa86e76b930ffffd45076465eff08bf27">setColorDiffuse</a> (float r, float g, float b, float a)</td></tr>
+<tr class="memdesc:aa86e76b930ffffd45076465eff08bf27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color manipulation function.  <a href="#aa86e76b930ffffd45076465eff08bf27">More...</a><br /></td></tr>
+<tr class="separator:aa86e76b930ffffd45076465eff08bf27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a947f0946ff806852e1733b1e95a03489"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a947f0946ff806852e1733b1e95a03489">setColorSpecular</a> (const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a947f0946ff806852e1733b1e95a03489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color manipulation function.  <a href="#a947f0946ff806852e1733b1e95a03489">More...</a><br /></td></tr>
+<tr class="separator:a947f0946ff806852e1733b1e95a03489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62e40f0571c25eb097f03c74849f918"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#aa62e40f0571c25eb097f03c74849f918">setColorSpecular</a> (float r, float g, float b, float a)</td></tr>
+<tr class="memdesc:aa62e40f0571c25eb097f03c74849f918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color manipulation function.  <a href="#aa62e40f0571c25eb097f03c74849f918">More...</a><br /></td></tr>
+<tr class="separator:aa62e40f0571c25eb097f03c74849f918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77ac7702af54e4c8a7301387bea159dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a77ac7702af54e4c8a7301387bea159dd">setColorEmission</a> (const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a77ac7702af54e4c8a7301387bea159dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color manipulation function.  <a href="#a77ac7702af54e4c8a7301387bea159dd">More...</a><br /></td></tr>
+<tr class="separator:a77ac7702af54e4c8a7301387bea159dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa0dfb1c76b2c9b07fbd2b28021010c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_material.html#a6fa0dfb1c76b2c9b07fbd2b28021010c">setColorEmission</a> (float r, float g, float b, float a)</td></tr>
+<tr class="memdesc:a6fa0dfb1c76b2c9b07fbd2b28021010c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color manipulation function.  <a href="#a6fa0dfb1c76b2c9b07fbd2b28021010c">More...</a><br /></td></tr>
+<tr class="separator:a6fa0dfb1c76b2c9b07fbd2b28021010c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A material contains all relevant information to color an object. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a259d88ca352df2d284380f0b37052652"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a259d88ca352df2d284380f0b37052652">&#9670;&nbsp;</a></span>Material()</h2>
 
@@ -195,6 +218,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Comfort functions to create and add specific texture types to this material. </p>
+<p>If a texture is supposed to be used by different materials, it should be created outside this class and added via AddTexture </p><dl class="section return"><dt>Returns</dt><dd>True if the texture was successfully added, false otherwise. </dd></dl>
+
 </div>
 </div>
 <a id="aad92ada3fcc1f7b66e6bf3b6aeac73b8"></a>
@@ -213,6 +239,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Add a new texture to this material. </p>
+
 </div>
 </div>
 <a id="a68e143f6390ae7e9bc6c080853191f94"></a>
@@ -229,6 +257,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get color function. </p>
+<p>@[ </p>
 
 </div>
 </div>
@@ -298,6 +329,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the currently used shininess coefficient. </p>
+
 </div>
 </div>
 <a id="a8679615f24284e809f213b882bec81bf"></a>
@@ -316,6 +349,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Try to get a texture at the specified index. </p>
+
 </div>
 </div>
 <a id="a95d74f12ec9d69a764a249e36b6b857c"></a>
@@ -332,6 +367,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get all textures associated with this material. </p>
 
 </div>
 </div>
@@ -350,16 +387,18 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Check if this material is currently using any textures. </p>
+
 </div>
 </div>
-<a id="a83a673bcbcdef42bcea99939e5d6ff03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83a673bcbcdef42bcea99939e5d6ff03">&#9670;&nbsp;</a></span>removeTexture()</h2>
+<a id="aa22a00f6a91e7f0daff6885e4e0944d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22a00f6a91e7f0daff6885e4e0944d3">&#9670;&nbsp;</a></span>removeTexture()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ec::Material::removeTexture </td>
+          <td class="memname">bool ec::Material::removeTexture </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classec_1_1_texture.html">Texture</a> &amp;&#160;</td>
           <td class="paramname"><em>texture</em></td><td>)</td>
@@ -367,6 +406,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Remove a given texture associated with this material. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the texture was found, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -385,6 +427,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Color manipulation function. </p>
 
 </div>
 </div>
@@ -426,6 +470,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Color manipulation function. </p>
+
 </div>
 </div>
 <a id="a22b711323a849e2ff6f9ffb871402a3e"></a>
@@ -443,6 +489,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Color manipulation function. </p>
 
 </div>
 </div>
@@ -484,6 +532,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Color manipulation function. </p>
+
 </div>
 </div>
 <a id="a77ac7702af54e4c8a7301387bea159dd"></a>
@@ -501,6 +551,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Color manipulation function. </p>
 
 </div>
 </div>
@@ -542,6 +594,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Color manipulation function. </p>
+
 </div>
 </div>
 <a id="a947f0946ff806852e1733b1e95a03489"></a>
@@ -559,6 +613,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Color manipulation function. </p>
 
 </div>
 </div>
@@ -600,6 +656,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Color manipulation function. </p>
+
 </div>
 </div>
 <a id="a4b9efb15466a547d4579566dfb1e558f"></a>
@@ -618,11 +676,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>@] </p>
+<p>Set the currently used shininess coefficient. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_material_8h_source.html">Material.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_material_8cpp.html">Material.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_material_8h_source.html">Material.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_material_8cpp.html">Material.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

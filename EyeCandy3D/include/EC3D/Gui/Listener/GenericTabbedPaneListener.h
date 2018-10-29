@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by
+	 * TabbedPane widgets.
+	 */
 	class GenericTabbedPaneListener : public agui::TabbedPaneListener
 	{
 	public:

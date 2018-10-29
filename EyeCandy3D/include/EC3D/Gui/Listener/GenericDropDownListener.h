@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by DropDown
+	 * widgets.
+	 */
 	class GenericDropDownListener : public agui::DropDownListener
 	{
 	public:

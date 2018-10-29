@@ -64,7 +64,7 @@ var searchData=
   ['_7epointlight',['~PointLight',['../classec_1_1_point_light.html#aef9daa8a54baa73d1dfc724100cfbf38',1,'ec::PointLight']]],
   ['_7erectanglegeometry',['~RectangleGeometry',['../classec_1_1_rectangle_geometry.html#ade8488c66850e8c5e858889dc9b266d8',1,'ec::RectangleGeometry']]],
   ['_7erenderer',['~Renderer',['../classec_1_1_renderer.html#ab0a97bd174127b670899477a576d1fe6',1,'ec::Renderer']]],
-  ['_7eresourceregistry',['~ResourceRegistry',['../classec_1_1_resource_registry.html#aa3153d0d76d45905833bafab53341731',1,'ec::ResourceRegistry']]],
+  ['_7eresourceregistry',['~ResourceRegistry',['../classec_1_1_resource_registry.html#a3b2ee8793e4fa32075be7ce3a59fe472',1,'ec::ResourceRegistry']]],
   ['_7escene',['~Scene',['../classec_1_1_scene.html#a25e849d1bd5a9a71af922c3668115cb6',1,'ec::Scene']]],
   ['_7escenecontroller',['~SceneController',['../classec_1_1_scene_controller.html#a48a2231bf316949cc1a8bc304ad5281c',1,'ec::SceneController']]],
   ['_7escenerenderer',['~SceneRenderer',['../classec_1_1_scene_renderer.html#ae8350e90e64b53e3dfb121c11a9d3283',1,'ec::SceneRenderer']]],

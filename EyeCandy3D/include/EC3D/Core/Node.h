@@ -6,65 +6,99 @@
 
 #include <glm/glm.hpp>
 
-/**
-* Nodes make up the scene graph
-* They can have multiple child nodes and can point to drawables
-*/
 namespace ec
 {
 	class SceneRenderer;
 	class IGeometryAccess;
 	class Drawable;
 
+	/**
+	 * \brief Nodes make up the scene graph. They represent a directed
+	 * acyclic graph.
+	 * \details They can have multiple child nodes and can contains a number of
+	 * drawables.
+	 */
 	class EC3D_DECLSPEC Node : public Transform3D
 	{
 	public:
 		explicit Node(Node* parent = nullptr);
 		virtual ~Node();
 
-		/** Adds drawables to the given scene renderer visitor. */
+		/** 
+		 * \brief Adds drawables to the given scene renderer visitor. 
+		 */
 		virtual void render(SceneRenderer& renderer);
 		
-		/** Recursively update global matrices */
+		/**
+		 * \brief Recursively update global matrices. 
+		 */
 		virtual void updateGlobalMatrices(const glm::mat4& parentMat);
 
 		/**
-		 * Get the current global matrix. This node needs to be
-		 * rendered at least once, for the matrix to be something
-		 * else than the unit matrix. 
+		 * \brief Get the current global matrix. 
+		 * \details This node needs to be rendered at least once for
+		 * the matrix to be something else than the unit matrix. 
 		 */
 		const glm::mat4& getGlobalMat() const;
 
 		/** 
-		 * Get the current global position
-		 * Global matrix has to be updated before calling this function!
-		 * If not, the position will be from the last frame.
+		 * \brief Get the current global position.
+		 * \details Global matrix has to be updated before calling 
+		 * this function! If not, the position will be from the
+		 * last frame.
 		 */
 		glm::vec3 getGlobalPosition() const;
 
-		/** Get this node's parent node. */
+		/** 
+		 * \brief Get this node's parent node. 
+		 * \return The parent node or nullptr if this node is a 
+		 * root node.
+		 */
 		Node* getParent() const;
-		/** Set this node's parent node. */
+		/** 
+		 * \brief Set this node's parent node. 
+		 */
 		void setParent(Node* parent);
 
-		/** Add a new child to this node */
+		/** 
+		 * \brief Add a new child to this node.
+		 * \details Important: Do not create cycles!
+		 */
 		void addChild(Node* child);
-		/** Remove an existing child from this node. */
+		/** 
+		 * \brief Remove an existing child from this node.
+		 * \return True if the child node was found, false otherwise.
+		 */
 		bool removeChild(Node* child);
-		/** Remove all child nodes from this node. */
+		/** 
+		 * \brief Remove all child nodes from this node. 
+		 */
 		void removeChildren();
-		/** Get the number of children nodes. */
+		/** 
+		 * \brief Get the number of child nodes.
+		 */
 		unsigned int getChildrenCount() const;
-		/** Check if this node has one or more child nodes. */
+		/**
+		 * \brief Check if this node has one or more child nodes. 
+		 * \return True if there are child nodes, false otherwise.
+		 */
 		bool hasChildren() const;
 
-		/** Get all drawables related to this node. */
+		/** 
+		 * \brief Get all drawables preiously added to this node.
+		 */
 		virtual const std::vector<Drawable*>& getDrawables() const;
-		/** Add a given drawable to this node. */
+		/**
+		 * \brief Add a given drawable to this node. 
+		 */
 		void addDrawable(Drawable* drawable);
-		/** Remove a given drawable from this node. */
-		void removeDrawable(Drawable* drawable);
-		/** Remove all drawables from this node. */
+		/**
+		 * \brief Remove a given drawable from this node.
+		 */
+		bool removeDrawable(Drawable* drawable);
+		/**
+		 * \brief Remove all drawables from this node.
+		 */
 		void removeDrawables();
 
 	protected:

@@ -3,6 +3,8 @@
 
 #include "EC3D/Common/Config.h"
 
+#include <algorithm>
+
 namespace ec
 {
 	Material::Material()
@@ -10,8 +12,7 @@ namespace ec
 		m_colorDiffuse{0.0f, 0.0f, 0.0f, 0.0f},
 		m_colorSpecular{0.0f, 0.0f, 0.0f, 0.0f},
 		m_colorEmission{0.0f, 0.0f, 0.0f, 0.0f},
-		m_shininess{0.0f},
-		m_hasTexture{false}
+		m_shininess{0.0f}
 	{
 	}
 
@@ -21,23 +22,15 @@ namespace ec
 	void Material::addTexture(const Texture& texture)
 	{
 		m_textures.push_back(texture);
-		m_hasTexture = true;
 	}
 
-	void Material::removeTexture(const Texture& texture)
+	bool Material::removeTexture(const Texture& texture)
 	{
-		for(auto it = m_textures.begin(); it != m_textures.end(); ++it)
-		{
-			if((*it) == texture)
-			{
-				m_textures.erase(it);
-				if(m_textures.empty())
-				{
-					m_hasTexture = false;
-				}
-				return;
-			}
-		}
+		const auto removedEntry = std::remove(m_textures.begin(),
+											  m_textures.end(),
+											  texture);
+
+		return removedEntry != m_textures.end();
 	}
 
 	const std::vector<Texture>& Material::getTextures() const
@@ -47,7 +40,7 @@ namespace ec
 
 	bool Material::hasTexture() const
 	{
-		return m_hasTexture;
+		return !m_textures.empty();
 	}
 
 	ec::Texture* Material::getTexture(const unsigned int index)
@@ -69,24 +62,6 @@ namespace ec
 		}
 		return result;
 	}
-
-	/*bool Material::addSpecularTextureFromPath(const char* path)
-	{
-		Texture texture;
-		const auto result = texture.textureFromFile(path, conf_shader::g_textureSpecular);
-		m_textures.push_back(texture);
-		m_hasTexture = true;
-		return result;
-	}
-
-	bool Material::addBumpTextureFromPath(const char* path)
-	{
-		Texture texture;
-		const auto result = texture.textureFromFile(path, conf_shader::g_textureBump);
-		m_textures.push_back(texture);
-		m_hasTexture = true;
-		return result;
-	}*/
 
 	void Material::setColorAmbient(const glm::vec4& color)
 	{

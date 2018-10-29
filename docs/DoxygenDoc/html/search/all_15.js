@@ -9,7 +9,7 @@ var searchData=
   ['unregisterallinputlisteners',['unregisterAllInputListeners',['../classec_1_1_event_system.html#a142264d74594a6584fd06a00eec45345',1,'ec::EventSystem::unregisterAllInputListeners()'],['../classec_1_1_input_observable.html#ac8d3ed43a3b26601e2710e3758248620',1,'ec::InputObservable::unregisterAllInputListeners()']]],
   ['unregisterinputlistener',['unregisterInputListener',['../classec_1_1_event_system.html#a6b76350de7e412e8df412b8c5bfd5b03',1,'ec::EventSystem::unregisterInputListener()'],['../classec_1_1_input_observable.html#aab1af4952f6127781eade6dccf33aafb',1,'ec::InputObservable::unregisterInputListener()'],['../classec_1_1_gui_system.html#a18d7d063334763b264da1392199f4c4e',1,'ec::GuiSystem::unregisterInputListener()']]],
   ['unregisterlight',['unregisterLight',['../classec_1_1_light_system.html#ab1bd930134d6305a5666a165fc41d0f5',1,'ec::LightSystem']]],
-  ['unregisterresource',['unregisterResource',['../classec_1_1_resource_registry.html#ae1227f72ea04032d4e757ac4b5b0845a',1,'ec::ResourceRegistry']]],
+  ['unregisterresource',['unregisterResource',['../classec_1_1_resource_registry.html#a637ecd8b81f8efe21b7c5153213b8213',1,'ec::ResourceRegistry']]],
   ['unregisterscene',['unregisterScene',['../classec_1_1_scene_system.html#ae00450951bc3220dd9899d75bdd207c4',1,'ec::SceneSystem']]],
   ['unregisterscenerenderer',['unregisterSceneRenderer',['../classec_1_1_renderer.html#a5c853ee4c34b069cc8142db8409abac6',1,'ec::Renderer']]],
   ['up',['UP',['../classec_1_1_keyboard.html#a6da2eed1074dc9feaf4b68ab3da684d8',1,'ec::Keyboard']]],

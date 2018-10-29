@@ -5,6 +5,9 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle ActionEvents.
+	 */
 	class GenericActionListener : public agui::ActionListener
 	{
 	public:

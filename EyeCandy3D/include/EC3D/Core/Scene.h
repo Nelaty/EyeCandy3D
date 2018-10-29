@@ -5,53 +5,90 @@
 #include <string>
 #include <memory>
 
-/**
-* A scene enables an easy switching of root nodes
-* It is possible to define an own scene controller, to influence
-* a scene through user input.
-*/
+
 
 namespace ec
 {
 	class SceneController;
 	class SceneSystem;
 	class Node;
-
+	
+	/**
+	 * \brief A scene enables an easy switching of root nodes.
+	 * \details It is possible to define an own scene controller, 
+	 * to influence a scene through user input.
+	 */
 	class EC3D_DECLSPEC Scene
 	{
 	public:
+		/**
+		 * \brief Scene constructor.
+		 * \param name The name of the scene.
+		 */
 		explicit Scene(std::string name);
 		virtual ~Scene();
 
-		/* Update routine */
+		/**
+		 * \brief Update routine.
+		 */
 		virtual void tick(float timeDelta);
 
-		/* Access to this scene's name */
+		/**
+		 * \brief Get the name of the scene.
+		 */
 		const std::string& getName() const;
 
-		/* Node access */
+		/**
+		 * \brief Get the root node
+		 */
 		Node* getRoot() const;
 
-		/* Scene controller access */
+		/**
+		 * \brief Set the current scene controller.
+		 */
 		void setSceneController(SceneController* sceneController);
+		/**
+		 * \brief Get the current scene controller.
+		 */
 		SceneController* getSceneController() const;
 
-		/* Scene renderer access */
+		/**
+		 * \brief Set the current scene renderer.
+		 */
 		void setSceneRenderer(const SceneRenderer& sceneRenderer);
+		/**
+		 * \brief Get the current scene renderer.
+		 */
 		SceneRenderer& getSceneRenderer();
 
-		/* Set the containing scene system */
+		/**
+		 * \brief Set the scene system, in which the scene is 
+		 * contained.
+		 */
 		void setSceneSystem(SceneSystem* sceneSystem);
+		/**
+		 * \brief Get the scene system, in which the scene is
+		 * contained.
+		 */
 		SceneSystem* getSceneSystem() const;
 
-		/** Enable this scene */
+		/** 
+		 * \brief Enable this scene.
+		 */
 		void enable();
-		/** Disable this scene */
+		/** 
+		 * \brief Disable this scene.
+		 */
 		void disable();
-		/** Check if this scene is enabled */
+		/** 
+		 * \brief Check if this scene is enabled.
+		 */
 		bool isEnabled() const;
 
 	protected:
+		/**
+		 * \brief Create a scene renderer for this scene.
+		 */
 		void initSceneRenderer();
 
 		bool m_enabled = true;

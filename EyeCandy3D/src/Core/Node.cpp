@@ -17,7 +17,7 @@ namespace ec
 	}
 
 	Node::~Node()
-	= default;
+		= default;
 
 	void Node::render(SceneRenderer& renderer)
 	{
@@ -115,11 +115,12 @@ namespace ec
 		m_drawables.push_back(drawable);
 	}
 
-	void Node::removeDrawable(Drawable* drawable)
+	bool Node::removeDrawable(Drawable* drawable)
 	{
-		std::remove(m_drawables.begin(),
-					m_drawables.end(),
-					drawable);
+		const auto removedEntry = std::remove(m_drawables.begin(),
+											  m_drawables.end(),
+											  drawable);
+		return removedEntry != m_drawables.end();
 	}
 
 	void Node::removeDrawables()

@@ -1,5 +1,5 @@
 <map id="ec::DirectionalLight" name="ec::DirectionalLight">
 <area shape="rect" id="node2" href="$classec_1_1_light.html" title="Abstract light source. " alt="" coords="316,763,425,928"/>
-<area shape="rect" id="node3" href="$classec_1_1_node.html" title="{ec::Node\n||+ Node()\l+ ~Node()\l+ render()\l+ updateGlobalMatrices()\l+ getGlobalMat()\l+ getGlobalPosition()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 7 more...\l}" alt="" coords="122,476,290,700"/>
+<area shape="rect" id="node3" href="$classec_1_1_node.html" title="Nodes make up the scene graph. They represent a directed acyclic graph. " alt="" coords="122,476,290,700"/>
 <area shape="rect" id="node4" href="$classec_1_1_transform3_d.html" title="{ec::Transform3D\n||+ Transform3D()\l+ ~Transform3D()\l+ updateLocalMat()\l+ getLocalPosition()\l+ getUpVector()\l+ getForwardVector()\l+ getLocalMat()\l+ setLocalMat()\l+ getTranslation()\l+ getTranslationX()\land 39 more...\l}" alt="" coords="40,189,184,413"/>
 </map>

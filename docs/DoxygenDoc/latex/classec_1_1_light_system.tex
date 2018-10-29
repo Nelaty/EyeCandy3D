@@ -2,6 +2,11 @@
 \label{classec_1_1_light_system}\index{ec\+::\+Light\+System@{ec\+::\+Light\+System}}
 
 
+Contains a collection of different light sources.  
+
+
+
+
 {\ttfamily \#include $<$Light\+System.\+h$>$}
 
 
@@ -21,11 +26,18 @@ Collaboration diagram for ec\+:\+:Light\+System\+:\nopagebreak
 \mbox{\hyperlink{classec_1_1_light_system_a945503a2b607e87f13f87e5f95d157ef}{$\sim$\+Light\+System}} ()
 \item 
 void \mbox{\hyperlink{classec_1_1_light_system_a6569ed0dd8a15a461358add2ee514f92}{enable}} (\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$shader)
-\item 
-void \mbox{\hyperlink{classec_1_1_light_system_aedb1b50a5920e42732e53f8eb8a5410d}{register\+Light}} (\mbox{\hyperlink{classec_1_1_light}{Light}} $\ast$light)
-\item 
+\begin{DoxyCompactList}\small\item\em Pass lights to given shader. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classec_1_1_light_system_a5df705359d32cee10426c23a3ae95fad}{register\+Light}} (\mbox{\hyperlink{classec_1_1_light}{Light}} $\ast$light)
+\begin{DoxyCompactList}\small\item\em Register a new light source. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_light_system_ab1bd930134d6305a5666a165fc41d0f5}{unregister\+Light}} (\mbox{\hyperlink{classec_1_1_light}{Light}} $\ast$light)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Unregister an already registered light source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains a collection of different light sources. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]\+: not implemented yet \end{DoxyRefDesc}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -33,13 +45,13 @@ bool \mbox{\hyperlink{classec_1_1_light_system_ab1bd930134d6305a5666a165fc41d0f5
 \index{ec\+::\+Light\+System@{ec\+::\+Light\+System}!Light\+System@{Light\+System}}
 \index{Light\+System@{Light\+System}!ec\+::\+Light\+System@{ec\+::\+Light\+System}}
 \subsubsection{\texorpdfstring{Light\+System()}{LightSystem()}}
-{\footnotesize\ttfamily ec\+::\+Light\+System\+::\+Light\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily ec\+::\+Light\+System\+::\+Light\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
 
 \mbox{\Hypertarget{classec_1_1_light_system_a945503a2b607e87f13f87e5f95d157ef}\label{classec_1_1_light_system_a945503a2b607e87f13f87e5f95d157ef}} 
 \index{ec\+::\+Light\+System@{ec\+::\+Light\+System}!````~Light\+System@{$\sim$\+Light\+System}}
 \index{````~Light\+System@{$\sim$\+Light\+System}!ec\+::\+Light\+System@{ec\+::\+Light\+System}}
 \subsubsection{\texorpdfstring{$\sim$\+Light\+System()}{~LightSystem()}}
-{\footnotesize\ttfamily ec\+::\+Light\+System\+::$\sim$\+Light\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ec\+::\+Light\+System\+::$\sim$\+Light\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -50,12 +62,33 @@ bool \mbox{\hyperlink{classec_1_1_light_system_ab1bd930134d6305a5666a165fc41d0f5
 \subsubsection{\texorpdfstring{enable()}{enable()}}
 {\footnotesize\ttfamily void ec\+::\+Light\+System\+::enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{shader }\end{DoxyParamCaption})}
 
-Pass lights to given shader. \mbox{\Hypertarget{classec_1_1_light_system_aedb1b50a5920e42732e53f8eb8a5410d}\label{classec_1_1_light_system_aedb1b50a5920e42732e53f8eb8a5410d}} 
+
+
+Pass lights to given shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & The shader to pass the light information to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_light_system_a5df705359d32cee10426c23a3ae95fad}\label{classec_1_1_light_system_a5df705359d32cee10426c23a3ae95fad}} 
 \index{ec\+::\+Light\+System@{ec\+::\+Light\+System}!register\+Light@{register\+Light}}
 \index{register\+Light@{register\+Light}!ec\+::\+Light\+System@{ec\+::\+Light\+System}}
 \subsubsection{\texorpdfstring{register\+Light()}{registerLight()}}
-{\footnotesize\ttfamily void ec\+::\+Light\+System\+::register\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_light}{Light}} $\ast$}]{light }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool ec\+::\+Light\+System\+::register\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_light}{Light}} $\ast$}]{light }\end{DoxyParamCaption})}
 
+
+
+Register a new light source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light} & The light source to register. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the lights source is already registered, true otherwise. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_light_system_ab1bd930134d6305a5666a165fc41d0f5}\label{classec_1_1_light_system_ab1bd930134d6305a5666a165fc41d0f5}} 
 \index{ec\+::\+Light\+System@{ec\+::\+Light\+System}!unregister\+Light@{unregister\+Light}}
 \index{unregister\+Light@{unregister\+Light}!ec\+::\+Light\+System@{ec\+::\+Light\+System}}
@@ -64,6 +97,19 @@ Pass lights to given shader. \mbox{\Hypertarget{classec_1_1_light_system_aedb1b5
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Unregister an already registered light source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light} & The light source to unregister. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the lights source wasn\textquotesingle{}t found, true otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_light_system_8h}{Light\+System.\+h}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_light_system_8h}{Light\+System.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_light_system_8cpp}{Light\+System.\+cpp}}\end{DoxyCompactItemize}

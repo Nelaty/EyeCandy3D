@@ -76,6 +76,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>InputObservables inform InputListeners about InputEvents.  
+ <a href="classec_1_1_input_observable.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_input_observable_8h_source.html">InputObservable.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for ec::InputObservable:</div>
@@ -102,28 +105,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac261f6a73cfdcd37c276e732cc25f869"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#ac261f6a73cfdcd37c276e732cc25f869">~InputObservable</a> ()</td></tr>
 <tr class="separator:ac261f6a73cfdcd37c276e732cc25f869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac35d29f643a2735e4cb38cb6ee1354aa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#ac35d29f643a2735e4cb38cb6ee1354aa">receiveEvent</a> (const <a class="el" href="structec_1_1_input_event.html">InputEvent</a> &amp;event)</td></tr>
+<tr class="memdesc:ac35d29f643a2735e4cb38cb6ee1354aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform the listeners about a new event.  <a href="#ac35d29f643a2735e4cb38cb6ee1354aa">More...</a><br /></td></tr>
 <tr class="separator:ac35d29f643a2735e4cb38cb6ee1354aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a542bd14ecfbeceed917ea0df5c7f3755"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a542bd14ecfbeceed917ea0df5c7f3755">registerInputListener</a> (<a class="el" href="classec_1_1_input_listener.html">InputListener</a> *inputListener)</td></tr>
+<tr class="memdesc:a542bd14ecfbeceed917ea0df5c7f3755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new input listener.  <a href="#a542bd14ecfbeceed917ea0df5c7f3755">More...</a><br /></td></tr>
 <tr class="separator:a542bd14ecfbeceed917ea0df5c7f3755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab1af4952f6127781eade6dccf33aafb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#aab1af4952f6127781eade6dccf33aafb">unregisterInputListener</a> (<a class="el" href="classec_1_1_input_listener.html">InputListener</a> *inputListener)</td></tr>
+<tr class="memdesc:aab1af4952f6127781eade6dccf33aafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister an already registered input listener.  <a href="#aab1af4952f6127781eade6dccf33aafb">More...</a><br /></td></tr>
 <tr class="separator:aab1af4952f6127781eade6dccf33aafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e14f68359b8d7e1be60e8503a07ea87"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a6e14f68359b8d7e1be60e8503a07ea87">contains</a> (<a class="el" href="classec_1_1_input_listener.html">InputListener</a> *inputListener)</td></tr>
+<tr class="memdesc:a6e14f68359b8d7e1be60e8503a07ea87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this observer contains a given controller.  <a href="#a6e14f68359b8d7e1be60e8503a07ea87">More...</a><br /></td></tr>
 <tr class="separator:a6e14f68359b8d7e1be60e8503a07ea87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8d3ed43a3b26601e2710e3758248620"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#ac8d3ed43a3b26601e2710e3758248620">unregisterAllInputListeners</a> ()</td></tr>
+<tr class="memdesc:ac8d3ed43a3b26601e2710e3758248620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the input listener list.  <a href="#ac8d3ed43a3b26601e2710e3758248620">More...</a><br /></td></tr>
 <tr class="separator:ac8d3ed43a3b26601e2710e3758248620"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8ac61eaebb95010e8a12bb1e6348391"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#ac8ac61eaebb95010e8a12bb1e6348391">informAll</a> ()</td></tr>
+<tr class="memdesc:ac8ac61eaebb95010e8a12bb1e6348391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform all input listeners about all accumulated events.  <a href="#ac8ac61eaebb95010e8a12bb1e6348391">More...</a><br /></td></tr>
 <tr class="separator:ac8ac61eaebb95010e8a12bb1e6348391"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf16d74cb1f51ee631e017280fff8052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#acf16d74cb1f51ee631e017280fff8052">setPrevMouseEvent</a> (const <a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a> &amp;event)</td></tr>
+<tr class="memdesc:acf16d74cb1f51ee631e017280fff8052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the previous mouse event.  <a href="#acf16d74cb1f51ee631e017280fff8052">More...</a><br /></td></tr>
 <tr class="separator:acf16d74cb1f51ee631e017280fff8052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf9f1388171a99581a0a4100bbf2d11b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structec_1_1_mouse_event.html">MouseEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#abf9f1388171a99581a0a4100bbf2d11b">getPrevMouseEvent</a> () const</td></tr>
+<tr class="memdesc:abf9f1388171a99581a0a4100bbf2d11b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the previous mouse event.  <a href="#abf9f1388171a99581a0a4100bbf2d11b">More...</a><br /></td></tr>
 <tr class="separator:abf9f1388171a99581a0a4100bbf2d11b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcc8abf8d747417f50465189e632d0dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#afcc8abf8d747417f50465189e632d0dd">setPrevKeyboardEvent</a> (const <a class="el" href="structec_1_1_keyboard_event.html">KeyboardEvent</a> &amp;event)</td></tr>
+<tr class="memdesc:afcc8abf8d747417f50465189e632d0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the previous keyboard event.  <a href="#afcc8abf8d747417f50465189e632d0dd">More...</a><br /></td></tr>
 <tr class="separator:afcc8abf8d747417f50465189e632d0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1ba2fa8deaf1d69a4809e4d8dc61452"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structec_1_1_keyboard_event.html">KeyboardEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#ab1ba2fa8deaf1d69a4809e4d8dc61452">getPrevKeyboardEvent</a> () const</td></tr>
+<tr class="memdesc:ab1ba2fa8deaf1d69a4809e4d8dc61452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the previous keyboard event.  <a href="#ab1ba2fa8deaf1d69a4809e4d8dc61452">More...</a><br /></td></tr>
 <tr class="separator:ab1ba2fa8deaf1d69a4809e4d8dc61452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55c7310a50dc873f69c2246bbeeed3e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#a55c7310a50dc873f69c2246bbeeed3e6">setPrevDisplayEvent</a> (const <a class="el" href="structec_1_1_display_event.html">DisplayEvent</a> &amp;event)</td></tr>
+<tr class="memdesc:a55c7310a50dc873f69c2246bbeeed3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the previous keyboard event.  <a href="#a55c7310a50dc873f69c2246bbeeed3e6">More...</a><br /></td></tr>
 <tr class="separator:a55c7310a50dc873f69c2246bbeeed3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac12e711d3a7dcaf65d2028d2283c1243"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structec_1_1_display_event.html">DisplayEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#ac12e711d3a7dcaf65d2028d2283c1243">getPrevDisplayEvent</a> () const</td></tr>
+<tr class="memdesc:ac12e711d3a7dcaf65d2028d2283c1243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the previous keyboard event.  <a href="#ac12e711d3a7dcaf65d2028d2283c1243">More...</a><br /></td></tr>
 <tr class="separator:ac12e711d3a7dcaf65d2028d2283c1243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -146,7 +161,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae480593ec25d98ea00b0b7a9aa6cba32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structec_1_1_display_event.html">DisplayEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_input_observable.html#ae480593ec25d98ea00b0b7a9aa6cba32">m_prevDisplayEvent</a></td></tr>
 <tr class="separator:ae480593ec25d98ea00b0b7a9aa6cba32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>InputObservables inform InputListeners about InputEvents. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ac2476cc82c72ba20dcd8d5c89794f577"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac2476cc82c72ba20dcd8d5c89794f577">&#9670;&nbsp;</a></span>Events_Type</h2>
 
@@ -275,7 +292,15 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Check if this observer contains a specific controller </p>
+
+<p>Check if this observer contains a given controller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputListener</td><td>The input listener to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the inputListener was found. </dd></dl>
 
 </div>
 </div>
@@ -293,7 +318,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the previous keyboard event </p>
+
+<p>Get the previous keyboard event. </p>
 
 </div>
 </div>
@@ -311,7 +337,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the previous keyboard event </p>
+
+<p>Get the previous keyboard event. </p>
 
 </div>
 </div>
@@ -329,7 +356,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the previous mouse event </p>
+
+<p>Get the previous mouse event. </p>
 
 </div>
 </div>
@@ -355,7 +383,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Inform all input listeners about all accumulated events </p>
+
+<p>Inform all input listeners about all accumulated events. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>: not even doing anything </dd></dl>
 
 </div>
 </div>
@@ -409,6 +439,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Inform the listeners about a new event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event to inform about.  input observable can't check for inputs itself because of the way GLFW works. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a542bd14ecfbeceed917ea0df5c7f3755"></a>
@@ -434,7 +472,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Register a new or remove an old listener </p>
+
+<p>Register a new input listener. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputListener</td><td>The input listener to register. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -453,7 +498,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the previous keyboard event </p>
+
+<p>Set the previous keyboard event. </p>
 
 </div>
 </div>
@@ -472,7 +518,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the previous keyboard event </p>
+
+<p>Set the previous keyboard event. </p>
 
 </div>
 </div>
@@ -491,7 +538,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the previous mouse event </p>
+
+<p>Set the previous mouse event. </p>
 
 </div>
 </div>
@@ -517,7 +565,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Clears the input listener list </p>
+
+<p>Clears the input listener list. </p>
 
 </div>
 </div>
@@ -544,6 +593,15 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Unregister an already registered input listener. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputListener</td><td>The input listener to unregister. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the inputListener was found, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -611,7 +669,6 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Previous display event </p>
 
 </div>
 </div>
@@ -634,7 +691,6 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Previous keyboard event </p>
 
 </div>
 </div>
@@ -657,13 +713,12 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Previous mouse event </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_input_observable_8h_source.html">InputObservable.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_input_observable_8cpp.html">InputObservable.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_input_observable_8h_source.html">InputObservable.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_input_observable_8cpp.html">InputObservable.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

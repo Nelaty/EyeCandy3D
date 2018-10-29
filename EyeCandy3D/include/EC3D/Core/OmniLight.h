@@ -3,6 +3,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Ambient lighting that acts everywhere.
+	 * \todo: implement
+	 */
 	class OmniLight : public Light
 	{
 	public:

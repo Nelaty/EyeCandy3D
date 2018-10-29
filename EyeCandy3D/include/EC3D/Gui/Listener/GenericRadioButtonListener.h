@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by
+	 * RadioButton widgets.
+	 */
 	class GenericRadioButtonListener : public agui::RadioButtonListener
 	{
 	public:

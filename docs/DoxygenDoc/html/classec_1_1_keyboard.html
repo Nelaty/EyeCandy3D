@@ -76,6 +76,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Representation of a physical keyboard.  
+ <a href="classec_1_1_keyboard.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_keyboard_8h_source.html">Keyboard.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for ec::Keyboard:</div>
@@ -95,26 +98,34 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a817f6cd6ea29898c6651dee24de59ba5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#a817f6cd6ea29898c6651dee24de59ba5">~Keyboard</a> ()</td></tr>
 <tr class="separator:a817f6cd6ea29898c6651dee24de59ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af792a3b8226096510f6dfecc57697f8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#af792a3b8226096510f6dfecc57697f8e">install</a> (<a class="el" href="classec_1_1_window.html">Window</a> *window)</td></tr>
+<tr class="memdesc:af792a3b8226096510f6dfecc57697f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Install the keyboard, which generates keyboard events.  <a href="#af792a3b8226096510f6dfecc57697f8e">More...</a><br /></td></tr>
 <tr class="separator:af792a3b8226096510f6dfecc57697f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e60401ed958ec3d94a77b1dda9f44e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#a1e60401ed958ec3d94a77b1dda9f44e8">uninstall</a> ()</td></tr>
+<tr class="memdesc:a1e60401ed958ec3d94a77b1dda9f44e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uninstall the keyboard.  <a href="#a1e60401ed958ec3d94a77b1dda9f44e8">More...</a><br /></td></tr>
 <tr class="separator:a1e60401ed958ec3d94a77b1dda9f44e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6b17bd2f2853def1e6ec21fadd9b658"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#ad6b17bd2f2853def1e6ec21fadd9b658">getWindow</a> () const</td></tr>
+<tr class="memdesc:ad6b17bd2f2853def1e6ec21fadd9b658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the window, which is associated with this keyboard.  <a href="#ad6b17bd2f2853def1e6ec21fadd9b658">More...</a><br /></td></tr>
 <tr class="separator:ad6b17bd2f2853def1e6ec21fadd9b658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47779c0842584eb4337e1aa63e7d7a35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#a47779c0842584eb4337e1aa63e7d7a35">isKeyDown</a> (<a class="el" href="classec_1_1_keyboard.html#a135ca08df15aebf8c93ce3cc76288a6e">Keyboard::EC_KEY_KEYBOARD</a> key) const</td></tr>
+<tr class="memdesc:a47779c0842584eb4337e1aa63e7d7a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a keyboard button is being pressed.  <a href="#a47779c0842584eb4337e1aa63e7d7a35">More...</a><br /></td></tr>
 <tr class="separator:a47779c0842584eb4337e1aa63e7d7a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d260eb1df363be405af8a967aa8b5b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#a0d260eb1df363be405af8a967aa8b5b6">isKeyUp</a> (<a class="el" href="classec_1_1_keyboard.html#a135ca08df15aebf8c93ce3cc76288a6e">Keyboard::EC_KEY_KEYBOARD</a> key) const</td></tr>
+<tr class="memdesc:a0d260eb1df363be405af8a967aa8b5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a keyboard button is being released.  <a href="#a0d260eb1df363be405af8a967aa8b5b6">More...</a><br /></td></tr>
 <tr class="separator:a0d260eb1df363be405af8a967aa8b5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e986024ce4790af20b3198abce9b807"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#a5e986024ce4790af20b3198abce9b807">keyboardKeyToString</a> (<a class="el" href="classec_1_1_keyboard.html#a135ca08df15aebf8c93ce3cc76288a6e">EC_KEY_KEYBOARD</a> keyboardCode)</td></tr>
+<tr class="memdesc:a5e986024ce4790af20b3198abce9b807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a keycode to its string representation.  <a href="#a5e986024ce4790af20b3198abce9b807">More...</a><br /></td></tr>
 <tr class="separator:a5e986024ce4790af20b3198abce9b807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d048694060edbbb3cd6dba19d7eff24"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#a8d048694060edbbb3cd6dba19d7eff24">keycodeIsKey</a> (int keycode)</td></tr>
+<tr class="memdesc:a8d048694060edbbb3cd6dba19d7eff24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a keycode is representing a key on the keyboard.  <a href="#a8d048694060edbbb3cd6dba19d7eff24">More...</a><br /></td></tr>
 <tr class="separator:a8d048694060edbbb3cd6dba19d7eff24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a135ca08df15aebf8c93ce3cc76288a6e"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#a135ca08df15aebf8c93ce3cc76288a6e">EC_KEY_KEYBOARD</a>: int { A = GLFW_KEY_A</td></tr>
+<tr class="memdesc:a135ca08df15aebf8c93ce3cc76288a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains all possible types of keys on a keyboard.  <a href="#a135ca08df15aebf8c93ce3cc76288a6e">More...</a><br /></td></tr>
 <tr class="separator:a135ca08df15aebf8c93ce3cc76288a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10567c2f907d921b438ca4f96e7dfb86"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#a10567c2f907d921b438ca4f96e7dfb86">B</a> = GLFW_KEY_B</td></tr>
 <tr class="separator:a10567c2f907d921b438ca4f96e7dfb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -367,7 +378,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a599f8a3b8addd9f6cdabfad9d0e773c4"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="_common_8h.html#aac42573e202ca3dd4d259c81691e2369">EC3D_DECLSPEC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_keyboard.html#a599f8a3b8addd9f6cdabfad9d0e773c4">KEY_LAST</a></td></tr>
 <tr class="separator:a599f8a3b8addd9f6cdabfad9d0e773c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Representation of a physical keyboard. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a9d797ac5b4d42f3b586091bcc14e6343"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d797ac5b4d42f3b586091bcc14e6343">&#9670;&nbsp;</a></span>EventSource_Ptr</h2>
 
@@ -448,6 +461,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Get the window, which is associated with this keyboard. </p>
 
 </div>
@@ -467,7 +481,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Install the keyboard, which generates keyboard events. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>The window, for which keyboard events will now be generated. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -486,6 +507,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Check if a keyboard button is being pressed. </p>
 
 </div>
@@ -505,6 +527,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Check if a keyboard button is being released. </p>
 
 </div>
@@ -533,6 +556,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Convert a keycode to its string representation. </p>
+
 </div>
 </div>
 <a id="a8d048694060edbbb3cd6dba19d7eff24"></a>
@@ -559,6 +584,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check if a keycode is representing a key on the keyboard. </p>
+<p>keycode </p>
+
 </div>
 </div>
 <a id="a1e60401ed958ec3d94a77b1dda9f44e8"></a>
@@ -575,6 +603,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Uninstall the keyboard. </p>
 
 </div>
@@ -829,6 +858,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Contains all possible types of keys on a keyboard. </p>
 
 </div>
 </div>
@@ -2345,8 +2376,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_keyboard_8h_source.html">Keyboard.h</a></li>
-<li>D:/Library/Documents/Job/Forschungsmaster/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_keyboard_8cpp.html">Keyboard.cpp</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/include/EC3D/Core/<a class="el" href="_keyboard_8h_source.html">Keyboard.h</a></li>
+<li>C:/Library/Job/Projekte/SimulationVisualization/EyeCandy3D/EyeCandy3D/src/Core/<a class="el" href="_keyboard_8cpp.html">Keyboard.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

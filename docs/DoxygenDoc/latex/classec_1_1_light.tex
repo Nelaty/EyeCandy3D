@@ -33,20 +33,20 @@ Collaboration diagram for ec\+:\+:Light\+:\nopagebreak
 virtual \mbox{\hyperlink{classec_1_1_light_af9024a28fff2403705d1a6e9cad4a128}{$\sim$\+Light}} ()
 \item 
 void \mbox{\hyperlink{classec_1_1_light_ab3a3ade92e06121c965216fb168ef5db}{set\+Color}} (const glm\+::vec3 \&color)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the emissive color. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_light_aaa6d6edfe31b15dc259a8fa0d59ef8de}{set\+Color}} (float r, float g, float b)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the emissive color. \end{DoxyCompactList}\item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_light_a3eaa8c20fc0d48588078bd82f13fbaef}{get\+Color}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the emissive color. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_light_ae2b2bbbc88aef9d531627bb90f7b0183}{set\+Intensity}} (float intensity)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the intensity of this light source. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classec_1_1_light_a8380a3371b458030258bcf7a39857e17}{get\+Intensity}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the intensity of this light source. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classec_1_1_light_a7816fc3b8f92cd0ac732be6944754995}{Light}} (\mbox{\hyperlink{namespaceec_a30e2a743ebdeb02ac68a6cfa50f629c7}{Light\+Type}} type, float intensity=1.\+0f, const glm\+::vec3 \&color=glm\+::vec3(1.\+0f))
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_light}{Light}} constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -76,6 +76,19 @@ Abstract light source.
 
 
 
+\mbox{\hyperlink{classec_1_1_light}{Light}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The light source type. \\
+\hline
+{\em intensity} & Determines brightness. \\
+\hline
+{\em color} & Emission color. \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classec_1_1_light_a3eaa8c20fc0d48588078bd82f13fbaef}\label{classec_1_1_light_a3eaa8c20fc0d48588078bd82f13fbaef}} 
 \index{ec\+::\+Light@{ec\+::\+Light}!get\+Color@{get\+Color}}
@@ -83,31 +96,51 @@ Abstract light source.
 \subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
 {\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Light\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the emissive color. \mbox{\Hypertarget{classec_1_1_light_a8380a3371b458030258bcf7a39857e17}\label{classec_1_1_light_a8380a3371b458030258bcf7a39857e17}} 
+
+
+Get the emissive color. 
+
+\mbox{\Hypertarget{classec_1_1_light_a8380a3371b458030258bcf7a39857e17}\label{classec_1_1_light_a8380a3371b458030258bcf7a39857e17}} 
 \index{ec\+::\+Light@{ec\+::\+Light}!get\+Intensity@{get\+Intensity}}
 \index{get\+Intensity@{get\+Intensity}!ec\+::\+Light@{ec\+::\+Light}}
 \subsubsection{\texorpdfstring{get\+Intensity()}{getIntensity()}}
 {\footnotesize\ttfamily float ec\+::\+Light\+::get\+Intensity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the intensity of this light source. \mbox{\Hypertarget{classec_1_1_light_ab3a3ade92e06121c965216fb168ef5db}\label{classec_1_1_light_ab3a3ade92e06121c965216fb168ef5db}} 
+
+
+Get the intensity of this light source. 
+
+\mbox{\Hypertarget{classec_1_1_light_ab3a3ade92e06121c965216fb168ef5db}\label{classec_1_1_light_ab3a3ade92e06121c965216fb168ef5db}} 
 \index{ec\+::\+Light@{ec\+::\+Light}!set\+Color@{set\+Color}}
 \index{set\+Color@{set\+Color}!ec\+::\+Light@{ec\+::\+Light}}
 \subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void ec\+::\+Light\+::set\+Color (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{color }\end{DoxyParamCaption})}
 
-Set the emissive color. \mbox{\Hypertarget{classec_1_1_light_aaa6d6edfe31b15dc259a8fa0d59ef8de}\label{classec_1_1_light_aaa6d6edfe31b15dc259a8fa0d59ef8de}} 
+
+
+Set the emissive color. 
+
+\mbox{\Hypertarget{classec_1_1_light_aaa6d6edfe31b15dc259a8fa0d59ef8de}\label{classec_1_1_light_aaa6d6edfe31b15dc259a8fa0d59ef8de}} 
 \index{ec\+::\+Light@{ec\+::\+Light}!set\+Color@{set\+Color}}
 \index{set\+Color@{set\+Color}!ec\+::\+Light@{ec\+::\+Light}}
 \subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void ec\+::\+Light\+::set\+Color (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})}
 
-Set the emissive color. \mbox{\Hypertarget{classec_1_1_light_ae2b2bbbc88aef9d531627bb90f7b0183}\label{classec_1_1_light_ae2b2bbbc88aef9d531627bb90f7b0183}} 
+
+
+Set the emissive color. 
+
+\mbox{\Hypertarget{classec_1_1_light_ae2b2bbbc88aef9d531627bb90f7b0183}\label{classec_1_1_light_ae2b2bbbc88aef9d531627bb90f7b0183}} 
 \index{ec\+::\+Light@{ec\+::\+Light}!set\+Intensity@{set\+Intensity}}
 \index{set\+Intensity@{set\+Intensity}!ec\+::\+Light@{ec\+::\+Light}}
 \subsubsection{\texorpdfstring{set\+Intensity()}{setIntensity()}}
 {\footnotesize\ttfamily void ec\+::\+Light\+::set\+Intensity (\begin{DoxyParamCaption}\item[{float}]{intensity }\end{DoxyParamCaption})}
 
+
+
 Set the intensity of this light source. 
+
+
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{classec_1_1_light_a7dfc41f1e8f2d7ddad97d60c610c302e}\label{classec_1_1_light_a7dfc41f1e8f2d7ddad97d60c610c302e}} 
@@ -132,5 +165,5 @@ Set the intensity of this light source.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_light_8h}{Light.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_light_8cpp}{Light.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_light_8h}{Light.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_light_8cpp}{Light.\+cpp}}\end{DoxyCompactItemize}

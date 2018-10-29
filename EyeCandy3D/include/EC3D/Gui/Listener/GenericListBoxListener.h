@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by
+	 * ListBox widgets.
+	 */
 	class GenericListBoxListener : public agui::ListBoxListener
 	{
 	public:

@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by Label
+	 * widgets.
+	 */
 	class GenericLabelListener : public agui::LabelListener
 	{
 	public:

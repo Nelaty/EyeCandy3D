@@ -2,6 +2,11 @@
 \label{classec_1_1_keyboard}\index{ec\+::\+Keyboard@{ec\+::\+Keyboard}}
 
 
+Representation of a physical keyboard.  
+
+
+
+
 {\ttfamily \#include $<$Keyboard.\+h$>$}
 
 
@@ -26,27 +31,27 @@ using \mbox{\hyperlink{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}{E
 \mbox{\hyperlink{classec_1_1_keyboard_a817f6cd6ea29898c6651dee24de59ba5}{$\sim$\+Keyboard}} ()
 \item 
 void \mbox{\hyperlink{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}{install}} (\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$window)
-\item 
+\begin{DoxyCompactList}\small\item\em Install the keyboard, which generates keyboard events. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}{uninstall}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Uninstall the keyboard. \end{DoxyCompactList}\item 
 G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classec_1_1_keyboard_ad6b17bd2f2853def1e6ec21fadd9b658}{get\+Window}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the window, which is associated with this keyboard. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_keyboard_a47779c0842584eb4337e1aa63e7d7a35}{is\+Key\+Down}} (\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{Keyboard\+::\+E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}} key) const
-\item 
+\begin{DoxyCompactList}\small\item\em Check if a keyboard button is being pressed. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_keyboard_a0d260eb1df363be405af8a967aa8b5b6}{is\+Key\+Up}} (\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{Keyboard\+::\+E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}} key) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if a keyboard button is being released. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static const char $\ast$ \mbox{\hyperlink{classec_1_1_keyboard_a5e986024ce4790af20b3198abce9b807}{keyboard\+Key\+To\+String}} (\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}} keyboard\+Code)
-\item 
+\begin{DoxyCompactList}\small\item\em Convert a keycode to its string representation. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classec_1_1_keyboard_a8d048694060edbbb3cd6dba19d7eff24}{keycode\+Is\+Key}} (int keycode)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if a keycode is representing a key on the keyboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}\+: int \{ A = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+A
-\item 
+\begin{DoxyCompactList}\small\item\em Contains all possible types of keys on a keyboard. \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a10567c2f907d921b438ca4f96e7dfb86}{B}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+B
 \item 
 enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_afdb55905c629366fca7f4b8b342d7925}{C}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+C
@@ -299,6 +304,9 @@ enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Representation of a physical keyboard. 
+
 \subsection{Member Typedef Documentation}
 \mbox{\Hypertarget{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}\label{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}} 
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!Event\+Source\+\_\+\+Ptr@{Event\+Source\+\_\+\+Ptr}}
@@ -330,29 +338,54 @@ enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_
 \subsubsection{\texorpdfstring{get\+Window()}{getWindow()}}
 {\footnotesize\ttfamily G\+L\+F\+Wwindow $\ast$ ec\+::\+Keyboard\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the window, which is associated with this keyboard. \mbox{\Hypertarget{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}\label{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}} 
+
+
+Get the window, which is associated with this keyboard. 
+
+\mbox{\Hypertarget{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}\label{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}} 
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!install@{install}}
 \index{install@{install}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
 \subsubsection{\texorpdfstring{install()}{install()}}
 {\footnotesize\ttfamily void ec\+::\+Keyboard\+::install (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$}]{window }\end{DoxyParamCaption})}
 
-Install the keyboard, which generates keyboard events. \mbox{\Hypertarget{classec_1_1_keyboard_a47779c0842584eb4337e1aa63e7d7a35}\label{classec_1_1_keyboard_a47779c0842584eb4337e1aa63e7d7a35}} 
+
+
+Install the keyboard, which generates keyboard events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window, for which keyboard events will now be generated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_keyboard_a47779c0842584eb4337e1aa63e7d7a35}\label{classec_1_1_keyboard_a47779c0842584eb4337e1aa63e7d7a35}} 
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!is\+Key\+Down@{is\+Key\+Down}}
 \index{is\+Key\+Down@{is\+Key\+Down}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
 \subsubsection{\texorpdfstring{is\+Key\+Down()}{isKeyDown()}}
 {\footnotesize\ttfamily bool ec\+::\+Keyboard\+::is\+Key\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{Keyboard\+::\+E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}}]{key }\end{DoxyParamCaption}) const}
 
-Check if a keyboard button is being pressed. \mbox{\Hypertarget{classec_1_1_keyboard_a0d260eb1df363be405af8a967aa8b5b6}\label{classec_1_1_keyboard_a0d260eb1df363be405af8a967aa8b5b6}} 
+
+
+Check if a keyboard button is being pressed. 
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a0d260eb1df363be405af8a967aa8b5b6}\label{classec_1_1_keyboard_a0d260eb1df363be405af8a967aa8b5b6}} 
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!is\+Key\+Up@{is\+Key\+Up}}
 \index{is\+Key\+Up@{is\+Key\+Up}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
 \subsubsection{\texorpdfstring{is\+Key\+Up()}{isKeyUp()}}
 {\footnotesize\ttfamily bool ec\+::\+Keyboard\+::is\+Key\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{Keyboard\+::\+E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}}]{key }\end{DoxyParamCaption}) const}
 
-Check if a keyboard button is being released. \mbox{\Hypertarget{classec_1_1_keyboard_a5e986024ce4790af20b3198abce9b807}\label{classec_1_1_keyboard_a5e986024ce4790af20b3198abce9b807}} 
+
+
+Check if a keyboard button is being released. 
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a5e986024ce4790af20b3198abce9b807}\label{classec_1_1_keyboard_a5e986024ce4790af20b3198abce9b807}} 
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!keyboard\+Key\+To\+String@{keyboard\+Key\+To\+String}}
 \index{keyboard\+Key\+To\+String@{keyboard\+Key\+To\+String}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
 \subsubsection{\texorpdfstring{keyboard\+Key\+To\+String()}{keyboardKeyToString()}}
 {\footnotesize\ttfamily const char $\ast$ ec\+::\+Keyboard\+::keyboard\+Key\+To\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}}]{keyboard\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert a keycode to its string representation. 
 
 \mbox{\Hypertarget{classec_1_1_keyboard_a8d048694060edbbb3cd6dba19d7eff24}\label{classec_1_1_keyboard_a8d048694060edbbb3cd6dba19d7eff24}} 
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!keycode\+Is\+Key@{keycode\+Is\+Key}}
@@ -360,13 +393,21 @@ Check if a keyboard button is being released. \mbox{\Hypertarget{classec_1_1_key
 \subsubsection{\texorpdfstring{keycode\+Is\+Key()}{keycodeIsKey()}}
 {\footnotesize\ttfamily bool ec\+::\+Keyboard\+::keycode\+Is\+Key (\begin{DoxyParamCaption}\item[{int}]{keycode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\mbox{\Hypertarget{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}\label{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}} 
+
+
+Check if a keycode is representing a key on the keyboard. 
+
+keycode \mbox{\Hypertarget{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}\label{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}} 
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!uninstall@{uninstall}}
 \index{uninstall@{uninstall}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
 \subsubsection{\texorpdfstring{uninstall()}{uninstall()}}
 {\footnotesize\ttfamily void ec\+::\+Keyboard\+::uninstall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
 Uninstall the keyboard. 
+
+
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{classec_1_1_keyboard_a36ca4a76bfbdb9d9e30cace019cec930}\label{classec_1_1_keyboard_a36ca4a76bfbdb9d9e30cace019cec930}} 
@@ -476,6 +517,10 @@ Uninstall the keyboard.
 \index{E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD@{E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}!ec\+::\+Keyboard@{ec\+::\+Keyboard}}
 \subsubsection{\texorpdfstring{E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}{EC\_KEY\_KEYBOARD}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}
+
+
+
+Contains all possible types of keys on a keyboard. 
 
 \mbox{\Hypertarget{classec_1_1_keyboard_a1353c7b1046a9d8d67bc9f1138a5f9f3}\label{classec_1_1_keyboard_a1353c7b1046a9d8d67bc9f1138a5f9f3}} 
 \index{ec\+::\+Keyboard@{ec\+::\+Keyboard}!E\+ND@{E\+ND}}
@@ -1134,5 +1179,5 @@ Uninstall the keyboard.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_keyboard_8h}{Keyboard.\+h}}\item 
-D\+:/\+Library/\+Documents/\+Job/\+Forschungsmaster/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_keyboard_8cpp}{Keyboard.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Core/\mbox{\hyperlink{_keyboard_8h}{Keyboard.\+h}}\item 
+C\+:/\+Library/\+Job/\+Projekte/\+Simulation\+Visualization/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Core/\mbox{\hyperlink{_keyboard_8cpp}{Keyboard.\+cpp}}\end{DoxyCompactItemize}

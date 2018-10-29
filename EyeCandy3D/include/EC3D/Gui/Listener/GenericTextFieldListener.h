@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by
+	 * TextField widgets.
+	 */
 	class GenericTextFieldListener : public agui::TextFieldListener
 	{
 	public:

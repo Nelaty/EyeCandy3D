@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by Button
+	 * widgets.
+	 */
 	class GenericButtonListener : public agui::ButtonListener
 	{
 	public:

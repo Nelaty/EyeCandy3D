@@ -1,16 +1,19 @@
 
 namespace ec
 {
-	template<class Resource>
-	ResourceRegistry<Resource>::ResourceRegistry()
+	template<class Resource, class Key_Type>
+	ResourceRegistry<Resource, Key_Type>
+	::ResourceRegistry()
 	= default;
 
-	template<class Resource>
-	ResourceRegistry<Resource>::~ResourceRegistry()
+	template<class Resource, class Key_Type>
+	ResourceRegistry<Resource, Key_Type>
+	::~ResourceRegistry()
 	= default;
 
-	template<class Resource>
-	Resource* ResourceRegistry<Resource>::registerResource(Resource_Ptr resource, const std::string& key)
+	template<class Resource, class Key_Type>
+	Resource* ResourceRegistry<Resource, Key_Type>
+	::registerResource(Resource_Ptr resource, const Key_Type& key)
 	{
 		auto foundResource = getResource(key);
 		if(foundResource != nullptr)
@@ -22,8 +25,9 @@ namespace ec
 		return getResource(key);
 	}
 
-	template<class Resource>
-	typename ResourceRegistry<Resource>::Resource_Ptr ResourceRegistry<Resource>::unregisterResource(const std::string& key)
+	template<class Resource, class Key_Type>
+	typename ResourceRegistry<Resource, Key_Type>::Resource_Ptr ResourceRegistry<Resource, Key_Type>
+	::unregisterResource(const Key_Type& key)
 	{
 		auto foundResource = getResource(key);
 		if(foundResource == nullptr)
@@ -36,8 +40,9 @@ namespace ec
 		return retVal;
 	}
 
-	template<class Resource>
-	Resource* ResourceRegistry<Resource>::getResource(const std::string& key) const
+	template<class Resource, class Key_Type>
+	Resource* ResourceRegistry<Resource, Key_Type>
+	::getResource(const Key_Type& key) const
 	{
 		auto foundResource = m_resources.find(key);
 		if(foundResource == m_resources.end())
@@ -47,15 +52,17 @@ namespace ec
 		return foundResource->second;
 	}	
 
-	template<class Resource>
-	bool ResourceRegistry<Resource>::isRegistered(const std::string& key) const
+	template<class Resource, class Key_Type>
+	bool ResourceRegistry<Resource, Key_Type>
+	::isRegistered(const Key_Type& key) const
 	{
 		return getResource(key) != nullptr;
 	}
 
 
-	template<class Resource>
-	bool ResourceRegistry<Resource>::isRegistered(Resource* resource) const
+	template<class Resource, class Key_Type>
+	bool ResourceRegistry<Resource, Key_Type>
+	::isRegistered(Resource* resource) const
 	{
 		for(const auto& it : m_resources)
 		{

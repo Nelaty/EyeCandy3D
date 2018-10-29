@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by CheckBox
+	 * widgets.
+	 */
 	class GenericCheckBoxListener : public agui::CheckBoxListener
 	{
 	public:

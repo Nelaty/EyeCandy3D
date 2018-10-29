@@ -24,7 +24,7 @@ namespace ec
 	}
 
 	void InputListener::addCallback(EventKey_Type key, 
-									std::function<void()> callback)
+									EventCallback_Type callback)
 	{
 		m_callbackContainers[int(key)].emplace_back(callback);
 	}

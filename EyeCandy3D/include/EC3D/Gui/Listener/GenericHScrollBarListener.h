@@ -5,6 +5,10 @@
 
 namespace ec
 {
+	/**
+	 * \brief Generic gui listener that can handle events by
+	 * HScrollbar widgets.
+	 */
 	class GenericHScrollBarListener : public agui::HScrollBarListener
 	{
 	public:

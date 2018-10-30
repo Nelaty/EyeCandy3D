@@ -102,7 +102,6 @@ var searchData=
   ['m_5fsamples',['m_samples',['../structec_1_1_window_creation_hints.html#ad6ebba67b73f17ee7b34c779988a8c00',1,'ec::WindowCreationHints']]],
   ['m_5fscale',['m_scale',['../classec_1_1_transform3_d.html#a8eb8cecaa5ec8273e49c9487e0f6b935',1,'ec::Transform3D']]],
   ['m_5fscancode',['m_scancode',['../structec_1_1_keyboard_event.html#a99de30a0a1504392405bbcfee3debd57',1,'ec::KeyboardEvent']]],
-  ['m_5fscenecontroller',['m_sceneController',['../classec_1_1_scene.html#aa6a8f71066fc44162b1c80341840d5fb',1,'ec::Scene']]],
   ['m_5fscenerenderer',['m_sceneRenderer',['../classec_1_1_scene.html#a17a2c241cec6bda0a5895b353aa28fa7',1,'ec::Scene']]],
   ['m_5fscenesystem',['m_sceneSystem',['../classec_1_1_scene.html#ad63e472baf8e283c596891384ea98aad',1,'ec::Scene::m_sceneSystem()'],['../classec_1_1_window.html#a5c50dfac91e6105a6862693e71976a3e',1,'ec::Window::m_sceneSystem()']]],
   ['m_5fscrollx',['m_scrollX',['../structec_1_1_mouse_event.html#a957534c425902b9de4a416459ef17aa5',1,'ec::MouseEvent']]],

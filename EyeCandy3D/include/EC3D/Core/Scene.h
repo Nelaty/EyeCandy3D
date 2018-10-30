@@ -44,24 +44,6 @@ namespace ec
 		Node* getRoot() const;
 
 		/**
-		 * \brief Set the current scene controller.
-		 */
-		void setSceneController(SceneController* sceneController);
-		/**
-		 * \brief Get the current scene controller.
-		 */
-		SceneController* getSceneController() const;
-
-		/**
-		 * \brief Set the current scene renderer.
-		 */
-		void setSceneRenderer(const SceneRenderer& sceneRenderer);
-		/**
-		 * \brief Get the current scene renderer.
-		 */
-		SceneRenderer& getSceneRenderer();
-
-		/**
 		 * \brief Set the scene system, in which the scene is 
 		 * contained.
 		 */
@@ -86,19 +68,13 @@ namespace ec
 		bool isEnabled() const;
 
 	protected:
-		/**
-		 * \brief Create a scene renderer for this scene.
-		 */
-		void initSceneRenderer();
-
 		bool m_enabled = true;
 
 		std::string m_name;
 
-		std::unique_ptr<Node> m_root = nullptr;
+		std::unique_ptr<Node> m_root{};
 
-		SceneSystem* m_sceneSystem = nullptr;
+		SceneSystem* m_sceneSystem{};
 		SceneRenderer m_sceneRenderer;
-		SceneController* m_sceneController = nullptr;
 	};
 }

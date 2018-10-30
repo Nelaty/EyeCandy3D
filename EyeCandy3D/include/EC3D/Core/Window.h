@@ -27,8 +27,8 @@
 
 
 /**
-* A window is responsible for one os specific window, which can receive
-* input events.
+* \brief A window is responsible for one os specific window, which
+* can receive input events.
 */
 namespace ec
 {
@@ -45,9 +45,6 @@ namespace ec
 						unsigned int windowHeight,
 		                std::string windowTitle);
 		virtual ~Window();
-		
-		/** Should be called to start program */
-		//virtual void startMainLoop();
 
 		/** Update the window */
 		void tickMeta();
@@ -260,34 +257,38 @@ namespace ec
 		void initCallbacks();
 
 		/** 
-		 * The drop callback is called when one or multiple files are 
-		 * dragged into the window 
+		 * \brief The drop callback is called when one or multiple 
+		 * files are dragged into the window 
 		 */
 		static void dropCallback(GLFWwindow* window, int count, const char** paths);
 		/** 
-		 * The resize callback is called when the window's width or height
-		 * has changed.
+		 * \brief The resize callback is called when the window's 
+		 * width or height has changed.
 		 */
 		static void resizeCallback(GLFWwindow* window, int width, int height);
 		/**
-		 * The position callback is called when the window's position changes.
+		 * \brief The position callback is called when the window's 
+		 * position changes.
 		 */
 		static void positionCallback(GLFWwindow* window, int positionX, int positionY);
 		/**
-		 * The focus callback is called when a window, which previously was
-		 * unfocused, receives focus.
+		 * \brief The focus callback is called when a window, which
+		 * previously was unfocused, receives focus.
 		 */
 		static void focusCallback(GLFWwindow* window, int focused);
 		/**
-		 * The close callback is called when a window is being destroyed.
+		 * \brief The close callback is called when a window is
+		 * being destroyed.
 		 */
 		static void closeCallback(GLFWwindow* window);
 		/**
-		 * The refresh callback is called when a window should be redrawn.
+		 * \brief The refresh callback is called when a window 
+		 * should be redrawn.
 		 */
 		static void refreshCallback(GLFWwindow* window);
 		/**
-		 * The iconify callback is called when a window was minimized or restored.
+		 * \brief The iconify callback is called when a window was
+		 * minimized or restored.
 		 */
 		static void iconifyCallback(GLFWwindow* window, int iconified);
 

@@ -14,7 +14,6 @@ var searchData=
   ['initimpl',['initImpl',['../classec_1_1_application.html#a1460d7083c312271285747a7cc03f7e8',1,'ec::Application']]],
   ['initindices',['initIndices',['../classec_1_1_dynamic_line_geometry.html#af622418944568bc0698d888024d4c2b0',1,'ec::DynamicLineGeometry']]],
   ['initopengl',['initOpenGl',['../classec_1_1_application.html#a8d6ef43e247b541017fa82e001c42995',1,'ec::Application']]],
-  ['initscenerenderer',['initSceneRenderer',['../classec_1_1_scene.html#a137505b25a213810b1b477ad13daca7f',1,'ec::Scene']]],
   ['initshader',['initShader',['../classec_1_1_gui_primitive_renderer.html#a50485915bde54b1e786de6bd2017d4dd',1,'ec::GuiPrimitiveRenderer']]],
   ['inittexcoords',['initTexCoords',['../classec_1_1_dynamic_line_geometry.html#af556bfe516c6c93bc515f607bd3840b6',1,'ec::DynamicLineGeometry']]],
   ['initvertices',['initVertices',['../classec_1_1_dynamic_line_geometry.html#a4dced137976fc7b936bc80a8cb350b38',1,'ec::DynamicLineGeometry']]],

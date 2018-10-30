@@ -10,7 +10,7 @@ namespace ec
 	class Scene;
 
 	/**
-	 * Specialized InputListener for controlling a scene.
+	 * \brief Specialized InputListener for controlling a scene.
 	 */
 	class EC3D_DECLSPEC SceneController : public InputListener
 	{

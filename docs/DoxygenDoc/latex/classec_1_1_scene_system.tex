@@ -21,21 +21,21 @@ Collaboration diagram for ec\+:\+:Scene\+System\+:\nopagebreak
 \mbox{\hyperlink{classec_1_1_scene_system_a612e6cc45dbea62c7ffa4c752f965482}{$\sim$\+Scene\+System}} ()
 \item 
 void \mbox{\hyperlink{classec_1_1_scene_system_a5a858b4c58f53b04d7796e364351b825}{tick}} (float time\+Delta)
-\item 
+\begin{DoxyCompactList}\small\item\em Update the currently active scene. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_scene_system_a192ef0c17aaa7893a6b2491ef557cfb6}{register\+Scene}} (\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$scene)
-\item 
+\begin{DoxyCompactList}\small\item\em Register a new scene. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_scene}{ec\+::\+Scene}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_system_ae00450951bc3220dd9899d75bdd207c4}{unregister\+Scene}} (\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$scene)
-\item 
+\begin{DoxyCompactList}\small\item\em Unregister an already registered scene. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_system_a25b2df199ddab1abc0e2e3f2c87bb690}{get\+Scene}} (const std\+::string \&scene\+Name) const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the scene with the given name. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_scene_system_a6f59921ccb0a64ead95efc6ef34ffac1}{add\+Scene\+Controller}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $>$ scene\+Controller)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a new scene controller. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classec_1_1_scene_system_ad15260128496d698ad43c2632e2dc7b4}{remove\+Scene\+Controller}} (\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$controller)
-\item 
+\begin{DoxyCompactList}\small\item\em Remove a given scene controller. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_system_a0f897d342ba9a7ed8a06a478e6834c6c}{get\+Scene\+Controller}} (const char $\ast$controller\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Get a scene controller by name. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_system_afc687c570e4c1b83a85bf2bd69fa86eb}{get\+Window}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the window associated with this scene system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -60,13 +60,21 @@ bool \mbox{\hyperlink{classec_1_1_scene_system_ad15260128496d698ad43c2632e2dc7b4
 \subsubsection{\texorpdfstring{add\+Scene\+Controller()}{addSceneController()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+System\+::add\+Scene\+Controller (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $>$}]{scene\+Controller }\end{DoxyParamCaption})}
 
+
+
+Add a new scene controller. 
+
 \mbox{\Hypertarget{classec_1_1_scene_system_a25b2df199ddab1abc0e2e3f2c87bb690}\label{classec_1_1_scene_system_a25b2df199ddab1abc0e2e3f2c87bb690}} 
 \index{ec\+::\+Scene\+System@{ec\+::\+Scene\+System}!get\+Scene@{get\+Scene}}
 \index{get\+Scene@{get\+Scene}!ec\+::\+Scene\+System@{ec\+::\+Scene\+System}}
 \subsubsection{\texorpdfstring{get\+Scene()}{getScene()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene}{ec\+::\+Scene}} $\ast$ ec\+::\+Scene\+System\+::get\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{scene\+Name }\end{DoxyParamCaption}) const}
 
-Get the scene with the given name \begin{DoxyReturn}{Returns}
+
+
+Get the scene with the given name. 
+
+\begin{DoxyReturn}{Returns}
 The requested scene if it exists, nullptr otherwise. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_scene_system_a0f897d342ba9a7ed8a06a478e6834c6c}\label{classec_1_1_scene_system_a0f897d342ba9a7ed8a06a478e6834c6c}} 
@@ -75,11 +83,22 @@ The requested scene if it exists, nullptr otherwise.
 \subsubsection{\texorpdfstring{get\+Scene\+Controller()}{getSceneController()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_controller}{ec\+::\+Scene\+Controller}} $\ast$ ec\+::\+Scene\+System\+::get\+Scene\+Controller (\begin{DoxyParamCaption}\item[{const char $\ast$}]{controller\+Name }\end{DoxyParamCaption})}
 
+
+
+Get a scene controller by name. 
+
+\begin{DoxyReturn}{Returns}
+The controller if it was found, nullptr otherwise. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_scene_system_afc687c570e4c1b83a85bf2bd69fa86eb}\label{classec_1_1_scene_system_afc687c570e4c1b83a85bf2bd69fa86eb}} 
 \index{ec\+::\+Scene\+System@{ec\+::\+Scene\+System}!get\+Window@{get\+Window}}
 \index{get\+Window@{get\+Window}!ec\+::\+Scene\+System@{ec\+::\+Scene\+System}}
 \subsubsection{\texorpdfstring{get\+Window()}{getWindow()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_window}{ec\+::\+Window}} $\ast$ ec\+::\+Scene\+System\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the window associated with this scene system. 
 
 \mbox{\Hypertarget{classec_1_1_scene_system_a192ef0c17aaa7893a6b2491ef557cfb6}\label{classec_1_1_scene_system_a192ef0c17aaa7893a6b2491ef557cfb6}} 
 \index{ec\+::\+Scene\+System@{ec\+::\+Scene\+System}!register\+Scene@{register\+Scene}}
@@ -87,17 +106,35 @@ The requested scene if it exists, nullptr otherwise.
 \subsubsection{\texorpdfstring{register\+Scene()}{registerScene()}}
 {\footnotesize\ttfamily bool ec\+::\+Scene\+System\+::register\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
 
+
+
+Register a new scene. 
+
+\begin{DoxyReturn}{Returns}
+False if the scene is already registered, true otherwise. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_scene_system_ad15260128496d698ad43c2632e2dc7b4}\label{classec_1_1_scene_system_ad15260128496d698ad43c2632e2dc7b4}} 
 \index{ec\+::\+Scene\+System@{ec\+::\+Scene\+System}!remove\+Scene\+Controller@{remove\+Scene\+Controller}}
 \index{remove\+Scene\+Controller@{remove\+Scene\+Controller}!ec\+::\+Scene\+System@{ec\+::\+Scene\+System}}
 \subsubsection{\texorpdfstring{remove\+Scene\+Controller()}{removeSceneController()}}
 {\footnotesize\ttfamily bool ec\+::\+Scene\+System\+::remove\+Scene\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene_controller}{Scene\+Controller}} $\ast$}]{controller }\end{DoxyParamCaption})}
 
+
+
+Remove a given scene controller. 
+
+\begin{DoxyReturn}{Returns}
+True if the controller was found, false otherwise. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classec_1_1_scene_system_a5a858b4c58f53b04d7796e364351b825}\label{classec_1_1_scene_system_a5a858b4c58f53b04d7796e364351b825}} 
 \index{ec\+::\+Scene\+System@{ec\+::\+Scene\+System}!tick@{tick}}
 \index{tick@{tick}!ec\+::\+Scene\+System@{ec\+::\+Scene\+System}}
 \subsubsection{\texorpdfstring{tick()}{tick()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+System\+::tick (\begin{DoxyParamCaption}\item[{float}]{time\+Delta }\end{DoxyParamCaption})}
+
+
+
+Update the currently active scene. 
 
 \mbox{\Hypertarget{classec_1_1_scene_system_ae00450951bc3220dd9899d75bdd207c4}\label{classec_1_1_scene_system_ae00450951bc3220dd9899d75bdd207c4}} 
 \index{ec\+::\+Scene\+System@{ec\+::\+Scene\+System}!unregister\+Scene@{unregister\+Scene}}
@@ -105,6 +142,13 @@ The requested scene if it exists, nullptr otherwise.
 \subsubsection{\texorpdfstring{unregister\+Scene()}{unregisterScene()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene}{ec\+::\+Scene}} $\ast$ ec\+::\+Scene\+System\+::unregister\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
 
+
+
+Unregister an already registered scene. 
+
+\begin{DoxyReturn}{Returns}
+The scene if it was found, nullptr otherwise. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

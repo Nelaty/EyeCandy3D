@@ -9,7 +9,6 @@ namespace ec
 	Scene::Scene(std::string name)
 		: m_name{std::move(name)}
 	{
-		initSceneRenderer();
 		m_root = std::make_unique<Node>(nullptr);
 	}
 
@@ -28,27 +27,6 @@ namespace ec
 	ec::Node* Scene::getRoot() const
 	{
 		return m_root.get();
-	}
-
-	void Scene::setSceneController(SceneController* sceneController)
-	{
-		m_sceneController = sceneController;
-	}
-
-	ec::SceneController* Scene::getSceneController() const
-	{
-		return m_sceneController;
-	}
-
-	void Scene::setSceneRenderer(const SceneRenderer& sceneRenderer)
-	{
-		m_sceneRenderer = sceneRenderer;
-		initSceneRenderer();
-	}
-
-	ec::SceneRenderer& Scene::getSceneRenderer()
-	{
-		return m_sceneRenderer;
 	}
 
 	void Scene::setSceneSystem(SceneSystem* sceneSystem)
@@ -74,10 +52,5 @@ namespace ec
 	bool Scene::isEnabled() const
 	{
 		return m_enabled;
-	}
-
-	void Scene::initSceneRenderer()
-	{
-		m_sceneRenderer.setScene(this);
 	}
 }

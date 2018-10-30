@@ -5,6 +5,9 @@
 
 namespace ec
 {
+	/**
+	 * \brief Contains vertex information used for rendering.
+	 */
 	struct EC3D_DECLSPEC Vertex
 	{
 		glm::vec3 m_position;

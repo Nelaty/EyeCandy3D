@@ -5,26 +5,39 @@
 
 namespace ec
 {
+	/**
+	 * \brief Light source with a direction and a conical shape.
+	 * \todo: implement
+	 */
 	class SpotLight : public Light
 	{
 	public:
+		/**
+		 * \brief SpotLight constructor.
+		 * \param halfAngles Determines the size of the light cone.
+		 * In radians.
+		 */
 		explicit SpotLight(const glm::vec2& halfAngles = glm::vec2(glm::radians(45)));
 		~SpotLight();
 
-		/** Get the direction the light is facing at. */
+		/** 
+		 * \brief Get the direction the light is facing at. 
+		 */
 		const glm::vec3& getDirection() const;
 
 		/** 
-		 * Set the current half angles, which determin the size of the
-		 * spotlight.
+		 * \brief Set the current half angles, which determine the 
+		 * size of the spotlight.
 		 */
 		void setHalfAngles(const glm::vec2& halfAngles);
 		/**
-		* Set the current half angles, which determin the size of the
-		* spotlight.
+		* \brief Set the current half angles, which determine 
+		* the size of the spotlight.
 		*/
 		void setHalfAngles(float halfAngle);
-		/** Get the current half angles. */
+		/**
+		 * \brief Get the current half angles. 
+		 */
 		const glm::vec2& getHalfAngles() const;
 		
 	private:

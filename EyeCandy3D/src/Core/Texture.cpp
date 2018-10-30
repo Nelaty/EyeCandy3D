@@ -35,11 +35,6 @@ namespace ec
 		glBindTexture(m_dimension, 0);
 	}
 
-	void Texture::setId(const unsigned int id)
-	{
-		m_id = id;
-	}
-
 	void Texture::setType(const std::string& type)
 	{
 		m_type = type;

@@ -5,5 +5,5 @@
 <area shape="rect" id="node5" href="$classec_1_1_directional_light.html" title="A light source that emits light in a given direction independently of its position. " alt="" coords="5,975,144,1082"/>
 <area shape="rect" id="node6" href="$classec_1_1_omni_light.html" title="Ambient lighting that acts everywhere. " alt="" coords="168,983,277,1075"/>
 <area shape="rect" id="node7" href="$classec_1_1_point_light.html" title="Light source, which emits light omnidirectional from a given position. " alt="" coords="302,968,410,1089"/>
-<area shape="rect" id="node8" href="$classec_1_1_spot_light.html" title="{ec::SpotLight\n||+ SpotLight()\l+ ~SpotLight()\l+ getDirection()\l+ setHalfAngles()\l+ setHalfAngles()\l+ getHalfAngles()\l}" alt="" coords="435,953,557,1104"/>
+<area shape="rect" id="node8" href="$classec_1_1_spot_light.html" title="Light source with a direction and a conical shape. " alt="" coords="435,953,557,1104"/>
 </map>

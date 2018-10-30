@@ -4,6 +4,9 @@
 
 namespace ec
 {
+	/**
+	 * \brief Window hints can be passed when creating a new window.
+	 */
 	struct WindowCreationHints
 	{
 		void setHints() const;

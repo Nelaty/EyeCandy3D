@@ -7,13 +7,18 @@
 
 namespace ec
 {
+	/**
+	 * \brief Geometry that does not change itself over time.
+	 */
 	class EC3D_DECLSPEC StaticGeometry : public Geometry
 	{
 	public:
 		virtual ~StaticGeometry();
 
 	protected:
-		/* Initialize the geometry */
+		/**
+		 * \brief Initialize geometry buffers.
+		 */
 		virtual void setupMesh();
 
 		explicit StaticGeometry();

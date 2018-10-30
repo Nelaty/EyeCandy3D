@@ -67,7 +67,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classec_1_1_scene-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -84,10 +83,8 @@ Collaboration diagram for ec::Scene:</div>
 <div class="dyncontent">
 <div class="center"><img src="classec_1_1_scene__coll__graph.png" border="0" usemap="#ec_1_1_scene_coll__map" alt="Collaboration graph"/></div>
 <map name="ec_1_1_scene_coll__map" id="ec_1_1_scene_coll__map">
-<area shape="rect" id="node3" href="classec_1_1_scene_system.html" title="{ec::SceneSystem\n||+ SceneSystem()\l+ ~SceneSystem()\l+ tick()\l+ registerScene()\l+ unregisterScene()\l+ getScene()\l+ addSceneController()\l+ removeSceneController()\l+ getSceneController()\l+ getWindow()\l}" alt="" coords="188,454,363,663"/>
-<area shape="rect" id="node4" href="classec_1_1_scene_controller.html" title="{ec::SceneController\n||+ SceneController()\l+ ~SceneController()\l+ getName()\l}" alt="" coords="387,505,529,612"/>
-<area shape="rect" id="node5" href="classec_1_1_input_listener.html" title="An InputListener can react on incoming events. It can either be used as a base class or be filled wit..." alt="" coords="358,175,539,369"/>
-<area shape="rect" id="node9" href="classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ tick()\l+ render()\l+ setScene()\l+ getScene()\l+ getFrame()\l+ getFrame()\l+ setFrame()\l+ addRenderingTarget()\l# onBeginRender()\l# onRender()\l# onEndRender()\l}" alt="" coords="694,432,851,685"/>
+<area shape="rect" id="node3" href="classec_1_1_scene_system.html" title="{ec::SceneSystem\n||+ SceneSystem()\l+ ~SceneSystem()\l+ tick()\l+ registerScene()\l+ unregisterScene()\l+ getScene()\l+ addSceneController()\l+ removeSceneController()\l+ getSceneController()\l+ getWindow()\l}" alt="" coords="188,13,363,222"/>
+<area shape="rect" id="node6" href="classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ tick()\l+ render()\l+ getFrame()\l+ getFrame()\l+ setFrame()\l+ addRenderingTarget()\l# onBeginRender()\l# onRender()\l# onEndRender()\l}" alt="" coords="555,5,713,229"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -107,18 +104,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aef77276f4a386c5b66159ecb1d4d072c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#aef77276f4a386c5b66159ecb1d4d072c">getRoot</a> () const</td></tr>
 <tr class="memdesc:aef77276f4a386c5b66159ecb1d4d072c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the root node.  <a href="#aef77276f4a386c5b66159ecb1d4d072c">More...</a><br /></td></tr>
 <tr class="separator:aef77276f4a386c5b66159ecb1d4d072c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c3bc6848957704f9f45508c13133a91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a8c3bc6848957704f9f45508c13133a91">setSceneController</a> (<a class="el" href="classec_1_1_scene_controller.html">SceneController</a> *sceneController)</td></tr>
-<tr class="memdesc:a8c3bc6848957704f9f45508c13133a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current scene controller.  <a href="#a8c3bc6848957704f9f45508c13133a91">More...</a><br /></td></tr>
-<tr class="separator:a8c3bc6848957704f9f45508c13133a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad562a16db4552e529af7284de0b79304"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_controller.html">SceneController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#ad562a16db4552e529af7284de0b79304">getSceneController</a> () const</td></tr>
-<tr class="memdesc:ad562a16db4552e529af7284de0b79304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current scene controller.  <a href="#ad562a16db4552e529af7284de0b79304">More...</a><br /></td></tr>
-<tr class="separator:ad562a16db4552e529af7284de0b79304"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a000b3820dfcf578ed80bae3bf5f432"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a4a000b3820dfcf578ed80bae3bf5f432">setSceneRenderer</a> (const <a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> &amp;sceneRenderer)</td></tr>
-<tr class="memdesc:a4a000b3820dfcf578ed80bae3bf5f432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current scene renderer.  <a href="#a4a000b3820dfcf578ed80bae3bf5f432">More...</a><br /></td></tr>
-<tr class="separator:a4a000b3820dfcf578ed80bae3bf5f432"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73f48395e9442f3e6647dd9503050b91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a73f48395e9442f3e6647dd9503050b91">getSceneRenderer</a> ()</td></tr>
-<tr class="memdesc:a73f48395e9442f3e6647dd9503050b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current scene renderer.  <a href="#a73f48395e9442f3e6647dd9503050b91">More...</a><br /></td></tr>
-<tr class="separator:a73f48395e9442f3e6647dd9503050b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87a6277fea206956c0a7175cf308ece0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a87a6277fea206956c0a7175cf308ece0">setSceneSystem</a> (<a class="el" href="classec_1_1_scene_system.html">SceneSystem</a> *sceneSystem)</td></tr>
 <tr class="memdesc:a87a6277fea206956c0a7175cf308ece0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the scene system, in which the scene is contained.  <a href="#a87a6277fea206956c0a7175cf308ece0">More...</a><br /></td></tr>
 <tr class="separator:a87a6277fea206956c0a7175cf308ece0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,26 +120,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0748d645ee5204e64d674c1b10b26864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this scene is enabled.  <a href="#a0748d645ee5204e64d674c1b10b26864">More...</a><br /></td></tr>
 <tr class="separator:a0748d645ee5204e64d674c1b10b26864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a137505b25a213810b1b477ad13daca7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a137505b25a213810b1b477ad13daca7f">initSceneRenderer</a> ()</td></tr>
-<tr class="memdesc:a137505b25a213810b1b477ad13daca7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a scene renderer for this scene.  <a href="#a137505b25a213810b1b477ad13daca7f">More...</a><br /></td></tr>
-<tr class="separator:a137505b25a213810b1b477ad13daca7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ad68ba7af20ecfbc45ee136842a38ccfe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#ad68ba7af20ecfbc45ee136842a38ccfe">m_enabled</a> = true</td></tr>
 <tr class="separator:ad68ba7af20ecfbc45ee136842a38ccfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58a25f1f2370535750e341085ddfd95b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a58a25f1f2370535750e341085ddfd95b">m_name</a></td></tr>
 <tr class="separator:a58a25f1f2370535750e341085ddfd95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b7f1f4840087d56148e4c4be5737b50"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classec_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a7b7f1f4840087d56148e4c4be5737b50">m_root</a> = nullptr</td></tr>
+<tr class="memitem:a7b7f1f4840087d56148e4c4be5737b50"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classec_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a7b7f1f4840087d56148e4c4be5737b50">m_root</a> {}</td></tr>
 <tr class="separator:a7b7f1f4840087d56148e4c4be5737b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad63e472baf8e283c596891384ea98aad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_system.html">SceneSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#ad63e472baf8e283c596891384ea98aad">m_sceneSystem</a> = nullptr</td></tr>
+<tr class="memitem:ad63e472baf8e283c596891384ea98aad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_system.html">SceneSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#ad63e472baf8e283c596891384ea98aad">m_sceneSystem</a> {}</td></tr>
 <tr class="separator:ad63e472baf8e283c596891384ea98aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17a2c241cec6bda0a5895b353aa28fa7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#a17a2c241cec6bda0a5895b353aa28fa7">m_sceneRenderer</a></td></tr>
 <tr class="separator:a17a2c241cec6bda0a5895b353aa28fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6a8f71066fc44162b1c80341840d5fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classec_1_1_scene_controller.html">SceneController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classec_1_1_scene.html#aa6a8f71066fc44162b1c80341840d5fb">m_sceneController</a> = nullptr</td></tr>
-<tr class="separator:aa6a8f71066fc44162b1c80341840d5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A scene enables an easy switching of root nodes. </p>
@@ -296,44 +273,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad562a16db4552e529af7284de0b79304"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad562a16db4552e529af7284de0b79304">&#9670;&nbsp;</a></span>getSceneController()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classec_1_1_scene_controller.html">ec::SceneController</a> * ec::Scene::getSceneController </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the current scene controller. </p>
-
-</div>
-</div>
-<a id="a73f48395e9442f3e6647dd9503050b91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73f48395e9442f3e6647dd9503050b91">&#9670;&nbsp;</a></span>getSceneRenderer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classec_1_1_scene_renderer.html">ec::SceneRenderer</a> &amp; ec::Scene::getSceneRenderer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the current scene renderer. </p>
-
-</div>
-</div>
 <a id="a95b79ca1dc856cb50262ab4b9e72465f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95b79ca1dc856cb50262ab4b9e72465f">&#9670;&nbsp;</a></span>getSceneSystem()</h2>
 
@@ -353,33 +292,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a137505b25a213810b1b477ad13daca7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a137505b25a213810b1b477ad13daca7f">&#9670;&nbsp;</a></span>initSceneRenderer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ec::Scene::initSceneRenderer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create a scene renderer for this scene. </p>
-
-</div>
-</div>
 <a id="a0748d645ee5204e64d674c1b10b26864"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0748d645ee5204e64d674c1b10b26864">&#9670;&nbsp;</a></span>isEnabled()</h2>
 
@@ -396,46 +308,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if this scene is enabled. </p>
-
-</div>
-</div>
-<a id="a8c3bc6848957704f9f45508c13133a91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c3bc6848957704f9f45508c13133a91">&#9670;&nbsp;</a></span>setSceneController()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ec::Scene::setSceneController </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classec_1_1_scene_controller.html">SceneController</a> *&#160;</td>
-          <td class="paramname"><em>sceneController</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the current scene controller. </p>
-
-</div>
-</div>
-<a id="a4a000b3820dfcf578ed80bae3bf5f432"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a000b3820dfcf578ed80bae3bf5f432">&#9670;&nbsp;</a></span>setSceneRenderer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ec::Scene::setSceneRenderer </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classec_1_1_scene_renderer.html">SceneRenderer</a> &amp;&#160;</td>
-          <td class="paramname"><em>sceneRenderer</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the current scene renderer. </p>
 
 </div>
 </div>
@@ -542,29 +414,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classec_1_1_node.html">Node</a>&gt; ec::Scene::m_root = nullptr</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa6a8f71066fc44162b1c80341840d5fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6a8f71066fc44162b1c80341840d5fb">&#9670;&nbsp;</a></span>m_sceneController</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classec_1_1_scene_controller.html">SceneController</a>* ec::Scene::m_sceneController = nullptr</td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classec_1_1_node.html">Node</a>&gt; ec::Scene::m_root {}</td>
         </tr>
       </table>
   </td>
@@ -608,7 +458,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classec_1_1_scene_system.html">SceneSystem</a>* ec::Scene::m_sceneSystem = nullptr</td>
+          <td class="memname"><a class="el" href="classec_1_1_scene_system.html">SceneSystem</a>* ec::Scene::m_sceneSystem {}</td>
         </tr>
       </table>
   </td>

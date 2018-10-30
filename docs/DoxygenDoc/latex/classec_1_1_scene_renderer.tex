@@ -21,19 +21,15 @@ Collaboration diagram for ec\+:\+:Scene\+Renderer\+:\nopagebreak
 \mbox{\hyperlink{classec_1_1_scene_renderer_ae8350e90e64b53e3dfb121c11a9d3283}{$\sim$\+Scene\+Renderer}} ()
 \item 
 void \mbox{\hyperlink{classec_1_1_scene_renderer_a62a39c6b1097757c9757c17506a8b2b0}{tick}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update guis. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_scene_renderer_aa8cdd59972fd7dc7ce7c65e69c4a358b}{render}} (\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$window)
-\item 
-void \mbox{\hyperlink{classec_1_1_scene_renderer_a820900867a7c2b765eea61c6014aaee2}{set\+Scene}} (\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$scene)
-\item 
-\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$ \mbox{\hyperlink{classec_1_1_scene_renderer_abebdf008a71d9d51f550db87db92044d}{get\+Scene}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Render the currently active scene. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classec_1_1_frame}{Frame}} \& \mbox{\hyperlink{classec_1_1_scene_renderer_a5e314c4d0e216f80e38d72792b0f81b1}{get\+Frame}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get the frame holding all registered cameras. \end{DoxyCompactList}\item 
 const \mbox{\hyperlink{classec_1_1_frame}{Frame}} \& \mbox{\hyperlink{classec_1_1_scene_renderer_a8d40b598152f261d0fb3bcfa829e26e9}{get\+Frame}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the frame holding all registered cameras. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_scene_renderer_a3981f0af87cf5b190b4dd5b0aa694472}{set\+Frame}} (const \mbox{\hyperlink{classec_1_1_frame}{Frame}} \&frame)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the frame holding all registered cameras. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_scene_renderer_a2d6d678c8e8cd9c068312a951cf8f33c}{add\+Rendering\+Target}} (\mbox{\hyperlink{classec_1_1_node}{Node}} $\ast$node)
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
@@ -75,17 +71,19 @@ void \mbox{\hyperlink{classec_1_1_scene_renderer_ae4c7c5bfe81b36ab18e36c2ea75ea5
 \subsubsection{\texorpdfstring{get\+Frame()}{getFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_frame}{ec\+::\+Frame}} \& ec\+::\+Scene\+Renderer\+::get\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Get the frame holding all registered cameras. 
+
 \mbox{\Hypertarget{classec_1_1_scene_renderer_a8d40b598152f261d0fb3bcfa829e26e9}\label{classec_1_1_scene_renderer_a8d40b598152f261d0fb3bcfa829e26e9}} 
 \index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!get\+Frame@{get\+Frame}}
 \index{get\+Frame@{get\+Frame}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
 \subsubsection{\texorpdfstring{get\+Frame()}{getFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{classec_1_1_frame}{ec\+::\+Frame}} \& ec\+::\+Scene\+Renderer\+::get\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{classec_1_1_scene_renderer_abebdf008a71d9d51f550db87db92044d}\label{classec_1_1_scene_renderer_abebdf008a71d9d51f550db87db92044d}} 
-\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!get\+Scene@{get\+Scene}}
-\index{get\+Scene@{get\+Scene}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
-\subsubsection{\texorpdfstring{get\+Scene()}{getScene()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene}{ec\+::\+Scene}} $\ast$ ec\+::\+Scene\+Renderer\+::get\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+Get the frame holding all registered cameras. 
 
 \mbox{\Hypertarget{classec_1_1_scene_renderer_ad1d418d6caa7ada328ae9648663c2d23}\label{classec_1_1_scene_renderer_ad1d418d6caa7ada328ae9648663c2d23}} 
 \index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!on\+Begin\+Render@{on\+Begin\+Render}}
@@ -111,17 +109,19 @@ void \mbox{\hyperlink{classec_1_1_scene_renderer_ae4c7c5bfe81b36ab18e36c2ea75ea5
 \subsubsection{\texorpdfstring{render()}{render()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$}]{window }\end{DoxyParamCaption})}
 
+
+
+Render the currently active scene. 
+
 \mbox{\Hypertarget{classec_1_1_scene_renderer_a3981f0af87cf5b190b4dd5b0aa694472}\label{classec_1_1_scene_renderer_a3981f0af87cf5b190b4dd5b0aa694472}} 
 \index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!set\+Frame@{set\+Frame}}
 \index{set\+Frame@{set\+Frame}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
 \subsubsection{\texorpdfstring{set\+Frame()}{setFrame()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::set\+Frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_frame}{Frame}} \&}]{frame }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classec_1_1_scene_renderer_a820900867a7c2b765eea61c6014aaee2}\label{classec_1_1_scene_renderer_a820900867a7c2b765eea61c6014aaee2}} 
-\index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!set\+Scene@{set\+Scene}}
-\index{set\+Scene@{set\+Scene}!ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}}
-\subsubsection{\texorpdfstring{set\+Scene()}{setScene()}}
-{\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::set\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
+
+
+Set the frame holding all registered cameras. 
 
 \mbox{\Hypertarget{classec_1_1_scene_renderer_a62a39c6b1097757c9757c17506a8b2b0}\label{classec_1_1_scene_renderer_a62a39c6b1097757c9757c17506a8b2b0}} 
 \index{ec\+::\+Scene\+Renderer@{ec\+::\+Scene\+Renderer}!tick@{tick}}
@@ -129,7 +129,11 @@ void \mbox{\hyperlink{classec_1_1_scene_renderer_ae4c7c5bfe81b36ab18e36c2ea75ea5
 \subsubsection{\texorpdfstring{tick()}{tick()}}
 {\footnotesize\ttfamily void ec\+::\+Scene\+Renderer\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Update guis 
+
+
+Update guis. 
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -6,8 +6,10 @@
 namespace ec
 {
 	/** 
-	 * A viewport defines a rectangular area into which a camera renders.
-	 * For every point (x,y) inside this area: x = [0,1], y = [0,1] applies.
+	 * \brief A viewport defines a rectangular area into which a 
+	 * camera renders.
+	 * For every point (x,y) inside this area: x = [0,1], y = [0,1]
+	 * applies.
 	 */
 	class EC3D_DECLSPEC Viewport
 	{

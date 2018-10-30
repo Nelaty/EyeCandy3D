@@ -8,7 +8,7 @@
 namespace ec
 {
 	/**
-	* Encapsulates texture specific structures
+	* \brief Encapsulates texture specific structures
 	*/
 	struct EC3D_DECLSPEC TextureTypes
 	{
@@ -25,6 +25,9 @@ namespace ec
 			texture_3d = GL_TEXTURE_3D
 		};
 
+		/**
+		 * \brief Convert a texture type to its string representation.
+		 */
 		static const std::string& getTypeString(Type type);
 
 	private:
@@ -32,7 +35,8 @@ namespace ec
 	};
 
 	/**
-	* Create and destroy textures on the GPU and enable them for OpenGL
+	* \brief Create and destroy textures on the GPU and enable them
+	* for OpenGL
 	*/
 	class EC3D_DECLSPEC Texture
 	{
@@ -40,42 +44,72 @@ namespace ec
 		explicit Texture();
 		~Texture();
 
-		/** Check if both texture ids are the same. */
+		/** 
+		 * \brief Check if both texture ids are the same. 
+		 */
 		bool operator==(const Texture& texture) const;
 
-		/** Activate this texture. */
+		/**
+		 * \brief Activate this texture. 
+		 */
 		void bind() const;
-		/** Deactivate this texture. */
+		/** 
+		 * Deactivate this texture.
+		 */
 		void unbind() const;
 
-		/** Buffer Id access*/
-		void setId(unsigned int id);
+		/**
+		 * \brief Get the texture id.
+		 */
 		int getId() const;
 
-		/** Texture type access */
+		/** 
+		 * \brief Set the type of this texture. 
+		 */
 		void setType(const std::string& type);
+		/**
+		 * \brief Get the type of this texture.
+		 */
 		const std::string& getType() const;
 
-		/** Texture dimension access */
+		/** 
+		 * \brief Get the dimension of this texture.
+		 */
 		TextureTypes::Dimensions getDimensions() const;
 
-		/** Create 2D texture */
+		/**
+		 * \brief Create a 2D texture.
+		 * \return True if creation was successful, false otherwise.
+		 */
 		bool textureFromFile(const char* path, const std::string& type);
 	
-		/** Create a 3D texture */
+		/** 
+		 * \brief Create a 3D texture.
+		 * \return True if creation was successful, false otherwise.
+		 */
 		bool cubeMapFromFile(const char* path, const std::string& type);
 
-		/** Get texture height in pixels. */
+		/** 
+		 * \brief Get the texture height in pixels. 
+		 */
 		int getWidth() const;
-		/** Get texture width in pixels. */
+		/** 
+		 * \brief Get the texture width in pixels. 
+		 */
 		int getHeight() const;
-		/** Get number of bytes used per pixel. */
+		/** 
+		 * \brief Get the number of bytes used per pixel.
+		 */
 		int getComponentNum() const;
 
-		/** Check if this texture has been initialized */
+		/** 
+		 * \brief Check if this texture has been initialized.
+		 */
 		bool isInitialized() const;
 
-		/** Deallocation of texture memory */
+		/** 
+		 * \brief Deallocate texture memory.
+		 */
 		void free();
 
 	private:

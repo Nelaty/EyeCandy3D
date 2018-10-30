@@ -7,8 +7,8 @@
 #include <set>
 
 /**
-* A SceneRenderer is able to render a scene with its underlying
-* scene graph. 
+* \brief A SceneRenderer is able to render a scene with its 
+* underlying scene graph. 
 */
 namespace ec
 {
@@ -34,24 +34,32 @@ namespace ec
 		explicit SceneRenderer();
 		~SceneRenderer();
 
-		/** Update guis */
+		/** 
+		 * \brief Update guis.
+		 */
 		void tick();
 
-		/* Render the currently active scene */
+		/**
+		 * \brief Render the currently active scene.
+		 */
 		void render(Window* window);
 
-		/* Scene access */
-		void setScene(Scene* scene);
-		Scene* getScene();
-
-		/* Frame access */
+		/**
+		 * \brief Get the frame holding all registered cameras.
+		 */
 		Frame& getFrame();
+		/**
+		 * \brief Get the frame holding all registered cameras.
+		 */
 		const Frame& getFrame() const;
+		/**
+		 * \brief Set the frame holding all registered cameras.
+		 */
 		void setFrame(const Frame& frame);
 
 		/*
-		* Nodes add themselves as rendering targets, if they should
-		* be rendered.
+		* \brief Nodes add themselves as rendering targets, if they
+		* should be rendered.
 		*/
 		void addRenderingTarget(Node* node);
 
@@ -61,24 +69,34 @@ namespace ec
 		void onEndRender(RenderContext& context);
 
 	private:
-		/** Render all previously collected render targets */
+		/** 
+		 * \brief Render all previously collected render targets.
+		 */
 		void renderTargets();
-		/** Update matrices of all shaders */
+		/** 
+		 * \brief Update matrices of all shaders.
+		 * \param shaderManager Holds shader, which should be updated.
+		 * \param camera Holds the current view matrix.
+		 */
 		void updateShaders(ShaderManager& shaderManager, Camera* camera);
-		/**  */
+		/** 
+		 * \brief Update the OpenGL viewport.
+		 * \param context Window information.
+		 * \param camera New viewport size and position.
+		 */
 		void updateViewport(RenderContext& context, Camera* camera) const;
 
-		/* Clear all rendering targets */
+		/**
+		 * \brief Clear all rendering targets.
+		 */
 		void clear();
 		std::vector<Node*> m_renderingTargets;
 
-		Frame m_frame;
-		Scene* m_scene;
-		
+		Frame m_frame;		
 
 		/**
-		* The global transformation is used to transform the whole
-		* scene without changing the root node
+		* \brief The global transformation is used to transform the 
+		* whole scene without changing the root node.
 		*/
 		glm::mat4 m_globalTransformation;
 

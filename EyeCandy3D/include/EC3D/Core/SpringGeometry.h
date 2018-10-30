@@ -4,6 +4,7 @@
 
 namespace ec
 {
+	/// \todo: implement
 	class EC3D_DECLSPEC SpringGeometry : public DynamicGeometry
 	{
 	public:

@@ -1,5 +1,5 @@
 <map id="ec::InputListener" name="ec::InputListener">
 <area shape="rect" id="node2" href="$classec_1_1_camera_controller.html" title="{ec::CameraController\n||+ CameraController()\l+ CameraController()\l+ ~CameraController()\l+ tick()\l+ reset()\l+ setCamera()\l+ getCamera()\l# processEvent()\l# processMouseMovement()\l# processMouseButtonDown()\l# processMouseButtonUp()\l# processKeyDownInput()\l# processKeyUpInput()\l# processScrollInput()\l}" alt="" coords="5,263,201,531"/>
 <area shape="rect" id="node3" href="$classec_1_1_open_g_l_input.html" title="{ec::OpenGLInput\n||+ OpenGLInput()\l+ ~OpenGLInput()\l+ getTime()\l# processEvent()\l}" alt="" coords="225,336,352,457"/>
-<area shape="rect" id="node4" href="$classec_1_1_scene_controller.html" title="{ec::SceneController\n||+ SceneController()\l+ ~SceneController()\l+ getName()\l}" alt="" coords="376,343,519,450"/>
+<area shape="rect" id="node4" href="$classec_1_1_scene_controller.html" title="Specialized InputListener for controlling a scene. " alt="" coords="376,343,519,450"/>
 </map>

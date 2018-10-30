@@ -6,6 +6,9 @@
 
 namespace ec
 {
+	/**
+	 * \brief A transformation in 3D space.
+	 */
 	class EC3D_DECLSPEC Transform3D
 	{
 	public:
@@ -133,9 +136,9 @@ namespace ec
 		void setScale(float uniform);
 		/** Assign the given value to the current x-scale component. */
 		void setScaleX(float sx);
-		/** Assign the given value to the current x-scale component. */
+		/** Assign the given value to the current y-scale component. */
 		void setScaleY(float sy);
-		/** Assign the given value to the current x-scale component. */
+		/** Assign the given value to the current z-scale component. */
 		void setScaleZ(float sz);
 
 	protected:

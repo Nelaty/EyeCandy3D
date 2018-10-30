@@ -157,16 +157,6 @@ namespace ec
 		onEndRender(context);
 	}
 
-	void SceneRenderer::setScene(Scene* scene)
-	{
-		m_scene = scene;
-	}
-
-	ec::Scene* SceneRenderer::getScene()
-	{
-		return m_scene;
-	}
-
 	ec::Frame& SceneRenderer::getFrame()
 	{
 		return m_frame;

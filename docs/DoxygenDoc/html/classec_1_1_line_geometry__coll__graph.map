@@ -1,5 +1,5 @@
 <map id="ec::LineGeometry" name="ec::LineGeometry">
-<area shape="rect" id="node2" href="$classec_1_1_static_geometry.html" title="{ec::StaticGeometry\n||+ ~StaticGeometry()\l# setupMesh()\l# StaticGeometry()\l}" alt="" coords="67,764,208,871"/>
+<area shape="rect" id="node2" href="$classec_1_1_static_geometry.html" title="Geometry that does not change itself over time. " alt="" coords="67,764,208,871"/>
 <area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="Geometry. " alt="" coords="61,491,214,715"/>
 <area shape="rect" id="node4" href="$classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry. " alt="" coords="5,211,160,362"/>
 <area shape="rect" id="node5" href="$classec_1_1_geometry_data.html" title="Encapsulates vertex and index data and knows how to create, update and delete OpenGL buffers..." alt="" coords="184,145,331,428"/>

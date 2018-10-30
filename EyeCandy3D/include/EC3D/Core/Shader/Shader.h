@@ -10,12 +10,12 @@
 namespace ec
 {
 	/**
-	* Bundles vertex, fragment shader, geometry, tessellation control and
-	* tessellation evaluation shaders.
+	* \brief Bundles vertex, fragment shader, geometry, tessellation
+	* control and tessellation evaluation shaders.
 	* Geometry and tessellation shaders are optional.
 	*
-	* Includes are allowed in shader sources. Included files will be
-	* inlined. -> "#include "filepath""
+	* \details Includes are allowed in shader sources. Included files
+	* will be inlined. -> #include "filepath"
 	*/
 	class EC3D_DECLSPEC Shader
 	{

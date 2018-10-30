@@ -5,7 +5,7 @@
 <area shape="rect" id="node7" href="$classec_1_1_line_geometry.html" title="Describes the geometry of a single line. " alt="" coords="511,645,664,781"/>
 <area shape="rect" id="node8" href="$classec_1_1_line_strip_geometry.html" title="Describes the geometry of a line strip. " alt="" coords="688,631,847,796"/>
 <area shape="rect" id="node9" href="$classec_1_1_rectangle_geometry.html" title="Geometry that represents a filled rectangle. " alt="" coords="871,638,1037,789"/>
-<area shape="rect" id="node10" href="$classec_1_1_sphere_geometry.html" title="{ec::SphereGeometry\n||+ SphereGeometry()\l+ ~SphereGeometry()\l+ resize()\l+ getRadius()\l+ getLatitude()\l+ getLongitude()\l}" alt="" coords="1061,638,1209,789"/>
+<area shape="rect" id="node10" href="$classec_1_1_sphere_geometry.html" title="Geometry that represents a sphere. " alt="" coords="1061,638,1209,789"/>
 <area shape="rect" id="node2" href="$classec_1_1_geometry.html" title="Geometry. " alt="" coords="511,204,664,428"/>
 <area shape="rect" id="node3" href="$classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry. " alt="" coords="510,5,665,156"/>
 </map>

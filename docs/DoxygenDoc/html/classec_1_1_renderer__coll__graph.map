@@ -9,5 +9,5 @@
 <area shape="rect" id="node10" href="$classec_1_1_event_system.html" title="Responsible for the distribution of input events. " alt="" coords="1201,263,1396,487"/>
 <area shape="rect" id="node16" href="$classec_1_1_timer.html" title="{ec::Timer\n||+ Timer()\l+ ~Timer()\l+ reset()\l+ resetTimeDelta()\l+ getTimeDelta()\l+ getTime()\l+ setTime()\l}" alt="" coords="1703,292,1833,457"/>
 <area shape="rect" id="node17" href="$classec_1_1_shader_manager.html" title="{ec::ShaderManager\n||+ ShaderManager()\l+ ~ShaderManager()\l+ update()\l+ addShader()\l+ addShader()\l+ addShader()\l+ getShader()\l+ getAllShader()\l+ switchShaderProgram()\l}" alt="" coords="1857,277,2026,472"/>
-<area shape="rect" id="node19" href="$classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ tick()\l+ render()\l+ setScene()\l+ getScene()\l+ getFrame()\l+ getFrame()\l+ setFrame()\l+ addRenderingTarget()\l# onBeginRender()\l# onRender()\l# onEndRender()\l}" alt="" coords="1360,850,1517,1103"/>
+<area shape="rect" id="node19" href="$classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ tick()\l+ render()\l+ getFrame()\l+ getFrame()\l+ setFrame()\l+ addRenderingTarget()\l# onBeginRender()\l# onRender()\l# onEndRender()\l}" alt="" coords="1360,865,1517,1089"/>
 </map>

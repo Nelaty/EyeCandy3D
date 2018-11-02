@@ -218,10 +218,14 @@ namespace ec
 		/** Tells which event is currently active */
 		InputType m_type;
 
-		/** */
+		/** Tells when the event was generated. */
 		double m_timestamp;
 
-	
+		/** 
+		 * \brief The InputType tells, which element inside this 
+		 * EventData union is active. All other elements are 
+		 * invalid!
+		 */
 		EventData m_event;
 	};
 }

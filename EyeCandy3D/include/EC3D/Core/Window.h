@@ -116,7 +116,7 @@ namespace ec
 		/**
 		 * \brief Set the icon for this window. 
 		 * The resolution of the icons should preferably be one of 16x16, 32x32,
-		 * 48x48, but can be any other. If no path is begin provided, a default
+		 * 48x48, but can be any other. If no path is being provided, a default
 		 * window icon will be loaded.
 		 * \param iconPath File path to the icon image
 		 * \param iconPathSmall File path to a small version of the icon image
@@ -132,7 +132,7 @@ namespace ec
 
 		/** Check if the user can resize this window. */
 		bool isResizable() const;
-		/** Check if this window has decorations (border, close widget etc.) */
+		/** Check if this window has decorations (border, close widget etc.). */
 		bool isDecorated() const;
 		/** Check if this window is always on-top. */
 		bool isFloating() const;

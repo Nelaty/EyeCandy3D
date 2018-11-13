@@ -222,7 +222,7 @@ namespace ec
 		double m_timestamp;
 
 		/** 
-		 * \brief The InputType tells, which element inside this 
+		 * The InputType tells, which element inside this 
 		 * EventData union is active. All other elements are 
 		 * invalid!
 		 */

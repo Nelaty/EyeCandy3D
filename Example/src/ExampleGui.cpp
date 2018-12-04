@@ -16,23 +16,25 @@ void ExampleGui::init()
 	this->add(m_flowLayout);
 
 	auto image = new ec::OpenGLImage("Resources/widgetImage.png");
+	auto empty = new agui::EmptyWidget();
+	empty->setSize(500, 1000);
+	m_flowLayout->add(empty);
 
 	m_imageWidget = new agui::ImageWidget(image);
-	//m_imageWidget->setSize(agui::Dimension(100, 100));
-	m_flowLayout->add(m_imageWidget);
+	//m_flowLayout->add(m_imageWidget);
 
 	m_slider = new agui::Slider();
 	m_slider->setSize(100, 36);
 	m_slider->setMaxValue(255);
 	m_slider->setMarkerSize(agui::Dimension(10, 30));
-	m_flowLayout->add(m_slider);
-
+	//m_flowLayout->add(m_slider);
+	
 	m_verticalScrollBar = new agui::VScrollBar();
 	m_verticalScrollBar->setSize(agui::Dimension(10, 200));
 	m_verticalScrollBar->setMinValue(10);
 	m_verticalScrollBar->setMinValue(200);
 	m_verticalScrollBar->setValue(200);
-	m_flowLayout->add(m_verticalScrollBar);
+	//m_flowLayout->add(m_verticalScrollBar);
 
 	for(int i = 0; i < 2; ++i)
 	{

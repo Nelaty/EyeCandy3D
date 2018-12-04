@@ -110,10 +110,11 @@ namespace ec
 		const auto* image = static_cast<const OpenGLImage*>(bmp);
 
 		GuiShaderInfoObject obj;
-		obj.m_position = {position.getX() + getOffset().getX(), position.getY() + getOffset().getY()};
-		obj.m_size = {bmp->getWidth(), bmp->getHeight()};
+		obj.m_position = glm::vec2(position.getX(), position.getY());
+		obj.m_offset = glm::vec2(getOffset().getX(), getOffset().getY());
+		obj.m_size = glm::vec2(bmp->getWidth(), bmp->getHeight());
 		obj.m_clippingRect = m_clippingRect;
-		obj.m_color = {0.0f, 0.0f, 0.0f, opacity * getGlobalOpacity()};
+		obj.m_color = glm::vec4(0.0f, 0.0f, 0.0f, opacity * getGlobalOpacity());
 		obj.m_usesTexture = true;
 		obj.m_texture = image->getTexture();
 
@@ -132,8 +133,9 @@ namespace ec
 		const auto* image = static_cast<const OpenGLImage*>(bmp);
 
 		GuiShaderInfoObject obj;
-		obj.m_position = {position.getX() + getOffset().getX(), position.getY() + getOffset().getY()};
-		obj.m_size = {scale.getWidth(), scale.getHeight()};
+		obj.m_position = glm::vec2(position.getX(), position.getY());
+		obj.m_offset = glm::vec2(getOffset().getX(), getOffset().getY());
+		obj.m_size = glm::vec2(scale.getWidth(), scale.getHeight());
 		obj.m_clippingRect = m_clippingRect;
 		obj.m_color = {0.0f, 0.0f, 0.0f, opacity * getGlobalOpacity()};
 		obj.m_usesTexture = true;
@@ -157,10 +159,11 @@ namespace ec
 									   const agui::Color& color)
 	{
 		GuiShaderInfoObject obj;
-		obj.m_position = {rect.getX() + getOffset().getX(), rect.getY() + getOffset().getY()};
-		obj.m_size = {rect.getWidth(), rect.getHeight()};
+		obj.m_position = glm::vec2(rect.getX(), rect.getY());
+		obj.m_offset = glm::vec2(getOffset().getX(), getOffset().getY());
+		obj.m_size = glm::vec2(rect.getWidth(), rect.getHeight());
 		obj.m_clippingRect = m_clippingRect;
-		obj.m_color = {color.getR(), color.getG(), color.getB(), color.getA() * getGlobalOpacity()};
+		obj.m_color = glm::vec4(color.getR(), color.getG(), color.getB(), color.getA() * getGlobalOpacity());
 
 		m_primitiveRenderer.render(m_context.m_guiShader,
 								   obj,
@@ -171,10 +174,14 @@ namespace ec
 											 const agui::Color& color)
 	{
 		GuiShaderInfoObject obj;
-		obj.m_position = {rect.getX() + getOffset().getX(), rect.getY() + getOffset().getY()};
-		obj.m_size = {rect.getWidth(), rect.getHeight()};
+		obj.m_position = glm::vec2(rect.getX(), rect.getY());
+		obj.m_offset = glm::vec2(getOffset().getX(), getOffset().getY());
+		obj.m_size = glm::vec2(rect.getWidth(), rect.getHeight());
 		obj.m_clippingRect = m_clippingRect;
-		obj.m_color = {color.getR(), color.getG(), color.getB(), color.getA() * getGlobalOpacity()};
+		obj.m_color = glm::vec4(color.getR(),
+								color.getG(),
+								color.getB(),
+								color.getA() * getGlobalOpacity());
 
 		m_primitiveRenderer.render(m_context.m_guiShader,
 								   obj,
@@ -192,10 +199,11 @@ namespace ec
 									const agui::Color& color)
 	{
 		GuiShaderInfoObject obj;
-		obj.m_position = {center.getX() + getOffset().getX(), center.getY() + getOffset().getY()};
-		obj.m_size = {radius, radius};
+		obj.m_position = glm::vec2(center.getX(), center.getY());
+		obj.m_offset = glm::vec2(getOffset().getX(), getOffset().getY());
+		obj.m_size = glm::vec2(radius, radius);
 		obj.m_clippingRect = m_clippingRect;
-		obj.m_color = {color.getR(), color.getG(), color.getB(), color.getA() * getGlobalOpacity()};
+		obj.m_color = glm::vec4(color.getR(), color.getG(), color.getB(), color.getA() * getGlobalOpacity());
 
 		m_primitiveRenderer.render(m_context.m_guiShader,
 								   obj,
@@ -207,10 +215,11 @@ namespace ec
 										  const agui::Color& color)
 	{
 		GuiShaderInfoObject obj;
-		obj.m_position = {center.getX() + getOffset().getX(), center.getY() + getOffset().getY()};
-		obj.m_size = {radius, radius};
+		obj.m_position = glm::vec2(center.getX(), center.getY());
+		obj.m_offset = glm::vec2(getOffset().getX(), getOffset().getY());
+		obj.m_size = glm::vec2(radius, radius);
 		obj.m_clippingRect = m_clippingRect;
-		obj.m_color = {color.getR(), color.getG(), color.getB(), color.getA() * getGlobalOpacity()};
+		obj.m_color = glm::vec4(color.getR(), color.getG(), color.getB(), color.getA() * getGlobalOpacity());
 
 		m_primitiveRenderer.render(m_context.m_guiShader,
 								   obj,
@@ -221,11 +230,7 @@ namespace ec
 								  const agui::Point& end,
 								  const agui::Color& color)
 	{
-		glBegin(GL_LINE);
-		glColor4f(color.getR(), color.getG(), color.getB(), color.getA() * getGlobalOpacity());
-		glVertex2i(start.getX(), start.getY());
-		glVertex2i(end.getX(), end.getY());
-		glEnd();
+		
 	}
 
 	void OpenGLGraphics::setTargetImage(const agui::Image* target)

@@ -21,8 +21,15 @@ namespace ec
 	void GuiPrimitiveRenderer::initShader(Shader* shader, 
 										  const GuiShaderInfoObject& info)
 	{
-		glm::vec2 position(info.m_position.x + info.m_size.x + info.m_clippingRect.getX() * 2,
-						   info.m_position.y + -info.m_size.y + info.m_clippingRect.getY() * 2);
+		float posX = info.m_position.x + info.m_size.x;
+		float posY = info.m_position.y - info.m_size.y;
+
+
+		//posX += info.m_offset.x;
+		//posY += info.m_offset.y;
+		
+		glm::vec2 position(posX + info.m_clippingRect.getX() * 2,
+						   posY + info.m_clippingRect.getY() * 2);
 
 		shader->setVec2("uPosition", position);
 		shader->setVec2("uScale", info.m_size);

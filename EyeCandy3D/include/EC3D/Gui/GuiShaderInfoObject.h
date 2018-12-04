@@ -11,6 +11,7 @@ namespace ec
 		agui::Rectangle m_clippingRect;
 
 		glm::vec2 m_position;
+		glm::vec2 m_offset;
 		glm::vec2 m_size;
 
 		glm::vec4 m_color;

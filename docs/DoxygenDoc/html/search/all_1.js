@@ -29,7 +29,7 @@ var searchData=
   ['alt_5fright',['ALT_RIGHT',['../classec_1_1_keyboard.html#a02d38de4e933d4ed6712fc688d428019',1,'ec::Keyboard']]],
   ['altpressed',['altPressed',['../structec_1_1_keyboard_event.html#afa24be439032cd053aca60cba17b4b32',1,'ec::KeyboardEvent::altPressed()'],['../structec_1_1_mouse_event.html#a2ba39d134d9ece00227d5d10547c2d29',1,'ec::MouseEvent::altPressed()']]],
   ['apostrophe',['APOSTROPHE',['../classec_1_1_keyboard.html#a56f1ecab0667ad8538826049157c4351',1,'ec::Keyboard']]],
-  ['application',['Application',['../classec_1_1_application.html',1,'ec::Application'],['../classec_1_1_application.html#af4a94888105d739a2de75be17ce9ad67',1,'ec::Application::Application()']]],
+  ['application',['Application',['../classec_1_1_application.html',1,'ec::Application'],['../classec_1_1_application.html#af2a7b16d775fbce44dc0035fb96513f3',1,'ec::Application::Application()']]],
   ['application_2ecpp',['Application.cpp',['../_application_8cpp.html',1,'']]],
   ['application_2eh',['Application.h',['../_application_8h.html',1,'']]],
   ['arrowheightchanged',['arrowHeightChanged',['../classec_1_1_generic_v_scroll_bar_listener.html#ad42d38aab565aae07a4499f9fac0f0fd',1,'ec::GenericVScrollBarListener']]],

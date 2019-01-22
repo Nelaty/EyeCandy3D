@@ -14,7 +14,7 @@
 \usepackage{fix-cm}
 \usepackage{transparent}
 \usepackage{color}
-\usepackage[table]{xcolor}
+\usepackage{xcolor}
 \usepackage{tocloft, url}
 \usepackage{hyperref}
 \usepackage{etoolbox}
@@ -288,7 +288,7 @@ contents={\parbox{\layerwidth}{\centering}}
 	\pagenumbering{Roman} 
 	
 	\lstset{language=C++,
-		keywordstyle=\color{RoyalBlue},
+		keywordstyle=\color{blue},
 		basicstyle=\ttfamily,
 		commentstyle=\ttfamily\itshape\color{gray},
 		stringstyle=\ttfamily,
@@ -296,6 +296,7 @@ contents={\parbox{\layerwidth}{\centering}}
 		breaklines=true,
 		frameround=ffff,
 		rulecolor=\color{black},
+		frame=single,
 		autogobble=true
 	}
 	
@@ -309,9 +310,6 @@ contents={\parbox{\layerwidth}{\centering}}
 					\LARGE\textbf{EyeCandy3D User Manual}\\		
 		
 			\LARGE{A 3D Scenegraph built on OpenGL}\\
-			\vspace{1cm}
-			\Large{EVELIN Project}\\
-			\vspace{2cm}
 			
 			
 			\vfill
@@ -338,21 +336,167 @@ contents={\parbox{\layerwidth}{\centering}}
 	EyeCandy3D is a scene graph based on OpenGL. Every program consists of one \textbf{Application}, which holds a number of windows.
 	Each window can hold a variable number of scenes, which can run simultaneously.
 	
+	
+	
 	\pagebreak
 	\section{First steps}
+		In this section I will guide you through the most important aspects of using this library.
+		
+		\subsection{Creating an application}
+		An \textbf{Application} is the main part of this library.
+		\begin{lstlisting}
+			Application app;
+		\end{lstlisting}
+		It allows the creation of new windows, which will automatically visualized. The following function will create a new window and add it to the application:
+		\begin{lstlisting}
+			app.createWindow<WindowType>(...);
+		\end{lstlisting}
+		\textbf{WindowType} has to be an own \textbf{Window} implementation.
 		
 		\subsection{Creating a window}
-		Custom windows must be derived from \textbf{ec::Window}. This window has to be instanced with the window creation function provided by an \textbf{Application}.
-			
+		Custom windows must be derived from \textbf{ec::Window}. This window has to be instanced with the window creation function provided by an \textbf{Application}. 	
+		\begin{lstlisting}
+			class ExampleWindow : public ec::Window
+			{
+			public:
+				explicit ExampleWindow(unsigned int windowWidth,
+					unsigned int windowHeight,
+					const std::string& title)
+				// Own window implementation ...
+			};
+		
+			ec::Application app;
+			app.createWindow<ExampleWindow>(width, height, "Example Window", "id");
+		\end{lstlisting}
+		
+		The dervied window  \textbf{must} support a constructor with the following signature:\\
+		\textbf{MyWindow(unsigned int, unsigned int, const std::string\&)}
+		
+		
 		
 		\subsection{Creating a scene}
 		Custom scenes must be derived from \textbf{ec::Scene}. By registering it with the scene manager in the associated window, it can receive updates.	
+		
+		\begin{lstlisting}
+			class ExampleScene : public ec::Scene
+			{
+			public:
+				explicit ExampleScene(const std::string& name, 
+					ec::Window* window);
+			
+				// Own window implementation ...
+			};
+			
+			// In ExampleWindow:
+			void ExampleWindow::initScenes()
+			{
+				// Create new window
+				auto exampleScene = new ExampleScene("example", this);
+				
+				// Register the new window, so it receives updates
+				m_sceneSystem.registerScene(exampleScene);
+			
+				// ...
+			}
+		\end{lstlisting}
 		
 		\subsection{Resource registry}
 		Built in types:
 		\begin{itemize}
 			\item 
 		\end{itemize}
+		
+	\pagebreak
+	\section{Scene graph}
+		\subsection{Node}
+			
+				
+		\subsection{Texture}
+			The texutre class encapsulates a texture, which resides on the gpu. There are two functions, which allow the creation of either 2D or 3D textures.			
+			\begin{lstlisting}
+				class Texture
+				{
+				public:
+					explicit Texture();
+					~Texture();
+					
+					/**
+					* \brief Create a 2D texture.
+					* \return True if creation was successful, false otherwise.
+					*/
+					bool textureFromFile(const char* path, const std::string& type);
+					
+					/** 
+					* \brief Create a 3D texture.
+					* \return True if creation was successful, false otherwise.
+					*/
+					bool cubeMapFromFile(const char* path, const std::string& type);
+				};	
+			\end{lstlisting}
+		
+		\subsection{Material}
+			A \textbf{Material} contains a number of properties, which defines the color of an object. These properties include:
+			\begin{itemize}
+				\item Ambient, Diffuse, Specular colors
+				\item Shininess factor for highlights
+				\item Textures
+			\end{itemize}
+			\begin{lstlisting}
+				
+			\end{lstlisting}	
+		
+		\subsection{Geometry}
+			A geometry object encapsulates various geometry data, including:
+			\begin{itemize}
+				\item Vertices
+				\item Normals
+				\item Texture coordinates
+			\end{itemize}
+			It is responsible for memory managment on the GPU regarding geometry data.
+			
+			There already are specific geometry implementations for common geometry types:
+			\begin{description}
+				\item[3D]: 
+					\begin{packed_itemize}
+						\item CubeGeometry
+						\item SphereGeometry
+						\item CylinderGeometry
+					\end{packed_itemize}
+				\item[2D]:
+					\begin{packed_itemize}
+						\item CircleGeometry
+						\item RectangleGeometry
+					\end{packed_itemize}
+			\end{description}
+			If these predefined types aren't sufficicent, you can create your own geometry types. This is done by deriving from \textbf{StaticGeometry}.
+			
+			
+		\subsection{Shader}
+			The \textbf{Shader} class can load, compile and link shader programs. The shading language used is GLSL, since OpenGL is being used.
+		
+		\subsection{Drawable}
+			A drawable groups together
+			\begin{packed_itemize}
+				\item Geometry,
+				\item Material and
+				\item Shader
+			\end{packed_itemize}
+		
+			Drawables can be added to scene graph \textbf{Node}s so they are rendered.
+		
+	\pagebreak
+	\section{Rendering}
+		
+		\subsection{Frame}
+		
+		\subsection{Camera}
+		
+	
+	\pagebreak
+	\section{Lighting}
+		TBA
+		
+		
 		
 	\pagebreak
 	\section{Input}
@@ -387,8 +531,17 @@ contents={\parbox{\layerwidth}{\centering}}
 	\section{GUI}
 	The GUI is built using the Agui-library with custom backends for OpenGL.
 	
-	
-	
+		\subsection{Initialization}
+		Before the GUI library-part can be used, it has to be initialized. To do so, use the static function:
+		\begin{lstlisting}
+			void ec::MiniAgui::init();
+		\end{lstlisting}
+		
+		\subsection{Backend}
+		
+		\subsection{title}
+		
+		
 	\pagebreak
 	
 	

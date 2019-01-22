@@ -35,19 +35,19 @@ Collaboration diagram for ec\+:\+:Transform3D\+:\nopagebreak
 virtual \mbox{\hyperlink{classec_1_1_transform3_d_a1df4b7afcf78aef64719b2302cfac864}{$\sim$\+Transform3D}} ()
 \item 
 virtual void \mbox{\hyperlink{classec_1_1_transform3_d_a68d259da063ea2aff48720ae55870445}{update\+Local\+Mat}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Create a new local mat from the current position, rotation and scale. \end{DoxyCompactList}\item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_a69ce5285f9481b5615c084b9f892fdb8}{get\+Local\+Position}} ()
 \item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_af8bdfb3bbc688a9a920ccb4d452d8962}{get\+Up\+Vector}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the current up vector. \end{DoxyCompactList}\item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_afc4f5c1122a5191ad2a4628a43a76a7c}{get\+Forward\+Vector}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the current forward vector. \end{DoxyCompactList}\item 
 const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_transform3_d_a8aa0ac4df795971dad499a0d12348d07}{get\+Local\+Mat}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the current view matrix. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classec_1_1_transform3_d_a5cc1409f0c09910a701dcd294e797498}{set\+Local\+Mat}} (const glm\+::mat4 \&mat)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the current transformation. \end{DoxyCompactList}\item 
 const glm\+::vec3 \& \mbox{\hyperlink{classec_1_1_transform3_d_a73b5f3bfbeb73eb4f445b1941b8e359d}{get\+Translation}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the current translation W\+I\+T\+H\+O\+UT scale and rotation applied! \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classec_1_1_transform3_d_ac0371b75ed67d59665967846d9cc6827}{get\+TranslationX}} () const
 \item 
 float \mbox{\hyperlink{classec_1_1_transform3_d_a18d2aca82a3b8944815801963f32ab8c}{get\+TranslationY}} () const
@@ -166,13 +166,21 @@ A transformation in 3D space.
 \subsubsection{\texorpdfstring{get\+Forward\+Vector()}{getForwardVector()}}
 {\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Transform3\+D\+::get\+Forward\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the current forward vector. \mbox{\Hypertarget{classec_1_1_transform3_d_a8aa0ac4df795971dad499a0d12348d07}\label{classec_1_1_transform3_d_a8aa0ac4df795971dad499a0d12348d07}} 
+
+
+Get the current forward vector. 
+
+\mbox{\Hypertarget{classec_1_1_transform3_d_a8aa0ac4df795971dad499a0d12348d07}\label{classec_1_1_transform3_d_a8aa0ac4df795971dad499a0d12348d07}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!get\+Local\+Mat@{get\+Local\+Mat}}
 \index{get\+Local\+Mat@{get\+Local\+Mat}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{get\+Local\+Mat()}{getLocalMat()}}
 {\footnotesize\ttfamily const glm\+::mat4 \& ec\+::\+Transform3\+D\+::get\+Local\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the current view matrix. \mbox{\Hypertarget{classec_1_1_transform3_d_a69ce5285f9481b5615c084b9f892fdb8}\label{classec_1_1_transform3_d_a69ce5285f9481b5615c084b9f892fdb8}} 
+
+
+Get the current view matrix. 
+
+\mbox{\Hypertarget{classec_1_1_transform3_d_a69ce5285f9481b5615c084b9f892fdb8}\label{classec_1_1_transform3_d_a69ce5285f9481b5615c084b9f892fdb8}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!get\+Local\+Position@{get\+Local\+Position}}
 \index{get\+Local\+Position@{get\+Local\+Position}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{get\+Local\+Position()}{getLocalPosition()}}
@@ -208,7 +216,11 @@ Get the z component of the scale. \mbox{\Hypertarget{classec_1_1_transform3_d_a7
 \subsubsection{\texorpdfstring{get\+Translation()}{getTranslation()}}
 {\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Transform3\+D\+::get\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the current translation W\+I\+T\+H\+O\+UT scale and rotation applied! \mbox{\Hypertarget{classec_1_1_transform3_d_ac0371b75ed67d59665967846d9cc6827}\label{classec_1_1_transform3_d_ac0371b75ed67d59665967846d9cc6827}} 
+
+
+Get the current translation W\+I\+T\+H\+O\+UT scale and rotation applied! 
+
+\mbox{\Hypertarget{classec_1_1_transform3_d_ac0371b75ed67d59665967846d9cc6827}\label{classec_1_1_transform3_d_ac0371b75ed67d59665967846d9cc6827}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!get\+TranslationX@{get\+TranslationX}}
 \index{get\+TranslationX@{get\+TranslationX}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{get\+Translation\+X()}{getTranslationX()}}
@@ -232,7 +244,11 @@ Get the z component of the current translation \mbox{\Hypertarget{classec_1_1_tr
 \subsubsection{\texorpdfstring{get\+Up\+Vector()}{getUpVector()}}
 {\footnotesize\ttfamily const glm\+::vec3 \& ec\+::\+Transform3\+D\+::get\+Up\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Get the current up vector. \mbox{\Hypertarget{classec_1_1_transform3_d_a24885ce6a9f002a00f7c263e4076ea6b}\label{classec_1_1_transform3_d_a24885ce6a9f002a00f7c263e4076ea6b}} 
+
+
+Get the current up vector. 
+
+\mbox{\Hypertarget{classec_1_1_transform3_d_a24885ce6a9f002a00f7c263e4076ea6b}\label{classec_1_1_transform3_d_a24885ce6a9f002a00f7c263e4076ea6b}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!rotate@{rotate}}
 \index{rotate@{rotate}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -322,7 +338,11 @@ Multiplicative scaling of z-\/scale component. \mbox{\Hypertarget{classec_1_1_tr
 \subsubsection{\texorpdfstring{set\+Local\+Mat()}{setLocalMat()}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::set\+Local\+Mat (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{mat }\end{DoxyParamCaption})}
 
-Set the current transformation. \mbox{\Hypertarget{classec_1_1_transform3_d_adc80d3f045c44c02bec2f2c1db2144db}\label{classec_1_1_transform3_d_adc80d3f045c44c02bec2f2c1db2144db}} 
+
+
+Set the current transformation. 
+
+\mbox{\Hypertarget{classec_1_1_transform3_d_adc80d3f045c44c02bec2f2c1db2144db}\label{classec_1_1_transform3_d_adc80d3f045c44c02bec2f2c1db2144db}} 
 \index{ec\+::\+Transform3D@{ec\+::\+Transform3D}!set\+Rotation@{set\+Rotation}}
 \index{set\+Rotation@{set\+Rotation}!ec\+::\+Transform3D@{ec\+::\+Transform3D}}
 \subsubsection{\texorpdfstring{set\+Rotation()}{setRotation()}}
@@ -442,7 +462,11 @@ Adds the given value to the current z-\/coordinate. \mbox{\Hypertarget{classec_1
 \subsubsection{\texorpdfstring{update\+Local\+Mat()}{updateLocalMat()}}
 {\footnotesize\ttfamily void ec\+::\+Transform3\+D\+::update\+Local\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-This function should be called once before accessing the local matrix, if a prior transformation has been executed. Create a new local mat from the current position, rotation and scale. 
+
+
+Create a new local mat from the current position, rotation and scale. 
+
+This function should be called once before accessing the local matrix, if a prior transformation has been executed. 
 
 Reimplemented in \mbox{\hyperlink{classec_1_1_camera_acff95ac4ca039715d67c83111d03b8c1}{ec\+::\+Camera}}.
 

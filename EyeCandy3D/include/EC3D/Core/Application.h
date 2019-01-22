@@ -22,18 +22,8 @@ namespace ec
 	public:
 		using Window_Ptr = std::unique_ptr<Window>;
 
-
-		/**
-		 * \brief Application constructor.
-		 * \param windowWidth Width of the first window in pixels.
-		 * \param windowHeight Height of the first window in pixels.
-		 * \param windowTitle Title of the first window.
-		 * \param windowName Identifier  of the first window.
-		 */
-		explicit Application(unsigned int windowWidth,
-							 unsigned int windowHeight,
-							 const std::string& windowTitle,
-							 const std::string& windowName);
+		/** \brief Application constructor. */
+		explicit Application();
 		~Application();
 
 		/** 

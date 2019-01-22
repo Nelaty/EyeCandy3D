@@ -79,6 +79,7 @@ var searchData=
   ['m_5fmouse',['m_mouse',['../unionec_1_1_event_data.html#a77d2274d869ab46f8f5f1e5d9616d4d3',1,'ec::EventData']]],
   ['m_5fname',['m_name',['../classec_1_1_scene.html#a58a25f1f2370535750e341085ddfd95b',1,'ec::Scene']]],
   ['m_5fnormal',['m_normal',['../structec_1_1_vertex.html#aec5eb9b7fc72c250525c6b64bfabd2a2',1,'ec::Vertex']]],
+  ['m_5foffset',['m_offset',['../structec_1_1_gui_shader_info_object.html#a5b5f81392dce6d0cbaf5d319a5b93475',1,'ec::GuiShaderInfoObject']]],
   ['m_5fopengldebugcontext',['m_openglDebugContext',['../structec_1_1_window_creation_hints.html#a87a7f6e29e26ba7126e7064e1e60e957',1,'ec::WindowCreationHints']]],
   ['m_5fopenglforwardcompatible',['m_openglForwardCompatible',['../structec_1_1_window_creation_hints.html#abfa30a3da29c0037255bb90e5b6a6866',1,'ec::WindowCreationHints']]],
   ['m_5fopenglprofile',['m_openglProfile',['../structec_1_1_window_creation_hints.html#a872785f08bf23d138d7cc61279ba928c',1,'ec::WindowCreationHints']]],

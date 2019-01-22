@@ -68,10 +68,10 @@ void ExampleScene::constructTestSg()
 	auto* wall01Cube = new Drawable(cubeMesh, wallMat01, shader);
 
 	// Create new scene graph nodes
-	m_left = new Node(nullptr);
-	m_right = new Node(nullptr);
-	m_backside = new Node(nullptr);
-	m_bottom = new Node(nullptr);
+	m_left = new Node();
+	m_right = new Node();
+	m_backside = new Node();
+	m_bottom = new Node();
 
 	const auto translation = 5.0f;
 	const auto width = 0.1f;

@@ -20,7 +20,7 @@ namespace ec
 		/** 
 		 * This function should be called once before accessing the local
 		 * matrix, if a prior transformation has been executed.
-		 * Create a new local mat from the current position, rotation and
+		 * \brief Create a new local mat from the current position, rotation and
 		 * scale. 
 		 */
 		virtual void updateLocalMat();
@@ -31,17 +31,17 @@ namespace ec
 		 */
 		const glm::vec3& getLocalPosition();
 		
-		/** Get the current up vector. */
+		/** \brief Get the current up vector. */
 		const glm::vec3& getUpVector() const;
-		/** Get the current forward vector. */
+		/** \brief Get the current forward vector. */
 		const glm::vec3& getForwardVector() const;
-		/** Get the current view matrix. */
+		/** \brief Get the current view matrix. */
 		const glm::mat4& getLocalMat() const;
-		/** Set the current transformation. */
+		/** \brief Set the current transformation. */
 		void setLocalMat(const glm::mat4& mat);
 
 		/** 
-		 * Get the current translation 
+		 * \brief Get the current translation 
 		 * WITHOUT scale and rotation applied!
 		 */
 		const glm::vec3& getTranslation() const;

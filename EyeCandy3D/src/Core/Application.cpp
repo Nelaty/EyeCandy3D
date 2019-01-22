@@ -8,10 +8,7 @@
 
 namespace ec
 {
-	Application::Application(const unsigned int windowWidth,
-	                         const unsigned int windowHeight,
-	                         const std::string& windowTitle,
-	                         const std::string& windowName)
+	Application::Application()
 		: m_running{true}
 	{
 		ec::Random::seed();

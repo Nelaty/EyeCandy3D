@@ -118,7 +118,7 @@ void ExampleScene::sphereTest()
 	woodMat->addDiffuseTextureFromPath("../Resources/Textures/sand_00.jpg");
 
 	auto* sphereDrawable = new Drawable(sphereMesh, woodMat, shader);
-	auto* sphereNode = new Node(nullptr);
+	auto* sphereNode = new Node();
 
 	sphereNode->addDrawable(sphereDrawable);
 
@@ -136,7 +136,7 @@ void ExampleScene::cylinderTest()
 	woodMat->addDiffuseTextureFromPath("../Resources/Textures/sand_00.jpg");
 
 	auto* drawable = new Drawable(cylinderMesh, woodMat, shader);
-	auto* node = new Node(nullptr);
+	auto* node = new Node();
 
 	node->addDrawable(drawable);
 
@@ -154,7 +154,7 @@ void ExampleScene::rectangleTest()
 	woodMat->addDiffuseTextureFromPath("../Resources/Textures/sand_00.jpg");
 	
 	auto* drawable = new Drawable(rectangleMesh, woodMat, shader);
-	auto* node = new Node(nullptr);
+	auto* node = new Node();
 
 	node->addDrawable(drawable);
 	node->rotateZ(-glm::radians(45.0f));
@@ -173,7 +173,7 @@ void ExampleScene::circleTest()
 	woodMat->addDiffuseTextureFromPath("../Resources/Textures/sand_00.jpg");
 
 	auto* drawable = new Drawable(circleMesh, woodMat, shader);
-	auto* node = new Node(nullptr);
+	auto* node = new Node();
 
 	node->addDrawable(drawable);
 	node->rotateZ(-glm::radians(45.0f));

@@ -408,8 +408,18 @@ contents={\parbox{\layerwidth}{\centering}}
 		
 	\pagebreak
 	\section{Scene graph}
-		\subsection{Node}
+		\subsection{Nodes}
+			The scene graph is made out of \textbf{Node}s. The graph is directed and has to be acyclic. Each scene contains one root node, which will always exist and cannot be deleted (but it can be transformed, i.e. translated). The root node doesn't have a parent.
 			
+			Each node can have any number of children, but one father node at most. A node is a \textbf{Transform3D}, thus it can be translated, rotated and scaled. Besides a local matrix, it also contains a global matrix. Before each render cycle, its local and global matrices will be updated after the formula:
+			\begin{algorithm}
+				$\vec{x} := \vec{forward}$\\
+				$\vec{y} := \vec{up}$\\
+				$\vec{z} := \vec{x} x \vec{y}$\\
+				$\vec{t} := \vec{pos}$\\
+				$M_{local} := (x^T, y^T, z^T, t^T)$\\
+				$M_{global} := M_{\texttt{global\_parent}} * M_{local}$\\
+			\end{algorithm}
 				
 		\subsection{Texture}
 			The texutre class encapsulates a texture, which resides on the gpu. There are two functions, which allow the creation of either 2D or 3D textures.			

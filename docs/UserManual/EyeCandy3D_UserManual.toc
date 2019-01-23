@@ -3,23 +3,23 @@
 \contentsline {section}{\numberline {2}First steps}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Creating an application}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Creating a window}{2}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Creating a scene}{2}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Creating a scene}{3}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Resource registry}{3}{subsection.2.4}
 \contentsline {section}{\numberline {3}Scene graph}{4}{section.3}
-\contentsline {subsection}{\numberline {3.1}Node}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Nodes}{4}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Texture}{4}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Material}{4}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}Material}{5}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Geometry}{5}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}Shader}{5}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Drawable}{5}{subsection.3.6}
-\contentsline {section}{\numberline {4}Rendering}{6}{section.4}
-\contentsline {subsection}{\numberline {4.1}Frame}{6}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Camera}{6}{subsection.4.2}
-\contentsline {section}{\numberline {5}Lighting}{7}{section.5}
-\contentsline {section}{\numberline {6}Input}{8}{section.6}
-\contentsline {subsection}{\numberline {6.1}Input events}{8}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}EventSystem}{8}{subsection.6.2}
-\contentsline {section}{\numberline {7}GUI}{9}{section.7}
-\contentsline {subsection}{\numberline {7.1}Initialization}{9}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Backend}{9}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}title}{9}{subsection.7.3}
+\contentsline {subsection}{\numberline {3.6}Drawable}{6}{subsection.3.6}
+\contentsline {section}{\numberline {4}Rendering}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Frame}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Camera}{7}{subsection.4.2}
+\contentsline {section}{\numberline {5}Lighting}{8}{section.5}
+\contentsline {section}{\numberline {6}Input}{9}{section.6}
+\contentsline {subsection}{\numberline {6.1}Input events}{9}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}EventSystem}{9}{subsection.6.2}
+\contentsline {section}{\numberline {7}GUI}{10}{section.7}
+\contentsline {subsection}{\numberline {7.1}Initialization}{10}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Backend}{10}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}title}{10}{subsection.7.3}

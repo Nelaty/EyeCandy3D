@@ -31,6 +31,12 @@ void main(void)
 	{
 		fragColor = texture(texture_diffuse1, texCoords);
 	}
+	else
+	{
+		fragColor = material_ambient;
+		fragColor = fragColor + (1.0 - fragColor.a) * material_diffuse;
+		return;
+	}
 	
 	//fragColor.a = 1.0f;
 	fragColor = fragColor + (1.0 - fragColor.a) * material_diffuse;

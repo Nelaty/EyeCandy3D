@@ -12,13 +12,16 @@
 \BOOKMARK [2][-]{subsection.3.5}{Shader}{section.3}% 12
 \BOOKMARK [2][-]{subsection.3.6}{Drawable}{section.3}% 13
 \BOOKMARK [1][-]{section.4}{Rendering}{}% 14
-\BOOKMARK [2][-]{subsection.4.1}{Frame}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.2}{Camera}{section.4}% 16
-\BOOKMARK [1][-]{section.5}{Lighting}{}% 17
-\BOOKMARK [1][-]{section.6}{Input}{}% 18
-\BOOKMARK [2][-]{subsection.6.1}{Input events}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.2}{EventSystem}{section.6}% 20
-\BOOKMARK [1][-]{section.7}{GUI}{}% 21
-\BOOKMARK [2][-]{subsection.7.1}{Initialization}{section.7}% 22
-\BOOKMARK [2][-]{subsection.7.2}{Backend}{section.7}% 23
-\BOOKMARK [2][-]{subsection.7.3}{title}{section.7}% 24
+\BOOKMARK [2][-]{subsection.4.1}{Renderer}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.2}{Scene Renderer}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.3}{Frame}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.4}{Camera}{section.4}% 18
+\BOOKMARK [1][-]{section.5}{Lighting}{}% 19
+\BOOKMARK [1][-]{section.6}{Input}{}% 20
+\BOOKMARK [2][-]{subsection.6.1}{Input events}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.2}{EventSystem}{section.6}% 22
+\BOOKMARK [2][-]{subsection.6.3}{Device States}{section.6}% 23
+\BOOKMARK [1][-]{section.7}{GUI}{}% 24
+\BOOKMARK [2][-]{subsection.7.1}{Initialization}{section.7}% 25
+\BOOKMARK [2][-]{subsection.7.2}{Backend}{section.7}% 26
+\BOOKMARK [2][-]{subsection.7.3}{Usage}{section.7}% 27

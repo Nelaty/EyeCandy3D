@@ -10,16 +10,19 @@
 \contentsline {subsection}{\numberline {3.2}Texture}{4}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Material}{5}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Geometry}{5}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Shader}{5}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.5}Shader}{6}{subsection.3.5}
 \contentsline {subsection}{\numberline {3.6}Drawable}{6}{subsection.3.6}
 \contentsline {section}{\numberline {4}Rendering}{7}{section.4}
-\contentsline {subsection}{\numberline {4.1}Frame}{7}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Camera}{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.1}Renderer}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Scene Renderer}{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Frame}{7}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Camera}{7}{subsection.4.4}
 \contentsline {section}{\numberline {5}Lighting}{8}{section.5}
 \contentsline {section}{\numberline {6}Input}{9}{section.6}
 \contentsline {subsection}{\numberline {6.1}Input events}{9}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}EventSystem}{9}{subsection.6.2}
-\contentsline {section}{\numberline {7}GUI}{10}{section.7}
-\contentsline {subsection}{\numberline {7.1}Initialization}{10}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Backend}{10}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}title}{10}{subsection.7.3}
+\contentsline {subsection}{\numberline {6.3}Device States}{9}{subsection.6.3}
+\contentsline {section}{\numberline {7}GUI}{11}{section.7}
+\contentsline {subsection}{\numberline {7.1}Initialization}{11}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Backend}{11}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Usage}{11}{subsection.7.3}

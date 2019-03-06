@@ -26,12 +26,12 @@
 #include <memory>
 
 
-/**
-* \brief A window is responsible for one os specific window, which
-* can receive input events.
-*/
 namespace ec
 {
+	/**
+	* \brief A window is responsible for one os specific window, which
+	* can receive input events.
+	*/
 	class EC3D_DECLSPEC Window
 	{
 	public:

@@ -347,7 +347,7 @@ contents={\parbox{\layerwidth}{\centering}}
 		\begin{lstlisting}
 			Application app;
 		\end{lstlisting}
-		It allows the creation of new windows, which will automatically visualized. The following function will create a new window and add it to the application:
+		It allows the creation of new windows, which will automatically be visualized. The following function will create a new window and add it to the application:
 		\begin{lstlisting}
 			app.createWindow<WindowType>(...);
 		\end{lstlisting}
@@ -375,7 +375,7 @@ contents={\parbox{\layerwidth}{\centering}}
 		
 		
 		\subsection{Creating a scene}
-		Custom scenes must be derived from \textbf{ec::Scene}. By registering it with the scene manager in the associated window, it can receive updates.	
+		Custom scenes must be derived from \textbf{ec::Scene}. By registering it in the scene manager in the associated window, it can receive updates.	
 		
 		\begin{lstlisting}
 			class ExampleScene : public ec::Scene
@@ -401,24 +401,30 @@ contents={\parbox{\layerwidth}{\centering}}
 		\end{lstlisting}
 		
 		\subsection{Resource registry}
-		Built in types:
+		To ease the management of resources (images, geometry etc.), there is a \textbf{ResourceRegistry} class. Currently each window has a set of different resource registries, which can be used:
 		\begin{itemize}
-			\item 
+			\item ResourceRegistry$<Material>$
+			\item ResourceRegistry$<Texture>$
+			\item ResourceRegistry$<Geometry>$
+			\item ResourceRegistry$<Drawable>$
 		\end{itemize}
+		Since these registries have no dependencies, further ones can easily be created. For shaders an extra class called \textbf{ShaderManager} is being used instead of a ResourceRegistry because shaders need extra treatment.
 		
 	\pagebreak
 	\section{Scene graph}
 		\subsection{Nodes}
-			The scene graph is made out of \textbf{Node}s. The graph is directed and has to be acyclic. Each scene contains one root node, which will always exist and cannot be deleted (but it can be transformed, i.e. translated). The root node doesn't have a parent.
+			The scene graph is made up of \textbf{Node}s. The graph is directed and has to be acyclic. Each scene contains one root node, which will always exist and cannot be deleted (but it can be transformed, i.e. translated). The root node doesn't have a parent.
 			
 			Each node can have any number of children, but one father node at most. A node is a \textbf{Transform3D}, thus it can be translated, rotated and scaled. Besides a local matrix, it also contains a global matrix. Before each render cycle, its local and global matrices will be updated after the formula:
 			\begin{algorithm}
-				$\vec{x} := \vec{forward}$\\
-				$\vec{y} := \vec{up}$\\
-				$\vec{z} := \vec{x} x \vec{y}$\\
-				$\vec{t} := \vec{pos}$\\
-				$M_{local} := (x^T, y^T, z^T, t^T)$\\
-				$M_{global} := M_{\texttt{global\_parent}} * M_{local}$\\
+				\begin{algorithmic}[1]
+					\State $\vec{x} := \vec{forward}$
+					\State $\vec{y} := \vec{up}$
+					\State $\vec{z} := \vec{x} \times \vec{y}$
+					\State $\vec{t} := \vec{pos}$
+					\State $M_{local} := (\vec{x}, \vec{y}, \vec{z}, \vec{t})$
+					\State $M_{global} := M_{\texttt{global\_parent}} * M_{local}$
+				\end{algorithmic}
 			\end{algorithm}
 				
 		\subsection{Texture}
@@ -446,22 +452,46 @@ contents={\parbox{\layerwidth}{\centering}}
 		
 		\subsection{Material}
 			A \textbf{Material} contains a number of properties, which defines the color of an object. These properties include:
-			\begin{itemize}
+			\begin{packed_itemize}
 				\item Ambient, Diffuse, Specular colors
 				\item Shininess factor for highlights
 				\item Textures
-			\end{itemize}
+			\end{packed_itemize}
+		
 			\begin{lstlisting}
+			class EC3D_DECLSPEC Material
+			{
+				// ...
+			
+			private:
+				/* Flat colors */
+				glm::vec4 m_colorAmbient;
+				glm::vec4 m_colorDiffuse;
+				glm::vec4 m_colorSpecular;
+				glm::vec4 m_colorEmission;
 				
-			\end{lstlisting}	
+				/* Additional attributes */
+				float m_shininess;
+				
+				/* Textures */
+				std::vector<Texture> m_textures;
+			}
+			\end{lstlisting}
+			
+			There is also a convenience function for creating and adding a new texture to a material.
+			\begin{lstlisting}
+				Material material;
+				material.addDiffuseTextureFromPath("Path/to/texture.png");
+			\end{lstlisting}
+			This is not recommended for larger projects, which often reuse textures.
 		
 		\subsection{Geometry}
 			A geometry object encapsulates various geometry data, including:
-			\begin{itemize}
+			\begin{packed_itemize}
 				\item Vertices
 				\item Normals
 				\item Texture coordinates
-			\end{itemize}
+			\end{packed_itemize}
 			It is responsible for memory managment on the GPU regarding geometry data.
 			
 			There already are specific geometry implementations for common geometry types:
@@ -482,24 +512,31 @@ contents={\parbox{\layerwidth}{\centering}}
 			
 			
 		\subsection{Shader}
-			The \textbf{Shader} class can load, compile and link shader programs. The shading language used is GLSL, since OpenGL is being used.
+			The \textbf{Shader} class can load, compile and link shader programs. The shading language being used is GLSL, since OpenGL is being used.
 		
 		\subsection{Drawable}
-			A drawable groups together
+			A drawable groups
 			\begin{packed_itemize}
 				\item Geometry,
 				\item Material and
 				\item Shader
 			\end{packed_itemize}
 		
-			Drawables can be added to scene graph \textbf{Node}s so they are rendered.
+			Drawables can be added to scene graph \textbf{Node}s so that they are being rendered.
 		
 	\pagebreak
 	\section{Rendering}
+		\subsection{Renderer}
+			Each window contains one \textbf{Renderer}, which is responsible for rendering to this window's back buffer. It contains one active \textbf{SceneRenderer}, which is responsible for the rendering process. The \textbf{SceneRenderer} can be changed, if a different combination of cameras should be used.
+			
+		\subsection{Scene Renderer}
+			A \textbf{SceneRenderer} is responsible for rendering one or multiple scenes, by using a number of cameras, which the user defined to use. 
 		
 		\subsection{Frame}
+			A \textbf{Frame} contains a collection of cameras. It provides methods to add or remove cameras. The order of cameras matters, when viewports are overlapping. Cameras with lower index are prioritzed over cameras with a higher index.
 		
 		\subsection{Camera}
+			\textbf{Camera}s are being used to define position and rotation of the view matrix, which is needed for rendering a \textbf{Scene}. Cameras are always linked to one specific \textbf{Scene}, so the \textbf{SceneRenderer} knows, which scenes to update and render.
 		
 	
 	\pagebreak
@@ -534,9 +571,18 @@ contents={\parbox{\layerwidth}{\centering}}
 			\item[InputListener:] \hfill\\
 				Input listener contain a number of callbacks, which can be added by the user. Input listener have to be registered at an \textbf{InputObservable} located in a window, to be informed about input events.	
 		\end{description}
-		
-			
 	
+		\subsection{Device States}
+		As an alternative of using the event system, one can directly access device states through the specific device class. An example for checking a specific keyboard state would be:
+		\begin{lstlisting}
+			// Check if the left arrow key is being pressed
+			if(keyboard.isKeyDown(ec::Keyboard::LEFT))
+			{
+				// Walk left...
+			}
+		\end{lstlisting}
+		This has the disadvantage that inputs can potentially be lost, if the user presses and releases a button before the program reaches this statement. It's like the button has never been pressed.
+		
 	\pagebreak
 	\section{GUI}
 	The GUI is built using the Agui-library with custom backends for OpenGL.
@@ -546,22 +592,26 @@ contents={\parbox{\layerwidth}{\centering}}
 		\begin{lstlisting}
 			void ec::MiniAgui::init();
 		\end{lstlisting}
+		OpenGL and GLFW must be initialized before this function can be called!
+		$\rightarrow$ Use it after creating an \textbf{Application} and atleast one \textbf{window}.
 		
 		\subsection{Backend}
+			EyeCandy3D defines its own OpenGL backend for the Agui library, since Agui only provides backends for Allegro and SFML. The backend provides implementation for rendering shapes, images and fonts as well as for input.
 		
-		\subsection{title}
-		
+		\subsection{Usage}
+			Each \textbf{Camera} has one \textbf{GuiSystem}. You can retrieve this GuiSystem and provide it with your own implementation of a \textbf{agui::Gui}.
+			
 		
 	\pagebreak
 	
 	
 	
 	
-	\pagenumbering{alph}
-	\newpage
-	\appendix
-	\listoffigures
-	\listoftables
+	%\pagenumbering{alph}
+	%\newpage
+	%\appendix
+	%\listoffigures
+	%\listoftables
 	
 	% TODO: glossary
 	

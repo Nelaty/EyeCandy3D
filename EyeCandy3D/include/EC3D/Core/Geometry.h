@@ -18,18 +18,16 @@ namespace ec
 		 */
 		virtual void recalculateNormals();
 
-		/** 
-		 * \brief Get the vertex array object id. 
-		 */
+		/** \brief Get the vertex array object id. */
 		GLuint getVao() const;
-		/** 
-		 * \brief Get the vertex buffer object id. 
-		 */
+		/** \brief Get the vertex buffer object id. */
 		GLuint getVbo() const;
-		/** 
-		 * \brief Get the element buffer object id. 
-		 */
+		/** \brief Get the element buffer object id. */
 		GLuint getEbo() const;
+
+		/** \brief Get the raw geometry data. */
+		const GeometryData& getData() const;
+
 
 	protected:
 		/**

@@ -50,6 +50,11 @@ namespace ec
 		return m_data.getEbo();
 	}
 
+	const ec::GeometryData& Geometry::getData() const
+	{
+		return m_data;
+	}
+
 	void Geometry::beginRender()
 	{
 		m_data.bind();

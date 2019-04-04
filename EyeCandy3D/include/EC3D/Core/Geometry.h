@@ -28,7 +28,6 @@ namespace ec
 		/** \brief Get the raw geometry data. */
 		const GeometryData& getData() const;
 
-
 	protected:
 		/**
 		 * \brief Geometry constructor.

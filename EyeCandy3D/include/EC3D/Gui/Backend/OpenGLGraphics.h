@@ -42,10 +42,12 @@ namespace ec
 					   const agui::Dimension& regionSize,
 					   const float& opacity = 1.0f) override;
 			
+		/** \brief Draw an image at a given position. */
 		void drawImage(const agui::Image* bmp,
 					   const agui::Point& position,
 					   const float& opacity = 1.0f) override;
 			
+		/** \brief Draw a scaled image at a given position. */
 		void drawScaledImage(const agui::Image* bmp,
 							 const agui::Point& position,
 							 const agui::Point& regionStart,
@@ -53,26 +55,40 @@ namespace ec
 							 const agui::Dimension& scale, 
 							 const float& opacity = 1.0f) override;
 			
+		/** \brief Draw a given text at a given position. */
 		void drawText(const agui::Point& position,const char* text,
 					  const agui::Color& color, 
 					  const agui::Font* font,
 		              agui::AlignmentEnum align = agui::ALIGN_LEFT) override;
 			
+		/** \brief Draw the outline of a rectangle. */
 		void drawRectangle(const agui::Rectangle& rect, 
 						   const agui::Color& color) override;
 			
+		/** \brief Draw a filled rectangle. */
 		void drawFilledRectangle(const agui::Rectangle& rect, const agui::Color& color) override;
+		
+		/** \brief Draw a single pixel at a given position. */
 		void drawPixel(const agui::Point& point, const agui::Color& color) override;
+		
+		/** \brief Draw the outline of a circle. */
 		void drawCircle(const agui::Point& center,float radius, const agui::Color& color) override;
+		
+		/** \brief Draw a filled circle. */
 		void drawFilledCircle(const agui::Point& center,float radius,const agui::Color& color) override;
+		
+		/** \brief Draw a line. */
 		void drawLine(const agui::Point& start, const agui::Point& end,	const agui::Color& color) override;
 
+		/** \brief Set the render target. */
 		void setTargetImage(const agui::Image* target) override;
+		/** \brief Clear the render target buffer. */
 		void resetTargetImage() override;
 
 	protected:
 		void setClippingRectangle(const agui::Rectangle& rect) override;
 
+		/** Initialize 2D geometries for rendering gui elements. */
 		void initGeometries();
 
 		Camera* m_camera;

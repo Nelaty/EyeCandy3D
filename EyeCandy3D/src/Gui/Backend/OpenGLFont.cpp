@@ -6,10 +6,10 @@ namespace ec
 {
 	
 	OpenGLFont::OpenGLFont()
-		: font{nullptr},
-		height{0},
-		lineHeight{0},
-		autoFree{false}
+		: m_font{nullptr},
+		m_height{0},
+		m_lineHeight{0},
+		m_autoFree{false}
 	{
 	}
 
@@ -19,7 +19,7 @@ namespace ec
 	                       const float borderWidth,
 	                       const agui::Color borderColor)
 	{
-		font = nullptr;
+		m_font = nullptr;
 		reload(fileName,
 			   height,
 			   fontFlags,
@@ -29,7 +29,7 @@ namespace ec
 
 	OpenGLFont::~OpenGLFont()
 	{
-		if(autoFree)
+		if(m_autoFree)
 		{
 			OpenGLFont::free();
 		}
@@ -43,45 +43,45 @@ namespace ec
 		{
 			free();
 		}
-		this->font = font;
+		m_font = font;
 		if(!font)
 		{
 			throw agui::Exception("OpenGLFont::setFont: Given font was null!\n");
 		}
 
-		this->autoFree = autoFree;
-		this->path = path;
+		m_autoFree = autoFree;
+		m_path = path;
 
 		/// \todo implement
 		// height = ???;
-		lineHeight = height;
+		m_lineHeight = m_height;
 		
 	}
 
 	ec::FontTextureAtlas* OpenGLFont::getFont() const
 	{
-		return this->font;
+		return m_font;
 	}
 
 	int OpenGLFont::getLineHeight() const
 	{
-		return this->lineHeight;
+		return m_lineHeight;
 	}
 
 	int OpenGLFont::getHeight() const
 	{
-		return this->height;
+		return m_height;
 	}
 
 	int OpenGLFont::getTextWidth(const std::string &text) const
 	{
-		/// \todo implement
+
 		return 0;
 	}
 
 	const std::string& OpenGLFont::getPath() const
 	{
-		return this->path;
+		return m_path;
 	}
 
 	void OpenGLFont::reload(const std::string &fileName,
@@ -90,18 +90,19 @@ namespace ec
 							float borderWidth, 
 							agui::Color borderColor)
 	{
-		if(font)
+		if(m_font)
 		{
 			free();
 		}
 
-		/// \todo implement
+
+
 	}
 
 	void OpenGLFont::free()
 	{
-		delete font;
-		font = nullptr;
+		delete m_font;
+		m_font = nullptr;
 	}
 
 }

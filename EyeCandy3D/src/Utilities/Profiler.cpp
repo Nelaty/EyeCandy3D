@@ -15,17 +15,17 @@ namespace ec
 			switch(precision)
 			{
 				case ProfilingPrecision::second:
-					return static_cast<unsigned int>(duration_cast<seconds>(end - start).count());
+					return unsigned int(duration_cast<seconds>(end - start).count());
 				case ProfilingPrecision::millisecond:
-					return static_cast<unsigned int>(duration_cast<milliseconds>(end - start).count());
+					return unsigned int(duration_cast<milliseconds>(end - start).count());
 				case ProfilingPrecision::microsecond:
-					return static_cast<unsigned int>(duration_cast<microseconds>(end - start).count());
+					return unsigned int(duration_cast<microseconds>(end - start).count());
 				case ProfilingPrecision::nanosecond:
-					return static_cast<unsigned int>(duration_cast<nanoseconds>(end - start).count());
+					return unsigned int(duration_cast<nanoseconds>(end - start).count());
 
 				default:
 					printf("ERROR Profiler: precision not defined!\n");
-					return static_cast<unsigned int>(duration_cast<seconds>(end - start).count());
+					return unsigned int(duration_cast<seconds>(end - start).count());
 			}
 		}	
 	}

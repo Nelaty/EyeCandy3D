@@ -62,10 +62,10 @@ namespace ec
 		if(material)
 		{
 			/* Set uniform flat colors */
-			shader->setVec4(conf_shader::g_materialAmbient, material->getColorAmbient());
-			shader->setVec4(conf_shader::g_materialDiffuse, material->getColorDiffuse());
-			shader->setVec4(conf_shader::g_materialSpecular, material->getColorSpecular());
-			shader->setVec4(conf_shader::g_materialEmissive, material->getColorEmission());
+			shader->setVec4(conf_shader::g_materialAmbient, material->getColorAmbient().getColor());
+			shader->setVec4(conf_shader::g_materialDiffuse, material->getColorDiffuse().getColor());
+			shader->setVec4(conf_shader::g_materialSpecular, material->getColorSpecular().getColor());
+			shader->setVec4(conf_shader::g_materialEmissive, material->getColorEmission().getColor());
 			shader->setFloat(conf_shader::g_materialShininess, material->getShininess());
 			shader->setBool(conf_shader::g_materialHasTexture, material->hasTexture());
 

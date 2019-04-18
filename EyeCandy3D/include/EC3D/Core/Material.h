@@ -1,6 +1,7 @@
 #pragma once
 #include "EC3D/Common/Common.h"
 #include "EC3D/Core/Texture.h"
+#include "EC3D/Core/Color.h"
 
 #include <vector>
 
@@ -19,6 +20,11 @@ namespace ec
 	public:
 		explicit Material();
 		virtual ~Material();
+
+		/** Create a new material with a given diffuse color. */
+		static Material createFromColor(const Color& color);
+		/** Create a new material with a given texture. */
+		static Material createFromTexture(const Texture& texture);
 
 		/**
 		 * \brief Add a new texture to this material.
@@ -63,13 +69,13 @@ namespace ec
 		 * \brief Color manipulation function.
 		 */
 		/// @{
-		void setColorAmbient(const glm::vec4& color);
+		void setColorAmbient(const Color& color);
 		void setColorAmbient(float r, float g, float b, float a);
-		void setColorDiffuse(const glm::vec4& color);
+		void setColorDiffuse(const Color& color);
 		void setColorDiffuse(float r, float g, float b, float a);
-		void setColorSpecular(const glm::vec4& color);
+		void setColorSpecular(const Color& color);
 		void setColorSpecular(float r, float g, float b, float a);
-		void setColorEmission(const glm::vec4& color);
+		void setColorEmission(const Color& color);
 		void setColorEmission(float r, float g, float b, float a);
 		/// @}
 
@@ -77,10 +83,10 @@ namespace ec
 		 * \brief Get color function.
 		 */
 		/// @[
-		const glm::vec4& getColorAmbient() const;
-		const glm::vec4& getColorDiffuse() const;
-		const glm::vec4& getColorSpecular() const;
-		const glm::vec4& getColorEmission() const;
+		const Color& getColorAmbient() const;
+		const Color& getColorDiffuse() const;
+		const Color& getColorSpecular() const;
+		const Color& getColorEmission() const;
 		/// @]
 
 		/**
@@ -94,10 +100,10 @@ namespace ec
 
 	private:
 		/* Flat colors */
-		glm::vec4 m_colorAmbient;
-		glm::vec4 m_colorDiffuse;
-		glm::vec4 m_colorSpecular;
-		glm::vec4 m_colorEmission;
+		Color m_colorAmbient;
+		Color m_colorDiffuse;
+		Color m_colorSpecular;
+		Color m_colorEmission;
 
 		/* Additional attributes */
 		float m_shininess;

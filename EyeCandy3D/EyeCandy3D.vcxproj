@@ -27,6 +27,7 @@
     <ClInclude Include="include\EC3D\Common\Common.h" />
     <ClInclude Include="include\EC3D\Common\Config.h" />
     <ClInclude Include="include\EC3D\Core\CircleGeometry.h" />
+    <ClInclude Include="include\EC3D\Core\Color.h" />
     <ClInclude Include="include\EC3D\Core\CylinderGeometry.h" />
     <ClInclude Include="include\EC3D\Core\DirectionalLight.h" />
     <ClInclude Include="include\EC3D\Core\Light.h" />
@@ -125,6 +126,7 @@
     <ClCompile Include="src\Core\Camera.cpp" />
     <ClCompile Include="src\Core\CameraController.cpp" />
     <ClCompile Include="src\Core\CircleGeometry.cpp" />
+    <ClCompile Include="src\Core\Color.cpp" />
     <ClCompile Include="src\Core\CubeGeometry.cpp" />
     <ClCompile Include="src\Core\CylinderGeometry.cpp" />
     <ClCompile Include="src\Core\DeviceRegistry.cpp" />

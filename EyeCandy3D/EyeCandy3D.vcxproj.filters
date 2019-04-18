@@ -113,6 +113,7 @@
     <ClInclude Include="include\EC3D\Utilities\FileSystem.h" />
     <ClInclude Include="include\EC3D\Utilities\SystemTime.h" />
     <ClInclude Include="include\EC3D\Core\TriangleMesh.h" />
+    <ClInclude Include="include\EC3D\Core\Color.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -198,5 +199,6 @@
     <ClCompile Include="src\Utilities\FileSystem.cpp" />
     <ClCompile Include="src\Utilities\SystemTime.cpp" />
     <ClCompile Include="src\Core\TriangleMesh.cpp" />
+    <ClCompile Include="src\Core\Color.cpp" />
   </ItemGroup>
 </Project>

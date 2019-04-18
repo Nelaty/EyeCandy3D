@@ -19,6 +19,20 @@ namespace ec
 	Material::~Material()
 	= default;
 
+	ec::Material Material::createFromColor(const Color& color)
+	{
+		Material material;
+		material.setColorDiffuse(color);
+		return material;
+	}
+
+	ec::Material Material::createFromTexture(const Texture& texture)
+	{
+		Material material;
+		material.addTexture(texture);
+		return material;
+	}
+
 	void Material::addTexture(const Texture& texture)
 	{
 		m_textures.push_back(texture);
@@ -63,74 +77,62 @@ namespace ec
 		return result;
 	}
 
-	void Material::setColorAmbient(const glm::vec4& color)
+	void Material::setColorAmbient(const float r, const float g, const float b, const float a)
+	{
+		m_colorAmbient = Color::createRgbF(r, g, b, a);
+	}
+
+	void Material::setColorAmbient(const Color& color)
 	{
 		m_colorAmbient = color;
 	}
 
-	void Material::setColorAmbient(const float r, const float g, const float b, const float a)
+	void Material::setColorDiffuse(const float r, const float g, const float b, const float a)
 	{
-		m_colorAmbient.r = r;
-		m_colorAmbient.g = g;
-		m_colorAmbient.b = b;
-		m_colorAmbient.a = a;
+		m_colorDiffuse = Color::createRgbF(r, g, b, a);
 	}
 
-	void Material::setColorDiffuse(const glm::vec4& color)
+	void Material::setColorDiffuse(const Color& color)
 	{
 		m_colorDiffuse = color;
 	}
 
-	void Material::setColorDiffuse(const float r, const float g, const float b, const float a)
+	void Material::setColorSpecular(const float r, const float g, const float b, const float a)
 	{
-		m_colorDiffuse.r = r;
-		m_colorDiffuse.g = g;
-		m_colorDiffuse.b = b;
-		m_colorDiffuse.a = a;
+		m_colorSpecular = Color::createRgbF(r, g, b, a);
 	}
 
-	void Material::setColorSpecular(const glm::vec4& color)
+	void Material::setColorSpecular(const Color& color)
 	{
 		m_colorSpecular = color;
 	}
 
-	void Material::setColorSpecular(const float r, const float g, const float b, const float a)
+	void Material::setColorEmission(const float r, const float g, const float b, const float a)
 	{
-		m_colorSpecular.r = r;
-		m_colorSpecular.g = g;
-		m_colorSpecular.b = b;
-		m_colorSpecular.a = a;
+		m_colorEmission = Color::createRgbF(r, g, b, a);
 	}
 
-	void Material::setColorEmission(const glm::vec4& color)
+	void Material::setColorEmission(const Color& color)
 	{
 		m_colorEmission = color;
 	}
 
-	void Material::setColorEmission(const float r, const float g, const float b, const float a)
-	{
-		m_colorEmission.r = r;
-		m_colorEmission.g = g;
-		m_colorEmission.b = b;
-		m_colorEmission.a = a;
-	}
-
-	const glm::vec4& Material::getColorAmbient() const
+	const ec::Color& Material::getColorAmbient() const
 	{
 		return m_colorAmbient;
 	}
 
-	const glm::vec4& Material::getColorDiffuse() const
+	const ec::Color& Material::getColorDiffuse() const
 	{
 		return m_colorDiffuse;
 	}
 
-	const glm::vec4& Material::getColorSpecular() const
+	const ec::Color& Material::getColorSpecular() const
 	{
 		return m_colorSpecular;
 	}
 
-	const glm::vec4& Material::getColorEmission() const
+	const ec::Color& Material::getColorEmission() const
 	{
 		return m_colorEmission;
 	}

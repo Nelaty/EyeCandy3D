@@ -157,7 +157,11 @@ namespace ec
 		}
 
 		std::string line;
-		const auto directory = filepath.substr(0, filepath.find_last_of('/') + 1);
+		auto directory = filepath.substr(0, filepath.find_last_of('/') + 1);
+		if(directory.empty())
+		{
+			directory = filepath.substr(0, filepath.find_last_of('\\') + 1);
+		}
 		while(!in.eof())
 		{
 			std::getline(in, line);

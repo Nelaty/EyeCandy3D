@@ -147,7 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\UnitTestTest.cpp" />
+    <ClCompile Include="src\test\ColorTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

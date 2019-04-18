@@ -55,10 +55,7 @@ namespace ec
 		 * root node.
 		 */
 		Node* getParent() const;
-		/** 
-		 * \brief Set this node's parent node. 
-		 */
-		void setParent(Node* parent);
+		
 
 		/** 
 		 * \brief Add a new child to this node.
@@ -107,6 +104,11 @@ namespace ec
 		std::vector<Drawable*> m_drawables;
 
 	private:
+		/**
+		 * \brief Set this node's parent node.
+		 */
+		void setParent(Node* parent);
+
 		glm::mat4 m_globalMat;
 	};
 }

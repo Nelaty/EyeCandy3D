@@ -16,7 +16,7 @@ namespace ec
 		static Color createRgb(int r, int g, int b, int a = 255);
 		/** \brief Create a rgb color. Parameters are in range[0.0, 1.0]. */
 		static Color createRgbF(float r, float g, float b, float a = 1.0f);
-		/** \brief Create a rgb color from a hex value. */
+		/** \brief Create a rgb color from a 24bit hex value. */
 		static Color createHexRgb(unsigned int hex);
 		/** \brief Create a rgb color from a hex string. 
 		 * It must either have the form FFFFFF or 0xFFFFFF. 
@@ -24,7 +24,7 @@ namespace ec
 		 * if the given hex code is invalid. 
 		 */
 		static Color createHexRgb(const std::string& hex);
-		/** \brief Create a rgba color from a hex value. */
+		/** \brief Create a rgba color from a 32bit hex value. */
 		static Color createHexRgba(unsigned int hex);
 		/** \brief Create a rgba color from a hex string.
 		 * It must either have the form FFFFFFFF or 0xFFFFFFFF.

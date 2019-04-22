@@ -10,57 +10,73 @@ namespace ec
 		init(uniformSize, uniformSize, uniformSize);
 	}
 
-	CubeGeometry::CubeGeometry(const float width, const float height, const float depth)
+	CubeGeometry::CubeGeometry(float sxHalf, float syHalf, float szHalf)
 	{
-		init(width, height, depth);
+		init(sxHalf, syHalf, szHalf);
 	}
 
 	CubeGeometry::~CubeGeometry()
 	= default;
 
-	void CubeGeometry::resize(const float width, const float height, const float depth)
+	void CubeGeometry::resize(float sxHalf, float syHalf, float szHalf)
 	{
-		init(width, height, depth);
+		init(sxHalf, syHalf, szHalf);
+	}
+
+	const glm::vec3& CubeGeometry::getHalfSizes() const
+	{
+		return m_halfSizes;
 	}
 
 	float CubeGeometry::getWidth() const
 	{
-		return m_width;
+		return 2 * m_halfSizes.x;
+	}
+
+	float CubeGeometry::getHalfWidth() const
+	{
+		return m_halfSizes.x;
 	}
 
 	float CubeGeometry::getHeight() const
 	{
-		return m_height;
+		return 2 * m_halfSizes.y;
+	}
+
+	float CubeGeometry::getHalfHeight() const
+	{
+		return m_halfSizes.y;
 	}
 
 	float CubeGeometry::getDepth() const
 	{
-		return m_depth;
+		return 2 * m_halfSizes.z;
 	}
 
-	void CubeGeometry::init(const float width, const float height, const float depth)
+	float CubeGeometry::getHalfDepth() const
 	{
-		m_width = width;
-		m_height = height;
-		m_depth = depth;
+		return m_halfSizes.z;
+	}
 
+	void CubeGeometry::init(float sxHalf, float syHalf, float szHalf)
+	{
 		m_data.resizeBuffers(8, 36);
 
 		auto& vertices = m_data.m_vertices;
 		auto& indices = m_data.m_indices;
 
-		const glm::vec3 halfSizes(0.5f * width, 0.5f * height, 0.5f * depth);
+		m_halfSizes = glm::vec3(sxHalf, syHalf, szHalf);
 
 		// Vertex positions
-		vertices[0].m_position = glm::vec3(-halfSizes.x, -halfSizes.y, halfSizes.z);
-		vertices[1].m_position = glm::vec3(halfSizes.x, -halfSizes.y, halfSizes.z);
-		vertices[2].m_position = glm::vec3(halfSizes.x, halfSizes.y, halfSizes.z);
-		vertices[3].m_position = glm::vec3(-halfSizes.x, halfSizes.y, halfSizes.z);
+		vertices[0].m_position = glm::vec3(-m_halfSizes.x, -m_halfSizes.y, m_halfSizes.z);
+		vertices[1].m_position = glm::vec3(m_halfSizes.x, -m_halfSizes.y, m_halfSizes.z);
+		vertices[2].m_position = glm::vec3(m_halfSizes.x, m_halfSizes.y, m_halfSizes.z);
+		vertices[3].m_position = glm::vec3(-m_halfSizes.x, m_halfSizes.y, m_halfSizes.z);
 
-		vertices[4].m_position = glm::vec3(-halfSizes.x, -halfSizes.y, -halfSizes.z);
-		vertices[5].m_position = glm::vec3(halfSizes.x, -halfSizes.y, -halfSizes.z);
-		vertices[6].m_position = glm::vec3(halfSizes.x, halfSizes.y, -halfSizes.z);
-		vertices[7].m_position = glm::vec3(-halfSizes.x, halfSizes.y, -halfSizes.z);
+		vertices[4].m_position = glm::vec3(-m_halfSizes.x, -m_halfSizes.y, -m_halfSizes.z);
+		vertices[5].m_position = glm::vec3(m_halfSizes.x, -m_halfSizes.y, -m_halfSizes.z);
+		vertices[6].m_position = glm::vec3(m_halfSizes.x, m_halfSizes.y, -m_halfSizes.z);
+		vertices[7].m_position = glm::vec3(-m_halfSizes.x, m_halfSizes.y, -m_halfSizes.z);
 
 		// Vertex texture coordinates
 		vertices[0].m_texCoords = glm::vec2(0.0f, 0.0f);

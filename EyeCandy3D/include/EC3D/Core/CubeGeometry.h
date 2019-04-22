@@ -2,6 +2,7 @@
 #include "EC3D/Core/StaticGeometry.h"
 #include "EC3D/Common/Common.h"
 
+#include <glm/glm.hpp>
 
 namespace ec
 {
@@ -22,7 +23,7 @@ namespace ec
 		 * \param height The height of the cube.
 		 * \param depth The depth of the cube.
 		 */
-		explicit CubeGeometry(float width, float height, float depth);
+		explicit CubeGeometry(float sxHalf, float syHalf, float szHalf);
 		~CubeGeometry();
 
 		/**
@@ -31,20 +32,25 @@ namespace ec
 		 * \param height The height of the cube.
 		 * \param depth The depth of the cube.
 		 */
-		void resize(float width, float height, float depth);
+		void resize(float sxHalf, float syHalf, float szHalf);
 
-		/**
-		 * \brief Get the current width.
-		 */
+		/** \brief Get the cube dimensions as half sizes. */
+		const glm::vec3& getHalfSizes() const;
+
+		/** \brief Get the full width. */
 		float getWidth() const;
-		/**
-		 * \brief Get the current height.
-		 */
+		/** \brief Get the half width. */
+		float getHalfWidth() const;
+
+		/** \brief Get the full height. */
 		float getHeight() const;
-		/**
-		 * \brief Get the current depth.
-		 */
+		/** \brief Get the half height. */
+		float getHalfHeight() const;
+
+		/** \brief Get the full depth. */
 		float getDepth() const;
+		/** \brief Get the half depth. */
+		float getHalfDepth() const;
 
 	private:
 		/**
@@ -53,10 +59,8 @@ namespace ec
 		 * \param height The height of the cube.
 		 * \param depth The depth of the cube.
 		 */
-		void init(float width, float height, float depth);
+		void init(float sxHalf, float syHalf, float szHalf);
 
-		float m_width;
-		float m_height;
-		float m_depth;
+		glm::vec3 m_halfSizes;
 	};
 }

@@ -67,7 +67,7 @@ namespace ec
 								 extractInt(4),
 								 extractInt(6));
 			}
-			else
+			else if(hex.size() == 6)
 			{
 				return createRgb(extractInt(0),
 								 extractInt(2),
@@ -77,8 +77,8 @@ namespace ec
 		catch(const std::exception& e)
 		{
 			std::cerr << "ERROR: Invalid hex color format: " << hex << "\n";
-			return Color();
 		}
+		return Color();
 	}
 
 	Color Color::createHexRgba(unsigned int hex)
@@ -118,7 +118,7 @@ namespace ec
 								 extractInt(6),
 								 extractInt(8));
 			}
-			else
+			else if(hex.size() == 8)
 			{
 				return createRgb(extractInt(0),
 								 extractInt(2),
@@ -129,8 +129,8 @@ namespace ec
 		catch(const std::exception& e)
 		{
 			std::cerr << "ERROR: Invalid hex color format: " << hex << "\n";
-			return Color();
 		}
+		return Color();
 	}
 
 	void Color::setColor(const glm::vec4& color)

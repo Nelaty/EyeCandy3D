@@ -2,7 +2,7 @@
 
 #include "EC3D/Core/Drawable.h"
 #include "EC3D/Core/Shader/Shader.h"
-#include "EC3D/Core/IGeometryAccess.h"
+#include "EC3D/Core/Geometry/IGeometryAccess.h"
 #include "EC3D/Core/Material.h"
 
 #include <string>

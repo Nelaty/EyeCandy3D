@@ -6,10 +6,10 @@
 #include "EC3D/Gui/GuiRenderContext.h"
 #include "EC3D/Gui/GuiPrimitiveRenderer.h"
 
-#include "EC3D/Core/RectangleGeometry.h"
-#include "EC3D/Core/CircleGeometry.h"
-#include "EC3D/Core/LineStripGeometry.h"
-#include "EC3D/Core/LineGeometry.h"
+#include "EC3D/Core/Geometry/RectangleGeometry.h"
+#include "EC3D/Core/Geometry/CircleGeometry.h"
+#include "EC3D/Core/Geometry/LineStripGeometry.h"
+#include "EC3D/Core/Geometry/LineGeometry.h"
 
 #include <corecrt_math_defines.h>
 

@@ -3,10 +3,10 @@
 #include "EC3D/Core/CameraController.h"
 
 #include <string>
+#include <memory>
 
 namespace ec
 {
-	class SceneRenderer;
 	class Camera;
 	class Scene;
 	class Material;
@@ -37,12 +37,8 @@ private:
 	void initDrawables();
 
 	ExampleScene* m_exampleScene;
-	
-	ec::SceneRenderer* m_exampleRenderer;
 
-	ec::Camera* m_camera;
-	ec::Camera* m_camera2;
-	ec::Camera* m_camera3;
+	std::shared_ptr<ec::Camera> m_camera;
 
 	ec::Material* m_woodMat;
 

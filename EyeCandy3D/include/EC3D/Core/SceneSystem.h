@@ -1,6 +1,5 @@
 #pragma once
 #include "EC3D/Common/Common.h"
-#include "EC3D/Core/SceneRenderer.h"
 
 #include <vector>
 #include <memory>

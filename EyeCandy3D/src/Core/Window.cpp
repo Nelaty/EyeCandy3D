@@ -1,6 +1,7 @@
 #include "EC3D/Core/Window.h"
 #include "EC3D/Common/Config.h"
-#include "EC3D/Core/InputEvent.h"
+#include "EC3D/Core/Input/InputEvent.h"
+#include "EC3D/Core/Rendering/ForwardRenderer.h"
 
 #include "EC3D/Utilities/Profiler.h"
 
@@ -13,15 +14,18 @@ namespace ec
 	Window::Window(const unsigned int windowWidth,
 				   const unsigned int windowHeight,
 				   std::string windowTitle)
-		: m_windowWidth{windowWidth},
-		m_windowHeight{windowHeight},
-		m_windowTitle{std::move(windowTitle)},
-		m_sceneSystem{this},
-		m_eventSystem{this},
-		m_clearColor{0.5,0.5,0.5,1.0},
-		m_initSuccessful{false}
+		: m_windowWidth(windowWidth),
+		m_windowHeight(windowHeight),
+		m_windowTitle(windowTitle),
+		m_sceneSystem(this),
+		m_eventSystem(this),
+		m_clearColor(0.5,0.5,0.5,1.0),
+		m_initSuccessful(false),
+		m_frame(this)
 	{
-		m_renderer = std::make_unique<Renderer>(this);
+		auto renderer = std::make_shared<ForwardRenderer>();
+		m_renderSystem.addRenderer(renderer, "forward");
+		m_renderSystem.setActiveRenderer("forward");
 
 		init();
 
@@ -88,9 +92,9 @@ namespace ec
 
 		
 		glEnable(GL_DEPTH_TEST);
-		glEnable(GL_BLEND); // Enable blending for water transparency
+		glEnable(GL_BLEND);
 
-		m_renderer->render();
+		m_renderSystem.render(this);
 
 		glDisable(GL_DEPTH_TEST);
 		glDisable(GL_BLEND);
@@ -254,13 +258,14 @@ namespace ec
 							  window,
 							  count, paths);
 
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
+		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
+		auto& inputObserver = userWindow->getEventSystem();
 		inputObserver.dispatchEvent(inputEvent);
 	}
 
 	void Window::resizeCallback(GLFWwindow* window, const int width, const int height)
 	{
-		auto* userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
+		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
 		userWindow->resizeWindow(window, width, height);
 
 		InputEvent inputEvent(InputType::resize);
@@ -273,13 +278,14 @@ namespace ec
 	}
 
 	void Window::positionCallback(GLFWwindow* window, int positionX, int positionY)
-	{
+	{		
 		InputEvent inputEvent(InputType::window_move);
 		auto& displayEvent = inputEvent.m_event.m_display;
 
 		displayEvent = DisplayEvent(window, positionX, positionY, 0, 0);
 
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
+		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
+		auto& inputObserver = userWindow->getEventSystem();
 		inputObserver.dispatchEvent(inputEvent);
 	}
 
@@ -290,7 +296,8 @@ namespace ec
 
 		displayEvent = DisplayEvent(window, 0, 0, 0, 0);
 
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
+		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
+		auto& inputObserver = userWindow->getEventSystem();
 		if(focused == GLFW_TRUE)
 		{
 			inputEvent.m_type = InputType::gained_focus;
@@ -303,13 +310,14 @@ namespace ec
 	}
 
 	void Window::closeCallback(GLFWwindow* window)
-	{
+	{		
 		InputEvent inputEvent(InputType::closed);
 		auto& displayEvent = inputEvent.m_event.m_display;
 
 		displayEvent = DisplayEvent(window, 0, 0, 0, 0);
 	
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
+		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
+		auto& inputObserver = userWindow->getEventSystem();
 		inputObserver.dispatchEvent(inputEvent);
 	}
 
@@ -329,7 +337,8 @@ namespace ec
 
 		inputEvent.m_type = iconified == GLFW_TRUE ? InputType::minimized : InputType::restored;
 
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
+		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
+		auto& inputObserver = userWindow->getEventSystem();
 		inputObserver.dispatchEvent(inputEvent);
 	}
 
@@ -407,6 +416,16 @@ namespace ec
 		glm::ivec2 size;
 		glfwGetFramebufferSize(m_window, &size.x, &size.y);
 		return size;
+	}
+
+	const ec::Frame& Window::getFrame() const
+	{
+		return m_frame;
+	}
+
+	ec::Frame& Window::getFrame()
+	{
+		return m_frame;
 	}
 
 	void Window::setIcon(const char* iconPath, const char* iconPathSmall) const
@@ -705,7 +724,7 @@ namespace ec
 		m_eventSystem.informAll();
 		m_sceneSystem.tick(timeDelta);
 		m_shaderManager.update(time, timeDelta);
-		m_renderer->tick();
+		//m_rendererOld->tick();
 	}
 
 	void Window::goFullscreen()

@@ -8,7 +8,7 @@
 
 namespace ec
 {
-	class SceneRenderer;
+	class RenderTargets;
 	class IGeometryAccess;
 	class Drawable;
 
@@ -27,7 +27,7 @@ namespace ec
 		/** 
 		 * \brief Adds drawables to the given scene renderer visitor. 
 		 */
-		virtual void render(SceneRenderer& renderer);
+		virtual void render(RenderTargets& targets);
 		
 		/**
 		 * \brief Recursively update global matrices. 

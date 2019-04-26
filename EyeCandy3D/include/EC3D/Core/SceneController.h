@@ -1,5 +1,5 @@
 #pragma once
-#include "EC3D/Core/InputListener.h"
+#include "EC3D/Core/Input/InputListener.h"
 #include "EC3D/Common/Common.h"
 
 #include <functional>

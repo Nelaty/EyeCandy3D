@@ -1,87 +1,116 @@
 #include "EC3D/Core/Frame.h"
+#include "EC3D/Core/IFrameLayout.h"
+#include "EC3D/Core/Input/InputEvent.h"
 #include "EC3D/Core/Camera.h"
+#include "EC3D/Core/Scene.h"
+#include "EC3D/Core/Window.h"
 
 #include <algorithm>
 
 namespace ec
 {
-	Frame::Frame()
-	= default;
+
+	Frame::Frame(Window* window)
+		: m_window(window)
+	{
+	}
 
 	Frame::~Frame()
-	= default;
-
-	void Frame::addCameraBack(Camera* camera)
 	{
-		m_cameras.push_back(camera);
 	}
 
-	void Frame::addCameraFront(Camera* camera)
+	void Frame::inform(const InputEvent& event)
 	{
-		m_cameras.insert(m_cameras.begin(), camera);
-	}
-
-	void Frame::addCamera(Camera* camera, unsigned int priority)
-	{
-		auto insertionPosition = m_cameras.begin();
-		if(priority < m_cameras.size())
+		if(event.m_type == InputType::mouse_button_pressed)
 		{
-			insertionPosition += priority;
+			for(int i = 0; i < m_frameSlots.size(); ++i)
+			{
+				auto& mouseEvent = event.m_event.m_mouse;
+				auto windowSize = m_window->getSize();
+				auto pos = glm::vec2(mouseEvent.m_x / windowSize.x, 
+									 mouseEvent.m_y / windowSize.y);
+				
+				if(m_frameSlots[i].contains(pos))
+				{
+					m_focusedSlot = i;
+				}
+			}
 		}
-		else if(!m_cameras.empty())
+
+		if(m_focusedSlot != -1)
 		{
-			insertionPosition += m_cameras.size() - 1;
+			auto scene = m_frameSlots[m_focusedSlot].getCamera()->getScene();
+			scene->getEventProcessor().receiveEvent(event);
 		}
-		
-		m_cameras.insert(insertionPosition, camera);
 	}
 
-
-	bool Frame::addCameraBefore(Camera* camera, Camera* nextCamera)
+	void Frame::addFrameSlot(const FrameSlot& frameSlot)
 	{
-		const auto foundCamera = std::find(m_cameras.begin(),
-										   m_cameras.end(),
-										   nextCamera);
+		m_frameSlots.emplace_back(frameSlot);
 
-		if(foundCamera == m_cameras.end()) return false;
+		applyLayout();
+	}
 
-		m_cameras.insert(foundCamera, camera);
+	bool Frame::removeFrameSlot(Camera* camera)
+	{
+		auto foundItem = std::find_if(
+			m_frameSlots.begin(),
+			m_frameSlots.end(),
+			[&](const FrameSlot& slot)
+			{
+				return slot.getCamera() == camera;
+			});
+
+		if(foundItem != m_frameSlots.end())
+		{
+			int index = foundItem - m_frameSlots.begin();
+			if(index == m_focusedSlot)
+			{
+				m_focusedSlot = -1;
+			}
+			m_frameSlots.erase(foundItem);
+			return true;
+		}
+
+		return false;
+	}
+
+	bool Frame::removeFrameSlot(int frameSlotIndex)
+	{
+		if(m_frameSlots.empty()
+		   || frameSlotIndex < m_frameSlots.size())
+		{
+			return false;
+		}
+
+		if(frameSlotIndex == m_focusedSlot)
+		{
+			m_focusedSlot = -1;
+		}
+		m_frameSlots.erase(m_frameSlots.begin() + frameSlotIndex);
 		return true;
 	}
 
-	bool Frame::addCameraAfter(Camera* camera, Camera* prevCamera)
+	void Frame::removeLayout()
 	{
-		const auto foundCamera = std::find(m_cameras.begin(),
-										   m_cameras.end(),
-										   prevCamera);
-
-		if(foundCamera == m_cameras.end()) return false;
-
-		m_cameras.insert(foundCamera + 1, camera);
-		return true;
+		m_frameLayout = nullptr;
 	}
 
-	bool Frame::removeCamera(Camera* camera)
+	void Frame::setFrameLayout(const FrameLayout_Ptr& layout)
 	{
-		const auto removedCamera = std::remove(m_cameras.begin(),
-											   m_cameras.end(),
-											   camera);
-
-		return removedCamera != m_cameras.end();
+		m_frameLayout = layout;
 	}
 
-	void Frame::clear()
+	const std::vector<ec::FrameSlot>& Frame::getFrameSlots() const
 	{
-		m_cameras.clear();
+		return m_frameSlots;
 	}
 
-	std::vector<Camera*>& Frame::getCameras()
+	void Frame::applyLayout()
 	{
-		return m_cameras;
-	}
-
-	const std::vector<Camera*>& Frame::getCameras() const
-	{
-		return m_cameras;
+		if(m_frameLayout)
+		{
+			m_frameLayout->applyLayout(m_frameSlots);
+		}
 	}
 }

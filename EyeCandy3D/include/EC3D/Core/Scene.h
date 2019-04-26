@@ -1,6 +1,6 @@
 #pragma once
 #include "EC3D/Common/Common.h"
-#include "EC3D/Core/SceneRenderer.h"
+#include "EC3D/Core/Input/EventProcessor.h"
 
 #include <string>
 #include <memory>
@@ -9,7 +9,6 @@
 
 namespace ec
 {
-	class SceneController;
 	class SceneSystem;
 	class Node;
 	
@@ -21,50 +20,35 @@ namespace ec
 	class EC3D_DECLSPEC Scene
 	{
 	public:
-		/**
-		 * \brief Scene constructor.
-		 * \param name The name of the scene.
-		 */
+		/** \brief Scene constructor.
+		 * \param name The name of the scene. */
 		explicit Scene(std::string name);
 		virtual ~Scene();
 
-		/**
-		 * \brief Update routine.
-		 */
+		/** \brief Update routine. */
 		virtual void tick(float timeDelta);
 
-		/**
-		 * \brief Get the name of the scene.
-		 */
+		/** \brief Get the name of the scene. */
 		const std::string& getName() const;
 
-		/**
-		 * \brief Get the root node
-		 */
+		/** \brief Get the root node. */
 		Node* getRoot() const;
 
-		/**
-		 * \brief Set the scene system, in which the scene is 
-		 * contained.
-		 */
+		/** \brief Set the scene system, in which the scene is 
+		 * contained. */
 		void setSceneSystem(SceneSystem* sceneSystem);
-		/**
-		 * \brief Get the scene system, in which the scene is
-		 * contained.
-		 */
+		/** \brief Get the scene system, in which the scene is
+		 * contained. */
 		SceneSystem* getSceneSystem() const;
 
-		/** 
-		 * \brief Enable this scene.
-		 */
+		/** \brief Get the event processor. */
+		EventProcessor& getEventProcessor();
+
+		/** \brief Enable this scene. */
 		void enable();
-		/** 
-		 * \brief Disable this scene.
-		 */
+		/** \brief Disable this scene. */
 		void disable();
-		/** 
-		 * \brief Check if this scene is enabled.
-		 */
+		/** \brief Check if this scene is enabled. */
 		bool isEnabled() const;
 
 	protected:
@@ -73,8 +57,8 @@ namespace ec
 		std::string m_name;
 
 		std::unique_ptr<Node> m_root{};
+		EventProcessor m_eventProcessor;
 
 		SceneSystem* m_sceneSystem{};
-		SceneRenderer m_sceneRenderer;
 	};
 }

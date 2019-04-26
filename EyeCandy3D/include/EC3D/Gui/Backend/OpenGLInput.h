@@ -1,9 +1,9 @@
 #pragma once
 #include "Agui/Input.hpp"
-#include "EC3D/Core/InputListener.h"
+#include "EC3D/Core/Input/InputListener.h"
 #include "EC3D/Common/Common.h"
 
-#include "EC3D/Core/InputEvent.h"
+#include "EC3D/Core/Input/InputEvent.h"
 
 #include <vector>
 

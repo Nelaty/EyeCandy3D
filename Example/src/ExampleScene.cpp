@@ -4,16 +4,16 @@
 #include "EC3D/Core/Scene.h"
 #include "EC3D/Core/Node.h"
 #include "EC3D/Core/Drawable.h"
-#include "EC3D/Core/CubeGeometry.h"
-#include "EC3D/Core/SphereGeometry.h"
-#include "EC3D/Core/CylinderGeometry.h"
-#include "EC3D/Core/RectangleGeometry.h"
+#include "EC3D/Core/Geometry/CubeGeometry.h"
+#include "EC3D/Core/Geometry/SphereGeometry.h"
+#include "EC3D/Core/Geometry/CylinderGeometry.h"
+#include "EC3D/Core/Geometry/RectangleGeometry.h"
 
 #include "EC3D/Core/Material.h"
 #include "EC3D/Core/Shader/Shader.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
 #include "EC3D/Utilities/Random.h"
-#include "EC3D/Core/CircleGeometry.h"
+#include "EC3D/Core/Geometry/CircleGeometry.h"
 
 using namespace ec;
 

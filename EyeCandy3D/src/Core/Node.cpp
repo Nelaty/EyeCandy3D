@@ -1,6 +1,6 @@
 #include "EC3D/Core/Node.h"
-#include "EC3D/Core/SceneRenderer.h"
-#include "EC3D/Core/IGeometryAccess.h"
+#include "EC3D/Core/Rendering/RenderTarget.h"
+#include "EC3D/Core/Geometry/IGeometryAccess.h"
 
 #include <algorithm>
 
@@ -19,15 +19,15 @@ namespace ec
 	Node::~Node()
 		= default;
 
-	void Node::render(SceneRenderer& renderer)
+	void Node::render(RenderTargets& targets)
 	{
 		if(!m_drawables.empty())
 		{
-			renderer.addRenderingTarget(this);
+			targets.addTarget(this);
 		}
 		for(auto& it : m_children)
 		{
-			it->render(renderer);
+			it->render(targets);
 		}
 	}
 

@@ -1,84 +1,59 @@
 #pragma once
-#include "EC3D/Common/Common.h"
+#include "FrameSlot.h"
 
+#include <memory>
 #include <vector>
 
 namespace ec
 {
-	class Camera;
+	struct InputEvent;
 
-	/**
-	 * \brief A Frame is a collection of cameras. The order in, which these
-	 * cameras are stored, determines the order in which will be 
-	 * rendered.
+	class IFrameLayout;
+	class Window;
+
+	/** \brief Defines which cameras are used for rendering
+	 * and which area they occupy on a window.
 	 */
-	class EC3D_DECLSPEC Frame
+	class Frame
 	{
 	public:
-		explicit Frame();
+		using FrameLayout_Ptr = std::shared_ptr<IFrameLayout>;
+		
+		explicit Frame(Window* window);
 		~Frame();
 
-		/** 
-		 * \brief Add a given camera at the end (low priority camera).
-		 * \param camera The camera to add.
-		 */
-		void addCameraBack(Camera* camera);
-		/** 
-		 * \brief Add a given camera at the front (high priority camera).
-		 * \param camera The camera to add.
-		 */
-		void addCameraFront(Camera* camera);
-		/** 
-		 * \brief Add a given camera with a given priority. If there already.
-		 * is a camera with the same priority registered, put the given. 
-		 * camera before that camera.
-		 * \param camera The camera to add.
-		 * \param priority The priority of the camera.
-		 */
-		void addCamera(Camera* camera, unsigned int priority);
-		/**
-		 * \brief Add a given camera right before another given camera. 
-		 * \details Camera doesn't get added if the given camera wasn't
-		 * found.
-		 * \param camera The camera to be added.
-		 * \param nextCamera The camera before which the newly added
-		 * camera should follow.
-		 * \return True if nextCamera was found, false otherwise.
-		 * */
-		bool addCameraBefore(Camera* camera, Camera* nextCamera);
-		/**
-		* \brief Add a given camera right after another given camera.
-		* \details Camera doesn't get added if the given camera wasn't
-		* found.
-		* \param camera The camera to be added.
-		* \param prevCamera The camera after which the newly added.
-		* camera should follow.
-		* \return True if prevCamera was found, false otherwise.
-		*/
-		bool addCameraAfter(Camera* camera, Camera* prevCamera);
+		/** \brief Inform the focused frame slot about new events. */
+		void inform(const InputEvent& event);
 
-		/**
-		 * \brief Remove a given camera from the frame.
-		 * \param camera The camera to be removed.
-		 * \return True if the given camera is registered, false otherwise.
-		 */
-		bool removeCamera(Camera* camera);
+		/** \brief Register a given frame slot. */
+		void addFrameSlot(const FrameSlot& frameSlot);
+		/** \brief Remove the first frame slot with a given
+		 * camera.
+		 * \return True if the frame slot exists, false otherwise. */
+		bool removeFrameSlot(Camera* camera);
+		/** \brief Remove the frame slot at a given index.
+		 * \return True if the frame slot exists, false otherwise. */
+		bool removeFrameSlot(int frameSlotIndex);
 
-		/** 
-		 * \brief Remove all registered cameras. 
-		 */
-		void clear();
+		/** \brief Set the frame layout, which automatically 
+		 * formats position and size of new frame slots. */
+		void setFrameLayout(const FrameLayout_Ptr& layout);
+		/** \brief Stop using layouts. */
+		void removeLayout();
 
-		/** 
-		 * \brief Get all registered cameras.
-		 */
-		std::vector<Camera*>& getCameras();
-		/** 
-		 * \brief Get all registered cameras.
-		 */
-		const std::vector<Camera*>& getCameras() const;
+		/** \brief Get all currently registered frame slots. */
+		const std::vector<FrameSlot>& getFrameSlots() const;
 
 	private:
-		std::vector<Camera*> m_cameras;
+		/** \brief Reorganize all registered frame slots by using the
+		 * current layout. */
+		void applyLayout();
+
+		int m_focusedSlot{-1};
+
+		Window* m_window;
+
+		FrameLayout_Ptr m_frameLayout;
+		std::vector<FrameSlot> m_frameSlots;
 	};
 }

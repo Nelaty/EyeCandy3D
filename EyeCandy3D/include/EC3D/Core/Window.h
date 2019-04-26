@@ -2,21 +2,22 @@
 #include <GL/glew.h>
 #include "EC3D/Common/Common.h"
 
-#include "EC3D/Core/ResourceRegistry.h"
-#include "EC3D/Core/DeviceRegistry.h"
-#include "EC3D/Core/Renderer.h"
-#include "EC3D/Core/SceneSystem.h"
-#include "EC3D/Core/InputObservable.h"
-#include "EC3D/Core/EventSystem.h"
+#include "EC3D/Core/Input/DeviceRegistry.h"
+#include "EC3D/Core/Input/InputObservable.h"
+#include "EC3D/Core/Input/EventSystem.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
+
+#include "EC3D/Core/Geometry/Geometry.h"
+#include "EC3D/Core/Rendering/RenderSystem.h"
 
 #include "EC3D/Utilities/Timer.h"
 
-#include "EC3D/Core/Geometry.h"
 #include "EC3D/Core/Material.h"
 #include "EC3D/Core/Texture.h"
 #include "EC3D/Core/Drawable.h"
-
+#include "EC3D/Core/ResourceRegistry.h"
+#include "EC3D/Core/SceneSystem.h"
+#include "EC3D/Core/Frame.h"
 
 #include <glm/glm.hpp>
 #include <GLFW/glfw3.h>
@@ -112,6 +113,11 @@ namespace ec
 		glm::ivec4 getFrameSize() const;
 		/** Get the current size of this window's frame buffer. */
 		glm::ivec2 getFrameBufferSize() const;
+
+		/** \brief Get the frame, which defines the window layout. */
+		const Frame& getFrame() const;
+		/** \brief Get the frame, which defines the window layout. */
+		Frame& getFrame();
 
 		/**
 		 * \brief Set the icon for this window. 
@@ -232,7 +238,9 @@ namespace ec
 		EventSystem m_eventSystem;
 		ShaderManager m_shaderManager;
 
-		std::unique_ptr<Renderer> m_renderer;
+		Frame m_frame;
+
+		RenderSystem m_renderSystem;
 
 		double m_frameRate;
 		double m_frameInterval;

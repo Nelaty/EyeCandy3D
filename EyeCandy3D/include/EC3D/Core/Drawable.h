@@ -42,45 +42,27 @@ namespace ec
 		 */
 		virtual void render(const glm::mat4& model);
 
-		/** 
-		 * \brief Set the current geometry. 
-		 */
+		/** \brief Set the current geometry. */
 		void setGeometry(IGeometryAccess* geometry);
-		/**
-		 * \brief Get the current geometry. 
-		 */
+		/** \brief Get the current geometry. */
 		IGeometryAccess* getGeometry() const;
 
-		/** 
-		 * \brief Set the current material. 
-		 */
+		/** \brief Set the current material. */
 		void setMaterial(Material* material);
-		/**
-		 * \brief Get the current material. 
-		 */
+		/** \brief Get the current material. */
 		Material* getMaterial() const;
 
-		/**
-		 * \brief Set the current shader. 
-		 */
+		/** \brief Set the current shader. */
 		void setShader(Shader* shader);
-		/** 
-		 * \brief Get the current shader. 
-		 */
+		/** \brief Get the current shader. */
 		Shader* getShader() const;
 
 	protected:
-		/** 
-		 * \brief Prepare drawable for rendering. 
-		 */
+		/** \brief Prepare drawable for rendering. */
 		virtual void beginRender(const glm::mat4& model);
-		/** 
-		 * \brief Render the drawable. 
-		 */
+		/** \brief Render the drawable. */
 		virtual void render();
-		/** 
-		 * \brief Finalize the rendering. 
-		 */
+		/** \brief Finalize the rendering. */
 		virtual void endRender();
 
 		/**

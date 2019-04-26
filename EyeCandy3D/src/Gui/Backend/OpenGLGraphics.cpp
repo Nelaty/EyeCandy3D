@@ -4,7 +4,7 @@
 
 #include "EC3D/Core/Camera.h"
 #include "EC3D/Core/Viewport.h"
-#include "EC3D/Core/LineGeometryFactory.h"
+#include "EC3D/Core/Geometry/LineGeometryFactory.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>

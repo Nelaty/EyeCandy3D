@@ -5,19 +5,19 @@
 #include "EC3D/Core/Scene.h"
 #include "EC3D/Core/Node.h"
 #include "EC3D/Core/Drawable.h"
-#include "EC3D/Core/CubeGeometry.h"
+#include "EC3D/Core/Geometry/CubeGeometry.h"
 #include "EC3D/Core/Material.h"
 #include "EC3D/Core/Camera.h"
-#include "EC3D/Core/Frame.h"
-#include "EC3D/Core/DynamicLineGeometry.h"
+#include "EC3D/Core/Geometry/DynamicLineGeometry.h"
 
-#include "EC3D/Core/SceneRenderer.h"
+#include "EC3D/Core/FrameLayoutUniform.h"
 #include "EC3D/Core/Shader/Shader.h"
 
 #include "EC3D/Gui/Backend/OpenGLGraphics.h"
 #include "EC3D/Gui/Backend/OpenGLInput.h"
 
 #include <memory>
+#include <array>
 
 using namespace ec;
 
@@ -48,33 +48,32 @@ void ExampleWindow::tick(float timeDelta)
 
 void ExampleWindow::initCameras()
 {
-	// Create first camera
-	m_camera = new ec::Camera(m_exampleScene);
+	m_camera = std::make_shared<ec::Camera>(m_exampleScene);
 	m_camera->setFov(glm::radians(60.0f));
 	m_camera->setTranslation(glm::vec3(0.0f, 0.0f, 10.0f));
 
-	m_cameraController.setCamera(m_camera);
+	m_cameraController.setCamera(m_camera.get());
 	m_eventSystem.registerInputListener(&m_cameraController);
 
-	// Create a second camera
-	m_camera2 = new ec::Camera(m_exampleScene);
-	m_camera2->setFov(glm::radians(60.0f));
-	m_camera2->setTranslation(glm::vec3(0.0f, 0.0f, 30.0f));
 	
-	//m_cameraController2.SetCamera(m_camera2);
-	//m_inputObservable.RegisterInputListener(&m_cameraController2);
+	auto frameLayout = std::make_shared<FrameLayoutUniform>();
+	m_frame.setFrameLayout(frameLayout);
 
-	// Create a third camera
-	m_camera3 = new ec::Camera(m_exampleScene);
-	m_camera3->setFov(glm::radians(60.0f));
-	m_camera3->rotateY(glm::radians(-180.0f));
-	m_camera3->setTranslation(glm::vec3(0.0f, 0.0f, -30.0f));
+	FrameSlot slotMain;
+	slotMain.setCamera(m_camera);
+	m_frame.addFrameSlot(slotMain);
 
-	// Init camera viewports
-	//m_camera->setViewport(Viewport(glm::vec2(0.0, 0.0), glm::vec2(1.0f, 1.0f)));
-	m_camera->setViewport(Viewport(glm::vec2(0.0, 0.0), glm::vec2(0.75f, 1.0f)));
-	m_camera2->setViewport(Viewport(glm::vec2(0.75, 0.5), glm::vec2(0.25f, 0.5f)));
-	m_camera3->setViewport(Viewport(glm::vec2(0.75, 0.0), glm::vec2(0.25f, 0.5f)));
+	std::array<std::shared_ptr<ec::Camera>, 3> testCams;
+	for(auto& it : testCams)
+	{
+		it = std::make_shared<ec::Camera>(m_exampleScene);
+		it->setFov(glm::radians(60.0f));
+		it->setTranslation(glm::vec3(0.0f, 0.0f, 10.0f));
+
+		FrameSlot slot;
+		slot.setCamera(it);
+		m_frame.addFrameSlot(slot);
+	}
 
 	// Init gui
 	const auto& guiSystem = m_camera->getGuiSystem();
@@ -84,23 +83,6 @@ void ExampleWindow::initCameras()
 	gui->setInput(guiSystem.getInputHandler());
 	gui->init();
 	m_camera->getGuiSystem().setModel(std::move(gui));
-	
-
-	// Init frame, which is a collection of the previously created cameras
-	Frame exampleFrame;
-	exampleFrame.addCameraBack(m_camera);
-	exampleFrame.addCameraBack(m_camera2);
-	exampleFrame.addCameraBack(m_camera3);
-
-	// Create a renderer, which uses the frame from the last step
-	m_exampleRenderer = new SceneRenderer();
-	m_exampleRenderer->setFrame(exampleFrame);
-
-	// Register the scene renderer with the main renderer
-	m_renderer->registerSceneRenderer("example", m_exampleRenderer);
-	// Tell the main renderer to use the example scene renderer, 
-	// which was registered in the last step.
-	m_renderer->changeRenderer("example");
 }
 
 void ExampleWindow::initScenes()
@@ -118,14 +100,6 @@ void ExampleWindow::initScenes()
 
 	auto* cameraDrawable = new Drawable(cubeMesh, m_woodMat, shader);
 	//m_camera->AddDrawable(cameraDrawable);
-
-	auto* root = m_exampleScene->getRoot();
-	root->addChild(m_camera);
-
-	auto* blockNode = new Node();
-	blockNode->addDrawable(cameraDrawable);
-	blockNode->translateZ(-6);
-	m_camera->addChild(blockNode);
 }
 
 void ExampleWindow::initShaders()
@@ -144,8 +118,8 @@ void ExampleWindow::initShaders()
 							  path + "text.vert",
 							  path + "text.frag");
 
-	m_renderer->init(m_shaderManager.getShader("gui"),
-					 m_shaderManager.getShader("text"));
+	/*m_rendererOld->init(m_shaderManager.getShader("gui"),
+					 m_shaderManager.getShader("text"));*/
 }
 
 void ExampleWindow::dynamicGeoTest()

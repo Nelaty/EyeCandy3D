@@ -39,6 +39,11 @@ namespace ec
 		return m_sceneSystem;
 	}
 
+	ec::EventProcessor& Scene::getEventProcessor()
+	{
+		return m_eventProcessor;
+	}
+
 	void Scene::enable()
 	{
 		m_enabled = true;

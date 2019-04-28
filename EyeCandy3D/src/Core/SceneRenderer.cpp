@@ -110,8 +110,9 @@ namespace ec
 	void SceneRenderer::updateViewport(RenderContext& context, Camera* camera) const
 	{
 		const auto windowSize = context.m_window->getResolution();
-		const auto ratio = static_cast<float>(windowSize.x) / 
-			static_cast<float>(windowSize.y);
+		if(windowSize.x <= 0 || windowSize.y <= 0) return;
+		
+		const auto ratio = float(windowSize.x) / float(windowSize.y);
 
 		auto viewportCamera = camera->getViewport();
 		camera->changeAspectRatio(ratio);

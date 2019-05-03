@@ -63,7 +63,7 @@ namespace ec
 				auto scene = camera->getScene();
 				if(scene)
 				{
-					if(updatedScenes.find(scene) != updatedScenes.end())
+					if(updatedScenes.find(scene) == updatedScenes.end())
 					{
 						scene->getRoot()->updateGlobalMatrices(m_globalTransform);
 						updatedScenes.insert(scene);

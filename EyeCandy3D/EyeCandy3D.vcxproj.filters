@@ -121,6 +121,7 @@
     <ClInclude Include="include\EC3D\Core\FrameLayoutUniform.h" />
     <ClInclude Include="include\EC3D\Core\Rendering\RenderTarget.h" />
     <ClInclude Include="include\EC3D\Core\Input\EventProcessor.h" />
+    <ClInclude Include="include\EC3D\Core\Rendering\OpenGlProperty.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />

@@ -24,18 +24,14 @@ namespace ec
 		explicit Node(Node* parent = nullptr);
 		virtual ~Node();
 
-		/** 
-		 * \brief Adds drawables to the given scene renderer visitor. 
-		 */
+		/** \brief Adds drawables to the given render target list. */
 		virtual void render(RenderTargets& targets);
 		
-		/**
-		 * \brief Recursively update global matrices. 
-		 */
-		virtual void updateGlobalMatrices(const glm::mat4& parentMat);
+		/** \brief Recursively update global matrices. */
+		virtual void updateGlobalMatrices(const glm::mat4& parentMat,
+										  bool dirty = false);
 
-		/**
-		 * \brief Get the current global matrix. 
+		/** \brief Get the current global matrix. 
 		 * \details This node needs to be rendered at least once for
 		 * the matrix to be something else than the unit matrix. 
 		 */
@@ -55,50 +51,33 @@ namespace ec
 		 * root node.
 		 */
 		Node* getParent() const;
-		/** 
-		 * \brief Set this node's parent node. 
-		 */
+		/** \brief Set this node's parent node. */
 		void setParent(Node* parent);
 
-		/** 
-		 * \brief Add a new child to this node.
+		/** \brief Add a new child to this node.
 		 * \details Important: Do not create cycles!
 		 */
 		void addChild(Node* child);
-		/** 
-		 * \brief Remove an existing child from this node.
+		/** \brief Remove an existing child from this node.
 		 * \return True if the child node was found, false otherwise.
 		 */
 		bool removeChild(Node* child);
-		/** 
-		 * \brief Remove all child nodes from this node. 
-		 */
+		/** \brief Remove all child nodes from this node. */
 		void removeChildren();
-		/** 
-		 * \brief Get the number of child nodes.
-		 */
+		/** \brief Get the number of child nodes. */
 		unsigned int getChildrenCount() const;
-		/**
-		 * \brief Check if this node has one or more child nodes. 
+		/** \brief Check if this node has one or more child nodes. 
 		 * \return True if there are child nodes, false otherwise.
 		 */
 		bool hasChildren() const;
 
-		/** 
-		 * \brief Get all drawables preiously added to this node.
-		 */
+		/** \brief Get all drawables previously added to this node. */
 		virtual const std::vector<Drawable*>& getDrawables() const;
-		/**
-		 * \brief Add a given drawable to this node. 
-		 */
+		/** \brief Add a given drawable to this node. */
 		void addDrawable(Drawable* drawable);
-		/**
-		 * \brief Remove a given drawable from this node.
-		 */
+		/** \brief Remove a given drawable from this node. */
 		bool removeDrawable(Drawable* drawable);
-		/**
-		 * \brief Remove all drawables from this node.
-		 */
+		/** \brief Remove all drawables from this node. */
 		void removeDrawables();
 
 	protected:

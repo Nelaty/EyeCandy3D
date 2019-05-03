@@ -42,9 +42,10 @@ namespace ec
 		__super::updateLocalMat();
 	}
 
-	void Camera::updateGlobalMatrices(const glm::mat4& parentMat)
+	void Camera::updateGlobalMatrices(const glm::mat4& parentMat,
+									  bool dirty)
 	{
-		__super::updateGlobalMatrices(parentMat);
+		__super::updateGlobalMatrices(parentMat, dirty);
 
 		m_view = glm::lookAt(m_position,
 							 m_position + m_forwardVector,

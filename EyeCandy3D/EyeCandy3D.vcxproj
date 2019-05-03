@@ -45,6 +45,7 @@
     <ClInclude Include="include\EC3D\Core\Lighting\PointLight.h" />
     <ClInclude Include="include\EC3D\Core\Rendering\ForwardRenderer.h" />
     <ClInclude Include="include\EC3D\Core\Rendering\IRenderer.h" />
+    <ClInclude Include="include\EC3D\Core\Rendering\OpenGlProperty.h" />
     <ClInclude Include="include\EC3D\Core\Rendering\RenderSystem.h" />
     <ClInclude Include="include\EC3D\Core\Rendering\RenderingContext.h" />
     <ClInclude Include="include\EC3D\Core\Rendering\RenderTarget.h" />

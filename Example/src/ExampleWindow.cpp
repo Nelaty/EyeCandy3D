@@ -63,18 +63,6 @@ void ExampleWindow::initCameras()
 	slotMain.setCamera(m_camera);
 	m_frame.addFrameSlot(slotMain);
 
-	std::array<std::shared_ptr<ec::Camera>, 3> testCams;
-	for(auto& it : testCams)
-	{
-		it = std::make_shared<ec::Camera>(m_exampleScene);
-		it->setFov(glm::radians(60.0f));
-		it->setTranslation(glm::vec3(0.0f, 0.0f, 10.0f));
-
-		FrameSlot slot;
-		slot.setCamera(it);
-		m_frame.addFrameSlot(slot);
-	}
-
 	// Init gui
 	const auto& guiSystem = m_camera->getGuiSystem();
 

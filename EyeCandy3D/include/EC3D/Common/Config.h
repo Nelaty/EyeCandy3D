@@ -4,6 +4,7 @@
 
 #include <glm/glm.hpp>
 
+/// \TODO: Create Ini file for configuration + Resources paths
 namespace conf
 {
 	// OpenGL

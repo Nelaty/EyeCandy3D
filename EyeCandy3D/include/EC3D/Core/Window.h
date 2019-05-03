@@ -76,6 +76,11 @@ namespace ec
 		void goWindowed() const;
 		/** Switch to fullscreen mode. */
 		void goFullscreen();		
+		/** \brief Switch to fullscreen if currently in windowed mode
+		 * and switch to windowed mode otherwise. */
+		void toggleFullscreen();
+		/** \brief Check if the window is in fullscreen mode. */
+		bool isFullscreen() const;
 
 		/** Set the current clear color. */
 		void setClearColor(const glm::vec4& clearColor);

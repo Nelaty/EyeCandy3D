@@ -82,8 +82,8 @@ namespace ec
 		makeContextCurrent();
 
 		// Update shaders
-		const auto timeDelta = static_cast<float>(m_timer.getTimeDelta());
-		const auto time = static_cast<float>(m_timer.getTime());
+		const auto timeDelta = float(m_timer.getTimeDelta());
+		const auto time = float(m_timer.getTime());
 		m_shaderManager.update(time, timeDelta);
 
 		// Render everything in this window
@@ -741,6 +741,23 @@ namespace ec
 		const auto width = mode->width;
 		const auto height = mode->height;
 		glfwSetWindowMonitor(m_window, monitor, 0, 0, width, height, GLFW_DONT_CARE);
+	}
+
+	void Window::toggleFullscreen()
+	{
+		if(isFullscreen())
+		{
+			goWindowed();
+		}
+		else
+		{
+			goFullscreen();
+		}
+	}
+
+	bool Window::isFullscreen() const
+	{
+		return glfwGetWindowMonitor(m_window) != nullptr;
 	}
 
 	void Window::closeWindow() const

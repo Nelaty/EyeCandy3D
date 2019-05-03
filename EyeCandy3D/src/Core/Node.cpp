@@ -31,13 +31,20 @@ namespace ec
 		}
 	}
 
-	void Node::updateGlobalMatrices(const glm::mat4& parentMat)
+	void Node::updateGlobalMatrices(const glm::mat4& parentMat,
+									bool dirty)
 	{
-		updateLocalMat();
-		m_globalMat = parentMat * getLocalMat();
+		dirty |= isDirty();
+		if(dirty)
+		{
+			updateLocalMat();
+			m_globalMat = parentMat * getLocalMat();
+			clearDirty();
+		}
+
 		for(auto& it : m_children)
 		{
-			it->updateGlobalMatrices(m_globalMat);
+			it->updateGlobalMatrices(m_globalMat, dirty);
 		}
 	}
 

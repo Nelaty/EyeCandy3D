@@ -147,7 +147,16 @@ namespace ec
 		glm::vec3 m_forwardVector;
 		glm::vec3 m_scale;
 
+		/** \brief Check if the transformation was updated. */
+		bool isDirty() const;
+		/** \brief Set the dirty flag. */
+		void setDirty();
+		/** \brief Clear the dirty flag. */
+		void clearDirty();
+
 	private:
+		bool m_dirty = {true};
+
 		glm::mat4 m_localMat;
 	};
 }

@@ -1,0 +1,39 @@
+add_library(Agui STATIC
+	ActionEvent.cpp
+	ActionListener.cpp
+	BaseTypes.cpp
+	BlinkingEvent.cpp
+	BorderLayout.cpp
+	Color.cpp
+	CursorProvider.cpp
+	Dimension.cpp
+	EmptyWidget.cpp
+	EventArgs.cpp
+	FlowLayout.cpp
+	FocusListener.cpp
+	FocusManager.cpp
+	Font.cpp
+	Graphics.cpp
+	GridLayout.cpp
+	Gui.cpp
+	Image.cpp
+	Input.cpp
+	KeyboardListener.cpp
+	Layout.cpp
+	MouseListener.cpp
+	Point.cpp
+	Rectangle.cpp
+	ResizableBorderLayout.cpp
+	ResizableText.cpp
+	SelectionListener.cpp
+	TableLayout.cpp
+	TapListener.cpp
+	TopContainer.cpp
+	Transform.cpp
+	Widget.cpp
+	WidgetListener.cpp
+)
+
+add_subdirectory(Clipboard)
+add_subdirectory(Widgets)
+

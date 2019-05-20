@@ -1,0 +1,5 @@
+target_sources(${PROJECT_NAME}
+	PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Shader.cpp
+	PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/ShaderManager.cpp
+	PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/ShaderTimed.cpp
+)

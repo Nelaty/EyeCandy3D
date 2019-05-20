@@ -231,7 +231,6 @@ namespace ec
 			}
 			++end;
 		}
-		end;
 
 		std::string filepath = str.substr(start, end - start);
 		return filepath;

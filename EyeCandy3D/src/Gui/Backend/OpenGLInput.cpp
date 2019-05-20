@@ -1,4 +1,4 @@
-#include "EC3D/GUI/Backend/OpenGLInput.h"
+#include "EC3D/Gui/Backend/OpenGLInput.h"
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -109,6 +109,10 @@ namespace ec
 				{
 					type = agui::MouseEvent::MOUSE_MOVE;
 				}
+				break;
+			}
+			default:
+			{
 				break;
 			}
 		}

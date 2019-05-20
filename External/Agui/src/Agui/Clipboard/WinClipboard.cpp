@@ -39,7 +39,11 @@
  */
 
 #include "Agui/Clipboard/WinClipboard.hpp"
-#include <windows.h>
+
+#if defined(_WIN32)
+	#include <windows.h>
+#endif
+
 namespace agui
 {
 	WinClipboard::WinClipboard(void)
@@ -75,20 +79,20 @@ namespace agui
 			return; 
 		} 
 
-		// Lock the handle and copy the text to the buffer. 
-		lptstrCopy = (LPWSTR)GlobalLock(hglbCopy); 
-		memcpy(lptstrCopy, text.c_str(), 
-			(text.length() + 1) * sizeof(WCHAR) ); 
-		GlobalUnlock(hglbCopy); 
+		// Lock the handle and copy the text to the buffer.
+		lptstrCopy = (LPWSTR)GlobalLock(hglbCopy);
+		memcpy(lptstrCopy, text.c_str(),
+			(text.length() + 1) * sizeof(WCHAR) );
+		GlobalUnlock(hglbCopy);
 
-		// Place the handle on the clipboard. 
+		// Place the handle on the clipboard.
 
-		SetClipboardData(CF_UNICODETEXT, hglbCopy); 
+		SetClipboardData(CF_UNICODETEXT, hglbCopy);
 
 
-		// Close the clipboard. 
+		// Close the clipboard.
 
-		CloseClipboard(); 
+		CloseClipboard();
 	}
 
 	std::string WinClipboard::paste()

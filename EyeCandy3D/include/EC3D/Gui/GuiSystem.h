@@ -2,6 +2,7 @@
 #include "EC3D/Common/Common.h"
 
 #include <memory>
+#include "Backend/OpenGLInput.h"
 
 namespace agui
 {

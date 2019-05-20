@@ -17,7 +17,7 @@ namespace ec
 		 * \param halfAngles Determines the size of the light cone.
 		 * In radians.
 		 */
-		explicit SpotLight(const glm::vec2& halfAngles = glm::vec2(glm::radians(45)));
+		explicit SpotLight(const glm::vec2& halfAngles = glm::vec2(glm::radians(45.f)));
 		~SpotLight();
 
 		/** 

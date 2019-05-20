@@ -2,7 +2,6 @@
 
 #include <cmath>
 #include <cassert>
-#include <corecrt_math_defines.h>
 
 namespace ec
 {

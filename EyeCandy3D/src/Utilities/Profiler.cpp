@@ -15,17 +15,17 @@ namespace ec
 			switch(precision)
 			{
 				case ProfilingPrecision::second:
-					return unsigned int(duration_cast<seconds>(end - start).count());
+					return static_cast<unsigned int>(duration_cast<seconds>(end - start).count());
 				case ProfilingPrecision::millisecond:
-					return unsigned int(duration_cast<milliseconds>(end - start).count());
+					return static_cast<unsigned int>(duration_cast<milliseconds>(end - start).count());
 				case ProfilingPrecision::microsecond:
-					return unsigned int(duration_cast<microseconds>(end - start).count());
+					return static_cast<unsigned int>(duration_cast<microseconds>(end - start).count());
 				case ProfilingPrecision::nanosecond:
-					return unsigned int(duration_cast<nanoseconds>(end - start).count());
+					return static_cast<unsigned int>(duration_cast<nanoseconds>(end - start).count());
 
 				default:
 					printf("ERROR Profiler: precision not defined!\n");
-					return unsigned int(duration_cast<seconds>(end - start).count());
+					return static_cast<unsigned int>(duration_cast<seconds>(end - start).count());
 			}
 		}	
 	}
@@ -90,9 +90,9 @@ namespace ec
 
 		for(unsigned int i = 0; i < loops; ++i)
 		{
-			const auto start = std::chrono::high_resolution_clock::now();
+			const auto start = std::chrono::steady_clock::now();
 			f();
-			const auto end = std::chrono::high_resolution_clock::now();
+			const auto end = std::chrono::steady_clock::now();
 			auto timeTaken = evaluateProfilingPrecision(start, end, precision);
 
 			tempAvg += timeTaken;

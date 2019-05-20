@@ -72,9 +72,9 @@ namespace ec
 
 		std::string m_name;
 
-		std::unique_ptr<Node> m_root{};
+		std::unique_ptr<Node> m_root;
 
-		SceneSystem* m_sceneSystem{};
+		SceneSystem* m_sceneSystem;
 		SceneRenderer m_sceneRenderer;
 	};
 }

@@ -1,6 +1,7 @@
 #include "EC3D/Core/SphereGeometry.h"
 
-#include <corecrt_math_defines.h>
+#include <stdio.h>
+
 
 namespace ec
 {

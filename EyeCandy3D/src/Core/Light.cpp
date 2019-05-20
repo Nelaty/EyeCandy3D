@@ -5,9 +5,9 @@ namespace ec
 	Light::Light(const LightType type,
 				 const float intensity, 
 				 const glm::vec3& color)
-		: m_type(type),
-		m_color{color},
-		m_intensity{intensity}
+		: m_color{color},
+		m_intensity{intensity},
+		m_type(type)
 	{
 	}
 

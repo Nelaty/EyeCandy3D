@@ -11,7 +11,7 @@
 #include "EC3D/Core/LineStripGeometry.h"
 #include "EC3D/Core/LineGeometry.h"
 
-#include <corecrt_math_defines.h>
+//#include <corect_math_defines.h>
 
 #include   <memory>
 

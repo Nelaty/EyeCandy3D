@@ -125,7 +125,7 @@ namespace ec
 		auto major = 0;
 		auto minor = 0;
 
-		sscanf_s(reinterpret_cast<const char*>(glGetString(GL_VERSION)), "%d.%d",
+		sscanf(reinterpret_cast<const char*>(glGetString(GL_VERSION)), "%d.%d",
 		         &major, &minor);
 
 		printf("LIBRARY VERSIONS\n\n");

@@ -53,5 +53,22 @@ add_library(${PROJECT_NAME} STATIC
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/EyeCandy3D/include)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/External/include)
 
+target_link_libraries(${PROJECT_NAME}
+	glfw3
+	GLEW
+	GLU
+	GL
+	X11
+	Xrandr
+	Xinerama
+	Xi
+	Xxf86vm
+	Xcursor
+	pthread
+	dl
+	freetype
+)
+
+
 add_subdirectory(Shader)
 

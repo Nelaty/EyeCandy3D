@@ -22,11 +22,16 @@ endif()
 include_directories(/usr/include/freetype2)
 
 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 
 
 add_subdirectory(EyeCandy3D/src)
 add_subdirectory(External)
 
+add_subdirectory(Example)
 
 
 set(CONFIGURED_ONCE TRUE CACHE INTERNAL "A flag showing that CMake has configured at least once.")

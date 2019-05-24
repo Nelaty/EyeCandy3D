@@ -21,11 +21,11 @@ void main(void)
 	fragColor = vec4(1.0, 1.0, 1.0, 1.0);
 
 	// Hard coded directional light		
-	//vec3 dirLightDirection = normalize(vec3(1.0, -2.0, 0.0));
-	//vec3 n = normalize(normal);
+	vec3 dirLightDirection = normalize(vec3(1.0, -2.0, 0.0));
+	vec3 n = normalize(normal);
 	
-	//float intensity = max(dot(n, dirLightDirection), 0.0);
-	float intensity = 1.0;
+	float intensity = max(dot(n, dirLightDirection), 0.3);
+	//float intensity = 1.0;
 	
 	if(material_has_texture)
 	{
@@ -35,7 +35,7 @@ void main(void)
 	{
 		fragColor = material_ambient;
 		fragColor = fragColor + (1.0 - fragColor.a) * material_diffuse;
-		return;
+		//return;
 	}
 	
 	//fragColor.a = 1.0f;

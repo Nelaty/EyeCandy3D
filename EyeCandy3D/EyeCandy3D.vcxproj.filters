@@ -122,6 +122,19 @@
     <ClInclude Include="include\EC3D\Core\Rendering\RenderTarget.h" />
     <ClInclude Include="include\EC3D\Core\Input\EventProcessor.h" />
     <ClInclude Include="include\EC3D\Core\Rendering\OpenGlProperty.h" />
+    <ClInclude Include="include\EC3D\Plugin\Plugin.h" />
+    <ClInclude Include="include\EC3D\Plugin\ImGuiPlugin.h" />
+    <ClInclude Include="include\imgui\imconfig.h" />
+    <ClInclude Include="include\imgui\imgui.h" />
+    <ClInclude Include="include\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="include\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="include\imgui\imgui_internal.h" />
+    <ClInclude Include="include\imgui\imstb_rectpack.h" />
+    <ClInclude Include="include\imgui\imstb_textedit.h" />
+    <ClInclude Include="include\imgui\imstb_truetype.h" />
+    <ClInclude Include="include\EC3D\Core\WindowCallbacks.h" />
+    <ClInclude Include="include\EC3D\Core\WindowMode.h" />
+    <ClInclude Include="include\EC3D\Core\VideoMode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -214,5 +227,16 @@
     <ClCompile Include="src\Core\FrameLayoutUniform.cpp" />
     <ClCompile Include="src\Core\Rendering\RenderTargets.cpp" />
     <ClCompile Include="src\Core\Input\EventProcessor.cpp" />
+    <ClCompile Include="src\Plugin\Plugin.cpp" />
+    <ClCompile Include="src\Plugin\ImGuiPlugin.cpp" />
+    <ClCompile Include="src\imgui\imgui.cpp" />
+    <ClCompile Include="src\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\Core\WindowCallbacks.cpp" />
+    <ClCompile Include="src\Core\VideoMode.cpp" />
+    <ClCompile Include="src\Core\WindowMode.cpp" />
   </ItemGroup>
 </Project>

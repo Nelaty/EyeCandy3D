@@ -35,15 +35,10 @@ namespace ec
 	{
 		for (auto& it : m_windows)
 		{
-			it.second->tickMeta();
-		}
-	}
-
-	void Application::render()
-	{
-		for (auto& it : m_windows)
-		{
-			it.second->render();
+			it.second->onBeginMain();
+			it.second->tickMain();
+			it.second->renderMain();
+			it.second->onEndMain();
 		}
 	}
 
@@ -105,7 +100,6 @@ namespace ec
 	void Application::mainLoopImpl()
 	{
 		tick();
-		render();
 
 		// Poll & process events
 		glfwPollEvents();

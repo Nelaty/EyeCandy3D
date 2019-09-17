@@ -20,7 +20,7 @@ namespace ec
 	class EC3D_DECLSPEC Application
 	{
 	public:
-		using Window_Ptr = std::unique_ptr<Window>;
+		using Window_Ptr = std::shared_ptr<Window>;
 
 		/** \brief Application constructor. */
 		explicit Application();
@@ -35,15 +35,6 @@ namespace ec
 		 * \brief Stop the application. 
 		 */
 		virtual void kill();
-
-		/** 
-		 * \brief Update all windows. 
-		 */
-		virtual void tick();
-		/** 
-		 * \brief Render all windows.
-		 */
-		virtual void render();
 
 		/** 
 		 * \brief Init function implementation. 
@@ -114,6 +105,10 @@ namespace ec
 	private:
 		/** Initialize this application. */
 		void init();
+
+		/** \brief Update all windows. */
+		virtual void tick();
+
 		/** Cleanup remaining resources. */
 		static void cleanup();
 
@@ -134,8 +129,6 @@ namespace ec
 							  const std::string& name,
 							  WindowCreationHints hints)
 	{
-		using WindowClass_Ptr = std::unique_ptr<WindowClass>;
-
 		if (m_windows.find(name) != m_windows.end())
 		{
 			printf("ERROR: Couldn't create window!\n");
@@ -144,14 +137,14 @@ namespace ec
 		}
 
 		hints.setHints();
-		WindowClass_Ptr window = std::make_unique<WindowClass>(width, height, title);
-		m_windows[name] = std::move(window);
+		auto window = std::make_shared<WindowClass>(width, height, title);
+		m_windows[name] = window;
 
 		if(m_windows.size() == 1)
 		{
 			init();
 		}
 
-		return static_cast<WindowClass*>(m_windows[name].get());
+		return static_cast<WindowClass*>(window.get());
 	}
 }

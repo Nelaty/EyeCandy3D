@@ -52,7 +52,10 @@
     <ClInclude Include="include\EC3D\Core\Shader\ShaderTimed.h" />
     <ClInclude Include="include\EC3D\Core\Lighting\SpotLight.h" />
     <ClInclude Include="include\EC3D\Core\Geometry\TriangleMesh.h" />
+    <ClInclude Include="include\EC3D\Core\VideoMode.h" />
+    <ClInclude Include="include\EC3D\Core\WindowCallbacks.h" />
     <ClInclude Include="include\EC3D\Core\WindowCreationHints.h" />
+    <ClInclude Include="include\EC3D\Core\WindowMode.h" />
     <ClInclude Include="include\EC3D\GUI\GuiPrimitiveRenderer.h" />
     <ClInclude Include="include\EC3D\GUI\GuiRenderContext.h" />
     <ClInclude Include="include\EC3D\GUI\GuiRenderer.h" />
@@ -120,6 +123,8 @@
     <ClInclude Include="include\EC3D\Gui\Backend\OpenGLInput.h" />
     <ClInclude Include="include\EC3D\Gui\GuiSystem.h" />
     <ClInclude Include="include\EC3D\Core\Input\Mouse.h" />
+    <ClInclude Include="include\EC3D\Plugin\ImGuiPlugin.h" />
+    <ClInclude Include="include\EC3D\Plugin\Plugin.h" />
     <ClInclude Include="include\EC3D\Utilities\FileSystem.h" />
     <ClInclude Include="include\EC3D\Utilities\Logger.h" />
     <ClInclude Include="include\EC3D\Utilities\Profiler.h" />
@@ -128,6 +133,14 @@
     <ClInclude Include="include\EC3D\Utilities\Timer.h" />
     <ClInclude Include="include\EC3D\Utilities\UtilitiesMath.h" />
     <ClInclude Include="include\EC3D\Core\Geometry\StaticGeometry.h" />
+    <ClInclude Include="include\imgui\imconfig.h" />
+    <ClInclude Include="include\imgui\imgui.h" />
+    <ClInclude Include="include\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="include\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="include\imgui\imgui_internal.h" />
+    <ClInclude Include="include\imgui\imstb_rectpack.h" />
+    <ClInclude Include="include\imgui\imstb_textedit.h" />
+    <ClInclude Include="include\imgui\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp" />
@@ -164,6 +177,9 @@
     <ClCompile Include="src\Core\Rendering\IRenderer.cpp" />
     <ClCompile Include="src\Core\Rendering\RenderSystem.cpp" />
     <ClCompile Include="src\Core\Rendering\RenderTargets.cpp" />
+    <ClCompile Include="src\Core\VideoMode.cpp" />
+    <ClCompile Include="src\Core\WindowCallbacks.cpp" />
+    <ClCompile Include="src\Core\WindowMode.cpp" />
     <ClCompile Include="src\GUI\GuiPrimitiveRenderer.cpp" />
     <ClCompile Include="src\GUI\GuiRenderer.cpp" />
     <ClCompile Include="src\Core\Geometry\IGeometryAccess.cpp" />
@@ -214,6 +230,14 @@
     <ClCompile Include="src\Gui\Backend\OpenGLImageLoader.cpp" />
     <ClCompile Include="src\Gui\Backend\OpenGLInput.cpp" />
     <ClCompile Include="src\Gui\GuiSystem.cpp" />
+    <ClCompile Include="src\imgui\imgui.cpp" />
+    <ClCompile Include="src\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\Plugin\ImGuiPlugin.cpp" />
+    <ClCompile Include="src\Plugin\Plugin.cpp" />
     <ClCompile Include="src\Utilities\FileSystem.cpp" />
     <ClCompile Include="src\Utilities\Logger.cpp" />
     <ClCompile Include="src\Utilities\Profiler.cpp" />
@@ -368,10 +392,10 @@
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\glm.0.9.9\build\native\glm.targets" Condition="Exists('..\packages\glm.0.9.9\build\native\glm.targets')" />
     <Import Project="..\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets" Condition="Exists('..\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets')" />
-    <Import Project="..\packages\glfw.3.2.1.5\build\native\glfw.targets" Condition="Exists('..\packages\glfw.3.2.1.5\build\native\glfw.targets')" />
     <Import Project="..\packages\glew.v140.1.12.0\build\native\glew.v140.targets" Condition="Exists('..\packages\glew.v140.1.12.0\build\native\glew.v140.targets')" />
     <Import Project="..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets" Condition="Exists('..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets')" />
     <Import Project="..\packages\freetype.2.8.0.1\build\native\freetype.targets" Condition="Exists('..\packages\freetype.2.8.0.1\build\native\freetype.targets')" />
+    <Import Project="..\packages\glfw.3.3.0.1\build\native\glfw.targets" Condition="Exists('..\packages\glfw.3.3.0.1\build\native\glfw.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -379,9 +403,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\glm.0.9.9\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glm.0.9.9\build\native\glm.targets'))" />
     <Error Condition="!Exists('..\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glew.redist.1.9.0.1\build\native\glew.redist.targets'))" />
-    <Error Condition="!Exists('..\packages\glfw.3.2.1.5\build\native\glfw.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glfw.3.2.1.5\build\native\glfw.targets'))" />
     <Error Condition="!Exists('..\packages\glew.v140.1.12.0\build\native\glew.v140.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glew.v140.1.12.0\build\native\glew.v140.targets'))" />
     <Error Condition="!Exists('..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets'))" />
     <Error Condition="!Exists('..\packages\freetype.2.8.0.1\build\native\freetype.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\freetype.2.8.0.1\build\native\freetype.targets'))" />
+    <Error Condition="!Exists('..\packages\glfw.3.3.0.1\build\native\glfw.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glfw.3.3.0.1\build\native\glfw.targets'))" />
   </Target>
 </Project>

@@ -9,6 +9,7 @@
 
 #include <utility>
 
+
 namespace ec
 {
 	Window::Window(const unsigned int windowWidth,
@@ -21,7 +22,8 @@ namespace ec
 		m_eventSystem(this),
 		m_clearColor(0.5,0.5,0.5,1.0),
 		m_initSuccessful(false),
-		m_frame(this)
+		m_frame(this),
+		m_videoMode(this)
 	{
 		auto renderer = std::make_shared<ForwardRenderer>();
 		m_renderSystem.addRenderer(renderer, "forward");
@@ -36,7 +38,8 @@ namespace ec
 	}
 
 	Window::~Window()
-	= default;
+	{
+	}
 
 	void Window::init()
 	{
@@ -67,30 +70,38 @@ namespace ec
 		glfwMakeContextCurrent(m_window);
 	}
 
-	void Window::tickMeta()
+	void Window::onBeginMain()
 	{
-		const auto timeDelta = static_cast<float>(m_timer.getTimeDelta());
+		
 
-		windowTick(timeDelta);
-		tick(timeDelta);
-
-		m_timer.resetTimeDelta();
+		onBegin();
 	}
 
-	void Window::render()
+	void Window::tickMain()
+	{
+		const auto timeDelta = static_cast<float>(m_timer.getTimeDelta());
+		const auto time = static_cast<float>(m_timer.getTime());
+
+		m_eventSystem.informAll();
+		m_sceneSystem.tick(timeDelta);
+		m_shaderManager.update(time, timeDelta);
+
+		tick(timeDelta);
+	}
+
+	void Window::renderMain()
 	{
 		makeContextCurrent();
-
-		// Update shaders
-		const auto timeDelta = float(m_timer.getTimeDelta());
-		const auto time = float(m_timer.getTime());
-		m_shaderManager.update(time, timeDelta);
 
 		// Render everything in this window
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glClearColor(m_clearColor.r, m_clearColor.g, m_clearColor.b, m_clearColor.a);
 
-		
+		// Update shaders
+		const auto timeDelta = float(m_timer.getTimeDelta());
+		const auto time = float(m_timer.getTime());
+		m_shaderManager.update(time, timeDelta);	
+
 		glEnable(GL_DEPTH_TEST);
 		glEnable(GL_BLEND);
 
@@ -99,19 +110,22 @@ namespace ec
 		glDisable(GL_DEPTH_TEST);
 		glDisable(GL_BLEND);
 
+		render(timeDelta);
+
 		// Swap front and back buffers
 		glfwSwapBuffers(m_window);
+	}
+
+	void Window::onEndMain()
+	{
+		onEnd();
+		m_timer.resetTimeDelta();
 	}
 
 	void Window::setFrameRate(const double fps)
 	{
 		m_frameRate = fps;
 		m_frameInterval = 1.0 / fps;
-	}
-
-	void Window::errorCallback(const int error, const char* description)
-	{
-		printf("ERROR: (%d) %s\n", error, description);
 	}
 
 	void Window::resizeWindow(GLFWwindow* window, const int width, const int height)
@@ -156,12 +170,87 @@ namespace ec
 		glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
 	}
 
+	void Window::setWindowMode(WindowMode::Mode mode)
+	{
+		switch(mode)
+		{
+			case WindowMode::Mode::windowed:
+			{
+				glfwSetWindowMonitor(m_window, nullptr,
+									 m_windowPositionLast.x, m_windowPositionLast.y,
+									 m_windowedResolutionLast.x, m_windowedResolutionLast.y,
+									 GLFW_DONT_CARE);
+				break;
+			}
+			case WindowMode::Mode::fullscreen:
+			{
+				auto* monitor = glfwGetPrimaryMonitor();
+				if(!monitor)
+				{
+					return;
+				}
+				m_windowedResolutionLast = getResolution();
+				m_windowPositionLast = getPosition();
+
+				const auto mode = glfwGetVideoMode(monitor);
+				const auto width = mode->width;
+				const auto height = mode->height;
+				glfwSetWindowMonitor(m_window, monitor, 0, 0, width, height, GLFW_DONT_CARE);
+				break;
+			}
+			case WindowMode::Mode::borderless_windowed:
+			{
+				break;
+			}
+
+			default: break;
+		}
+	}
+
+	ec::WindowMode::Mode Window::getWindowMode() const
+	{
+		return WindowMode::getCurrentMode(m_window);
+	}
+
 	void Window::goWindowed() const
 	{
 		glfwSetWindowMonitor(m_window, nullptr,
 							 m_windowPositionLast.x, m_windowPositionLast.y,
 							 m_windowedResolutionLast.x, m_windowedResolutionLast.y,
 							 GLFW_DONT_CARE);
+	}
+
+	void Window::goFullscreen()
+	{
+		auto* monitor = glfwGetPrimaryMonitor();
+		if(!monitor)
+		{
+			return;
+		}
+		m_windowedResolutionLast = getResolution();
+		m_windowPositionLast = getPosition();
+
+		const auto mode = glfwGetVideoMode(monitor);
+		const auto width = mode->width;
+		const auto height = mode->height;
+		glfwSetWindowMonitor(m_window, monitor, 0, 0, width, height, GLFW_DONT_CARE);
+	}
+
+	void Window::toggleFullscreen()
+	{
+		if(isFullscreen())
+		{
+			goWindowed();
+		}
+		else
+		{
+			goFullscreen();
+		}
+	}
+
+	bool Window::isFullscreen() const
+	{
+		return glfwGetWindowMonitor(m_window) != nullptr;
 	}
 
 	bool Window::initImpl()
@@ -207,139 +296,26 @@ namespace ec
 			return m_initSuccessful;
 		}
 
-		initCallbacks();
+		m_callbacks.initCallbacks(this);
 		initOpenGl();
 
 		return m_initSuccessful;
 	}
 
-	void Window::mainLoopImpl()
+	void Window::onBegin()
 	{
-		const auto timeDelta = static_cast<float>(m_timer.getTimeDelta());
-
-		windowTick(timeDelta);
-		tick(timeDelta);
-		m_timer.resetTimeDelta();
-		render();
-
-		/* Poll for and process events */
-		m_eventSystem.pollEvents();
 	}
 
-	void Window::initCallbacks()
+	void Window::render(float timeDelta)
 	{
-		printf("Initializing Callbacks...\n");
-		glfwSetWindowUserPointer(m_window, this);
-
-		// Error callback
-		glfwSetErrorCallback(Window::errorCallback);
-
-		// Install all other devices (keyboard, mouse etc.)
-		m_eventSystem.getDeviceRegistry().installAll();
-
-		// Joystick
-		/// \todo Create joystick device and add entry in DeviceRegistry
-	
-		// Window callbacks
-		glfwSetDropCallback(m_window, Window::dropCallback);
-		glfwSetFramebufferSizeCallback(m_window, Window::resizeCallback);
-		glfwSetWindowFocusCallback(m_window, Window::focusCallback);
-		glfwSetWindowCloseCallback(m_window, Window::closeCallback);
-		glfwSetWindowRefreshCallback(m_window, Window::refreshCallback);
-		glfwSetWindowIconifyCallback(m_window, Window::iconifyCallback);
 	}
 
-	void Window::dropCallback(GLFWwindow* window, const int count, const char** paths)
+	void Window::tick(const float timeDelta)
 	{
-		InputEvent inputEvent(InputType::drop);
-		auto& dropEvent = inputEvent.m_event.m_drop;
-
-		dropEvent = DropEvent(0, 0,
-							  window,
-							  count, paths);
-
-		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
-		auto& inputObserver = userWindow->getEventSystem();
-		inputObserver.dispatchEvent(inputEvent);
 	}
 
-	void Window::resizeCallback(GLFWwindow* window, const int width, const int height)
+	void Window::onEnd()
 	{
-		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
-		userWindow->resizeWindow(window, width, height);
-
-		InputEvent inputEvent(InputType::resize);
-		auto& displayEvent = inputEvent.m_event.m_display;
-
-		displayEvent = DisplayEvent(window, 0, 0, width, height);
-
-		auto& inputObserver = userWindow->getEventSystem();
-		inputObserver.dispatchEvent(inputEvent);
-	}
-
-	void Window::positionCallback(GLFWwindow* window, int positionX, int positionY)
-	{		
-		InputEvent inputEvent(InputType::window_move);
-		auto& displayEvent = inputEvent.m_event.m_display;
-
-		displayEvent = DisplayEvent(window, positionX, positionY, 0, 0);
-
-		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
-		auto& inputObserver = userWindow->getEventSystem();
-		inputObserver.dispatchEvent(inputEvent);
-	}
-
-	void Window::focusCallback(GLFWwindow* window, const int focused)
-	{
-		InputEvent inputEvent;
-		auto& displayEvent = inputEvent.m_event.m_display;
-
-		displayEvent = DisplayEvent(window, 0, 0, 0, 0);
-
-		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
-		auto& inputObserver = userWindow->getEventSystem();
-		if(focused == GLFW_TRUE)
-		{
-			inputEvent.m_type = InputType::gained_focus;
-		}
-		else if(focused == GLFW_FALSE)
-		{
-			inputEvent.m_type = InputType::lost_focus;
-		}
-		inputObserver.dispatchEvent(inputEvent);
-	}
-
-	void Window::closeCallback(GLFWwindow* window)
-	{		
-		InputEvent inputEvent(InputType::closed);
-		auto& displayEvent = inputEvent.m_event.m_display;
-
-		displayEvent = DisplayEvent(window, 0, 0, 0, 0);
-	
-		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
-		auto& inputObserver = userWindow->getEventSystem();
-		inputObserver.dispatchEvent(inputEvent);
-	}
-
-	void Window::refreshCallback(GLFWwindow* window)
-	{
-		auto* userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
-
-		/// \todo: render from here.
-	}
-
-	void Window::iconifyCallback(GLFWwindow* window, const int iconified)
-	{
-		InputEvent inputEvent;
-		auto& displayEvent = inputEvent.m_event.m_display;
-
-		displayEvent = DisplayEvent(window, 0, 0, 0, 0);
-
-		inputEvent.m_type = iconified == GLFW_TRUE ? InputType::minimized : InputType::restored;
-
-		auto userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
-		auto& inputObserver = userWindow->getEventSystem();
-		inputObserver.dispatchEvent(inputEvent);
 	}
 
 	void Window::initOpenGl()
@@ -353,6 +329,26 @@ namespace ec
 
 	void Window::initAgui()
 	{
+	}
+
+	void Window::setWindowModeFullscreen()
+	{
+
+	}
+
+	void Window::setWindowModeWindowed()
+	{
+
+	}
+
+	void Window::setWindowModeBorderlessWindowed()
+	{
+
+	}
+
+	void Window::setWindowModeBorderlessFullscreen()
+	{
+
 	}
 
 	glm::ivec2 Window::getResolution() const
@@ -492,6 +488,11 @@ namespace ec
 		return glfwGetWindowAttrib(m_window, GLFW_DECORATED);
 	}
 
+	void Window::setDecorated(bool on)
+	{
+		glfwSetWindowAttrib(m_window, GLFW_DECORATED, on);
+	}
+
 	bool Window::isFloating() const
 	{
 		return glfwGetWindowAttrib(m_window, GLFW_FLOATING);
@@ -522,92 +523,14 @@ namespace ec
 		return glfwGetWindowAttrib(m_window, GLFW_VISIBLE);
 	}
 
-	int Window::getContextApi() const
+	ec::VideoMode& Window::getVideoMode()
 	{
-		return glfwGetWindowAttrib(m_window, GLFW_CLIENT_API);
+		return m_videoMode;
 	}
 
-	int Window::getContextCreationApi() const
+	const ec::VideoMode& Window::getVideoMode() const
 	{
-		return glfwGetWindowAttrib(m_window, GLFW_CONTEXT_CREATION_API);
-	}
-
-	std::array<int, 3> Window::getContextVersion() const
-	{
-		std::array<int, 3> version{};
-		version[0] = glfwGetWindowAttrib(m_window, GLFW_VERSION_MAJOR);
-		version[1] = glfwGetWindowAttrib(m_window, GLFW_VERSION_MINOR);
-		version[2] = glfwGetWindowAttrib(m_window, GLFW_VERSION_REVISION);
-		return version;
-	}
-
-	bool Window::isOpenGlForwardCompatible() const
-	{
-		return glfwGetWindowAttrib(m_window, GLFW_OPENGL_FORWARD_COMPAT);
-	}
-
-	bool Window::isOpenGlDebugContext() const
-	{
-		return glfwGetWindowAttrib(m_window, GLFW_OPENGL_DEBUG_CONTEXT);
-	}
-
-	int Window::getOpenGlProfile() const
-	{
-		return glfwGetWindowAttrib(m_window, GLFW_OPENGL_CORE_PROFILE);
-	}
-
-	int Window::getContextRobustnessStrategies() const
-	{
-		return glfwGetWindowAttrib(m_window, GLFW_CONTEXT_ROBUSTNESS);
-	}
-
-	int Window::getRedBits()
-	{
-		int value;
-		glGetIntegerv(GL_RED_BITS, &value);
-		return value;
-	}
-
-	int Window::getGreenBits()
-	{
-		int value;
-		glGetIntegerv(GL_GREEN_BITS, &value);
-		return value;
-	}
-
-	int Window::getBlueBits()
-	{
-		int value;
-		glGetIntegerv(GL_BLUE_BITS, &value);
-		return value;
-	}
-
-	int Window::getAlphaBits()
-	{
-		int value;
-		glGetIntegerv(GL_ALPHA_BITS, &value);
-		return value;
-	}
-
-	int Window::getDepthBits()
-	{
-		int value;
-		glGetIntegerv(GL_DEPTH_BITS, &value);
-		return value;
-	}
-
-	int Window::getStencilBits()
-	{
-		int value;
-		glGetIntegerv(GL_STENCIL_BITS, &value);
-		return value;
-	}
-
-	int Window::getMsaaSamples()
-	{
-		int value;
-		glGetIntegerv(GL_SAMPLES, &value);
-		return value;
+		return m_videoMode;
 	}
 
 	void Window::swapBuffers() const
@@ -640,12 +563,12 @@ namespace ec
 		return glfwGetMonitors(count);
 	}
 
-	const GLFWvidmode* Window::getVideoMode(GLFWmonitor* monitor)
+	const GLFWvidmode* Window::getGlfwVideoMode(GLFWmonitor* monitor)
 	{
 		return glfwGetVideoMode(monitor);
 	}
 
-	const GLFWvidmode* Window::getVideoModes(GLFWmonitor* monitor, int* count)
+	const GLFWvidmode* Window::getGlfwVideoModes(GLFWmonitor* monitor, int* count)
 	{
 		return glfwGetVideoModes(monitor, count);
 	}
@@ -711,53 +634,6 @@ namespace ec
 	void Window::destroy() const
 	{
 		glfwDestroyWindow(m_window);
-	}
-
-	void Window::tick(const float timeDelta)
-	{
-	}
-
-	void ec::Window::windowTick(const float timeDelta)
-	{
-		const auto time = static_cast<float>(m_timer.getTime());
-
-		m_eventSystem.informAll();
-		m_sceneSystem.tick(timeDelta);
-		m_shaderManager.update(time, timeDelta);
-		//m_rendererOld->tick();
-	}
-
-	void Window::goFullscreen()
-	{
-		auto* monitor = glfwGetPrimaryMonitor();
-		if(!monitor)
-		{
-			return;
-		}
-		m_windowedResolutionLast = getResolution();
-		m_windowPositionLast = getPosition();
-
-		const auto mode = glfwGetVideoMode(monitor);
-		const auto width = mode->width;
-		const auto height = mode->height;
-		glfwSetWindowMonitor(m_window, monitor, 0, 0, width, height, GLFW_DONT_CARE);
-	}
-
-	void Window::toggleFullscreen()
-	{
-		if(isFullscreen())
-		{
-			goWindowed();
-		}
-		else
-		{
-			goFullscreen();
-		}
-	}
-
-	bool Window::isFullscreen() const
-	{
-		return glfwGetWindowMonitor(m_window) != nullptr;
 	}
 
 	void Window::closeWindow() const

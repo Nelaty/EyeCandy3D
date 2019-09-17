@@ -12,6 +12,10 @@
 
 #include "EC3D/Utilities/Timer.h"
 
+#include "EC3D/Core/WindowCallbacks.h"
+#include "EC3D/Core/WindowMode.h"
+#include "EC3D/Core/VideoMode.h"
+
 #include "EC3D/Core/Material.h"
 #include "EC3D/Core/Texture.h"
 #include "EC3D/Core/Drawable.h"
@@ -29,6 +33,8 @@
 
 namespace ec
 {
+	class Plugin;	
+
 	/**
 	* \brief A window is responsible for one os specific window, which
 	* can receive input events.
@@ -36,6 +42,8 @@ namespace ec
 	class EC3D_DECLSPEC Window
 	{
 	public:
+		using Plugin_Ptr = std::shared_ptr<Plugin>;
+		
 		/**
 		 * \brief Window constructor
 		 * \param windowWidth Width of this window in pixels.
@@ -47,16 +55,14 @@ namespace ec
 		                std::string windowTitle);
 		virtual ~Window();
 
-		/** Update the window */
-		void tickMeta();
-		virtual void tick(float timeDelta);
-		/** Render to the window */
-		virtual void render();
+
+		void onBeginMain();
+		void tickMain();
+		void renderMain();
+		void onEndMain();
 
 		virtual void setFrameRate(double fps);
 
-		/** Error callback */
-		static void errorCallback(int error, const char* description);
 		/** Window resize callback */
 		virtual void resizeWindow(GLFWwindow* window, int width, int height);
 
@@ -72,14 +78,19 @@ namespace ec
 		void switchToWireFrameMode() const;
 		void switchToPointMode() const;
 
+		/** Set window mode. */
+		void setWindowMode(WindowMode::Mode mode);
+		WindowMode::Mode getWindowMode() const;
+
+
 		/** Switch to windowed mode. */
 		void goWindowed() const;
-		/** Switch to fullscreen mode. */
+		/** Switch to full screen mode. */
 		void goFullscreen();		
-		/** \brief Switch to fullscreen if currently in windowed mode
+		/** \brief Switch to full screen if currently in windowed mode
 		 * and switch to windowed mode otherwise. */
 		void toggleFullscreen();
-		/** \brief Check if the window is in fullscreen mode. */
+		/** \brief Check if the window is in full screen mode. */
 		bool isFullscreen() const;
 
 		/** Set the current clear color. */
@@ -89,7 +100,6 @@ namespace ec
 
 		/** Access to window */
 		GLFWwindow* getWindow() const;
-
 		/** Access to the window associated with the currently active context. */
 		static Window* getCurrentWindow();
 
@@ -145,6 +155,8 @@ namespace ec
 		bool isResizable() const;
 		/** Check if this window has decorations (border, close widget etc.). */
 		bool isDecorated() const;
+		/** Decorate this window. */
+		void setDecorated(bool on);
 		/** Check if this window is always on-top. */
 		bool isFloating() const;
 
@@ -164,27 +176,10 @@ namespace ec
 		/** Check if this window is visible. */
 		bool isVisible() const;
 
-		/** Window attribute function (context related attributes) */
-		///@{	
-		int getContextApi() const;
-		int getContextCreationApi() const;
-		std::array<int, 3> getContextVersion() const;
-		bool isOpenGlForwardCompatible() const;
-		bool isOpenGlDebugContext() const;
-		int getOpenGlProfile() const;
-		int getContextRobustnessStrategies() const;
-		///@}
-
-		/** Window attribute function (frame buffer related attributes) */
-		///@{	
-		static int getRedBits();
-		static int getGreenBits();
-		static int getBlueBits();
-		static int getAlphaBits();
-		static int getDepthBits();
-		static int getStencilBits();
-		static int getMsaaSamples();
-		///@}
+		/** \brief Get the video mode */
+		VideoMode& getVideoMode();
+		/** \brief Get the video mode */
+		const VideoMode& getVideoMode() const;
 
 		/** Buffer swapping */
 		void swapBuffers() const;
@@ -204,9 +199,9 @@ namespace ec
 		/** Get all available monitors. */
 		static GLFWmonitor** getMonitors(int* count);
 		/** Get the currently used video mode used by a monitor. */
-		static const GLFWvidmode* getVideoMode(GLFWmonitor* monitor);
+		static const GLFWvidmode* getGlfwVideoMode(GLFWmonitor* monitor);
 		/** Get the supported video modes of a monitor. */
-		static const GLFWvidmode* getVideoModes(GLFWmonitor* monitor, int* count);
+		static const GLFWvidmode* getGlfwVideoModes(GLFWmonitor* monitor, int* count);
 		/** Get the physical size of a monitor in millimeters. */
 		static glm::ivec2 getMonitorPhysicalSize(GLFWmonitor* monitor);
 		/** Get the virtual position of a monitor in screen coordinates. */
@@ -232,10 +227,17 @@ namespace ec
 		void destroy() const;
 
 	protected:
+		virtual void onBegin();
+		virtual void tick(float timeDelta);
+		virtual void render(float timeDelta);
+		virtual void onEnd();
+
+
 		unsigned int m_windowWidth;
 		unsigned int m_windowHeight;
 		std::string m_windowTitle;
 
+		VideoMode m_videoMode;
 		GLFWwindow* m_window;
 
 		Timer m_timer;
@@ -261,52 +263,20 @@ namespace ec
 
 		/* Init function implementation */
 		virtual bool initImpl();
-		/* Main loop function implementation */
-		virtual void mainLoopImpl();
-
-		void windowTick(float timeDelta);
-		
-		/** Callback initialization */
-		void initCallbacks();
-
-		/** 
-		 * \brief The drop callback is called when one or multiple 
-		 * files are dragged into the window 
-		 */
-		static void dropCallback(GLFWwindow* window, int count, const char** paths);
-		/** 
-		 * \brief The resize callback is called when the window's 
-		 * width or height has changed.
-		 */
-		static void resizeCallback(GLFWwindow* window, int width, int height);
-		/**
-		 * \brief The position callback is called when the window's 
-		 * position changes.
-		 */
-		static void positionCallback(GLFWwindow* window, int positionX, int positionY);
-		/**
-		 * \brief The focus callback is called when a window, which
-		 * previously was unfocused, receives focus.
-		 */
-		static void focusCallback(GLFWwindow* window, int focused);
-		/**
-		 * \brief The close callback is called when a window is
-		 * being destroyed.
-		 */
-		static void closeCallback(GLFWwindow* window);
-		/**
-		 * \brief The refresh callback is called when a window 
-		 * should be redrawn.
-		 */
-		static void refreshCallback(GLFWwindow* window);
-		/**
-		 * \brief The iconify callback is called when a window was
-		 * minimized or restored.
-		 */
-		static void iconifyCallback(GLFWwindow* window, int iconified);
-
 		void initOpenGl();
 		void initAgui();
+
+		/** Window mode functions */
+		void setWindowModeFullscreen();
+		void setWindowModeWindowed();
+		void setWindowModeBorderlessWindowed();
+		void setWindowModeBorderlessFullscreen();
+
+		/** Active plugins */
+		std::vector<Plugin_Ptr> m_plugins;
+
+		/** Callbacks */
+		WindowCallbacks m_callbacks;
 
 		/** The windows resolution before changing to full screen */
 		glm::ivec2 m_windowedResolutionLast;

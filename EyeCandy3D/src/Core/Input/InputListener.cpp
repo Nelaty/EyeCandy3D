@@ -2,8 +2,14 @@
 
 namespace ec
 {
+	InputListener::InputListener()
+		: m_enabled{true}
+	{
+	}
+
 	InputListener::~InputListener()
-	= default;
+	{
+	}
 
 	void InputListener::inform(const InputEvent& event)
 	{
@@ -41,11 +47,6 @@ namespace ec
 		{
 			it.clear();
 		}
-	}
-
-	InputListener::InputListener()
-		: m_enabled{true}
-	{
 	}
 
 	void InputListener::processEvent(const InputEvent& event)

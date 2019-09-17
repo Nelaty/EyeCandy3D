@@ -42,6 +42,7 @@ namespace ec
 	}
 
 	InputEvent::InputEvent()
+		: m_type{InputType::invalid}
 	{
 	}
 
@@ -273,7 +274,11 @@ namespace ec
 		}
 	}
 
-	EventData::EventData() = default;
+	EventData::EventData()
+	{
+	}
 
-	EventData::~EventData() = default;
+	EventData::~EventData()
+	{
+	}
 }

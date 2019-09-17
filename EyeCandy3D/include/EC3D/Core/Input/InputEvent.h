@@ -9,7 +9,7 @@ namespace ec
 	/**
 	* \brief Enumeration entries for every kind of input event
 	*/
-	enum class EC3D_DECLSPEC InputType : unsigned char
+	enum class EC3D_DECLSPEC InputType : int
 	{
 		mouse_move = 0,
 		mouse_scroll,
@@ -35,6 +35,7 @@ namespace ec
 		monitor_disconnected,
 		closed,
 
+		invalid,
 		count // Keep at end! - Number of event types
 	};
 

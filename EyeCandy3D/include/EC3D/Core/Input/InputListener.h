@@ -24,7 +24,7 @@ namespace ec
 		using EventCallbackContainer_Type = std::vector<EventCallback_Type>;
 		using CallbackContainerMap_Type = std::array<EventCallbackContainer_Type, int(InputType::count)>;
 
-
+		explicit InputListener();
 		virtual ~InputListener();
 		
 		/**
@@ -63,8 +63,7 @@ namespace ec
 		void removeAllCallbacks();
 
 	protected:
-		explicit InputListener();
-
+		
 		/**
 		 * \brief Automatically called, when informed about an event.
 		 */

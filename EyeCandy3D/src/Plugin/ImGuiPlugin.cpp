@@ -1,12 +1,16 @@
 #include "EC3D/Plugin/ImGuiPlugin.h"
 
 #include <gl/glew.h>
+#include <GLFW/glfw3.h>
+
 #include "EC3D/Core/Window.h"
 #include "EC3D/Common/Config.h"
 
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_glfw.h"
 #include "imgui/imgui_impl_opengl3.h"
+
+
 
 namespace ec
 {
@@ -60,7 +64,6 @@ namespace ec
 		glViewport(0, 0, display_w, display_h);
 
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-		glfwSwapBuffers(glfwWindow);
 	}
 
 	void ImGuiPlugin::onEnd()

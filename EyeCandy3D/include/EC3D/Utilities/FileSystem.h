@@ -10,6 +10,7 @@ namespace ec
 	{
 	public:
 		static void createDirectory(const std::string& dir);
+		static std::string getOpenFileName();
 
 	private:
 		explicit FileSystem();

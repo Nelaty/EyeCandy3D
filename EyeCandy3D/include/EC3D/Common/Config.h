@@ -10,7 +10,7 @@ namespace conf
 	// OpenGL
 	static constexpr unsigned int g_glMajor = 3;
 	static constexpr unsigned int g_glMinor = 3;
-	static constexpr const char* g_glslVersion = "#version330";
+	static constexpr const char* g_glslVersion = "#version 330";
 
 	// CUDA
 	constexpr unsigned int g_cuNumberOfBlocks = 1024;

@@ -125,6 +125,7 @@
     <ClInclude Include="include\EC3D\Core\Input\Mouse.h" />
     <ClInclude Include="include\EC3D\Plugin\ImGuiPlugin.h" />
     <ClInclude Include="include\EC3D\Plugin\Plugin.h" />
+    <ClInclude Include="include\EC3D\Plugin\PluginSystem.h" />
     <ClInclude Include="include\EC3D\Utilities\FileSystem.h" />
     <ClInclude Include="include\EC3D\Utilities\Logger.h" />
     <ClInclude Include="include\EC3D\Utilities\Profiler.h" />
@@ -238,6 +239,7 @@
     <ClCompile Include="src\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\Plugin\ImGuiPlugin.cpp" />
     <ClCompile Include="src\Plugin\Plugin.cpp" />
+    <ClCompile Include="src\Plugin\PluginSystem.cpp" />
     <ClCompile Include="src\Utilities\FileSystem.cpp" />
     <ClCompile Include="src\Utilities\Logger.cpp" />
     <ClCompile Include="src\Utilities\Profiler.cpp" />

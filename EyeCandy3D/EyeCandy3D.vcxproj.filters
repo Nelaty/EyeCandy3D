@@ -135,6 +135,7 @@
     <ClInclude Include="include\EC3D\Core\WindowCallbacks.h" />
     <ClInclude Include="include\EC3D\Core\WindowMode.h" />
     <ClInclude Include="include\EC3D\Core\VideoMode.h" />
+    <ClInclude Include="include\EC3D\Plugin\PluginSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Shader\Shader.cpp" />
@@ -238,5 +239,6 @@
     <ClCompile Include="src\Core\WindowCallbacks.cpp" />
     <ClCompile Include="src\Core\VideoMode.cpp" />
     <ClCompile Include="src\Core\WindowMode.cpp" />
+    <ClCompile Include="src\Plugin\PluginSystem.cpp" />
   </ItemGroup>
 </Project>

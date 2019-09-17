@@ -4,9 +4,11 @@
 #include "EC3D/Core/Rendering/ForwardRenderer.h"
 
 #include "EC3D/Utilities/Profiler.h"
+#include "EC3D/Plugin/Plugin.h"
 
 #include "stb_image.h"
 
+#include <algorithm>
 #include <utility>
 
 
@@ -20,10 +22,11 @@ namespace ec
 		m_windowTitle(windowTitle),
 		m_sceneSystem(this),
 		m_eventSystem(this),
-		m_clearColor(0.5,0.5,0.5,1.0),
+		m_clearColor(0.5, 0.5, 0.5, 1.0),
 		m_initSuccessful(false),
 		m_frame(this),
-		m_videoMode(this)
+		m_videoMode(this),
+		m_pluginSystem(this)
 	{
 		auto renderer = std::make_shared<ForwardRenderer>();
 		m_renderSystem.addRenderer(renderer, "forward");
@@ -72,9 +75,8 @@ namespace ec
 
 	void Window::onBeginMain()
 	{
-		
-
 		onBegin();
+		m_pluginSystem.onBegin();
 	}
 
 	void Window::tickMain()
@@ -87,6 +89,7 @@ namespace ec
 		m_shaderManager.update(time, timeDelta);
 
 		tick(timeDelta);
+		m_pluginSystem.onTick(timeDelta);
 	}
 
 	void Window::renderMain()
@@ -111,6 +114,7 @@ namespace ec
 		glDisable(GL_BLEND);
 
 		render(timeDelta);
+		m_pluginSystem.onRender(timeDelta);
 
 		// Swap front and back buffers
 		glfwSwapBuffers(m_window);
@@ -119,6 +123,7 @@ namespace ec
 	void Window::onEndMain()
 	{
 		onEnd();
+		m_pluginSystem.onEnd();
 		m_timer.resetTimeDelta();
 	}
 
@@ -422,6 +427,16 @@ namespace ec
 	ec::Frame& Window::getFrame()
 	{
 		return m_frame;
+	}
+
+	void Window::addPlugin(const Plugin_Ptr& plugin)
+	{
+		m_pluginSystem.addPlugin(plugin);
+	}
+
+	bool Window::removePlugin(const Plugin_Ptr& plugin)
+	{
+		return m_pluginSystem.removePlugin(plugin);
 	}
 
 	void Window::setIcon(const char* iconPath, const char* iconPathSmall) const

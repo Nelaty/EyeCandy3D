@@ -6,6 +6,7 @@
 #include "EC3D/Core/Input/InputObservable.h"
 #include "EC3D/Core/Input/EventSystem.h"
 #include "EC3D/Core/Shader/ShaderManager.h"
+#include "EC3D/Plugin/PluginSystem.h"
 
 #include "EC3D/Core/Geometry/Geometry.h"
 #include "EC3D/Core/Rendering/RenderSystem.h"
@@ -134,6 +135,12 @@ namespace ec
 		/** \brief Get the frame, which defines the window layout. */
 		Frame& getFrame();
 
+		/** \brief Add a new plugin. */
+		void addPlugin(const Plugin_Ptr& plugin);
+		/** \brief Remove a registered plugin. 
+		 * \return True if the given plugin was registered, false otherwise. */
+		bool removePlugin(const Plugin_Ptr& plugin);
+		
 		/**
 		 * \brief Set the icon for this window. 
 		 * The resolution of the icons should preferably be one of 16x16, 32x32,
@@ -273,8 +280,8 @@ namespace ec
 		void setWindowModeBorderlessFullscreen();
 
 		/** Active plugins */
-		std::vector<Plugin_Ptr> m_plugins;
-
+		PluginSystem m_pluginSystem;
+		
 		/** Callbacks */
 		WindowCallbacks m_callbacks;
 

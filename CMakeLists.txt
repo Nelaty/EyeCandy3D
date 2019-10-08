@@ -8,7 +8,7 @@ enable_testing()
 
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" OR
    "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-	set(warnings "-Wall -Wextra -Werror -Wno-error=unused-parameter -Wno-error=unused-variable -Wno-error=type-limits -Wno-error=return-local-addr -Wno-error=unused-function -Wno-error=unused-but-set-variable -std=c++14")
+	set(warnings "-Wall -Wextra -Werror -Wno-error=unused-parameter -Wno-error=unused-variable -Wno-error=type-limits -Wno-error=return-local-addr -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=implicit-fallthrough -Wno-error=misleading-indentation -std=c++14")
 # elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
 # 	set(warnings "/W4 /WX /EHsc")
 endif()

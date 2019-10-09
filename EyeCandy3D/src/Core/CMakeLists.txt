@@ -54,7 +54,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/EyeCandy
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/External/include)
 
 target_link_libraries(${PROJECT_NAME}
-	glfw3
+	glfw
 	GLEW
 	GLU
 	GL

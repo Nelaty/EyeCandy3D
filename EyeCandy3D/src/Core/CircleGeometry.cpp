@@ -1,6 +1,5 @@
 #include "EC3D/Core/CircleGeometry.h"
 
-#include <corecrt_math_defines.h>
 
 namespace ec
 {

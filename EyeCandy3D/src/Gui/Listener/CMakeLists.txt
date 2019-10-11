@@ -1,0 +1,19 @@
+target_sources(${PROJECT_NAME}
+PRIVATE
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericActionListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericButtonListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericCheckBoxListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericDropDownListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericFrameListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericHScrollBarListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericLabelListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericListBoxListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericRadioButtonListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericSliderListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericTabbedPaneListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericTextBoxListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericTextFieldListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericVScrollBarListener.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GenericWidgetListener.cpp
+)
+

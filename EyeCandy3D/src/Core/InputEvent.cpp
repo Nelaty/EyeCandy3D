@@ -74,7 +74,7 @@ namespace ec
 				m_event.m_display.print();
 				break;
 			default:
-				printf("InputEvent::Print: Input type doesn't exist #%d\n", m_type);
+				printf("InputEvent::Print: Input type doesn't exist #%d\n", int(m_type));
 				break;
 		}
 	}
@@ -95,12 +95,12 @@ namespace ec
 							   DisplayOrientation orientation,
 							   GLFWmonitor* monitor)
 		: m_window{window},
+		m_monitor(monitor),
 		m_x{x},
 		m_y{y},
 		m_width{width},
 		m_height{height},
-		m_orientation{orientation},
-		m_monitor(monitor)
+		m_orientation{orientation}
 	{
 	}
 
@@ -141,7 +141,7 @@ namespace ec
 	void KeyboardEvent::print() const
 	{
 		printf("KEYBOARD EVENT:\n");
-		printf("Window: %d\n", m_window);
+		printf("Window: %p\n", m_window);
 		printf("Key: %d, Scancode: %d, Repeat %s",
 			   m_key, m_scancode, m_repeat ? "true" : "false");
 		printf("Shift:   %s, ", shiftPressed() ? "true" : "false");
@@ -212,7 +212,7 @@ namespace ec
 	void MouseEvent::print() const
 	{
 		printf("MOUSE EVENT:\n");
-		printf("Window: %d\n", m_window);
+		printf("Window: %p\n", m_window);
 		printf("Position: (%d,%d,%d,%d), Position-Delta: (%d,%d,%d,%d)\n",
 			   m_x, m_y, m_z, m_w, m_dx, m_dy, m_scrollX, m_scrollY);
 		printf("Button: %d, Pressure: %f", m_button, m_pressure);
@@ -265,15 +265,15 @@ namespace ec
 	void DropEvent::print() const
 	{
 		printf("DROP EVENT\n");
-		printf("Window: %d\n", m_window);
-		printf("Position: (%d,%d), Count: %d, Paths: \n");
+		printf("Window: %p\n", m_window);
+		printf("Position: (%d,%d), Count: %d, Paths: \n", m_x, m_y, m_count);
 		for(int i = 0; i < m_count; ++i)
 		{
 			printf("%s\n", m_paths[i]);
 		}
 	}
 
-	EventData::EventData() = default;
+	EventData::EventData() {};
 
-	EventData::~EventData() = default;
+	EventData::~EventData() {};
 }

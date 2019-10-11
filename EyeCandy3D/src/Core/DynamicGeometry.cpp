@@ -10,7 +10,7 @@ namespace ec
 
 	void DynamicGeometry::beginRender()
 	{
-		__super::beginRender();
+		Geometry::beginRender();
 		update();
 	}
 

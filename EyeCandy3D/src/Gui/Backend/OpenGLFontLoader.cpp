@@ -1,5 +1,5 @@
-#include "EC3D/GUI/Backend/OpenGLFontLoader.h"
-#include "EC3D/GUI/Backend/OpenGLFont.h"
+#include "EC3D/Gui/Backend/OpenGLFontLoader.h"
+#include "EC3D/Gui/Backend/OpenGLFont.h"
 
 namespace ec
 {

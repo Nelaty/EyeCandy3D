@@ -1,0 +1,11 @@
+target_sources(${PROJECT_NAME}
+PRIVATE
+	${CMAKE_CURRENT_SOURCE_DIR}/OpenGLCursorProvider.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/OpenGLFont.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/OpenGLFontLoader.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/OpenGLGraphics.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/OpenGLImage.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/OpenGLImageLoader.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/OpenGLInput.cpp
+)
+

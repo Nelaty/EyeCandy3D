@@ -54,7 +54,7 @@ namespace ec
 
 		if(!m_initSuccessful)
 		{
-			throw(std::exception("Error: Couldn't initialize window!\n"));
+			throw(std::runtime_error("Error: Couldn't initialize window!\n"));
 		}
 	}
 
@@ -413,8 +413,8 @@ namespace ec
 	{
 		GLFWimage images[2];
 		auto count = 0;
-		count = iconPath == "" ? count : count + 1;
-		count = iconPathSmall == "" ? count : count + 1;
+		count = strcmp(iconPath, "") == 0 ? count : count + 1;
+		count = strcmp(iconPathSmall, "") == 0 ? count : count + 1;
 
 		if(count == 0)
 		{

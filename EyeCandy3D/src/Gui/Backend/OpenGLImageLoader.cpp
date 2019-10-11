@@ -1,5 +1,5 @@
-#include "EC3D/GUI/Backend/OpenGLImageLoader.h"
-#include "EC3D/GUI/Backend/OpenGLImage.h"
+#include "EC3D/Gui/Backend/OpenGLImageLoader.h"
+#include "EC3D/Gui/Backend/OpenGLImage.h"
 
 namespace ec
 {

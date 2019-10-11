@@ -57,7 +57,7 @@ namespace ec
 		m_data.updateVertexData();
 
 		m_data.bind();
-		__super::onRender();
+		DynamicGeometry::onRender();
 
 		/*glLineWidth(m_lineWidth);
 		glColor3f(1.0f, 0.0f, 0.0f);

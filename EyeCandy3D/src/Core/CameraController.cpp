@@ -72,6 +72,8 @@ namespace ec
 			case InputType::mouse_button_released:
 				processMouseButtonUp(event.m_event.m_mouse);
 				break;
+			default:
+				break;
 		}
 	}
 

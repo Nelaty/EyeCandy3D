@@ -174,7 +174,7 @@ namespace ec
 	{
 		if(FT_Init_FreeType(&m_ftLib))
 		{
-			throw(std::exception("Couldn't initialize freetype!"));
+			throw(std::runtime_error("Couldn't initialize freetype!"));
 		}
 	
 		m_colorLocation = m_textShader->getUniformLocation("inputColor");

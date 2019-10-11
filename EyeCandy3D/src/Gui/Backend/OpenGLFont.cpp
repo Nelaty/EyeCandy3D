@@ -1,4 +1,4 @@
-#include "EC3D/GUI/Backend/OpenGLFont.h"
+#include "EC3D/Gui/Backend/OpenGLFont.h"
 #include "EC3D/Core/FontTextureAtlas.h"
 
 

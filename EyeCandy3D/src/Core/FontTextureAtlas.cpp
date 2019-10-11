@@ -66,7 +66,7 @@ namespace ec
 		{
 			if(FT_Load_Char(face, i, FT_LOAD_RENDER))
 			{
-				std::cout << "Loading character %c failed\n", i;
+				std::cout << "Loading character %c failed\n";
 				continue;
 			}
 
@@ -128,7 +128,7 @@ namespace ec
 			// Load character
 			if(FT_Load_Char(face, i, FT_LOAD_RENDER))
 			{
-				std::cout << "Loading character %c failed\n", i;
+				std::cout << "Loading character %c failed\n";
 				continue;
 			}
 

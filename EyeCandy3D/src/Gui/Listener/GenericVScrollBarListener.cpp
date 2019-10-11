@@ -1,4 +1,4 @@
-#include "EC3D/GUI/Listener/GenericVScrollBarListener.h"
+#include "EC3D/Gui/Listener/GenericVScrollBarListener.h"
 
 namespace ec
 {

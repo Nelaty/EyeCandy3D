@@ -1,0 +1,10 @@
+target_sources(${PROJECT_NAME}
+PRIVATE
+	${CMAKE_CURRENT_SOURCE_DIR}/FileSystem.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Logger.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Profiler.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Random.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SystemTime.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Timer.cpp
+)
+

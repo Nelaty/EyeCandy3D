@@ -1,4 +1,4 @@
-#include "EC3D/GUI/Backend/OpenGLCursorProvider.h"
+#include "EC3D/Gui/Backend/OpenGLCursorProvider.h"
 
 namespace ec
 {

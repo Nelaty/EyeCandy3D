@@ -15,7 +15,7 @@ namespace ec
 	void SystemTime::update()
 	{
 		auto now = time(nullptr);
-		localtime_s(&m_timeInfo, &now);
+		m_timeInfo = *localtime(&now);
 	}
 	 
 	std::string SystemTime::getTimeAndDateFormatted() const

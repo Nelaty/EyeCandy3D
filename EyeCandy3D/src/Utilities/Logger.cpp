@@ -135,7 +135,7 @@ namespace ec
 		return name + s_logFileExtension;
 	}
 
-	std::string Logger::formatMessage(const std::string& msg, const 
+	std::string Logger::formatMessage(const std::string& msg, 
 									  const LoggingCategory category)
 	{
 		return categoryToString(category) + ": " + msg + "\n";
@@ -143,7 +143,7 @@ namespace ec
 
 	void Logger::consolePrint(const std::string& msg)
 	{
-		printf(msg.c_str());
+		printf("%s", msg.c_str());
 	}
 
 	void Logger::filePrint(const std::string& msg)

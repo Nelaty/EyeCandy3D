@@ -26,11 +26,11 @@ namespace ec
 		auto& vertices = m_data.m_vertices;
 		auto& indices = m_data.m_indices;
 
-		for(int i = 0; i < m_tempPoints.size(); ++i)
+		for(unsigned int i = 0; i < m_tempPoints.size(); ++i)
 		{
 			vertices[i].m_position = m_tempPoints[i];
 		}
-		for(int i = 0; i < m_tempPoints.size(); ++i)
+		for(unsigned int i = 0; i < m_tempPoints.size(); ++i)
 		{
 			indices[i] = i;
 		}

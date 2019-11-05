@@ -6,33 +6,37 @@ project("EyeCandy3D")
 enable_testing()
 
 
-if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" OR
-   "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-	set(warnings "-Wall -Wextra -Werror -Wno-error=unused-parameter -Wno-error=unused-variable -Wno-error=type-limits -Wno-error=return-local-addr -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=implicit-fallthrough -Wno-error=misleading-indentation -std=c++14")
-# elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
-# 	set(warnings "/W4 /WX /EHsc")
-endif()
-if(NOT CONFIGURED_ONCE)
-	set(CMAKE_C_FLAGS "${warnings}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
-	set(CMAKE_CXX_FLAGS "${warnings}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
-endif()
-
-
-
-include_directories(/usr/include/freetype2)
-
-
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-
-
 
 add_subdirectory(EyeCandy3D/src)
 add_subdirectory(External)
 
 add_subdirectory(Example)
 
+target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC /usr/include/freetype2)
 
-set(CONFIGURED_ONCE TRUE CACHE INTERNAL "A flag showing that CMake has configured at least once.")
+
+
+
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 14)
+
+
+if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" OR
+   "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+	set_property(TARGET ${PROJECT_NAME} PROPERTY EyeCandy3D-warnings "-Wall")
+endif()
+if(NOT ${PROJECT_NAME}_CONFIGURED_ONCE)
+	set_property(TARGET ${PROJECT_NAME} PROPERTY CMAKE_C_FLAGS "${EyeCandy3D-warnings}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
+	set_property(TARGET ${PROJECT_NAME} PROPERTY CMAKE_CXX_FLAGS "${EyeCandy3D-warnings}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
+endif()
+
+
+
+
+set_property(TARGET ${PROJECT_NAME} PROPERTY CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set_property(TARGET ${PROJECT_NAME} PROPERTY CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set_property(TARGET ${PROJECT_NAME} PROPERTY CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+
+set(${PROJECT_NAME}_CONFIGURED_ONCE TRUE CACHE INTERNAL "A flag showing that CMake has configured at least once.")
 

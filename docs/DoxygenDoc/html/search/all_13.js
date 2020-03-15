@@ -119,7 +119,6 @@ var searchData=
   ['setnear',['setNear',['../classec_1_1_camera.html#af0c1f82f4cb2aeb3908b858093080556',1,'ec::Camera']]],
   ['setnumericchangedcallback',['setNumericChangedCallback',['../classec_1_1_generic_text_field_listener.html#a8a0019de3e5f93946c16cb345db72eb6',1,'ec::GenericTextFieldListener']]],
   ['setorientationchangedcallback',['setOrientationChangedCallback',['../classec_1_1_generic_slider_listener.html#a9238f89911356a87747be1b80a732c2a',1,'ec::GenericSliderListener']]],
-  ['setparent',['setParent',['../classec_1_1_node.html#a3c908e5f01e989cedfba5dc1a3ed66c1',1,'ec::Node']]],
   ['setparentsizechangedcallback',['setParentSizeChangedCallback',['../classec_1_1_generic_widget_listener.html#aaa4ba3b0f552b8b55d02fb8d20fa13e6',1,'ec::GenericWidgetListener']]],
   ['setpixel',['setPixel',['../classec_1_1_open_g_l_image.html#a0f10c45c14e5092b1b7b5a57d09f2682',1,'ec::OpenGLImage']]],
   ['setposition',['setPosition',['../classec_1_1_viewport.html#a0bccb794bc85e2c2e8417ab142ceadbc',1,'ec::Viewport::setPosition(float x, float y)'],['../classec_1_1_viewport.html#a8ab2259a78b8b9aeebd3b4450ce2cdd2',1,'ec::Viewport::setPosition(const glm::vec2 &amp;position)'],['../classec_1_1_window.html#a093cfa214eafa8cfd1045d23b4e05d60',1,'ec::Window::setPosition()']]],

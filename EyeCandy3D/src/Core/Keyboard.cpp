@@ -233,6 +233,10 @@ namespace ec
 		{
 			inputEvent.m_type = InputType::key_released;
 		}
+		else // GLFW_REPEAT
+		{
+			return;
+		}
 
 		auto& eventSystem = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
 		eventSystem.dispatchEvent(inputEvent);

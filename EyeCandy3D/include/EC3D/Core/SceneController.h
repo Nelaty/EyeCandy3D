@@ -3,7 +3,7 @@
 #include "EC3D/Common/Common.h"
 
 #include <functional>
-
+#include <string>
 
 namespace ec
 {

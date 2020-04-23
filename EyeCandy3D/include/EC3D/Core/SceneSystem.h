@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <memory>
+#include <string>
 
 /*
 * \brief A scene system manages a collection of scenes and enables 

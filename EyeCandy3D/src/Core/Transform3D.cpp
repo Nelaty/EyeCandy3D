@@ -46,7 +46,7 @@ namespace ec
 	const glm::vec3& Transform3D::getLocalPosition()
 	{
 		updateLocalMat();
-		return glm::vec3(m_localMat[4]);
+		return m_localMat[3];
 	}
 
 	const glm::mat4& Transform3D::getLocalMat() const

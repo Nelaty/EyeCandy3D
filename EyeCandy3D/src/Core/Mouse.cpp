@@ -158,6 +158,10 @@ namespace ec
 			inputEvent.m_type = InputType::mouse_button_released;
 			mouseEvent.m_pressure = 0.0f;
 		}
+		else
+		{
+			return;
+		}
 
 		auto& eventSystem = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
 		eventSystem.dispatchEvent(inputEvent);

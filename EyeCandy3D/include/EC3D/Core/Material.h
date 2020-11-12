@@ -3,6 +3,7 @@
 #include "EC3D/Core/Texture.h"
 
 #include <vector>
+#include <string>
 
 #include <glm/glm.hpp>
 
@@ -57,7 +58,7 @@ namespace ec
 		* \return True if the texture was successfully added, false
 		* otherwise.
 		*/
-		bool addDiffuseTextureFromPath(const char* path);
+		bool addDiffuseTextureFromPath(const std::string& path);
 
 		/** 
 		 * \brief Color manipulation function.

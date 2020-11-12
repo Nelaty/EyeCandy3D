@@ -7,6 +7,8 @@
 #include "stb_image.h"
 
 #include <utility>
+#include <exception>
+#include <stdexcept>
 
 namespace ec
 {
@@ -53,7 +55,7 @@ namespace ec
 		printf("##############################\n");
 
 		if(!m_initSuccessful)
-		{
+        {
 			throw(std::runtime_error("Error: Couldn't initialize window!\n"));
 		}
 	}
@@ -166,6 +168,7 @@ namespace ec
 		glewExperimental = GL_TRUE;
 		/* Init GLFW */
 		printf("Initializing GLFW...\n");
+        glfwSetErrorCallback(Window::errorCallback);
 		if(!glfwInit())
 		{
 			printf("ERROR: Couldn't initialize GLFW!\n");

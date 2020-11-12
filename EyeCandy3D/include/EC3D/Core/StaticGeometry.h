@@ -4,7 +4,6 @@
 
 #include "EC3D/Core/Geometry.h"
 
-
 namespace ec
 {
 	/**

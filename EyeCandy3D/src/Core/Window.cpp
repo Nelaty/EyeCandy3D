@@ -7,6 +7,7 @@
 #include "stb_image.h"
 
 #include <utility>
+#include <stdexcept>
 
 namespace ec
 {

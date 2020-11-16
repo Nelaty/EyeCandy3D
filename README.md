@@ -1,13 +1,30 @@
 # EyeCandy3D
 ## 1. Building
 
-### Visual Studio 2017 ###
-
-To build the library, open the visual studio solution, select the desired platform and configuration and press <kbd>F7</kbd>.
-
 ### CMake ###
-**required libraries**
 
+**include directories**:
+* *EyeCandy3D/include*
+* *External/include*
+* < freetype2-dir > (usually /usr/include/freetype2)
+
+**dependencies**:
+* agui (included in build)
+* glfw
+* GLEW
+* GLU
+* GL
+* X11
+* Xrandr
+* Xinerama
+* Xi
+* Xxf86vm
+* Xcursor
+* pthread
+* dl
+* freetype
+
+**example: Ubuntu 16.04**
 Install the following packages:
 ```
 apt-get install \
@@ -44,28 +61,11 @@ The example will be created in the `bin` subdirectory (`./build/bin`)
 
 
 ## 2. Installation
-
-**Visual Studio 2017**
-
-Nuget packages:
-* glew.v140
-* glfw
-* freetype
-* glm
-
-Additional include directories:
-* *EyeCandy3D/include*
-* *External/include*
-
-Additional dependencies:
-* EyeCandy3D.lib
-* opengl32.lib
-* agui.lib
-
-If compiled with cmake, the library will already include agui.
-
-Additional dependencies directories:
-* *Build*
+The built library can be installed using the command
+```
+make install
+```
+in the build directory (here ./build).
 
 ## 3. Documentation
 * [Doxygen](https://nelaty.github.io/EyeCandy3D/DoxygenDoc/html/index.html)
@@ -75,4 +75,4 @@ Additional dependencies directories:
 **Doxygen note:**
 
 1. To generate you're own documentation with doxygen, you need to have "Dot" installed (included in the graphviz package). Otherwise collaboration graphs will not be generated!
-* Navigate to ./Docs/ and execute the command: "doxygen Doxyfile"
+2. Navigate to ./Docs/ and execute the command: "doxygen Doxyfile"

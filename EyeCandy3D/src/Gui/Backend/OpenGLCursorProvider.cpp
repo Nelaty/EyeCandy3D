@@ -1,5 +1,7 @@
 #include "EC3D/Gui/Backend/OpenGLCursorProvider.h"
 
+#include <stdio.h>
+
 namespace ec
 {
 

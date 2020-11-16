@@ -52,10 +52,10 @@ namespace ec
 		return &m_textures[index];
 	}
 
-	bool Material::addDiffuseTextureFromPath(const char* path)
+	bool Material::addDiffuseTextureFromPath(const std::string& path)
 	{
 		Texture texture;
-		const auto result = texture.textureFromFile(path, conf_shader::g_textureDiffuse);
+		const auto result = texture.textureFromFile(path.c_str(), conf_shader::g_textureDiffuse);
 		if(result)
 		{
 			addTexture(texture);

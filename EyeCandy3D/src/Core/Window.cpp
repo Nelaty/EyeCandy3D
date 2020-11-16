@@ -167,6 +167,7 @@ namespace ec
 		glewExperimental = GL_TRUE;
 		/* Init GLFW */
 		printf("Initializing GLFW...\n");
+        glfwSetErrorCallback(Window::errorCallback);
 		if(!glfwInit())
 		{
 			printf("ERROR: Couldn't initialize GLFW!\n");

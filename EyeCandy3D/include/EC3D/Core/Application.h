@@ -8,7 +8,7 @@
 #include <functional>
 
 #include <type_traits>
-#include "WindowCreationHints.h"
+#include "EC3D/Window/WindowCreationHints.h"
 
 namespace ec
 {

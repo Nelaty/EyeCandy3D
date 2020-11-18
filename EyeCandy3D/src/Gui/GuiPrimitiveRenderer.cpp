@@ -1,6 +1,6 @@
 #include "EC3D/Gui/GuiPrimitiveRenderer.h"
-#include "EC3D/Core/Shader/Shader.h"
-#include "EC3D/Core/Geometry.h"
+#include "EC3D/Graphics/Shader/Shader.h"
+#include "EC3D/Graphics/Geometry/Geometry.h"
 
 namespace ec
 {

@@ -2,7 +2,7 @@
 #include "EC3D/Core/Scene.h"
 #include "EC3D/Core/Node.h"
 #include "EC3D/Core/SceneSystem.h"
-#include "EC3D/Core/Window.h"
+#include "EC3D/Window/Window.h"
 
 namespace ec
 {

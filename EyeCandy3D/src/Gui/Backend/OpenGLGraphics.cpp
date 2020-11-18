@@ -2,9 +2,9 @@
 #include "EC3D/Gui/Backend/OpenGLImage.h"
 #include "EC3D/Gui/GuiShaderInfoObject.h"
 
-#include "EC3D/Core/Camera.h"
-#include "EC3D/Core/Viewport.h"
-#include "EC3D/Core/LineGeometryFactory.h"
+#include "EC3D/Graphics/Camera.h"
+#include "EC3D/Window/Viewport.h"
+#include "EC3D/Graphics/Geometry/LineGeometryFactory.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>

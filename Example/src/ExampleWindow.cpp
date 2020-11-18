@@ -4,15 +4,15 @@
 
 #include "EC3D/Core/Scene.h"
 #include "EC3D/Core/Node.h"
-#include "EC3D/Core/Drawable.h"
-#include "EC3D/Core/CubeGeometry.h"
-#include "EC3D/Core/Material.h"
-#include "EC3D/Core/Camera.h"
+#include "EC3D/Graphics/Drawable.h"
+#include "EC3D/Graphics/Geometry/CubeGeometry.h"
+#include "EC3D/Graphics/Material/Material.h"
+#include "EC3D/Graphics/Camera.h"
 #include "EC3D/Core/Frame.h"
-#include "EC3D/Core/DynamicLineGeometry.h"
+#include "EC3D/Graphics/Geometry/DynamicLineGeometry.h"
 
 #include "EC3D/Core/SceneRenderer.h"
-#include "EC3D/Core/Shader/Shader.h"
+#include "EC3D/Graphics/Shader/Shader.h"
 
 #include "EC3D/Gui/Backend/OpenGLGraphics.h"
 #include "EC3D/Gui/Backend/OpenGLInput.h"

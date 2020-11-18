@@ -1,6 +1,6 @@
 #pragma once
-#include "EC3D/Core/Window.h"
-#include "EC3D/Core/CameraController.h"
+#include "EC3D/Window/Window.h"
+#include "EC3D/Graphics/CameraController.h"
 
 #include <string>
 

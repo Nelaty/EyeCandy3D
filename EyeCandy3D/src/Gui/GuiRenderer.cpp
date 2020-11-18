@@ -1,8 +1,8 @@
 #include "EC3D/Gui/GuiRenderer.h"
-#include "EC3D/Core/Window.h"
-#include "EC3D/Core/Freetype.h"
+#include "EC3D/Window/Window.h"
+#include "EC3D/Graphics/Text/Freetype.h"
 
-#include "EC3D/Core/Shader/Shader.h"
+#include "EC3D/Graphics/Shader/Shader.h"
 #include "EC3D/Gui/GuiSystem.h"
 
 #include "Agui/Agui.hpp"

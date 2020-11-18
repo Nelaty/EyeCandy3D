@@ -2,7 +2,7 @@
 #include "Agui/BaseTypes.hpp"
 #include "EC3D/Common/Common.h"
 
-#include "EC3D/Core/Texture.h"
+#include "EC3D/Graphics/Material/Texture.h"
 
 namespace ec
 {

@@ -1,6 +1,6 @@
 #pragma once
 #include "Agui/Rectangle.hpp"
-#include "EC3D/Core/Texture.h"
+#include "EC3D/Graphics/Material/Texture.h"
 
 #include <glm/glm.hpp>
 

@@ -1,19 +1,19 @@
 #include "ExampleScene.h"
 
-#include "EC3D/Core/Window.h"
+#include "EC3D/Window/Window.h"
 #include "EC3D/Core/Scene.h"
 #include "EC3D/Core/Node.h"
-#include "EC3D/Core/Drawable.h"
-#include "EC3D/Core/CubeGeometry.h"
-#include "EC3D/Core/SphereGeometry.h"
-#include "EC3D/Core/CylinderGeometry.h"
-#include "EC3D/Core/RectangleGeometry.h"
+#include "EC3D/Graphics/Drawable.h"
+#include "EC3D/Graphics/Geometry/CubeGeometry.h"
+#include "EC3D/Graphics/Geometry/SphereGeometry.h"
+#include "EC3D/Graphics/Geometry/CylinderGeometry.h"
+#include "EC3D/Graphics/Geometry/RectangleGeometry.h"
 
-#include "EC3D/Core/Material.h"
-#include "EC3D/Core/Shader/Shader.h"
-#include "EC3D/Core/Shader/ShaderManager.h"
+#include "EC3D/Graphics/Material/Material.h"
+#include "EC3D/Graphics/Shader/Shader.h"
+#include "EC3D/Graphics/Shader/ShaderManager.h"
 #include "EC3D/Utilities/Random.h"
-#include "EC3D/Core/CircleGeometry.h"
+#include "EC3D/Graphics/Geometry/CircleGeometry.h"
 
 using namespace ec;
 

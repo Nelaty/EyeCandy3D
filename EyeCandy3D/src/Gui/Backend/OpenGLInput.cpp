@@ -2,8 +2,8 @@
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include "EC3D/Core/Mouse.h"
-#include "EC3D/Core/Keyboard.h"
+#include "EC3D/Input/Mouse.h"
+#include "EC3D/Input/Keyboard.h"
 
 namespace ec
 {

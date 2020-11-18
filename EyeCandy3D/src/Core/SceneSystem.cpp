@@ -1,9 +1,9 @@
 #include "EC3D/Core/SceneSystem.h"
 #include "EC3D/Core/Scene.h"
-#include "EC3D/Core/SceneController.h"
-#include "EC3D/Core/Window.h"
+#include "EC3D/Input/SceneController.h"
+#include "EC3D/Window/Window.h"
 
-#include "EC3D/Core/Shader/Shader.h"
+#include "EC3D/Graphics/Shader/Shader.h"
 
 #include  <algorithm>
 

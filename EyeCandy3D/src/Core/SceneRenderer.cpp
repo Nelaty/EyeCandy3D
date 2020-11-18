@@ -3,12 +3,12 @@
 #include "EC3D/Core/SceneRenderer.h"
 #include "EC3D/Core/Scene.h"
 #include "EC3D/Core/Node.h"
-#include "EC3D/Core/Camera.h"
-#include "EC3D/Core/Drawable.h"
-#include "EC3D/Core/Window.h"
+#include "EC3D/Graphics/Camera.h"
+#include "EC3D/Graphics/Drawable.h"
+#include "EC3D/Window/Window.h"
 
-#include "EC3D/Core/Shader/Shader.h"
-#include "EC3D/Core/Shader/ShaderManager.h"
+#include "EC3D/Graphics/Shader/Shader.h"
+#include "EC3D/Graphics/Shader/ShaderManager.h"
 
 #include "Agui/Agui.hpp"
 

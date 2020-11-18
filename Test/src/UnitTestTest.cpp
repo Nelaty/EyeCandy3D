@@ -1,13 +1,19 @@
-#include "UnitTest++/UnitTest++.h"
+#include "catch2/catch.hpp"
 
-SUITE(Test_Suite)
-{
-	TEST(Equality_1)
-	{
-		CHECK_EQUAL(1, 2);
-	}
-	TEST(Equality_2)
-	{
-		CHECK_EQUAL(1, 1);
-	}
+TEST_CASE("asd1"){
+    REQUIRE(1 == 1);
+}
+
+
+TEST_CASE("asd2"){
+    REQUIRE(1 == 1);
+}
+
+
+TEST_CASE("asd3"){
+    REQUIRE(1 == 1);
+}
+
+TEST_CASE("asd4"){
+    REQUIRE(1 == 1);
 }

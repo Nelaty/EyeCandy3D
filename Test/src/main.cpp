@@ -1,9 +1,2 @@
-#include "UnitTest++/UnitTest++.h"
-
-int main(int argc, char** argv)
-{
-	UnitTest::RunAllTests();
-	
-	printf("\nPress any key to exit.");
-	getchar();
-}
+#define CATCH_CONFIG_MAIN
+#include "catch2/catch.hpp"

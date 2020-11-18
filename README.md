@@ -6,10 +6,9 @@
 **include directories**:
 * *EyeCandy3D/include*
 * *External/include*
-* < freetype2-dir > (usually /usr/include/freetype2)
 
 **dependencies**:
-* agui (included in build)
+* [agui](https://github.com/jmasterx/Agui)
 * glfw
 * GLEW
 * GLU
@@ -42,8 +41,6 @@ The glfw lib has to be at version 3.2.1 or newer.
 
 (As of writing, Ubuntu 16.04 only has version 3.1.2 in its official repositories. glfw can be downloaded and compiled from https://github.com/glfw/glfw)
 
-The libraries are linked in EyeCandy3D/src/Core/CMakeLists.txt
-
 **building**
 
 Create and navigate to your desired build directory (in this example `./build`) and run cmake:
@@ -51,9 +48,8 @@ Create and navigate to your desired build directory (in this example `./build`) 
 mkdir build
 cd build
 cmake ..
+make -j
 ```
-
-Run `make` in your build directory.
 
 The library will be created in the `lib` subdirectory (`./build/lib`)
 

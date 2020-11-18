@@ -9,10 +9,11 @@ set(all_target_files
 
 add_library(${PROJECT_NAME} STATIC ${all_target_files})
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/EyeCandy3D/include)
-target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/External/include)
+#target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/EyeCandy3D/include)
+#target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/External/include)
 
 target_link_libraries(${PROJECT_NAME}
+        agui
         glfw
         GLEW
         GLU

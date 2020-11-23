@@ -94,31 +94,37 @@ namespace ec
 		m_position.x += x;
 		m_position.y += y;
 		m_position.z += z;
+		markDirty();
 	}
 
 	void Transform3D::translate(const glm::vec3& v)
 	{
 		m_position += v;
+        markDirty();
 	}
 
 	void Transform3D::translateX(const float x)
 	{
 		m_position.x += x;
+        markDirty();
 	}
 
 	void Transform3D::translateY(const float y)
 	{
 		m_position.y += y;
+        markDirty();
 	}
 
 	void Transform3D::translateZ(const float z)
 	{
 		m_position.z += z;
+        markDirty();
 	}
 
 	void Transform3D::setTranslation(const glm::vec3& translation)
 	{
 		m_position = translation;
+        markDirty();
 	}
 
 	void Transform3D::setTranslation(const float x, const float y, const float z)
@@ -126,21 +132,25 @@ namespace ec
 		m_position.x = x;
 		m_position.y = y;
 		m_position.z = z;
+        markDirty();
 	}
 
 	void Transform3D::setTranslationX(const float x)
 	{
 		m_position.x = x;
+        markDirty();
 	}
 
 	void Transform3D::setTranslationY(const float y)
 	{
 		m_position.y = y;
+        markDirty();
 	}
 
 	void Transform3D::setTranslationZ(const float z)
 	{
 		m_position.z = z;
+        markDirty();
 	}
 
 	void Transform3D::translateLocal(const float x, const float y, const float z)
@@ -148,6 +158,7 @@ namespace ec
 		m_position += x * glm::cross(m_forwardVector, m_up);
 		m_position += y * m_up;
 		m_position += z * m_forwardVector;
+        markDirty();
 	}
 
 	void Transform3D::translateLocal(const glm::vec3& v)
@@ -155,18 +166,21 @@ namespace ec
 		m_position += v.x * glm::cross(m_forwardVector, m_up);
 		m_position += v.y * m_up;
 		m_position += v.z * m_forwardVector;
+        markDirty();
 	}
 
 	void Transform3D::rotate(const glm::quat& rot)
 	{
 		m_forwardVector = glm::normalize(rot * m_forwardVector);
 		m_up = glm::normalize(rot * m_up);
+        markDirty();
 	}
 
 	void Transform3D::rotate(const float angle, const glm::vec3& axis)
 	{
 		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
+        markDirty();
 	}
 
 	void Transform3D::rotateX(const float angle)
@@ -174,6 +188,7 @@ namespace ec
 		glm::vec3 axis = glm::vec3(1.0f, 0.0f, 0.0f);
 		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
+        markDirty();
 	}
 
 	void Transform3D::rotateY(const float angle)
@@ -181,6 +196,7 @@ namespace ec
 		glm::vec3 axis = conf::g_coordinateSystemUp;
 		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
+        markDirty();
 	}
 
 	void Transform3D::rotateZ(const float angle)
@@ -188,6 +204,7 @@ namespace ec
 		glm::vec3 axis = glm::vec3(0.0f, 0.0f, 1.0f);
 		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
+        markDirty();
 	}
 
 	void Transform3D::rotateXLocal(const float angle)
@@ -195,6 +212,7 @@ namespace ec
 		const auto axis = glm::cross(m_forwardVector, m_up);
 		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
+        markDirty();
 	}
 
 	void Transform3D::rotateYLocal(const float angle)
@@ -202,6 +220,7 @@ namespace ec
 		const auto axis = m_up;
 		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
+        markDirty();
 	}
 
 	void Transform3D::rotateZLocal(const float angle)
@@ -209,12 +228,14 @@ namespace ec
 		const auto axis = m_forwardVector;
 		m_forwardVector = glm::normalize(glm::rotate(m_forwardVector, angle, axis));
 		m_up = glm::normalize(glm::rotate(m_up, angle, axis));
+        markDirty();
 	}
 
 	void Transform3D::setRotation(const glm::mat3& rotationMatrix)
 	{
 		m_up = glm::normalize(rotationMatrix[1]);
 		m_forwardVector = glm::normalize(rotationMatrix[2]);
+        markDirty();
 	}
 
 	const glm::vec3& Transform3D::getScale() const
@@ -240,11 +261,13 @@ namespace ec
 	void Transform3D::scale(const glm::vec3& val)
 	{
 		m_scale *= val;
+        markDirty();
 	}
 
 	void Transform3D::scale(const float uniform)
 	{
 		m_scale *= uniform;
+        markDirty();
 	}
 
 	void Transform3D::scale(const float sx, const float sy, const float sz)
@@ -252,26 +275,31 @@ namespace ec
 		m_scale.x *= sx;
 		m_scale.y *= sy;
 		m_scale.z *= sz;
+        markDirty();
 	}
 
 	void Transform3D::scaleX(const float sx)
 	{
 		m_scale.x *= sx;
+        markDirty();
 	}
 
 	void Transform3D::scaleY(const float sy)
 	{
 		m_scale.y *= sy;
+        markDirty();
 	}
 
 	void Transform3D::scaleZ(const float sz)
 	{
 		m_scale.z *= sz;
+        markDirty();
 	}
 
 	void Transform3D::setScale(const glm::vec3& val)
 	{
 		m_scale = val;
+        markDirty();
 	}
 
 	void Transform3D::setScale(const float sx, const float sy, const float sz)
@@ -279,6 +307,7 @@ namespace ec
 		m_scale.x = sx;
 		m_scale.y = sy;
 		m_scale.z = sz;
+        markDirty();
 	}
 
 	void Transform3D::setScale(const float uniform)
@@ -286,20 +315,39 @@ namespace ec
 		m_scale.x = uniform;
 		m_scale.y = uniform;
 		m_scale.z = uniform;
+        markDirty();
 	}
 
 	void Transform3D::setScaleX(const float sx)
 	{
 		m_scale.x = sx;
+        markDirty();
 	}
 
 	void Transform3D::setScaleY(const float sy)
 	{
 		m_scale.y = sy;
+        markDirty();
 	}
 
 	void Transform3D::setScaleZ(const float sz)
 	{
 		m_scale.z = sz;
+        markDirty();
 	}
+
+    void Transform3D::markDirty()
+    {
+        m_dirty = true;
+    }
+
+    void Transform3D::unmarkDirty()
+    {
+        m_dirty = false;
+    }
+
+    bool Transform3D::isDirty()
+    {
+        return m_dirty;
+    }
 }

@@ -147,7 +147,16 @@ namespace ec
 		glm::vec3 m_forwardVector;
 		glm::vec3 m_scale;
 
+        /** Change the dirty flag to true of this and all child nodes */
+        void markDirty();
+        /** Change the dirty flag of this node to false */
+        void unmarkDirty();
+        /** Get current dirty flag status */
+        bool isDirty();
+
 	private:
 		glm::mat4 m_localMat;
+
+        bool m_dirty{true};
 	};
 }

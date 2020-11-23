@@ -32,7 +32,7 @@ namespace ec
 		/**
 		 * \brief Recursively update global matrices. 
 		 */
-		virtual void updateGlobalMatrices(const glm::mat4& parentMat);
+		virtual void updateGlobalMatrices(const glm::mat4& parentMat, bool dirty=false);
 
 		/**
 		 * \brief Get the current global matrix. 

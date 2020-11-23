@@ -40,7 +40,7 @@ namespace ec
 		/** 
 		 * \brief Recursively update global matrices.
 		 */
-		void updateGlobalMatrices(const glm::mat4& parentMat) override;
+		void updateGlobalMatrices(const glm::mat4& parentMat, bool dirty=false) override;
 
 		/** 
 		 * \brief Get the current view matrix.

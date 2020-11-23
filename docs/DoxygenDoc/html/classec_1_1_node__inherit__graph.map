@@ -1,9 +1,0 @@
-<map id="ec::Node" name="ec::Node">
-<area shape="rect" id="node3" href="$classec_1_1_camera.html" title="A camera encapsulates a view and a projection matrix. It is used to render the related scene..." alt="" coords="25,623,210,905"/>
-<area shape="rect" id="node4" href="$classec_1_1_light.html" title="Abstract light source. " alt="" coords="235,667,344,861"/>
-<area shape="rect" id="node2" href="$classec_1_1_transform3_d.html" title="A transformation in 3D space. " alt="" coords="131,5,275,273"/>
-<area shape="rect" id="node5" href="$classec_1_1_directional_light.html" title="A light source that emits light in a given direction independently of its position. " alt="" coords="5,975,144,1082"/>
-<area shape="rect" id="node6" href="$classec_1_1_omni_light.html" title="Ambient lighting that acts everywhere. " alt="" coords="168,983,277,1075"/>
-<area shape="rect" id="node7" href="$classec_1_1_point_light.html" title="Light source, which emits light omnidirectional from a given position. " alt="" coords="302,968,410,1089"/>
-<area shape="rect" id="node8" href="$classec_1_1_spot_light.html" title="Light source with a direction and a conical shape. " alt="" coords="435,953,557,1104"/>
-</map>

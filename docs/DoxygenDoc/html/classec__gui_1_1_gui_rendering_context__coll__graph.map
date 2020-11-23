@@ -1,4 +1,0 @@
-<map id="ec_gui::GuiRenderingContext" name="ec_gui::GuiRenderingContext">
-<area shape="rect" id="node2" href="$structec__gui_1_1_gui_rendering_parameter_list.html" title="{ec_gui::GuiRenderingParameterList\n||}" alt="" coords="45,233,271,311"/>
-<area shape="rect" id="node4" href="$classec_1_1_freetype.html" title="{ec::Freetype\n||+ Freetype()\l+ ~Freetype()\l+ renderText()\l+ addFontFace()\l+ addFontTextureAtlas()\l+ getFontTextureAtlas()\l}" alt="" coords="77,5,239,156"/>
-</map>

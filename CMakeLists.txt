@@ -11,10 +11,12 @@ set(EYECANDY3D_INCLUDE_DIRECTORY EyeCandy3D/include/)
 set(EYECANDY3D_LIBRARY_INSTALL_PATH lib)
 set(EYECANDY3D_INCLUDE_INSTALL_PATH include/)
 
+
 # Configure output paths
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 
 set(EYECANDY3D_TEST_NAME "Test")
 
@@ -41,10 +43,10 @@ set(warnings "-Wall -Wextra -Werror	\
 # elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
 # 	set(warnings "/W4 /WX /EHsc")
 endif()
-if(NOT CONFIGURED_ONCE)
-	set(CMAKE_C_FLAGS "${warnings}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
-	set(CMAKE_CXX_FLAGS "${warnings}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
-endif()
+
+set(CMAKE_C_FLAGS "${warnings}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
+set(CMAKE_CXX_FLAGS "${warnings}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
+
 
 # Find packages
 find_package(Freetype REQUIRED)
@@ -70,5 +72,6 @@ add_test(NAME EyeCandy3DLibraryTest
 install(TARGETS ${PROJECT_NAME}
 		LIBRARY	DESTINATION ${EYECANDY3D_LIBRARY_INSTALL_PATH})
 
-set(CONFIGURED_ONCE TRUE CACHE INTERNAL "A flag showing that CMake has configured at least once.")
+install(DIRECTORY include/EC3D
+		DESTINATION include)
 

@@ -1,4 +1,0 @@
-<map id="ec::GuiRenderContext" name="ec::GuiRenderContext">
-<area shape="rect" id="node2" href="$classec_1_1_freetype.html" title="{ec::Freetype\n||+ Freetype()\l+ ~Freetype()\l+ renderText()\l+ addFontFace()\l+ addFontTextureAtlas()\l+ getFontTextureAtlas()\l}" alt="" coords="5,306,168,457"/>
-<area shape="rect" id="node3" href="$classec_1_1_shader.html" title="Bundles vertex, fragment shader, geometry, tessellation control and tessellation evaluation shaders..." alt="" coords="193,5,346,757"/>
-</map>

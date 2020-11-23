@@ -1,3 +1,0 @@
-<map id="ngl::TerrainMesh" name="ngl::TerrainMesh">
-<area shape="rect" id="node2" href="$classngl_1_1_geometry.html" title="{ngl::Geometry\n|# m_VAO\l# m_VBO\l# m_EBO\l# m_vertices\l# m_indices\l|+ ~Geometry()\l+ Render()\l+ RecalculateNormals()\l+ GetVAO()\l+ GetVBO()\l+ GetEBO()\l+ Intersects()\l# SetupMesh()\l# Geometry()\l}" alt="" coords="5,5,164,259"/>
-</map>

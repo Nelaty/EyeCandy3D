@@ -1,4 +1,0 @@
-<map id="ec_gui::TextField" name="ec_gui::TextField">
-<area shape="rect" id="node2" href="$classec__gui_1_1_text.html" title="{ec_gui::Text\n|# m_textColor\l# m_text\l|+ Text()\l+ ~Text()\l+ render()\l+ setText()\l+ setText()\l+ setText()\l+ getText()\l+ setTextColor()\l+ getTextColor()\l}" alt="" coords="9,453,123,663"/>
-<area shape="rect" id="node3" href="$classec__gui_1_1_widget.html" title="{ec_gui::Widget\n|# m_parent\l# m_children\l# m_drawable\l# m_position\l# m_size\l# m_tooltip\l# m_enabled\l# m_visible\l# m_focused\l# m_drag\l# s_theme\l|+ Widget()\l+ ~Widget()\l+ render()\l+ setDrawable()\l+ getDrawable()\l+ getParent()\l+ getParent()\l+ setParent()\l+ addChild()\l+ removeChild()\land 34 more...\l+ setTheme()\l+ getTheme()\l}" alt="" coords="9,5,123,405"/>
-</map>

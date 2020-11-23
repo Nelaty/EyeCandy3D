@@ -1,6 +1,0 @@
-<map id="ngl::Geometry" name="ngl::Geometry">
-<area shape="rect" id="node2" href="$classngl_1_1_cube_mesh.html" title="{ngl::CubeMesh\n||+ CubeMesh()\l+ CubeMesh()\l+ ~CubeMesh()\l}" alt="" coords="5,358,117,465"/>
-<area shape="rect" id="node3" href="$classngl_1_1_rectangle_mesh.html" title="{ngl::RectangleMesh\n||+ RectangleMesh()\l+ RectangleMesh()\l+ ~RectangleMesh()\l}" alt="" coords="142,358,282,465"/>
-<area shape="rect" id="node4" href="$classngl_1_1_terrain_mesh.html" title="{ngl::TerrainMesh\n||+ TerrainMesh()\l+ ~TerrainMesh()\l+ Init()\l+ Init()\l+ AddVertex()\l+ AddVertex()\l+ AddIndex()\l+ FlipNormals()\l+ Intersects()\l# SetupMesh()\l}" alt="" coords="306,307,427,516"/>
-<area shape="rect" id="node5" href="$classngl_1_1_triangle_mesh.html" title="{ngl::TriangleMesh\n||+ TriangleMesh()\l+ ~TriangleMesh()\l}" alt="" coords="451,365,578,457"/>
-</map>

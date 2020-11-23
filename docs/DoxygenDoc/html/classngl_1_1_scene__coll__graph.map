@@ -1,6 +1,0 @@
-<map id="ngl::Scene" name="ngl::Scene">
-<area shape="rect" id="node2" href="$classngl_1_1_scene_system.html" title="{ngl::SceneSystem\n||+ SceneSystem()\l+ ~SceneSystem()\l+ Render()\l+ Tick()\l+ GetScene()\l+ GetPreviousScene()\l+ GetCurrentScene()\l+ AddScene()\l+ RequestSceneChange()\l+ AddSceneController()\l+ RemoveSceneController()\l+ GetSceneController()\l+ GetWindow()\l}" alt="" coords="5,433,185,687"/>
-<area shape="rect" id="node4" href="$classngl_1_1_scene_renderer.html" title="{ngl::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ Render()\l+ SetScene()\l+ GetScene()\l}" alt="" coords="395,492,534,628"/>
-<area shape="rect" id="node6" href="$classngl_1_1_scene_controller.html" title="{ngl::SceneController\n||+ SceneController()\l+ ~SceneController()\l+ GetName()\l}" alt="" coords="651,507,793,613"/>
-<area shape="rect" id="node7" href="$classngl_1_1_input_observer.html" title="{ngl::InputObserver\n||+ ~InputObserver()\l+ Inform()\l+ Enable()\l+ IsEnabled()\l+ AddCallback()\l+ RemoveCallback()\l+ RemoveCallbacksOfType()\l+ RemoveAllCallbacks()\l+ IsCallbackRegistered()\l# InputObserver()\l# ProcessEvent()\l}" alt="" coords="629,160,815,384"/>
-</map>

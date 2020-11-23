@@ -1,3 +1,0 @@
-<map id="ngl::SceneController" name="ngl::SceneController">
-<area shape="rect" id="node2" href="$classngl_1_1_input_observer.html" title="{ngl::InputObserver\n||+ ~InputObserver()\l+ Inform()\l+ Enable()\l+ IsEnabled()\l+ AddCallback()\l+ RemoveCallback()\l+ RemoveCallbacksOfType()\l+ RemoveAllCallbacks()\l+ IsCallbackRegistered()\l# InputObserver()\l# ProcessEvent()\l}" alt="" coords="100,160,287,384"/>
-</map>

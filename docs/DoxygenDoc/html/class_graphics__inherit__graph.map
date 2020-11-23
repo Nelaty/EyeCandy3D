@@ -1,3 +1,0 @@
-<map id="Graphics" name="Graphics">
-<area shape="rect" id="node2" href="$classagui_1_1_open_g_l_graphics.html" title="{agui::OpenGLGraphics\n|# s_circleStepsNum\l# s_circleStep\l|+ OpenGLGraphics()\l+ ~OpenGLGraphics()\l+ _beginPaint()\l+ _endPaint()\l+ getDisplaySize()\l+ getClippingRectangle()\l+ drawImage()\l+ drawImage()\l+ drawScaledImage()\l+ drawText()\land 8 more...\l# setClippingRectangle()\l}" alt="" coords="5,131,169,384"/>
-</map>

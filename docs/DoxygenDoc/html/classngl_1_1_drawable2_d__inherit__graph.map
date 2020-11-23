@@ -1,3 +1,0 @@
-<map id="ngl::Drawable2D" name="ngl::Drawable2D">
-<area shape="rect" id="node2" href="$classngl_1_1_drawable.html" title="{ngl::Drawable\n|# m_geometry\l# m_material\l# m_shader\l|+ ~Drawable()\l+ Init()\l+ Render()\l+ SetGeometry()\l+ GetGeometry()\l+ SetMaterial()\l+ GetMaterial()\l+ SetShader()\l+ GetShader()\l# Drawable()\l# Drawable()\l# BeginRender()\l# Render()\l# EndRender()\l# SetMaterialUniforms()\l}" alt="" coords="5,5,164,317"/>
-</map>

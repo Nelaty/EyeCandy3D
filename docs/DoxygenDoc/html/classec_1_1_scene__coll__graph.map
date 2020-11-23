@@ -1,4 +1,0 @@
-<map id="ec::Scene" name="ec::Scene">
-<area shape="rect" id="node3" href="$classec_1_1_scene_system.html" title="{ec::SceneSystem\n||+ SceneSystem()\l+ ~SceneSystem()\l+ tick()\l+ registerScene()\l+ unregisterScene()\l+ getScene()\l+ addSceneController()\l+ removeSceneController()\l+ getSceneController()\l+ getWindow()\l}" alt="" coords="188,13,363,222"/>
-<area shape="rect" id="node6" href="$classec_1_1_scene_renderer.html" title="{ec::SceneRenderer\n||+ SceneRenderer()\l+ ~SceneRenderer()\l+ tick()\l+ render()\l+ getFrame()\l+ getFrame()\l+ setFrame()\l+ addRenderingTarget()\l# onBeginRender()\l# onRender()\l# onEndRender()\l}" alt="" coords="555,5,713,229"/>
-</map>

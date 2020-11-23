@@ -1,0 +1,116 @@
+\hypertarget{classec_1_1_light_system}{}\doxysection{ec\+::Light\+System Class Reference}
+\label{classec_1_1_light_system}\index{ec::LightSystem@{ec::LightSystem}}
+
+
+Contains a collection of different light sources.  
+
+
+
+
+{\ttfamily \#include $<$Light\+System.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::Light\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classec_1_1_light_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_light_system_ac4139d25af9956b05e4d74db83f10ede}{Light\+System}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_light_system_a945503a2b607e87f13f87e5f95d157ef}{$\sim$\+Light\+System}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_light_system_a6569ed0dd8a15a461358add2ee514f92}{enable}} (\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$shader)
+\begin{DoxyCompactList}\small\item\em Pass lights to given shader. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classec_1_1_light_system_a5df705359d32cee10426c23a3ae95fad}{register\+Light}} (\mbox{\hyperlink{classec_1_1_light}{Light}} $\ast$light)
+\begin{DoxyCompactList}\small\item\em Register a new light source. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classec_1_1_light_system_ab1bd930134d6305a5666a165fc41d0f5}{unregister\+Light}} (\mbox{\hyperlink{classec_1_1_light}{Light}} $\ast$light)
+\begin{DoxyCompactList}\small\item\em Unregister an already registered light source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains a collection of different light sources. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]\+: not implemented yet \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_light_system_ac4139d25af9956b05e4d74db83f10ede}\label{classec_1_1_light_system_ac4139d25af9956b05e4d74db83f10ede}} 
+\index{ec::LightSystem@{ec::LightSystem}!LightSystem@{LightSystem}}
+\index{LightSystem@{LightSystem}!ec::LightSystem@{ec::LightSystem}}
+\doxysubsubsection{\texorpdfstring{LightSystem()}{LightSystem()}}
+{\footnotesize\ttfamily ec\+::\+Light\+System\+::\+Light\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classec_1_1_light_system_a945503a2b607e87f13f87e5f95d157ef}\label{classec_1_1_light_system_a945503a2b607e87f13f87e5f95d157ef}} 
+\index{ec::LightSystem@{ec::LightSystem}!````~LightSystem@{$\sim$LightSystem}}
+\index{````~LightSystem@{$\sim$LightSystem}!ec::LightSystem@{ec::LightSystem}}
+\doxysubsubsection{\texorpdfstring{$\sim$LightSystem()}{~LightSystem()}}
+{\footnotesize\ttfamily ec\+::\+Light\+System\+::$\sim$\+Light\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_light_system_a6569ed0dd8a15a461358add2ee514f92}\label{classec_1_1_light_system_a6569ed0dd8a15a461358add2ee514f92}} 
+\index{ec::LightSystem@{ec::LightSystem}!enable@{enable}}
+\index{enable@{enable}!ec::LightSystem@{ec::LightSystem}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void ec\+::\+Light\+System\+::enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{shader }\end{DoxyParamCaption})}
+
+
+
+Pass lights to given shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & The shader to pass the light information to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_light_system_a5df705359d32cee10426c23a3ae95fad}\label{classec_1_1_light_system_a5df705359d32cee10426c23a3ae95fad}} 
+\index{ec::LightSystem@{ec::LightSystem}!registerLight@{registerLight}}
+\index{registerLight@{registerLight}!ec::LightSystem@{ec::LightSystem}}
+\doxysubsubsection{\texorpdfstring{registerLight()}{registerLight()}}
+{\footnotesize\ttfamily bool ec\+::\+Light\+System\+::register\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_light}{Light}} $\ast$}]{light }\end{DoxyParamCaption})}
+
+
+
+Register a new light source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light} & The light source to register. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the lights source is already registered, true otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_light_system_ab1bd930134d6305a5666a165fc41d0f5}\label{classec_1_1_light_system_ab1bd930134d6305a5666a165fc41d0f5}} 
+\index{ec::LightSystem@{ec::LightSystem}!unregisterLight@{unregisterLight}}
+\index{unregisterLight@{unregisterLight}!ec::LightSystem@{ec::LightSystem}}
+\doxysubsubsection{\texorpdfstring{unregisterLight()}{unregisterLight()}}
+{\footnotesize\ttfamily bool ec\+::\+Light\+System\+::unregister\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_light}{Light}} $\ast$}]{light }\end{DoxyParamCaption})}
+
+
+
+Unregister an already registered light source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light} & The light source to unregister. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the lights source wasn\textquotesingle{}t found, true otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Graphics/\+Lighting/\mbox{\hyperlink{_light_system_8h}{Light\+System.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Graphics/\+Lighting/\mbox{\hyperlink{_light_system_8cpp}{Light\+System.\+cpp}}\end{DoxyCompactItemize}

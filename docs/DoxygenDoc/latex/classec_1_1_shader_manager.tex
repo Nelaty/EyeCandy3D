@@ -1,0 +1,125 @@
+\hypertarget{classec_1_1_shader_manager}{}\doxysection{ec\+::Shader\+Manager Class Reference}
+\label{classec_1_1_shader_manager}\index{ec::ShaderManager@{ec::ShaderManager}}
+
+
+{\ttfamily \#include $<$Shader\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::Shader\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classec_1_1_shader_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_shader_manager_a55148a133c8ead8c61a0370dfba2d132}{Shader\+\_\+\+Ptr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_shader}{Shader}} $>$
+\item 
+using \mbox{\hyperlink{classec_1_1_shader_manager_a43eaaa56325923c6cb6280f83f8ca08a}{Shader\+Timed\+\_\+\+Ptr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_shader_timed}{Shader\+Timed}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_shader_manager_a6064ffe0b832b2744eeb83a6aef563b7}{Shader\+Manager}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_shader_manager_afda0f442e5f6194cfd4253b9def34f0a}{$\sim$\+Shader\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_shader_manager_ac5dc847819a1e8d154d8fd0280e488c1}{update}} (float time, float time\+Delta)
+\item 
+bool \mbox{\hyperlink{classec_1_1_shader_manager_a36bdf3a039a5a542ef4ea381ab5613ca}{add\+Shader}} (const std\+::string \&shader\+Name, \mbox{\hyperlink{classec_1_1_shader_manager_a55148a133c8ead8c61a0370dfba2d132}{Shader\+\_\+\+Ptr}} shader)
+\item 
+bool \mbox{\hyperlink{classec_1_1_shader_manager_a720a9aca4f9dfe076a8f3f7cde58aedf}{add\+Shader}} (const std\+::string \&shader\+Name, \mbox{\hyperlink{classec_1_1_shader_manager_a43eaaa56325923c6cb6280f83f8ca08a}{Shader\+Timed\+\_\+\+Ptr}} shader)
+\item 
+bool \mbox{\hyperlink{classec_1_1_shader_manager_a81a63a18679d10c93e75b11ded25e8f0}{add\+Shader}} (const std\+::string \&shader\+Name, const std\+::string \&vert\+Path, const std\+::string \&frag\+Path, const std\+::string \&geom\+Path=\char`\"{}\char`\"{}, const std\+::string \&tess\+Ctrl\+Path=\char`\"{}\char`\"{}, const std\+::string \&tess\+Eval\+Path=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$ \mbox{\hyperlink{classec_1_1_shader_manager_a3e1390b9c15a6809ef07a10bac4112c7}{get\+Shader}} (const char $\ast$shader\+Name) const
+\item 
+const std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_shader}{Shader}} $>$ $>$ \& \mbox{\hyperlink{classec_1_1_shader_manager_aaff28268f21b821c048f351684a0213f}{get\+All\+Shader}} () const
+\item 
+bool \mbox{\hyperlink{classec_1_1_shader_manager_af42171dd2256a130b056d772e3190da0}{switch\+Shader\+Program}} (const char $\ast$shader\+Name) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_shader_manager_a55148a133c8ead8c61a0370dfba2d132}\label{classec_1_1_shader_manager_a55148a133c8ead8c61a0370dfba2d132}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!Shader\_Ptr@{Shader\_Ptr}}
+\index{Shader\_Ptr@{Shader\_Ptr}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{Shader\_Ptr}{Shader\_Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_shader_manager_a55148a133c8ead8c61a0370dfba2d132}{ec\+::\+Shader\+Manager\+::\+Shader\+\_\+\+Ptr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_shader}{Shader}}$>$}
+
+\mbox{\Hypertarget{classec_1_1_shader_manager_a43eaaa56325923c6cb6280f83f8ca08a}\label{classec_1_1_shader_manager_a43eaaa56325923c6cb6280f83f8ca08a}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!ShaderTimed\_Ptr@{ShaderTimed\_Ptr}}
+\index{ShaderTimed\_Ptr@{ShaderTimed\_Ptr}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{ShaderTimed\_Ptr}{ShaderTimed\_Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_shader_manager_a43eaaa56325923c6cb6280f83f8ca08a}{ec\+::\+Shader\+Manager\+::\+Shader\+Timed\+\_\+\+Ptr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_shader_timed}{Shader\+Timed}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_shader_manager_a6064ffe0b832b2744eeb83a6aef563b7}\label{classec_1_1_shader_manager_a6064ffe0b832b2744eeb83a6aef563b7}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!ShaderManager@{ShaderManager}}
+\index{ShaderManager@{ShaderManager}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{ShaderManager()}{ShaderManager()}}
+{\footnotesize\ttfamily ec\+::\+Shader\+Manager\+::\+Shader\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classec_1_1_shader_manager_afda0f442e5f6194cfd4253b9def34f0a}\label{classec_1_1_shader_manager_afda0f442e5f6194cfd4253b9def34f0a}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!````~ShaderManager@{$\sim$ShaderManager}}
+\index{````~ShaderManager@{$\sim$ShaderManager}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$ShaderManager()}{~ShaderManager()}}
+{\footnotesize\ttfamily ec\+::\+Shader\+Manager\+::$\sim$\+Shader\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_shader_manager_a81a63a18679d10c93e75b11ded25e8f0}\label{classec_1_1_shader_manager_a81a63a18679d10c93e75b11ded25e8f0}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!addShader@{addShader}}
+\index{addShader@{addShader}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{addShader()}{addShader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool ec\+::\+Shader\+Manager\+::add\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{shader\+Name,  }\item[{const std\+::string \&}]{vert\+Path,  }\item[{const std\+::string \&}]{frag\+Path,  }\item[{const std\+::string \&}]{geom\+Path = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{tess\+Ctrl\+Path = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{tess\+Eval\+Path = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Create and add a new shader \mbox{\Hypertarget{classec_1_1_shader_manager_a36bdf3a039a5a542ef4ea381ab5613ca}\label{classec_1_1_shader_manager_a36bdf3a039a5a542ef4ea381ab5613ca}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!addShader@{addShader}}
+\index{addShader@{addShader}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{addShader()}{addShader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool ec\+::\+Shader\+Manager\+::add\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{shader\+Name,  }\item[{\mbox{\hyperlink{classec_1_1_shader_manager_a55148a133c8ead8c61a0370dfba2d132}{Shader\+\_\+\+Ptr}}}]{shader }\end{DoxyParamCaption})}
+
+Add an existing shader. \mbox{\Hypertarget{classec_1_1_shader_manager_a720a9aca4f9dfe076a8f3f7cde58aedf}\label{classec_1_1_shader_manager_a720a9aca4f9dfe076a8f3f7cde58aedf}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!addShader@{addShader}}
+\index{addShader@{addShader}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{addShader()}{addShader()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool ec\+::\+Shader\+Manager\+::add\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{shader\+Name,  }\item[{\mbox{\hyperlink{classec_1_1_shader_manager_a43eaaa56325923c6cb6280f83f8ca08a}{Shader\+Timed\+\_\+\+Ptr}}}]{shader }\end{DoxyParamCaption})}
+
+Add an existing shader, which will be updated continuously. \mbox{\Hypertarget{classec_1_1_shader_manager_aaff28268f21b821c048f351684a0213f}\label{classec_1_1_shader_manager_aaff28268f21b821c048f351684a0213f}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!getAllShader@{getAllShader}}
+\index{getAllShader@{getAllShader}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{getAllShader()}{getAllShader()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_shader}{ec\+::\+Shader}} $>$ $>$ \& ec\+::\+Shader\+Manager\+::get\+All\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Return all shaders \mbox{\Hypertarget{classec_1_1_shader_manager_a3e1390b9c15a6809ef07a10bac4112c7}\label{classec_1_1_shader_manager_a3e1390b9c15a6809ef07a10bac4112c7}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!getShader@{getShader}}
+\index{getShader@{getShader}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{getShader()}{getShader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$ ec\+::\+Shader\+Manager\+::get\+Shader (\begin{DoxyParamCaption}\item[{const char $\ast$}]{shader\+Name }\end{DoxyParamCaption}) const}
+
+Get a shader by its name return null if not existent \mbox{\Hypertarget{classec_1_1_shader_manager_af42171dd2256a130b056d772e3190da0}\label{classec_1_1_shader_manager_af42171dd2256a130b056d772e3190da0}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!switchShaderProgram@{switchShaderProgram}}
+\index{switchShaderProgram@{switchShaderProgram}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{switchShaderProgram()}{switchShaderProgram()}}
+{\footnotesize\ttfamily bool ec\+::\+Shader\+Manager\+::switch\+Shader\+Program (\begin{DoxyParamCaption}\item[{const char $\ast$}]{shader\+Name }\end{DoxyParamCaption}) const}
+
+Try binding another shader \mbox{\Hypertarget{classec_1_1_shader_manager_ac5dc847819a1e8d154d8fd0280e488c1}\label{classec_1_1_shader_manager_ac5dc847819a1e8d154d8fd0280e488c1}} 
+\index{ec::ShaderManager@{ec::ShaderManager}!update@{update}}
+\index{update@{update}!ec::ShaderManager@{ec::ShaderManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void ec\+::\+Shader\+Manager\+::update (\begin{DoxyParamCaption}\item[{float}]{time,  }\item[{float}]{time\+Delta }\end{DoxyParamCaption})}
+
+Update times of timed shaders and uniforms of all shaders. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Graphics/\+Shader/\mbox{\hyperlink{_shader_manager_8h}{Shader\+Manager.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Graphics/\+Shader/\mbox{\hyperlink{_shader_manager_8cpp}{Shader\+Manager.\+cpp}}\end{DoxyCompactItemize}

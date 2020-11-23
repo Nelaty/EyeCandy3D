@@ -1,0 +1,269 @@
+\hypertarget{classec_1_1_system_time}{}\doxysection{ec\+::System\+Time Class Reference}
+\label{classec_1_1_system_time}\index{ec::SystemTime@{ec::SystemTime}}
+
+
+{\ttfamily \#include $<$System\+Time.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::System\+Time\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classec_1_1_system_time__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_system_time_ab37ecc2b60896c51db31e6272728a0ba}{System\+Time}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_system_time_af227490217275ef710940bcd18569c6d}{$\sim$\+System\+Time}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_system_time_a2d16742bb2de689d907fff3ca0b2cfca}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update this structures internal time and date to the current one. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classec_1_1_system_time_a4b718dbc158199a39a0a8dc2b7034ace}{get\+Time\+And\+Date\+Formatted}} () const
+\begin{DoxyCompactList}\small\item\em Get the current time and date combined in a string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classec_1_1_system_time_aa66b5939fa20b202accd79ac150c4c1b}{get\+Time\+Formatted}} (char delimiter=\textquotesingle{}\+:\textquotesingle{}) const
+\begin{DoxyCompactList}\small\item\em Get the time as a formatted string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classec_1_1_system_time_a98c7e6d5cce91b572416c8780d7b9ca6}{get\+Date\+Formatted}} (char delimiter=\textquotesingle{}-\/\textquotesingle{}) const
+\begin{DoxyCompactList}\small\item\em Get the date as a formatted string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classec_1_1_system_time_a0ed364b6f606544c3317499878406347}{get\+Month\+String}} () const
+\begin{DoxyCompactList}\small\item\em Get the month as a string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classec_1_1_system_time_af7d3658fa0d222aae412f3c2131cb981}{get\+Week\+Day\+String}} () const
+\begin{DoxyCompactList}\small\item\em Get the weekday as a string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classec_1_1_system_time_a3064731f7779c06311e13af84ad9d6d9}{get\+Seconds}} () const
+\begin{DoxyCompactList}\small\item\em Get seconds after the current minute. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classec_1_1_system_time_a4eb52bc27f4a71111ac04cbc1fe882e0}{get\+Minutes}} () const
+\begin{DoxyCompactList}\small\item\em Get minutes after the current hour. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classec_1_1_system_time_a3faf36ab354c3dd42f8039123c5d2271}{get\+Hours}} () const
+\begin{DoxyCompactList}\small\item\em Get hour of the current day. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classec_1_1_system_time_a4bcf3a5e2d09489469e95c4434dd1332}{get\+Month\+Day}} () const
+\begin{DoxyCompactList}\small\item\em Get the day of the current month. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classec_1_1_system_time_a9460794471a501cf7a0832bea982a0a2}{get\+Month}} () const
+\begin{DoxyCompactList}\small\item\em Get the month of the current year. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classec_1_1_system_time_a7e79f025f0cff0266f96109db2478974}{get\+Year}} () const
+\begin{DoxyCompactList}\small\item\em Get the current year. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classec_1_1_system_time_adba0a134cb5e208f98cdba4da6cde675}{get\+Week\+Day}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of days after the last sunday. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classec_1_1_system_time_ad7e667e80111e8ebc99221075eab8948}{get\+Year\+Day}} () const
+\begin{DoxyCompactList}\small\item\em Get the day of the current year. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classec_1_1_system_time_abe57dcc7983076e92b7d8b3d32c021bf}{is\+Daylight\+Savings\+Day}} () const
+\begin{DoxyCompactList}\small\item\em Check for daylight savings day. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_system_time_ab37ecc2b60896c51db31e6272728a0ba}\label{classec_1_1_system_time_ab37ecc2b60896c51db31e6272728a0ba}} 
+\index{ec::SystemTime@{ec::SystemTime}!SystemTime@{SystemTime}}
+\index{SystemTime@{SystemTime}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{SystemTime()}{SystemTime()}}
+{\footnotesize\ttfamily ec\+::\+System\+Time\+::\+System\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_system_time_af227490217275ef710940bcd18569c6d}\label{classec_1_1_system_time_af227490217275ef710940bcd18569c6d}} 
+\index{ec::SystemTime@{ec::SystemTime}!````~SystemTime@{$\sim$SystemTime}}
+\index{````~SystemTime@{$\sim$SystemTime}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{$\sim$SystemTime()}{~SystemTime()}}
+{\footnotesize\ttfamily ec\+::\+System\+Time\+::$\sim$\+System\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_system_time_a98c7e6d5cce91b572416c8780d7b9ca6}\label{classec_1_1_system_time_a98c7e6d5cce91b572416c8780d7b9ca6}} 
+\index{ec::SystemTime@{ec::SystemTime}!getDateFormatted@{getDateFormatted}}
+\index{getDateFormatted@{getDateFormatted}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getDateFormatted()}{getDateFormatted()}}
+{\footnotesize\ttfamily std\+::string ec\+::\+System\+Time\+::get\+Date\+Formatted (\begin{DoxyParamCaption}\item[{char}]{delimiter = {\ttfamily \textquotesingle{}-\/\textquotesingle{}} }\end{DoxyParamCaption}) const}
+
+
+
+Get the date as a formatted string. 
+
+\begin{DoxyReturn}{Returns}
+Date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_a3faf36ab354c3dd42f8039123c5d2271}\label{classec_1_1_system_time_a3faf36ab354c3dd42f8039123c5d2271}} 
+\index{ec::SystemTime@{ec::SystemTime}!getHours@{getHours}}
+\index{getHours@{getHours}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getHours()}{getHours()}}
+{\footnotesize\ttfamily int ec\+::\+System\+Time\+::get\+Hours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get hour of the current day. 
+
+\begin{DoxyReturn}{Returns}
+Hours \mbox{[}1, 24\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_a4eb52bc27f4a71111ac04cbc1fe882e0}\label{classec_1_1_system_time_a4eb52bc27f4a71111ac04cbc1fe882e0}} 
+\index{ec::SystemTime@{ec::SystemTime}!getMinutes@{getMinutes}}
+\index{getMinutes@{getMinutes}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getMinutes()}{getMinutes()}}
+{\footnotesize\ttfamily int ec\+::\+System\+Time\+::get\+Minutes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get minutes after the current hour. 
+
+\begin{DoxyReturn}{Returns}
+Minutes \mbox{[}1, 60\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_a9460794471a501cf7a0832bea982a0a2}\label{classec_1_1_system_time_a9460794471a501cf7a0832bea982a0a2}} 
+\index{ec::SystemTime@{ec::SystemTime}!getMonth@{getMonth}}
+\index{getMonth@{getMonth}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getMonth()}{getMonth()}}
+{\footnotesize\ttfamily int ec\+::\+System\+Time\+::get\+Month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the month of the current year. 
+
+\begin{DoxyReturn}{Returns}
+Month \mbox{[}1, 12\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_a4bcf3a5e2d09489469e95c4434dd1332}\label{classec_1_1_system_time_a4bcf3a5e2d09489469e95c4434dd1332}} 
+\index{ec::SystemTime@{ec::SystemTime}!getMonthDay@{getMonthDay}}
+\index{getMonthDay@{getMonthDay}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getMonthDay()}{getMonthDay()}}
+{\footnotesize\ttfamily int ec\+::\+System\+Time\+::get\+Month\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the day of the current month. 
+
+\begin{DoxyReturn}{Returns}
+Day \mbox{[}1, 31\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_a0ed364b6f606544c3317499878406347}\label{classec_1_1_system_time_a0ed364b6f606544c3317499878406347}} 
+\index{ec::SystemTime@{ec::SystemTime}!getMonthString@{getMonthString}}
+\index{getMonthString@{getMonthString}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getMonthString()}{getMonthString()}}
+{\footnotesize\ttfamily std\+::string ec\+::\+System\+Time\+::get\+Month\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the month as a string. 
+
+\begin{DoxyReturn}{Returns}
+Month 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_a3064731f7779c06311e13af84ad9d6d9}\label{classec_1_1_system_time_a3064731f7779c06311e13af84ad9d6d9}} 
+\index{ec::SystemTime@{ec::SystemTime}!getSeconds@{getSeconds}}
+\index{getSeconds@{getSeconds}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getSeconds()}{getSeconds()}}
+{\footnotesize\ttfamily int ec\+::\+System\+Time\+::get\+Seconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get seconds after the current minute. 
+
+\begin{DoxyReturn}{Returns}
+Seconds \mbox{[}1, 60\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_a4b718dbc158199a39a0a8dc2b7034ace}\label{classec_1_1_system_time_a4b718dbc158199a39a0a8dc2b7034ace}} 
+\index{ec::SystemTime@{ec::SystemTime}!getTimeAndDateFormatted@{getTimeAndDateFormatted}}
+\index{getTimeAndDateFormatted@{getTimeAndDateFormatted}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getTimeAndDateFormatted()}{getTimeAndDateFormatted()}}
+{\footnotesize\ttfamily std\+::string ec\+::\+System\+Time\+::get\+Time\+And\+Date\+Formatted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current time and date combined in a string. 
+
+\begin{DoxyReturn}{Returns}
+Date and time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_aa66b5939fa20b202accd79ac150c4c1b}\label{classec_1_1_system_time_aa66b5939fa20b202accd79ac150c4c1b}} 
+\index{ec::SystemTime@{ec::SystemTime}!getTimeFormatted@{getTimeFormatted}}
+\index{getTimeFormatted@{getTimeFormatted}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getTimeFormatted()}{getTimeFormatted()}}
+{\footnotesize\ttfamily std\+::string ec\+::\+System\+Time\+::get\+Time\+Formatted (\begin{DoxyParamCaption}\item[{char}]{delimiter = {\ttfamily \textquotesingle{}\+:\textquotesingle{}} }\end{DoxyParamCaption}) const}
+
+
+
+Get the time as a formatted string. 
+
+\begin{DoxyReturn}{Returns}
+Time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_adba0a134cb5e208f98cdba4da6cde675}\label{classec_1_1_system_time_adba0a134cb5e208f98cdba4da6cde675}} 
+\index{ec::SystemTime@{ec::SystemTime}!getWeekDay@{getWeekDay}}
+\index{getWeekDay@{getWeekDay}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getWeekDay()}{getWeekDay()}}
+{\footnotesize\ttfamily int ec\+::\+System\+Time\+::get\+Week\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of days after the last sunday. 
+
+\begin{DoxyReturn}{Returns}
+Week day \mbox{[}0, 6\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_af7d3658fa0d222aae412f3c2131cb981}\label{classec_1_1_system_time_af7d3658fa0d222aae412f3c2131cb981}} 
+\index{ec::SystemTime@{ec::SystemTime}!getWeekDayString@{getWeekDayString}}
+\index{getWeekDayString@{getWeekDayString}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getWeekDayString()}{getWeekDayString()}}
+{\footnotesize\ttfamily std\+::string ec\+::\+System\+Time\+::get\+Week\+Day\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the weekday as a string. 
+
+\begin{DoxyReturn}{Returns}
+Week day 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_a7e79f025f0cff0266f96109db2478974}\label{classec_1_1_system_time_a7e79f025f0cff0266f96109db2478974}} 
+\index{ec::SystemTime@{ec::SystemTime}!getYear@{getYear}}
+\index{getYear@{getYear}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getYear()}{getYear()}}
+{\footnotesize\ttfamily int ec\+::\+System\+Time\+::get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current year. 
+
+\begin{DoxyReturn}{Returns}
+Year 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_ad7e667e80111e8ebc99221075eab8948}\label{classec_1_1_system_time_ad7e667e80111e8ebc99221075eab8948}} 
+\index{ec::SystemTime@{ec::SystemTime}!getYearDay@{getYearDay}}
+\index{getYearDay@{getYearDay}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{getYearDay()}{getYearDay()}}
+{\footnotesize\ttfamily int ec\+::\+System\+Time\+::get\+Year\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the day of the current year. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{[}1, 366\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_abe57dcc7983076e92b7d8b3d32c021bf}\label{classec_1_1_system_time_abe57dcc7983076e92b7d8b3d32c021bf}} 
+\index{ec::SystemTime@{ec::SystemTime}!isDaylightSavingsDay@{isDaylightSavingsDay}}
+\index{isDaylightSavingsDay@{isDaylightSavingsDay}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{isDaylightSavingsDay()}{isDaylightSavingsDay()}}
+{\footnotesize\ttfamily bool ec\+::\+System\+Time\+::is\+Daylight\+Savings\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check for daylight savings day. 
+
+\begin{DoxyReturn}{Returns}
+True if it is daylight savings day, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_system_time_a2d16742bb2de689d907fff3ca0b2cfca}\label{classec_1_1_system_time_a2d16742bb2de689d907fff3ca0b2cfca}} 
+\index{ec::SystemTime@{ec::SystemTime}!update@{update}}
+\index{update@{update}!ec::SystemTime@{ec::SystemTime}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void ec\+::\+System\+Time\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update this structures internal time and date to the current one. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\mbox{\hyperlink{_system_time_8h}{System\+Time.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Utilities/\mbox{\hyperlink{_system_time_8cpp}{System\+Time.\+cpp}}\end{DoxyCompactItemize}

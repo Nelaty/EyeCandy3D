@@ -1,0 +1,9 @@
+<map id="ec::LineGeometry" name="ec::LineGeometry">
+<area shape="rect" id="node1" title="Describes the geometry of a single line." alt="" coords="26,920,179,1056"/>
+<area shape="rect" id="node2" href="$classec_1_1_static_geometry.html" title="Geometry that does not change itself over time." alt="" coords="33,764,172,871"/>
+<area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="Geometry." alt="" coords="26,491,179,715"/>
+<area shape="rect" id="node4" href="$classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry." alt="" coords="5,211,157,362"/>
+<area shape="rect" id="node5" href="$classec_1_1_geometry_data.html" title="Encapsulates vertex and index data and knows how to create, update and delete OpenGL buffers." alt="" coords="181,145,325,428"/>
+<area shape="rect" id="node6" title=" " alt="" coords="101,5,238,83"/>
+<area shape="rect" id="node7" title=" " alt="" coords="263,5,412,83"/>
+</map>

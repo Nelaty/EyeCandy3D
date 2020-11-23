@@ -1,0 +1,230 @@
+\hypertarget{classec_1_1_renderer}{}\doxysection{ec\+::Renderer Class Reference}
+\label{classec_1_1_renderer}\index{ec::Renderer@{ec::Renderer}}
+
+
+A \mbox{\hyperlink{classec_1_1_renderer}{Renderer}} is responsible for rendering storing and using scene renderers.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::Renderer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec_1_1_renderer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_renderer_a97bc5e3d5050aa98a24fec3669eab28b}{Renderer}} (\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_renderer}{Renderer}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_renderer_ab0a97bd174127b670899477a576d1fe6}{$\sim$\+Renderer}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_renderer_acfa2ed0fd23f3f6e36de59302a0148ad}{init}} (\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$gui\+Shader, \mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$text\+Shader) const
+\item 
+void \mbox{\hyperlink{classec_1_1_renderer_a6dcc619251e6e4ec7f088567cba6fd57}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Update all gui systems. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_renderer_a7ff2c9444ad5da2a6db3331f19cb12f9}{render}} () const
+\begin{DoxyCompactList}\small\item\em Render to the currently active window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_renderer_abb876cb59df2478b52926782e2d0a0a9}{change\+Renderer}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Change to an active renderer with the given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_renderer_aff1e2f129ce6b24a5ed1e27730a13762}{change\+Renderer}} (\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Change the current scene renderer to a given one. The given renderer doesn\textquotesingle{}t have to be registered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_renderer_a5e40791070a8fcb7250b4544bdac8725}{register\+Scene\+Renderer}} (const std\+::string \&name, \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Register a new scene renderer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} $\ast$ \mbox{\hyperlink{classec_1_1_renderer_a5c853ee4c34b069cc8142db8409abac6}{unregister\+Scene\+Renderer}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Unregister an already registered scene renderer with the given name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} $\ast$ \mbox{\hyperlink{classec_1_1_renderer_ab4e0c57f9d1f061f97e1fa188d52c477}{get\+Scene\+Renderer}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Get a scene renderer with the given name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_renderer_a7dcfbdfd04d48452aba34a591b48341f}{render\+Gui}} () const
+\begin{DoxyCompactList}\small\item\em Render the gui of every camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$ \mbox{\hyperlink{classec_1_1_renderer_ac23d74f9d295bf833f095bdff8c8169b}{m\+\_\+window}}
+\item 
+\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} $\ast$ \mbox{\hyperlink{classec_1_1_renderer_a00afed952025d62a654a5f961a55b342}{m\+\_\+active\+Renderer}}
+\item 
+\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} $\ast$ \mbox{\hyperlink{classec_1_1_renderer_a818d84064fde8088d28358f7ea04f898}{m\+\_\+last\+Renderer}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_gui_renderer}{Gui\+Renderer}} $>$ \mbox{\hyperlink{classec_1_1_renderer_ac5969cd9baf68b5a3a02535bc9e9dd07}{m\+\_\+gui\+Renderer}}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} $\ast$ $>$ \mbox{\hyperlink{classec_1_1_renderer_ac3f0c1c3253fbac0f734af313cc410a4}{m\+\_\+renderer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classec_1_1_renderer}{Renderer}} is responsible for rendering storing and using scene renderers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_renderer_a97bc5e3d5050aa98a24fec3669eab28b}\label{classec_1_1_renderer_a97bc5e3d5050aa98a24fec3669eab28b}} 
+\index{ec::Renderer@{ec::Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily ec\+::\+Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classec_1_1_renderer}{Renderer}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window to render into \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_renderer_ab0a97bd174127b670899477a576d1fe6}\label{classec_1_1_renderer_ab0a97bd174127b670899477a576d1fe6}} 
+\index{ec::Renderer@{ec::Renderer}!````~Renderer@{$\sim$Renderer}}
+\index{````~Renderer@{$\sim$Renderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Renderer()}{~Renderer()}}
+{\footnotesize\ttfamily ec\+::\+Renderer\+::$\sim$\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_renderer_abb876cb59df2478b52926782e2d0a0a9}\label{classec_1_1_renderer_abb876cb59df2478b52926782e2d0a0a9}} 
+\index{ec::Renderer@{ec::Renderer}!changeRenderer@{changeRenderer}}
+\index{changeRenderer@{changeRenderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{changeRenderer()}{changeRenderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ec\+::\+Renderer\+::change\+Renderer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Change to an active renderer with the given name. 
+
+The renderer has to be registered. \mbox{\Hypertarget{classec_1_1_renderer_aff1e2f129ce6b24a5ed1e27730a13762}\label{classec_1_1_renderer_aff1e2f129ce6b24a5ed1e27730a13762}} 
+\index{ec::Renderer@{ec::Renderer}!changeRenderer@{changeRenderer}}
+\index{changeRenderer@{changeRenderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{changeRenderer()}{changeRenderer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Renderer\+::change\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Change the current scene renderer to a given one. The given renderer doesn\textquotesingle{}t have to be registered. 
+
+\mbox{\Hypertarget{classec_1_1_renderer_ab4e0c57f9d1f061f97e1fa188d52c477}\label{classec_1_1_renderer_ab4e0c57f9d1f061f97e1fa188d52c477}} 
+\index{ec::Renderer@{ec::Renderer}!getSceneRenderer@{getSceneRenderer}}
+\index{getSceneRenderer@{getSceneRenderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{getSceneRenderer()}{getSceneRenderer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_renderer}{ec\+::\+Scene\+Renderer}} $\ast$ ec\+::\+Renderer\+::get\+Scene\+Renderer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Get a scene renderer with the given name. 
+
+\begin{DoxyReturn}{Returns}
+The found scene renderer if it exist, nullptr otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_renderer_acfa2ed0fd23f3f6e36de59302a0148ad}\label{classec_1_1_renderer_acfa2ed0fd23f3f6e36de59302a0148ad}} 
+\index{ec::Renderer@{ec::Renderer}!init@{init}}
+\index{init@{init}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void ec\+::\+Renderer\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{gui\+Shader,  }\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{text\+Shader }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_renderer_a5e40791070a8fcb7250b4544bdac8725}\label{classec_1_1_renderer_a5e40791070a8fcb7250b4544bdac8725}} 
+\index{ec::Renderer@{ec::Renderer}!registerSceneRenderer@{registerSceneRenderer}}
+\index{registerSceneRenderer@{registerSceneRenderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{registerSceneRenderer()}{registerSceneRenderer()}}
+{\footnotesize\ttfamily void ec\+::\+Renderer\+::register\+Scene\+Renderer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}} $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Register a new scene renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The id of the new registered renderer. \\
+\hline
+{\em renderer} & The new renderer to register. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_renderer_a7ff2c9444ad5da2a6db3331f19cb12f9}\label{classec_1_1_renderer_a7ff2c9444ad5da2a6db3331f19cb12f9}} 
+\index{ec::Renderer@{ec::Renderer}!render@{render}}
+\index{render@{render}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void ec\+::\+Renderer\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Render to the currently active window. 
+
+\mbox{\Hypertarget{classec_1_1_renderer_a7dcfbdfd04d48452aba34a591b48341f}\label{classec_1_1_renderer_a7dcfbdfd04d48452aba34a591b48341f}} 
+\index{ec::Renderer@{ec::Renderer}!renderGui@{renderGui}}
+\index{renderGui@{renderGui}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{renderGui()}{renderGui()}}
+{\footnotesize\ttfamily void ec\+::\+Renderer\+::render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Render the gui of every camera. 
+
+\mbox{\Hypertarget{classec_1_1_renderer_a6dcc619251e6e4ec7f088567cba6fd57}\label{classec_1_1_renderer_a6dcc619251e6e4ec7f088567cba6fd57}} 
+\index{ec::Renderer@{ec::Renderer}!tick@{tick}}
+\index{tick@{tick}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void ec\+::\+Renderer\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update all gui systems. 
+
+\mbox{\Hypertarget{classec_1_1_renderer_a5c853ee4c34b069cc8142db8409abac6}\label{classec_1_1_renderer_a5c853ee4c34b069cc8142db8409abac6}} 
+\index{ec::Renderer@{ec::Renderer}!unregisterSceneRenderer@{unregisterSceneRenderer}}
+\index{unregisterSceneRenderer@{unregisterSceneRenderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{unregisterSceneRenderer()}{unregisterSceneRenderer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_renderer}{ec\+::\+Scene\+Renderer}} $\ast$ ec\+::\+Renderer\+::unregister\+Scene\+Renderer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Unregister an already registered scene renderer with the given name. 
+
+\begin{DoxyReturn}{Returns}
+The unregistered scene renderer if it exist, nullptr otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_renderer_a00afed952025d62a654a5f961a55b342}\label{classec_1_1_renderer_a00afed952025d62a654a5f961a55b342}} 
+\index{ec::Renderer@{ec::Renderer}!m\_activeRenderer@{m\_activeRenderer}}
+\index{m\_activeRenderer@{m\_activeRenderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{m\_activeRenderer}{m\_activeRenderer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}}$\ast$ ec\+::\+Renderer\+::m\+\_\+active\+Renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_renderer_ac5969cd9baf68b5a3a02535bc9e9dd07}\label{classec_1_1_renderer_ac5969cd9baf68b5a3a02535bc9e9dd07}} 
+\index{ec::Renderer@{ec::Renderer}!m\_guiRenderer@{m\_guiRenderer}}
+\index{m\_guiRenderer@{m\_guiRenderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{m\_guiRenderer}{m\_guiRenderer}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_gui_renderer}{Gui\+Renderer}}$>$ ec\+::\+Renderer\+::m\+\_\+gui\+Renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_renderer_a818d84064fde8088d28358f7ea04f898}\label{classec_1_1_renderer_a818d84064fde8088d28358f7ea04f898}} 
+\index{ec::Renderer@{ec::Renderer}!m\_lastRenderer@{m\_lastRenderer}}
+\index{m\_lastRenderer@{m\_lastRenderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{m\_lastRenderer}{m\_lastRenderer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}}$\ast$ ec\+::\+Renderer\+::m\+\_\+last\+Renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_renderer_ac3f0c1c3253fbac0f734af313cc410a4}\label{classec_1_1_renderer_ac3f0c1c3253fbac0f734af313cc410a4}} 
+\index{ec::Renderer@{ec::Renderer}!m\_renderer@{m\_renderer}}
+\index{m\_renderer@{m\_renderer}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{m\_renderer}{m\_renderer}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classec_1_1_scene_renderer}{Scene\+Renderer}}$\ast$$>$ ec\+::\+Renderer\+::m\+\_\+renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_renderer_ac23d74f9d295bf833f095bdff8c8169b}\label{classec_1_1_renderer_ac23d74f9d295bf833f095bdff8c8169b}} 
+\index{ec::Renderer@{ec::Renderer}!m\_window@{m\_window}}
+\index{m\_window@{m\_window}!ec::Renderer@{ec::Renderer}}
+\doxysubsubsection{\texorpdfstring{m\_window}{m\_window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_window}{Window}}$\ast$ ec\+::\+Renderer\+::m\+\_\+window\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Graphics/\+Render/\mbox{\hyperlink{_renderer_8h}{Renderer.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Graphics/\+Render/\mbox{\hyperlink{_renderer_8cpp}{Renderer.\+cpp}}\end{DoxyCompactItemize}

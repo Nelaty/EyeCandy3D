@@ -1,0 +1,335 @@
+\hypertarget{classec_1_1_generic_text_box_listener}{}\doxysection{ec\+::Generic\+Text\+Box\+Listener Class Reference}
+\label{classec_1_1_generic_text_box_listener}\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+
+
+Generic gui listener that can handle events by Text\+Box widgets.  
+
+
+
+
+{\ttfamily \#include $<$Generic\+Text\+Box\+Listener.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Generic\+Text\+Box\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classec_1_1_generic_text_box_listener__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Generic\+Text\+Box\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classec_1_1_generic_text_box_listener__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_acef5d6f448ba7f8a90e56deed9e4be68}{Death\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ae0559ffa241ec16797f0554715b7b632}{Max\+Length\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source, int max\+Length)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aed51cf39c992e6c9fd7baa1df567504e}{Hiding\+Selection\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source, bool hiding)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a1099a678278dd6c888d0ba18af73979b}{Standard\+Arrow\+Key\+Rules\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source, bool using\+Standard)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ac4ce805fe48ae654108a7de04e310780}{Splitting\+Words\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source, bool splitting\+Words)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a7bc50ee05522edf211ca7ce6a86f16c7}{Text\+Appended\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source, const std\+::string \&appended\+Text)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a25c554bc062fdfdc805f7aefe981a3ea}{Selection\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source, int start\+Index, int end\+Index)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_af2e239586f0259a784148eb5fb3f6b4a}{Selection\+Deleted\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a43801948fb5a222ba933b085a2f095a3}{Max\+Character\+Skipped\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source, int max\+Skip)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a2046d1c27dca4b40f4bc373a3ce2be1e}{Read\+Only\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source, bool read\+Only)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aa94d95c932df4d70fe03c501520f0d16}{Word\+Wrapped\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Text\+Box $\ast$source, bool word\+Wrapped)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_generic_text_box_listener_a67a848ae0c82ca90d9e2fe7f515c5bce}{Generic\+Text\+Box\+Listener}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_generic_text_box_listener_a80f94d0051b4214c9309997efc6b620c}{$\sim$\+Generic\+Text\+Box\+Listener}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a8a807340857e0d0ab13aa8b0ddfb29b1}{set\+Death\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_acef5d6f448ba7f8a90e56deed9e4be68}{Death\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a5f9786e20c18f3080737c52cc56f2953}{set\+Max\+Length\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ae0559ffa241ec16797f0554715b7b632}{Max\+Length\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aa369e0222c94c14977dd13166f2a5a67}{set\+Hiding\+Selection\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aed51cf39c992e6c9fd7baa1df567504e}{Hiding\+Selection\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a9cbf2ac332c022e6070fb26465487a9b}{set\+Standard\+Arrow\+Key\+Rules\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a1099a678278dd6c888d0ba18af73979b}{Standard\+Arrow\+Key\+Rules\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_af4b822b94f926c6c1bccbade024015df}{set\+Splitting\+Words\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ac4ce805fe48ae654108a7de04e310780}{Splitting\+Words\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a644d32f4ecdf11da00bcd9f509de5f7d}{set\+Text\+Appended\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a7bc50ee05522edf211ca7ce6a86f16c7}{Text\+Appended\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ae00c8fe6bf39e816e8dd72a93b5dc889}{set\+Selection\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a25c554bc062fdfdc805f7aefe981a3ea}{Selection\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a187ad507a6a811f3895f4ea79bce8bf4}{set\+Selection\+Deleted\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_af2e239586f0259a784148eb5fb3f6b4a}{Selection\+Deleted\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a2fe6e45a08c128b982225fd28fb13bba}{set\+Max\+Character\+Skipped\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a43801948fb5a222ba933b085a2f095a3}{Max\+Character\+Skipped\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a30cb51d557af4b5fac63dd8787b190a1}{set\+Read\+Only\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a2046d1c27dca4b40f4bc373a3ce2be1e}{Read\+Only\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ac8f1f1c007e002ad7677e291e44d33dd}{set\+Word\+Wrapped\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aa94d95c932df4d70fe03c501520f0d16}{Word\+Wrapped\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a11f6063d4c34595db719b4a1c251379b}{death}} (agui\+::\+Text\+Box $\ast$source) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a2f35b5eba26dc67175a87632f96651e9}{max\+Length\+Changed}} (agui\+::\+Text\+Box $\ast$source, int max\+Length) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a2cb740757cc13929d4ad3a928307960f}{hiding\+Selection\+Changed}} (agui\+::\+Text\+Box $\ast$source, bool hiding) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ac57517b272f19eefe4408f4aa5409c55}{standard\+Arrow\+Key\+Rules\+Changed}} (agui\+::\+Text\+Box $\ast$source, bool using\+Standard) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a2014c6c0b1c44c2a36d0dbab7cfae7e5}{splitting\+Words\+Changed}} (agui\+::\+Text\+Box $\ast$source, bool splitting\+Words) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a719c94c960a53eb5cac8c18b037ad505}{text\+Appended}} (agui\+::\+Text\+Box $\ast$source, const std\+::string \&appended\+Text) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aa9446926f03c32f34212232ec81809a5}{selection\+Changed}} (agui\+::\+Text\+Box $\ast$source, int start\+Index, int end\+Index) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a5f1b7490ad657f39a2a1d6270446482e}{selection\+Deleted}} (agui\+::\+Text\+Box $\ast$source) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aea1d18f7bda91591408fc0408ff04284}{max\+Character\+Skipped\+Changed}} (agui\+::\+Text\+Box $\ast$source, int max\+Skip) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a90daf3b875c097cd53bbf2c8b83558e3}{read\+Only\+Changed}} (agui\+::\+Text\+Box $\ast$source, bool read\+Only) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a96cdc8f0e3932f1cfbe2fd6888818452}{word\+Wrapped\+Changed}} (agui\+::\+Text\+Box $\ast$source, bool word\+Wrapped) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic gui listener that can handle events by Text\+Box widgets. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_acef5d6f448ba7f8a90e56deed9e4be68}\label{classec_1_1_generic_text_box_listener_acef5d6f448ba7f8a90e56deed9e4be68}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!Death\_Callback@{Death\_Callback}}
+\index{Death\_Callback@{Death\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{Death\_Callback}{Death\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_acef5d6f448ba7f8a90e56deed9e4be68}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Death\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_aed51cf39c992e6c9fd7baa1df567504e}\label{classec_1_1_generic_text_box_listener_aed51cf39c992e6c9fd7baa1df567504e}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!HidingSelectionChanged\_Callback@{HidingSelectionChanged\_Callback}}
+\index{HidingSelectionChanged\_Callback@{HidingSelectionChanged\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{HidingSelectionChanged\_Callback}{HidingSelectionChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aed51cf39c992e6c9fd7baa1df567504e}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Hiding\+Selection\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source, bool hiding)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a43801948fb5a222ba933b085a2f095a3}\label{classec_1_1_generic_text_box_listener_a43801948fb5a222ba933b085a2f095a3}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!MaxCharacterSkippedChanged\_Callback@{MaxCharacterSkippedChanged\_Callback}}
+\index{MaxCharacterSkippedChanged\_Callback@{MaxCharacterSkippedChanged\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{MaxCharacterSkippedChanged\_Callback}{MaxCharacterSkippedChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a43801948fb5a222ba933b085a2f095a3}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Max\+Character\+Skipped\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source, int max\+Skip)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_ae0559ffa241ec16797f0554715b7b632}\label{classec_1_1_generic_text_box_listener_ae0559ffa241ec16797f0554715b7b632}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!MaxLengthChanged\_Callback@{MaxLengthChanged\_Callback}}
+\index{MaxLengthChanged\_Callback@{MaxLengthChanged\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{MaxLengthChanged\_Callback}{MaxLengthChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ae0559ffa241ec16797f0554715b7b632}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Max\+Length\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source, int max\+Length)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a2046d1c27dca4b40f4bc373a3ce2be1e}\label{classec_1_1_generic_text_box_listener_a2046d1c27dca4b40f4bc373a3ce2be1e}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!ReadOnlyChanged\_Callback@{ReadOnlyChanged\_Callback}}
+\index{ReadOnlyChanged\_Callback@{ReadOnlyChanged\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{ReadOnlyChanged\_Callback}{ReadOnlyChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a2046d1c27dca4b40f4bc373a3ce2be1e}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Read\+Only\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source, bool read\+Only)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a25c554bc062fdfdc805f7aefe981a3ea}\label{classec_1_1_generic_text_box_listener_a25c554bc062fdfdc805f7aefe981a3ea}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!SelectionChanged\_Callback@{SelectionChanged\_Callback}}
+\index{SelectionChanged\_Callback@{SelectionChanged\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{SelectionChanged\_Callback}{SelectionChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a25c554bc062fdfdc805f7aefe981a3ea}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Selection\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source, int start\+Index, int end\+Index)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_af2e239586f0259a784148eb5fb3f6b4a}\label{classec_1_1_generic_text_box_listener_af2e239586f0259a784148eb5fb3f6b4a}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!SelectionDeleted\_Callback@{SelectionDeleted\_Callback}}
+\index{SelectionDeleted\_Callback@{SelectionDeleted\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{SelectionDeleted\_Callback}{SelectionDeleted\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_af2e239586f0259a784148eb5fb3f6b4a}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Selection\+Deleted\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_ac4ce805fe48ae654108a7de04e310780}\label{classec_1_1_generic_text_box_listener_ac4ce805fe48ae654108a7de04e310780}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!SplittingWordsChanged\_Callback@{SplittingWordsChanged\_Callback}}
+\index{SplittingWordsChanged\_Callback@{SplittingWordsChanged\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{SplittingWordsChanged\_Callback}{SplittingWordsChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ac4ce805fe48ae654108a7de04e310780}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Splitting\+Words\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source, bool splitting\+Words)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a1099a678278dd6c888d0ba18af73979b}\label{classec_1_1_generic_text_box_listener_a1099a678278dd6c888d0ba18af73979b}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!StandardArrowKeyRulesChanged\_Callback@{StandardArrowKeyRulesChanged\_Callback}}
+\index{StandardArrowKeyRulesChanged\_Callback@{StandardArrowKeyRulesChanged\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{StandardArrowKeyRulesChanged\_Callback}{StandardArrowKeyRulesChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a1099a678278dd6c888d0ba18af73979b}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Standard\+Arrow\+Key\+Rules\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source, bool using\+Standard)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a7bc50ee05522edf211ca7ce6a86f16c7}\label{classec_1_1_generic_text_box_listener_a7bc50ee05522edf211ca7ce6a86f16c7}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!TextAppended\_Callback@{TextAppended\_Callback}}
+\index{TextAppended\_Callback@{TextAppended\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{TextAppended\_Callback}{TextAppended\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a7bc50ee05522edf211ca7ce6a86f16c7}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Text\+Appended\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source, const std\+::string\& appended\+Text)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_aa94d95c932df4d70fe03c501520f0d16}\label{classec_1_1_generic_text_box_listener_aa94d95c932df4d70fe03c501520f0d16}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!WordWrappedChanged\_Callback@{WordWrappedChanged\_Callback}}
+\index{WordWrappedChanged\_Callback@{WordWrappedChanged\_Callback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{WordWrappedChanged\_Callback}{WordWrappedChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aa94d95c932df4d70fe03c501520f0d16}{ec\+::\+Generic\+Text\+Box\+Listener\+::\+Word\+Wrapped\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Text\+Box$\ast$ source, bool word\+Wrapped)$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a67a848ae0c82ca90d9e2fe7f515c5bce}\label{classec_1_1_generic_text_box_listener_a67a848ae0c82ca90d9e2fe7f515c5bce}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!GenericTextBoxListener@{GenericTextBoxListener}}
+\index{GenericTextBoxListener@{GenericTextBoxListener}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{GenericTextBoxListener()}{GenericTextBoxListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Text\+Box\+Listener\+::\+Generic\+Text\+Box\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a80f94d0051b4214c9309997efc6b620c}\label{classec_1_1_generic_text_box_listener_a80f94d0051b4214c9309997efc6b620c}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!````~GenericTextBoxListener@{$\sim$GenericTextBoxListener}}
+\index{````~GenericTextBoxListener@{$\sim$GenericTextBoxListener}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenericTextBoxListener()}{~GenericTextBoxListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Text\+Box\+Listener\+::$\sim$\+Generic\+Text\+Box\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a11f6063d4c34595db719b4a1c251379b}\label{classec_1_1_generic_text_box_listener_a11f6063d4c34595db719b4a1c251379b}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!death@{death}}
+\index{death@{death}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{death()}{death()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::death (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a2cb740757cc13929d4ad3a928307960f}\label{classec_1_1_generic_text_box_listener_a2cb740757cc13929d4ad3a928307960f}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!hidingSelectionChanged@{hidingSelectionChanged}}
+\index{hidingSelectionChanged@{hidingSelectionChanged}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{hidingSelectionChanged()}{hidingSelectionChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::hiding\+Selection\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source,  }\item[{bool}]{hiding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_aea1d18f7bda91591408fc0408ff04284}\label{classec_1_1_generic_text_box_listener_aea1d18f7bda91591408fc0408ff04284}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!maxCharacterSkippedChanged@{maxCharacterSkippedChanged}}
+\index{maxCharacterSkippedChanged@{maxCharacterSkippedChanged}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{maxCharacterSkippedChanged()}{maxCharacterSkippedChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::max\+Character\+Skipped\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source,  }\item[{int}]{max\+Skip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a2f35b5eba26dc67175a87632f96651e9}\label{classec_1_1_generic_text_box_listener_a2f35b5eba26dc67175a87632f96651e9}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!maxLengthChanged@{maxLengthChanged}}
+\index{maxLengthChanged@{maxLengthChanged}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{maxLengthChanged()}{maxLengthChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::max\+Length\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source,  }\item[{int}]{max\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a90daf3b875c097cd53bbf2c8b83558e3}\label{classec_1_1_generic_text_box_listener_a90daf3b875c097cd53bbf2c8b83558e3}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!readOnlyChanged@{readOnlyChanged}}
+\index{readOnlyChanged@{readOnlyChanged}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{readOnlyChanged()}{readOnlyChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::read\+Only\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source,  }\item[{bool}]{read\+Only }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_aa9446926f03c32f34212232ec81809a5}\label{classec_1_1_generic_text_box_listener_aa9446926f03c32f34212232ec81809a5}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!selectionChanged@{selectionChanged}}
+\index{selectionChanged@{selectionChanged}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{selectionChanged()}{selectionChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::selection\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source,  }\item[{int}]{start\+Index,  }\item[{int}]{end\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a5f1b7490ad657f39a2a1d6270446482e}\label{classec_1_1_generic_text_box_listener_a5f1b7490ad657f39a2a1d6270446482e}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!selectionDeleted@{selectionDeleted}}
+\index{selectionDeleted@{selectionDeleted}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{selectionDeleted()}{selectionDeleted()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::selection\+Deleted (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a8a807340857e0d0ab13aa8b0ddfb29b1}\label{classec_1_1_generic_text_box_listener_a8a807340857e0d0ab13aa8b0ddfb29b1}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setDeathCallback@{setDeathCallback}}
+\index{setDeathCallback@{setDeathCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setDeathCallback()}{setDeathCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Death\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_acef5d6f448ba7f8a90e56deed9e4be68}{Death\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_aa369e0222c94c14977dd13166f2a5a67}\label{classec_1_1_generic_text_box_listener_aa369e0222c94c14977dd13166f2a5a67}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setHidingSelectionChangedCallback@{setHidingSelectionChangedCallback}}
+\index{setHidingSelectionChangedCallback@{setHidingSelectionChangedCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setHidingSelectionChangedCallback()}{setHidingSelectionChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Hiding\+Selection\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aed51cf39c992e6c9fd7baa1df567504e}{Hiding\+Selection\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a2fe6e45a08c128b982225fd28fb13bba}\label{classec_1_1_generic_text_box_listener_a2fe6e45a08c128b982225fd28fb13bba}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setMaxCharacterSkippedChangedCallback@{setMaxCharacterSkippedChangedCallback}}
+\index{setMaxCharacterSkippedChangedCallback@{setMaxCharacterSkippedChangedCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setMaxCharacterSkippedChangedCallback()}{setMaxCharacterSkippedChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Max\+Character\+Skipped\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a43801948fb5a222ba933b085a2f095a3}{Max\+Character\+Skipped\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a5f9786e20c18f3080737c52cc56f2953}\label{classec_1_1_generic_text_box_listener_a5f9786e20c18f3080737c52cc56f2953}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setMaxLengthChangedCallback@{setMaxLengthChangedCallback}}
+\index{setMaxLengthChangedCallback@{setMaxLengthChangedCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setMaxLengthChangedCallback()}{setMaxLengthChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Max\+Length\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ae0559ffa241ec16797f0554715b7b632}{Max\+Length\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a30cb51d557af4b5fac63dd8787b190a1}\label{classec_1_1_generic_text_box_listener_a30cb51d557af4b5fac63dd8787b190a1}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setReadOnlyChangedCallback@{setReadOnlyChangedCallback}}
+\index{setReadOnlyChangedCallback@{setReadOnlyChangedCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setReadOnlyChangedCallback()}{setReadOnlyChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Read\+Only\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a2046d1c27dca4b40f4bc373a3ce2be1e}{Read\+Only\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_ae00c8fe6bf39e816e8dd72a93b5dc889}\label{classec_1_1_generic_text_box_listener_ae00c8fe6bf39e816e8dd72a93b5dc889}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setSelectionChangedCallback@{setSelectionChangedCallback}}
+\index{setSelectionChangedCallback@{setSelectionChangedCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setSelectionChangedCallback()}{setSelectionChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Selection\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a25c554bc062fdfdc805f7aefe981a3ea}{Selection\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a187ad507a6a811f3895f4ea79bce8bf4}\label{classec_1_1_generic_text_box_listener_a187ad507a6a811f3895f4ea79bce8bf4}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setSelectionDeletedCallback@{setSelectionDeletedCallback}}
+\index{setSelectionDeletedCallback@{setSelectionDeletedCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setSelectionDeletedCallback()}{setSelectionDeletedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Selection\+Deleted\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_af2e239586f0259a784148eb5fb3f6b4a}{Selection\+Deleted\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_af4b822b94f926c6c1bccbade024015df}\label{classec_1_1_generic_text_box_listener_af4b822b94f926c6c1bccbade024015df}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setSplittingWordsChangedCallback@{setSplittingWordsChangedCallback}}
+\index{setSplittingWordsChangedCallback@{setSplittingWordsChangedCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setSplittingWordsChangedCallback()}{setSplittingWordsChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Splitting\+Words\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_ac4ce805fe48ae654108a7de04e310780}{Splitting\+Words\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a9cbf2ac332c022e6070fb26465487a9b}\label{classec_1_1_generic_text_box_listener_a9cbf2ac332c022e6070fb26465487a9b}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setStandardArrowKeyRulesChangedCallback@{setStandardArrowKeyRulesChangedCallback}}
+\index{setStandardArrowKeyRulesChangedCallback@{setStandardArrowKeyRulesChangedCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setStandardArrowKeyRulesChangedCallback()}{setStandardArrowKeyRulesChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Standard\+Arrow\+Key\+Rules\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a1099a678278dd6c888d0ba18af73979b}{Standard\+Arrow\+Key\+Rules\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a644d32f4ecdf11da00bcd9f509de5f7d}\label{classec_1_1_generic_text_box_listener_a644d32f4ecdf11da00bcd9f509de5f7d}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setTextAppendedCallback@{setTextAppendedCallback}}
+\index{setTextAppendedCallback@{setTextAppendedCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setTextAppendedCallback()}{setTextAppendedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Text\+Appended\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_a7bc50ee05522edf211ca7ce6a86f16c7}{Text\+Appended\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_ac8f1f1c007e002ad7677e291e44d33dd}\label{classec_1_1_generic_text_box_listener_ac8f1f1c007e002ad7677e291e44d33dd}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!setWordWrappedChangedCallback@{setWordWrappedChangedCallback}}
+\index{setWordWrappedChangedCallback@{setWordWrappedChangedCallback}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{setWordWrappedChangedCallback()}{setWordWrappedChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::set\+Word\+Wrapped\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_text_box_listener_aa94d95c932df4d70fe03c501520f0d16}{Word\+Wrapped\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a2014c6c0b1c44c2a36d0dbab7cfae7e5}\label{classec_1_1_generic_text_box_listener_a2014c6c0b1c44c2a36d0dbab7cfae7e5}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!splittingWordsChanged@{splittingWordsChanged}}
+\index{splittingWordsChanged@{splittingWordsChanged}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{splittingWordsChanged()}{splittingWordsChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::splitting\+Words\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source,  }\item[{bool}]{splitting\+Words }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_ac57517b272f19eefe4408f4aa5409c55}\label{classec_1_1_generic_text_box_listener_ac57517b272f19eefe4408f4aa5409c55}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!standardArrowKeyRulesChanged@{standardArrowKeyRulesChanged}}
+\index{standardArrowKeyRulesChanged@{standardArrowKeyRulesChanged}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{standardArrowKeyRulesChanged()}{standardArrowKeyRulesChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::standard\+Arrow\+Key\+Rules\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source,  }\item[{bool}]{using\+Standard }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a719c94c960a53eb5cac8c18b037ad505}\label{classec_1_1_generic_text_box_listener_a719c94c960a53eb5cac8c18b037ad505}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!textAppended@{textAppended}}
+\index{textAppended@{textAppended}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{textAppended()}{textAppended()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::text\+Appended (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source,  }\item[{const std\+::string \&}]{appended\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_text_box_listener_a96cdc8f0e3932f1cfbe2fd6888818452}\label{classec_1_1_generic_text_box_listener_a96cdc8f0e3932f1cfbe2fd6888818452}} 
+\index{ec::GenericTextBoxListener@{ec::GenericTextBoxListener}!wordWrappedChanged@{wordWrappedChanged}}
+\index{wordWrappedChanged@{wordWrappedChanged}!ec::GenericTextBoxListener@{ec::GenericTextBoxListener}}
+\doxysubsubsection{\texorpdfstring{wordWrappedChanged()}{wordWrappedChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Text\+Box\+Listener\+::word\+Wrapped\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Text\+Box $\ast$}]{source,  }\item[{bool}]{word\+Wrapped }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Gui/\+Listener/\mbox{\hyperlink{_generic_text_box_listener_8h}{Generic\+Text\+Box\+Listener.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Gui/\+Listener/\mbox{\hyperlink{_generic_text_box_listener_8cpp}{Generic\+Text\+Box\+Listener.\+cpp}}\end{DoxyCompactItemize}

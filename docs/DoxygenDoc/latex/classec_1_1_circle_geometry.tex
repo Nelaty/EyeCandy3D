@@ -1,0 +1,120 @@
+\hypertarget{classec_1_1_circle_geometry}{}\doxysection{ec\+::Circle\+Geometry Class Reference}
+\label{classec_1_1_circle_geometry}\index{ec::CircleGeometry@{ec::CircleGeometry}}
+
+
+Concrete static geometry that represents a circle.  
+
+
+
+
+{\ttfamily \#include $<$Circle\+Geometry.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Circle\+Geometry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_circle_geometry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Circle\+Geometry\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_circle_geometry__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_circle_geometry_addbe5d69b86093eb1002638e24f2de18}{Circle\+Geometry}} (float radius=1.\+0f, int section\+Count=20)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_circle_geometry}{Circle\+Geometry}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_circle_geometry_a1cba969c53a5379e281c720883d932e7}{$\sim$\+Circle\+Geometry}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_circle_geometry_aef6ab090302b5370c4369ec3f806f98e}{init}} (float radius, int section\+Count)
+\begin{DoxyCompactList}\small\item\em Change the circle geometry. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classec_1_1_circle_geometry_a7926a1f020f9b4998e0d4be0912b7b80}{get\+Radius}} () const
+\begin{DoxyCompactList}\small\item\em Get the radius of the circle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classec_1_1_circle_geometry_a68648b12d6d2d7ffaf39d141f758e22b}{get\+Section\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of sections used to approximate the circle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Concrete static geometry that represents a circle. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_circle_geometry_addbe5d69b86093eb1002638e24f2de18}\label{classec_1_1_circle_geometry_addbe5d69b86093eb1002638e24f2de18}} 
+\index{ec::CircleGeometry@{ec::CircleGeometry}!CircleGeometry@{CircleGeometry}}
+\index{CircleGeometry@{CircleGeometry}!ec::CircleGeometry@{ec::CircleGeometry}}
+\doxysubsubsection{\texorpdfstring{CircleGeometry()}{CircleGeometry()}}
+{\footnotesize\ttfamily ec\+::\+Circle\+Geometry\+::\+Circle\+Geometry (\begin{DoxyParamCaption}\item[{float}]{radius = {\ttfamily 1.0f},  }\item[{int}]{section\+Count = {\ttfamily 20} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classec_1_1_circle_geometry}{Circle\+Geometry}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The initial radius. \mbox{[}$>$0\mbox{]} \\
+\hline
+{\em section\+Count} & The initial number of triangles used to approximate this circle. \mbox{[}$>$2\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_circle_geometry_a1cba969c53a5379e281c720883d932e7}\label{classec_1_1_circle_geometry_a1cba969c53a5379e281c720883d932e7}} 
+\index{ec::CircleGeometry@{ec::CircleGeometry}!````~CircleGeometry@{$\sim$CircleGeometry}}
+\index{````~CircleGeometry@{$\sim$CircleGeometry}!ec::CircleGeometry@{ec::CircleGeometry}}
+\doxysubsubsection{\texorpdfstring{$\sim$CircleGeometry()}{~CircleGeometry()}}
+{\footnotesize\ttfamily ec\+::\+Circle\+Geometry\+::$\sim$\+Circle\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_circle_geometry_a7926a1f020f9b4998e0d4be0912b7b80}\label{classec_1_1_circle_geometry_a7926a1f020f9b4998e0d4be0912b7b80}} 
+\index{ec::CircleGeometry@{ec::CircleGeometry}!getRadius@{getRadius}}
+\index{getRadius@{getRadius}!ec::CircleGeometry@{ec::CircleGeometry}}
+\doxysubsubsection{\texorpdfstring{getRadius()}{getRadius()}}
+{\footnotesize\ttfamily float ec\+::\+Circle\+Geometry\+::get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the radius of the circle. 
+
+\mbox{\Hypertarget{classec_1_1_circle_geometry_a68648b12d6d2d7ffaf39d141f758e22b}\label{classec_1_1_circle_geometry_a68648b12d6d2d7ffaf39d141f758e22b}} 
+\index{ec::CircleGeometry@{ec::CircleGeometry}!getSectionCount@{getSectionCount}}
+\index{getSectionCount@{getSectionCount}!ec::CircleGeometry@{ec::CircleGeometry}}
+\doxysubsubsection{\texorpdfstring{getSectionCount()}{getSectionCount()}}
+{\footnotesize\ttfamily int ec\+::\+Circle\+Geometry\+::get\+Section\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of sections used to approximate the circle. 
+
+\mbox{\Hypertarget{classec_1_1_circle_geometry_aef6ab090302b5370c4369ec3f806f98e}\label{classec_1_1_circle_geometry_aef6ab090302b5370c4369ec3f806f98e}} 
+\index{ec::CircleGeometry@{ec::CircleGeometry}!init@{init}}
+\index{init@{init}!ec::CircleGeometry@{ec::CircleGeometry}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void ec\+::\+Circle\+Geometry\+::init (\begin{DoxyParamCaption}\item[{float}]{radius,  }\item[{int}]{section\+Count }\end{DoxyParamCaption})}
+
+
+
+Change the circle geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The circle radius. \mbox{[}$>$0\mbox{]} \\
+\hline
+{\em section\+Count} & The number of triangles used to approximate this circle. \mbox{[}$>$2\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Graphics/\+Geometry/\mbox{\hyperlink{_circle_geometry_8h}{Circle\+Geometry.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Graphics/\+Geometry/\mbox{\hyperlink{_circle_geometry_8cpp}{Circle\+Geometry.\+cpp}}\end{DoxyCompactItemize}

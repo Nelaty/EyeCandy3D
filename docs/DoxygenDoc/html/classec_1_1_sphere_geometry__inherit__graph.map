@@ -1,0 +1,6 @@
+<map id="ec::SphereGeometry" name="ec::SphereGeometry">
+<area shape="rect" id="node1" title="Geometry that represents a sphere." alt="" coords="9,631,155,781"/>
+<area shape="rect" id="node2" href="$classec_1_1_static_geometry.html" title="Geometry that does not change itself over time." alt="" coords="13,476,151,583"/>
+<area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="Geometry." alt="" coords="5,204,159,428"/>
+<area shape="rect" id="node4" href="$classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry." alt="" coords="6,5,158,156"/>
+</map>

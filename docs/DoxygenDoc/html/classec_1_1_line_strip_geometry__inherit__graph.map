@@ -1,0 +1,6 @@
+<map id="ec::LineStripGeometry" name="ec::LineStripGeometry">
+<area shape="rect" id="node1" title="Describes the geometry of a line strip." alt="" coords="5,631,161,796"/>
+<area shape="rect" id="node2" href="$classec_1_1_static_geometry.html" title="Geometry that does not change itself over time." alt="" coords="14,476,153,583"/>
+<area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="Geometry." alt="" coords="7,204,160,428"/>
+<area shape="rect" id="node4" href="$classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry." alt="" coords="7,5,159,156"/>
+</map>

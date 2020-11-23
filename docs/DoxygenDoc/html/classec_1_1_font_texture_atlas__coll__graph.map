@@ -1,0 +1,4 @@
+<map id="ec::FontTextureAtlas" name="ec::FontTextureAtlas">
+<area shape="rect" id="node1" title="Saves all font characters of a specific font. Font characters will be saved on a single texture,..." alt="" coords="5,160,152,296"/>
+<area shape="rect" id="node2" title=" " alt="" coords="48,5,109,83"/>
+</map>

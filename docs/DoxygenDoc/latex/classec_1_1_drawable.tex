@@ -1,0 +1,277 @@
+\hypertarget{classec_1_1_drawable}{}\doxysection{ec\+::Drawable Class Reference}
+\label{classec_1_1_drawable}\index{ec::Drawable@{ec::Drawable}}
+
+
+Core class for rendering geometry data with a certain material and shader.  
+
+
+
+
+{\ttfamily \#include $<$Drawable.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::Drawable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_drawable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_drawable_adb3c4e7b4d3d510489a26b3d1a8094a2}{Drawable}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_drawable_a1a6fee8a6543e001ee2943bda72e17cd}{Drawable}} (\mbox{\hyperlink{classec_1_1_i_geometry_access}{I\+Geometry\+Access}} $\ast$\mbox{\hyperlink{_resource_type_8h_af12fe3e5d8da3d7bd4c76e44cca2319c}{geometry}}, \mbox{\hyperlink{classec_1_1_material}{Material}} $\ast$\mbox{\hyperlink{_resource_type_8h_a16f6cac2c88eef38bdba4f004e042542}{material}}, \mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$shader)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_drawable}{Drawable}} constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classec_1_1_drawable_a4a82e5cd6d6a47ad86ed42cfdda512d8}{$\sim$\+Drawable}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_drawable_ac494c72b1b0396dbe25a822da4e328a9}{init}} (\mbox{\hyperlink{classec_1_1_i_geometry_access}{I\+Geometry\+Access}} $\ast$\mbox{\hyperlink{_resource_type_8h_af12fe3e5d8da3d7bd4c76e44cca2319c}{geometry}}, \mbox{\hyperlink{classec_1_1_material}{Material}} $\ast$\mbox{\hyperlink{_resource_type_8h_a16f6cac2c88eef38bdba4f004e042542}{material}}, \mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$shader)
+\begin{DoxyCompactList}\small\item\em Initialize this drawable. Comfort function. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classec_1_1_drawable_ac9d3345bd308fce8c99adbfc12c53106}{render}} (const glm\+::mat4 \&model)
+\begin{DoxyCompactList}\small\item\em Render this drawable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_drawable_a76bcb843ef5ced898724fa79a9b20250}{set\+Geometry}} (\mbox{\hyperlink{classec_1_1_i_geometry_access}{I\+Geometry\+Access}} $\ast$\mbox{\hyperlink{_resource_type_8h_af12fe3e5d8da3d7bd4c76e44cca2319c}{geometry}})
+\begin{DoxyCompactList}\small\item\em Set the current geometry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_i_geometry_access}{I\+Geometry\+Access}} $\ast$ \mbox{\hyperlink{classec_1_1_drawable_a49a90aac40736ff3c182196c2b86c2f3}{get\+Geometry}} () const
+\begin{DoxyCompactList}\small\item\em Get the current geometry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_drawable_a0fc7868639a83830d4b60dfad85a0826}{set\+Material}} (\mbox{\hyperlink{classec_1_1_material}{Material}} $\ast$\mbox{\hyperlink{_resource_type_8h_a16f6cac2c88eef38bdba4f004e042542}{material}})
+\begin{DoxyCompactList}\small\item\em Set the current material. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_material}{Material}} $\ast$ \mbox{\hyperlink{classec_1_1_drawable_ac74210aca5428bedbf8af7abe9adbcc1}{get\+Material}} () const
+\begin{DoxyCompactList}\small\item\em Get the current material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_drawable_a413f373bb2cba109497377e18b084048}{set\+Shader}} (\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$shader)
+\begin{DoxyCompactList}\small\item\em Set the current shader. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$ \mbox{\hyperlink{classec_1_1_drawable_a7de4c8aa937bda1009c6428ceeb541c1}{get\+Shader}} () const
+\begin{DoxyCompactList}\small\item\em Get the current shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_drawable_a9cb72c1eda19a82c849a291e7d45f2b8}{begin\+Render}} (const glm\+::mat4 \&model)
+\begin{DoxyCompactList}\small\item\em Prepare drawable for rendering. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classec_1_1_drawable_a7da17eae29c09e49d1a8c2c48e85f88a}{render}} ()
+\begin{DoxyCompactList}\small\item\em Render the drawable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classec_1_1_drawable_abf99119cd72054a55d91a7605aa62e32}{end\+Render}} ()
+\begin{DoxyCompactList}\small\item\em Finalize the rendering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classec_1_1_drawable_af2b64f8e6faa71bee8cccb14387d8432}{set\+Material\+Uniforms}} (\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$shader, \mbox{\hyperlink{classec_1_1_material}{Material}} $\ast$\mbox{\hyperlink{_resource_type_8h_a16f6cac2c88eef38bdba4f004e042542}{material}})
+\begin{DoxyCompactList}\small\item\em Transfer material data to the shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_i_geometry_access}{I\+Geometry\+Access}} $\ast$ \mbox{\hyperlink{classec_1_1_drawable_a12fc649448250ab8a16e862495d22752}{m\+\_\+geometry}}
+\item 
+\mbox{\hyperlink{classec_1_1_material}{Material}} $\ast$ \mbox{\hyperlink{classec_1_1_drawable_ae95da71e937a2008a84300b8d29ac052}{m\+\_\+material}}
+\item 
+\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$ \mbox{\hyperlink{classec_1_1_drawable_aee71f07b65189391a7a465d880d744e3}{m\+\_\+shader}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Core class for rendering geometry data with a certain material and shader. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_drawable_adb3c4e7b4d3d510489a26b3d1a8094a2}\label{classec_1_1_drawable_adb3c4e7b4d3d510489a26b3d1a8094a2}} 
+\index{ec::Drawable@{ec::Drawable}!Drawable@{Drawable}}
+\index{Drawable@{Drawable}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{Drawable()}{Drawable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ec\+::\+Drawable\+::\+Drawable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_drawable_a1a6fee8a6543e001ee2943bda72e17cd}\label{classec_1_1_drawable_a1a6fee8a6543e001ee2943bda72e17cd}} 
+\index{ec::Drawable@{ec::Drawable}!Drawable@{Drawable}}
+\index{Drawable@{Drawable}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{Drawable()}{Drawable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ec\+::\+Drawable\+::\+Drawable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_i_geometry_access}{I\+Geometry\+Access}} $\ast$}]{geometry,  }\item[{\mbox{\hyperlink{classec_1_1_material}{Material}} $\ast$}]{material,  }\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{shader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classec_1_1_drawable}{Drawable}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em geometry} & The geometry to render onto. \\
+\hline
+{\em material} & Color information. \\
+\hline
+{\em shader} & The shader used for drawing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_drawable_a4a82e5cd6d6a47ad86ed42cfdda512d8}\label{classec_1_1_drawable_a4a82e5cd6d6a47ad86ed42cfdda512d8}} 
+\index{ec::Drawable@{ec::Drawable}!````~Drawable@{$\sim$Drawable}}
+\index{````~Drawable@{$\sim$Drawable}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{$\sim$Drawable()}{~Drawable()}}
+{\footnotesize\ttfamily ec\+::\+Drawable\+::$\sim$\+Drawable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_drawable_a9cb72c1eda19a82c849a291e7d45f2b8}\label{classec_1_1_drawable_a9cb72c1eda19a82c849a291e7d45f2b8}} 
+\index{ec::Drawable@{ec::Drawable}!beginRender@{beginRender}}
+\index{beginRender@{beginRender}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{beginRender()}{beginRender()}}
+{\footnotesize\ttfamily void ec\+::\+Drawable\+::begin\+Render (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Prepare drawable for rendering. 
+
+\mbox{\Hypertarget{classec_1_1_drawable_abf99119cd72054a55d91a7605aa62e32}\label{classec_1_1_drawable_abf99119cd72054a55d91a7605aa62e32}} 
+\index{ec::Drawable@{ec::Drawable}!endRender@{endRender}}
+\index{endRender@{endRender}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{endRender()}{endRender()}}
+{\footnotesize\ttfamily void ec\+::\+Drawable\+::end\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Finalize the rendering. 
+
+\mbox{\Hypertarget{classec_1_1_drawable_a49a90aac40736ff3c182196c2b86c2f3}\label{classec_1_1_drawable_a49a90aac40736ff3c182196c2b86c2f3}} 
+\index{ec::Drawable@{ec::Drawable}!getGeometry@{getGeometry}}
+\index{getGeometry@{getGeometry}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{getGeometry()}{getGeometry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_i_geometry_access}{ec\+::\+I\+Geometry\+Access}} $\ast$ ec\+::\+Drawable\+::get\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current geometry. 
+
+\mbox{\Hypertarget{classec_1_1_drawable_ac74210aca5428bedbf8af7abe9adbcc1}\label{classec_1_1_drawable_ac74210aca5428bedbf8af7abe9adbcc1}} 
+\index{ec::Drawable@{ec::Drawable}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_material}{ec\+::\+Material}} $\ast$ ec\+::\+Drawable\+::get\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current material. 
+
+\mbox{\Hypertarget{classec_1_1_drawable_a7de4c8aa937bda1009c6428ceeb541c1}\label{classec_1_1_drawable_a7de4c8aa937bda1009c6428ceeb541c1}} 
+\index{ec::Drawable@{ec::Drawable}!getShader@{getShader}}
+\index{getShader@{getShader}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{getShader()}{getShader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_shader}{ec\+::\+Shader}} $\ast$ ec\+::\+Drawable\+::get\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current shader. 
+
+\mbox{\Hypertarget{classec_1_1_drawable_ac494c72b1b0396dbe25a822da4e328a9}\label{classec_1_1_drawable_ac494c72b1b0396dbe25a822da4e328a9}} 
+\index{ec::Drawable@{ec::Drawable}!init@{init}}
+\index{init@{init}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void ec\+::\+Drawable\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_i_geometry_access}{I\+Geometry\+Access}} $\ast$}]{geometry,  }\item[{\mbox{\hyperlink{classec_1_1_material}{Material}} $\ast$}]{material,  }\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{shader }\end{DoxyParamCaption})}
+
+
+
+Initialize this drawable. Comfort function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em geometry} & The geometry to render onto. \\
+\hline
+{\em material} & Color information. \\
+\hline
+{\em shader} & The shader used for drawing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_drawable_a7da17eae29c09e49d1a8c2c48e85f88a}\label{classec_1_1_drawable_a7da17eae29c09e49d1a8c2c48e85f88a}} 
+\index{ec::Drawable@{ec::Drawable}!render@{render}}
+\index{render@{render}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ec\+::\+Drawable\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Render the drawable. 
+
+\mbox{\Hypertarget{classec_1_1_drawable_ac9d3345bd308fce8c99adbfc12c53106}\label{classec_1_1_drawable_ac9d3345bd308fce8c99adbfc12c53106}} 
+\index{ec::Drawable@{ec::Drawable}!render@{render}}
+\index{render@{render}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Drawable\+::render (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Render this drawable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & Transformation of the object to draw. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_drawable_a76bcb843ef5ced898724fa79a9b20250}\label{classec_1_1_drawable_a76bcb843ef5ced898724fa79a9b20250}} 
+\index{ec::Drawable@{ec::Drawable}!setGeometry@{setGeometry}}
+\index{setGeometry@{setGeometry}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{setGeometry()}{setGeometry()}}
+{\footnotesize\ttfamily void ec\+::\+Drawable\+::set\+Geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_i_geometry_access}{I\+Geometry\+Access}} $\ast$}]{geometry }\end{DoxyParamCaption})}
+
+
+
+Set the current geometry. 
+
+\mbox{\Hypertarget{classec_1_1_drawable_a0fc7868639a83830d4b60dfad85a0826}\label{classec_1_1_drawable_a0fc7868639a83830d4b60dfad85a0826}} 
+\index{ec::Drawable@{ec::Drawable}!setMaterial@{setMaterial}}
+\index{setMaterial@{setMaterial}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{setMaterial()}{setMaterial()}}
+{\footnotesize\ttfamily void ec\+::\+Drawable\+::set\+Material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_material}{Material}} $\ast$}]{material }\end{DoxyParamCaption})}
+
+
+
+Set the current material. 
+
+\mbox{\Hypertarget{classec_1_1_drawable_af2b64f8e6faa71bee8cccb14387d8432}\label{classec_1_1_drawable_af2b64f8e6faa71bee8cccb14387d8432}} 
+\index{ec::Drawable@{ec::Drawable}!setMaterialUniforms@{setMaterialUniforms}}
+\index{setMaterialUniforms@{setMaterialUniforms}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{setMaterialUniforms()}{setMaterialUniforms()}}
+{\footnotesize\ttfamily void ec\+::\+Drawable\+::set\+Material\+Uniforms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{shader,  }\item[{\mbox{\hyperlink{classec_1_1_material}{Material}} $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Transfer material data to the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & The shader to pass the data to. \\
+\hline
+{\em material} & The material data to pass. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_drawable_a413f373bb2cba109497377e18b084048}\label{classec_1_1_drawable_a413f373bb2cba109497377e18b084048}} 
+\index{ec::Drawable@{ec::Drawable}!setShader@{setShader}}
+\index{setShader@{setShader}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{setShader()}{setShader()}}
+{\footnotesize\ttfamily void ec\+::\+Drawable\+::set\+Shader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_shader}{Shader}} $\ast$}]{shader }\end{DoxyParamCaption})}
+
+
+
+Set the current shader. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_drawable_a12fc649448250ab8a16e862495d22752}\label{classec_1_1_drawable_a12fc649448250ab8a16e862495d22752}} 
+\index{ec::Drawable@{ec::Drawable}!m\_geometry@{m\_geometry}}
+\index{m\_geometry@{m\_geometry}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{m\_geometry}{m\_geometry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_i_geometry_access}{I\+Geometry\+Access}}$\ast$ ec\+::\+Drawable\+::m\+\_\+geometry\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_drawable_ae95da71e937a2008a84300b8d29ac052}\label{classec_1_1_drawable_ae95da71e937a2008a84300b8d29ac052}} 
+\index{ec::Drawable@{ec::Drawable}!m\_material@{m\_material}}
+\index{m\_material@{m\_material}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{m\_material}{m\_material}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_material}{Material}}$\ast$ ec\+::\+Drawable\+::m\+\_\+material\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_drawable_aee71f07b65189391a7a465d880d744e3}\label{classec_1_1_drawable_aee71f07b65189391a7a465d880d744e3}} 
+\index{ec::Drawable@{ec::Drawable}!m\_shader@{m\_shader}}
+\index{m\_shader@{m\_shader}!ec::Drawable@{ec::Drawable}}
+\doxysubsubsection{\texorpdfstring{m\_shader}{m\_shader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_shader}{Shader}}$\ast$ ec\+::\+Drawable\+::m\+\_\+shader\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Graphics/\mbox{\hyperlink{_drawable_8h}{Drawable.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Graphics/\mbox{\hyperlink{_drawable_8cpp}{Drawable.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classec_1_1_transform3_d.html" title="A transformation in 3D space." alt="" coords="5,56,123,83"/>
+<area shape="rect" id="node2" href="$classec_1_1_node.html" title="Nodes make up the scene graph. They represent a directed acyclic graph." alt="" coords="171,56,244,83"/>
+<area shape="rect" id="node3" href="$classec_1_1_camera.html" title="A camera encapsulates a view and a projection matrix. It is used to render the related scene...." alt="" coords="292,31,379,57"/>
+<area shape="rect" id="node4" href="$classec_1_1_light.html" title="Abstract light source." alt="" coords="300,81,371,108"/>
+<area shape="rect" id="node5" href="$classec_1_1_directional_light.html" title="A light source that emits light in a given direction independently of its position." alt="" coords="427,5,559,32"/>
+<area shape="rect" id="node6" href="$classec_1_1_omni_light.html" title="Ambient lighting that acts everywhere." alt="" coords="441,56,544,83"/>
+<area shape="rect" id="node7" href="$classec_1_1_point_light.html" title="Light source, which emits light omnidirectional from a given position." alt="" coords="442,107,543,133"/>
+<area shape="rect" id="node8" href="$classec_1_1_spot_light.html" title="Light source with a direction and a conical shape." alt="" coords="443,157,542,184"/>
+</map>

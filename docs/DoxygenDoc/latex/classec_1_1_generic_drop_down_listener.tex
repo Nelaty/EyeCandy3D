@@ -1,0 +1,239 @@
+\hypertarget{classec_1_1_generic_drop_down_listener}{}\doxysection{ec\+::Generic\+Drop\+Down\+Listener Class Reference}
+\label{classec_1_1_generic_drop_down_listener}\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+
+
+Generic gui listener that can handle events by Drop\+Down widgets.  
+
+
+
+
+{\ttfamily \#include $<$Generic\+Drop\+Down\+Listener.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Generic\+Drop\+Down\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classec_1_1_generic_drop_down_listener__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Generic\+Drop\+Down\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classec_1_1_generic_drop_down_listener__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a72a84eeb2fdcc0eae78b78c53a59db3b}{Death\+Callback\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Drop\+Down $\ast$source)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ac5e0a45750cc64cb003f20d438047ddd}{Drop\+Down\+Shown\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Drop\+Down $\ast$source)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ae0548e780805b39f5817e6659932b478}{Drop\+Down\+Hidden\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Drop\+Down $\ast$source)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a3a4f9e1a8d9e016ea30e8cc781b8bcb9}{Resize\+To\+Widest\+Item\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Drop\+Down $\ast$source, bool \mbox{\hyperlink{namespaceec_a84e452d7f020435b50e2c18e7cdca968}{resize}})$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a4acbadec20937340572893a989e248f1}{Max\+Drop\+Down\+Height\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Drop\+Down $\ast$source, int height)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a3b5721d086e03a50097fa2bd37e4030a}{Item\+Added\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Drop\+Down $\ast$source, const std\+::string \&item)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ad1513561f8a3a3614e207797df83e730}{Item\+Removed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Drop\+Down $\ast$source, const std\+::string \&item)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ab0f41e6d3614c6c367de876820dbc14a}{Generic\+Drop\+Down\+Listener}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a7e3e68d403e669dcf4205e0d235a752e}{$\sim$\+Generic\+Drop\+Down\+Listener}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a6fac243931f048ee2cc55ec1ffa5ccf4}{set\+Death\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a72a84eeb2fdcc0eae78b78c53a59db3b}{Death\+Callback\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ae5bf872ddc31e7c456eb017ac7906381}{set\+Drop\+Down\+Shown\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ac5e0a45750cc64cb003f20d438047ddd}{Drop\+Down\+Shown\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a3960331abcb033fbace69f59e875cadd}{set\+Drop\+Down\+Hidden\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ae0548e780805b39f5817e6659932b478}{Drop\+Down\+Hidden\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a21fbfc8758a5829d06a0fc589a93c87c}{set\+Resize\+To\+Widest\+Item\+Changed}} (const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a3a4f9e1a8d9e016ea30e8cc781b8bcb9}{Resize\+To\+Widest\+Item\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ae6abf1bd443a68747844d7ca913cff96}{set\+Max\+Drop\+Down\+Height\+Changed}} (const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a4acbadec20937340572893a989e248f1}{Max\+Drop\+Down\+Height\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a136be24656c12294dc6e29ba7269a47a}{set\+Item\+Added\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a3b5721d086e03a50097fa2bd37e4030a}{Item\+Added\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ad326f7205b7fc547b17f777500025b8e}{set\+Item\+Removed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ad1513561f8a3a3614e207797df83e730}{Item\+Removed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a3d36f29d51150dac52d796af2da6b6e9}{death}} (agui\+::\+Drop\+Down $\ast$source) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a23e0a88ebbf1a012d9e2c7619785cde8}{drop\+Down\+Shown}} (agui\+::\+Drop\+Down $\ast$source) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ab482ffbd92369ad620fa570ac8bd69a3}{drop\+Down\+Hidden}} (agui\+::\+Drop\+Down $\ast$source) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_aad542fa958815248290047ca0b8eff08}{resize\+To\+Widest\+Item\+Changed}} (agui\+::\+Drop\+Down $\ast$source, bool \mbox{\hyperlink{namespaceec_a84e452d7f020435b50e2c18e7cdca968}{resize}}) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_abed6078e4b6c0412d790bb4c782e99f7}{max\+Drop\+Down\+Height\+Changed}} (agui\+::\+Drop\+Down $\ast$source, int height) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a33748da34ef4c229a31cafc4c3cb8c79}{item\+Added}} (agui\+::\+Drop\+Down $\ast$source, const std\+::string \&item) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a492a498a0c2624b2f96beb01ce18e837}{item\+Removed}} (agui\+::\+Drop\+Down $\ast$source, const std\+::string \&item) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic gui listener that can handle events by Drop\+Down widgets. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a72a84eeb2fdcc0eae78b78c53a59db3b}\label{classec_1_1_generic_drop_down_listener_a72a84eeb2fdcc0eae78b78c53a59db3b}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!DeathCallback\_Callback@{DeathCallback\_Callback}}
+\index{DeathCallback\_Callback@{DeathCallback\_Callback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{DeathCallback\_Callback}{DeathCallback\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a72a84eeb2fdcc0eae78b78c53a59db3b}{ec\+::\+Generic\+Drop\+Down\+Listener\+::\+Death\+Callback\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Drop\+Down$\ast$ source)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_ae0548e780805b39f5817e6659932b478}\label{classec_1_1_generic_drop_down_listener_ae0548e780805b39f5817e6659932b478}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!DropDownHidden\_Callback@{DropDownHidden\_Callback}}
+\index{DropDownHidden\_Callback@{DropDownHidden\_Callback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{DropDownHidden\_Callback}{DropDownHidden\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ae0548e780805b39f5817e6659932b478}{ec\+::\+Generic\+Drop\+Down\+Listener\+::\+Drop\+Down\+Hidden\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Drop\+Down$\ast$ source)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_ac5e0a45750cc64cb003f20d438047ddd}\label{classec_1_1_generic_drop_down_listener_ac5e0a45750cc64cb003f20d438047ddd}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!DropDownShown\_Callback@{DropDownShown\_Callback}}
+\index{DropDownShown\_Callback@{DropDownShown\_Callback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{DropDownShown\_Callback}{DropDownShown\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ac5e0a45750cc64cb003f20d438047ddd}{ec\+::\+Generic\+Drop\+Down\+Listener\+::\+Drop\+Down\+Shown\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Drop\+Down$\ast$ source)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a3b5721d086e03a50097fa2bd37e4030a}\label{classec_1_1_generic_drop_down_listener_a3b5721d086e03a50097fa2bd37e4030a}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!ItemAdded\_Callback@{ItemAdded\_Callback}}
+\index{ItemAdded\_Callback@{ItemAdded\_Callback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{ItemAdded\_Callback}{ItemAdded\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a3b5721d086e03a50097fa2bd37e4030a}{ec\+::\+Generic\+Drop\+Down\+Listener\+::\+Item\+Added\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Drop\+Down$\ast$ source, const std\+::string\& item)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_ad1513561f8a3a3614e207797df83e730}\label{classec_1_1_generic_drop_down_listener_ad1513561f8a3a3614e207797df83e730}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!ItemRemoved\_Callback@{ItemRemoved\_Callback}}
+\index{ItemRemoved\_Callback@{ItemRemoved\_Callback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{ItemRemoved\_Callback}{ItemRemoved\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ad1513561f8a3a3614e207797df83e730}{ec\+::\+Generic\+Drop\+Down\+Listener\+::\+Item\+Removed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Drop\+Down$\ast$ source, const std\+::string\& item)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a4acbadec20937340572893a989e248f1}\label{classec_1_1_generic_drop_down_listener_a4acbadec20937340572893a989e248f1}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!MaxDropDownHeightChanged\_Callback@{MaxDropDownHeightChanged\_Callback}}
+\index{MaxDropDownHeightChanged\_Callback@{MaxDropDownHeightChanged\_Callback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{MaxDropDownHeightChanged\_Callback}{MaxDropDownHeightChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a4acbadec20937340572893a989e248f1}{ec\+::\+Generic\+Drop\+Down\+Listener\+::\+Max\+Drop\+Down\+Height\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Drop\+Down$\ast$ source, int height)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a3a4f9e1a8d9e016ea30e8cc781b8bcb9}\label{classec_1_1_generic_drop_down_listener_a3a4f9e1a8d9e016ea30e8cc781b8bcb9}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!ResizeToWidestItemChanged\_Callback@{ResizeToWidestItemChanged\_Callback}}
+\index{ResizeToWidestItemChanged\_Callback@{ResizeToWidestItemChanged\_Callback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{ResizeToWidestItemChanged\_Callback}{ResizeToWidestItemChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a3a4f9e1a8d9e016ea30e8cc781b8bcb9}{ec\+::\+Generic\+Drop\+Down\+Listener\+::\+Resize\+To\+Widest\+Item\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Drop\+Down$\ast$ source, bool \mbox{\hyperlink{namespaceec_a84e452d7f020435b50e2c18e7cdca968}{resize}})$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_ab0f41e6d3614c6c367de876820dbc14a}\label{classec_1_1_generic_drop_down_listener_ab0f41e6d3614c6c367de876820dbc14a}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!GenericDropDownListener@{GenericDropDownListener}}
+\index{GenericDropDownListener@{GenericDropDownListener}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{GenericDropDownListener()}{GenericDropDownListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Drop\+Down\+Listener\+::\+Generic\+Drop\+Down\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a7e3e68d403e669dcf4205e0d235a752e}\label{classec_1_1_generic_drop_down_listener_a7e3e68d403e669dcf4205e0d235a752e}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!````~GenericDropDownListener@{$\sim$GenericDropDownListener}}
+\index{````~GenericDropDownListener@{$\sim$GenericDropDownListener}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenericDropDownListener()}{~GenericDropDownListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Drop\+Down\+Listener\+::$\sim$\+Generic\+Drop\+Down\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a3d36f29d51150dac52d796af2da6b6e9}\label{classec_1_1_generic_drop_down_listener_a3d36f29d51150dac52d796af2da6b6e9}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!death@{death}}
+\index{death@{death}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{death()}{death()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::death (\begin{DoxyParamCaption}\item[{agui\+::\+Drop\+Down $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_ab482ffbd92369ad620fa570ac8bd69a3}\label{classec_1_1_generic_drop_down_listener_ab482ffbd92369ad620fa570ac8bd69a3}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!dropDownHidden@{dropDownHidden}}
+\index{dropDownHidden@{dropDownHidden}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{dropDownHidden()}{dropDownHidden()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::drop\+Down\+Hidden (\begin{DoxyParamCaption}\item[{agui\+::\+Drop\+Down $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a23e0a88ebbf1a012d9e2c7619785cde8}\label{classec_1_1_generic_drop_down_listener_a23e0a88ebbf1a012d9e2c7619785cde8}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!dropDownShown@{dropDownShown}}
+\index{dropDownShown@{dropDownShown}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{dropDownShown()}{dropDownShown()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::drop\+Down\+Shown (\begin{DoxyParamCaption}\item[{agui\+::\+Drop\+Down $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a33748da34ef4c229a31cafc4c3cb8c79}\label{classec_1_1_generic_drop_down_listener_a33748da34ef4c229a31cafc4c3cb8c79}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!itemAdded@{itemAdded}}
+\index{itemAdded@{itemAdded}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{itemAdded()}{itemAdded()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::item\+Added (\begin{DoxyParamCaption}\item[{agui\+::\+Drop\+Down $\ast$}]{source,  }\item[{const std\+::string \&}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a492a498a0c2624b2f96beb01ce18e837}\label{classec_1_1_generic_drop_down_listener_a492a498a0c2624b2f96beb01ce18e837}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!itemRemoved@{itemRemoved}}
+\index{itemRemoved@{itemRemoved}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{itemRemoved()}{itemRemoved()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::item\+Removed (\begin{DoxyParamCaption}\item[{agui\+::\+Drop\+Down $\ast$}]{source,  }\item[{const std\+::string \&}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_abed6078e4b6c0412d790bb4c782e99f7}\label{classec_1_1_generic_drop_down_listener_abed6078e4b6c0412d790bb4c782e99f7}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!maxDropDownHeightChanged@{maxDropDownHeightChanged}}
+\index{maxDropDownHeightChanged@{maxDropDownHeightChanged}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{maxDropDownHeightChanged()}{maxDropDownHeightChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::max\+Drop\+Down\+Height\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Drop\+Down $\ast$}]{source,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_aad542fa958815248290047ca0b8eff08}\label{classec_1_1_generic_drop_down_listener_aad542fa958815248290047ca0b8eff08}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!resizeToWidestItemChanged@{resizeToWidestItemChanged}}
+\index{resizeToWidestItemChanged@{resizeToWidestItemChanged}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{resizeToWidestItemChanged()}{resizeToWidestItemChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::resize\+To\+Widest\+Item\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Drop\+Down $\ast$}]{source,  }\item[{bool}]{resize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a6fac243931f048ee2cc55ec1ffa5ccf4}\label{classec_1_1_generic_drop_down_listener_a6fac243931f048ee2cc55ec1ffa5ccf4}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!setDeathCallback@{setDeathCallback}}
+\index{setDeathCallback@{setDeathCallback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{setDeathCallback()}{setDeathCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::set\+Death\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a72a84eeb2fdcc0eae78b78c53a59db3b}{Death\+Callback\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a3960331abcb033fbace69f59e875cadd}\label{classec_1_1_generic_drop_down_listener_a3960331abcb033fbace69f59e875cadd}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!setDropDownHiddenCallback@{setDropDownHiddenCallback}}
+\index{setDropDownHiddenCallback@{setDropDownHiddenCallback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{setDropDownHiddenCallback()}{setDropDownHiddenCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::set\+Drop\+Down\+Hidden\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ae0548e780805b39f5817e6659932b478}{Drop\+Down\+Hidden\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_ae5bf872ddc31e7c456eb017ac7906381}\label{classec_1_1_generic_drop_down_listener_ae5bf872ddc31e7c456eb017ac7906381}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!setDropDownShownCallback@{setDropDownShownCallback}}
+\index{setDropDownShownCallback@{setDropDownShownCallback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{setDropDownShownCallback()}{setDropDownShownCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::set\+Drop\+Down\+Shown\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ac5e0a45750cc64cb003f20d438047ddd}{Drop\+Down\+Shown\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a136be24656c12294dc6e29ba7269a47a}\label{classec_1_1_generic_drop_down_listener_a136be24656c12294dc6e29ba7269a47a}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!setItemAddedCallback@{setItemAddedCallback}}
+\index{setItemAddedCallback@{setItemAddedCallback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{setItemAddedCallback()}{setItemAddedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::set\+Item\+Added\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a3b5721d086e03a50097fa2bd37e4030a}{Item\+Added\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_ad326f7205b7fc547b17f777500025b8e}\label{classec_1_1_generic_drop_down_listener_ad326f7205b7fc547b17f777500025b8e}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!setItemRemovedCallback@{setItemRemovedCallback}}
+\index{setItemRemovedCallback@{setItemRemovedCallback}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{setItemRemovedCallback()}{setItemRemovedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::set\+Item\+Removed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_ad1513561f8a3a3614e207797df83e730}{Item\+Removed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_ae6abf1bd443a68747844d7ca913cff96}\label{classec_1_1_generic_drop_down_listener_ae6abf1bd443a68747844d7ca913cff96}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!setMaxDropDownHeightChanged@{setMaxDropDownHeightChanged}}
+\index{setMaxDropDownHeightChanged@{setMaxDropDownHeightChanged}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{setMaxDropDownHeightChanged()}{setMaxDropDownHeightChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::set\+Max\+Drop\+Down\+Height\+Changed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a4acbadec20937340572893a989e248f1}{Max\+Drop\+Down\+Height\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_drop_down_listener_a21fbfc8758a5829d06a0fc589a93c87c}\label{classec_1_1_generic_drop_down_listener_a21fbfc8758a5829d06a0fc589a93c87c}} 
+\index{ec::GenericDropDownListener@{ec::GenericDropDownListener}!setResizeToWidestItemChanged@{setResizeToWidestItemChanged}}
+\index{setResizeToWidestItemChanged@{setResizeToWidestItemChanged}!ec::GenericDropDownListener@{ec::GenericDropDownListener}}
+\doxysubsubsection{\texorpdfstring{setResizeToWidestItemChanged()}{setResizeToWidestItemChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Drop\+Down\+Listener\+::set\+Resize\+To\+Widest\+Item\+Changed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_drop_down_listener_a3a4f9e1a8d9e016ea30e8cc781b8bcb9}{Resize\+To\+Widest\+Item\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Gui/\+Listener/\mbox{\hyperlink{_generic_drop_down_listener_8h}{Generic\+Drop\+Down\+Listener.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Gui/\+Listener/\mbox{\hyperlink{_generic_drop_down_listener_8cpp}{Generic\+Drop\+Down\+Listener.\+cpp}}\end{DoxyCompactItemize}

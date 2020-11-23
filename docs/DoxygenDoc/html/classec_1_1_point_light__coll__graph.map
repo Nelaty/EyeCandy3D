@@ -1,0 +1,11 @@
+<map id="ec::PointLight" name="ec::PointLight">
+<area shape="rect" id="node1" title="Light source, which emits light omnidirectional from a given position." alt="" coords="323,977,430,1099"/>
+<area shape="rect" id="node2" href="$classec_1_1_light.html" title="Abstract light source." alt="" coords="322,763,430,928"/>
+<area shape="rect" id="node3" href="$classec_1_1_node.html" title="Nodes make up the scene graph. They represent a directed acyclic graph." alt="" coords="130,476,297,700"/>
+<area shape="rect" id="node4" href="$classec_1_1_transform3_d.html" title="A transformation in 3D space." alt="" coords="47,189,191,413"/>
+<area shape="rect" id="node5" title=" " alt="" coords="6,5,56,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="215,263,378,340"/>
+<area shape="rect" id="node7" title=" " alt="" coords="402,263,540,340"/>
+<area shape="rect" id="node8" title=" " alt="" coords="410,549,457,627"/>
+<area shape="rect" id="node9" title=" " alt="" coords="483,549,598,627"/>
+</map>

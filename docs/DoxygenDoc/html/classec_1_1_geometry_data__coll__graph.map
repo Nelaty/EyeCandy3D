@@ -1,0 +1,5 @@
+<map id="ec::GeometryData" name="ec::GeometryData">
+<area shape="rect" id="node1" title="Encapsulates vertex and index data and knows how to create, update and delete OpenGL buffers." alt="" coords="86,145,230,428"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,143,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="167,5,317,83"/>
+</map>

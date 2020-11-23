@@ -1,0 +1,227 @@
+\hypertarget{classec_1_1_input_listener}{}\doxysection{ec\+::Input\+Listener Class Reference}
+\label{classec_1_1_input_listener}\index{ec::InputListener@{ec::InputListener}}
+
+
+An \mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} can react on incoming events. It can either be used as a base class or be filled with callbacks.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Listener.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Input\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec_1_1_input_listener__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Input\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classec_1_1_input_listener__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}{Event\+Key\+\_\+\+Type}} = \mbox{\hyperlink{namespaceec_ae2d697393ea83b34b18ab14eb5dacbca}{Input\+Type}}
+\item 
+using \mbox{\hyperlink{classec_1_1_input_listener_aa622615b11dfc5cd1dce423fafe27c93}{Event\+Callback\+\_\+\+Type}} = std\+::function$<$ void(const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&event)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}{Event\+Callback\+Container\+\_\+\+Type}} = std\+::vector$<$ \mbox{\hyperlink{classec_1_1_input_listener_aa622615b11dfc5cd1dce423fafe27c93}{Event\+Callback\+\_\+\+Type}} $>$
+\item 
+using \mbox{\hyperlink{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}{Callback\+Container\+Map\+\_\+\+Type}} = std\+::array$<$ \mbox{\hyperlink{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}{Event\+Callback\+Container\+\_\+\+Type}}, static\+\_\+cast$<$ int $>$(Input\+Type\+::count)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classec_1_1_input_listener_afd65ca201e735f5758646d6653f42804}{$\sim$\+Input\+Listener}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_input_listener_a39e0803651e945e177336df2cf84d61b}{inform}} (const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Inform this controller about an event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classec_1_1_input_listener_a459a44443e7de70e854c2175b6c6914d}{enable}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable the evaluation of input. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classec_1_1_input_listener_a6d7a4e04543e3a86745261d9fefcbfc1}{is\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Check if this input listener is processing events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_input_listener_a803faa5cc3d7576a603944cc378a7246}{add\+Callback}} (\mbox{\hyperlink{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}{Event\+Key\+\_\+\+Type}} key, \mbox{\hyperlink{classec_1_1_input_listener_aa622615b11dfc5cd1dce423fafe27c93}{Event\+Callback\+\_\+\+Type}} callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_input_listener_a66e75fbfd13ec7cf87be9bebf2e02be8}{remove\+Callbacks\+Of\+Type}} (\mbox{\hyperlink{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}{Event\+Key\+\_\+\+Type}} key)
+\begin{DoxyCompactList}\small\item\em Remove one specific or multiple callbacks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_input_listener_ab3c4085477da60677e0a0659f750ead4}{remove\+All\+Callbacks}} ()
+\begin{DoxyCompactList}\small\item\em Remove all registered callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_input_listener_aa44d25c2b2d3ef5e72611831fd66e10c}{Input\+Listener}} ()
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_input_listener_a9ceaefc79c6b0b260e88454616137840}{process\+Event}} (const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Automatically called, when informed about an event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}{Callback\+Container\+Map\+\_\+\+Type}} \mbox{\hyperlink{classec_1_1_input_listener_a4553825c97688ab1827d6f4849c92b61}{m\+\_\+callback\+Containers}}
+\item 
+bool \mbox{\hyperlink{classec_1_1_input_listener_af36b5fc46ed59886d73b1613aaef5a47}{m\+\_\+enabled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} can react on incoming events. It can either be used as a base class or be filled with callbacks. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}\label{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}} 
+\index{ec::InputListener@{ec::InputListener}!CallbackContainerMap\_Type@{CallbackContainerMap\_Type}}
+\index{CallbackContainerMap\_Type@{CallbackContainerMap\_Type}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{CallbackContainerMap\_Type}{CallbackContainerMap\_Type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}{ec\+::\+Input\+Listener\+::\+Callback\+Container\+Map\+\_\+\+Type}} =  std\+::array$<$\mbox{\hyperlink{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}{Event\+Callback\+Container\+\_\+\+Type}}, static\+\_\+cast$<$int$>$(Input\+Type\+::count)$>$}
+
+\mbox{\Hypertarget{classec_1_1_input_listener_aa622615b11dfc5cd1dce423fafe27c93}\label{classec_1_1_input_listener_aa622615b11dfc5cd1dce423fafe27c93}} 
+\index{ec::InputListener@{ec::InputListener}!EventCallback\_Type@{EventCallback\_Type}}
+\index{EventCallback\_Type@{EventCallback\_Type}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{EventCallback\_Type}{EventCallback\_Type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_listener_aa622615b11dfc5cd1dce423fafe27c93}{ec\+::\+Input\+Listener\+::\+Event\+Callback\+\_\+\+Type}} =  std\+::function$<$void(const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}}\& event)$>$}
+
+\mbox{\Hypertarget{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}\label{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}} 
+\index{ec::InputListener@{ec::InputListener}!EventCallbackContainer\_Type@{EventCallbackContainer\_Type}}
+\index{EventCallbackContainer\_Type@{EventCallbackContainer\_Type}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{EventCallbackContainer\_Type}{EventCallbackContainer\_Type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_listener_a0d9334fafd46399a39448fe00fad3c2e}{ec\+::\+Input\+Listener\+::\+Event\+Callback\+Container\+\_\+\+Type}} =  std\+::vector$<$\mbox{\hyperlink{classec_1_1_input_listener_aa622615b11dfc5cd1dce423fafe27c93}{Event\+Callback\+\_\+\+Type}}$>$}
+
+\mbox{\Hypertarget{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}\label{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}} 
+\index{ec::InputListener@{ec::InputListener}!EventKey\_Type@{EventKey\_Type}}
+\index{EventKey\_Type@{EventKey\_Type}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{EventKey\_Type}{EventKey\_Type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}{ec\+::\+Input\+Listener\+::\+Event\+Key\+\_\+\+Type}} =  \mbox{\hyperlink{namespaceec_ae2d697393ea83b34b18ab14eb5dacbca}{Input\+Type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_input_listener_afd65ca201e735f5758646d6653f42804}\label{classec_1_1_input_listener_afd65ca201e735f5758646d6653f42804}} 
+\index{ec::InputListener@{ec::InputListener}!````~InputListener@{$\sim$InputListener}}
+\index{````~InputListener@{$\sim$InputListener}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputListener()}{~InputListener()}}
+{\footnotesize\ttfamily ec\+::\+Input\+Listener\+::$\sim$\+Input\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classec_1_1_input_listener_aa44d25c2b2d3ef5e72611831fd66e10c}\label{classec_1_1_input_listener_aa44d25c2b2d3ef5e72611831fd66e10c}} 
+\index{ec::InputListener@{ec::InputListener}!InputListener@{InputListener}}
+\index{InputListener@{InputListener}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{InputListener()}{InputListener()}}
+{\footnotesize\ttfamily ec\+::\+Input\+Listener\+::\+Input\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_input_listener_a803faa5cc3d7576a603944cc378a7246}\label{classec_1_1_input_listener_a803faa5cc3d7576a603944cc378a7246}} 
+\index{ec::InputListener@{ec::InputListener}!addCallback@{addCallback}}
+\index{addCallback@{addCallback}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{addCallback()}{addCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Listener\+::add\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}{Event\+Key\+\_\+\+Type}}}]{key,  }\item[{\mbox{\hyperlink{classec_1_1_input_listener_aa622615b11dfc5cd1dce423fafe27c93}{Event\+Callback\+\_\+\+Type}}}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_input_listener_a459a44443e7de70e854c2175b6c6914d}\label{classec_1_1_input_listener_a459a44443e7de70e854c2175b6c6914d}} 
+\index{ec::InputListener@{ec::InputListener}!enable@{enable}}
+\index{enable@{enable}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Listener\+::enable (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enable or disable the evaluation of input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If true incoming events will be processed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_input_listener_a39e0803651e945e177336df2cf84d61b}\label{classec_1_1_input_listener_a39e0803651e945e177336df2cf84d61b}} 
+\index{ec::InputListener@{ec::InputListener}!inform@{inform}}
+\index{inform@{inform}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{inform()}{inform()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Listener\+::inform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Inform this controller about an event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to process. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_input_listener_a6d7a4e04543e3a86745261d9fefcbfc1}\label{classec_1_1_input_listener_a6d7a4e04543e3a86745261d9fefcbfc1}} 
+\index{ec::InputListener@{ec::InputListener}!isEnabled@{isEnabled}}
+\index{isEnabled@{isEnabled}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{isEnabled()}{isEnabled()}}
+{\footnotesize\ttfamily bool ec\+::\+Input\+Listener\+::is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if this input listener is processing events. 
+
+\mbox{\Hypertarget{classec_1_1_input_listener_a9ceaefc79c6b0b260e88454616137840}\label{classec_1_1_input_listener_a9ceaefc79c6b0b260e88454616137840}} 
+\index{ec::InputListener@{ec::InputListener}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Listener\+::process\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Automatically called, when informed about an event. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classec_1_1_camera_controller_af44aad5f80005eaadf5d637b3b00c6d6}{ec\+::\+Camera\+Controller}}, and \mbox{\hyperlink{classec_1_1_open_g_l_input_a064a4e318e18d79ad8df19c789f84686}{ec\+::\+Open\+G\+L\+Input}}.
+
+\mbox{\Hypertarget{classec_1_1_input_listener_ab3c4085477da60677e0a0659f750ead4}\label{classec_1_1_input_listener_ab3c4085477da60677e0a0659f750ead4}} 
+\index{ec::InputListener@{ec::InputListener}!removeAllCallbacks@{removeAllCallbacks}}
+\index{removeAllCallbacks@{removeAllCallbacks}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{removeAllCallbacks()}{removeAllCallbacks()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Listener\+::remove\+All\+Callbacks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove all registered callbacks. 
+
+\mbox{\Hypertarget{classec_1_1_input_listener_a66e75fbfd13ec7cf87be9bebf2e02be8}\label{classec_1_1_input_listener_a66e75fbfd13ec7cf87be9bebf2e02be8}} 
+\index{ec::InputListener@{ec::InputListener}!removeCallbacksOfType@{removeCallbacksOfType}}
+\index{removeCallbacksOfType@{removeCallbacksOfType}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{removeCallbacksOfType()}{removeCallbacksOfType()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Listener\+::remove\+Callbacks\+Of\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_input_listener_af5dfb691564fa8e05fcf7f053e3c532b}{Event\+Key\+\_\+\+Type}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Remove one specific or multiple callbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The type of the callbacks to remove. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_input_listener_a4553825c97688ab1827d6f4849c92b61}\label{classec_1_1_input_listener_a4553825c97688ab1827d6f4849c92b61}} 
+\index{ec::InputListener@{ec::InputListener}!m\_callbackContainers@{m\_callbackContainers}}
+\index{m\_callbackContainers@{m\_callbackContainers}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{m\_callbackContainers}{m\_callbackContainers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_listener_abf0825f1f31a1373c5c03e51da123148}{Callback\+Container\+Map\+\_\+\+Type}} ec\+::\+Input\+Listener\+::m\+\_\+callback\+Containers\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_input_listener_af36b5fc46ed59886d73b1613aaef5a47}\label{classec_1_1_input_listener_af36b5fc46ed59886d73b1613aaef5a47}} 
+\index{ec::InputListener@{ec::InputListener}!m\_enabled@{m\_enabled}}
+\index{m\_enabled@{m\_enabled}!ec::InputListener@{ec::InputListener}}
+\doxysubsubsection{\texorpdfstring{m\_enabled}{m\_enabled}}
+{\footnotesize\ttfamily bool ec\+::\+Input\+Listener\+::m\+\_\+enabled\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Input/\mbox{\hyperlink{_input_listener_8h}{Input\+Listener.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Input/\mbox{\hyperlink{_input_listener_8cpp}{Input\+Listener.\+cpp}}\end{DoxyCompactItemize}

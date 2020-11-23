@@ -1,0 +1,128 @@
+\hypertarget{classec_1_1_i_geometry_access}{}\doxysection{ec\+::I\+Geometry\+Access Class Reference}
+\label{classec_1_1_i_geometry_access}\index{ec::IGeometryAccess@{ec::IGeometryAccess}}
+
+
+Base class for all kinds of geometry.  
+
+
+
+
+{\ttfamily \#include $<$I\+Geometry\+Access.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::I\+Geometry\+Access\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec_1_1_i_geometry_access__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::I\+Geometry\+Access\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classec_1_1_i_geometry_access__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classec_1_1_i_geometry_access_a786b4a8489f1c7fd6c4c2685fc53e7dc}{$\sim$\+I\+Geometry\+Access}} ()
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_i_geometry_access_a9b6eaf56646bc2b5aa29385aaba02c7d}{render}} ()
+\begin{DoxyCompactList}\small\item\em Render this geometry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_i_geometry_access_a17a87aca44e2a23a6185e78262e02652}{begin\+Render}} ()=0
+\begin{DoxyCompactList}\small\item\em Called at the beginning of the rendering routine. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classec_1_1_i_geometry_access_a2ee418c9fa4eb266347bae2f0ef8095b}{on\+Render}} ()=0
+\begin{DoxyCompactList}\small\item\em The actual drawing of the object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classec_1_1_i_geometry_access_a6d3b9c34a8b73aeac26663ef349ce41f}{end\+Render}} ()=0
+\begin{DoxyCompactList}\small\item\em Called at the end of the rendering routine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_i_geometry_access_aaf9faa0f583e89aa0b27db7cecbb7c6e}{I\+Geometry\+Access}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all kinds of geometry. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_i_geometry_access_a786b4a8489f1c7fd6c4c2685fc53e7dc}\label{classec_1_1_i_geometry_access_a786b4a8489f1c7fd6c4c2685fc53e7dc}} 
+\index{ec::IGeometryAccess@{ec::IGeometryAccess}!````~IGeometryAccess@{$\sim$IGeometryAccess}}
+\index{````~IGeometryAccess@{$\sim$IGeometryAccess}!ec::IGeometryAccess@{ec::IGeometryAccess}}
+\doxysubsubsection{\texorpdfstring{$\sim$IGeometryAccess()}{~IGeometryAccess()}}
+{\footnotesize\ttfamily ec\+::\+I\+Geometry\+Access\+::$\sim$\+I\+Geometry\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classec_1_1_i_geometry_access_aaf9faa0f583e89aa0b27db7cecbb7c6e}\label{classec_1_1_i_geometry_access_aaf9faa0f583e89aa0b27db7cecbb7c6e}} 
+\index{ec::IGeometryAccess@{ec::IGeometryAccess}!IGeometryAccess@{IGeometryAccess}}
+\index{IGeometryAccess@{IGeometryAccess}!ec::IGeometryAccess@{ec::IGeometryAccess}}
+\doxysubsubsection{\texorpdfstring{IGeometryAccess()}{IGeometryAccess()}}
+{\footnotesize\ttfamily ec\+::\+I\+Geometry\+Access\+::\+I\+Geometry\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_i_geometry_access_a17a87aca44e2a23a6185e78262e02652}\label{classec_1_1_i_geometry_access_a17a87aca44e2a23a6185e78262e02652}} 
+\index{ec::IGeometryAccess@{ec::IGeometryAccess}!beginRender@{beginRender}}
+\index{beginRender@{beginRender}!ec::IGeometryAccess@{ec::IGeometryAccess}}
+\doxysubsubsection{\texorpdfstring{beginRender()}{beginRender()}}
+{\footnotesize\ttfamily void ec\+::\+I\+Geometry\+Access\+::begin\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Called at the beginning of the rendering routine. 
+
+
+
+Implemented in \mbox{\hyperlink{classec_1_1_geometry_aeca5f0e52e7c2e4b352ede1a6e7c3f5b}{ec\+::\+Geometry}}, and \mbox{\hyperlink{classec_1_1_dynamic_geometry_ae4eb49e852a4c300325a288bf9ea4408}{ec\+::\+Dynamic\+Geometry}}.
+
+\mbox{\Hypertarget{classec_1_1_i_geometry_access_a6d3b9c34a8b73aeac26663ef349ce41f}\label{classec_1_1_i_geometry_access_a6d3b9c34a8b73aeac26663ef349ce41f}} 
+\index{ec::IGeometryAccess@{ec::IGeometryAccess}!endRender@{endRender}}
+\index{endRender@{endRender}!ec::IGeometryAccess@{ec::IGeometryAccess}}
+\doxysubsubsection{\texorpdfstring{endRender()}{endRender()}}
+{\footnotesize\ttfamily void ec\+::\+I\+Geometry\+Access\+::end\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Called at the end of the rendering routine. 
+
+
+
+Implemented in \mbox{\hyperlink{classec_1_1_geometry_ae0352702162501df185517e84c3b02bd}{ec\+::\+Geometry}}.
+
+\mbox{\Hypertarget{classec_1_1_i_geometry_access_a2ee418c9fa4eb266347bae2f0ef8095b}\label{classec_1_1_i_geometry_access_a2ee418c9fa4eb266347bae2f0ef8095b}} 
+\index{ec::IGeometryAccess@{ec::IGeometryAccess}!onRender@{onRender}}
+\index{onRender@{onRender}!ec::IGeometryAccess@{ec::IGeometryAccess}}
+\doxysubsubsection{\texorpdfstring{onRender()}{onRender()}}
+{\footnotesize\ttfamily void ec\+::\+I\+Geometry\+Access\+::on\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+The actual drawing of the object. 
+
+
+
+Implemented in \mbox{\hyperlink{classec_1_1_geometry_a1f166e70fc880e88092f29ef46afb836}{ec\+::\+Geometry}}, and \mbox{\hyperlink{classec_1_1_dynamic_line_geometry_ab56984cee973ef2a73ff67339014f0cf}{ec\+::\+Dynamic\+Line\+Geometry}}.
+
+\mbox{\Hypertarget{classec_1_1_i_geometry_access_a9b6eaf56646bc2b5aa29385aaba02c7d}\label{classec_1_1_i_geometry_access_a9b6eaf56646bc2b5aa29385aaba02c7d}} 
+\index{ec::IGeometryAccess@{ec::IGeometryAccess}!render@{render}}
+\index{render@{render}!ec::IGeometryAccess@{ec::IGeometryAccess}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void ec\+::\+I\+Geometry\+Access\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Render this geometry. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Graphics/\+Geometry/\mbox{\hyperlink{_i_geometry_access_8h}{I\+Geometry\+Access.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Graphics/\+Geometry/\mbox{\hyperlink{_i_geometry_access_8cpp}{I\+Geometry\+Access.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,314 @@
+\hypertarget{classec_1_1_input_observable}{}\doxysection{ec\+::Input\+Observable Class Reference}
+\label{classec_1_1_input_observable}\index{ec::InputObservable@{ec::InputObservable}}
+
+
+Input\+Observables inform Input\+Listeners about Input\+Events.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Observable.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::Input\+Observable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classec_1_1_input_observable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}{Input\+Listeners\+\_\+\+Type}} = std\+::vector$<$ \mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$ $>$
+\item 
+using \mbox{\hyperlink{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}{Events\+\_\+\+Type}} = std\+::vector$<$ \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_input_observable_a92422814189d1210f631f4d1378877f3}{Input\+Observable}} ()
+\item 
+virtual \mbox{\hyperlink{classec_1_1_input_observable_ac261f6a73cfdcd37c276e732cc25f869}{$\sim$\+Input\+Observable}} ()
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_input_observable_ac35d29f643a2735e4cb38cb6ee1354aa}{receive\+Event}} (const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Inform the listeners about a new event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classec_1_1_input_observable_a542bd14ecfbeceed917ea0df5c7f3755}{register\+Input\+Listener}} (\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$input\+Listener)
+\begin{DoxyCompactList}\small\item\em Register a new input listener. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classec_1_1_input_observable_aab1af4952f6127781eade6dccf33aafb}{unregister\+Input\+Listener}} (\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$input\+Listener)
+\begin{DoxyCompactList}\small\item\em Unregister an already registered input listener. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classec_1_1_input_observable_a6e14f68359b8d7e1be60e8503a07ea87}{contains}} (\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$input\+Listener)
+\begin{DoxyCompactList}\small\item\em Check if this observer contains a given controller. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classec_1_1_input_observable_ac8d3ed43a3b26601e2710e3758248620}{unregister\+All\+Input\+Listeners}} ()
+\begin{DoxyCompactList}\small\item\em Clears the input listener list. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classec_1_1_input_observable_ac8ac61eaebb95010e8a12bb1e6348391}{inform\+All}} ()
+\begin{DoxyCompactList}\small\item\em Inform all input listeners about all accumulated events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_input_observable_acf16d74cb1f51ee631e017280fff8052}{set\+Prev\+Mouse\+Event}} (const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Set the previous mouse event. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \& \mbox{\hyperlink{classec_1_1_input_observable_abf9f1388171a99581a0a4100bbf2d11b}{get\+Prev\+Mouse\+Event}} () const
+\begin{DoxyCompactList}\small\item\em Get the previous mouse event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_input_observable_afcc8abf8d747417f50465189e632d0dd}{set\+Prev\+Keyboard\+Event}} (const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Set the previous keyboard event. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \& \mbox{\hyperlink{classec_1_1_input_observable_ab1ba2fa8deaf1d69a4809e4d8dc61452}{get\+Prev\+Keyboard\+Event}} () const
+\begin{DoxyCompactList}\small\item\em Get the previous keyboard event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_input_observable_a55c7310a50dc873f69c2246bbeeed3e6}{set\+Prev\+Display\+Event}} (const \mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Set the previous keyboard event. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}} \& \mbox{\hyperlink{classec_1_1_input_observable_ac12e711d3a7dcaf65d2028d2283c1243}{get\+Prev\+Display\+Event}} () const
+\begin{DoxyCompactList}\small\item\em Get the previous keyboard event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \mbox{\hyperlink{classec_1_1_input_observable_a7aaa88f25dd3d8902bc6767240c83ecf}{prepare\+Event}} (const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&event)
+\item 
+virtual void \mbox{\hyperlink{classec_1_1_input_observable_a799c88abda6814473fe486654205f07b}{clear\+Events}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}{Input\+Listeners\+\_\+\+Type}} \mbox{\hyperlink{classec_1_1_input_observable_a05b1b085184216601228522319efbe56}{m\+\_\+input\+Listeners}}
+\item 
+\mbox{\hyperlink{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}{Events\+\_\+\+Type}} \mbox{\hyperlink{classec_1_1_input_observable_a26f25d660227364fe1a1be19671af09e}{m\+\_\+events}}
+\item 
+\mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \mbox{\hyperlink{classec_1_1_input_observable_a99e8c1484fe87503096e681d8bd3b75f}{m\+\_\+prev\+Mouse\+Event}}
+\item 
+\mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \mbox{\hyperlink{classec_1_1_input_observable_acf14cdeb5a394fbd296ff3dfb391c14f}{m\+\_\+prev\+Keyboard\+Event}}
+\item 
+\mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}} \mbox{\hyperlink{classec_1_1_input_observable_ae480593ec25d98ea00b0b7a9aa6cba32}{m\+\_\+prev\+Display\+Event}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input\+Observables inform Input\+Listeners about Input\+Events. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}\label{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}} 
+\index{ec::InputObservable@{ec::InputObservable}!Events\_Type@{Events\_Type}}
+\index{Events\_Type@{Events\_Type}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{Events\_Type}{Events\_Type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}{ec\+::\+Input\+Observable\+::\+Events\+\_\+\+Type}} =  std\+::vector$<$\mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}}$>$}
+
+\mbox{\Hypertarget{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}\label{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}} 
+\index{ec::InputObservable@{ec::InputObservable}!InputListeners\_Type@{InputListeners\_Type}}
+\index{InputListeners\_Type@{InputListeners\_Type}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{InputListeners\_Type}{InputListeners\_Type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}{ec\+::\+Input\+Observable\+::\+Input\+Listeners\+\_\+\+Type}} =  std\+::vector$<$\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}}$\ast$$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_input_observable_a92422814189d1210f631f4d1378877f3}\label{classec_1_1_input_observable_a92422814189d1210f631f4d1378877f3}} 
+\index{ec::InputObservable@{ec::InputObservable}!InputObservable@{InputObservable}}
+\index{InputObservable@{InputObservable}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{InputObservable()}{InputObservable()}}
+{\footnotesize\ttfamily ec\+::\+Input\+Observable\+::\+Input\+Observable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classec_1_1_input_observable_ac261f6a73cfdcd37c276e732cc25f869}\label{classec_1_1_input_observable_ac261f6a73cfdcd37c276e732cc25f869}} 
+\index{ec::InputObservable@{ec::InputObservable}!````~InputObservable@{$\sim$InputObservable}}
+\index{````~InputObservable@{$\sim$InputObservable}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputObservable()}{~InputObservable()}}
+{\footnotesize\ttfamily ec\+::\+Input\+Observable\+::$\sim$\+Input\+Observable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_input_observable_a799c88abda6814473fe486654205f07b}\label{classec_1_1_input_observable_a799c88abda6814473fe486654205f07b}} 
+\index{ec::InputObservable@{ec::InputObservable}!clearEvents@{clearEvents}}
+\index{clearEvents@{clearEvents}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{clearEvents()}{clearEvents()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::clear\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classec_1_1_input_observable_a6e14f68359b8d7e1be60e8503a07ea87}\label{classec_1_1_input_observable_a6e14f68359b8d7e1be60e8503a07ea87}} 
+\index{ec::InputObservable@{ec::InputObservable}!contains@{contains}}
+\index{contains@{contains}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool ec\+::\+Input\+Observable\+::contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$}]{input\+Listener }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if this observer contains a given controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Listener} & The input listener to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the input\+Listener was found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_input_observable_ac12e711d3a7dcaf65d2028d2283c1243}\label{classec_1_1_input_observable_ac12e711d3a7dcaf65d2028d2283c1243}} 
+\index{ec::InputObservable@{ec::InputObservable}!getPrevDisplayEvent@{getPrevDisplayEvent}}
+\index{getPrevDisplayEvent@{getPrevDisplayEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{getPrevDisplayEvent()}{getPrevDisplayEvent()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structec_1_1_display_event}{ec\+::\+Display\+Event}} \& ec\+::\+Input\+Observable\+::get\+Prev\+Display\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the previous keyboard event. 
+
+\mbox{\Hypertarget{classec_1_1_input_observable_ab1ba2fa8deaf1d69a4809e4d8dc61452}\label{classec_1_1_input_observable_ab1ba2fa8deaf1d69a4809e4d8dc61452}} 
+\index{ec::InputObservable@{ec::InputObservable}!getPrevKeyboardEvent@{getPrevKeyboardEvent}}
+\index{getPrevKeyboardEvent@{getPrevKeyboardEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{getPrevKeyboardEvent()}{getPrevKeyboardEvent()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structec_1_1_keyboard_event}{ec\+::\+Keyboard\+Event}} \& ec\+::\+Input\+Observable\+::get\+Prev\+Keyboard\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the previous keyboard event. 
+
+\mbox{\Hypertarget{classec_1_1_input_observable_abf9f1388171a99581a0a4100bbf2d11b}\label{classec_1_1_input_observable_abf9f1388171a99581a0a4100bbf2d11b}} 
+\index{ec::InputObservable@{ec::InputObservable}!getPrevMouseEvent@{getPrevMouseEvent}}
+\index{getPrevMouseEvent@{getPrevMouseEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{getPrevMouseEvent()}{getPrevMouseEvent()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structec_1_1_mouse_event}{ec\+::\+Mouse\+Event}} \& ec\+::\+Input\+Observable\+::get\+Prev\+Mouse\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the previous mouse event. 
+
+\mbox{\Hypertarget{classec_1_1_input_observable_ac8ac61eaebb95010e8a12bb1e6348391}\label{classec_1_1_input_observable_ac8ac61eaebb95010e8a12bb1e6348391}} 
+\index{ec::InputObservable@{ec::InputObservable}!informAll@{informAll}}
+\index{informAll@{informAll}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{informAll()}{informAll()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::inform\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Inform all input listeners about all accumulated events. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000016}{Todo}}]\+: not even doing anything \end{DoxyRefDesc}
+\mbox{\Hypertarget{classec_1_1_input_observable_a7aaa88f25dd3d8902bc6767240c83ecf}\label{classec_1_1_input_observable_a7aaa88f25dd3d8902bc6767240c83ecf}} 
+\index{ec::InputObservable@{ec::InputObservable}!prepareEvent@{prepareEvent}}
+\index{prepareEvent@{prepareEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{prepareEvent()}{prepareEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_input_event}{ec\+::\+Input\+Event}} ec\+::\+Input\+Observable\+::prepare\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_input_observable_ac35d29f643a2735e4cb38cb6ee1354aa}\label{classec_1_1_input_observable_ac35d29f643a2735e4cb38cb6ee1354aa}} 
+\index{ec::InputObservable@{ec::InputObservable}!receiveEvent@{receiveEvent}}
+\index{receiveEvent@{receiveEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{receiveEvent()}{receiveEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::receive\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Inform the listeners about a new event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to inform about. \textbackslash{}details\+The input observable can\textquotesingle{}t check for inputs itself because of the way G\+L\+FW works. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_input_observable_a542bd14ecfbeceed917ea0df5c7f3755}\label{classec_1_1_input_observable_a542bd14ecfbeceed917ea0df5c7f3755}} 
+\index{ec::InputObservable@{ec::InputObservable}!registerInputListener@{registerInputListener}}
+\index{registerInputListener@{registerInputListener}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{registerInputListener()}{registerInputListener()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::register\+Input\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$}]{input\+Listener }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Register a new input listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Listener} & The input listener to register. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_input_observable_a55c7310a50dc873f69c2246bbeeed3e6}\label{classec_1_1_input_observable_a55c7310a50dc873f69c2246bbeeed3e6}} 
+\index{ec::InputObservable@{ec::InputObservable}!setPrevDisplayEvent@{setPrevDisplayEvent}}
+\index{setPrevDisplayEvent@{setPrevDisplayEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{setPrevDisplayEvent()}{setPrevDisplayEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::set\+Prev\+Display\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Set the previous keyboard event. 
+
+\mbox{\Hypertarget{classec_1_1_input_observable_afcc8abf8d747417f50465189e632d0dd}\label{classec_1_1_input_observable_afcc8abf8d747417f50465189e632d0dd}} 
+\index{ec::InputObservable@{ec::InputObservable}!setPrevKeyboardEvent@{setPrevKeyboardEvent}}
+\index{setPrevKeyboardEvent@{setPrevKeyboardEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{setPrevKeyboardEvent()}{setPrevKeyboardEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::set\+Prev\+Keyboard\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Set the previous keyboard event. 
+
+\mbox{\Hypertarget{classec_1_1_input_observable_acf16d74cb1f51ee631e017280fff8052}\label{classec_1_1_input_observable_acf16d74cb1f51ee631e017280fff8052}} 
+\index{ec::InputObservable@{ec::InputObservable}!setPrevMouseEvent@{setPrevMouseEvent}}
+\index{setPrevMouseEvent@{setPrevMouseEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{setPrevMouseEvent()}{setPrevMouseEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::set\+Prev\+Mouse\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Set the previous mouse event. 
+
+\mbox{\Hypertarget{classec_1_1_input_observable_ac8d3ed43a3b26601e2710e3758248620}\label{classec_1_1_input_observable_ac8d3ed43a3b26601e2710e3758248620}} 
+\index{ec::InputObservable@{ec::InputObservable}!unregisterAllInputListeners@{unregisterAllInputListeners}}
+\index{unregisterAllInputListeners@{unregisterAllInputListeners}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{unregisterAllInputListeners()}{unregisterAllInputListeners()}}
+{\footnotesize\ttfamily void ec\+::\+Input\+Observable\+::unregister\+All\+Input\+Listeners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clears the input listener list. 
+
+\mbox{\Hypertarget{classec_1_1_input_observable_aab1af4952f6127781eade6dccf33aafb}\label{classec_1_1_input_observable_aab1af4952f6127781eade6dccf33aafb}} 
+\index{ec::InputObservable@{ec::InputObservable}!unregisterInputListener@{unregisterInputListener}}
+\index{unregisterInputListener@{unregisterInputListener}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{unregisterInputListener()}{unregisterInputListener()}}
+{\footnotesize\ttfamily bool ec\+::\+Input\+Observable\+::unregister\+Input\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_input_listener}{Input\+Listener}} $\ast$}]{input\+Listener }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unregister an already registered input listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Listener} & The input listener to unregister. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the input\+Listener was found, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_input_observable_a26f25d660227364fe1a1be19671af09e}\label{classec_1_1_input_observable_a26f25d660227364fe1a1be19671af09e}} 
+\index{ec::InputObservable@{ec::InputObservable}!m\_events@{m\_events}}
+\index{m\_events@{m\_events}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{m\_events}{m\_events}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_observable_ac2476cc82c72ba20dcd8d5c89794f577}{Events\+\_\+\+Type}} ec\+::\+Input\+Observable\+::m\+\_\+events\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_input_observable_a05b1b085184216601228522319efbe56}\label{classec_1_1_input_observable_a05b1b085184216601228522319efbe56}} 
+\index{ec::InputObservable@{ec::InputObservable}!m\_inputListeners@{m\_inputListeners}}
+\index{m\_inputListeners@{m\_inputListeners}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{m\_inputListeners}{m\_inputListeners}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_input_observable_a7a1e7fe634b426e59ddae7f11c21bebb}{Input\+Listeners\+\_\+\+Type}} ec\+::\+Input\+Observable\+::m\+\_\+input\+Listeners\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_input_observable_ae480593ec25d98ea00b0b7a9aa6cba32}\label{classec_1_1_input_observable_ae480593ec25d98ea00b0b7a9aa6cba32}} 
+\index{ec::InputObservable@{ec::InputObservable}!m\_prevDisplayEvent@{m\_prevDisplayEvent}}
+\index{m\_prevDisplayEvent@{m\_prevDisplayEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{m\_prevDisplayEvent}{m\_prevDisplayEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_display_event}{Display\+Event}} ec\+::\+Input\+Observable\+::m\+\_\+prev\+Display\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_input_observable_acf14cdeb5a394fbd296ff3dfb391c14f}\label{classec_1_1_input_observable_acf14cdeb5a394fbd296ff3dfb391c14f}} 
+\index{ec::InputObservable@{ec::InputObservable}!m\_prevKeyboardEvent@{m\_prevKeyboardEvent}}
+\index{m\_prevKeyboardEvent@{m\_prevKeyboardEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{m\_prevKeyboardEvent}{m\_prevKeyboardEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} ec\+::\+Input\+Observable\+::m\+\_\+prev\+Keyboard\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classec_1_1_input_observable_a99e8c1484fe87503096e681d8bd3b75f}\label{classec_1_1_input_observable_a99e8c1484fe87503096e681d8bd3b75f}} 
+\index{ec::InputObservable@{ec::InputObservable}!m\_prevMouseEvent@{m\_prevMouseEvent}}
+\index{m\_prevMouseEvent@{m\_prevMouseEvent}!ec::InputObservable@{ec::InputObservable}}
+\doxysubsubsection{\texorpdfstring{m\_prevMouseEvent}{m\_prevMouseEvent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} ec\+::\+Input\+Observable\+::m\+\_\+prev\+Mouse\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Input/\mbox{\hyperlink{_input_observable_8h}{Input\+Observable.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Input/\mbox{\hyperlink{_input_observable_8cpp}{Input\+Observable.\+cpp}}\end{DoxyCompactItemize}

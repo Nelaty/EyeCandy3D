@@ -1,0 +1,307 @@
+\hypertarget{classec_1_1_camera}{}\doxysection{ec\+::Camera Class Reference}
+\label{classec_1_1_camera}\index{ec::Camera@{ec::Camera}}
+
+
+A camera encapsulates a view and a projection matrix. It is used to render the related scene. It contains a viewport, which defines the area of the render target the scene should be rendered into.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Camera\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_camera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Camera\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_camera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_camera_a5b8034c32e082171bdb61033781cdcc3}{Camera}} (\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$scene)
+\item 
+\mbox{\hyperlink{classec_1_1_camera_ab5fa55c91ae586754b613c3e8f33b31c}{Camera}} (\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$scene, const \mbox{\hyperlink{classec_1_1_viewport}{Viewport}} \&viewport)
+\item 
+\mbox{\hyperlink{classec_1_1_camera_a11d706554e37d6dde0b9313a445cbd4b}{$\sim$\+Camera}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_ae66d4600de35284b8c6846e3dbd9c12d}{change\+Aspect\+Ratio}} (float aspect)
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_acff95ac4ca039715d67c83111d03b8c1}{update\+Local\+Mat}} () override
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_a1661dae4666cf50e697603904c96df6a}{update\+Global\+Matrices}} (const glm\+::mat4 \&parent\+Mat) override
+\begin{DoxyCompactList}\small\item\em Recursively update global matrices. \end{DoxyCompactList}\item 
+const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_camera_aa273a9bbe51bc00e8b0a35d8c79b0766}{get\+View}} () const
+\begin{DoxyCompactList}\small\item\em Get the current view matrix. \end{DoxyCompactList}\item 
+const glm\+::mat4 \& \mbox{\hyperlink{classec_1_1_camera_a5c245ceac5e710447b88a26a66dcc348}{get\+Projection}} () const
+\begin{DoxyCompactList}\small\item\em Get the current projection matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_ae36280401efe1d0f5bef9997952f8814}{set\+Projection\+Ortho}} ()
+\begin{DoxyCompactList}\small\item\em Change to orthogonal projection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_af3544fbe030aadcd6bdfef8cb94e7b5c}{set\+Projection\+Perspective}} ()
+\begin{DoxyCompactList}\small\item\em Change to perspective projection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_a1003feebe7df69a508f684c1c67f1388}{set\+Fov}} (float fov)
+\begin{DoxyCompactList}\small\item\em Set the field of view. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classec_1_1_camera_a741cb88974dfd00492315ccf613e8539}{get\+Fov}} () const
+\begin{DoxyCompactList}\small\item\em Get the current fov in radians. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_af0c1f82f4cb2aeb3908b858093080556}{set\+Near}} (float near)
+\begin{DoxyCompactList}\small\item\em Set the near plane. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classec_1_1_camera_a02786d8adecb275e6182cf166b65edb4}{get\+Near}} () const
+\begin{DoxyCompactList}\small\item\em Get the current near plane. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_abdc800333490ec4f890559951340bd08}{set\+Far}} (float far)
+\begin{DoxyCompactList}\small\item\em Set the far plane. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classec_1_1_camera_a6555d47e1c17caf67cf8683b4cbaca4b}{get\+Far}} () const
+\begin{DoxyCompactList}\small\item\em Get the current far plane. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$ \mbox{\hyperlink{classec_1_1_camera_a33ad8a16eff39b34db86c6dbf2bbabe4}{get\+Scene}} () const
+\begin{DoxyCompactList}\small\item\em Access to the related scene. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_viewport}{Viewport}} \& \mbox{\hyperlink{classec_1_1_camera_a1f2f4a745112c095d17480959a70eb16}{get\+Viewport}} ()
+\begin{DoxyCompactList}\small\item\em Get the current viewport. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classec_1_1_viewport}{Viewport}} \& \mbox{\hyperlink{classec_1_1_camera_adb2920a7a634aadcaca579eaf3fc1ad0}{get\+Viewport}} () const
+\begin{DoxyCompactList}\small\item\em Get the current viewport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_a3fc6f03041f6c0ee897c9596039d424d}{set\+Viewport}} (const \mbox{\hyperlink{classec_1_1_viewport}{Viewport}} \&viewport)
+\begin{DoxyCompactList}\small\item\em Change the current viewport. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classec_1_1_gui_system}{Gui\+System}} \& \mbox{\hyperlink{classec_1_1_camera_a96f6414127f336eb9079ad30df80d1a7}{get\+Gui\+System}} () const
+\begin{DoxyCompactList}\small\item\em Get this camera\textquotesingle{}s gui system. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_gui_system}{Gui\+System}} \& \mbox{\hyperlink{classec_1_1_camera_a3af91683c492e0094127f169a4927945}{get\+Gui\+System}} ()
+\begin{DoxyCompactList}\small\item\em Get this camera\textquotesingle{}s gui system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A camera encapsulates a view and a projection matrix. It is used to render the related scene. It contains a viewport, which defines the area of the render target the scene should be rendered into. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_camera_a5b8034c32e082171bdb61033781cdcc3}\label{classec_1_1_camera_a5b8034c32e082171bdb61033781cdcc3}} 
+\index{ec::Camera@{ec::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ec\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_ab5fa55c91ae586754b613c3e8f33b31c}\label{classec_1_1_camera_ab5fa55c91ae586754b613c3e8f33b31c}} 
+\index{ec::Camera@{ec::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ec\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_scene}{Scene}} $\ast$}]{scene,  }\item[{const \mbox{\hyperlink{classec_1_1_viewport}{Viewport}} \&}]{viewport }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_a11d706554e37d6dde0b9313a445cbd4b}\label{classec_1_1_camera_a11d706554e37d6dde0b9313a445cbd4b}} 
+\index{ec::Camera@{ec::Camera}!````~Camera@{$\sim$Camera}}
+\index{````~Camera@{$\sim$Camera}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{$\sim$Camera()}{~Camera()}}
+{\footnotesize\ttfamily ec\+::\+Camera\+::$\sim$\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_camera_ae66d4600de35284b8c6846e3dbd9c12d}\label{classec_1_1_camera_ae66d4600de35284b8c6846e3dbd9c12d}} 
+\index{ec::Camera@{ec::Camera}!changeAspectRatio@{changeAspectRatio}}
+\index{changeAspectRatio@{changeAspectRatio}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{changeAspectRatio()}{changeAspectRatio()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::change\+Aspect\+Ratio (\begin{DoxyParamCaption}\item[{float}]{aspect }\end{DoxyParamCaption})}
+
+DO N\+OT U\+SE Update the viewport, so the aspect ratio of it equals the aspect ratio of the window. \mbox{\Hypertarget{classec_1_1_camera_a6555d47e1c17caf67cf8683b4cbaca4b}\label{classec_1_1_camera_a6555d47e1c17caf67cf8683b4cbaca4b}} 
+\index{ec::Camera@{ec::Camera}!getFar@{getFar}}
+\index{getFar@{getFar}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{getFar()}{getFar()}}
+{\footnotesize\ttfamily float ec\+::\+Camera\+::get\+Far (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current far plane. 
+
+\mbox{\Hypertarget{classec_1_1_camera_a741cb88974dfd00492315ccf613e8539}\label{classec_1_1_camera_a741cb88974dfd00492315ccf613e8539}} 
+\index{ec::Camera@{ec::Camera}!getFov@{getFov}}
+\index{getFov@{getFov}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{getFov()}{getFov()}}
+{\footnotesize\ttfamily float ec\+::\+Camera\+::get\+Fov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current fov in radians. 
+
+\mbox{\Hypertarget{classec_1_1_camera_a3af91683c492e0094127f169a4927945}\label{classec_1_1_camera_a3af91683c492e0094127f169a4927945}} 
+\index{ec::Camera@{ec::Camera}!getGuiSystem@{getGuiSystem}}
+\index{getGuiSystem@{getGuiSystem}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{getGuiSystem()}{getGuiSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_gui_system}{Gui\+System}} \& ec\+::\+Camera\+::get\+Gui\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get this camera\textquotesingle{}s gui system. 
+
+\mbox{\Hypertarget{classec_1_1_camera_a96f6414127f336eb9079ad30df80d1a7}\label{classec_1_1_camera_a96f6414127f336eb9079ad30df80d1a7}} 
+\index{ec::Camera@{ec::Camera}!getGuiSystem@{getGuiSystem}}
+\index{getGuiSystem@{getGuiSystem}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{getGuiSystem()}{getGuiSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classec_1_1_gui_system}{Gui\+System}} \& ec\+::\+Camera\+::get\+Gui\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get this camera\textquotesingle{}s gui system. 
+
+\mbox{\Hypertarget{classec_1_1_camera_a02786d8adecb275e6182cf166b65edb4}\label{classec_1_1_camera_a02786d8adecb275e6182cf166b65edb4}} 
+\index{ec::Camera@{ec::Camera}!getNear@{getNear}}
+\index{getNear@{getNear}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{getNear()}{getNear()}}
+{\footnotesize\ttfamily float ec\+::\+Camera\+::get\+Near (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current near plane. 
+
+\mbox{\Hypertarget{classec_1_1_camera_a5c245ceac5e710447b88a26a66dcc348}\label{classec_1_1_camera_a5c245ceac5e710447b88a26a66dcc348}} 
+\index{ec::Camera@{ec::Camera}!getProjection@{getProjection}}
+\index{getProjection@{getProjection}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{getProjection()}{getProjection()}}
+{\footnotesize\ttfamily const glm\+::mat4 \& ec\+::\+Camera\+::get\+Projection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current projection matrix. 
+
+\mbox{\Hypertarget{classec_1_1_camera_a33ad8a16eff39b34db86c6dbf2bbabe4}\label{classec_1_1_camera_a33ad8a16eff39b34db86c6dbf2bbabe4}} 
+\index{ec::Camera@{ec::Camera}!getScene@{getScene}}
+\index{getScene@{getScene}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{getScene()}{getScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_scene}{ec\+::\+Scene}} $\ast$ ec\+::\+Camera\+::get\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Access to the related scene. 
+
+\mbox{\Hypertarget{classec_1_1_camera_aa273a9bbe51bc00e8b0a35d8c79b0766}\label{classec_1_1_camera_aa273a9bbe51bc00e8b0a35d8c79b0766}} 
+\index{ec::Camera@{ec::Camera}!getView@{getView}}
+\index{getView@{getView}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{getView()}{getView()}}
+{\footnotesize\ttfamily const glm\+::mat4 \& ec\+::\+Camera\+::get\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current view matrix. 
+
+\mbox{\Hypertarget{classec_1_1_camera_a1f2f4a745112c095d17480959a70eb16}\label{classec_1_1_camera_a1f2f4a745112c095d17480959a70eb16}} 
+\index{ec::Camera@{ec::Camera}!getViewport@{getViewport}}
+\index{getViewport@{getViewport}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{getViewport()}{getViewport()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_viewport}{Viewport}} \& ec\+::\+Camera\+::get\+Viewport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the current viewport. 
+
+\mbox{\Hypertarget{classec_1_1_camera_adb2920a7a634aadcaca579eaf3fc1ad0}\label{classec_1_1_camera_adb2920a7a634aadcaca579eaf3fc1ad0}} 
+\index{ec::Camera@{ec::Camera}!getViewport@{getViewport}}
+\index{getViewport@{getViewport}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{getViewport()}{getViewport()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classec_1_1_viewport}{ec\+::\+Viewport}} \& ec\+::\+Camera\+::get\+Viewport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current viewport. 
+
+\mbox{\Hypertarget{classec_1_1_camera_abdc800333490ec4f890559951340bd08}\label{classec_1_1_camera_abdc800333490ec4f890559951340bd08}} 
+\index{ec::Camera@{ec::Camera}!setFar@{setFar}}
+\index{setFar@{setFar}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{setFar()}{setFar()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::set\+Far (\begin{DoxyParamCaption}\item[{float}]{far }\end{DoxyParamCaption})}
+
+
+
+Set the far plane. 
+
+\mbox{\Hypertarget{classec_1_1_camera_a1003feebe7df69a508f684c1c67f1388}\label{classec_1_1_camera_a1003feebe7df69a508f684c1c67f1388}} 
+\index{ec::Camera@{ec::Camera}!setFov@{setFov}}
+\index{setFov@{setFov}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{setFov()}{setFov()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::set\+Fov (\begin{DoxyParamCaption}\item[{float}]{fov }\end{DoxyParamCaption})}
+
+
+
+Set the field of view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fov} & F\+OV in radians \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_camera_af0c1f82f4cb2aeb3908b858093080556}\label{classec_1_1_camera_af0c1f82f4cb2aeb3908b858093080556}} 
+\index{ec::Camera@{ec::Camera}!setNear@{setNear}}
+\index{setNear@{setNear}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{setNear()}{setNear()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::set\+Near (\begin{DoxyParamCaption}\item[{float}]{near }\end{DoxyParamCaption})}
+
+
+
+Set the near plane. 
+
+\mbox{\Hypertarget{classec_1_1_camera_ae36280401efe1d0f5bef9997952f8814}\label{classec_1_1_camera_ae36280401efe1d0f5bef9997952f8814}} 
+\index{ec::Camera@{ec::Camera}!setProjectionOrtho@{setProjectionOrtho}}
+\index{setProjectionOrtho@{setProjectionOrtho}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{setProjectionOrtho()}{setProjectionOrtho()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::set\+Projection\+Ortho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Change to orthogonal projection. 
+
+\mbox{\Hypertarget{classec_1_1_camera_af3544fbe030aadcd6bdfef8cb94e7b5c}\label{classec_1_1_camera_af3544fbe030aadcd6bdfef8cb94e7b5c}} 
+\index{ec::Camera@{ec::Camera}!setProjectionPerspective@{setProjectionPerspective}}
+\index{setProjectionPerspective@{setProjectionPerspective}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{setProjectionPerspective()}{setProjectionPerspective()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::set\+Projection\+Perspective (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Change to perspective projection. 
+
+\mbox{\Hypertarget{classec_1_1_camera_a3fc6f03041f6c0ee897c9596039d424d}\label{classec_1_1_camera_a3fc6f03041f6c0ee897c9596039d424d}} 
+\index{ec::Camera@{ec::Camera}!setViewport@{setViewport}}
+\index{setViewport@{setViewport}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{setViewport()}{setViewport()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::set\+Viewport (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_viewport}{Viewport}} \&}]{viewport }\end{DoxyParamCaption})}
+
+
+
+Change the current viewport. 
+
+\mbox{\Hypertarget{classec_1_1_camera_a1661dae4666cf50e697603904c96df6a}\label{classec_1_1_camera_a1661dae4666cf50e697603904c96df6a}} 
+\index{ec::Camera@{ec::Camera}!updateGlobalMatrices@{updateGlobalMatrices}}
+\index{updateGlobalMatrices@{updateGlobalMatrices}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{updateGlobalMatrices()}{updateGlobalMatrices()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::update\+Global\+Matrices (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{parent\+Mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Recursively update global matrices. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classec_1_1_node_a12a9b14ccc434c52404e262ef5db6f80}{ec\+::\+Node}}.
+
+\mbox{\Hypertarget{classec_1_1_camera_acff95ac4ca039715d67c83111d03b8c1}\label{classec_1_1_camera_acff95ac4ca039715d67c83111d03b8c1}} 
+\index{ec::Camera@{ec::Camera}!updateLocalMat@{updateLocalMat}}
+\index{updateLocalMat@{updateLocalMat}!ec::Camera@{ec::Camera}}
+\doxysubsubsection{\texorpdfstring{updateLocalMat()}{updateLocalMat()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+::update\+Local\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+DO N\+OT U\+SE Update the view matrix 
+
+Reimplemented from \mbox{\hyperlink{classec_1_1_transform3_d_a68d259da063ea2aff48720ae55870445}{ec\+::\+Transform3D}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Graphics/\mbox{\hyperlink{_camera_8h}{Camera.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Graphics/\mbox{\hyperlink{_camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,239 @@
+\hypertarget{classec_1_1_generic_slider_listener}{}\doxysection{ec\+::Generic\+Slider\+Listener Class Reference}
+\label{classec_1_1_generic_slider_listener}\index{ec::GenericSliderListener@{ec::GenericSliderListener}}
+
+
+Generic gui listener that can handle events by Slider widgets.  
+
+
+
+
+{\ttfamily \#include $<$Generic\+Slider\+Listener.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Generic\+Slider\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classec_1_1_generic_slider_listener__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Generic\+Slider\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classec_1_1_generic_slider_listener__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_slider_listener_ab4562c9d0ca6599598d872bf6fb45cfb}{Value\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Slider $\ast$slider, int val)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_slider_listener_a16d9612be31a0bbb0cc931c87ca43503}{Min\+Value\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Slider $\ast$slider, int val)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_slider_listener_a73ad440b637c2ce8b6f094702d9c3cf3}{Max\+Value\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Slider $\ast$slider, int val)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_slider_listener_afde2dc39404d84bb597b9cc4be265814}{Step\+Length\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Slider $\ast$slider, int val)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_slider_listener_a0b14e921e56b7dfc0a23af21f9921e0c}{Align\+Marker\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Slider $\ast$slider, bool val)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_slider_listener_af0bd5763136a162c785fc2e37be42fed}{Orientation\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Slider $\ast$slider, agui\+::\+Orientation\+Enum orientation)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_slider_listener_a73457456f87df632db463dbab48980ad}{Death\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Slider $\ast$slider)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_generic_slider_listener_a881730b68b84ec908cc8447715df6a26}{Generic\+Slider\+Listener}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_generic_slider_listener_af9d1b2fd67c2236950322e5863620a35}{$\sim$\+Generic\+Slider\+Listener}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_a1f01d60c85706082ddc4372d919e42c7}{set\+Value\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_slider_listener_ab4562c9d0ca6599598d872bf6fb45cfb}{Value\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_ac2f53157eab94c6221589bfe5decf291}{set\+Min\+Value\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_slider_listener_a16d9612be31a0bbb0cc931c87ca43503}{Min\+Value\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_acbec72068b224d414a26dab1d3351dc0}{set\+Max\+Value\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_slider_listener_a73ad440b637c2ce8b6f094702d9c3cf3}{Max\+Value\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_a8d809cb4d2f8c7af475e30f329a2aa95}{set\+Step\+Length\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_slider_listener_afde2dc39404d84bb597b9cc4be265814}{Step\+Length\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_a999e3c26a33662561d6050f3b28095bb}{set\+Align\+Marker\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_slider_listener_a0b14e921e56b7dfc0a23af21f9921e0c}{Align\+Marker\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_a9238f89911356a87747be1b80a732c2a}{set\+Orientation\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_slider_listener_af0bd5763136a162c785fc2e37be42fed}{Orientation\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_a97f72024d5046bdc7f473830f43a531e}{set\+Death\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_slider_listener_a73457456f87df632db463dbab48980ad}{Death\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_a884faf715962f7785174edec063aa145}{value\+Changed}} (agui\+::\+Slider $\ast$slider, int val) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_a1dd803d6b575a549261b9fe04a9da279}{min\+Value\+Changed}} (agui\+::\+Slider $\ast$slider, int val) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_a91d4e65dd9128321b891e01cced50237}{max\+Value\+Changed}} (agui\+::\+Slider $\ast$slider, int val) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_af6958b779d400924196cff0c0d74ff76}{step\+Length\+Changed}} (agui\+::\+Slider $\ast$slider, int val) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_a78e74140590b1719b5c529cdfc2ec425}{align\+Marker\+Changed}} (agui\+::\+Slider $\ast$slider, bool val) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_abd487c83f6c8ff029b474d1c28e743c2}{orientation\+Changed}} (agui\+::\+Slider $\ast$slider, agui\+::\+Orientation\+Enum orientation) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_slider_listener_aceaad6f17199becb59205d1ac57f9a67}{death}} (agui\+::\+Slider $\ast$slider) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic gui listener that can handle events by Slider widgets. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a0b14e921e56b7dfc0a23af21f9921e0c}\label{classec_1_1_generic_slider_listener_a0b14e921e56b7dfc0a23af21f9921e0c}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!AlignMarkerChanged\_Callback@{AlignMarkerChanged\_Callback}}
+\index{AlignMarkerChanged\_Callback@{AlignMarkerChanged\_Callback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{AlignMarkerChanged\_Callback}{AlignMarkerChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_slider_listener_a0b14e921e56b7dfc0a23af21f9921e0c}{ec\+::\+Generic\+Slider\+Listener\+::\+Align\+Marker\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Slider$\ast$ slider, bool val)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a73457456f87df632db463dbab48980ad}\label{classec_1_1_generic_slider_listener_a73457456f87df632db463dbab48980ad}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!Death\_Callback@{Death\_Callback}}
+\index{Death\_Callback@{Death\_Callback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{Death\_Callback}{Death\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_slider_listener_a73457456f87df632db463dbab48980ad}{ec\+::\+Generic\+Slider\+Listener\+::\+Death\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Slider$\ast$ slider)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a73ad440b637c2ce8b6f094702d9c3cf3}\label{classec_1_1_generic_slider_listener_a73ad440b637c2ce8b6f094702d9c3cf3}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!MaxValueChanged\_Callback@{MaxValueChanged\_Callback}}
+\index{MaxValueChanged\_Callback@{MaxValueChanged\_Callback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{MaxValueChanged\_Callback}{MaxValueChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_slider_listener_a73ad440b637c2ce8b6f094702d9c3cf3}{ec\+::\+Generic\+Slider\+Listener\+::\+Max\+Value\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Slider$\ast$ slider, int val)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a16d9612be31a0bbb0cc931c87ca43503}\label{classec_1_1_generic_slider_listener_a16d9612be31a0bbb0cc931c87ca43503}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!MinValueChanged\_Callback@{MinValueChanged\_Callback}}
+\index{MinValueChanged\_Callback@{MinValueChanged\_Callback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{MinValueChanged\_Callback}{MinValueChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_slider_listener_a16d9612be31a0bbb0cc931c87ca43503}{ec\+::\+Generic\+Slider\+Listener\+::\+Min\+Value\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Slider$\ast$ slider, int val)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_af0bd5763136a162c785fc2e37be42fed}\label{classec_1_1_generic_slider_listener_af0bd5763136a162c785fc2e37be42fed}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!OrientationChanged\_Callback@{OrientationChanged\_Callback}}
+\index{OrientationChanged\_Callback@{OrientationChanged\_Callback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{OrientationChanged\_Callback}{OrientationChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_slider_listener_af0bd5763136a162c785fc2e37be42fed}{ec\+::\+Generic\+Slider\+Listener\+::\+Orientation\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Slider$\ast$ slider, agui\+::\+Orientation\+Enum orientation)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_afde2dc39404d84bb597b9cc4be265814}\label{classec_1_1_generic_slider_listener_afde2dc39404d84bb597b9cc4be265814}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!StepLengthChanged\_Callback@{StepLengthChanged\_Callback}}
+\index{StepLengthChanged\_Callback@{StepLengthChanged\_Callback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{StepLengthChanged\_Callback}{StepLengthChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_slider_listener_afde2dc39404d84bb597b9cc4be265814}{ec\+::\+Generic\+Slider\+Listener\+::\+Step\+Length\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Slider$\ast$ slider, int val)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_ab4562c9d0ca6599598d872bf6fb45cfb}\label{classec_1_1_generic_slider_listener_ab4562c9d0ca6599598d872bf6fb45cfb}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!ValueChanged\_Callback@{ValueChanged\_Callback}}
+\index{ValueChanged\_Callback@{ValueChanged\_Callback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{ValueChanged\_Callback}{ValueChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_slider_listener_ab4562c9d0ca6599598d872bf6fb45cfb}{ec\+::\+Generic\+Slider\+Listener\+::\+Value\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Slider$\ast$ slider, int val)$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a881730b68b84ec908cc8447715df6a26}\label{classec_1_1_generic_slider_listener_a881730b68b84ec908cc8447715df6a26}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!GenericSliderListener@{GenericSliderListener}}
+\index{GenericSliderListener@{GenericSliderListener}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{GenericSliderListener()}{GenericSliderListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Slider\+Listener\+::\+Generic\+Slider\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_af9d1b2fd67c2236950322e5863620a35}\label{classec_1_1_generic_slider_listener_af9d1b2fd67c2236950322e5863620a35}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!````~GenericSliderListener@{$\sim$GenericSliderListener}}
+\index{````~GenericSliderListener@{$\sim$GenericSliderListener}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenericSliderListener()}{~GenericSliderListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Slider\+Listener\+::$\sim$\+Generic\+Slider\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a78e74140590b1719b5c529cdfc2ec425}\label{classec_1_1_generic_slider_listener_a78e74140590b1719b5c529cdfc2ec425}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!alignMarkerChanged@{alignMarkerChanged}}
+\index{alignMarkerChanged@{alignMarkerChanged}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{alignMarkerChanged()}{alignMarkerChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::align\+Marker\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Slider $\ast$}]{slider,  }\item[{bool}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_aceaad6f17199becb59205d1ac57f9a67}\label{classec_1_1_generic_slider_listener_aceaad6f17199becb59205d1ac57f9a67}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!death@{death}}
+\index{death@{death}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{death()}{death()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::death (\begin{DoxyParamCaption}\item[{agui\+::\+Slider $\ast$}]{slider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a91d4e65dd9128321b891e01cced50237}\label{classec_1_1_generic_slider_listener_a91d4e65dd9128321b891e01cced50237}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!maxValueChanged@{maxValueChanged}}
+\index{maxValueChanged@{maxValueChanged}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{maxValueChanged()}{maxValueChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::max\+Value\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Slider $\ast$}]{slider,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a1dd803d6b575a549261b9fe04a9da279}\label{classec_1_1_generic_slider_listener_a1dd803d6b575a549261b9fe04a9da279}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!minValueChanged@{minValueChanged}}
+\index{minValueChanged@{minValueChanged}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{minValueChanged()}{minValueChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::min\+Value\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Slider $\ast$}]{slider,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_abd487c83f6c8ff029b474d1c28e743c2}\label{classec_1_1_generic_slider_listener_abd487c83f6c8ff029b474d1c28e743c2}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!orientationChanged@{orientationChanged}}
+\index{orientationChanged@{orientationChanged}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{orientationChanged()}{orientationChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::orientation\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Slider $\ast$}]{slider,  }\item[{agui\+::\+Orientation\+Enum}]{orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a999e3c26a33662561d6050f3b28095bb}\label{classec_1_1_generic_slider_listener_a999e3c26a33662561d6050f3b28095bb}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!setAlignMarkerChangedCallback@{setAlignMarkerChangedCallback}}
+\index{setAlignMarkerChangedCallback@{setAlignMarkerChangedCallback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{setAlignMarkerChangedCallback()}{setAlignMarkerChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::set\+Align\+Marker\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_slider_listener_a0b14e921e56b7dfc0a23af21f9921e0c}{Align\+Marker\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a97f72024d5046bdc7f473830f43a531e}\label{classec_1_1_generic_slider_listener_a97f72024d5046bdc7f473830f43a531e}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!setDeathCallback@{setDeathCallback}}
+\index{setDeathCallback@{setDeathCallback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{setDeathCallback()}{setDeathCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::set\+Death\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_slider_listener_a73457456f87df632db463dbab48980ad}{Death\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_acbec72068b224d414a26dab1d3351dc0}\label{classec_1_1_generic_slider_listener_acbec72068b224d414a26dab1d3351dc0}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!setMaxValueChangedCallback@{setMaxValueChangedCallback}}
+\index{setMaxValueChangedCallback@{setMaxValueChangedCallback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{setMaxValueChangedCallback()}{setMaxValueChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::set\+Max\+Value\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_slider_listener_a73ad440b637c2ce8b6f094702d9c3cf3}{Max\+Value\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_ac2f53157eab94c6221589bfe5decf291}\label{classec_1_1_generic_slider_listener_ac2f53157eab94c6221589bfe5decf291}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!setMinValueChangedCallback@{setMinValueChangedCallback}}
+\index{setMinValueChangedCallback@{setMinValueChangedCallback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{setMinValueChangedCallback()}{setMinValueChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::set\+Min\+Value\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_slider_listener_a16d9612be31a0bbb0cc931c87ca43503}{Min\+Value\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a9238f89911356a87747be1b80a732c2a}\label{classec_1_1_generic_slider_listener_a9238f89911356a87747be1b80a732c2a}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!setOrientationChangedCallback@{setOrientationChangedCallback}}
+\index{setOrientationChangedCallback@{setOrientationChangedCallback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{setOrientationChangedCallback()}{setOrientationChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::set\+Orientation\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_slider_listener_af0bd5763136a162c785fc2e37be42fed}{Orientation\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a8d809cb4d2f8c7af475e30f329a2aa95}\label{classec_1_1_generic_slider_listener_a8d809cb4d2f8c7af475e30f329a2aa95}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!setStepLengthChangedCallback@{setStepLengthChangedCallback}}
+\index{setStepLengthChangedCallback@{setStepLengthChangedCallback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{setStepLengthChangedCallback()}{setStepLengthChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::set\+Step\+Length\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_slider_listener_afde2dc39404d84bb597b9cc4be265814}{Step\+Length\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a1f01d60c85706082ddc4372d919e42c7}\label{classec_1_1_generic_slider_listener_a1f01d60c85706082ddc4372d919e42c7}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!setValueChangedCallback@{setValueChangedCallback}}
+\index{setValueChangedCallback@{setValueChangedCallback}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{setValueChangedCallback()}{setValueChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::set\+Value\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_slider_listener_ab4562c9d0ca6599598d872bf6fb45cfb}{Value\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_af6958b779d400924196cff0c0d74ff76}\label{classec_1_1_generic_slider_listener_af6958b779d400924196cff0c0d74ff76}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!stepLengthChanged@{stepLengthChanged}}
+\index{stepLengthChanged@{stepLengthChanged}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{stepLengthChanged()}{stepLengthChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::step\+Length\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Slider $\ast$}]{slider,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_slider_listener_a884faf715962f7785174edec063aa145}\label{classec_1_1_generic_slider_listener_a884faf715962f7785174edec063aa145}} 
+\index{ec::GenericSliderListener@{ec::GenericSliderListener}!valueChanged@{valueChanged}}
+\index{valueChanged@{valueChanged}!ec::GenericSliderListener@{ec::GenericSliderListener}}
+\doxysubsubsection{\texorpdfstring{valueChanged()}{valueChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Slider\+Listener\+::value\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Slider $\ast$}]{slider,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Gui/\+Listener/\mbox{\hyperlink{_generic_slider_listener_8h}{Generic\+Slider\+Listener.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Gui/\+Listener/\mbox{\hyperlink{_generic_slider_listener_8cpp}{Generic\+Slider\+Listener.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="ec::DynamicLineGeometry" name="ec::DynamicLineGeometry">
+<area shape="rect" id="node1" title="Line geometry that adapts to a given start and end point." alt="" coords="5,645,184,899"/>
+<area shape="rect" id="node2" href="$classec_1_1_dynamic_geometry.html" title="Kind of geometry that can be changed for every rendering." alt="" coords="17,476,172,597"/>
+<area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="Geometry." alt="" coords="18,204,171,428"/>
+<area shape="rect" id="node4" href="$classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry." alt="" coords="19,5,171,156"/>
+</map>

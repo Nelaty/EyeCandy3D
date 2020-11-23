@@ -1,0 +1,167 @@
+\hypertarget{classec_1_1_viewport}{}\doxysection{ec\+::Viewport Class Reference}
+\label{classec_1_1_viewport}\index{ec::Viewport@{ec::Viewport}}
+
+
+A viewport defines a rectangular area into which a camera renders. For every point (x,y) inside this area\+: x = \mbox{[}0,1\mbox{]}, y = \mbox{[}0,1\mbox{]} applies.  
+
+
+
+
+{\ttfamily \#include $<$Viewport.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::Viewport\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classec_1_1_viewport__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_viewport_a287d09d9303d9fbbea3c915f832d2ab8}{Viewport}} (const glm\+::vec2 \&position=glm\+::vec2(0.\+0f), const glm\+::vec2 \&size=glm\+::vec2(1.\+0f))
+\item 
+\mbox{\hyperlink{classec_1_1_viewport_a65341c63372c6158a0a2932fa1f2c66b}{$\sim$\+Viewport}} ()
+\item 
+const glm\+::vec2 \& \mbox{\hyperlink{classec_1_1_viewport_a49643e5dae2f5813280b5adf34c28e59}{get\+Position}} () const
+\item 
+float \mbox{\hyperlink{classec_1_1_viewport_a304136185660866e1df70b4f2d74f5c6}{get\+PositionX}} () const
+\item 
+float \mbox{\hyperlink{classec_1_1_viewport_a6c8e4dc096406135b485347a8e458ddc}{get\+PositionY}} () const
+\item 
+void \mbox{\hyperlink{classec_1_1_viewport_a0bccb794bc85e2c2e8417ab142ceadbc}{set\+Position}} (float x, float y)
+\item 
+void \mbox{\hyperlink{classec_1_1_viewport_a8ab2259a78b8b9aeebd3b4450ce2cdd2}{set\+Position}} (const glm\+::vec2 \&position)
+\item 
+void \mbox{\hyperlink{classec_1_1_viewport_a2fd67017414985517470b75afb3402a7}{set\+PositionX}} (float x)
+\item 
+void \mbox{\hyperlink{classec_1_1_viewport_a754e8f6f4b857c70b598dc3bf5a7badd}{set\+PositionY}} (float y)
+\item 
+const glm\+::vec2 \& \mbox{\hyperlink{classec_1_1_viewport_a8f56fdabf8e67580a96e9dee4e9e359f}{get\+Size}} () const
+\item 
+float \mbox{\hyperlink{classec_1_1_viewport_ae5eab9f39747421f0669aef7a8126a70}{get\+SizeX}} () const
+\item 
+float \mbox{\hyperlink{classec_1_1_viewport_aa02139fb9d8927b744ab3442088330fb}{get\+SizeY}} () const
+\item 
+void \mbox{\hyperlink{classec_1_1_viewport_a72cca5d2d2eb6fee38a28c27ffc8b395}{set\+Size}} (float x, float y)
+\item 
+void \mbox{\hyperlink{classec_1_1_viewport_ad8e05ac01f4c19c599f6b7dc344b815c}{set\+Size}} (const glm\+::vec2 \&size)
+\item 
+void \mbox{\hyperlink{classec_1_1_viewport_af1bcf1e3a8a06458c41a0c646b5f2057}{set\+SizeX}} (float x)
+\item 
+void \mbox{\hyperlink{classec_1_1_viewport_ae9420c066d2bf6f1a6cc5c0b65092862}{set\+SizeY}} (float y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A viewport defines a rectangular area into which a camera renders. For every point (x,y) inside this area\+: x = \mbox{[}0,1\mbox{]}, y = \mbox{[}0,1\mbox{]} applies. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_viewport_a287d09d9303d9fbbea3c915f832d2ab8}\label{classec_1_1_viewport_a287d09d9303d9fbbea3c915f832d2ab8}} 
+\index{ec::Viewport@{ec::Viewport}!Viewport@{Viewport}}
+\index{Viewport@{Viewport}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{Viewport()}{Viewport()}}
+{\footnotesize\ttfamily ec\+::\+Viewport\+::\+Viewport (\begin{DoxyParamCaption}\item[{const glm\+::vec2 \&}]{position = {\ttfamily glm\+:\+:vec2(0.0f)},  }\item[{const glm\+::vec2 \&}]{size = {\ttfamily glm\+:\+:vec2(1.0f)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_viewport_a65341c63372c6158a0a2932fa1f2c66b}\label{classec_1_1_viewport_a65341c63372c6158a0a2932fa1f2c66b}} 
+\index{ec::Viewport@{ec::Viewport}!````~Viewport@{$\sim$Viewport}}
+\index{````~Viewport@{$\sim$Viewport}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{$\sim$Viewport()}{~Viewport()}}
+{\footnotesize\ttfamily ec\+::\+Viewport\+::$\sim$\+Viewport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_viewport_a49643e5dae2f5813280b5adf34c28e59}\label{classec_1_1_viewport_a49643e5dae2f5813280b5adf34c28e59}} 
+\index{ec::Viewport@{ec::Viewport}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const glm\+::vec2 \& ec\+::\+Viewport\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_viewport_a304136185660866e1df70b4f2d74f5c6}\label{classec_1_1_viewport_a304136185660866e1df70b4f2d74f5c6}} 
+\index{ec::Viewport@{ec::Viewport}!getPositionX@{getPositionX}}
+\index{getPositionX@{getPositionX}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{getPositionX()}{getPositionX()}}
+{\footnotesize\ttfamily float ec\+::\+Viewport\+::get\+PositionX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_viewport_a6c8e4dc096406135b485347a8e458ddc}\label{classec_1_1_viewport_a6c8e4dc096406135b485347a8e458ddc}} 
+\index{ec::Viewport@{ec::Viewport}!getPositionY@{getPositionY}}
+\index{getPositionY@{getPositionY}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{getPositionY()}{getPositionY()}}
+{\footnotesize\ttfamily float ec\+::\+Viewport\+::get\+PositionY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_viewport_a8f56fdabf8e67580a96e9dee4e9e359f}\label{classec_1_1_viewport_a8f56fdabf8e67580a96e9dee4e9e359f}} 
+\index{ec::Viewport@{ec::Viewport}!getSize@{getSize}}
+\index{getSize@{getSize}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily const glm\+::vec2 \& ec\+::\+Viewport\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_viewport_ae5eab9f39747421f0669aef7a8126a70}\label{classec_1_1_viewport_ae5eab9f39747421f0669aef7a8126a70}} 
+\index{ec::Viewport@{ec::Viewport}!getSizeX@{getSizeX}}
+\index{getSizeX@{getSizeX}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{getSizeX()}{getSizeX()}}
+{\footnotesize\ttfamily float ec\+::\+Viewport\+::get\+SizeX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_viewport_aa02139fb9d8927b744ab3442088330fb}\label{classec_1_1_viewport_aa02139fb9d8927b744ab3442088330fb}} 
+\index{ec::Viewport@{ec::Viewport}!getSizeY@{getSizeY}}
+\index{getSizeY@{getSizeY}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{getSizeY()}{getSizeY()}}
+{\footnotesize\ttfamily float ec\+::\+Viewport\+::get\+SizeY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classec_1_1_viewport_a8ab2259a78b8b9aeebd3b4450ce2cdd2}\label{classec_1_1_viewport_a8ab2259a78b8b9aeebd3b4450ce2cdd2}} 
+\index{ec::Viewport@{ec::Viewport}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ec\+::\+Viewport\+::set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::vec2 \&}]{position }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_viewport_a0bccb794bc85e2c2e8417ab142ceadbc}\label{classec_1_1_viewport_a0bccb794bc85e2c2e8417ab142ceadbc}} 
+\index{ec::Viewport@{ec::Viewport}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Viewport\+::set\+Position (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_viewport_a2fd67017414985517470b75afb3402a7}\label{classec_1_1_viewport_a2fd67017414985517470b75afb3402a7}} 
+\index{ec::Viewport@{ec::Viewport}!setPositionX@{setPositionX}}
+\index{setPositionX@{setPositionX}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{setPositionX()}{setPositionX()}}
+{\footnotesize\ttfamily void ec\+::\+Viewport\+::set\+PositionX (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_viewport_a754e8f6f4b857c70b598dc3bf5a7badd}\label{classec_1_1_viewport_a754e8f6f4b857c70b598dc3bf5a7badd}} 
+\index{ec::Viewport@{ec::Viewport}!setPositionY@{setPositionY}}
+\index{setPositionY@{setPositionY}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{setPositionY()}{setPositionY()}}
+{\footnotesize\ttfamily void ec\+::\+Viewport\+::set\+PositionY (\begin{DoxyParamCaption}\item[{float}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_viewport_ad8e05ac01f4c19c599f6b7dc344b815c}\label{classec_1_1_viewport_ad8e05ac01f4c19c599f6b7dc344b815c}} 
+\index{ec::Viewport@{ec::Viewport}!setSize@{setSize}}
+\index{setSize@{setSize}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ec\+::\+Viewport\+::set\+Size (\begin{DoxyParamCaption}\item[{const glm\+::vec2 \&}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_viewport_a72cca5d2d2eb6fee38a28c27ffc8b395}\label{classec_1_1_viewport_a72cca5d2d2eb6fee38a28c27ffc8b395}} 
+\index{ec::Viewport@{ec::Viewport}!setSize@{setSize}}
+\index{setSize@{setSize}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ec\+::\+Viewport\+::set\+Size (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_viewport_af1bcf1e3a8a06458c41a0c646b5f2057}\label{classec_1_1_viewport_af1bcf1e3a8a06458c41a0c646b5f2057}} 
+\index{ec::Viewport@{ec::Viewport}!setSizeX@{setSizeX}}
+\index{setSizeX@{setSizeX}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{setSizeX()}{setSizeX()}}
+{\footnotesize\ttfamily void ec\+::\+Viewport\+::set\+SizeX (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_viewport_ae9420c066d2bf6f1a6cc5c0b65092862}\label{classec_1_1_viewport_ae9420c066d2bf6f1a6cc5c0b65092862}} 
+\index{ec::Viewport@{ec::Viewport}!setSizeY@{setSizeY}}
+\index{setSizeY@{setSizeY}!ec::Viewport@{ec::Viewport}}
+\doxysubsubsection{\texorpdfstring{setSizeY()}{setSizeY()}}
+{\footnotesize\ttfamily void ec\+::\+Viewport\+::set\+SizeY (\begin{DoxyParamCaption}\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Window/\mbox{\hyperlink{_viewport_8h}{Viewport.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Window/\mbox{\hyperlink{_viewport_8cpp}{Viewport.\+cpp}}\end{DoxyCompactItemize}

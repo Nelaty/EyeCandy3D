@@ -1,0 +1,191 @@
+\hypertarget{classec_1_1_generic_tabbed_pane_listener}{}\doxysection{ec\+::Generic\+Tabbed\+Pane\+Listener Class Reference}
+\label{classec_1_1_generic_tabbed_pane_listener}\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+
+
+Generic gui listener that can handle events by Tabbed\+Pane widgets.  
+
+
+
+
+{\ttfamily \#include $<$Generic\+Tabbed\+Pane\+Listener.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Generic\+Tabbed\+Pane\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classec_1_1_generic_tabbed_pane_listener__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Generic\+Tabbed\+Pane\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classec_1_1_generic_tabbed_pane_listener__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_adbb9c0a73499ce6b26ba1c8569cb8525}{Selected\+Tab\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Tabbed\+Pane $\ast$source, agui\+::\+Tab $\ast$tab)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a41097f0918f8888f9e970e9c9a5f0d52}{Resizing\+Tab\+Content\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Tabbed\+Pane $\ast$source, bool resizing)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_aef726cc6897d8994602cb127693e664d}{Tab\+Added\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Tabbed\+Pane $\ast$source, agui\+::\+Tab $\ast$tab, agui\+::\+Widget $\ast$tab\+Content)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a806d9a110845a5bdcb4b10e7fb57beca}{Tab\+Removed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Tabbed\+Pane $\ast$source, agui\+::\+Tab $\ast$tab)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a158699bc84b6a145e3dafec53ab63061}{Death\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Tabbed\+Pane $\ast$source)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a959bfe958603706e1efbf1359c2533bb}{Generic\+Tabbed\+Pane\+Listener}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a06db790c2576810ef8a759c9a780aa4d}{$\sim$\+Generic\+Tabbed\+Pane\+Listener}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_ad74c260a9808fff690dbae8e21075492}{set\+Selected\+Tab\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_adbb9c0a73499ce6b26ba1c8569cb8525}{Selected\+Tab\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a84b64063845563fedf375ad3ab4881a2}{set\+Resizing\+Tab\+Content\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a41097f0918f8888f9e970e9c9a5f0d52}{Resizing\+Tab\+Content\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a8dbe036522e0fef51b5617a396725592}{set\+Tab\+Added\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_aef726cc6897d8994602cb127693e664d}{Tab\+Added\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a270e9b954f7674566c323f5d420c79eb}{set\+Tab\+Removed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a806d9a110845a5bdcb4b10e7fb57beca}{Tab\+Removed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a2da654f2864c7224a37bcc6cc0535d5a}{set\+Death\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a158699bc84b6a145e3dafec53ab63061}{Death\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a4ab165822e9a5772be852520a6ee189c}{selected\+Tab\+Changed}} (agui\+::\+Tabbed\+Pane $\ast$source, agui\+::\+Tab $\ast$tab) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_aa75a279b781f32aeaf5adf8249a2aa0f}{resizing\+Tab\+Content\+Changed}} (agui\+::\+Tabbed\+Pane $\ast$source, bool resizing) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_aa00e18c320111a63c11eb9500574585d}{tab\+Added}} (agui\+::\+Tabbed\+Pane $\ast$source, agui\+::\+Tab $\ast$tab, agui\+::\+Widget $\ast$tab\+Content) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a8489d4a6e19fe55d24919ebf78e83d54}{tab\+Removed}} (agui\+::\+Tabbed\+Pane $\ast$source, agui\+::\+Tab $\ast$tab) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_aee95a52820d4f194c9bf726301f63240}{death}} (agui\+::\+Tabbed\+Pane $\ast$source) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic gui listener that can handle events by Tabbed\+Pane widgets. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a158699bc84b6a145e3dafec53ab63061}\label{classec_1_1_generic_tabbed_pane_listener_a158699bc84b6a145e3dafec53ab63061}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!Death\_Callback@{Death\_Callback}}
+\index{Death\_Callback@{Death\_Callback}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{Death\_Callback}{Death\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a158699bc84b6a145e3dafec53ab63061}{ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::\+Death\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Tabbed\+Pane$\ast$ source)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a41097f0918f8888f9e970e9c9a5f0d52}\label{classec_1_1_generic_tabbed_pane_listener_a41097f0918f8888f9e970e9c9a5f0d52}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!ResizingTabContentChanged\_Callback@{ResizingTabContentChanged\_Callback}}
+\index{ResizingTabContentChanged\_Callback@{ResizingTabContentChanged\_Callback}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{ResizingTabContentChanged\_Callback}{ResizingTabContentChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a41097f0918f8888f9e970e9c9a5f0d52}{ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::\+Resizing\+Tab\+Content\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Tabbed\+Pane$\ast$ source, bool resizing)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_adbb9c0a73499ce6b26ba1c8569cb8525}\label{classec_1_1_generic_tabbed_pane_listener_adbb9c0a73499ce6b26ba1c8569cb8525}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!SelectedTabChanged\_Callback@{SelectedTabChanged\_Callback}}
+\index{SelectedTabChanged\_Callback@{SelectedTabChanged\_Callback}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{SelectedTabChanged\_Callback}{SelectedTabChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_adbb9c0a73499ce6b26ba1c8569cb8525}{ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::\+Selected\+Tab\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Tabbed\+Pane$\ast$ source, agui\+::\+Tab$\ast$ tab)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_aef726cc6897d8994602cb127693e664d}\label{classec_1_1_generic_tabbed_pane_listener_aef726cc6897d8994602cb127693e664d}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!TabAdded\_Callback@{TabAdded\_Callback}}
+\index{TabAdded\_Callback@{TabAdded\_Callback}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{TabAdded\_Callback}{TabAdded\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_aef726cc6897d8994602cb127693e664d}{ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::\+Tab\+Added\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Tabbed\+Pane$\ast$ source, agui\+::\+Tab$\ast$ tab, agui\+::\+Widget$\ast$ tab\+Content)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a806d9a110845a5bdcb4b10e7fb57beca}\label{classec_1_1_generic_tabbed_pane_listener_a806d9a110845a5bdcb4b10e7fb57beca}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!TabRemoved\_Callback@{TabRemoved\_Callback}}
+\index{TabRemoved\_Callback@{TabRemoved\_Callback}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{TabRemoved\_Callback}{TabRemoved\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a806d9a110845a5bdcb4b10e7fb57beca}{ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::\+Tab\+Removed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Tabbed\+Pane$\ast$ source, agui\+::\+Tab$\ast$ tab)$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a959bfe958603706e1efbf1359c2533bb}\label{classec_1_1_generic_tabbed_pane_listener_a959bfe958603706e1efbf1359c2533bb}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!GenericTabbedPaneListener@{GenericTabbedPaneListener}}
+\index{GenericTabbedPaneListener@{GenericTabbedPaneListener}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{GenericTabbedPaneListener()}{GenericTabbedPaneListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::\+Generic\+Tabbed\+Pane\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a06db790c2576810ef8a759c9a780aa4d}\label{classec_1_1_generic_tabbed_pane_listener_a06db790c2576810ef8a759c9a780aa4d}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!````~GenericTabbedPaneListener@{$\sim$GenericTabbedPaneListener}}
+\index{````~GenericTabbedPaneListener@{$\sim$GenericTabbedPaneListener}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenericTabbedPaneListener()}{~GenericTabbedPaneListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::$\sim$\+Generic\+Tabbed\+Pane\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_aee95a52820d4f194c9bf726301f63240}\label{classec_1_1_generic_tabbed_pane_listener_aee95a52820d4f194c9bf726301f63240}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!death@{death}}
+\index{death@{death}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{death()}{death()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::death (\begin{DoxyParamCaption}\item[{agui\+::\+Tabbed\+Pane $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_aa75a279b781f32aeaf5adf8249a2aa0f}\label{classec_1_1_generic_tabbed_pane_listener_aa75a279b781f32aeaf5adf8249a2aa0f}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!resizingTabContentChanged@{resizingTabContentChanged}}
+\index{resizingTabContentChanged@{resizingTabContentChanged}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{resizingTabContentChanged()}{resizingTabContentChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::resizing\+Tab\+Content\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Tabbed\+Pane $\ast$}]{source,  }\item[{bool}]{resizing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a4ab165822e9a5772be852520a6ee189c}\label{classec_1_1_generic_tabbed_pane_listener_a4ab165822e9a5772be852520a6ee189c}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!selectedTabChanged@{selectedTabChanged}}
+\index{selectedTabChanged@{selectedTabChanged}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{selectedTabChanged()}{selectedTabChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::selected\+Tab\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Tabbed\+Pane $\ast$}]{source,  }\item[{agui\+::\+Tab $\ast$}]{tab }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a2da654f2864c7224a37bcc6cc0535d5a}\label{classec_1_1_generic_tabbed_pane_listener_a2da654f2864c7224a37bcc6cc0535d5a}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!setDeathCallback@{setDeathCallback}}
+\index{setDeathCallback@{setDeathCallback}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{setDeathCallback()}{setDeathCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::set\+Death\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a158699bc84b6a145e3dafec53ab63061}{Death\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a84b64063845563fedf375ad3ab4881a2}\label{classec_1_1_generic_tabbed_pane_listener_a84b64063845563fedf375ad3ab4881a2}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!setResizingTabContentChangedCallback@{setResizingTabContentChangedCallback}}
+\index{setResizingTabContentChangedCallback@{setResizingTabContentChangedCallback}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{setResizingTabContentChangedCallback()}{setResizingTabContentChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::set\+Resizing\+Tab\+Content\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a41097f0918f8888f9e970e9c9a5f0d52}{Resizing\+Tab\+Content\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_ad74c260a9808fff690dbae8e21075492}\label{classec_1_1_generic_tabbed_pane_listener_ad74c260a9808fff690dbae8e21075492}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!setSelectedTabChangedCallback@{setSelectedTabChangedCallback}}
+\index{setSelectedTabChangedCallback@{setSelectedTabChangedCallback}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{setSelectedTabChangedCallback()}{setSelectedTabChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::set\+Selected\+Tab\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_adbb9c0a73499ce6b26ba1c8569cb8525}{Selected\+Tab\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a8dbe036522e0fef51b5617a396725592}\label{classec_1_1_generic_tabbed_pane_listener_a8dbe036522e0fef51b5617a396725592}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!setTabAddedCallback@{setTabAddedCallback}}
+\index{setTabAddedCallback@{setTabAddedCallback}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{setTabAddedCallback()}{setTabAddedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::set\+Tab\+Added\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_aef726cc6897d8994602cb127693e664d}{Tab\+Added\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a270e9b954f7674566c323f5d420c79eb}\label{classec_1_1_generic_tabbed_pane_listener_a270e9b954f7674566c323f5d420c79eb}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!setTabRemovedCallback@{setTabRemovedCallback}}
+\index{setTabRemovedCallback@{setTabRemovedCallback}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{setTabRemovedCallback()}{setTabRemovedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::set\+Tab\+Removed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_tabbed_pane_listener_a806d9a110845a5bdcb4b10e7fb57beca}{Tab\+Removed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_aa00e18c320111a63c11eb9500574585d}\label{classec_1_1_generic_tabbed_pane_listener_aa00e18c320111a63c11eb9500574585d}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!tabAdded@{tabAdded}}
+\index{tabAdded@{tabAdded}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{tabAdded()}{tabAdded()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::tab\+Added (\begin{DoxyParamCaption}\item[{agui\+::\+Tabbed\+Pane $\ast$}]{source,  }\item[{agui\+::\+Tab $\ast$}]{tab,  }\item[{agui\+::\+Widget $\ast$}]{tab\+Content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_tabbed_pane_listener_a8489d4a6e19fe55d24919ebf78e83d54}\label{classec_1_1_generic_tabbed_pane_listener_a8489d4a6e19fe55d24919ebf78e83d54}} 
+\index{ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}!tabRemoved@{tabRemoved}}
+\index{tabRemoved@{tabRemoved}!ec::GenericTabbedPaneListener@{ec::GenericTabbedPaneListener}}
+\doxysubsubsection{\texorpdfstring{tabRemoved()}{tabRemoved()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Tabbed\+Pane\+Listener\+::tab\+Removed (\begin{DoxyParamCaption}\item[{agui\+::\+Tabbed\+Pane $\ast$}]{source,  }\item[{agui\+::\+Tab $\ast$}]{tab }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Gui/\+Listener/\mbox{\hyperlink{_generic_tabbed_pane_listener_8h}{Generic\+Tabbed\+Pane\+Listener.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Gui/\+Listener/\mbox{\hyperlink{_generic_tabbed_pane_listener_8cpp}{Generic\+Tabbed\+Pane\+Listener.\+cpp}}\end{DoxyCompactItemize}

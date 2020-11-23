@@ -1,0 +1,8 @@
+<map id="ec::Scene" name="ec::Scene">
+<area shape="rect" id="node1" title="A scene enables an easy switching of root nodes." alt="" coords="341,292,481,501"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,160,156"/>
+<area shape="rect" id="node3" href="$classec_1_1_scene_system.html" title=" " alt="" coords="184,13,360,222"/>
+<area shape="rect" id="node4" title=" " alt="" coords="385,79,439,156"/>
+<area shape="rect" id="node5" title=" " alt="" coords="479,79,526,156"/>
+<area shape="rect" id="node6" href="$classec_1_1_scene_renderer.html" title=" " alt="" coords="551,5,708,229"/>
+</map>

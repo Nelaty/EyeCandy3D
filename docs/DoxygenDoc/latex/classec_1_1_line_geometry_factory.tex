@@ -1,0 +1,100 @@
+\hypertarget{classec_1_1_line_geometry_factory}{}\doxysection{ec\+::Line\+Geometry\+Factory Class Reference}
+\label{classec_1_1_line_geometry_factory}\index{ec::LineGeometryFactory@{ec::LineGeometryFactory}}
+
+
+Create geometries, which are made out of multiple lines.  
+
+
+
+
+{\ttfamily \#include $<$Line\+Geometry\+Factory.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::Line\+Geometry\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classec_1_1_line_geometry_factory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_line_geometry_factory_a3025abbbb9ff132e43d46b17f1381213}{Line\+Geometry\+\_\+\+Type}} = \mbox{\hyperlink{classec_1_1_line_strip_geometry}{Line\+Strip\+Geometry}}
+\item 
+using \mbox{\hyperlink{classec_1_1_line_geometry_factory_a8f7bd7480ebc0dbc77930d81dcb69678}{Line\+Geometry\+\_\+\+Ptr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classec_1_1_line_geometry_factory_a3025abbbb9ff132e43d46b17f1381213}{Line\+Geometry\+\_\+\+Type}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classec_1_1_line_geometry_factory_a8f7bd7480ebc0dbc77930d81dcb69678}{Line\+Geometry\+\_\+\+Ptr}} \mbox{\hyperlink{classec_1_1_line_geometry_factory_ad5a4cbba96cb7d6fa979e6266c7a8912}{create\+Rectangle\+Outline\+Geometry}} (float width, float height)
+\begin{DoxyCompactList}\small\item\em Create the geometry of a rectangle\textquotesingle{}s outline. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classec_1_1_line_geometry_factory_a8f7bd7480ebc0dbc77930d81dcb69678}{Line\+Geometry\+\_\+\+Ptr}} \mbox{\hyperlink{classec_1_1_line_geometry_factory_a7546d1c1b7125a621f2e8a652035e843}{create\+Circle\+Outline\+Geometry}} (float radius)
+\begin{DoxyCompactList}\small\item\em Create the geometry of a circle\textquotesingle{}s outline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Create geometries, which are made out of multiple lines. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_line_geometry_factory_a8f7bd7480ebc0dbc77930d81dcb69678}\label{classec_1_1_line_geometry_factory_a8f7bd7480ebc0dbc77930d81dcb69678}} 
+\index{ec::LineGeometryFactory@{ec::LineGeometryFactory}!LineGeometry\_Ptr@{LineGeometry\_Ptr}}
+\index{LineGeometry\_Ptr@{LineGeometry\_Ptr}!ec::LineGeometryFactory@{ec::LineGeometryFactory}}
+\doxysubsubsection{\texorpdfstring{LineGeometry\_Ptr}{LineGeometry\_Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_line_geometry_factory_a8f7bd7480ebc0dbc77930d81dcb69678}{ec\+::\+Line\+Geometry\+Factory\+::\+Line\+Geometry\+\_\+\+Ptr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classec_1_1_line_geometry_factory_a3025abbbb9ff132e43d46b17f1381213}{Line\+Geometry\+\_\+\+Type}}$>$}
+
+\mbox{\Hypertarget{classec_1_1_line_geometry_factory_a3025abbbb9ff132e43d46b17f1381213}\label{classec_1_1_line_geometry_factory_a3025abbbb9ff132e43d46b17f1381213}} 
+\index{ec::LineGeometryFactory@{ec::LineGeometryFactory}!LineGeometry\_Type@{LineGeometry\_Type}}
+\index{LineGeometry\_Type@{LineGeometry\_Type}!ec::LineGeometryFactory@{ec::LineGeometryFactory}}
+\doxysubsubsection{\texorpdfstring{LineGeometry\_Type}{LineGeometry\_Type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_line_geometry_factory_a3025abbbb9ff132e43d46b17f1381213}{ec\+::\+Line\+Geometry\+Factory\+::\+Line\+Geometry\+\_\+\+Type}} =  \mbox{\hyperlink{classec_1_1_line_strip_geometry}{Line\+Strip\+Geometry}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_line_geometry_factory_a7546d1c1b7125a621f2e8a652035e843}\label{classec_1_1_line_geometry_factory_a7546d1c1b7125a621f2e8a652035e843}} 
+\index{ec::LineGeometryFactory@{ec::LineGeometryFactory}!createCircleOutlineGeometry@{createCircleOutlineGeometry}}
+\index{createCircleOutlineGeometry@{createCircleOutlineGeometry}!ec::LineGeometryFactory@{ec::LineGeometryFactory}}
+\doxysubsubsection{\texorpdfstring{createCircleOutlineGeometry()}{createCircleOutlineGeometry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_line_geometry_factory_a8f7bd7480ebc0dbc77930d81dcb69678}{Line\+Geometry\+Factory\+::\+Line\+Geometry\+\_\+\+Ptr}} ec\+::\+Line\+Geometry\+Factory\+::create\+Circle\+Outline\+Geometry (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create the geometry of a circle\textquotesingle{}s outline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & Should be $>$ 0.\+0f \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nullptr if parameter is invalid, a new line geometry otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_line_geometry_factory_ad5a4cbba96cb7d6fa979e6266c7a8912}\label{classec_1_1_line_geometry_factory_ad5a4cbba96cb7d6fa979e6266c7a8912}} 
+\index{ec::LineGeometryFactory@{ec::LineGeometryFactory}!createRectangleOutlineGeometry@{createRectangleOutlineGeometry}}
+\index{createRectangleOutlineGeometry@{createRectangleOutlineGeometry}!ec::LineGeometryFactory@{ec::LineGeometryFactory}}
+\doxysubsubsection{\texorpdfstring{createRectangleOutlineGeometry()}{createRectangleOutlineGeometry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_line_geometry_factory_a8f7bd7480ebc0dbc77930d81dcb69678}{Line\+Geometry\+Factory\+::\+Line\+Geometry\+\_\+\+Ptr}} ec\+::\+Line\+Geometry\+Factory\+::create\+Rectangle\+Outline\+Geometry (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create the geometry of a rectangle\textquotesingle{}s outline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Should be $>$ 0.\+0f \\
+\hline
+{\em height} & Should be $>$ 0.\+0f \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nullptr if parameters are invalid, a new line geometry otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Graphics/\+Geometry/\mbox{\hyperlink{_line_geometry_factory_8h}{Line\+Geometry\+Factory.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Graphics/\+Geometry/\mbox{\hyperlink{_line_geometry_factory_8cpp}{Line\+Geometry\+Factory.\+cpp}}\end{DoxyCompactItemize}

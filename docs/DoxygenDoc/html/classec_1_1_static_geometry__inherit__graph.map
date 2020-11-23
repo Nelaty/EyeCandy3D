@@ -1,0 +1,12 @@
+<map id="ec::StaticGeometry" name="ec::StaticGeometry">
+<area shape="rect" id="node1" title="Geometry that does not change itself over time." alt="" coords="507,476,646,583"/>
+<area shape="rect" id="node4" href="$classec_1_1_circle_geometry.html" title="Concrete static geometry that represents a circle." alt="" coords="5,645,143,781"/>
+<area shape="rect" id="node5" href="$classec_1_1_cube_geometry.html" title="Concrete static geometry that represents a cube." alt="" coords="167,631,301,796"/>
+<area shape="rect" id="node6" href="$classec_1_1_cylinder_geometry.html" title="Kind of static geometry that represents a cylinder." alt="" coords="325,660,476,767"/>
+<area shape="rect" id="node7" href="$classec_1_1_line_geometry.html" title="Describes the geometry of a single line." alt="" coords="500,645,653,781"/>
+<area shape="rect" id="node8" href="$classec_1_1_line_strip_geometry.html" title="Describes the geometry of a line strip." alt="" coords="677,631,833,796"/>
+<area shape="rect" id="node9" href="$classec_1_1_rectangle_geometry.html" title="Geometry that represents a filled rectangle." alt="" coords="858,638,1021,789"/>
+<area shape="rect" id="node10" href="$classec_1_1_sphere_geometry.html" title="Geometry that represents a sphere." alt="" coords="1045,638,1191,789"/>
+<area shape="rect" id="node2" href="$classec_1_1_geometry.html" title="Geometry." alt="" coords="500,204,653,428"/>
+<area shape="rect" id="node3" href="$classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry." alt="" coords="501,5,653,156"/>
+</map>

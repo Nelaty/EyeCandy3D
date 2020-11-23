@@ -1,0 +1,311 @@
+\hypertarget{classec_1_1_generic_list_box_listener}{}\doxysection{ec\+::Generic\+List\+Box\+Listener Class Reference}
+\label{classec_1_1_generic_list_box_listener}\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+
+
+Generic gui listener that can handle events by List\+Box widgets.  
+
+
+
+
+{\ttfamily \#include $<$Generic\+List\+Box\+Listener.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Generic\+List\+Box\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classec_1_1_generic_list_box_listener__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Generic\+List\+Box\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classec_1_1_generic_list_box_listener__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a9dcfd35af8971efa652ced675ac1f28d}{Item\+Added\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+List\+Box $\ast$list\+Box, const std\+::string \&item)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a7a6dd56abe801f89877e1776666a5b11}{Item\+Removed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+List\+Box $\ast$list\+Box, const std\+::string \&item)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a42ecf66ec6c32bbe9fe0174b2b1a527f}{Sorted\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+List\+Box $\ast$source, bool sorted)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a6e2b38bbcd32c3716e7660fc40c4054c}{R\+Sorted\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+List\+Box $\ast$source, bool r\+Sorted)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_ac1e0c2bb89e7c14f6b201450d372722b}{Hover\+Index\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+List\+Box $\ast$source, int index)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a5016e759cd4589d9da453ce353ddc3b2}{Multiselect\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+List\+Box $\ast$source, bool multiselect)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_afafcf69d328d0d728142a5153e0b9790}{Multiselect\+Extended\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+List\+Box $\ast$source, bool multiselect)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_aaba7b764c07b0c7cffd9b880bdf46358}{Item\+Height\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+List\+Box $\ast$source, int height)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_abe17afe409710ad4f15673669a8ebbb3}{Mouse\+Wheel\+Select\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+List\+Box $\ast$source, bool m\+W\+Selection)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a121e777735fcbf9e15e147d820e5718e}{Death\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+List\+Box $\ast$source)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_generic_list_box_listener_a5de89e804f02f93863e2c469098cb408}{Generic\+List\+Box\+Listener}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_generic_list_box_listener_a031efad0ba47de16334d90a80ab3d208}{$\sim$\+Generic\+List\+Box\+Listener}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_afd3c4f826d526d19f4074f4a382f1372}{set\+Item\+Added\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a9dcfd35af8971efa652ced675ac1f28d}{Item\+Added\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_acfa8b029e68f2c2262b2f9d7aef24237}{set\+Item\+Removed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a7a6dd56abe801f89877e1776666a5b11}{Item\+Removed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_adbce2672e6173f9f2b09d6ba9df09828}{set\+Sorted\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a42ecf66ec6c32bbe9fe0174b2b1a527f}{Sorted\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_aa8d6e9c55f6178c3fec2d9142ce9586e}{set\+R\+Sorted\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a6e2b38bbcd32c3716e7660fc40c4054c}{R\+Sorted\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a8013f4ffb27051e6cef5eb909ced36f6}{set\+Hover\+Index\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_ac1e0c2bb89e7c14f6b201450d372722b}{Hover\+Index\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a0fa1d4e6a33ff987d555ab38c6d32044}{set\+Multiselect\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a5016e759cd4589d9da453ce353ddc3b2}{Multiselect\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a64eba5b8be3e967ab3d6751b9fc8979a}{set\+Multiselect\+Extended\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_afafcf69d328d0d728142a5153e0b9790}{Multiselect\+Extended\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a41a4c91d77d0b3470147489b09c7d140}{set\+Item\+Height\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_aaba7b764c07b0c7cffd9b880bdf46358}{Item\+Height\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_af51feb582139508e18215d7ae8430886}{set\+Mouse\+Wheel\+Select\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_abe17afe409710ad4f15673669a8ebbb3}{Mouse\+Wheel\+Select\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_add7031a36395dc935dbc0adff256c4e1}{set\+Death\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a121e777735fcbf9e15e147d820e5718e}{Death\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a6003842e8b318a5b28a456158bd5eab1}{item\+Added}} (agui\+::\+List\+Box $\ast$list\+Box, const std\+::string \&item) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a9b2412b88135015e4aaa57ad6f8f1a79}{item\+Removed}} (agui\+::\+List\+Box $\ast$list\+Box, const std\+::string \&item) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a52b32a361ac45c09f0a3ada6e52334d6}{sorted\+Changed}} (agui\+::\+List\+Box $\ast$source, bool sorted) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a50f60a671cd8dcfcce7ab99d7383ad4f}{r\+Sorted\+Changed}} (agui\+::\+List\+Box $\ast$source, bool r\+Sorted) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a222a9b88623d11a0a60a6caec4f59259}{hover\+Index\+Changed}} (agui\+::\+List\+Box $\ast$source, int index) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a6471d2661d969170f644bc4ebc3cb2f5}{multiselect\+Changed}} (agui\+::\+List\+Box $\ast$source, bool multiselect) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_ac440be24147c05e37a5be442aaa1d0f8}{multiselect\+Extended\+Changed}} (agui\+::\+List\+Box $\ast$source, bool multiselect) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_ad4855a32d0d67d3c2581212b51fa1765}{item\+Height\+Changed}} (agui\+::\+List\+Box $\ast$source, int height) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_aa1e0ea8a38c89f2e073a51b76264fc4a}{mouse\+Wheel\+Selection\+Changed}} (agui\+::\+List\+Box $\ast$source, bool m\+W\+Selection) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a9ac0f293d7169cad08bde3285cea1edc}{death}} (agui\+::\+List\+Box $\ast$source) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic gui listener that can handle events by List\+Box widgets. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a121e777735fcbf9e15e147d820e5718e}\label{classec_1_1_generic_list_box_listener_a121e777735fcbf9e15e147d820e5718e}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!Death\_Callback@{Death\_Callback}}
+\index{Death\_Callback@{Death\_Callback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{Death\_Callback}{Death\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a121e777735fcbf9e15e147d820e5718e}{ec\+::\+Generic\+List\+Box\+Listener\+::\+Death\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+List\+Box$\ast$ source)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_ac1e0c2bb89e7c14f6b201450d372722b}\label{classec_1_1_generic_list_box_listener_ac1e0c2bb89e7c14f6b201450d372722b}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!HoverIndexChanged\_Callback@{HoverIndexChanged\_Callback}}
+\index{HoverIndexChanged\_Callback@{HoverIndexChanged\_Callback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{HoverIndexChanged\_Callback}{HoverIndexChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_ac1e0c2bb89e7c14f6b201450d372722b}{ec\+::\+Generic\+List\+Box\+Listener\+::\+Hover\+Index\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+List\+Box$\ast$ source, int index)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a9dcfd35af8971efa652ced675ac1f28d}\label{classec_1_1_generic_list_box_listener_a9dcfd35af8971efa652ced675ac1f28d}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!ItemAdded\_Callback@{ItemAdded\_Callback}}
+\index{ItemAdded\_Callback@{ItemAdded\_Callback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{ItemAdded\_Callback}{ItemAdded\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a9dcfd35af8971efa652ced675ac1f28d}{ec\+::\+Generic\+List\+Box\+Listener\+::\+Item\+Added\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+List\+Box$\ast$ list\+Box, const std\+::string\& item)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_aaba7b764c07b0c7cffd9b880bdf46358}\label{classec_1_1_generic_list_box_listener_aaba7b764c07b0c7cffd9b880bdf46358}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!ItemHeightChanged\_Callback@{ItemHeightChanged\_Callback}}
+\index{ItemHeightChanged\_Callback@{ItemHeightChanged\_Callback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{ItemHeightChanged\_Callback}{ItemHeightChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_aaba7b764c07b0c7cffd9b880bdf46358}{ec\+::\+Generic\+List\+Box\+Listener\+::\+Item\+Height\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+List\+Box$\ast$ source, int height)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a7a6dd56abe801f89877e1776666a5b11}\label{classec_1_1_generic_list_box_listener_a7a6dd56abe801f89877e1776666a5b11}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!ItemRemoved\_Callback@{ItemRemoved\_Callback}}
+\index{ItemRemoved\_Callback@{ItemRemoved\_Callback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{ItemRemoved\_Callback}{ItemRemoved\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a7a6dd56abe801f89877e1776666a5b11}{ec\+::\+Generic\+List\+Box\+Listener\+::\+Item\+Removed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+List\+Box$\ast$ list\+Box, const std\+::string\& item)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_abe17afe409710ad4f15673669a8ebbb3}\label{classec_1_1_generic_list_box_listener_abe17afe409710ad4f15673669a8ebbb3}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!MouseWheelSelectChanged\_Callback@{MouseWheelSelectChanged\_Callback}}
+\index{MouseWheelSelectChanged\_Callback@{MouseWheelSelectChanged\_Callback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{MouseWheelSelectChanged\_Callback}{MouseWheelSelectChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_abe17afe409710ad4f15673669a8ebbb3}{ec\+::\+Generic\+List\+Box\+Listener\+::\+Mouse\+Wheel\+Select\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+List\+Box$\ast$ source, bool m\+W\+Selection)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a5016e759cd4589d9da453ce353ddc3b2}\label{classec_1_1_generic_list_box_listener_a5016e759cd4589d9da453ce353ddc3b2}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!MultiselectChanged\_Callback@{MultiselectChanged\_Callback}}
+\index{MultiselectChanged\_Callback@{MultiselectChanged\_Callback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{MultiselectChanged\_Callback}{MultiselectChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a5016e759cd4589d9da453ce353ddc3b2}{ec\+::\+Generic\+List\+Box\+Listener\+::\+Multiselect\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+List\+Box$\ast$ source, bool multiselect)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_afafcf69d328d0d728142a5153e0b9790}\label{classec_1_1_generic_list_box_listener_afafcf69d328d0d728142a5153e0b9790}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!MultiselectExtendedChanged\_Callback@{MultiselectExtendedChanged\_Callback}}
+\index{MultiselectExtendedChanged\_Callback@{MultiselectExtendedChanged\_Callback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{MultiselectExtendedChanged\_Callback}{MultiselectExtendedChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_afafcf69d328d0d728142a5153e0b9790}{ec\+::\+Generic\+List\+Box\+Listener\+::\+Multiselect\+Extended\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+List\+Box$\ast$ source, bool multiselect)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a6e2b38bbcd32c3716e7660fc40c4054c}\label{classec_1_1_generic_list_box_listener_a6e2b38bbcd32c3716e7660fc40c4054c}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!RSortedChanged\_Callback@{RSortedChanged\_Callback}}
+\index{RSortedChanged\_Callback@{RSortedChanged\_Callback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{RSortedChanged\_Callback}{RSortedChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a6e2b38bbcd32c3716e7660fc40c4054c}{ec\+::\+Generic\+List\+Box\+Listener\+::\+R\+Sorted\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+List\+Box$\ast$ source, bool r\+Sorted)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a42ecf66ec6c32bbe9fe0174b2b1a527f}\label{classec_1_1_generic_list_box_listener_a42ecf66ec6c32bbe9fe0174b2b1a527f}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!SortedChanged\_Callback@{SortedChanged\_Callback}}
+\index{SortedChanged\_Callback@{SortedChanged\_Callback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{SortedChanged\_Callback}{SortedChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a42ecf66ec6c32bbe9fe0174b2b1a527f}{ec\+::\+Generic\+List\+Box\+Listener\+::\+Sorted\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+List\+Box$\ast$ source, bool sorted)$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a5de89e804f02f93863e2c469098cb408}\label{classec_1_1_generic_list_box_listener_a5de89e804f02f93863e2c469098cb408}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!GenericListBoxListener@{GenericListBoxListener}}
+\index{GenericListBoxListener@{GenericListBoxListener}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{GenericListBoxListener()}{GenericListBoxListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+List\+Box\+Listener\+::\+Generic\+List\+Box\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a031efad0ba47de16334d90a80ab3d208}\label{classec_1_1_generic_list_box_listener_a031efad0ba47de16334d90a80ab3d208}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!````~GenericListBoxListener@{$\sim$GenericListBoxListener}}
+\index{````~GenericListBoxListener@{$\sim$GenericListBoxListener}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenericListBoxListener()}{~GenericListBoxListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+List\+Box\+Listener\+::$\sim$\+Generic\+List\+Box\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a9ac0f293d7169cad08bde3285cea1edc}\label{classec_1_1_generic_list_box_listener_a9ac0f293d7169cad08bde3285cea1edc}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!death@{death}}
+\index{death@{death}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{death()}{death()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::death (\begin{DoxyParamCaption}\item[{agui\+::\+List\+Box $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a222a9b88623d11a0a60a6caec4f59259}\label{classec_1_1_generic_list_box_listener_a222a9b88623d11a0a60a6caec4f59259}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!hoverIndexChanged@{hoverIndexChanged}}
+\index{hoverIndexChanged@{hoverIndexChanged}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{hoverIndexChanged()}{hoverIndexChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::hover\+Index\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+List\+Box $\ast$}]{source,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a6003842e8b318a5b28a456158bd5eab1}\label{classec_1_1_generic_list_box_listener_a6003842e8b318a5b28a456158bd5eab1}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!itemAdded@{itemAdded}}
+\index{itemAdded@{itemAdded}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{itemAdded()}{itemAdded()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::item\+Added (\begin{DoxyParamCaption}\item[{agui\+::\+List\+Box $\ast$}]{list\+Box,  }\item[{const std\+::string \&}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_ad4855a32d0d67d3c2581212b51fa1765}\label{classec_1_1_generic_list_box_listener_ad4855a32d0d67d3c2581212b51fa1765}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!itemHeightChanged@{itemHeightChanged}}
+\index{itemHeightChanged@{itemHeightChanged}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{itemHeightChanged()}{itemHeightChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::item\+Height\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+List\+Box $\ast$}]{source,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a9b2412b88135015e4aaa57ad6f8f1a79}\label{classec_1_1_generic_list_box_listener_a9b2412b88135015e4aaa57ad6f8f1a79}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!itemRemoved@{itemRemoved}}
+\index{itemRemoved@{itemRemoved}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{itemRemoved()}{itemRemoved()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::item\+Removed (\begin{DoxyParamCaption}\item[{agui\+::\+List\+Box $\ast$}]{list\+Box,  }\item[{const std\+::string \&}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_aa1e0ea8a38c89f2e073a51b76264fc4a}\label{classec_1_1_generic_list_box_listener_aa1e0ea8a38c89f2e073a51b76264fc4a}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!mouseWheelSelectionChanged@{mouseWheelSelectionChanged}}
+\index{mouseWheelSelectionChanged@{mouseWheelSelectionChanged}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{mouseWheelSelectionChanged()}{mouseWheelSelectionChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::mouse\+Wheel\+Selection\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+List\+Box $\ast$}]{source,  }\item[{bool}]{m\+W\+Selection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a6471d2661d969170f644bc4ebc3cb2f5}\label{classec_1_1_generic_list_box_listener_a6471d2661d969170f644bc4ebc3cb2f5}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!multiselectChanged@{multiselectChanged}}
+\index{multiselectChanged@{multiselectChanged}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{multiselectChanged()}{multiselectChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::multiselect\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+List\+Box $\ast$}]{source,  }\item[{bool}]{multiselect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_ac440be24147c05e37a5be442aaa1d0f8}\label{classec_1_1_generic_list_box_listener_ac440be24147c05e37a5be442aaa1d0f8}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!multiselectExtendedChanged@{multiselectExtendedChanged}}
+\index{multiselectExtendedChanged@{multiselectExtendedChanged}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{multiselectExtendedChanged()}{multiselectExtendedChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::multiselect\+Extended\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+List\+Box $\ast$}]{source,  }\item[{bool}]{multiselect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a50f60a671cd8dcfcce7ab99d7383ad4f}\label{classec_1_1_generic_list_box_listener_a50f60a671cd8dcfcce7ab99d7383ad4f}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!rSortedChanged@{rSortedChanged}}
+\index{rSortedChanged@{rSortedChanged}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{rSortedChanged()}{rSortedChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::r\+Sorted\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+List\+Box $\ast$}]{source,  }\item[{bool}]{r\+Sorted }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_add7031a36395dc935dbc0adff256c4e1}\label{classec_1_1_generic_list_box_listener_add7031a36395dc935dbc0adff256c4e1}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!setDeathCallback@{setDeathCallback}}
+\index{setDeathCallback@{setDeathCallback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{setDeathCallback()}{setDeathCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::set\+Death\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a121e777735fcbf9e15e147d820e5718e}{Death\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a8013f4ffb27051e6cef5eb909ced36f6}\label{classec_1_1_generic_list_box_listener_a8013f4ffb27051e6cef5eb909ced36f6}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!setHoverIndexChangedCallback@{setHoverIndexChangedCallback}}
+\index{setHoverIndexChangedCallback@{setHoverIndexChangedCallback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{setHoverIndexChangedCallback()}{setHoverIndexChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::set\+Hover\+Index\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_ac1e0c2bb89e7c14f6b201450d372722b}{Hover\+Index\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_afd3c4f826d526d19f4074f4a382f1372}\label{classec_1_1_generic_list_box_listener_afd3c4f826d526d19f4074f4a382f1372}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!setItemAddedCallback@{setItemAddedCallback}}
+\index{setItemAddedCallback@{setItemAddedCallback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{setItemAddedCallback()}{setItemAddedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::set\+Item\+Added\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a9dcfd35af8971efa652ced675ac1f28d}{Item\+Added\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a41a4c91d77d0b3470147489b09c7d140}\label{classec_1_1_generic_list_box_listener_a41a4c91d77d0b3470147489b09c7d140}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!setItemHeightChangedCallback@{setItemHeightChangedCallback}}
+\index{setItemHeightChangedCallback@{setItemHeightChangedCallback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{setItemHeightChangedCallback()}{setItemHeightChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::set\+Item\+Height\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_aaba7b764c07b0c7cffd9b880bdf46358}{Item\+Height\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_acfa8b029e68f2c2262b2f9d7aef24237}\label{classec_1_1_generic_list_box_listener_acfa8b029e68f2c2262b2f9d7aef24237}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!setItemRemovedCallback@{setItemRemovedCallback}}
+\index{setItemRemovedCallback@{setItemRemovedCallback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{setItemRemovedCallback()}{setItemRemovedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::set\+Item\+Removed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a7a6dd56abe801f89877e1776666a5b11}{Item\+Removed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_af51feb582139508e18215d7ae8430886}\label{classec_1_1_generic_list_box_listener_af51feb582139508e18215d7ae8430886}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!setMouseWheelSelectChangedCallback@{setMouseWheelSelectChangedCallback}}
+\index{setMouseWheelSelectChangedCallback@{setMouseWheelSelectChangedCallback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{setMouseWheelSelectChangedCallback()}{setMouseWheelSelectChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::set\+Mouse\+Wheel\+Select\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_abe17afe409710ad4f15673669a8ebbb3}{Mouse\+Wheel\+Select\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a0fa1d4e6a33ff987d555ab38c6d32044}\label{classec_1_1_generic_list_box_listener_a0fa1d4e6a33ff987d555ab38c6d32044}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!setMultiselectChangedCallback@{setMultiselectChangedCallback}}
+\index{setMultiselectChangedCallback@{setMultiselectChangedCallback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{setMultiselectChangedCallback()}{setMultiselectChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::set\+Multiselect\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a5016e759cd4589d9da453ce353ddc3b2}{Multiselect\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a64eba5b8be3e967ab3d6751b9fc8979a}\label{classec_1_1_generic_list_box_listener_a64eba5b8be3e967ab3d6751b9fc8979a}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!setMultiselectExtendedChangedCallback@{setMultiselectExtendedChangedCallback}}
+\index{setMultiselectExtendedChangedCallback@{setMultiselectExtendedChangedCallback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{setMultiselectExtendedChangedCallback()}{setMultiselectExtendedChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::set\+Multiselect\+Extended\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_afafcf69d328d0d728142a5153e0b9790}{Multiselect\+Extended\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_aa8d6e9c55f6178c3fec2d9142ce9586e}\label{classec_1_1_generic_list_box_listener_aa8d6e9c55f6178c3fec2d9142ce9586e}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!setRSortedChangedCallback@{setRSortedChangedCallback}}
+\index{setRSortedChangedCallback@{setRSortedChangedCallback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{setRSortedChangedCallback()}{setRSortedChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::set\+R\+Sorted\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a6e2b38bbcd32c3716e7660fc40c4054c}{R\+Sorted\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_adbce2672e6173f9f2b09d6ba9df09828}\label{classec_1_1_generic_list_box_listener_adbce2672e6173f9f2b09d6ba9df09828}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!setSortedChangedCallback@{setSortedChangedCallback}}
+\index{setSortedChangedCallback@{setSortedChangedCallback}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{setSortedChangedCallback()}{setSortedChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::set\+Sorted\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_list_box_listener_a42ecf66ec6c32bbe9fe0174b2b1a527f}{Sorted\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_list_box_listener_a52b32a361ac45c09f0a3ada6e52334d6}\label{classec_1_1_generic_list_box_listener_a52b32a361ac45c09f0a3ada6e52334d6}} 
+\index{ec::GenericListBoxListener@{ec::GenericListBoxListener}!sortedChanged@{sortedChanged}}
+\index{sortedChanged@{sortedChanged}!ec::GenericListBoxListener@{ec::GenericListBoxListener}}
+\doxysubsubsection{\texorpdfstring{sortedChanged()}{sortedChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+List\+Box\+Listener\+::sorted\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+List\+Box $\ast$}]{source,  }\item[{bool}]{sorted }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Gui/\+Listener/\mbox{\hyperlink{_generic_list_box_listener_8h}{Generic\+List\+Box\+Listener.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Gui/\+Listener/\mbox{\hyperlink{_generic_list_box_listener_8cpp}{Generic\+List\+Box\+Listener.\+cpp}}\end{DoxyCompactItemize}

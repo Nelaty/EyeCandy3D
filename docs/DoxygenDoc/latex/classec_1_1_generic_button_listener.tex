@@ -1,0 +1,191 @@
+\hypertarget{classec_1_1_generic_button_listener}{}\doxysection{ec\+::Generic\+Button\+Listener Class Reference}
+\label{classec_1_1_generic_button_listener}\index{ec::GenericButtonListener@{ec::GenericButtonListener}}
+
+
+Generic gui listener that can handle events by Button widgets.  
+
+
+
+
+{\ttfamily \#include $<$Generic\+Button\+Listener.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Generic\+Button\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classec_1_1_generic_button_listener__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Generic\+Button\+Listener\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classec_1_1_generic_button_listener__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_button_listener_af89147c1baeadae9155f5d4e0df7abf3}{Button\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Button $\ast$source, agui\+::\+Button\+::\+Button\+State\+Enum state)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_button_listener_a528d9bd01250d4e2d7179ad64d67a364}{Toggle\+State\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Button $\ast$source, bool down)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_button_listener_aa7ca8b30098ab89eff663950d25a13eb}{Death\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Button $\ast$source)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_button_listener_a7830a9f92b6e68acbbf5237d2154db95}{Is\+Toggle\+Button\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Button $\ast$source, bool down)$>$
+\item 
+using \mbox{\hyperlink{classec_1_1_generic_button_listener_a62ab7e0ca7d7777b9aec72d7f2caf300}{Text\+Alignment\+Changed\+\_\+\+Callback}} = std\+::function$<$ void(agui\+::\+Button $\ast$source, agui\+::\+Area\+Alignment\+Enum alignment)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_generic_button_listener_acb6d403ce900c66f622fb52ebae32b49}{Generic\+Button\+Listener}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_generic_button_listener_a1cfd5eba97748a8f0b41ef48d248299c}{$\sim$\+Generic\+Button\+Listener}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_button_listener_a477874968f1f815d0d794b4b0f8a0b9e}{set\+Button\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_button_listener_af89147c1baeadae9155f5d4e0df7abf3}{Button\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_button_listener_ae0c80aab630fff656c387b5a2d42c3ec}{set\+State\+Changed\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_button_listener_a528d9bd01250d4e2d7179ad64d67a364}{Toggle\+State\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_button_listener_ab44a076729d26fc80ae05fc155c735a1}{set\+Death\+Callback}} (const \mbox{\hyperlink{classec_1_1_generic_button_listener_aa7ca8b30098ab89eff663950d25a13eb}{Death\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_button_listener_a7fc06552479c6ec92ec2d2cb07f66910}{set\+Is\+Toggle\+Button\+Changed}} (const \mbox{\hyperlink{classec_1_1_generic_button_listener_a7830a9f92b6e68acbbf5237d2154db95}{Is\+Toggle\+Button\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_button_listener_a58bc422969d370e80904cb09ad241109}{set\+Text\+Alignment\+Changed}} (const \mbox{\hyperlink{classec_1_1_generic_button_listener_a62ab7e0ca7d7777b9aec72d7f2caf300}{Text\+Alignment\+Changed\+\_\+\+Callback}} \&callback)
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_button_listener_a3ee5c4b3d94c44007fe530c96b403193}{button\+State\+Changed}} (agui\+::\+Button $\ast$source, agui\+::\+Button\+::\+Button\+State\+Enum state) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_button_listener_a78eb86e35bbc12e5df2f1496ed1cd85c}{toggle\+State\+Changed}} (agui\+::\+Button $\ast$source, bool down) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_button_listener_a21f4b1a65d80f3f715a3f4ce51dce39e}{death}} (agui\+::\+Button $\ast$source) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_button_listener_a23135a254fea72679eb994e5d6209a18}{is\+Toggle\+Button\+Changed}} (agui\+::\+Button $\ast$source, bool down) override
+\item 
+void \mbox{\hyperlink{classec_1_1_generic_button_listener_a314ef307095e669783157eeceb452ff6}{text\+Alignment\+Changed}} (agui\+::\+Button $\ast$source, agui\+::\+Area\+Alignment\+Enum alignment) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic gui listener that can handle events by Button widgets. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_af89147c1baeadae9155f5d4e0df7abf3}\label{classec_1_1_generic_button_listener_af89147c1baeadae9155f5d4e0df7abf3}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!ButtonChanged\_Callback@{ButtonChanged\_Callback}}
+\index{ButtonChanged\_Callback@{ButtonChanged\_Callback}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{ButtonChanged\_Callback}{ButtonChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_button_listener_af89147c1baeadae9155f5d4e0df7abf3}{ec\+::\+Generic\+Button\+Listener\+::\+Button\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Button$\ast$ source, agui\+::\+Button\+::\+Button\+State\+Enum state)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_aa7ca8b30098ab89eff663950d25a13eb}\label{classec_1_1_generic_button_listener_aa7ca8b30098ab89eff663950d25a13eb}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!Death\_Callback@{Death\_Callback}}
+\index{Death\_Callback@{Death\_Callback}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{Death\_Callback}{Death\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_button_listener_aa7ca8b30098ab89eff663950d25a13eb}{ec\+::\+Generic\+Button\+Listener\+::\+Death\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Button$\ast$ source)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a7830a9f92b6e68acbbf5237d2154db95}\label{classec_1_1_generic_button_listener_a7830a9f92b6e68acbbf5237d2154db95}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!IsToggleButtonChanged\_Callback@{IsToggleButtonChanged\_Callback}}
+\index{IsToggleButtonChanged\_Callback@{IsToggleButtonChanged\_Callback}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{IsToggleButtonChanged\_Callback}{IsToggleButtonChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_button_listener_a7830a9f92b6e68acbbf5237d2154db95}{ec\+::\+Generic\+Button\+Listener\+::\+Is\+Toggle\+Button\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Button$\ast$ source, bool down)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a62ab7e0ca7d7777b9aec72d7f2caf300}\label{classec_1_1_generic_button_listener_a62ab7e0ca7d7777b9aec72d7f2caf300}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!TextAlignmentChanged\_Callback@{TextAlignmentChanged\_Callback}}
+\index{TextAlignmentChanged\_Callback@{TextAlignmentChanged\_Callback}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{TextAlignmentChanged\_Callback}{TextAlignmentChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_button_listener_a62ab7e0ca7d7777b9aec72d7f2caf300}{ec\+::\+Generic\+Button\+Listener\+::\+Text\+Alignment\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Button$\ast$ source, agui\+::\+Area\+Alignment\+Enum alignment)$>$}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a528d9bd01250d4e2d7179ad64d67a364}\label{classec_1_1_generic_button_listener_a528d9bd01250d4e2d7179ad64d67a364}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!ToggleStateChanged\_Callback@{ToggleStateChanged\_Callback}}
+\index{ToggleStateChanged\_Callback@{ToggleStateChanged\_Callback}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{ToggleStateChanged\_Callback}{ToggleStateChanged\_Callback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_generic_button_listener_a528d9bd01250d4e2d7179ad64d67a364}{ec\+::\+Generic\+Button\+Listener\+::\+Toggle\+State\+Changed\+\_\+\+Callback}} =  std\+::function$<$void(agui\+::\+Button$\ast$ source, bool down)$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_acb6d403ce900c66f622fb52ebae32b49}\label{classec_1_1_generic_button_listener_acb6d403ce900c66f622fb52ebae32b49}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!GenericButtonListener@{GenericButtonListener}}
+\index{GenericButtonListener@{GenericButtonListener}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{GenericButtonListener()}{GenericButtonListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Button\+Listener\+::\+Generic\+Button\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a1cfd5eba97748a8f0b41ef48d248299c}\label{classec_1_1_generic_button_listener_a1cfd5eba97748a8f0b41ef48d248299c}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!````~GenericButtonListener@{$\sim$GenericButtonListener}}
+\index{````~GenericButtonListener@{$\sim$GenericButtonListener}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenericButtonListener()}{~GenericButtonListener()}}
+{\footnotesize\ttfamily ec\+::\+Generic\+Button\+Listener\+::$\sim$\+Generic\+Button\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a3ee5c4b3d94c44007fe530c96b403193}\label{classec_1_1_generic_button_listener_a3ee5c4b3d94c44007fe530c96b403193}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!buttonStateChanged@{buttonStateChanged}}
+\index{buttonStateChanged@{buttonStateChanged}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{buttonStateChanged()}{buttonStateChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Button\+Listener\+::button\+State\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Button $\ast$}]{source,  }\item[{agui\+::\+Button\+::\+Button\+State\+Enum}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a21f4b1a65d80f3f715a3f4ce51dce39e}\label{classec_1_1_generic_button_listener_a21f4b1a65d80f3f715a3f4ce51dce39e}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!death@{death}}
+\index{death@{death}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{death()}{death()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Button\+Listener\+::death (\begin{DoxyParamCaption}\item[{agui\+::\+Button $\ast$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a23135a254fea72679eb994e5d6209a18}\label{classec_1_1_generic_button_listener_a23135a254fea72679eb994e5d6209a18}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!isToggleButtonChanged@{isToggleButtonChanged}}
+\index{isToggleButtonChanged@{isToggleButtonChanged}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{isToggleButtonChanged()}{isToggleButtonChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Button\+Listener\+::is\+Toggle\+Button\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Button $\ast$}]{source,  }\item[{bool}]{down }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a477874968f1f815d0d794b4b0f8a0b9e}\label{classec_1_1_generic_button_listener_a477874968f1f815d0d794b4b0f8a0b9e}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!setButtonChangedCallback@{setButtonChangedCallback}}
+\index{setButtonChangedCallback@{setButtonChangedCallback}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{setButtonChangedCallback()}{setButtonChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Button\+Listener\+::set\+Button\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_button_listener_af89147c1baeadae9155f5d4e0df7abf3}{Button\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_ab44a076729d26fc80ae05fc155c735a1}\label{classec_1_1_generic_button_listener_ab44a076729d26fc80ae05fc155c735a1}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!setDeathCallback@{setDeathCallback}}
+\index{setDeathCallback@{setDeathCallback}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{setDeathCallback()}{setDeathCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Button\+Listener\+::set\+Death\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_button_listener_aa7ca8b30098ab89eff663950d25a13eb}{Death\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a7fc06552479c6ec92ec2d2cb07f66910}\label{classec_1_1_generic_button_listener_a7fc06552479c6ec92ec2d2cb07f66910}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!setIsToggleButtonChanged@{setIsToggleButtonChanged}}
+\index{setIsToggleButtonChanged@{setIsToggleButtonChanged}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{setIsToggleButtonChanged()}{setIsToggleButtonChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Button\+Listener\+::set\+Is\+Toggle\+Button\+Changed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_button_listener_a7830a9f92b6e68acbbf5237d2154db95}{Is\+Toggle\+Button\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_ae0c80aab630fff656c387b5a2d42c3ec}\label{classec_1_1_generic_button_listener_ae0c80aab630fff656c387b5a2d42c3ec}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!setStateChangedCallback@{setStateChangedCallback}}
+\index{setStateChangedCallback@{setStateChangedCallback}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{setStateChangedCallback()}{setStateChangedCallback()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Button\+Listener\+::set\+State\+Changed\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_button_listener_a528d9bd01250d4e2d7179ad64d67a364}{Toggle\+State\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a58bc422969d370e80904cb09ad241109}\label{classec_1_1_generic_button_listener_a58bc422969d370e80904cb09ad241109}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!setTextAlignmentChanged@{setTextAlignmentChanged}}
+\index{setTextAlignmentChanged@{setTextAlignmentChanged}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{setTextAlignmentChanged()}{setTextAlignmentChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Button\+Listener\+::set\+Text\+Alignment\+Changed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classec_1_1_generic_button_listener_a62ab7e0ca7d7777b9aec72d7f2caf300}{Text\+Alignment\+Changed\+\_\+\+Callback}} \&}]{callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a314ef307095e669783157eeceb452ff6}\label{classec_1_1_generic_button_listener_a314ef307095e669783157eeceb452ff6}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!textAlignmentChanged@{textAlignmentChanged}}
+\index{textAlignmentChanged@{textAlignmentChanged}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{textAlignmentChanged()}{textAlignmentChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Button\+Listener\+::text\+Alignment\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Button $\ast$}]{source,  }\item[{agui\+::\+Area\+Alignment\+Enum}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_generic_button_listener_a78eb86e35bbc12e5df2f1496ed1cd85c}\label{classec_1_1_generic_button_listener_a78eb86e35bbc12e5df2f1496ed1cd85c}} 
+\index{ec::GenericButtonListener@{ec::GenericButtonListener}!toggleStateChanged@{toggleStateChanged}}
+\index{toggleStateChanged@{toggleStateChanged}!ec::GenericButtonListener@{ec::GenericButtonListener}}
+\doxysubsubsection{\texorpdfstring{toggleStateChanged()}{toggleStateChanged()}}
+{\footnotesize\ttfamily void ec\+::\+Generic\+Button\+Listener\+::toggle\+State\+Changed (\begin{DoxyParamCaption}\item[{agui\+::\+Button $\ast$}]{source,  }\item[{bool}]{down }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Gui/\+Listener/\mbox{\hyperlink{_generic_button_listener_8h}{Generic\+Button\+Listener.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Gui/\+Listener/\mbox{\hyperlink{_generic_button_listener_8cpp}{Generic\+Button\+Listener.\+cpp}}\end{DoxyCompactItemize}

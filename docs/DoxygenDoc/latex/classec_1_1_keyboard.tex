@@ -1,0 +1,1185 @@
+\hypertarget{classec_1_1_keyboard}{}\doxysection{ec\+::Keyboard Class Reference}
+\label{classec_1_1_keyboard}\index{ec::Keyboard@{ec::Keyboard}}
+
+
+Representation of a physical keyboard.  
+
+
+
+
+{\ttfamily \#include $<$Keyboard.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::Keyboard\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_keyboard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}{Event\+Source\+\_\+\+Ptr}} = std\+::unique\+\_\+ptr$<$ Event\+Source $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_keyboard_aca1d01cce4b8449083c32e2a167a3448}{Keyboard}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_keyboard_a817f6cd6ea29898c6651dee24de59ba5}{$\sim$\+Keyboard}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}{install}} (\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Install the keyboard, which generates keyboard events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}{uninstall}} ()
+\begin{DoxyCompactList}\small\item\em Uninstall the keyboard. \end{DoxyCompactList}\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classec_1_1_keyboard_ad6b17bd2f2853def1e6ec21fadd9b658}{get\+Window}} () const
+\begin{DoxyCompactList}\small\item\em Get the window, which is associated with this keyboard. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classec_1_1_keyboard_a47779c0842584eb4337e1aa63e7d7a35}{is\+Key\+Down}} (\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{Keyboard\+::\+E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}} key) const
+\begin{DoxyCompactList}\small\item\em Check if a keyboard button is being pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classec_1_1_keyboard_a0d260eb1df363be405af8a967aa8b5b6}{is\+Key\+Up}} (\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{Keyboard\+::\+E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}} key) const
+\begin{DoxyCompactList}\small\item\em Check if a keyboard button is being released. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{classec_1_1_keyboard_a5e986024ce4790af20b3198abce9b807}{keyboard\+Key\+To\+String}} (\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}} keyboard\+Code)
+\begin{DoxyCompactList}\small\item\em Convert a keycode to its string representation. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classec_1_1_keyboard_a8d048694060edbbb3cd6dba19d7eff24}{keycode\+Is\+Key}} (int keycode)
+\begin{DoxyCompactList}\small\item\em Check if a keycode is representing a key on the keyboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}\+: int \{ A = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+A
+\begin{DoxyCompactList}\small\item\em Contains all possible types of keys on a keyboard. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a10567c2f907d921b438ca4f96e7dfb86}{B}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+B
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_afdb55905c629366fca7f4b8b342d7925}{C}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+C
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ab15bf9e1970fea6d05ec91687089dff1}{D}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+D
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a95903eac785cffca940c056b1c7c70a3}{E}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+E
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a60c5617a98a4b1ff360ccd1c4fd48251}{F}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+F
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a7956c29b83bc5d7bf3b1f5f4b806fb50}{G}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+G
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a58c938acd086ad64b49a1359dfb25e0b}{H}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+H
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a38ffec286d89e2499ffd76a41eba6897}{I}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+I
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a35fe05168d3f2cca6dae07278faa8b75}{J}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+J
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a43e568b3ad27c96695d50386628353ba}{K}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+K
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ae3ec80e2b98d6ef1d6fb921ddf3cb52e}{L}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+L
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ae9723063b666c0dd21e96588ebb734c9}{M}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+M
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a4dcb87a802eb8775401ae36ac5bd4358}{N}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+N
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_acc3419f140a0bb0e253c84315d7277c7}{O}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+O
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ab3ab1aa54525f4e0488a0b57a68b8757}{P}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+P
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a7d2ade0eca9959dcd82b4c4ae9c3a27b}{Q}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+Q
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a3f2649d7249962a4f485557e405d4754}{R}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+R
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ab11aae5fb83407687e9f8acdfa163910}{S}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+S
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a09f863373edf51f09e94316f13dad263}{T}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+T
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a766e2c870a29b0e0cfdf87346126f9aa}{U}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+U
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a9b00b29bff502c4e5409b088da7270de}{V}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+V
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a6b7df6b9d699a9cab8c1283623a12333}{W}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+W
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a46a9272c629195e29395f7e8d22e7cf5}{X}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+X
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a3e6065997f9693286591e1300769e13a}{Y}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+Y
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a342c1ef739e9fd209135017e48f25c58}{Z}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+Z
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a26913e78a3604aad7a6b33b5d3ba6ad8}{K\+E\+Y\+\_\+0}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+0
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a0dba45a69958022d4dc07328e803f3e7}{K\+E\+Y\+\_\+1}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+1
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a99f6daf979b958338ab99f6c4d89dcf0}{K\+E\+Y\+\_\+2}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+2
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a99d867703644def144395a8d141b26b0}{K\+E\+Y\+\_\+3}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+3
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_adfac2e411700401affa8df6153681da6}{K\+E\+Y\+\_\+4}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+4
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a3ac330b34232272a1c8efa88d31977c4}{K\+E\+Y\+\_\+5}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+5
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_af3637c105dc23dacf0de62d1a286c10f}{K\+E\+Y\+\_\+6}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+6
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a2ce1aa1beb0123b243b1a4e5a6c8b5b6}{K\+E\+Y\+\_\+7}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+7
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ace0785fe5a1e11023c7a7cfa9791c527}{K\+E\+Y\+\_\+8}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+8
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a69b51ba3fb41b7b5afde5e3f3bab4f9c}{K\+E\+Y\+\_\+9}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+9
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a2b29fb796ac7f5ae647dd636a796a91d}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+0}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+0
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a36b3b138bb5132950f91956e5c0a9676}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+1}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+1
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a456fc67954c8173aeb9450d10b3b1d3c}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+2}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+2
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_abd3ad06b0229df388156efe666662908}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+3}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+3
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a2fa7355ac90ada75403e6964ef373a7d}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+4}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+4
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ab1fe2bc49a3287ac92b32006dfc046c8}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+5}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+5
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ac06ec74ae84452fda7be4ea0c69738b2}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+6}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+6
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aaaca0509bb330fc1402064d32cc85b9e}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+7}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+7
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a853e5fefb7cf1d53efcf268504118325}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+8}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+8
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ad2a8888dce13abd7a8ebadf78978262d}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+9}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+9
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a7fb474a14a119bb7f51b05aa38db37d8}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+D\+E\+C\+I\+M\+AL}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+D\+E\+C\+I\+M\+AL
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ad33a07123f5f838806b1e85d8f936dde}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+D\+I\+V\+I\+DE}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+D\+I\+V\+I\+DE
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a18cafa779cedf999cfd00db2f11c2e48}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+M\+U\+L\+T\+I\+P\+LY}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+M\+U\+L\+T\+I\+P\+LY
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ace6b24f7c2333966a87683a193784794}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+S\+U\+B\+T\+R\+A\+CT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+S\+U\+B\+T\+R\+A\+CT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_acf60ce5226595db3f854bff555c451c7}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+A\+DD}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+A\+DD
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a7f4971d0bfdf533496432cf270025d83}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+E\+N\+T\+ER}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+E\+N\+T\+ER
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ab804765f16421c386f1d7c7e0a0e66fb}{N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+E\+Q\+U\+AL}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+E\+Q\+U\+AL
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aa5d09923e2ac2f5dd3b2a5b33a06b721}{F1}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F1
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a039646ad1000430fd7bcdf04b2c91ec7}{F2}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F2
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a3002ddc8f37c24a1429e22d5dc8e48aa}{F3}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F3
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ad1f7f78c96c7a59a21210d94e693fde7}{F4}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F4
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a7a9bd546b5eeba38a587303293246bb7}{F5}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F5
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a02fe21453cf1fd9a9c5f181ec9a8f714}{F6}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F6
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ad0da55a468002a1193b02ab3b342a267}{F7}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F7
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a89d166f0527389eb2eaec46dc1f86c79}{F8}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F8
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a3dbe3f47995a8defdc3c142bc0983a4c}{F9}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F9
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aa168a7e6cc3afa55dd5688e977fc6bfe}{F10}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F10
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a52c268ea148aa4b22142873360c91fc2}{F11}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F11
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a699bc14d848736ef074a47db2f568109}{F12}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F12
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a57c5cc1e503cb08d453b6fee1f2dea47}{F13}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F13
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aa85c5264f6d7cc445d7b8ad9ad5b9eac}{F14}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F14
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_afdf2d1dc1df9357757c30e63a274e331}{F15}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F15
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aaf2f8c127d0f27fe1b6c9c13512ccffe}{F16}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F16
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a18122e1ed0e95e748ad31caab2ae8708}{F17}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F17
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ab3daea4415ff472d2b508d1b253090d2}{F18}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F18
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ab48cdd8c5bf4b8e47564af59678b660d}{F19}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F19
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ac67a6a2b6536cd6412c3c6b9dfb841e7}{F20}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F20
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aeaa9b7f0c5875f1d8c04ad36e1e86794}{F21}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F21
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_af33c09fe67e20ee71d7b37c5d05c2760}{F22}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F22
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aaa559281a2c74941811c3d9abe55d973}{F23}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F23
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_af709a6fa5ab3d0e5069cf29f3f9861d3}{F24}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F24
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a00ab8cfc0de951d98d759ddc214e2523}{F25}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F25
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a93964921f5a24fd48633e2248d67499c}{R\+I\+G\+HT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+HT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a08f676328855059e8687a4d7b52302b4}{L\+E\+FT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+FT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a9ce6be84370e9da9eab27348d9f98b5a}{D\+O\+WN}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+D\+O\+WN
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a6da2eed1074dc9feaf4b68ab3da684d8}{UP}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+UP
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aaa582392dbeacf392632aafcdb451721}{K\+E\+Y\+\_\+\+U\+N\+K\+N\+O\+WN}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+U\+N\+K\+N\+O\+WN
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a747605ff6ca24b347a35e4e5a71edbe9}{S\+P\+A\+CE}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+P\+A\+CE
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a56f1ecab0667ad8538826049157c4351}{A\+P\+O\+S\+T\+R\+O\+P\+HE}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+A\+P\+O\+S\+T\+R\+O\+P\+HE
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aa40289b5c2768f80103cd5cbd89f3158}{C\+O\+M\+MA}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+C\+O\+M\+MA
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a3891ae964cb95fefde0f6368378062ce}{M\+I\+N\+US}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+M\+I\+N\+US
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_acf085f565c388ccf5b1054d9f1188e5c}{P\+E\+R\+I\+OD}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+E\+R\+I\+OD
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a747485c97864655c5736ad24058462ff}{S\+L\+A\+SH}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+L\+A\+SH
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a23a6eded3a92f7b3c28feffc94e968d3}{S\+E\+M\+I\+C\+O\+L\+ON}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+E\+M\+I\+C\+O\+L\+ON
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a051c2a49d048576c1b26eee68956d2f9}{E\+Q\+U\+AL}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+Q\+U\+AL
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a1061a62f40664df678f7f623c75acac8}{L\+E\+F\+T\+\_\+\+B\+R\+A\+C\+K\+ET}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+B\+R\+A\+C\+K\+ET
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ac95f092533e5488828bce92e852566e8}{B\+A\+C\+K\+S\+L\+A\+SH}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+B\+A\+C\+K\+S\+L\+A\+SH
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_af2a488f997bea31744e18b8cf4bad42e}{R\+I\+G\+H\+T\+\_\+\+B\+R\+A\+C\+K\+ET}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+B\+R\+A\+C\+K\+ET
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ac68571beb478df0549b9f67a623fc84c}{G\+R\+A\+V\+E\+\_\+\+A\+C\+C\+E\+NT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+G\+R\+A\+V\+E\+\_\+\+A\+C\+C\+E\+NT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a1eb7d04d0c734fb8fef4d8386fb7a4d0}{W\+O\+R\+L\+D\+\_\+1}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+W\+O\+R\+L\+D\+\_\+1
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aab87be510c1ae98007e98afa30952918}{W\+O\+R\+L\+D\+\_\+2}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+W\+O\+R\+L\+D\+\_\+2
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a1685dbfbb1c03114c8121162e333f9b0}{E\+S\+C\+A\+PE}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+S\+C\+A\+PE
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a783ad084b5fd7d45451126bac7205274}{E\+N\+T\+ER}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+N\+T\+ER
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aef71873ca11f1076aaad6ea11d3d8aea}{T\+AB}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+T\+AB
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_aa45ab0ecea7c72a9715b49f9450dcdcd}{B\+A\+C\+K\+S\+P\+A\+CE}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+B\+A\+C\+K\+S\+P\+A\+CE
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a460f6fe7c1740e5d8ef4eaf0ed182cd2}{I\+N\+S\+E\+RT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+S\+E\+RT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a634762447b8ddd50dc8c002f9db5b9ae}{D\+E\+L\+E\+TE}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+D\+E\+L\+E\+TE
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ad5fe6a8b1f9a6b71e84b6af4a0dac07c}{P\+A\+G\+E\+\_\+\+UP}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+G\+E\+\_\+\+UP
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a7e897af5e7d29c6429b8bddd00a6b393}{P\+A\+G\+E\+\_\+\+D\+O\+WN}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+G\+E\+\_\+\+D\+O\+WN
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_ae53947399dc339c95d28af2125bc6fed}{H\+O\+ME}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+H\+O\+ME
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a1353c7b1046a9d8d67bc9f1138a5f9f3}{E\+ND}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+ND
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a595cef3630be024a5b6ed5935372797b}{P\+R\+I\+N\+T\+\_\+\+S\+C\+R\+E\+EN}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+R\+I\+N\+T\+\_\+\+S\+C\+R\+E\+EN
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a3b4b7a8200837c4d9f01f79922a0d352}{P\+A\+U\+SE}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+U\+SE
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a55be147635eeca7f44354bb7ca03ae09}{S\+C\+R\+O\+L\+L\+\_\+\+L\+O\+CK}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+L\+O\+CK
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a3a83cb31b400e7191b369470b5a04207}{C\+A\+P\+S\+\_\+\+L\+O\+CK}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+C\+A\+P\+S\+\_\+\+L\+O\+CK
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a0dbdacf42db0e60466bcc6287f2d21d0}{N\+U\+M\+\_\+\+L\+O\+CK}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+N\+U\+M\+\_\+\+L\+O\+CK
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a427a782cc88310ca19c3b265d1501258}{M\+E\+NU}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+M\+E\+NU
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a9520324be8993d63fa3f3daf73bcb052}{S\+H\+I\+FT}} = G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+S\+H\+I\+FT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a106acff7ed6b4ee260798a605ecf372f}{S\+H\+I\+F\+T\+\_\+\+L\+E\+FT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+S\+H\+I\+FT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a7f2db0bbc56200a09b313aba341486de}{S\+H\+I\+F\+T\+\_\+\+R\+I\+G\+HT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+S\+H\+I\+FT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a580639e0252a7949780c6ebe396556f7}{C\+O\+N\+T\+R\+OL}} = G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+T\+R\+OL
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_af8c2bddcaf311af9ce8f6987f879146f}{C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+E\+FT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+C\+O\+N\+T\+R\+OL
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a0a094fb07d52018d36258b1a96a005da}{C\+O\+N\+T\+R\+O\+L\+\_\+\+R\+I\+G\+HT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+O\+N\+T\+R\+OL
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a36ca4a76bfbdb9d9e30cace019cec930}{A\+LT}} = G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+A\+LT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a7f31c587defdb90f3185c6e74396619b}{A\+L\+T\+\_\+\+L\+E\+FT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+A\+LT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a02d38de4e933d4ed6712fc688d428019}{A\+L\+T\+\_\+\+R\+I\+G\+HT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+A\+LT
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a30098a75ef82c64a8f01147ada71f465}{S\+U\+P\+ER}} = G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+S\+U\+P\+ER
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a0d12c25511dcf7ba48a4b926303d7f8b}{S\+U\+P\+E\+R\+\_\+\+L\+E\+FT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+S\+U\+P\+ER
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a8b2f2d479c90e90ae51fbbbc4c21c980}{S\+U\+P\+E\+R\+\_\+\+R\+I\+G\+HT}} = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+S\+U\+P\+ER
+\item 
+enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{classec_1_1_keyboard_a599f8a3b8addd9f6cdabfad9d0e773c4}{K\+E\+Y\+\_\+\+L\+A\+ST}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representation of a physical keyboard. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}\label{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}} 
+\index{ec::Keyboard@{ec::Keyboard}!EventSource\_Ptr@{EventSource\_Ptr}}
+\index{EventSource\_Ptr@{EventSource\_Ptr}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{EventSource\_Ptr}{EventSource\_Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classec_1_1_keyboard_a9d797ac5b4d42f3b586091bcc14e6343}{ec\+::\+Keyboard\+::\+Event\+Source\+\_\+\+Ptr}} =  std\+::unique\+\_\+ptr$<$Event\+Source$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_keyboard_aca1d01cce4b8449083c32e2a167a3448}\label{classec_1_1_keyboard_aca1d01cce4b8449083c32e2a167a3448}} 
+\index{ec::Keyboard@{ec::Keyboard}!Keyboard@{Keyboard}}
+\index{Keyboard@{Keyboard}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{Keyboard()}{Keyboard()}}
+{\footnotesize\ttfamily ec\+::\+Keyboard\+::\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a817f6cd6ea29898c6651dee24de59ba5}\label{classec_1_1_keyboard_a817f6cd6ea29898c6651dee24de59ba5}} 
+\index{ec::Keyboard@{ec::Keyboard}!````~Keyboard@{$\sim$Keyboard}}
+\index{````~Keyboard@{$\sim$Keyboard}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{$\sim$Keyboard()}{~Keyboard()}}
+{\footnotesize\ttfamily ec\+::\+Keyboard\+::$\sim$\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_keyboard_ad6b17bd2f2853def1e6ec21fadd9b658}\label{classec_1_1_keyboard_ad6b17bd2f2853def1e6ec21fadd9b658}} 
+\index{ec::Keyboard@{ec::Keyboard}!getWindow@{getWindow}}
+\index{getWindow@{getWindow}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{getWindow()}{getWindow()}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow $\ast$ ec\+::\+Keyboard\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the window, which is associated with this keyboard. 
+
+\mbox{\Hypertarget{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}\label{classec_1_1_keyboard_af792a3b8226096510f6dfecc57697f8e}} 
+\index{ec::Keyboard@{ec::Keyboard}!install@{install}}
+\index{install@{install}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{install()}{install()}}
+{\footnotesize\ttfamily void ec\+::\+Keyboard\+::install (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_window}{Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Install the keyboard, which generates keyboard events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window, for which keyboard events will now be generated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_keyboard_a47779c0842584eb4337e1aa63e7d7a35}\label{classec_1_1_keyboard_a47779c0842584eb4337e1aa63e7d7a35}} 
+\index{ec::Keyboard@{ec::Keyboard}!isKeyDown@{isKeyDown}}
+\index{isKeyDown@{isKeyDown}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{isKeyDown()}{isKeyDown()}}
+{\footnotesize\ttfamily bool ec\+::\+Keyboard\+::is\+Key\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{Keyboard\+::\+E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Check if a keyboard button is being pressed. 
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a0d260eb1df363be405af8a967aa8b5b6}\label{classec_1_1_keyboard_a0d260eb1df363be405af8a967aa8b5b6}} 
+\index{ec::Keyboard@{ec::Keyboard}!isKeyUp@{isKeyUp}}
+\index{isKeyUp@{isKeyUp}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{isKeyUp()}{isKeyUp()}}
+{\footnotesize\ttfamily bool ec\+::\+Keyboard\+::is\+Key\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{Keyboard\+::\+E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Check if a keyboard button is being released. 
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a5e986024ce4790af20b3198abce9b807}\label{classec_1_1_keyboard_a5e986024ce4790af20b3198abce9b807}} 
+\index{ec::Keyboard@{ec::Keyboard}!keyboardKeyToString@{keyboardKeyToString}}
+\index{keyboardKeyToString@{keyboardKeyToString}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{keyboardKeyToString()}{keyboardKeyToString()}}
+{\footnotesize\ttfamily const char $\ast$ ec\+::\+Keyboard\+::keyboard\+Key\+To\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}{E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}}]{keyboard\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert a keycode to its string representation. 
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a8d048694060edbbb3cd6dba19d7eff24}\label{classec_1_1_keyboard_a8d048694060edbbb3cd6dba19d7eff24}} 
+\index{ec::Keyboard@{ec::Keyboard}!keycodeIsKey@{keycodeIsKey}}
+\index{keycodeIsKey@{keycodeIsKey}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{keycodeIsKey()}{keycodeIsKey()}}
+{\footnotesize\ttfamily bool ec\+::\+Keyboard\+::keycode\+Is\+Key (\begin{DoxyParamCaption}\item[{int}]{keycode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a keycode is representing a key on the keyboard. 
+
+keycode \mbox{\Hypertarget{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}\label{classec_1_1_keyboard_a1e60401ed958ec3d94a77b1dda9f44e8}} 
+\index{ec::Keyboard@{ec::Keyboard}!uninstall@{uninstall}}
+\index{uninstall@{uninstall}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{uninstall()}{uninstall()}}
+{\footnotesize\ttfamily void ec\+::\+Keyboard\+::uninstall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uninstall the keyboard. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_keyboard_a36ca4a76bfbdb9d9e30cace019cec930}\label{classec_1_1_keyboard_a36ca4a76bfbdb9d9e30cace019cec930}} 
+\index{ec::Keyboard@{ec::Keyboard}!ALT@{ALT}}
+\index{ALT@{ALT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{ALT}{ALT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+A\+LT = G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+A\+LT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a7f31c587defdb90f3185c6e74396619b}\label{classec_1_1_keyboard_a7f31c587defdb90f3185c6e74396619b}} 
+\index{ec::Keyboard@{ec::Keyboard}!ALT\_LEFT@{ALT\_LEFT}}
+\index{ALT\_LEFT@{ALT\_LEFT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{ALT\_LEFT}{ALT\_LEFT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+A\+L\+T\+\_\+\+L\+E\+FT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+A\+LT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a02d38de4e933d4ed6712fc688d428019}\label{classec_1_1_keyboard_a02d38de4e933d4ed6712fc688d428019}} 
+\index{ec::Keyboard@{ec::Keyboard}!ALT\_RIGHT@{ALT\_RIGHT}}
+\index{ALT\_RIGHT@{ALT\_RIGHT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{ALT\_RIGHT}{ALT\_RIGHT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+A\+L\+T\+\_\+\+R\+I\+G\+HT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+A\+LT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a56f1ecab0667ad8538826049157c4351}\label{classec_1_1_keyboard_a56f1ecab0667ad8538826049157c4351}} 
+\index{ec::Keyboard@{ec::Keyboard}!APOSTROPHE@{APOSTROPHE}}
+\index{APOSTROPHE@{APOSTROPHE}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{APOSTROPHE}{APOSTROPHE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+A\+P\+O\+S\+T\+R\+O\+P\+HE = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+A\+P\+O\+S\+T\+R\+O\+P\+HE}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a10567c2f907d921b438ca4f96e7dfb86}\label{classec_1_1_keyboard_a10567c2f907d921b438ca4f96e7dfb86}} 
+\index{ec::Keyboard@{ec::Keyboard}!B@{B}}
+\index{B@{B}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::B = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+B}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ac95f092533e5488828bce92e852566e8}\label{classec_1_1_keyboard_ac95f092533e5488828bce92e852566e8}} 
+\index{ec::Keyboard@{ec::Keyboard}!BACKSLASH@{BACKSLASH}}
+\index{BACKSLASH@{BACKSLASH}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{BACKSLASH}{BACKSLASH}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+B\+A\+C\+K\+S\+L\+A\+SH = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+B\+A\+C\+K\+S\+L\+A\+SH}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aa45ab0ecea7c72a9715b49f9450dcdcd}\label{classec_1_1_keyboard_aa45ab0ecea7c72a9715b49f9450dcdcd}} 
+\index{ec::Keyboard@{ec::Keyboard}!BACKSPACE@{BACKSPACE}}
+\index{BACKSPACE@{BACKSPACE}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{BACKSPACE}{BACKSPACE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+B\+A\+C\+K\+S\+P\+A\+CE = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+B\+A\+C\+K\+S\+P\+A\+CE}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_afdb55905c629366fca7f4b8b342d7925}\label{classec_1_1_keyboard_afdb55905c629366fca7f4b8b342d7925}} 
+\index{ec::Keyboard@{ec::Keyboard}!C@{C}}
+\index{C@{C}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::C = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+C}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a3a83cb31b400e7191b369470b5a04207}\label{classec_1_1_keyboard_a3a83cb31b400e7191b369470b5a04207}} 
+\index{ec::Keyboard@{ec::Keyboard}!CAPS\_LOCK@{CAPS\_LOCK}}
+\index{CAPS\_LOCK@{CAPS\_LOCK}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{CAPS\_LOCK}{CAPS\_LOCK}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+C\+A\+P\+S\+\_\+\+L\+O\+CK = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+C\+A\+P\+S\+\_\+\+L\+O\+CK}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aa40289b5c2768f80103cd5cbd89f3158}\label{classec_1_1_keyboard_aa40289b5c2768f80103cd5cbd89f3158}} 
+\index{ec::Keyboard@{ec::Keyboard}!COMMA@{COMMA}}
+\index{COMMA@{COMMA}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{COMMA}{COMMA}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+C\+O\+M\+MA = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+C\+O\+M\+MA}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a580639e0252a7949780c6ebe396556f7}\label{classec_1_1_keyboard_a580639e0252a7949780c6ebe396556f7}} 
+\index{ec::Keyboard@{ec::Keyboard}!CONTROL@{CONTROL}}
+\index{CONTROL@{CONTROL}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{CONTROL}{CONTROL}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+C\+O\+N\+T\+R\+OL = G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+T\+R\+OL}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_af8c2bddcaf311af9ce8f6987f879146f}\label{classec_1_1_keyboard_af8c2bddcaf311af9ce8f6987f879146f}} 
+\index{ec::Keyboard@{ec::Keyboard}!CONTROL\_LEFT@{CONTROL\_LEFT}}
+\index{CONTROL\_LEFT@{CONTROL\_LEFT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{CONTROL\_LEFT}{CONTROL\_LEFT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+L\+E\+FT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+C\+O\+N\+T\+R\+OL}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a0a094fb07d52018d36258b1a96a005da}\label{classec_1_1_keyboard_a0a094fb07d52018d36258b1a96a005da}} 
+\index{ec::Keyboard@{ec::Keyboard}!CONTROL\_RIGHT@{CONTROL\_RIGHT}}
+\index{CONTROL\_RIGHT@{CONTROL\_RIGHT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{CONTROL\_RIGHT}{CONTROL\_RIGHT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+C\+O\+N\+T\+R\+O\+L\+\_\+\+R\+I\+G\+HT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+O\+N\+T\+R\+OL}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ab15bf9e1970fea6d05ec91687089dff1}\label{classec_1_1_keyboard_ab15bf9e1970fea6d05ec91687089dff1}} 
+\index{ec::Keyboard@{ec::Keyboard}!D@{D}}
+\index{D@{D}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{D}{D}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::D = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+D}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a634762447b8ddd50dc8c002f9db5b9ae}\label{classec_1_1_keyboard_a634762447b8ddd50dc8c002f9db5b9ae}} 
+\index{ec::Keyboard@{ec::Keyboard}!DELETE@{DELETE}}
+\index{DELETE@{DELETE}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{DELETE}{DELETE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+D\+E\+L\+E\+TE = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+D\+E\+L\+E\+TE}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a9ce6be84370e9da9eab27348d9f98b5a}\label{classec_1_1_keyboard_a9ce6be84370e9da9eab27348d9f98b5a}} 
+\index{ec::Keyboard@{ec::Keyboard}!DOWN@{DOWN}}
+\index{DOWN@{DOWN}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{DOWN}{DOWN}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+D\+O\+WN = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+D\+O\+WN}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a95903eac785cffca940c056b1c7c70a3}\label{classec_1_1_keyboard_a95903eac785cffca940c056b1c7c70a3}} 
+\index{ec::Keyboard@{ec::Keyboard}!E@{E}}
+\index{E@{E}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{E}{E}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::E = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+E}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}\label{classec_1_1_keyboard_a135ca08df15aebf8c93ce3cc76288a6e}} 
+\index{ec::Keyboard@{ec::Keyboard}!EC\_KEY\_KEYBOARD@{EC\_KEY\_KEYBOARD}}
+\index{EC\_KEY\_KEYBOARD@{EC\_KEY\_KEYBOARD}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{EC\_KEY\_KEYBOARD}{EC\_KEY\_KEYBOARD}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+E\+C\+\_\+\+K\+E\+Y\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}
+
+
+
+Contains all possible types of keys on a keyboard. 
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a1353c7b1046a9d8d67bc9f1138a5f9f3}\label{classec_1_1_keyboard_a1353c7b1046a9d8d67bc9f1138a5f9f3}} 
+\index{ec::Keyboard@{ec::Keyboard}!END@{END}}
+\index{END@{END}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{END}{END}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+E\+ND = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+ND}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a783ad084b5fd7d45451126bac7205274}\label{classec_1_1_keyboard_a783ad084b5fd7d45451126bac7205274}} 
+\index{ec::Keyboard@{ec::Keyboard}!ENTER@{ENTER}}
+\index{ENTER@{ENTER}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{ENTER}{ENTER}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+E\+N\+T\+ER = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+N\+T\+ER}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a051c2a49d048576c1b26eee68956d2f9}\label{classec_1_1_keyboard_a051c2a49d048576c1b26eee68956d2f9}} 
+\index{ec::Keyboard@{ec::Keyboard}!EQUAL@{EQUAL}}
+\index{EQUAL@{EQUAL}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{EQUAL}{EQUAL}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+E\+Q\+U\+AL = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+Q\+U\+AL}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a1685dbfbb1c03114c8121162e333f9b0}\label{classec_1_1_keyboard_a1685dbfbb1c03114c8121162e333f9b0}} 
+\index{ec::Keyboard@{ec::Keyboard}!ESCAPE@{ESCAPE}}
+\index{ESCAPE@{ESCAPE}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{ESCAPE}{ESCAPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+E\+S\+C\+A\+PE = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+S\+C\+A\+PE}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a60c5617a98a4b1ff360ccd1c4fd48251}\label{classec_1_1_keyboard_a60c5617a98a4b1ff360ccd1c4fd48251}} 
+\index{ec::Keyboard@{ec::Keyboard}!F@{F}}
+\index{F@{F}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F}{F}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::F = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+F}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aa5d09923e2ac2f5dd3b2a5b33a06b721}\label{classec_1_1_keyboard_aa5d09923e2ac2f5dd3b2a5b33a06b721}} 
+\index{ec::Keyboard@{ec::Keyboard}!F1@{F1}}
+\index{F1@{F1}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F1}{F1}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F1 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F1}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aa168a7e6cc3afa55dd5688e977fc6bfe}\label{classec_1_1_keyboard_aa168a7e6cc3afa55dd5688e977fc6bfe}} 
+\index{ec::Keyboard@{ec::Keyboard}!F10@{F10}}
+\index{F10@{F10}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F10}{F10}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F10 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F10}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a52c268ea148aa4b22142873360c91fc2}\label{classec_1_1_keyboard_a52c268ea148aa4b22142873360c91fc2}} 
+\index{ec::Keyboard@{ec::Keyboard}!F11@{F11}}
+\index{F11@{F11}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F11}{F11}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F11 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F11}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a699bc14d848736ef074a47db2f568109}\label{classec_1_1_keyboard_a699bc14d848736ef074a47db2f568109}} 
+\index{ec::Keyboard@{ec::Keyboard}!F12@{F12}}
+\index{F12@{F12}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F12}{F12}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F12 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F12}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a57c5cc1e503cb08d453b6fee1f2dea47}\label{classec_1_1_keyboard_a57c5cc1e503cb08d453b6fee1f2dea47}} 
+\index{ec::Keyboard@{ec::Keyboard}!F13@{F13}}
+\index{F13@{F13}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F13}{F13}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F13 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F13}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aa85c5264f6d7cc445d7b8ad9ad5b9eac}\label{classec_1_1_keyboard_aa85c5264f6d7cc445d7b8ad9ad5b9eac}} 
+\index{ec::Keyboard@{ec::Keyboard}!F14@{F14}}
+\index{F14@{F14}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F14}{F14}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F14 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F14}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_afdf2d1dc1df9357757c30e63a274e331}\label{classec_1_1_keyboard_afdf2d1dc1df9357757c30e63a274e331}} 
+\index{ec::Keyboard@{ec::Keyboard}!F15@{F15}}
+\index{F15@{F15}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F15}{F15}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F15 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F15}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aaf2f8c127d0f27fe1b6c9c13512ccffe}\label{classec_1_1_keyboard_aaf2f8c127d0f27fe1b6c9c13512ccffe}} 
+\index{ec::Keyboard@{ec::Keyboard}!F16@{F16}}
+\index{F16@{F16}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F16}{F16}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F16 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F16}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a18122e1ed0e95e748ad31caab2ae8708}\label{classec_1_1_keyboard_a18122e1ed0e95e748ad31caab2ae8708}} 
+\index{ec::Keyboard@{ec::Keyboard}!F17@{F17}}
+\index{F17@{F17}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F17}{F17}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F17 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F17}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ab3daea4415ff472d2b508d1b253090d2}\label{classec_1_1_keyboard_ab3daea4415ff472d2b508d1b253090d2}} 
+\index{ec::Keyboard@{ec::Keyboard}!F18@{F18}}
+\index{F18@{F18}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F18}{F18}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F18 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F18}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ab48cdd8c5bf4b8e47564af59678b660d}\label{classec_1_1_keyboard_ab48cdd8c5bf4b8e47564af59678b660d}} 
+\index{ec::Keyboard@{ec::Keyboard}!F19@{F19}}
+\index{F19@{F19}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F19}{F19}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F19 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F19}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a039646ad1000430fd7bcdf04b2c91ec7}\label{classec_1_1_keyboard_a039646ad1000430fd7bcdf04b2c91ec7}} 
+\index{ec::Keyboard@{ec::Keyboard}!F2@{F2}}
+\index{F2@{F2}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F2}{F2}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F2 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F2}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ac67a6a2b6536cd6412c3c6b9dfb841e7}\label{classec_1_1_keyboard_ac67a6a2b6536cd6412c3c6b9dfb841e7}} 
+\index{ec::Keyboard@{ec::Keyboard}!F20@{F20}}
+\index{F20@{F20}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F20}{F20}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F20 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F20}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aeaa9b7f0c5875f1d8c04ad36e1e86794}\label{classec_1_1_keyboard_aeaa9b7f0c5875f1d8c04ad36e1e86794}} 
+\index{ec::Keyboard@{ec::Keyboard}!F21@{F21}}
+\index{F21@{F21}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F21}{F21}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F21 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F21}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_af33c09fe67e20ee71d7b37c5d05c2760}\label{classec_1_1_keyboard_af33c09fe67e20ee71d7b37c5d05c2760}} 
+\index{ec::Keyboard@{ec::Keyboard}!F22@{F22}}
+\index{F22@{F22}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F22}{F22}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F22 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F22}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aaa559281a2c74941811c3d9abe55d973}\label{classec_1_1_keyboard_aaa559281a2c74941811c3d9abe55d973}} 
+\index{ec::Keyboard@{ec::Keyboard}!F23@{F23}}
+\index{F23@{F23}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F23}{F23}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F23 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F23}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_af709a6fa5ab3d0e5069cf29f3f9861d3}\label{classec_1_1_keyboard_af709a6fa5ab3d0e5069cf29f3f9861d3}} 
+\index{ec::Keyboard@{ec::Keyboard}!F24@{F24}}
+\index{F24@{F24}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F24}{F24}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F24 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F24}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a00ab8cfc0de951d98d759ddc214e2523}\label{classec_1_1_keyboard_a00ab8cfc0de951d98d759ddc214e2523}} 
+\index{ec::Keyboard@{ec::Keyboard}!F25@{F25}}
+\index{F25@{F25}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F25}{F25}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F25 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F25}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a3002ddc8f37c24a1429e22d5dc8e48aa}\label{classec_1_1_keyboard_a3002ddc8f37c24a1429e22d5dc8e48aa}} 
+\index{ec::Keyboard@{ec::Keyboard}!F3@{F3}}
+\index{F3@{F3}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F3}{F3}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F3 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F3}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ad1f7f78c96c7a59a21210d94e693fde7}\label{classec_1_1_keyboard_ad1f7f78c96c7a59a21210d94e693fde7}} 
+\index{ec::Keyboard@{ec::Keyboard}!F4@{F4}}
+\index{F4@{F4}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F4}{F4}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F4 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F4}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a7a9bd546b5eeba38a587303293246bb7}\label{classec_1_1_keyboard_a7a9bd546b5eeba38a587303293246bb7}} 
+\index{ec::Keyboard@{ec::Keyboard}!F5@{F5}}
+\index{F5@{F5}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F5}{F5}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F5 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F5}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a02fe21453cf1fd9a9c5f181ec9a8f714}\label{classec_1_1_keyboard_a02fe21453cf1fd9a9c5f181ec9a8f714}} 
+\index{ec::Keyboard@{ec::Keyboard}!F6@{F6}}
+\index{F6@{F6}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F6}{F6}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F6 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F6}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ad0da55a468002a1193b02ab3b342a267}\label{classec_1_1_keyboard_ad0da55a468002a1193b02ab3b342a267}} 
+\index{ec::Keyboard@{ec::Keyboard}!F7@{F7}}
+\index{F7@{F7}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F7}{F7}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F7 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F7}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a89d166f0527389eb2eaec46dc1f86c79}\label{classec_1_1_keyboard_a89d166f0527389eb2eaec46dc1f86c79}} 
+\index{ec::Keyboard@{ec::Keyboard}!F8@{F8}}
+\index{F8@{F8}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F8}{F8}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F8 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F8}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a3dbe3f47995a8defdc3c142bc0983a4c}\label{classec_1_1_keyboard_a3dbe3f47995a8defdc3c142bc0983a4c}} 
+\index{ec::Keyboard@{ec::Keyboard}!F9@{F9}}
+\index{F9@{F9}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{F9}{F9}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+F9 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F9}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a7956c29b83bc5d7bf3b1f5f4b806fb50}\label{classec_1_1_keyboard_a7956c29b83bc5d7bf3b1f5f4b806fb50}} 
+\index{ec::Keyboard@{ec::Keyboard}!G@{G}}
+\index{G@{G}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::G = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+G}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ac68571beb478df0549b9f67a623fc84c}\label{classec_1_1_keyboard_ac68571beb478df0549b9f67a623fc84c}} 
+\index{ec::Keyboard@{ec::Keyboard}!GRAVE\_ACCENT@{GRAVE\_ACCENT}}
+\index{GRAVE\_ACCENT@{GRAVE\_ACCENT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{GRAVE\_ACCENT}{GRAVE\_ACCENT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+G\+R\+A\+V\+E\+\_\+\+A\+C\+C\+E\+NT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+G\+R\+A\+V\+E\+\_\+\+A\+C\+C\+E\+NT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a58c938acd086ad64b49a1359dfb25e0b}\label{classec_1_1_keyboard_a58c938acd086ad64b49a1359dfb25e0b}} 
+\index{ec::Keyboard@{ec::Keyboard}!H@{H}}
+\index{H@{H}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::H = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+H}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ae53947399dc339c95d28af2125bc6fed}\label{classec_1_1_keyboard_ae53947399dc339c95d28af2125bc6fed}} 
+\index{ec::Keyboard@{ec::Keyboard}!HOME@{HOME}}
+\index{HOME@{HOME}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{HOME}{HOME}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+H\+O\+ME = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+H\+O\+ME}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a38ffec286d89e2499ffd76a41eba6897}\label{classec_1_1_keyboard_a38ffec286d89e2499ffd76a41eba6897}} 
+\index{ec::Keyboard@{ec::Keyboard}!I@{I}}
+\index{I@{I}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{I}{I}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::I = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+I}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a460f6fe7c1740e5d8ef4eaf0ed182cd2}\label{classec_1_1_keyboard_a460f6fe7c1740e5d8ef4eaf0ed182cd2}} 
+\index{ec::Keyboard@{ec::Keyboard}!INSERT@{INSERT}}
+\index{INSERT@{INSERT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{INSERT}{INSERT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+I\+N\+S\+E\+RT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+S\+E\+RT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a35fe05168d3f2cca6dae07278faa8b75}\label{classec_1_1_keyboard_a35fe05168d3f2cca6dae07278faa8b75}} 
+\index{ec::Keyboard@{ec::Keyboard}!J@{J}}
+\index{J@{J}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{J}{J}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::J = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+J}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a43e568b3ad27c96695d50386628353ba}\label{classec_1_1_keyboard_a43e568b3ad27c96695d50386628353ba}} 
+\index{ec::Keyboard@{ec::Keyboard}!K@{K}}
+\index{K@{K}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{K}{K}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::K = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+K}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a26913e78a3604aad7a6b33b5d3ba6ad8}\label{classec_1_1_keyboard_a26913e78a3604aad7a6b33b5d3ba6ad8}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_0@{KEY\_0}}
+\index{KEY\_0@{KEY\_0}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_0}{KEY\_0}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+0 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+0}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a0dba45a69958022d4dc07328e803f3e7}\label{classec_1_1_keyboard_a0dba45a69958022d4dc07328e803f3e7}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_1@{KEY\_1}}
+\index{KEY\_1@{KEY\_1}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_1}{KEY\_1}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+1 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+1}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a99f6daf979b958338ab99f6c4d89dcf0}\label{classec_1_1_keyboard_a99f6daf979b958338ab99f6c4d89dcf0}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_2@{KEY\_2}}
+\index{KEY\_2@{KEY\_2}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_2}{KEY\_2}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+2 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+2}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a99d867703644def144395a8d141b26b0}\label{classec_1_1_keyboard_a99d867703644def144395a8d141b26b0}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_3@{KEY\_3}}
+\index{KEY\_3@{KEY\_3}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_3}{KEY\_3}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+3 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+3}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_adfac2e411700401affa8df6153681da6}\label{classec_1_1_keyboard_adfac2e411700401affa8df6153681da6}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_4@{KEY\_4}}
+\index{KEY\_4@{KEY\_4}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_4}{KEY\_4}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+4 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+4}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a3ac330b34232272a1c8efa88d31977c4}\label{classec_1_1_keyboard_a3ac330b34232272a1c8efa88d31977c4}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_5@{KEY\_5}}
+\index{KEY\_5@{KEY\_5}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_5}{KEY\_5}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+5 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+5}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_af3637c105dc23dacf0de62d1a286c10f}\label{classec_1_1_keyboard_af3637c105dc23dacf0de62d1a286c10f}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_6@{KEY\_6}}
+\index{KEY\_6@{KEY\_6}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_6}{KEY\_6}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+6 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+6}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a2ce1aa1beb0123b243b1a4e5a6c8b5b6}\label{classec_1_1_keyboard_a2ce1aa1beb0123b243b1a4e5a6c8b5b6}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_7@{KEY\_7}}
+\index{KEY\_7@{KEY\_7}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_7}{KEY\_7}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+7 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+7}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ace0785fe5a1e11023c7a7cfa9791c527}\label{classec_1_1_keyboard_ace0785fe5a1e11023c7a7cfa9791c527}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_8@{KEY\_8}}
+\index{KEY\_8@{KEY\_8}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_8}{KEY\_8}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+8 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+8}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a69b51ba3fb41b7b5afde5e3f3bab4f9c}\label{classec_1_1_keyboard_a69b51ba3fb41b7b5afde5e3f3bab4f9c}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_9@{KEY\_9}}
+\index{KEY\_9@{KEY\_9}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_9}{KEY\_9}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+9 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+9}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a599f8a3b8addd9f6cdabfad9d0e773c4}\label{classec_1_1_keyboard_a599f8a3b8addd9f6cdabfad9d0e773c4}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_LAST@{KEY\_LAST}}
+\index{KEY\_LAST@{KEY\_LAST}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_LAST}{KEY\_LAST}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+\+L\+A\+ST}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= GLFW\_KEY\_LAST}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classec_1_1_keyboard_aaa582392dbeacf392632aafcdb451721}\label{classec_1_1_keyboard_aaa582392dbeacf392632aafcdb451721}} 
+\index{ec::Keyboard@{ec::Keyboard}!KEY\_UNKNOWN@{KEY\_UNKNOWN}}
+\index{KEY\_UNKNOWN@{KEY\_UNKNOWN}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{KEY\_UNKNOWN}{KEY\_UNKNOWN}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+K\+E\+Y\+\_\+\+U\+N\+K\+N\+O\+WN = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+U\+N\+K\+N\+O\+WN}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ae3ec80e2b98d6ef1d6fb921ddf3cb52e}\label{classec_1_1_keyboard_ae3ec80e2b98d6ef1d6fb921ddf3cb52e}} 
+\index{ec::Keyboard@{ec::Keyboard}!L@{L}}
+\index{L@{L}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{L}{L}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::L = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+L}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a08f676328855059e8687a4d7b52302b4}\label{classec_1_1_keyboard_a08f676328855059e8687a4d7b52302b4}} 
+\index{ec::Keyboard@{ec::Keyboard}!LEFT@{LEFT}}
+\index{LEFT@{LEFT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{LEFT}{LEFT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+L\+E\+FT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+FT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a1061a62f40664df678f7f623c75acac8}\label{classec_1_1_keyboard_a1061a62f40664df678f7f623c75acac8}} 
+\index{ec::Keyboard@{ec::Keyboard}!LEFT\_BRACKET@{LEFT\_BRACKET}}
+\index{LEFT\_BRACKET@{LEFT\_BRACKET}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{LEFT\_BRACKET}{LEFT\_BRACKET}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+L\+E\+F\+T\+\_\+\+B\+R\+A\+C\+K\+ET = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+B\+R\+A\+C\+K\+ET}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ae9723063b666c0dd21e96588ebb734c9}\label{classec_1_1_keyboard_ae9723063b666c0dd21e96588ebb734c9}} 
+\index{ec::Keyboard@{ec::Keyboard}!M@{M}}
+\index{M@{M}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::M = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+M}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a427a782cc88310ca19c3b265d1501258}\label{classec_1_1_keyboard_a427a782cc88310ca19c3b265d1501258}} 
+\index{ec::Keyboard@{ec::Keyboard}!MENU@{MENU}}
+\index{MENU@{MENU}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{MENU}{MENU}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+M\+E\+NU = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+M\+E\+NU}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a3891ae964cb95fefde0f6368378062ce}\label{classec_1_1_keyboard_a3891ae964cb95fefde0f6368378062ce}} 
+\index{ec::Keyboard@{ec::Keyboard}!MINUS@{MINUS}}
+\index{MINUS@{MINUS}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{MINUS}{MINUS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+M\+I\+N\+US = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+M\+I\+N\+US}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a4dcb87a802eb8775401ae36ac5bd4358}\label{classec_1_1_keyboard_a4dcb87a802eb8775401ae36ac5bd4358}} 
+\index{ec::Keyboard@{ec::Keyboard}!N@{N}}
+\index{N@{N}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::N = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+N}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a0dbdacf42db0e60466bcc6287f2d21d0}\label{classec_1_1_keyboard_a0dbdacf42db0e60466bcc6287f2d21d0}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_LOCK@{NUM\_LOCK}}
+\index{NUM\_LOCK@{NUM\_LOCK}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_LOCK}{NUM\_LOCK}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+L\+O\+CK = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+N\+U\+M\+\_\+\+L\+O\+CK}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a2b29fb796ac7f5ae647dd636a796a91d}\label{classec_1_1_keyboard_a2b29fb796ac7f5ae647dd636a796a91d}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_0@{NUM\_PAD\_0}}
+\index{NUM\_PAD\_0@{NUM\_PAD\_0}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_0}{NUM\_PAD\_0}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+0 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+0}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a36b3b138bb5132950f91956e5c0a9676}\label{classec_1_1_keyboard_a36b3b138bb5132950f91956e5c0a9676}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_1@{NUM\_PAD\_1}}
+\index{NUM\_PAD\_1@{NUM\_PAD\_1}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_1}{NUM\_PAD\_1}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+1 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+1}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a456fc67954c8173aeb9450d10b3b1d3c}\label{classec_1_1_keyboard_a456fc67954c8173aeb9450d10b3b1d3c}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_2@{NUM\_PAD\_2}}
+\index{NUM\_PAD\_2@{NUM\_PAD\_2}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_2}{NUM\_PAD\_2}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+2 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+2}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_abd3ad06b0229df388156efe666662908}\label{classec_1_1_keyboard_abd3ad06b0229df388156efe666662908}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_3@{NUM\_PAD\_3}}
+\index{NUM\_PAD\_3@{NUM\_PAD\_3}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_3}{NUM\_PAD\_3}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+3 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+3}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a2fa7355ac90ada75403e6964ef373a7d}\label{classec_1_1_keyboard_a2fa7355ac90ada75403e6964ef373a7d}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_4@{NUM\_PAD\_4}}
+\index{NUM\_PAD\_4@{NUM\_PAD\_4}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_4}{NUM\_PAD\_4}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+4 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+4}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ab1fe2bc49a3287ac92b32006dfc046c8}\label{classec_1_1_keyboard_ab1fe2bc49a3287ac92b32006dfc046c8}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_5@{NUM\_PAD\_5}}
+\index{NUM\_PAD\_5@{NUM\_PAD\_5}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_5}{NUM\_PAD\_5}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+5 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+5}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ac06ec74ae84452fda7be4ea0c69738b2}\label{classec_1_1_keyboard_ac06ec74ae84452fda7be4ea0c69738b2}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_6@{NUM\_PAD\_6}}
+\index{NUM\_PAD\_6@{NUM\_PAD\_6}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_6}{NUM\_PAD\_6}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+6 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+6}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aaaca0509bb330fc1402064d32cc85b9e}\label{classec_1_1_keyboard_aaaca0509bb330fc1402064d32cc85b9e}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_7@{NUM\_PAD\_7}}
+\index{NUM\_PAD\_7@{NUM\_PAD\_7}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_7}{NUM\_PAD\_7}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+7 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+7}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a853e5fefb7cf1d53efcf268504118325}\label{classec_1_1_keyboard_a853e5fefb7cf1d53efcf268504118325}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_8@{NUM\_PAD\_8}}
+\index{NUM\_PAD\_8@{NUM\_PAD\_8}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_8}{NUM\_PAD\_8}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+8 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+8}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ad2a8888dce13abd7a8ebadf78978262d}\label{classec_1_1_keyboard_ad2a8888dce13abd7a8ebadf78978262d}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_9@{NUM\_PAD\_9}}
+\index{NUM\_PAD\_9@{NUM\_PAD\_9}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_9}{NUM\_PAD\_9}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+9 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+9}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_acf60ce5226595db3f854bff555c451c7}\label{classec_1_1_keyboard_acf60ce5226595db3f854bff555c451c7}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_ADD@{NUM\_PAD\_ADD}}
+\index{NUM\_PAD\_ADD@{NUM\_PAD\_ADD}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_ADD}{NUM\_PAD\_ADD}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+A\+DD = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+A\+DD}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a7fb474a14a119bb7f51b05aa38db37d8}\label{classec_1_1_keyboard_a7fb474a14a119bb7f51b05aa38db37d8}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_DECIMAL@{NUM\_PAD\_DECIMAL}}
+\index{NUM\_PAD\_DECIMAL@{NUM\_PAD\_DECIMAL}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_DECIMAL}{NUM\_PAD\_DECIMAL}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+D\+E\+C\+I\+M\+AL = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+D\+E\+C\+I\+M\+AL}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ad33a07123f5f838806b1e85d8f936dde}\label{classec_1_1_keyboard_ad33a07123f5f838806b1e85d8f936dde}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_DIVIDE@{NUM\_PAD\_DIVIDE}}
+\index{NUM\_PAD\_DIVIDE@{NUM\_PAD\_DIVIDE}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_DIVIDE}{NUM\_PAD\_DIVIDE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+D\+I\+V\+I\+DE = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+D\+I\+V\+I\+DE}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a7f4971d0bfdf533496432cf270025d83}\label{classec_1_1_keyboard_a7f4971d0bfdf533496432cf270025d83}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_ENTER@{NUM\_PAD\_ENTER}}
+\index{NUM\_PAD\_ENTER@{NUM\_PAD\_ENTER}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_ENTER}{NUM\_PAD\_ENTER}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+E\+N\+T\+ER = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+E\+N\+T\+ER}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ab804765f16421c386f1d7c7e0a0e66fb}\label{classec_1_1_keyboard_ab804765f16421c386f1d7c7e0a0e66fb}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_EQUAL@{NUM\_PAD\_EQUAL}}
+\index{NUM\_PAD\_EQUAL@{NUM\_PAD\_EQUAL}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_EQUAL}{NUM\_PAD\_EQUAL}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+E\+Q\+U\+AL = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+E\+Q\+U\+AL}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a18cafa779cedf999cfd00db2f11c2e48}\label{classec_1_1_keyboard_a18cafa779cedf999cfd00db2f11c2e48}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_MULTIPLY@{NUM\_PAD\_MULTIPLY}}
+\index{NUM\_PAD\_MULTIPLY@{NUM\_PAD\_MULTIPLY}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_MULTIPLY}{NUM\_PAD\_MULTIPLY}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+M\+U\+L\+T\+I\+P\+LY = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+M\+U\+L\+T\+I\+P\+LY}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ace6b24f7c2333966a87683a193784794}\label{classec_1_1_keyboard_ace6b24f7c2333966a87683a193784794}} 
+\index{ec::Keyboard@{ec::Keyboard}!NUM\_PAD\_SUBTRACT@{NUM\_PAD\_SUBTRACT}}
+\index{NUM\_PAD\_SUBTRACT@{NUM\_PAD\_SUBTRACT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{NUM\_PAD\_SUBTRACT}{NUM\_PAD\_SUBTRACT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+N\+U\+M\+\_\+\+P\+A\+D\+\_\+\+S\+U\+B\+T\+R\+A\+CT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+S\+U\+B\+T\+R\+A\+CT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_acc3419f140a0bb0e253c84315d7277c7}\label{classec_1_1_keyboard_acc3419f140a0bb0e253c84315d7277c7}} 
+\index{ec::Keyboard@{ec::Keyboard}!O@{O}}
+\index{O@{O}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{O}{O}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::O = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+O}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ab3ab1aa54525f4e0488a0b57a68b8757}\label{classec_1_1_keyboard_ab3ab1aa54525f4e0488a0b57a68b8757}} 
+\index{ec::Keyboard@{ec::Keyboard}!P@{P}}
+\index{P@{P}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::P = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+P}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a7e897af5e7d29c6429b8bddd00a6b393}\label{classec_1_1_keyboard_a7e897af5e7d29c6429b8bddd00a6b393}} 
+\index{ec::Keyboard@{ec::Keyboard}!PAGE\_DOWN@{PAGE\_DOWN}}
+\index{PAGE\_DOWN@{PAGE\_DOWN}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{PAGE\_DOWN}{PAGE\_DOWN}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+P\+A\+G\+E\+\_\+\+D\+O\+WN = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+G\+E\+\_\+\+D\+O\+WN}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ad5fe6a8b1f9a6b71e84b6af4a0dac07c}\label{classec_1_1_keyboard_ad5fe6a8b1f9a6b71e84b6af4a0dac07c}} 
+\index{ec::Keyboard@{ec::Keyboard}!PAGE\_UP@{PAGE\_UP}}
+\index{PAGE\_UP@{PAGE\_UP}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{PAGE\_UP}{PAGE\_UP}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+P\+A\+G\+E\+\_\+\+UP = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+G\+E\+\_\+\+UP}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a3b4b7a8200837c4d9f01f79922a0d352}\label{classec_1_1_keyboard_a3b4b7a8200837c4d9f01f79922a0d352}} 
+\index{ec::Keyboard@{ec::Keyboard}!PAUSE@{PAUSE}}
+\index{PAUSE@{PAUSE}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{PAUSE}{PAUSE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+P\+A\+U\+SE = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+U\+SE}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_acf085f565c388ccf5b1054d9f1188e5c}\label{classec_1_1_keyboard_acf085f565c388ccf5b1054d9f1188e5c}} 
+\index{ec::Keyboard@{ec::Keyboard}!PERIOD@{PERIOD}}
+\index{PERIOD@{PERIOD}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{PERIOD}{PERIOD}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+P\+E\+R\+I\+OD = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+E\+R\+I\+OD}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a595cef3630be024a5b6ed5935372797b}\label{classec_1_1_keyboard_a595cef3630be024a5b6ed5935372797b}} 
+\index{ec::Keyboard@{ec::Keyboard}!PRINT\_SCREEN@{PRINT\_SCREEN}}
+\index{PRINT\_SCREEN@{PRINT\_SCREEN}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{PRINT\_SCREEN}{PRINT\_SCREEN}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+P\+R\+I\+N\+T\+\_\+\+S\+C\+R\+E\+EN = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+R\+I\+N\+T\+\_\+\+S\+C\+R\+E\+EN}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a7d2ade0eca9959dcd82b4c4ae9c3a27b}\label{classec_1_1_keyboard_a7d2ade0eca9959dcd82b4c4ae9c3a27b}} 
+\index{ec::Keyboard@{ec::Keyboard}!Q@{Q}}
+\index{Q@{Q}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{Q}{Q}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::Q = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+Q}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a3f2649d7249962a4f485557e405d4754}\label{classec_1_1_keyboard_a3f2649d7249962a4f485557e405d4754}} 
+\index{ec::Keyboard@{ec::Keyboard}!R@{R}}
+\index{R@{R}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::R = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+R}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a93964921f5a24fd48633e2248d67499c}\label{classec_1_1_keyboard_a93964921f5a24fd48633e2248d67499c}} 
+\index{ec::Keyboard@{ec::Keyboard}!RIGHT@{RIGHT}}
+\index{RIGHT@{RIGHT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{RIGHT}{RIGHT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+R\+I\+G\+HT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+HT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_af2a488f997bea31744e18b8cf4bad42e}\label{classec_1_1_keyboard_af2a488f997bea31744e18b8cf4bad42e}} 
+\index{ec::Keyboard@{ec::Keyboard}!RIGHT\_BRACKET@{RIGHT\_BRACKET}}
+\index{RIGHT\_BRACKET@{RIGHT\_BRACKET}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{RIGHT\_BRACKET}{RIGHT\_BRACKET}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+R\+I\+G\+H\+T\+\_\+\+B\+R\+A\+C\+K\+ET = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+B\+R\+A\+C\+K\+ET}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_ab11aae5fb83407687e9f8acdfa163910}\label{classec_1_1_keyboard_ab11aae5fb83407687e9f8acdfa163910}} 
+\index{ec::Keyboard@{ec::Keyboard}!S@{S}}
+\index{S@{S}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{S}{S}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::S = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+S}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a55be147635eeca7f44354bb7ca03ae09}\label{classec_1_1_keyboard_a55be147635eeca7f44354bb7ca03ae09}} 
+\index{ec::Keyboard@{ec::Keyboard}!SCROLL\_LOCK@{SCROLL\_LOCK}}
+\index{SCROLL\_LOCK@{SCROLL\_LOCK}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{SCROLL\_LOCK}{SCROLL\_LOCK}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+S\+C\+R\+O\+L\+L\+\_\+\+L\+O\+CK = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+L\+O\+CK}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a23a6eded3a92f7b3c28feffc94e968d3}\label{classec_1_1_keyboard_a23a6eded3a92f7b3c28feffc94e968d3}} 
+\index{ec::Keyboard@{ec::Keyboard}!SEMICOLON@{SEMICOLON}}
+\index{SEMICOLON@{SEMICOLON}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{SEMICOLON}{SEMICOLON}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+S\+E\+M\+I\+C\+O\+L\+ON = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+E\+M\+I\+C\+O\+L\+ON}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a9520324be8993d63fa3f3daf73bcb052}\label{classec_1_1_keyboard_a9520324be8993d63fa3f3daf73bcb052}} 
+\index{ec::Keyboard@{ec::Keyboard}!SHIFT@{SHIFT}}
+\index{SHIFT@{SHIFT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{SHIFT}{SHIFT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+S\+H\+I\+FT = G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+S\+H\+I\+FT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a106acff7ed6b4ee260798a605ecf372f}\label{classec_1_1_keyboard_a106acff7ed6b4ee260798a605ecf372f}} 
+\index{ec::Keyboard@{ec::Keyboard}!SHIFT\_LEFT@{SHIFT\_LEFT}}
+\index{SHIFT\_LEFT@{SHIFT\_LEFT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{SHIFT\_LEFT}{SHIFT\_LEFT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+S\+H\+I\+F\+T\+\_\+\+L\+E\+FT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+S\+H\+I\+FT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a7f2db0bbc56200a09b313aba341486de}\label{classec_1_1_keyboard_a7f2db0bbc56200a09b313aba341486de}} 
+\index{ec::Keyboard@{ec::Keyboard}!SHIFT\_RIGHT@{SHIFT\_RIGHT}}
+\index{SHIFT\_RIGHT@{SHIFT\_RIGHT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{SHIFT\_RIGHT}{SHIFT\_RIGHT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+S\+H\+I\+F\+T\+\_\+\+R\+I\+G\+HT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+S\+H\+I\+FT}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a747485c97864655c5736ad24058462ff}\label{classec_1_1_keyboard_a747485c97864655c5736ad24058462ff}} 
+\index{ec::Keyboard@{ec::Keyboard}!SLASH@{SLASH}}
+\index{SLASH@{SLASH}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{SLASH}{SLASH}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+S\+L\+A\+SH = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+L\+A\+SH}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a747605ff6ca24b347a35e4e5a71edbe9}\label{classec_1_1_keyboard_a747605ff6ca24b347a35e4e5a71edbe9}} 
+\index{ec::Keyboard@{ec::Keyboard}!SPACE@{SPACE}}
+\index{SPACE@{SPACE}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{SPACE}{SPACE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+S\+P\+A\+CE = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+P\+A\+CE}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a30098a75ef82c64a8f01147ada71f465}\label{classec_1_1_keyboard_a30098a75ef82c64a8f01147ada71f465}} 
+\index{ec::Keyboard@{ec::Keyboard}!SUPER@{SUPER}}
+\index{SUPER@{SUPER}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{SUPER}{SUPER}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+S\+U\+P\+ER = G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+S\+U\+P\+ER}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a0d12c25511dcf7ba48a4b926303d7f8b}\label{classec_1_1_keyboard_a0d12c25511dcf7ba48a4b926303d7f8b}} 
+\index{ec::Keyboard@{ec::Keyboard}!SUPER\_LEFT@{SUPER\_LEFT}}
+\index{SUPER\_LEFT@{SUPER\_LEFT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{SUPER\_LEFT}{SUPER\_LEFT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+S\+U\+P\+E\+R\+\_\+\+L\+E\+FT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+S\+U\+P\+ER}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a8b2f2d479c90e90ae51fbbbc4c21c980}\label{classec_1_1_keyboard_a8b2f2d479c90e90ae51fbbbc4c21c980}} 
+\index{ec::Keyboard@{ec::Keyboard}!SUPER\_RIGHT@{SUPER\_RIGHT}}
+\index{SUPER\_RIGHT@{SUPER\_RIGHT}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{SUPER\_RIGHT}{SUPER\_RIGHT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+S\+U\+P\+E\+R\+\_\+\+R\+I\+G\+HT = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+S\+U\+P\+ER}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a09f863373edf51f09e94316f13dad263}\label{classec_1_1_keyboard_a09f863373edf51f09e94316f13dad263}} 
+\index{ec::Keyboard@{ec::Keyboard}!T@{T}}
+\index{T@{T}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::T = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+T}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aef71873ca11f1076aaad6ea11d3d8aea}\label{classec_1_1_keyboard_aef71873ca11f1076aaad6ea11d3d8aea}} 
+\index{ec::Keyboard@{ec::Keyboard}!TAB@{TAB}}
+\index{TAB@{TAB}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{TAB}{TAB}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+T\+AB = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+T\+AB}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a766e2c870a29b0e0cfdf87346126f9aa}\label{classec_1_1_keyboard_a766e2c870a29b0e0cfdf87346126f9aa}} 
+\index{ec::Keyboard@{ec::Keyboard}!U@{U}}
+\index{U@{U}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{U}{U}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::U = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+U}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a6da2eed1074dc9feaf4b68ab3da684d8}\label{classec_1_1_keyboard_a6da2eed1074dc9feaf4b68ab3da684d8}} 
+\index{ec::Keyboard@{ec::Keyboard}!UP@{UP}}
+\index{UP@{UP}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{UP}{UP}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+UP = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+UP}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a9b00b29bff502c4e5409b088da7270de}\label{classec_1_1_keyboard_a9b00b29bff502c4e5409b088da7270de}} 
+\index{ec::Keyboard@{ec::Keyboard}!V@{V}}
+\index{V@{V}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::V = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+V}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a6b7df6b9d699a9cab8c1283623a12333}\label{classec_1_1_keyboard_a6b7df6b9d699a9cab8c1283623a12333}} 
+\index{ec::Keyboard@{ec::Keyboard}!W@{W}}
+\index{W@{W}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{W}{W}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::W = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+W}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a1eb7d04d0c734fb8fef4d8386fb7a4d0}\label{classec_1_1_keyboard_a1eb7d04d0c734fb8fef4d8386fb7a4d0}} 
+\index{ec::Keyboard@{ec::Keyboard}!WORLD\_1@{WORLD\_1}}
+\index{WORLD\_1@{WORLD\_1}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{WORLD\_1}{WORLD\_1}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+W\+O\+R\+L\+D\+\_\+1 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+W\+O\+R\+L\+D\+\_\+1}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_aab87be510c1ae98007e98afa30952918}\label{classec_1_1_keyboard_aab87be510c1ae98007e98afa30952918}} 
+\index{ec::Keyboard@{ec::Keyboard}!WORLD\_2@{WORLD\_2}}
+\index{WORLD\_2@{WORLD\_2}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{WORLD\_2}{WORLD\_2}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::\+W\+O\+R\+L\+D\+\_\+2 = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+W\+O\+R\+L\+D\+\_\+2}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a46a9272c629195e29395f7e8d22e7cf5}\label{classec_1_1_keyboard_a46a9272c629195e29395f7e8d22e7cf5}} 
+\index{ec::Keyboard@{ec::Keyboard}!X@{X}}
+\index{X@{X}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::X = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+X}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a3e6065997f9693286591e1300769e13a}\label{classec_1_1_keyboard_a3e6065997f9693286591e1300769e13a}} 
+\index{ec::Keyboard@{ec::Keyboard}!Y@{Y}}
+\index{Y@{Y}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{Y}{Y}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::Y = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+Y}
+
+\mbox{\Hypertarget{classec_1_1_keyboard_a342c1ef739e9fd209135017e48f25c58}\label{classec_1_1_keyboard_a342c1ef739e9fd209135017e48f25c58}} 
+\index{ec::Keyboard@{ec::Keyboard}!Z@{Z}}
+\index{Z@{Z}!ec::Keyboard@{ec::Keyboard}}
+\doxysubsubsection{\texorpdfstring{Z}{Z}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_common_8h_aac42573e202ca3dd4d259c81691e2369}{E\+C3\+D\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} ec\+::\+Keyboard\+::Z = G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+Z}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Input/\mbox{\hyperlink{_keyboard_8h}{Keyboard.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Input/\mbox{\hyperlink{_keyboard_8cpp}{Keyboard.\+cpp}}\end{DoxyCompactItemize}

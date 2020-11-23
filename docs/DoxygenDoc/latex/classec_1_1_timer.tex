@@ -1,0 +1,93 @@
+\hypertarget{classec_1_1_timer}{}\doxysection{ec\+::Timer Class Reference}
+\label{classec_1_1_timer}\index{ec::Timer@{ec::Timer}}
+
+
+{\ttfamily \#include $<$Timer.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::Timer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classec_1_1_timer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_timer_afa10f411221610c507291183b6b6aa56}{Timer}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_timer_a496dc6127f9d0c8ec3dc8d91de6b6448}{$\sim$\+Timer}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_timer_a0f712ea9fa17c4657a877b9322219aa3}{reset}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_timer_a9c0d47620b70d0d7f392a9837601dad3}{reset\+Time\+Delta}} ()
+\item 
+double \mbox{\hyperlink{classec_1_1_timer_a17b6b8d3cf83bb86df9164160b791016}{get\+Time\+Delta}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classec_1_1_timer_afdd04188d609cf55b9546d32a89f52dc}{get\+Time}} ()
+\item 
+static void \mbox{\hyperlink{classec_1_1_timer_ab1731ad2f23bc4b37a6bc5b061846dd6}{set\+Time}} (double time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Track the time passed since the timer was initialized last and the time between calls. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_timer_afa10f411221610c507291183b6b6aa56}\label{classec_1_1_timer_afa10f411221610c507291183b6b6aa56}} 
+\index{ec::Timer@{ec::Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!ec::Timer@{ec::Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily ec\+::\+Timer\+::\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_timer_a496dc6127f9d0c8ec3dc8d91de6b6448}\label{classec_1_1_timer_a496dc6127f9d0c8ec3dc8d91de6b6448}} 
+\index{ec::Timer@{ec::Timer}!````~Timer@{$\sim$Timer}}
+\index{````~Timer@{$\sim$Timer}!ec::Timer@{ec::Timer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Timer()}{~Timer()}}
+{\footnotesize\ttfamily ec\+::\+Timer\+::$\sim$\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_timer_afdd04188d609cf55b9546d32a89f52dc}\label{classec_1_1_timer_afdd04188d609cf55b9546d32a89f52dc}} 
+\index{ec::Timer@{ec::Timer}!getTime@{getTime}}
+\index{getTime@{getTime}!ec::Timer@{ec::Timer}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily double ec\+::\+Timer\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get time since the start of the timer or last reset \mbox{\Hypertarget{classec_1_1_timer_a17b6b8d3cf83bb86df9164160b791016}\label{classec_1_1_timer_a17b6b8d3cf83bb86df9164160b791016}} 
+\index{ec::Timer@{ec::Timer}!getTimeDelta@{getTimeDelta}}
+\index{getTimeDelta@{getTimeDelta}!ec::Timer@{ec::Timer}}
+\doxysubsubsection{\texorpdfstring{getTimeDelta()}{getTimeDelta()}}
+{\footnotesize\ttfamily double ec\+::\+Timer\+::get\+Time\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get time between calls \mbox{\Hypertarget{classec_1_1_timer_a0f712ea9fa17c4657a877b9322219aa3}\label{classec_1_1_timer_a0f712ea9fa17c4657a877b9322219aa3}} 
+\index{ec::Timer@{ec::Timer}!reset@{reset}}
+\index{reset@{reset}!ec::Timer@{ec::Timer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void ec\+::\+Timer\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset the whole timer \mbox{\Hypertarget{classec_1_1_timer_a9c0d47620b70d0d7f392a9837601dad3}\label{classec_1_1_timer_a9c0d47620b70d0d7f392a9837601dad3}} 
+\index{ec::Timer@{ec::Timer}!resetTimeDelta@{resetTimeDelta}}
+\index{resetTimeDelta@{resetTimeDelta}!ec::Timer@{ec::Timer}}
+\doxysubsubsection{\texorpdfstring{resetTimeDelta()}{resetTimeDelta()}}
+{\footnotesize\ttfamily void ec\+::\+Timer\+::reset\+Time\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Only reset the time since the last access of time delta \mbox{\Hypertarget{classec_1_1_timer_ab1731ad2f23bc4b37a6bc5b061846dd6}\label{classec_1_1_timer_ab1731ad2f23bc4b37a6bc5b061846dd6}} 
+\index{ec::Timer@{ec::Timer}!setTime@{setTime}}
+\index{setTime@{setTime}!ec::Timer@{ec::Timer}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void ec\+::\+Timer\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Set the timer to a specific time. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Utilities/\mbox{\hyperlink{_timer_8h}{Timer.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Utilities/\mbox{\hyperlink{_timer_8cpp}{Timer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="ec::SpringGeometry" name="ec::SpringGeometry">
+<area shape="rect" id="node1" title=" " alt="" coords="12,645,153,737"/>
+<area shape="rect" id="node2" href="$classec_1_1_dynamic_geometry.html" title="Kind of geometry that can be changed for every rendering." alt="" coords="5,476,160,597"/>
+<area shape="rect" id="node3" href="$classec_1_1_geometry.html" title="Geometry." alt="" coords="6,204,159,428"/>
+<area shape="rect" id="node4" href="$classec_1_1_i_geometry_access.html" title="Base class for all kinds of geometry." alt="" coords="7,5,159,156"/>
+</map>

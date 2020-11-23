@@ -1,0 +1,6 @@
+<map id="ec::SpotLight" name="ec::SpotLight">
+<area shape="rect" id="node1" title="Light source with a direction and a conical shape." alt="" coords="27,865,150,1016"/>
+<area shape="rect" id="node2" href="$classec_1_1_light.html" title="Abstract light source." alt="" coords="35,623,143,817"/>
+<area shape="rect" id="node3" href="$classec_1_1_node.html" title="Nodes make up the scene graph. They represent a directed acyclic graph." alt="" coords="5,321,172,575"/>
+<area shape="rect" id="node4" href="$classec_1_1_transform3_d.html" title="A transformation in 3D space." alt="" coords="17,5,161,273"/>
+</map>

@@ -1,0 +1,88 @@
+\hypertarget{classec_1_1_open_g_l_input}{}\doxysection{ec\+::Open\+G\+L\+Input Class Reference}
+\label{classec_1_1_open_g_l_input}\index{ec::OpenGLInput@{ec::OpenGLInput}}
+
+
+{\ttfamily \#include $<$Open\+G\+L\+Input.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Open\+G\+L\+Input\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{classec_1_1_open_g_l_input__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Open\+G\+L\+Input\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classec_1_1_open_g_l_input__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_open_g_l_input_a7046406475d576873c287a64ea4d3cb6}{Open\+G\+L\+Input}} ()
+\item 
+virtual \mbox{\hyperlink{classec_1_1_open_g_l_input_ab4a3fa6d2e349d8dbf4de8b50a7a81ae}{$\sim$\+Open\+G\+L\+Input}} ()
+\item 
+double \mbox{\hyperlink{classec_1_1_open_g_l_input_a5a4c1780a904c55d5ac38272234b87a7}{get\+Time}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_open_g_l_input_a064a4e318e18d79ad8df19c789f84686}{process\+Event}} (const \mbox{\hyperlink{structec_1_1_input_event}{ec\+::\+Input\+Event}} \&event) override
+\begin{DoxyCompactList}\small\item\em Automatically called, when informed about an event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL G\+UI back end class for input. It needs to be a agui\+::\+Input for it to be usable with Agui and it needs to be a \mbox{\hyperlink{classec_1_1_input_listener}{ec\+::\+Input\+Listener}}, so it can actually receive input. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_open_g_l_input_a7046406475d576873c287a64ea4d3cb6}\label{classec_1_1_open_g_l_input_a7046406475d576873c287a64ea4d3cb6}} 
+\index{ec::OpenGLInput@{ec::OpenGLInput}!OpenGLInput@{OpenGLInput}}
+\index{OpenGLInput@{OpenGLInput}!ec::OpenGLInput@{ec::OpenGLInput}}
+\doxysubsubsection{\texorpdfstring{OpenGLInput()}{OpenGLInput()}}
+{\footnotesize\ttfamily ec\+::\+Open\+G\+L\+Input\+::\+Open\+G\+L\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_open_g_l_input_ab4a3fa6d2e349d8dbf4de8b50a7a81ae}\label{classec_1_1_open_g_l_input_ab4a3fa6d2e349d8dbf4de8b50a7a81ae}} 
+\index{ec::OpenGLInput@{ec::OpenGLInput}!````~OpenGLInput@{$\sim$OpenGLInput}}
+\index{````~OpenGLInput@{$\sim$OpenGLInput}!ec::OpenGLInput@{ec::OpenGLInput}}
+\doxysubsubsection{\texorpdfstring{$\sim$OpenGLInput()}{~OpenGLInput()}}
+{\footnotesize\ttfamily ec\+::\+Open\+G\+L\+Input\+::$\sim$\+Open\+G\+L\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_open_g_l_input_a5a4c1780a904c55d5ac38272234b87a7}\label{classec_1_1_open_g_l_input_a5a4c1780a904c55d5ac38272234b87a7}} 
+\index{ec::OpenGLInput@{ec::OpenGLInput}!getTime@{getTime}}
+\index{getTime@{getTime}!ec::OpenGLInput@{ec::OpenGLInput}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily double ec\+::\+Open\+G\+L\+Input\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classec_1_1_open_g_l_input_a064a4e318e18d79ad8df19c789f84686}\label{classec_1_1_open_g_l_input_a064a4e318e18d79ad8df19c789f84686}} 
+\index{ec::OpenGLInput@{ec::OpenGLInput}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!ec::OpenGLInput@{ec::OpenGLInput}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Open\+G\+L\+Input\+::process\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_input_event}{ec\+::\+Input\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Automatically called, when informed about an event. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classec_1_1_input_listener_a9ceaefc79c6b0b260e88454616137840}{ec\+::\+Input\+Listener}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Gui/\+Backend/\mbox{\hyperlink{_open_g_l_input_8h}{Open\+G\+L\+Input.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Gui/\+Backend/\mbox{\hyperlink{_open_g_l_input_8cpp}{Open\+G\+L\+Input.\+cpp}}\end{DoxyCompactItemize}

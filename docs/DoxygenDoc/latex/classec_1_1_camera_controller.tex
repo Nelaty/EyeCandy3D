@@ -1,0 +1,209 @@
+\hypertarget{classec_1_1_camera_controller}{}\doxysection{ec\+::Camera\+Controller Class Reference}
+\label{classec_1_1_camera_controller}\index{ec::CameraController@{ec::CameraController}}
+
+
+{\ttfamily \#include $<$Camera\+Controller.\+h$>$}
+
+
+
+Inheritance diagram for ec\+::Camera\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classec_1_1_camera_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ec\+::Camera\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classec_1_1_camera_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_camera_controller_a53fd061c49374fd8f1194cecac1e35aa}{Camera\+Controller}} ()
+\item 
+\mbox{\hyperlink{classec_1_1_camera_controller_a9edd8fff13533c84c7ea8f7f10f16580}{Camera\+Controller}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera)
+\item 
+\mbox{\hyperlink{classec_1_1_camera_controller_a3229bd664f0d7d00b90fc3c9a852768c}{$\sim$\+Camera\+Controller}} ()
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_a82055ad6c8797937a8ec17234ab08758}{tick}} (float time\+Delta)
+\begin{DoxyCompactList}\small\item\em Apply camera movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_a10d1642f398f155fa06c4c74961fe91f}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset camera to initial state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_a74d3b80913b69dce0bae61a651c3b49b}{set\+Camera}} (\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$camera)
+\begin{DoxyCompactList}\small\item\em Set the currently controlled camera. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$ \mbox{\hyperlink{classec_1_1_camera_controller_a8d6e5c646108c0bf5abc25df3dd77c38}{get\+Camera}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_af44aad5f80005eaadf5d637b3b00c6d6}{process\+Event}} (const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&event) override
+\begin{DoxyCompactList}\small\item\em Process event to update camera movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_a9dc1490128a5946521a4111938564b42}{process\+Mouse\+Movement}} (const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Used to rotate the camera with a mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_ac2d7bd60346a2f23f591b9b5c05550dc}{process\+Mouse\+Button\+Down}} (const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Enables camera rotation by mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_af2a0f763157a655d53538ac9644620dd}{process\+Mouse\+Button\+Up}} (const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Disables camera rotation by mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_af1e6f226b4af2aa815bd885f71d25c12}{process\+Key\+Down\+Input}} (const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Enable linear movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_ac92bb03a95ddf600b4a08b5b043b601e}{process\+Key\+Up\+Input}} (const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Disable linear movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classec_1_1_camera_controller_aa2f60cde89ba3e982eef28d505927c22}{process\+Scroll\+Input}} (const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&event) const
+\begin{DoxyCompactList}\small\item\em Change fov. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_camera_controller_a53fd061c49374fd8f1194cecac1e35aa}\label{classec_1_1_camera_controller_a53fd061c49374fd8f1194cecac1e35aa}} 
+\index{ec::CameraController@{ec::CameraController}!CameraController@{CameraController}}
+\index{CameraController@{CameraController}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{CameraController()}{CameraController()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ec\+::\+Camera\+Controller\+::\+Camera\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a9edd8fff13533c84c7ea8f7f10f16580}\label{classec_1_1_camera_controller_a9edd8fff13533c84c7ea8f7f10f16580}} 
+\index{ec::CameraController@{ec::CameraController}!CameraController@{CameraController}}
+\index{CameraController@{CameraController}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{CameraController()}{CameraController()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ec\+::\+Camera\+Controller\+::\+Camera\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a3229bd664f0d7d00b90fc3c9a852768c}\label{classec_1_1_camera_controller_a3229bd664f0d7d00b90fc3c9a852768c}} 
+\index{ec::CameraController@{ec::CameraController}!````~CameraController@{$\sim$CameraController}}
+\index{````~CameraController@{$\sim$CameraController}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{$\sim$CameraController()}{~CameraController()}}
+{\footnotesize\ttfamily ec\+::\+Camera\+Controller\+::$\sim$\+Camera\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_camera_controller_a8d6e5c646108c0bf5abc25df3dd77c38}\label{classec_1_1_camera_controller_a8d6e5c646108c0bf5abc25df3dd77c38}} 
+\index{ec::CameraController@{ec::CameraController}!getCamera@{getCamera}}
+\index{getCamera@{getCamera}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classec_1_1_camera}{ec\+::\+Camera}} $\ast$ ec\+::\+Camera\+Controller\+::get\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The currently controlled camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classec_1_1_camera_controller_af44aad5f80005eaadf5d637b3b00c6d6}\label{classec_1_1_camera_controller_af44aad5f80005eaadf5d637b3b00c6d6}} 
+\index{ec::CameraController@{ec::CameraController}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::process\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_input_event}{Input\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Process event to update camera movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & An input event. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classec_1_1_input_listener_a9ceaefc79c6b0b260e88454616137840}{ec\+::\+Input\+Listener}}.
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_af1e6f226b4af2aa815bd885f71d25c12}\label{classec_1_1_camera_controller_af1e6f226b4af2aa815bd885f71d25c12}} 
+\index{ec::CameraController@{ec::CameraController}!processKeyDownInput@{processKeyDownInput}}
+\index{processKeyDownInput@{processKeyDownInput}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{processKeyDownInput()}{processKeyDownInput()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::process\+Key\+Down\+Input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Enable linear movement. 
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_ac92bb03a95ddf600b4a08b5b043b601e}\label{classec_1_1_camera_controller_ac92bb03a95ddf600b4a08b5b043b601e}} 
+\index{ec::CameraController@{ec::CameraController}!processKeyUpInput@{processKeyUpInput}}
+\index{processKeyUpInput@{processKeyUpInput}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{processKeyUpInput()}{processKeyUpInput()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::process\+Key\+Up\+Input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_keyboard_event}{Keyboard\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Disable linear movement. 
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_ac2d7bd60346a2f23f591b9b5c05550dc}\label{classec_1_1_camera_controller_ac2d7bd60346a2f23f591b9b5c05550dc}} 
+\index{ec::CameraController@{ec::CameraController}!processMouseButtonDown@{processMouseButtonDown}}
+\index{processMouseButtonDown@{processMouseButtonDown}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{processMouseButtonDown()}{processMouseButtonDown()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::process\+Mouse\+Button\+Down (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Enables camera rotation by mouse. 
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_af2a0f763157a655d53538ac9644620dd}\label{classec_1_1_camera_controller_af2a0f763157a655d53538ac9644620dd}} 
+\index{ec::CameraController@{ec::CameraController}!processMouseButtonUp@{processMouseButtonUp}}
+\index{processMouseButtonUp@{processMouseButtonUp}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{processMouseButtonUp()}{processMouseButtonUp()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::process\+Mouse\+Button\+Up (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Disables camera rotation by mouse. 
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a9dc1490128a5946521a4111938564b42}\label{classec_1_1_camera_controller_a9dc1490128a5946521a4111938564b42}} 
+\index{ec::CameraController@{ec::CameraController}!processMouseMovement@{processMouseMovement}}
+\index{processMouseMovement@{processMouseMovement}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{processMouseMovement()}{processMouseMovement()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::process\+Mouse\+Movement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Used to rotate the camera with a mouse. 
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_aa2f60cde89ba3e982eef28d505927c22}\label{classec_1_1_camera_controller_aa2f60cde89ba3e982eef28d505927c22}} 
+\index{ec::CameraController@{ec::CameraController}!processScrollInput@{processScrollInput}}
+\index{processScrollInput@{processScrollInput}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{processScrollInput()}{processScrollInput()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::process\+Scroll\+Input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structec_1_1_mouse_event}{Mouse\+Event}} \&}]{event }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Change fov. 
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a10d1642f398f155fa06c4c74961fe91f}\label{classec_1_1_camera_controller_a10d1642f398f155fa06c4c74961fe91f}} 
+\index{ec::CameraController@{ec::CameraController}!reset@{reset}}
+\index{reset@{reset}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset camera to initial state. 
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a74d3b80913b69dce0bae61a651c3b49b}\label{classec_1_1_camera_controller_a74d3b80913b69dce0bae61a651c3b49b}} 
+\index{ec::CameraController@{ec::CameraController}!setCamera@{setCamera}}
+\index{setCamera@{setCamera}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{setCamera()}{setCamera()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::set\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classec_1_1_camera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})}
+
+
+
+Set the currently controlled camera. 
+
+\mbox{\Hypertarget{classec_1_1_camera_controller_a82055ad6c8797937a8ec17234ab08758}\label{classec_1_1_camera_controller_a82055ad6c8797937a8ec17234ab08758}} 
+\index{ec::CameraController@{ec::CameraController}!tick@{tick}}
+\index{tick@{tick}!ec::CameraController@{ec::CameraController}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void ec\+::\+Camera\+Controller\+::tick (\begin{DoxyParamCaption}\item[{float}]{time\+Delta }\end{DoxyParamCaption})}
+
+
+
+Apply camera movement. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Graphics/\mbox{\hyperlink{_camera_controller_8h}{Camera\+Controller.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Graphics/\mbox{\hyperlink{_camera_controller_8cpp}{Camera\+Controller.\+cpp}}\end{DoxyCompactItemize}

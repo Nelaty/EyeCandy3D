@@ -1,0 +1,133 @@
+\hypertarget{classec_1_1_font_texture_atlas}{}\doxysection{ec\+::Font\+Texture\+Atlas Class Reference}
+\label{classec_1_1_font_texture_atlas}\index{ec::FontTextureAtlas@{ec::FontTextureAtlas}}
+
+
+Saves all font characters of a specific font. Font characters will be saved on a single texture, so it can be used for rendering text.  
+
+
+
+
+{\ttfamily \#include $<$Font\+Texture\+Atlas.\+h$>$}
+
+
+
+Collaboration diagram for ec\+::Font\+Texture\+Atlas\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classec_1_1_font_texture_atlas__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classec_1_1_font_texture_atlas_abf42f99b2562130eb9b347c895cf14f3}{Font\+Texture\+Atlas}} (F\+T\+\_\+\+Face face, int h, G\+Luint t\+Uniform)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classec_1_1_font_texture_atlas_a9e520505ca5bd5b9cabe27448d285449}{$\sim$\+Font\+Texture\+Atlas}} ()
+\item 
+int \mbox{\hyperlink{classec_1_1_font_texture_atlas_a9259106785594dcf52a86120faf2abdf}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Get the font texture width. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classec_1_1_font_texture_atlas_aa6e4a6f124b7fed58783c48c78300244}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the font texture height. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structec_1_1_font_character}{Font\+Character}} \& \mbox{\hyperlink{classec_1_1_font_texture_atlas_a4587f2074d6295364a6ab7bac4a5846d}{get\+Char}} (int index) const
+\begin{DoxyCompactList}\small\item\em Get a font character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_font_texture_atlas_a97620bab980c2f73e90928c1c9ec405a}{m\+\_\+texture}}
+\item 
+G\+Luint \mbox{\hyperlink{classec_1_1_font_texture_atlas_a0ad591b30c2e288d31f4ab9e18acb887}{m\+\_\+texture\+Uniform}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Saves all font characters of a specific font. Font characters will be saved on a single texture, so it can be used for rendering text. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classec_1_1_font_texture_atlas_abf42f99b2562130eb9b347c895cf14f3}\label{classec_1_1_font_texture_atlas_abf42f99b2562130eb9b347c895cf14f3}} 
+\index{ec::FontTextureAtlas@{ec::FontTextureAtlas}!FontTextureAtlas@{FontTextureAtlas}}
+\index{FontTextureAtlas@{FontTextureAtlas}!ec::FontTextureAtlas@{ec::FontTextureAtlas}}
+\doxysubsubsection{\texorpdfstring{FontTextureAtlas()}{FontTextureAtlas()}}
+{\footnotesize\ttfamily ec\+::\+Font\+Texture\+Atlas\+::\+Font\+Texture\+Atlas (\begin{DoxyParamCaption}\item[{F\+T\+\_\+\+Face}]{face,  }\item[{int}]{h,  }\item[{G\+Luint}]{t\+Uniform }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classec_1_1_font_texture_atlas}{Font\+Texture\+Atlas}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & The Font face. \\
+\hline
+{\em h} & Height of the font. \\
+\hline
+{\em t\+Uniform} & \mbox{\hyperlink{classec_1_1_texture}{Texture}} uniform location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000010}{Todo}}]\+: height h isn\textquotesingle{}t actually used. \end{DoxyRefDesc}
+\mbox{\Hypertarget{classec_1_1_font_texture_atlas_a9e520505ca5bd5b9cabe27448d285449}\label{classec_1_1_font_texture_atlas_a9e520505ca5bd5b9cabe27448d285449}} 
+\index{ec::FontTextureAtlas@{ec::FontTextureAtlas}!````~FontTextureAtlas@{$\sim$FontTextureAtlas}}
+\index{````~FontTextureAtlas@{$\sim$FontTextureAtlas}!ec::FontTextureAtlas@{ec::FontTextureAtlas}}
+\doxysubsubsection{\texorpdfstring{$\sim$FontTextureAtlas()}{~FontTextureAtlas()}}
+{\footnotesize\ttfamily ec\+::\+Font\+Texture\+Atlas\+::$\sim$\+Font\+Texture\+Atlas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classec_1_1_font_texture_atlas_a4587f2074d6295364a6ab7bac4a5846d}\label{classec_1_1_font_texture_atlas_a4587f2074d6295364a6ab7bac4a5846d}} 
+\index{ec::FontTextureAtlas@{ec::FontTextureAtlas}!getChar@{getChar}}
+\index{getChar@{getChar}!ec::FontTextureAtlas@{ec::FontTextureAtlas}}
+\doxysubsubsection{\texorpdfstring{getChar()}{getChar()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structec_1_1_font_character}{Font\+Character}} \& ec\+::\+Font\+Texture\+Atlas\+::get\+Char (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Get a font character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The position of the character. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classec_1_1_font_texture_atlas_aa6e4a6f124b7fed58783c48c78300244}\label{classec_1_1_font_texture_atlas_aa6e4a6f124b7fed58783c48c78300244}} 
+\index{ec::FontTextureAtlas@{ec::FontTextureAtlas}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!ec::FontTextureAtlas@{ec::FontTextureAtlas}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily int ec\+::\+Font\+Texture\+Atlas\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the font texture height. 
+
+\mbox{\Hypertarget{classec_1_1_font_texture_atlas_a9259106785594dcf52a86120faf2abdf}\label{classec_1_1_font_texture_atlas_a9259106785594dcf52a86120faf2abdf}} 
+\index{ec::FontTextureAtlas@{ec::FontTextureAtlas}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!ec::FontTextureAtlas@{ec::FontTextureAtlas}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily int ec\+::\+Font\+Texture\+Atlas\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the font texture width. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classec_1_1_font_texture_atlas_a97620bab980c2f73e90928c1c9ec405a}\label{classec_1_1_font_texture_atlas_a97620bab980c2f73e90928c1c9ec405a}} 
+\index{ec::FontTextureAtlas@{ec::FontTextureAtlas}!m\_texture@{m\_texture}}
+\index{m\_texture@{m\_texture}!ec::FontTextureAtlas@{ec::FontTextureAtlas}}
+\doxysubsubsection{\texorpdfstring{m\_texture}{m\_texture}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Font\+Texture\+Atlas\+::m\+\_\+texture}
+
+\mbox{\Hypertarget{classec_1_1_font_texture_atlas_a0ad591b30c2e288d31f4ab9e18acb887}\label{classec_1_1_font_texture_atlas_a0ad591b30c2e288d31f4ab9e18acb887}} 
+\index{ec::FontTextureAtlas@{ec::FontTextureAtlas}!m\_textureUniform@{m\_textureUniform}}
+\index{m\_textureUniform@{m\_textureUniform}!ec::FontTextureAtlas@{ec::FontTextureAtlas}}
+\doxysubsubsection{\texorpdfstring{m\_textureUniform}{m\_textureUniform}}
+{\footnotesize\ttfamily G\+Luint ec\+::\+Font\+Texture\+Atlas\+::m\+\_\+texture\+Uniform}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/include/\+E\+C3\+D/\+Graphics/\+Text/\mbox{\hyperlink{_font_texture_atlas_8h}{Font\+Texture\+Atlas.\+h}}\item 
+/home/nelaty/\+Development/\+Repositories/\+Eye\+Candy3\+D/\+Eye\+Candy3\+D/src/\+Graphics/\+Text/\mbox{\hyperlink{_font_texture_atlas_8cpp}{Font\+Texture\+Atlas.\+cpp}}\end{DoxyCompactItemize}

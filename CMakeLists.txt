@@ -27,19 +27,27 @@ IF(DEFINED CMAKE_BUILD_TYPE AND CMAKE_VERSION VERSION_GREATER "2.8")
 ENDIF()
 SET(CMAKE_DEBUG_POSTFIX "d")
 
+# Warning switch
+SET(EYECANDY3D_ALL_WARNINGS FALSE)
+
+
 # Compiler options
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" OR
    "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-set(warnings "-Wall -Wextra -Werror	\
-	-Wno-error=unused-parameter \
-	-Wno-error=unused-variable \
-	-Wno-error=type-limits \
-	-Wno-error=return-local-addr \
-	-Wno-error=unused-function \
-	-Wno-error=unused-but-set-variable \
-	-Wno-error=implicit-fallthrough \
-	-Wno-error=misleading-indentation \
-	-std=c++20")
+
+	set(warnings "")
+	if(${EYECANDY3D_ALL_WARNINGS})
+		set(warnings "-Wall -Wextra -Werror	\
+			-Wno-error=unused-parameter \
+			-Wno-error=unused-variable \
+			-Wno-error=type-limits \
+			-Wno-error=return-local-addr \
+			-Wno-error=unused-function \
+			-Wno-error=unused-but-set-variable \
+			-Wno-error=implicit-fallthrough \
+			-Wno-error=misleading-indentation \
+			-std=c++20")
+	endif()
 # elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
 # 	set(warnings "/W4 /WX /EHsc")
 endif()
@@ -56,15 +64,14 @@ include_directories(${FREETYPE_INCLUDE_DIRS}
 		EyeCandy3D/include
 		External/include)
 
-# Build project
+# Build projects
 add_subdirectory(EyeCandy3D)
 add_subdirectory(Example)
 
+# Test
 enable_testing()
 add_subdirectory(Test)
-
-
-add_test(NAME EyeCandy3DLibraryTest
+add_test(NAME ${EYECANDY3D_TEST_NAME}
 		COMMAND ${EYECANDY3D_TEST_NAME} --config $<CONFIGURATION>
 		--exe $<TARGET_FILE:${EYECANDY3D_TEST_NAME}>)
 

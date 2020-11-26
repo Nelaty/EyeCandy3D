@@ -55,7 +55,7 @@ namespace ec
 		return m_dimension;
 	}
 
-	bool Texture::textureFromFile(const char* path, const std::string& type)
+	bool Texture::textureFromFile(std::string_view path, std::string_view type)
 	{
 		if(m_initialized)
 		{
@@ -65,8 +65,7 @@ namespace ec
 		glGenTextures(1, &m_id);
 
 		auto result = false;
-
-		auto* data = stbi_load(path, &m_width, &m_height, &m_componentNum, 0);
+		auto* data = stbi_load(path.data(), &m_width, &m_height, &m_componentNum, 0);
 		if(data)
 		{
 			result = true;
@@ -113,12 +112,12 @@ namespace ec
 
 		if(!result)
 		{
-			printf("Texture failed to load at path: %s\n", path);
+			printf("Texture failed to load at path: %s\n", path.data());
 		}
 		return result;
 	}
 
-	bool Texture::cubeMapFromFile(const char* path, const std::string& type)
+	bool Texture::cubeMapFromFile(std::string_view path, std::string_view type)
 	{
 		if(m_initialized)
 		{
@@ -128,7 +127,7 @@ namespace ec
 		glGenTextures(1, &m_id);
 
 		auto result = false;
-		auto* data = stbi_load(path, &m_width, &m_height, &m_componentNum, 0);
+		auto* data = stbi_load(path.data(), &m_width, &m_height, &m_componentNum, 0);
 		if(data)
 		{
 			glBindTexture(GL_TEXTURE_CUBE_MAP, m_id);
@@ -157,7 +156,7 @@ namespace ec
 
 		if(!result)
 		{
-			printf("Texture failed to load at path: %s\n", path);
+			printf("Texture failed to load at path: %s\n", path.data());
 		}
 		return result;
 	}

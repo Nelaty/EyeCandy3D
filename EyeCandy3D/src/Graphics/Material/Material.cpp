@@ -29,8 +29,12 @@ namespace ec
 		const auto removedEntry = std::remove(m_textures.begin(),
 											  m_textures.end(),
 											  texture);
-
-		return removedEntry != m_textures.end();
+        if(removedEntry != m_textures.end())
+        {
+            m_textures.erase(removedEntry);
+            return true;
+        }
+        return false;
 	}
 
 	const std::vector<Texture>& Material::getTextures() const
@@ -43,7 +47,7 @@ namespace ec
 		return !m_textures.empty();
 	}
 
-	ec::Texture* Material::getTexture(const unsigned int index)
+	ec::Texture* Material::getTexture(const size_t index)
 	{
 		if(index >= m_textures.size())
 		{

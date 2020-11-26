@@ -751,4 +751,8 @@ namespace ec
 		auto* window = glfwGetCurrentContext();
 		return static_cast<Window*>(glfwGetWindowUserPointer(window));
 	}
+    bool Window::isInitialized() const
+    {
+        return m_initSuccessful;
+    }
 }

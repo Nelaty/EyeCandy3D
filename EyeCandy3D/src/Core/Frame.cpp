@@ -67,7 +67,12 @@ namespace ec
 											   m_cameras.end(),
 											   camera);
 
-		return removedCamera != m_cameras.end();
+		if(removedCamera != m_cameras.end())
+        {
+		    m_cameras.erase(removedCamera);
+		    return true;
+		}
+		return false;
 	}
 
 	void Frame::clear()

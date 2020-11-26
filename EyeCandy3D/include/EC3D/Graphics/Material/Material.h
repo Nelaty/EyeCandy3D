@@ -35,8 +35,9 @@ namespace ec
 
 		/**
 		 * \brief Try to get a texture at the specified index.
+		 * \return The texture at the given index or nullptr if not existent
 		 */
-		Texture* getTexture(unsigned int index);
+		Texture* getTexture(size_t index);
 
 		/** 
 		 * \brief Get all textures associated with this material. 

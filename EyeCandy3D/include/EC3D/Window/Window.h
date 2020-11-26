@@ -215,6 +215,8 @@ namespace ec
 
 		/** Set the destruction flag of this window. */
 		void closeWindow() const;
+        /** Check if this window has successfully been initialized. */
+        bool isInitialized() const;
 		/** Check if this window's destruction flag is set. */
 		bool shouldClose() const;
 		/** Destroy this window. */

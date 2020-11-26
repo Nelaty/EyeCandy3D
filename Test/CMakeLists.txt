@@ -4,4 +4,23 @@ file(GLOB_RECURSE inline_files "*.inl")
 
 set(all_source_files ${source_files} ${header_files} ${inline_files})
 
+include_directories(include)
+
 add_executable(${EYECANDY3D_TEST_NAME} ${all_source_files})
+target_link_libraries(${EYECANDY3D_TEST_NAME}
+        EyeCandy3D
+        agui
+        glfw
+        GLEW
+        GLU
+        GL
+        X11
+        Xrandr
+        Xinerama
+        Xi
+        Xxf86vm
+        Xcursor
+        pthread
+        dl
+        freetype
+        )

@@ -80,14 +80,16 @@ namespace ec
 		/**
 		 * \brief Create a 2D texture.
 		 * \return True if creation was successful, false otherwise.
+		 * \todo Remove type
 		 */
-		bool textureFromFile(const char* path, const std::string& type);
+		bool textureFromFile(std::string_view path, std::string_view type);
 	
 		/** 
 		 * \brief Create a 3D texture.
 		 * \return True if creation was successful, false otherwise.
+		 * \todo Remove type
 		 */
-		bool cubeMapFromFile(const char* path, const std::string& type);
+		bool cubeMapFromFile(std::string_view path, std::string_view type);
 
 		/** 
 		 * \brief Get the texture height in pixels. 

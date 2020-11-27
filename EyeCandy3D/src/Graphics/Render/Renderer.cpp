@@ -7,12 +7,11 @@
 
 namespace ec
 {
-	Renderer::Renderer(Window* window)
-		: m_window(window),
-		m_activeRenderer{nullptr},
-		m_lastRenderer{nullptr}
+	Renderer::Renderer()
+        : m_activeRenderer{nullptr},
+        m_lastRenderer{nullptr}
 	{
-		m_guiRenderer = std::make_unique<GuiRenderer>(window);
+		m_guiRenderer = std::make_unique<GuiRenderer>();
 	}
 
 	Renderer::~Renderer()
@@ -31,11 +30,11 @@ namespace ec
 		}
 	}
 
-	void Renderer::render() const
+	void Renderer::render(Window* window) const
 	{
 		if(m_activeRenderer)
 		{
-			m_activeRenderer->render(m_window);
+			m_activeRenderer->render(window);
 			renderGui();
 		}		
 	}

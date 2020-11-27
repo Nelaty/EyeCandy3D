@@ -5,6 +5,9 @@
 
 #include <glm/glm.hpp>
 
+#include "EC3D/ThirdParty/easyloggingpp/easylogging++.h"
+
+INITIALIZE_EASYLOGGINGPP
 
 namespace ec
 {

@@ -11,7 +11,7 @@ namespace ec
 	class GuiRenderer
 	{
 	public:
-		explicit GuiRenderer(Window* window);
+		explicit GuiRenderer();
 		~GuiRenderer();
 
 		void init(Shader* guiShader, Shader* textShader);
@@ -21,8 +21,6 @@ namespace ec
 	private:
 		void beginRender(const GuiSystem& guiSystem);
 		void endRender(const GuiSystem& guiSystem);
-
-		Window* m_window;
 
 		std::unique_ptr<Freetype> m_freetype;
 		GuiRenderContext m_guiRenderContext;

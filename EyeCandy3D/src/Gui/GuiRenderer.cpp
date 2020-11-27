@@ -9,9 +9,7 @@
 
 namespace ec
 {
-	GuiRenderer::GuiRenderer(Window* window)
-		: m_window(window),
-		m_guiRenderContext()
+	GuiRenderer::GuiRenderer()
 	{
 	}
 

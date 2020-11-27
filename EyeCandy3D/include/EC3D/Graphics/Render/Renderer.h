@@ -21,7 +21,7 @@ namespace ec
 		 * \brief Renderer constructor
 		 * \param window The window to render into
 		 */
-		explicit Renderer(Window* window);
+		explicit Renderer();
 		~Renderer();
 
 		void init(Shader* guiShader, Shader* textShader) const;
@@ -33,7 +33,7 @@ namespace ec
 		/**
 		 * \brief Render to the currently active window.
 		 */
-		void render() const;
+		void render(Window* window) const;
 
 		/** 
 		 * \brief Change to an active renderer with the given name. 

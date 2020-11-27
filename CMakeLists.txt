@@ -61,8 +61,7 @@ find_package(Freetype REQUIRED)
 
 
 include_directories(${FREETYPE_INCLUDE_DIRS}
-		EyeCandy3D/include
-		External/include)
+		EyeCandy3D/include)
 
 # Build projects
 add_subdirectory(EyeCandy3D)

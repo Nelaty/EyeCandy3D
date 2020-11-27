@@ -4,13 +4,19 @@
 
 #include "EC3D/Utilities/Profiler.h"
 
-#include "stb_image.h"
+#include "EC3D/ThirdParty/stb_image.h"
+#include "EC3D/Common/Logging.h"
 
 #include <utility>
 #include <stdexcept>
 
 namespace ec
 {
+    namespace
+    {
+        static el::Logger* s_logger = Logging::getDefaultLogger();
+    }
+
 	Window::Window(const unsigned int windowWidth,
 				   const unsigned int windowHeight,
 				   std::string windowTitle)
@@ -22,7 +28,7 @@ namespace ec
 		m_clearColor{0.5,0.5,0.5,1.0},
 		m_initSuccessful{false}
 	{
-		m_renderer = std::make_unique<Renderer>(this);
+		m_renderer = std::make_unique<Renderer>();
 
 		init();
 
@@ -37,21 +43,12 @@ namespace ec
 
 	void Window::init()
 	{
-		printf("\n");
-		printf("##############################\n");
-		printf("INITIALIZING WINDOW\n\n");
+        s_logger->info("(START) Window Initialization");
 
 		m_initSuccessful = initImpl();
 		
-		if(m_initSuccessful)
-		{
-			printf("\nINITIALIZATION SUCCESSFUL\n");
-		}
-		else
-		{
-			printf("\nERROR: INITIALIZATION UNSUCCESSFUL");
-		}
-		printf("##############################\n");
+		if(m_initSuccessful) s_logger->info("(END) Window initialization: Success");
+		else s_logger->error("(END) Window initialization: Error");
 
 		if(!m_initSuccessful)
 		{
@@ -91,7 +88,7 @@ namespace ec
 		glEnable(GL_DEPTH_TEST);
 		glEnable(GL_BLEND); // Enable blending for water transparency
 
-		m_renderer->render();
+		m_renderer->render(this);
 
 		glDisable(GL_DEPTH_TEST);
 		glDisable(GL_BLEND);
@@ -166,11 +163,11 @@ namespace ec
 		m_initSuccessful = true;
 		glewExperimental = GL_TRUE;
 		/* Init GLFW */
-		printf("Initializing GLFW...\n");
+		s_logger->info("(...) GLFW initialization");
         glfwSetErrorCallback(Window::errorCallback);
 		if(!glfwInit())
 		{
-			printf("ERROR: Couldn't initialize GLFW!\n");
+            s_logger->info("(...) GLFW initialization: Error");
 			m_initSuccessful = false;
 			return m_initSuccessful;
 		}
@@ -179,13 +176,13 @@ namespace ec
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 		/* Create a windowed mode window and its OpenGL context */
-		printf("Initializing window...\n");
+        s_logger->info("(...) Window creation");
 		m_window = glfwCreateWindow(m_windowWidth,
 									m_windowHeight,
 									m_windowTitle.c_str(), nullptr, nullptr);
 		if(!m_window)
 		{
-			printf("ERROR: Couldn't create the window!\n");
+            s_logger->info("(...) Window creation: Error");
 			m_initSuccessful = false;
 			glfwTerminate();
 			return m_initSuccessful;
@@ -195,12 +192,14 @@ namespace ec
 		makeContextCurrent();
 
 		/* Init GLEW */
-		printf("Initializing GLEW...\n");
+		s_logger->info("(...) GLEW initialization");
 		const GLenum glewError = glewInit();
 		if(glewError != GLEW_OK)
 		{
-			printf("ERROR: Couldn't init GLEW: \n");
-			printf("Error: %p\n", glewGetErrorString(glewError));
+		    s_logger->info("(...) GLEW initialization: Error (%d: %s)",
+		        glewError,
+		        glewGetErrorString(glewError));
+
 			m_initSuccessful = false;
 			return m_initSuccessful;
 		}

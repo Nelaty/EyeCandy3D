@@ -1,7 +1,7 @@
 #include "EC3D/Graphics/Material/Texture.h"
 
 #define STB_IMAGE_IMPLEMENTATION  
-#include "stb_image.h"
+#include "EC3D/ThirdParty/stb_image.h"
 
 namespace ec
 {

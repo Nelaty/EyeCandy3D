@@ -1,10 +1,16 @@
 #include "EC3D/Graphics/Material/Texture.h"
+#include "EC3D/Common/Logging.h"
 
 #define STB_IMAGE_IMPLEMENTATION  
 #include "EC3D/ThirdParty/stb_image.h"
 
 namespace ec
 {
+    namespace
+    {
+        static el::Logger* s_logger = Logging::getDefaultLogger();
+    }
+
 	Texture::Texture()
 		: m_initialized{false},
 		m_id(0), 
@@ -112,7 +118,7 @@ namespace ec
 
 		if(!result)
 		{
-			printf("Texture failed to load at path: %s\n", path.data());
+            s_logger->error("Texture failed to load: %v", path.data());
 		}
 		return result;
 	}
@@ -156,7 +162,7 @@ namespace ec
 
 		if(!result)
 		{
-			printf("Texture failed to load at path: %s\n", path.data());
+            s_logger->error("Texture failed to load: %v", path.data());
 		}
 		return result;
 	}
@@ -199,6 +205,7 @@ namespace ec
 		return s_textureTypes.find(type)->second;
 	}
 
+	// TODO: centralized magic value keeping -> put this in config file
 	const std::map<ec::TextureTypes::Type, std::string> TextureTypes::s_textureTypes =
 	{
 		{ Type::texture_diffuse, "texture_diffuse" },

@@ -9,18 +9,4 @@ include_directories(include)
 add_executable(${EYECANDY3D_TEST_NAME} ${all_source_files})
 target_link_libraries(${EYECANDY3D_TEST_NAME}
         EyeCandy3D
-        agui
-        glfw
-        GLEW
-        GLU
-        GL
-        X11
-        Xrandr
-        Xinerama
-        Xi
-        Xxf86vm
-        Xcursor
-        pthread
-        dl
-        freetype
-        )
+        ${EYECANDY3D_ALL_DEPENDENCIES})

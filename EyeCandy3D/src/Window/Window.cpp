@@ -204,7 +204,7 @@ namespace ec
 			return m_initSuccessful;
 		}
 
-		initCallbacks();
+		m_callbacks.init(m_window, this);
 		initOpenGl();
 
 		return m_initSuccessful;
@@ -221,117 +221,6 @@ namespace ec
 
 		/* Poll for and process events */
 		m_eventSystem.pollEvents();
-	}
-
-	void Window::initCallbacks()
-	{
-		printf("Initializing Callbacks...\n");
-		glfwSetWindowUserPointer(m_window, this);
-
-		// Error callback
-		glfwSetErrorCallback(Window::errorCallback);
-
-		// Install all other devices (keyboard, mouse etc.)
-		m_eventSystem.getDeviceRegistry().installAll();
-
-		// Joystick
-		/// \todo Create joystick device and add entry in DeviceRegistry
-	
-		// Window callbacks
-		glfwSetDropCallback(m_window, Window::dropCallback);
-		glfwSetFramebufferSizeCallback(m_window, Window::resizeCallback);
-		glfwSetWindowFocusCallback(m_window, Window::focusCallback);
-		glfwSetWindowCloseCallback(m_window, Window::closeCallback);
-		glfwSetWindowRefreshCallback(m_window, Window::refreshCallback);
-		glfwSetWindowIconifyCallback(m_window, Window::iconifyCallback);
-	}
-
-	void Window::dropCallback(GLFWwindow* window, const int count, const char** paths)
-	{
-		InputEvent inputEvent(InputType::drop);
-		auto& dropEvent = inputEvent.m_event.m_drop;
-
-		dropEvent = DropEvent(0, 0,
-							  window,
-							  count, paths);
-
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
-		inputObserver.dispatchEvent(inputEvent);
-	}
-
-	void Window::resizeCallback(GLFWwindow* window, const int width, const int height)
-	{
-		auto* userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
-		userWindow->resizeWindow(window, width, height);
-
-		InputEvent inputEvent(InputType::resize);
-		auto& displayEvent = inputEvent.m_event.m_display;
-
-		displayEvent = DisplayEvent(window, 0, 0, width, height);
-
-		auto& inputObserver = userWindow->getEventSystem();
-		inputObserver.dispatchEvent(inputEvent);
-	}
-
-	void Window::positionCallback(GLFWwindow* window, int positionX, int positionY)
-	{
-		InputEvent inputEvent(InputType::window_move);
-		auto& displayEvent = inputEvent.m_event.m_display;
-
-		displayEvent = DisplayEvent(window, positionX, positionY, 0, 0);
-
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
-		inputObserver.dispatchEvent(inputEvent);
-	}
-
-	void Window::focusCallback(GLFWwindow* window, const int focused)
-	{
-		InputEvent inputEvent;
-		auto& displayEvent = inputEvent.m_event.m_display;
-
-		displayEvent = DisplayEvent(window, 0, 0, 0, 0);
-
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
-		if(focused == GLFW_TRUE)
-		{
-			inputEvent.m_type = InputType::gained_focus;
-		}
-		else if(focused == GLFW_FALSE)
-		{
-			inputEvent.m_type = InputType::lost_focus;
-		}
-		inputObserver.dispatchEvent(inputEvent);
-	}
-
-	void Window::closeCallback(GLFWwindow* window)
-	{
-		InputEvent inputEvent(InputType::closed);
-		auto& displayEvent = inputEvent.m_event.m_display;
-
-		displayEvent = DisplayEvent(window, 0, 0, 0, 0);
-	
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
-		inputObserver.dispatchEvent(inputEvent);
-	}
-
-	void Window::refreshCallback(GLFWwindow* window)
-	{
-		auto* userWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
-
-		/// \todo: render from here.
-	}
-
-	void Window::iconifyCallback(GLFWwindow* window, const int iconified)
-	{
-		InputEvent inputEvent;
-		auto& displayEvent = inputEvent.m_event.m_display;
-
-		displayEvent = DisplayEvent(window, 0, 0, 0, 0);
-
-		inputEvent.m_type = iconified == GLFW_TRUE ? InputType::minimized : InputType::restored;
-
-		auto& inputObserver = static_cast<Window*>(glfwGetWindowUserPointer(window))->getEventSystem();
-		inputObserver.dispatchEvent(inputEvent);
 	}
 
 	void Window::initOpenGl()

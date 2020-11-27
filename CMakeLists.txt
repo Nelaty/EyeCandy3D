@@ -55,6 +55,24 @@ endif()
 set(CMAKE_C_FLAGS "${warnings}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
 set(CMAKE_CXX_FLAGS "${warnings}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
 
+# Dependencies
+set(EYECANDY3D_DEPENDENCIES
+		agui
+		glfw
+		GLEW
+		GLU
+		GL
+		X11
+		Xrandr
+		Xinerama
+		Xi
+		Xxf86vm
+		Xcursor
+		pthread
+		dl
+		freetype)
+
+set(EYECANDY3D_ALL_DEPENDENCIES ${EYECANDY3D_DEPENDENCIES})
 
 # Find packages
 find_package(Freetype REQUIRED)

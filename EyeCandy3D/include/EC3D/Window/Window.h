@@ -17,6 +17,7 @@
 #include "EC3D/Graphics/Material/Texture.h"
 #include "EC3D/Graphics/Drawable.h"
 
+#include "EC3D/Window/WindowCallbacks.h"
 
 #include <glm/glm.hpp>
 #include <GLFW/glfw3.h>
@@ -254,45 +255,10 @@ namespace ec
 		virtual void mainLoopImpl();
 
 		void windowTick(float timeDelta);
-		
-		/** Callback initialization */
-		void initCallbacks();
 
-		/** 
-		 * \brief The drop callback is called when one or multiple 
-		 * files are dragged into the window 
-		 */
-		static void dropCallback(GLFWwindow* window, int count, const char** paths);
-		/** 
-		 * \brief The resize callback is called when the window's 
-		 * width or height has changed.
-		 */
-		static void resizeCallback(GLFWwindow* window, int width, int height);
-		/**
-		 * \brief The position callback is called when the window's 
-		 * position changes.
-		 */
-		static void positionCallback(GLFWwindow* window, int positionX, int positionY);
-		/**
-		 * \brief The focus callback is called when a window, which
-		 * previously was unfocused, receives focus.
-		 */
-		static void focusCallback(GLFWwindow* window, int focused);
-		/**
-		 * \brief The close callback is called when a window is
-		 * being destroyed.
-		 */
-		static void closeCallback(GLFWwindow* window);
-		/**
-		 * \brief The refresh callback is called when a window 
-		 * should be redrawn.
-		 */
-		static void refreshCallback(GLFWwindow* window);
-		/**
-		 * \brief The iconify callback is called when a window was
-		 * minimized or restored.
-		 */
-		static void iconifyCallback(GLFWwindow* window, int iconified);
+
+		WindowCallbacks m_callbacks;
+
 
 		void initOpenGl();
 		void initAgui();

@@ -20,8 +20,8 @@ namespace ec
 		using Shader_Ptr = std::unique_ptr<Shader>;
 		using ShaderTimed_Ptr = std::unique_ptr<ShaderTimed>;
 
-		explicit ShaderManager();
-		~ShaderManager();
+		explicit ShaderManager() = default;
+		~ShaderManager() = default;
 
 		/** 
 		 * Update times of timed shaders and uniforms of all shaders.

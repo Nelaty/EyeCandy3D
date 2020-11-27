@@ -12,22 +12,7 @@ add_library(${PROJECT_NAME} STATIC ${all_target_files})
 #target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/EyeCandy3D/include)
 #target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/ThirdParty/include)
 
-target_link_libraries(${PROJECT_NAME}
-        agui
-        glfw
-        GLEW
-        GLU
-        GL
-        X11
-        Xrandr
-        Xinerama
-        Xi
-        Xxf86vm
-        Xcursor
-        pthread
-        dl
-        freetype
-        )
+target_link_libraries(${PROJECT_NAME} ${EYECANDY3D_ALL_DEPENDENCIES})
 
 
 

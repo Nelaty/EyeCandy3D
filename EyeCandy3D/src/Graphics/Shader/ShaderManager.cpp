@@ -1,16 +1,16 @@
 #include "EC3D/Graphics/Shader/ShaderManager.h"
 #include "EC3D/Graphics/Shader/Shader.h"
 #include "EC3D/Graphics/Shader/ShaderTimed.h"
+#include "EC3D/Common/Logging.h"
 
 #include <utility>
 
 namespace ec
 {
-	ShaderManager::ShaderManager()
-	= default;
-
-	ShaderManager::~ShaderManager()
-	= default;
+    namespace
+    {
+        static el::Logger* s_logger = Logging::getDefaultLogger();
+    }
 
 	void ShaderManager::update(const float time, const float timeDelta)
 	{
@@ -51,14 +51,16 @@ namespace ec
 	{
 		using pair_type = std::pair<std::string, std::unique_ptr<Shader>>;
 
-		printf("ADDING NEW SHADER: %s\n", shaderName.c_str());
+        s_logger->info("(START) Adding shader: %v", shaderName);
 		std::unique_ptr<Shader> shader = std::make_unique<Shader>(
 			vertPath, fragPath, geomPath, tessCtrlPath, tessEvalPath);
 		if(!shader)
 		{
+            s_logger->error("(END) Adding shader: Error");
 			return false;
 		}
 		m_shader.insert(pair_type(shaderName, std::move(shader)));
+        s_logger->info("(END) Adding shader: Success");
 		return true;
 	}
 

@@ -9,9 +9,7 @@ using namespace ec;
 
 int main(int argc, char** argv)
 {
-    std::cout << "Current working dir: " << std::filesystem::current_path() << "\n";
-
-	const unsigned int width = 1024;
+    const unsigned int width = 1024;
 	const unsigned int height = 1024;
 	const char* title = "EyeCandy Example Project";
 

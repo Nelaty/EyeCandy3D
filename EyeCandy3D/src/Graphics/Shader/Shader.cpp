@@ -1,4 +1,5 @@
 #include "EC3D/Graphics/Shader/Shader.h"
+#include "EC3D/Common/Logging.h"
 
 #include <glm/gtc/type_ptr.hpp>
 
@@ -8,6 +9,11 @@
 
 namespace ec
 {
+    namespace
+    {
+        static el::Logger* s_logger = Logging::getDefaultLogger();
+    }
+
 	Shader::Shader(const std::string& vertPath,
 				   const std::string& fragPath,
 				   const std::string& geomPath,
@@ -152,7 +158,7 @@ namespace ec
 
 		if(!in.is_open())
 		{
-			std::cerr << "ERROR: Unable to read file \"" << filepath << "\"" << std::endl;
+		    s_logger->error("Unable to read file %v", filepath.c_str());
 			return content;
 		}
 
@@ -252,7 +258,7 @@ namespace ec
 
 	GLint ec::Shader::compileShader(const GLuint shader, const char* path, const char* source, const char* shaderName)
 	{
-		printf("Compiling %s shader: %s\n", shaderName, path);
+	    s_logger->info("(...) Compiling %v shader: %v", shaderName, path);
 		glShaderSource(shader, 1, &source, nullptr);
 		glCompileShader(shader);
 
@@ -308,7 +314,7 @@ namespace ec
 		}
 
 		// Linking the program
-		printf("Linking program.\n");
+		s_logger->info("(...) Linking shader program");
 		m_program = glCreateProgram();
 		glAttachShader(m_program, vertShader);
 		glAttachShader(m_program, fragShader);
@@ -322,7 +328,7 @@ namespace ec
 		glGetProgramiv(m_program, GL_INFO_LOG_LENGTH, &logLength);
 		std::vector<GLchar> programError((logLength > 1) ? logLength : 1);
 		glGetProgramInfoLog(m_program, logLength, nullptr, &programError[0]);
-		std::cout << &programError[0] << std::endl;
+		if(logLength > 1) s_logger->error(&programError[0]);
 
 		glDeleteShader(vertShader);
 		glDeleteShader(fragShader);

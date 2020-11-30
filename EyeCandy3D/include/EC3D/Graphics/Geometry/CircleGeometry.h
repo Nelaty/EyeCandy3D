@@ -15,7 +15,7 @@ namespace ec
 		 * \param sectionCount The initial number of triangles used
 		 * to approximate this circle. [>2]
 		 */
-		explicit CircleGeometry(float radius = 1.0f, 
+		explicit CircleGeometry(float radius = 0.5f,
 								int sectionCount = 20);
 		~CircleGeometry();
 

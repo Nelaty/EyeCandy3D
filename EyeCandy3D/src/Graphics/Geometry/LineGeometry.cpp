@@ -1,5 +1,7 @@
 #include "EC3D/Graphics/Geometry/LineGeometry.h"
 
+#include <stdexcept>
+
 namespace ec
 {
 	LineGeometry::LineGeometry(const glm::vec3& start, const glm::vec3& end)
@@ -29,6 +31,8 @@ namespace ec
 
 	void LineGeometry::init(const glm::vec3& start, const glm::vec3& end)
 	{
+	    if(start == end) throw std::invalid_argument("start and end need to differ!");
+
 		setMode(GL_LINES);
 
 		m_start = start;

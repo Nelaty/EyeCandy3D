@@ -1,6 +1,8 @@
 #include "EC3D/Graphics/Geometry/RectangleGeometry.h"
 #include "EC3D/Graphics/Shader/Shader.h"
 
+#include <stdexcept>
+
 namespace ec
 {
 	RectangleGeometry::RectangleGeometry(const float uniform)
@@ -19,6 +21,9 @@ namespace ec
 
 	void RectangleGeometry::init(const float width, const float height)
 	{
+	    if(width <= 0.0) throw std::domain_error("width must be > 0!");
+	    if(height <= 0.0) throw std::domain_error("height must be > 0!");
+
 		m_width = width;
 		m_height = height;
 

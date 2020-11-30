@@ -16,10 +16,16 @@ namespace ec
 		 * \param latitude Number of vertical sections.
 		 * \param longitude Number of horizontal sections.
 		 */
-		explicit SphereGeometry(float radius = 1.0f, 
+		explicit SphereGeometry(float radius = 0.5f,
 								int latitude = 20, 
 								int longitude = 20);
 		~SphereGeometry();
+
+        /**
+         * \brief Re-initialize the sphere with different parameters.
+         * \param radius The radius of the sphere.
+         */
+        void resize(float radius);
 
 		/**
 		 * \brief Re-initialize the sphere with different parameters.
@@ -28,8 +34,8 @@ namespace ec
 		 * \param longitude Number of horizontal sections.
 		 */
 		void resize(float radius,
-					int latitude = 20, 
-					int longitude = 20);
+					int latitude,
+					int longitude);
 
 		float getRadius() const;
 		int getLatitude() const;

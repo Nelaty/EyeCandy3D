@@ -25,8 +25,8 @@ namespace ec
 
 	void CircleGeometry::init(const float radius, const int sectionCount)
 	{
-        if(radius <= 0.0f) throw std::out_of_range("radius must be > 0!");
-        if(sectionCount <= 2) throw std::out_of_range("sectionCount must be > 2!");
+        if(radius <= 0.0f) throw std::domain_error("radius must be > 0!");
+        if(sectionCount <= 2) throw std::domain_error("sectionCount must be > 2!");
 
 		m_radius = radius;
 		m_sectionCount = sectionCount;

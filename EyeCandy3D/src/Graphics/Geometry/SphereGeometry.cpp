@@ -14,6 +14,11 @@ namespace ec
 	SphereGeometry::~SphereGeometry()
 	= default;
 
+    void SphereGeometry::resize(float radius)
+    {
+        init(radius, m_latitude, m_longitude);
+    }
+
 	void SphereGeometry::resize(const float radius, const int latitude, const int longitude)
 	{
 		init(radius, latitude, longitude);
@@ -36,15 +41,13 @@ namespace ec
 
 	void SphereGeometry::init(const float radius, const int latitude, const int longitude)
 	{
+	    if(radius <= 0.0f) throw std::domain_error("radius must be > 0!");
+	    if(latitude < 2) throw std::domain_error("latitude must be > 1!");
+	    if(longitude < 3) throw std::domain_error("longitude must be > 2!");
+
 		m_radius = radius;
 		m_latitude = latitude;
 		m_longitude = longitude;
-
-		if(latitude < 2 || longitude < 3)
-		{
-			printf("Can't initialize a sphere with less than 2 latitude or less than 3 longitude!\n");
-			return;
-		}
 		
 		initVerticesAndTexCoords();
 		initIndices();

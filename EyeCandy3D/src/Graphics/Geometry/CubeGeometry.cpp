@@ -2,6 +2,7 @@
 #include "EC3D/Graphics/Geometry/Vertex.h"
 
 #include <vector>
+#include <stdexcept>
 
 namespace ec
 {
@@ -40,6 +41,10 @@ namespace ec
 
 	void CubeGeometry::init(const float width, const float height, const float depth)
 	{
+	    if(width <= 0.0f) throw std::domain_error("width must be > 0!");
+	    if(height <= 0.0f) throw std::domain_error("height must be > 0!");
+	    if(depth <= 0.0f) throw std::domain_error("depth must be > 0!");
+
 		m_width = width;
 		m_height = height;
 		m_depth = depth;

@@ -77,7 +77,7 @@ namespace ec
         bool loadDefaultConfig();
         bool loadConfig(const std::string_view path);
 
-        static constexpr const char* s_configPath = "Resources/config.ini";
+        static constexpr const char* s_configPath = "res_sample_0815/config.ini";
     };
 }
 

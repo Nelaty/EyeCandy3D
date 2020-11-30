@@ -12,9 +12,9 @@ add_executable(${PROJECT_NAME}_Example ${all_source_files})
 
 add_custom_command(
 		TARGET ${PROJECT_NAME}_Example POST_BUILD
-		COMMAND ${CMAKE_COMMAND} -E copy
-		${CMAKE_SOURCE_DIR}/Resources/
-		${CMAKE_CURRENT_BINARY_DIR}/Resources/)
+		COMMAND ${CMAKE_COMMAND} -E copy_directory
+		${CMAKE_SOURCE_DIR}/res_sample_0815/
+		${CMAKE_CURRENT_BINARY_DIR}/res_sample_0815/)
 
 add_dependencies(${PROJECT_NAME}_Example ${PROJECT_NAME})
 target_link_libraries(${PROJECT_NAME}_Example ${PROJECT_NAME})

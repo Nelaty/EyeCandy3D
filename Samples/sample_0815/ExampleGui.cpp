@@ -15,7 +15,7 @@ void ExampleGui::init()
 	m_flowLayout = new agui::FlowLayout();
 	this->add(m_flowLayout);
 
-	auto image = new ec::OpenGLImage("Resources/widgetImage.png");
+	auto image = new ec::OpenGLImage("res_sample_0815/widgetImage.png");
 	auto empty = new agui::EmptyWidget();
 	empty->setSize(500, 1000);
 	m_flowLayout->add(empty);

@@ -24,7 +24,7 @@ namespace ec
 		agui::Color::setPremultiplyAlpha(true);
 
 		// Setting a global font is required and failure to do so will crash.
-		s_font = agui::Font::load("../Resources/Fonts/proza-libre/ProzaLibre-Regular.ttf", 16);
+		s_font = agui::Font::load("../res_sample_0815/Fonts/proza-libre/ProzaLibre-Regular.ttf", 16);
 		agui::Widget::setGlobalFont(s_font);
 	}
 

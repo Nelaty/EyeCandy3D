@@ -3,11 +3,11 @@
 #include "EC3D/Utilities/Random.h"
 #include "EC3D/Gui/MiniAgui.h"
 
-#include <glm/glm.hpp>
-
-#include "EC3D/ThirdParty/easyloggingpp/easylogging++.h"
-
+#include <EC3D/Common/EyeCandy3dInitializer.h>
+#include <EC3D/ThirdParty/easyloggingpp/easylogging++.h>
 INITIALIZE_EASYLOGGINGPP
+
+#include <glm/glm.hpp>
 
 namespace ec
 {
@@ -15,8 +15,8 @@ namespace ec
 		: m_running{true}
 	{
 		ec::Random::seed();
+		EyeCandy3dInitializer::initEyeCandy3D();
 	}
-
 	Application::~Application() = default;
 
 	void Application::startMainLoop()

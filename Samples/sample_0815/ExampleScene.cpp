@@ -56,11 +56,11 @@ void ExampleScene::constructTestSg()
 
 	// Create new materials and load textures
 	auto* woodMat = new Material();
-	woodMat->addDiffuseTextureFromPath("../../Resources/Textures/wood_00.jpg");
+	woodMat->addDiffuseTextureFromPath("../../res_sample_0815/Textures/wood_00.jpg");
 	auto* wallMat00 = new Material();
-	wallMat00->addDiffuseTextureFromPath("../../Resources/Textures/wall_00.jpg");
+	wallMat00->addDiffuseTextureFromPath("../../res_sample_0815/Textures/wall_00.jpg");
 	auto* wallMat01 = new Material();
-	wallMat01->addDiffuseTextureFromPath("../../Resources/Textures/wall_01.jpg");
+	wallMat01->addDiffuseTextureFromPath("../../res_sample_0815/Textures/wall_01.jpg");
 
 	// Link mesh, material and shader in drawables
 	auto* woodCube = new Drawable(cubeMesh, woodMat, shader);
@@ -115,7 +115,7 @@ void ExampleScene::sphereTest()
 	auto* sphereMesh = new SphereGeometry(1.0f, 20, 20);
 	auto* shader = shaderManager.getShader("basic");
 	auto* woodMat = new Material();
-	woodMat->addDiffuseTextureFromPath("../../Resources/Textures/sand_00.jpg");
+	woodMat->addDiffuseTextureFromPath("../../res_sample_0815/Textures/sand_00.jpg");
 
 	auto* sphereDrawable = new Drawable(sphereMesh, woodMat, shader);
 	auto* sphereNode = new Node();
@@ -133,7 +133,7 @@ void ExampleScene::cylinderTest()
 	auto* cylinderMesh = new CylinderGeometry();
 	auto* shader = shaderManager.getShader("basic");
 	auto* woodMat = new Material();
-	woodMat->addDiffuseTextureFromPath("../../Resources/Textures/sand_00.jpg");
+	woodMat->addDiffuseTextureFromPath("../../res_sample_0815/Textures/sand_00.jpg");
 
 	auto* drawable = new Drawable(cylinderMesh, woodMat, shader);
 	auto* node = new Node();
@@ -151,7 +151,7 @@ void ExampleScene::rectangleTest()
 	auto* rectangleMesh = new RectangleGeometry(1.0f);
 	auto* shader = shaderManager.getShader("basic");
 	auto* woodMat = new Material();
-	woodMat->addDiffuseTextureFromPath("../../Resources/Textures/sand_00.jpg");
+	woodMat->addDiffuseTextureFromPath("../../res_sample_0815/Textures/sand_00.jpg");
 	
 	auto* drawable = new Drawable(rectangleMesh, woodMat, shader);
 	auto* node = new Node();
@@ -170,7 +170,7 @@ void ExampleScene::circleTest()
 	auto* circleMesh = new CircleGeometry(1.0f);
 	auto* shader = shaderManager.getShader("basic");
 	auto* woodMat = new Material();
-	woodMat->addDiffuseTextureFromPath("../../Resources/Textures/sand_00.jpg");
+	woodMat->addDiffuseTextureFromPath("../../res_sample_0815/Textures/sand_00.jpg");
 
 	auto* drawable = new Drawable(circleMesh, woodMat, shader);
 	auto* node = new Node();

@@ -11,12 +11,12 @@ int main(int argc, char** argv)
 {
     const unsigned int width = 1024;
 	const unsigned int height = 1024;
-	const char* title = "EyeCandy Example Project";
+	const char* title = "EyeCandy Samples Project";
 
 	ec::MiniAgui::init();
 
 	ec::Application app;
-	app.createWindow<ExampleWindow>(width, height, "Example Window", "example");
-	//app.createWindow<ExampleWindow>(width, height, "Example Window 2", "example2");
+	app.createWindow<ExampleWindow>(width, height, "Samples Window", "example");
+	//app.createWindow<ExampleWindow>(width, height, "Samples Window 2", "example2");
 	app.startMainLoop();
 }

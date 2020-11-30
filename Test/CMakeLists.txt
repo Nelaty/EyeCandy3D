@@ -8,5 +8,11 @@ include_directories(include)
 
 add_executable(${EYECANDY3D_TEST_NAME} ${all_source_files})
 target_link_libraries(${EYECANDY3D_TEST_NAME}
-        EyeCandy3D
+        ${PROJECT_NAME}
         ${EYECANDY3D_ALL_DEPENDENCIES})
+
+add_custom_command(
+        TARGET ${EYECANDY3D_TEST_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/Test/TestResources/
+        ${CMAKE_BINARY_DIR}/bin/TestResources/)

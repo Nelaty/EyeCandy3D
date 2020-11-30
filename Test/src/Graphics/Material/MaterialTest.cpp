@@ -1,5 +1,7 @@
 #include "catch2/catch.hpp"
+#include <EC3D/Core/Application.h>
 #include "EC3D/Window/Window.h"
+
 #include "EC3D/Graphics/Material/Material.h"
 #include "EC3D/Graphics/Material/Texture.h"
 #include "EC3D/Common/Config.h"
@@ -12,8 +14,10 @@
 TEST_CASE("Material: texture changes")
 {
     // Create window, so a OpenGL context exists
-    ec::Window window(100, 100, "test");
-    REQUIRE(window.isInitialized());
+    ec::Application app;
+    ec::Window* window = app.createWindow<ec::Window>(100, 100, "test", "test");
+    REQUIRE(window != nullptr);
+    REQUIRE(window->isInitialized());
 
     ec::Material material;
 
@@ -80,6 +84,11 @@ TEST_CASE("Material: texture changes")
         CHECK(material.getTextures().size() == 2);
         material.addDiffuseTextureFromPath(TestConfig::getTexturePath("white_512.png"));
         CHECK(material.getTextures().size() == 3);
+    }
+    SECTION("add texture from invalid path")
+    {
+        material.addDiffuseTextureFromPath("          ");
+        CHECK_FALSE(material.hasTexture());
     }
 }
 

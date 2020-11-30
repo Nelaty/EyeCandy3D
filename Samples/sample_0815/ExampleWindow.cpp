@@ -114,7 +114,7 @@ void ExampleWindow::initScenes()
 	auto* shader = m_shaderManager.getShader("basic");
 	auto* cubeMesh = new CubeGeometry(1.0f);
 	m_woodMat = new Material();
-	m_woodMat->addDiffuseTextureFromPath("../../Resources/Textures/wall_02.jpg");
+	m_woodMat->addDiffuseTextureFromPath("../../res_sample_0815/Textures/wall_02.jpg");
 
 	auto* cameraDrawable = new Drawable(cubeMesh, m_woodMat, shader);
 	//m_camera->AddDrawable(cameraDrawable);
@@ -130,7 +130,7 @@ void ExampleWindow::initScenes()
 
 void ExampleWindow::initShaders()
 {
-	const std::string path = "../../Resources/Shaders/";
+	const std::string path = "../../res_sample_0815/Shaders/";
 
 	m_shaderManager.addShader("basic",
 							  path + "basic.vert",

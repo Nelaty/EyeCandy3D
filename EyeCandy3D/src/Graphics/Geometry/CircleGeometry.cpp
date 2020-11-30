@@ -1,5 +1,6 @@
 #include "EC3D/Graphics/Geometry/CircleGeometry.h"
 
+#include <stdexcept>
 
 namespace ec
 {
@@ -24,8 +25,8 @@ namespace ec
 
 	void CircleGeometry::init(const float radius, const int sectionCount)
 	{
-		assert(sectionCount > 2);
-		assert(radius > 0.0f);
+        if(radius <= 0.0f) throw std::out_of_range("radius must be > 0!");
+        if(sectionCount <= 2) throw std::out_of_range("sectionCount must be > 2!");
 
 		m_radius = radius;
 		m_sectionCount = sectionCount;

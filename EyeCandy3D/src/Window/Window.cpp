@@ -7,6 +7,10 @@
 #include "EC3D/ThirdParty/stb_image.h"
 #include "EC3D/Common/Logging.h"
 
+
+//#include <EC3D/ThirdParty/easyloggingpp/easylogging++.h>
+//INITIALIZE_EASYLOGGINGPP
+
 #include <utility>
 #include <stdexcept>
 

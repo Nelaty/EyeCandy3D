@@ -16,10 +16,10 @@ namespace ec
 		 * \param latitude Number of rows.
 		 * \param longitude Number of columns.
 		 */
-		explicit CylinderGeometry(float radius = 1.0f, 
+		explicit CylinderGeometry(float radius = 0.5f,
 								  float height = 1.0f,
-								  int latitude = 15, 
-								  int longitude = 15);
+								  int latitude = 2,
+								  int longitude = 20);
 		~CylinderGeometry();
 
 		/**
@@ -33,6 +33,31 @@ namespace ec
 					float height,
 					int latitude,
 					int longitude);
+
+		/**
+		 * \brief Get the radius of top/bottom shape
+		 * \return The radius
+		 */
+		float getRadius() const;
+
+		/**
+		 * \brief Get the vertical dimension.
+		 * \return The height.
+		 */
+        float getHeight() const;
+
+        /**
+         * \brief Get the number of circles around the y-axis.
+         * \return The latitude.
+         */
+        int getLatitude() const;
+
+        /**
+         * \brief Get resolution of top/bottom circle
+         * (number of vertices per circle).
+         * \return The longitude.
+         */
+        int getLongitude() const;
 
 	private:
 		/**

@@ -1,7 +1,7 @@
 #include "EC3D/Graphics/Geometry/CylinderGeometry.h"
 
 #include <cmath>
-#include <cassert>
+#include <stdexcept>
 
 namespace ec
 {
@@ -29,10 +29,10 @@ namespace ec
 								const int latitude, 
 								const int longitude)
 	{
-		assert(radius > 0.0f &&
-			   height > 0.0f &&
-			   latitude >= 2 &&
-			   longitude >= 3);
+	    if(radius <= 0.0f) throw std::domain_error("radius must be > 0!");
+	    if(height <= 0.0f) throw std::domain_error("height must be > 0!");
+	    if(latitude <= 1) throw std::domain_error("latitude must be > 1!");
+	    if(longitude <= 2) throw std::domain_error("longitude must be > 2!");
 
 		m_radius = radius;
 		m_height = height;
@@ -163,4 +163,24 @@ namespace ec
 			}
 		}
 	}
+
+    float CylinderGeometry::getRadius() const
+    {
+        return m_radius;
+    }
+
+    float CylinderGeometry::getHeight() const
+    {
+        return m_height;
+    }
+
+    int CylinderGeometry::getLatitude() const
+    {
+        return m_latitude;
+    }
+
+    int CylinderGeometry::getLongitude() const
+    {
+        return m_longitude;
+    }
 }

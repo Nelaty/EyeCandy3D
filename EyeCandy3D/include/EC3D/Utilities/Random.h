@@ -3,6 +3,8 @@
 
 #include <glm/glm.hpp>
 
+#include <random>
+
 namespace ec
 {
 	/**
@@ -11,13 +13,14 @@ namespace ec
 	class EC3D_DECLSPEC Random
 	{
 	public:
-		/** Seed the random number generator with the current time. */
+		/** Seed the random number generator with a random value. */
 		static void seed();
 		/** Seed the random number generator with a given seed. */
 		static void seed(unsigned int seed);
-		static unsigned int getSeed();
+        /** Seed the random number generator with a given seed. */
+        static void seed(std::seed_seq seed);
 
-		/** Calculate random integer value. */
+        /** Calculate random integer value. */
 		static int randomInt();
 		static int randomInt(int min, int max);
 			
@@ -62,9 +65,10 @@ namespace ec
 		static bool randomBool(float chance);
 
 	private:
-		explicit Random();
-		~Random();
+		explicit Random() = default;
+		~Random() = default;
 
-		static unsigned int s_seed;
+        static std::mt19937 s_rng;
+        static std::mt19937_64 s_rng64;
 	};
 }

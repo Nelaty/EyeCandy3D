@@ -3,34 +3,37 @@
 #include <cassert>
 #include <utility>
 #include <ctime>
+#include <random>
 
 namespace ec
 {
 	void Random::seed()
 	{
-		seed(time(nullptr));
+        std::random_device rd;
+        seed(rd());
 	}
 
 	void Random::seed(const unsigned int seed)
 	{
-		s_seed = seed;
-		srand(seed);
+	    s_rng.seed(seed);
+        s_rng64.seed(seed);
 	}
 
-	unsigned int Random::getSeed()
-	{
-		return s_seed;
-	}
+    void Random::seed(std::seed_seq seed)
+    {
+        s_rng.seed(seed);
+        s_rng64.seed(seed);
+    }
 
 	int Random::randomInt()
 	{
-		return rand();
+	    return s_rng();
 	}
 
 	int Random::randomInt(const int min, const int max)
 	{
 		assert(min <= max);
-		return rand() % (max - min) + min;
+		return s_rng() % (max - min) + min;
 	}
 
 	float Random::randomFloat()
@@ -46,7 +49,7 @@ namespace ec
 
 	float Random::randomFloatZeroOne()
 	{
-		return static_cast<float>(rand()) / static_cast<float>(RAND_MAX);
+	    return float(s_rng()) / float(s_rng.max());
 	}
 
 	double Random::randomDouble()
@@ -55,14 +58,14 @@ namespace ec
 	}
 
 	double Random::randomDouble(const double min, const double max)
-	{
+    {
 		assert(min <= max);
 		return randomDoubleZeroOne() * (max - min) + min;
 	}
 
 	double Random::randomDoubleZeroOne()
 	{
-		return static_cast<double>(rand()) / static_cast<double>(RAND_MAX);
+	    return double(s_rng64()) / double(s_rng64.max());
 	}
 
 	glm::vec2 Random::randomVec2()
@@ -127,11 +130,6 @@ namespace ec
 		return randomFloatZeroOne() < chance;
 	}
 
-	Random::Random()
-	= default;
-
-	Random::~Random()
-	= default;
-
-	unsigned int Random::s_seed = 0;
+	std::mt19937 Random::s_rng = std::mt19937();
+	std::mt19937_64 Random::s_rng64 = std::mt19937_64();
 }

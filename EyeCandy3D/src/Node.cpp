@@ -1,5 +1,5 @@
-#include "EC3D/Core/Node.h"
-#include "EC3D/Core/SceneRenderer.h"
+#include "EC3D/Node.h"
+#include "EC3D/SceneRenderer.h"
 #include "EC3D/Graphics/Geometry/IGeometryAccess.h"
 
 #include <algorithm>

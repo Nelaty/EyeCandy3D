@@ -1,5 +1,5 @@
 #include "catch2/catch.hpp"
-#include <EC3D/Core/Application.h>
+#include <EC3D/Application.h>
 #include "EC3D/Window/Window.h"
 
 #include "EC3D/Graphics/Material/Material.h"

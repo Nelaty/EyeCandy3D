@@ -1,4 +1,4 @@
-#include "EC3D/Core/Frame.h"
+#include "EC3D/Frame.h"
 #include "EC3D/Graphics/Camera.h"
 
 #include <algorithm>

@@ -1,6 +1,6 @@
 #include "EC3D/Gui/GuiSystem.h"
 #include "EC3D/Graphics/Camera.h"
-#include "EC3D/Core/Scene.h"
+#include "EC3D/Scene.h"
 #include "EC3D/Window/Window.h"
 #include "EC3D/Input/EventSystem.h"
 #include "EC3D/Input/InputObservable.h"

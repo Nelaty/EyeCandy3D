@@ -1,4 +1,4 @@
-#include "EC3D/Core/Transform3D.h"
+#include "EC3D/Transform3D.h"
 
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/rotate_vector.hpp>

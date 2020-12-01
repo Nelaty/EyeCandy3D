@@ -1,4 +1,4 @@
-#include "EC3D/Core/Application.h"
+#include "EC3D/Application.h"
 #include "EC3D/Window/Window.h"
 #include "EC3D/Utilities/Random.h"
 #include "EC3D/Gui/MiniAgui.h"

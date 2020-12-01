@@ -2,7 +2,7 @@
 #include "EC3D/Window/Window.h"
 #include "EC3D/Graphics/Shader/ShaderManager.h"
 
-#include "EC3D/Core/Frame.h"
+#include "EC3D/Frame.h"
 #include "EC3D/Graphics/Camera.h"
 
 namespace ec

@@ -14,5 +14,9 @@ add_library(${PROJECT_NAME} STATIC ${all_target_files})
 
 target_link_libraries(${PROJECT_NAME} ${EYECANDY3D_ALL_DEPENDENCIES})
 
-
-
+# Install resources
+add_custom_command(
+        TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/Resources/
+        ${CMAKE_BINARY_DIR}/bin/Resources/)

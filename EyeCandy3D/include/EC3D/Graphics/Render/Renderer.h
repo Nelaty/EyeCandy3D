@@ -1,6 +1,6 @@
 #pragma once
 #include "EC3D/Common/Common.h"
-#include "EC3D/Core/SceneRenderer.h"
+#include "EC3D/SceneRenderer.h"
 
 #include <map>
 #include "EC3D/Gui/GuiRenderer.h"

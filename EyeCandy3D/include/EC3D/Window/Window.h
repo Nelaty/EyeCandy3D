@@ -2,10 +2,10 @@
 #include <GL/glew.h>
 #include "EC3D/Common/Common.h"
 
-#include "EC3D/Core/ResourceRegistry.h"
+#include "EC3D/ResourceRegistry.h"
 #include "EC3D/Input/DeviceRegistry.h"
 #include "EC3D/Graphics/Render/Renderer.h"
-#include "EC3D/Core/SceneSystem.h"
+#include "EC3D/SceneSystem.h"
 #include "EC3D/Input/InputObservable.h"
 #include "EC3D/Input/EventSystem.h"
 #include "EC3D/Graphics/Shader/ShaderManager.h"

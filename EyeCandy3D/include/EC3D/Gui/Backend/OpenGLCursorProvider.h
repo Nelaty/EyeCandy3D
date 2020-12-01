@@ -2,7 +2,7 @@
 #include "Agui/CursorProvider.hpp"
 #include "EC3D/Common/Common.h"
 
-#include "EC3D/Core/Cursor.h"
+#include "EC3D/Cursor.h"
 
 #include <map>
 

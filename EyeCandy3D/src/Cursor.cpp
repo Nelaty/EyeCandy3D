@@ -1,4 +1,4 @@
-#include "EC3D/Core/Cursor.h"
+#include "EC3D/Cursor.h"
 #include "EC3D/Window/Window.h"
 
 namespace ec

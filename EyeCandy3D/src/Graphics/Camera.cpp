@@ -1,5 +1,5 @@
 #include "EC3D/Graphics/Camera.h"
-#include "EC3D/Core/Scene.h"
+#include "EC3D/Scene.h"
 
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/rotate_vector.hpp>

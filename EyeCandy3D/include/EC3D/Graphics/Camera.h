@@ -1,5 +1,5 @@
 #pragma once
-#include "EC3D/Core/Node.h"
+#include "EC3D/Node.h"
 #include "EC3D/Common/Common.h"
 
 #include "EC3D/Window/Viewport.h"

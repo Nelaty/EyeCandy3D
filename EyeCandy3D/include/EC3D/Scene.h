@@ -1,6 +1,6 @@
 #pragma once
 #include "EC3D/Common/Common.h"
-#include "EC3D/Core/SceneRenderer.h"
+#include "SceneRenderer.h"
 
 #include <string>
 #include <memory>

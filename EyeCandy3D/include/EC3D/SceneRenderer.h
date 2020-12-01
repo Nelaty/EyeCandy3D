@@ -1,6 +1,6 @@
 #pragma once
 #include "EC3D/Common/Common.h"
-#include "EC3D/Core/Frame.h"
+#include "Frame.h"
 
 #include <glm/glm.hpp>
 

@@ -1,5 +1,5 @@
 #pragma once
-#include "EC3D/Core/Node.h"
+#include "EC3D/Node.h"
 #include "LightType.h"
 
 #include <glm/glm.hpp>

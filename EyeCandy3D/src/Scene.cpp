@@ -1,7 +1,7 @@
 #include <utility>
-#include "EC3D/Core/Scene.h"
-#include "EC3D/Core/Node.h"
-#include "EC3D/Core/SceneSystem.h"
+#include "EC3D/Scene.h"
+#include "EC3D/Node.h"
+#include "EC3D/SceneSystem.h"
 #include "EC3D/Window/Window.h"
 
 namespace ec

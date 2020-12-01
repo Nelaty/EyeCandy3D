@@ -1,8 +1,8 @@
 #include "EC3D/Common/Config.h"
 
-#include "EC3D/Core/SceneRenderer.h"
-#include "EC3D/Core/Scene.h"
-#include "EC3D/Core/Node.h"
+#include "EC3D/SceneRenderer.h"
+#include "EC3D/Scene.h"
+#include "EC3D/Node.h"
 #include "EC3D/Graphics/Camera.h"
 #include "EC3D/Graphics/Drawable.h"
 #include "EC3D/Window/Window.h"

@@ -8,7 +8,6 @@ include_directories(include)
 
 add_executable(${EYECANDY3D_TEST_NAME} ${all_source_files})
 target_link_libraries(${EYECANDY3D_TEST_NAME}
-        ${PROJECT_NAME}
         ${EYECANDY3D_ALL_DEPENDENCIES})
 
 add_custom_command(

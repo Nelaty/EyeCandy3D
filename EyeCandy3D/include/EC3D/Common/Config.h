@@ -6,6 +6,17 @@
 
 #include <glm/glm.hpp>
 
+
+#define EC_VERSION_MAJOR   "1"
+#define EC_VERSION_MINOR   "0"
+#define EC_VERSION_PATCH   "0"
+#define EC_VERSION         "1.0.0"
+
+#define EC_OPENGL_VERSION_MAJOR "3"
+#define EC_OPENGL_VERSION_MINOR "3"
+#define EC_OPENGL_VERSION_PATCH "0"
+#define EC_OPENGL_VERSION       "3.3.0"
+
 namespace ec
 {
     struct ConfigKeywordsWindow
@@ -83,54 +94,54 @@ namespace ec
 
 namespace conf
 {
-	// OpenGL
-	constexpr unsigned int g_glMajor = 3;
-	constexpr unsigned int g_glMinor = 3;
+    // OpenGL
+    constexpr unsigned int g_glMajor = 3;
+    constexpr unsigned int g_glMinor = 3;
 
-	// CUDA
-	constexpr unsigned int g_cuNumberOfBlocks = 1024;
-	constexpr unsigned int g_cuThreadsPerBlock = 256;
+    // CUDA
+    constexpr unsigned int g_cuNumberOfBlocks = 1024;
+    constexpr unsigned int g_cuThreadsPerBlock = 256;
 
-	#ifdef EC3D_RIGHT_HANDED_COORDINATE_SYSTEM
+#ifdef EC3D_RIGHT_HANDED_COORDINATE_SYSTEM
 
-		static const glm::vec3 g_coordinateSystemUp = glm::vec3(0.0f, 1.0f, 0.0f);
-		static const glm::vec3 g_coordinateSystemOrientation = glm::vec3(0.0f, 0.0f, -1.0f);
+    static const glm::vec3 g_coordinateSystemUp = glm::vec3(0.0f, 1.0f, 0.0f);
+    static const glm::vec3 g_coordinateSystemOrientation = glm::vec3(0.0f, 0.0f, -1.0f);
 
-	#else 
-	#ifdef EC3D_LEFT_HANDED_COORDINATE_SYSTEM
+#else
+    #ifdef EC3D_LEFT_HANDED_COORDINATE_SYSTEM
 	
 		static const glm::vec3 g_coordinateSystemUp = glm::vec3(0.0f, 1.0f, 0.0f);
 		static const glm::vec3 g_coordinateSystemOrientation = glm::vec3(0.0f, 0.0f, 1.0f);
 
 	#endif
-	#endif
+#endif
 }
 
 namespace conf_shader
 {
-	static constexpr const char* g_materialAmbient = "material_ambient";
-	static constexpr const char* g_materialDiffuse = "material_diffuse";
-	static constexpr const char* g_materialSpecular = "material_specular";
-	static constexpr const char* g_materialEmissive = "material_emissive";
-	static constexpr const char* g_materialShininess = "material_shininess";
-	static constexpr const char* g_materialHasTexture = "material_has_texture";
-	
-	const glm::vec4 g_materialAmbientDefault = glm::vec4(0.0f);
-	const glm::vec4 g_materialDiffuseDefault = glm::vec4(1.0f);
-	const glm::vec4 g_materialSpecularDefault = glm::vec4(0.0f);
-	const glm::vec4 g_materialEmissiveDefault = glm::vec4(0.0f);
-	constexpr float g_materialShininessDefault = 0.1f;
-	constexpr bool g_materialHasTextureDefault = false;
+    static constexpr const char* g_materialAmbient = "material_ambient";
+    static constexpr const char* g_materialDiffuse = "material_diffuse";
+    static constexpr const char* g_materialSpecular = "material_specular";
+    static constexpr const char* g_materialEmissive = "material_emissive";
+    static constexpr const char* g_materialShininess = "material_shininess";
+    static constexpr const char* g_materialHasTexture = "material_has_texture";
 
-	static constexpr const char* g_textureDiffuse = "texture_diffuse";
-	static constexpr const char* g_textureSpecular = "texture_specular";
-	static constexpr const char* g_textureBump = "texture_bump";
+    const glm::vec4 g_materialAmbientDefault = glm::vec4(0.0f);
+    const glm::vec4 g_materialDiffuseDefault = glm::vec4(1.0f);
+    const glm::vec4 g_materialSpecularDefault = glm::vec4(0.0f);
+    const glm::vec4 g_materialEmissiveDefault = glm::vec4(0.0f);
+    constexpr float g_materialShininessDefault = 0.1f;
+    constexpr bool g_materialHasTextureDefault = false;
 
-	static constexpr const char* g_basicKey = "basic";
-	static constexpr const char* g_guiKey = "gui";
-	static constexpr const char* g_textKey = "text";
+    static constexpr const char* g_textureDiffuse = "texture_diffuse";
+    static constexpr const char* g_textureSpecular = "texture_specular";
+    static constexpr const char* g_textureBump = "texture_bump";
 
-	static constexpr const char* g_projectionKey = "projection";
-	static constexpr const char* g_modelKey = "model";
-	static constexpr const char* g_viewKey = "view";
+    static constexpr const char* g_basicKey = "basic";
+    static constexpr const char* g_guiKey = "gui";
+    static constexpr const char* g_textKey = "text";
+
+    static constexpr const char* g_projectionKey = "projection";
+    static constexpr const char* g_modelKey = "model";
+    static constexpr const char* g_viewKey = "view";
 }

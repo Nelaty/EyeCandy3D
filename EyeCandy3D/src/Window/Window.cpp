@@ -1,8 +1,6 @@
 #include "EC3D/Window/Window.h"
 #include "EC3D/Common/Config.h"
-#include "EC3D/Input/InputEvent.h"
-
-#include "EC3D/Utilities/Profiler.h"
+#include "EC3D/Graphics/Shader/Shader.h"
 
 #include "EC3D/ThirdParty/stb_image.h"
 #include "EC3D/Common/Logging.h"

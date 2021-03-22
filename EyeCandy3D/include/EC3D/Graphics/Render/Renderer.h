@@ -3,7 +3,6 @@
 #include "EC3D/SceneRenderer.h"
 
 #include <map>
-#include "EC3D/Gui/GuiRenderer.h"
 
 namespace ec
 {
@@ -68,17 +67,11 @@ namespace ec
 		SceneRenderer* getSceneRenderer(const std::string& name);
 
 	protected:
-		/**
-		 * \brief Render the gui of every camera.
-		 */
-		void renderGui() const;
-
 		Window* m_window;
 
 		SceneRenderer* m_activeRenderer;
 		SceneRenderer* m_lastRenderer;
 
-		std::unique_ptr<GuiRenderer> m_guiRenderer;
 		std::map<std::string, SceneRenderer*> m_renderer;
 	};
 }

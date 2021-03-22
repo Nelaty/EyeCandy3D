@@ -4,7 +4,6 @@
 
 #include "EC3D/Window/Viewport.h"
 #include "CameraType.h"
-#include "EC3D/Gui/GuiSystem.h"
 
 #include <glm/glm.hpp>
 
@@ -106,15 +105,6 @@ namespace ec
 		 */
 		void setViewport(const Viewport& viewport);
 
-		/** 
-		 * \brief Get this camera's gui system.
-		 */
-		const GuiSystem& getGuiSystem() const;
-		/**
-		 * \brief Get this camera's gui system. 
-		 */
-		GuiSystem& getGuiSystem();
-
 	private:
 		/**
 		 * \brief Initialize the camera with default values.
@@ -125,8 +115,6 @@ namespace ec
 		
 		Viewport m_viewport;
 		Scene* m_scene;
-
-		GuiSystem m_guiSystem;
 
 		//@{
 		/** Projection matrix attribute */

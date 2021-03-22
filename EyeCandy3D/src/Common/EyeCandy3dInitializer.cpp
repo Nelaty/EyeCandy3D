@@ -1,7 +1,6 @@
 #include <EC3D/Common/EyeCandy3dInitializer.h>
 
 #include "EC3D/ThirdParty/easyloggingpp/easylogging++.h"
-#include <EC3D/Gui/MiniAgui.h>
 
 #include <mutex>
 
@@ -23,7 +22,6 @@ EyeCandy3dInitializer::InitializationResult EyeCandy3dInitializer::initEyeCandy3
 
     // Initialize components
     // ...
-    ec::MiniAgui::init();
 
     // Set init state and unlock resource
     s_initializationSuccessful = true;

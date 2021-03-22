@@ -23,11 +23,6 @@ namespace ec
 
 	void SceneRenderer::tick()
 	{
-		auto& cameras = m_frame.getCameras();
-		for(auto& it : cameras)
-		{
-			it->getGuiSystem().getModel()->logic();
-		}
 	}
 
 	void SceneRenderer::onBeginRender(RenderContext& context)

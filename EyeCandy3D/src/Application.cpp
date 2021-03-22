@@ -1,7 +1,6 @@
 #include "EC3D/Application.h"
 #include "EC3D/Window/Window.h"
 #include "EC3D/Utilities/Random.h"
-#include "EC3D/Gui/MiniAgui.h"
 
 #include <EC3D/Common/EyeCandy3dInitializer.h>
 #include <EC3D/ThirdParty/easyloggingpp/easylogging++.h>

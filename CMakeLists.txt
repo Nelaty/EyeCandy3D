@@ -116,23 +116,18 @@ set(CMAKE_CXX_STANDARD 17)
 hunter_add_package(glm)
 find_package(glm REQUIRED)
 
-#hunter_add_package(glfw)
-#find_package(glfw3 REQUIRED)
-
 hunter_add_package(freetype)
-find_package(freetype CONFIG REQUIRED)
+find_package(freetype REQUIRED)
 
 # Dependency variables
-
 if(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
 	hunter_add_package(glfw)
 	find_package(glfw3 REQUIRED)
 
 	hunter_add_package(glew)
-	find_package(glew3 CONFIG REQUIRED)
+	find_package(glew CONFIG REQUIRED)
 
 	set(EYECANDY3D_DEPENDENCIES
-			agui
 			glm
 			glfw3
 			glew
@@ -142,7 +137,6 @@ else()
 	find_package(X11)
 
 	set(EYECANDY3D_DEPENDENCIES
-			agui
 			glm
 			glfw
 			GLEW

@@ -11,7 +11,6 @@ namespace ec
         : m_activeRenderer{nullptr},
         m_lastRenderer{nullptr}
 	{
-		m_guiRenderer = std::make_unique<GuiRenderer>();
 	}
 
 	Renderer::~Renderer()
@@ -19,7 +18,6 @@ namespace ec
 
 	void Renderer::init(Shader* guiShader, Shader* textShader) const
 	{
-		m_guiRenderer->init(guiShader, textShader);
 	}
 
 	void Renderer::tick()
@@ -35,8 +33,7 @@ namespace ec
 		if(m_activeRenderer)
 		{
 			m_activeRenderer->render(window);
-			renderGui();
-		}		
+		}
 	}
 
 	void Renderer::changeRenderer(const std::string& name)
@@ -81,14 +78,5 @@ namespace ec
 			return nullptr;
 		}
 		return foundRenderer->second;
-	}
-
-	void Renderer::renderGui() const
-	{
-		const auto& cameras = m_activeRenderer->getFrame().getCameras();
-		for(auto& it : cameras)
-		{
-			m_guiRenderer->render(it->getGuiSystem());
-		}
 	}
 }

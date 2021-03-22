@@ -18,7 +18,7 @@ namespace ec
 		 * In radians.
 		 */
 		explicit SpotLight(const glm::vec2& halfAngles = glm::vec2(glm::radians(45.f)));
-		~SpotLight();
+		~SpotLight() = default;
 
 		/** 
 		 * \brief Get the direction the light is facing at. 
@@ -42,5 +42,6 @@ namespace ec
 		
 	private:
 		glm::vec2 m_halfAngles;
+		glm::vec3 m_direction;
 	};
 }

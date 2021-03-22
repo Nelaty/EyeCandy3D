@@ -39,14 +39,14 @@ TEST_CASE("CubeGeometry")
     }
     SECTION("constructor negative")
     {
-        CHECK_THROWS_AS(ec::CubeGeometry(0.0), std::domain_error);
-        CHECK_THROWS_AS(ec::CubeGeometry(-0.01f), std::domain_error);
-        CHECK_THROWS_AS(ec::CubeGeometry(-51.3f), std::domain_error);
-        CHECK_THROWS_AS(ec::CubeGeometry(0.0f, 1.0, 1.0), std::domain_error);
-        CHECK_THROWS_AS(ec::CubeGeometry(1.0f, 0.0, 1.0), std::domain_error);
-        CHECK_THROWS_AS(ec::CubeGeometry(1.0f, 1.0, 0.0), std::domain_error);
-        CHECK_THROWS_AS(ec::CubeGeometry(-0.01f, 1.0, 1.0), std::domain_error);
-        CHECK_THROWS_AS(ec::CubeGeometry(1.0f, -1.0, 1.0), std::domain_error);
-        CHECK_THROWS_AS(ec::CubeGeometry(1.0f, 1.0, -87.2), std::domain_error);
+        CHECK_THROWS_AS(ec::CubeGeometry(0.0), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CubeGeometry(-0.01f), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CubeGeometry(-51.3f), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CubeGeometry(0.0f, 1.0, 1.0), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CubeGeometry(1.0f, 0.0, 1.0), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CubeGeometry(1.0f, 1.0, 0.0), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CubeGeometry(-0.01f, 1.0, 1.0), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CubeGeometry(1.0f, -1.0, 1.0), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CubeGeometry(1.0f, 1.0, -87.2), std::invalid_argument);
     }
 }

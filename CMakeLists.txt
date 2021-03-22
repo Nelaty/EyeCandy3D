@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.16)
 
 include("cmake/HunterGate.cmake")
 HunterGate(
@@ -16,10 +16,10 @@ set(PROJECT_SHORT_NAME "EC3D")
 option(EYECANDY3D_BUILD_SAMPLES "Build all sample projects?" ON)
 option(EYECANDY3D_BUILD_TESTS "Build unit tests?" ON)
 
-option(EC_DEV_ALL_WARNINGS "Enable all compiler warnings?" OFF)
-option(EC_DEV_WARNINGS_AS_ERRORS "" 0)
-option(EC_DEV_ANNOYING_WARNINGS "" 0)
-option(EC_DEV_USELESS_WARNINGS "" 0)
+set(EC_DEV_ALL_WARNINGS 1)
+set(EC_DEV_WARNINGS_AS_ERRORS 0)
+set(EC_DEV_ANNOYING_WARNINGS 0)
+set(EC_DEV_USELESS_WARNINGS 0)
 
 #################################################
 # DEVELOPER CONFIGURATION
@@ -91,14 +91,14 @@ if(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
 	endif()
 else()
 	if(${EC_DEV_ALL_WARNINGS})
-		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall  -Wpedantic")
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wpedantic")
 		if(${EC_DEV_ANNOYING_WARNINGS})
 			set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wextra")
 		endif()
 		if(${EC_DEV_USELESS_WARNINGS})
 			# NOTHING TO DO
 		else()
-			set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-reorder")
+			set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-reorder -Wno-unused-variable")
 		endif()
 	endif()
 	if(${EC_DEV_WARNINGS_AS_ERRORS})
@@ -107,7 +107,7 @@ else()
 endif()
 
 # C++ Version
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 
 #################################################
 # DEPENDENCIES
@@ -117,10 +117,7 @@ hunter_add_package(glm)
 find_package(glm REQUIRED)
 
 #hunter_add_package(glfw)
-find_package(glfw3 REQUIRED)
-
-#hunter_add_package(glew)
-#find_package(glew3 CONFIG REQUIRED)
+#find_package(glfw3 REQUIRED)
 
 hunter_add_package(freetype)
 find_package(freetype CONFIG REQUIRED)
@@ -128,17 +125,25 @@ find_package(freetype CONFIG REQUIRED)
 # Dependency variables
 
 if(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
-	# TODO
+	hunter_add_package(glfw)
+	find_package(glfw3 REQUIRED)
+
+	hunter_add_package(glew)
+	find_package(glew3 CONFIG REQUIRED)
+
 	set(EYECANDY3D_DEPENDENCIES
 			agui
-			glfw
-			OpenGL32
+			glm
+			glfw3
+			glew
+			opengl32
 			freetype)
 else()
 	find_package(X11)
 
 	set(EYECANDY3D_DEPENDENCIES
 			agui
+			glm
 			glfw
 			GLEW
 			GLU

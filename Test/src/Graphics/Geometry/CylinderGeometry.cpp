@@ -48,10 +48,10 @@ TEST_CASE("CylinderGeometry")
     }
     SECTION("constructor negative")
     {
-        CHECK_THROWS_AS(ec::CylinderGeometry(0.0f, 0.0f, 1, 2), std::domain_error);
-        CHECK_THROWS_AS(ec::CylinderGeometry(0.0f, 2.2f, 5, 9), std::domain_error);
-        CHECK_THROWS_AS(ec::CylinderGeometry(12.2f, 0.0f, 7, 5), std::domain_error);
-        CHECK_THROWS_AS(ec::CylinderGeometry(6.0f, 4.2f, 1, 5), std::domain_error);
-        CHECK_THROWS_AS(ec::CylinderGeometry(2.1f, 1.9f, 8, 2), std::domain_error);
+        CHECK_THROWS_AS(ec::CylinderGeometry(0.0f, 0.0f, 1, 2), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CylinderGeometry(0.0f, 2.2f, 5, 9), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CylinderGeometry(12.2f, 0.0f, 7, 5), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CylinderGeometry(6.0f, 4.2f, 1, 5), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CylinderGeometry(2.1f, 1.9f, 8, 2), std::invalid_argument);
     }
 }

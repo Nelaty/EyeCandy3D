@@ -47,23 +47,23 @@ TEST_CASE("RectangleGeometry")
     SECTION("constructor negative")
     {
         CHECK_THROWS_AS(ec::RectangleGeometry(0.0),
-                        std::domain_error);
+                        std::invalid_argument);
         CHECK_THROWS_AS(ec::RectangleGeometry(-0.01),
-                        std::domain_error);
+                        std::invalid_argument);
         CHECK_THROWS_AS(ec::RectangleGeometry(-12.4),
-                        std::domain_error);
+                        std::invalid_argument);
         CHECK_THROWS_AS(ec::RectangleGeometry(0.0, 0.0),
-                        std::domain_error);
+                        std::invalid_argument);
         CHECK_THROWS_AS(ec::RectangleGeometry(0.0, 21.0),
-                        std::domain_error);
+                        std::invalid_argument);
         CHECK_THROWS_AS(ec::RectangleGeometry(-0.01, 0.01),
-                        std::domain_error);
+                        std::invalid_argument);
         CHECK_THROWS_AS(ec::RectangleGeometry(0.01, -0.01),
-                        std::domain_error);
+                        std::invalid_argument);
         CHECK_THROWS_AS(ec::RectangleGeometry(-0.01, -0.01),
-                        std::domain_error);
+                        std::invalid_argument);
         CHECK_THROWS_AS(ec::RectangleGeometry(-125.2, -104.5),
-                        std::domain_error);
+                        std::invalid_argument);
     }
     SECTION("init positive")
     {

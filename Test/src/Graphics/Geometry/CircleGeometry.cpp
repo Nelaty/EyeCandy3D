@@ -42,9 +42,9 @@ TEST_CASE("CircleGeometry")
     }
     SECTION("constructor negative")
     {
-        CHECK_THROWS_AS(ec::CircleGeometry(-4.4, 20), std::domain_error);
-        CHECK_THROWS_AS(ec::CircleGeometry(2.0, 2), std::domain_error);
-        CHECK_THROWS_AS(ec::CircleGeometry(-0.1, -5), std::domain_error);
+        CHECK_THROWS_AS(ec::CircleGeometry(-4.4, 20), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CircleGeometry(2.0, 2), std::invalid_argument);
+        CHECK_THROWS_AS(ec::CircleGeometry(-0.1, -5), std::invalid_argument);
     }
     SECTION("init positive")
     {
@@ -56,8 +56,8 @@ TEST_CASE("CircleGeometry")
     SECTION("init negative")
     {
         ec::CircleGeometry circle(15.0, 30);
-        CHECK_THROWS_AS(circle.init(-1.0, 20), std::domain_error);
-        CHECK_THROWS_AS(circle.init(1.0, -20), std::domain_error);
+        CHECK_THROWS_AS(circle.init(-1.0, 20), std::invalid_argument);
+        CHECK_THROWS_AS(circle.init(1.0, -20), std::invalid_argument);
         CHECK(circle.getRadius() == Approx(15.0));
         CHECK(circle.getSectionCount() == 30);
     }

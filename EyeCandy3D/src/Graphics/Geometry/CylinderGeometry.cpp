@@ -29,10 +29,10 @@ namespace ec
 								const int latitude, 
 								const int longitude)
 	{
-	    if(radius <= 0.0f) throw std::domain_error("radius must be > 0!");
-	    if(height <= 0.0f) throw std::domain_error("height must be > 0!");
-	    if(latitude <= 1) throw std::domain_error("latitude must be > 1!");
-	    if(longitude <= 2) throw std::domain_error("longitude must be > 2!");
+	    if(radius <= 0.0f) throw std::invalid_argument("radius must be > 0!");
+	    if(height <= 0.0f) throw std::invalid_argument("height must be > 0!");
+	    if(latitude <= 1) throw std::invalid_argument("latitude must be > 1!");
+	    if(longitude <= 2) throw std::invalid_argument("longitude must be > 2!");
 
 		m_radius = radius;
 		m_height = height;

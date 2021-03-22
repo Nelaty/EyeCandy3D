@@ -273,7 +273,7 @@ namespace ec
 		}
 	}
 
-	EventData::EventData() {};
+	EventData::EventData() {}
 
-	EventData::~EventData() {};
+	EventData::~EventData() {}
 }

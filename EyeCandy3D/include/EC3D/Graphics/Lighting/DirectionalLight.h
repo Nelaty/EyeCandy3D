@@ -21,5 +21,8 @@ namespace ec
 		 * emitted.
 		 */
 		const glm::vec3& getDirection() const;
+
+	private:
+	    glm::vec3 m_direction;
 	};
 }

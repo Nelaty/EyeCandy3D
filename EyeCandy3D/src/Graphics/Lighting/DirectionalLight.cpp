@@ -12,7 +12,6 @@ namespace ec
 
 	const glm::vec3& DirectionalLight::getDirection() const
 	{
-		/// \todo: implement -> get direction from node
-		return {};
+		return m_direction;
 	}
 }

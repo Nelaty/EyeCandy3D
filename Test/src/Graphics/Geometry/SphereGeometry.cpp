@@ -45,15 +45,15 @@ TEST_CASE("SphereGeometry")
     }
     SECTION("constructor negative")
     {
-        CHECK_THROWS_AS(ec::SphereGeometry(0.0f, 10, 15), std::domain_error);
-        CHECK_THROWS_AS(ec::SphereGeometry(2.0f, 1, 15), std::domain_error);
-        CHECK_THROWS_AS(ec::SphereGeometry(12.0f, 10, 2), std::domain_error);
+        CHECK_THROWS_AS(ec::SphereGeometry(0.0f, 10, 15), std::invalid_argument);
+        CHECK_THROWS_AS(ec::SphereGeometry(2.0f, 1, 15), std::invalid_argument);
+        CHECK_THROWS_AS(ec::SphereGeometry(12.0f, 10, 2), std::invalid_argument);
 
-        CHECK_THROWS_AS(ec::SphereGeometry(-4.0f, 0, 2), std::domain_error);
-        CHECK_THROWS_AS(ec::SphereGeometry(1.0f, 10, 0), std::domain_error);
+        CHECK_THROWS_AS(ec::SphereGeometry(-4.0f, 0, 2), std::invalid_argument);
+        CHECK_THROWS_AS(ec::SphereGeometry(1.0f, 10, 0), std::invalid_argument);
 
-        CHECK_THROWS_AS(ec::SphereGeometry(1.0f, -1, 5), std::domain_error);
-        CHECK_THROWS_AS(ec::SphereGeometry(1.0f, 10, -1), std::domain_error);
+        CHECK_THROWS_AS(ec::SphereGeometry(1.0f, -1, 5), std::invalid_argument);
+        CHECK_THROWS_AS(ec::SphereGeometry(1.0f, 10, -1), std::invalid_argument);
     }
     SECTION("resize positive")
     {
@@ -79,9 +79,9 @@ TEST_CASE("SphereGeometry")
     {
         ec::SphereGeometry sphere(2.7f, 14, 28);
 
-        CHECK_THROWS_AS(sphere.resize(0.0f, 6, 9), std::domain_error);
-        CHECK_THROWS_AS(sphere.resize(3.1f, 1, 9), std::domain_error);
-        CHECK_THROWS_AS(sphere.resize(8.0f, 6, 2), std::domain_error);
+        CHECK_THROWS_AS(sphere.resize(0.0f, 6, 9), std::invalid_argument);
+        CHECK_THROWS_AS(sphere.resize(3.1f, 1, 9), std::invalid_argument);
+        CHECK_THROWS_AS(sphere.resize(8.0f, 6, 2), std::invalid_argument);
 
         CHECK(sphere.getRadius() == Approx(2.7));
         CHECK(sphere.getLatitude() == 14);

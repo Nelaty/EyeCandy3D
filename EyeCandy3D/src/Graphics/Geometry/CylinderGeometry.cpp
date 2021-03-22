@@ -1,6 +1,6 @@
 #include "EC3D/Graphics/Geometry/CylinderGeometry.h"
 
-#include <cmath>
+#include <glm/gtc/constants.hpp>
 #include <stdexcept>
 
 namespace ec
@@ -64,7 +64,7 @@ namespace ec
 
 		// x-z coordinates are the same for vertices in a vertical line
 		std::vector<glm::vec3> positions(m_longitude);
-		const float circleStep = 2.0f * float(M_PI) / float(m_longitude);
+		const float circleStep = 2.0f * float(glm::pi<float>()) / float(m_longitude);
 		for(auto i = 0; i < m_longitude; ++i)
 		{
 			positions[i].x = m_radius * cos(circleStep * i);

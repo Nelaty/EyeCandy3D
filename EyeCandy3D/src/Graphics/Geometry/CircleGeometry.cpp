@@ -1,5 +1,6 @@
 #include "EC3D/Graphics/Geometry/CircleGeometry.h"
 
+#include <glm/gtc/constants.hpp>
 #include <stdexcept>
 
 namespace ec
@@ -43,7 +44,7 @@ namespace ec
 		vertices[0].m_normal = normal;
 		vertices[0].m_texCoords = glm::vec2(0.5f, 0.5f);
 
-		const float circleStep = 2 * M_PI / sectionCount;
+		const float circleStep = 2 * glm::pi<float>() / sectionCount;
 		const float oneOnverRadius = 0.5f * (1.0f / radius);
 		for(int i = 1; i <= sectionCount; ++i)
 		{

@@ -1,9 +1,8 @@
 #include "EC3D/Graphics/Geometry/SphereGeometry.h"
 
-#include <stdio.h>
+#include <glm/gtc/constants.hpp>
 #include <stdexcept>
 
-#include <cmath>
 
 namespace ec
 {
@@ -99,8 +98,8 @@ namespace ec
 				// Convert to spherical coordinates:
 				// theta is a longitude angle (around the equator) in radians.
 				// phi is a latitude angle (north or south of the equator).
-				const auto theta = texcoords.x * 2.0f * M_PI;
-				const auto phi = (texcoords.y - 0.5f) * M_PI;
+				const auto theta = texcoords.x * 2.0f * glm::pi<float>();
+				const auto phi = (texcoords.y - 0.5f) * glm::pi<float>();
 
 				// This determines the radius of the ring of this line of latitude.
 				// It's widest at the equator, and narrows as phi increases/decreases.

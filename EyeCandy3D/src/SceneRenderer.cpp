@@ -10,8 +10,6 @@
 #include "EC3D/Graphics/Shader/Shader.h"
 #include "EC3D/Graphics/Shader/ShaderManager.h"
 
-#include "Agui/Agui.hpp"
-
 namespace ec
 {
 	SceneRenderer::SceneRenderer()

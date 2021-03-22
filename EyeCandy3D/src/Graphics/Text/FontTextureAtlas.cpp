@@ -1,3 +1,4 @@
+/*
 #include "EC3D/Graphics/Text/FontTextureAtlas.h"
 
 #include <iostream>
@@ -170,3 +171,4 @@ namespace ec
 	}
 
 }
+*/

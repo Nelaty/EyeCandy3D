@@ -1,3 +1,4 @@
+/*
 #include "EC3D/Graphics/Text/Freetype.h"
 #include "EC3D/Graphics/Shader/Shader.h"
 #include "EC3D/Graphics/Text/FontTextureAtlas.h"
@@ -187,3 +188,4 @@ namespace ec
 		glBindVertexArray(0);
 	}
 }
+*/

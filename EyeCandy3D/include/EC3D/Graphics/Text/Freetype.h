@@ -1,3 +1,4 @@
+/*
 #pragma once
 #include <GL/glew.h>
 #include "EC3D/Common/Common.h"
@@ -26,7 +27,7 @@ namespace ec
 		/**
 		 * \brief Freetype constructor.
 		 * \param shader The text shader used for rendering text.
-		 */
+		 /
 		explicit Freetype(Shader* shader);
 		~Freetype();
 
@@ -40,7 +41,7 @@ namespace ec
 		* \param sx 
 		* \param sy
 		* \param color The color of the text.
-		*/
+		/
 		void renderText(const char* text, FontTextureAtlas* atlas, 
 						float x, float y,
 						float sx, float sy,
@@ -50,46 +51,47 @@ namespace ec
 		 * \brief Add a new font face.
 		 * \param name The name of the font.
 		 * \param filepath The path to the font.
-		 */
+		 /
 		void addFontFace(const std::string& name, const std::string& filepath);
 		
 		/**
 		 * \brief Add a new texture atlas.
 		 * \param face The font to use.
 		 * \param size The size of characters.
-		 */
+		 /
 		void addFontTextureAtlas(const std::string& face, unsigned int size);
 
 		/**
 		 * \brief Try to get a existent FontTextureAtlas by name.
 		 * \param name The name of the atlas.
 		 * \return The atlas if it was found, nullptr otherwise.
-		 */
+		 /
 		FontTextureAtlas* getFontTextureAtlas(const std::string& name);
 
 	private:
 		/**
 		 * \brief Initialize th freetype library.
-		 */
+		 /
 		void initFreetype();
 
 		/**
 		 * \brief Shader used for rendering text.
-		 */
+		 /
 		Shader* m_textShader;
 
-		/* Vertex data */
+		/* Vertex data /
 		GLuint m_vbo;
 		GLuint m_vao;
 
-		/* Uniform location */
+		/* Uniform location /
 		GLuint m_uvPosLocation;
 		GLuint m_colorLocation;
 		GLuint m_textureLocation;
 
-		/* FTLibrary, FTFaces and atlases */
+		/* FTLibrary, FTFaces and atlases /
 		FT_Library m_ftLib;
 		std::map<std::string, FT_Face> m_fontFaces;
 		std::map<std::string, std::unique_ptr<FontTextureAtlas>> m_fontTextureAtlases;
 	};
 }
+*/

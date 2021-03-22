@@ -128,7 +128,7 @@ namespace ec
 			{Keyboard::BACKSPACE, "backspace"},
 
 			{Keyboard::INSERT, "insert"},
-			{Keyboard::DELETE, "delete"},
+			{Keyboard::DEL, "delete"},
 			{Keyboard::PAGE_UP, "page_up"},
 			{Keyboard::PAGE_DOWN, "page_down"},
 			{Keyboard::HOME, "home"},

@@ -3,8 +3,6 @@
 
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/rotate_vector.hpp>
-#include <glm/gtx/quaternion.hpp>
-
 
 namespace ec
 {
@@ -22,9 +20,6 @@ namespace ec
 	{
 		init();
 	}
-
-	Camera::~Camera()
-	= default;
 
 	void Camera::changeAspectRatio(const float aspect)
 	{
@@ -79,19 +74,19 @@ namespace ec
 		m_type = CameraType::perspective;
 	}
 
-	void Camera::setFov(const float fov)
+	void Camera::setFov(float fov)
 	{
 		m_fov = fov;
 	}
 
-	void Camera::setNear(const float near)
+	void Camera::setNear(float nearPlane)
 	{
-		m_near = near;
+		m_near = nearPlane;
 	}
 
-	void Camera::setFar(const float far)
+	void Camera::setFar(float farPlane)
 	{
-		m_far = far;
+		m_far = farPlane;
 	}
 
 	float Camera::getFov() const

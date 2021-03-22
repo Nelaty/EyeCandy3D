@@ -8,7 +8,6 @@
 * *External/include*
 
 **dependencies**:
-* [agui](https://github.com/jmasterx/Agui)
 * glfw
 * GLEW
 * GLU

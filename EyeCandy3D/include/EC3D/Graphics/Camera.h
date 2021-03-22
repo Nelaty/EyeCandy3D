@@ -21,7 +21,7 @@ namespace ec
 	public:
 		explicit Camera(Scene* scene);
 		explicit Camera(Scene* scene, const Viewport& viewport);
-		~Camera();
+		~Camera() = default;
 
 		/**  
 		 * DO NOT USE
@@ -72,7 +72,7 @@ namespace ec
 		/** 
 		 * \brief Set the near plane.
 		 */
-		void setNear(float near);
+		void setNear(float nearPlane);
 		/** 
 		 * \brief Get the current near plane. 
 		 */
@@ -81,7 +81,7 @@ namespace ec
 		/**
 		 * \brief Set the far plane.
 		 */
-		void setFar(float far);		
+		void setFar(float nearPlane);
 		/** 
 		 * \brief Get the current far plane.
 		 */

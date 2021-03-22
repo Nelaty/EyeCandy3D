@@ -1,4 +1,4 @@
-#include "catch2/catch.hpp"
+#include "ThirdParty/catch.hpp"
 #include <VectorApprox.h>
 
 #include <EC3D/Application.h>

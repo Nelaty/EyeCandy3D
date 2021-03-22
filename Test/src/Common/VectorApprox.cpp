@@ -1,5 +1,6 @@
+#include "ThirdParty/catch.hpp"
+
 #include <VectorApprox.h>
-#include <catch2/catch.hpp>
 
 namespace test
 {

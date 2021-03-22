@@ -116,8 +116,8 @@ set(CMAKE_CXX_STANDARD 17)
 hunter_add_package(glm)
 find_package(glm REQUIRED)
 
-hunter_add_package(freetype)
-find_package(freetype REQUIRED)
+#hunter_add_package(freetype)
+#find_package(freetype REQUIRED)
 
 # Dependency variables
 if(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
@@ -125,14 +125,12 @@ if(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
 	find_package(glfw3 REQUIRED)
 
 	hunter_add_package(glew)
-	find_package(glew CONFIG REQUIRED)
+	find_package(glew REQUIRED)
 
 	set(EYECANDY3D_DEPENDENCIES
 			glm
-			glfw3
-			glew
-			opengl32
-			freetype)
+			glfw
+			opengl32)
 else()
 	find_package(X11)
 
@@ -149,8 +147,7 @@ else()
 			Xxf86vm
 			Xcursor
 			pthread
-			dl
-			freetype)
+			dl)
 endif()
 
 

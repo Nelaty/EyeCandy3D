@@ -1,4 +1,4 @@
-#include "catch2/catch.hpp"
+#include "ThirdParty/catch.hpp"
 
 #include <EC3D/Application.h>
 #include <EC3D/Window/Window.h>

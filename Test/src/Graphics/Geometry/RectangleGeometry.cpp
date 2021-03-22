@@ -1,4 +1,4 @@
-#include "catch2/catch.hpp"
+#include "ThirdParty/catch.hpp"
 
 #include <EC3D/Application.h>
 #include <EC3D/Window/Window.h>
@@ -79,9 +79,9 @@ TEST_CASE("RectangleGeometry")
     {
         ec::RectangleGeometry geometry(1.9, 1.1);
         CHECK_THROWS_AS(geometry.init(1.0, 0.0),
-            std::domain_error);
+            std::invalid_argument);
         CHECK_THROWS_AS(geometry.init(-1.0, 0.0),
-                        std::domain_error);
+                        std::invalid_argument);
         CHECK(geometry.getWidth() == Approx(1.9));
         CHECK(geometry.getHeight() == Approx(1.1));
     }

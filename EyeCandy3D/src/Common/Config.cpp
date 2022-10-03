@@ -1,5 +1,7 @@
 #include "EC3D/Common/Config.h"
-#include "EC3D/ThirdParty/easyloggingpp/easylogging++.h"
+
+#include "spdlog/spdlog.h"
+#include "SimpleIni.h"
 
 namespace ec
 {

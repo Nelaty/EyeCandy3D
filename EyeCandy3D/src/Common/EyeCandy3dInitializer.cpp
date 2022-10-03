@@ -1,7 +1,7 @@
-#include <EC3D/Common/EyeCandy3dInitializer.h>
+#include "EC3D/Common/EyeCandy3dInitializer.h"
+#include "EC3D/Gui/MiniAgui.h"
 
-#include "EC3D/ThirdParty/easyloggingpp/easylogging++.h"
-#include <EC3D/Gui/MiniAgui.h>
+#include "spdlog/spdlog.h"
 
 #include <mutex>
 

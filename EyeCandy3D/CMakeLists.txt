@@ -1,35 +1,39 @@
-file(GLOB_RECURSE source_files "*.cpp" "*.c" "*.cxx" "*.cc")
-file(GLOB_RECURSE header_files "*.hpp" "*.h" "*.hxx")
-file(GLOB_RECURSE inline_files "*.inl")
 
-set(all_target_files
-        ${source_files}
-        ${header_files}
-        ${inline_files})
+add_library(${PROJECT_NAME} STATIC 
+    #src/Common/
+    #src/Graphics/
+    #src/Gui/
+    #src/Input/
+    #src/Utilities/
+    #src/Window/
 
-add_library(${PROJECT_NAME} STATIC ${all_target_files})
+    src/Transform3D.cpp
+)
 
 target_link_libraries(${PROJECT_NAME} 
     PUBLIC
         opengl32
-        agui
-        glfw
-        GLEW
-        GLU
-        GL
-        X11
-        Xrandr
-        Xinerama
-        Xi
-        Xxf86vm
-        Xcursor
-        pthread
-        dl
-        freetype
-        glm
+        #agui
+        #glfw
+        #GLU
+        #GL
+        #X11
+        #Xrandr
+        #Xinerama
+        #Xi
+        #Xxf86vm
+        #Xcursor
+        #pthread
+        #dl
+        #freetype
 
+        glm
+        #GLEW::glew_s
         SimpleIni
+        spdlog::spdlog
+        stb
 )
+
 target_include_directories(${PROJECT_NAME} 
     PUBLIC 
         ${CMAKE_CURRENT_SOURCE_DIR}/include

@@ -2,7 +2,7 @@
 #define EC3D_CUDA_SUPPORTED
 #define EC3D_RIGHT_HANDED_COORDINATE_SYSTEM
 
-#include "EC3D/ThirdParty/SimpleIni/SimpleIni.h"
+#include "SimpleIni.h"
 
 #include <glm/glm.hpp>
 
@@ -71,7 +71,7 @@ namespace ec
 
         static Config* s_config;
 
-        CSimpleIniA m_ini;
+        SimpleIni m_ini;
         bool m_initialized{false};
 
         bool loadDefaultConfig();

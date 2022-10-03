@@ -11,6 +11,11 @@ message("Build samples: ${EYECANDY3D_BUILD_SAMPLES}")
 message("Build tests: ${EYECANDY3D_BUILD_TESTS}")
 message("Extra warnings: ${EYECANDY3D_ALL_WARNINGS}")
 message("-------------------------------------------------")
+
+# Setup cmake
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+
 # Setup compiler options
 set(CMAKE_LEGACY_CYGWIN_WIN32 0)
 set(CMAKE_CXX_STANDARD 20)
@@ -39,6 +44,11 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${warnings}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${warnings}")
 
 # Find packages
+set(GLEW_USE_STATIC_LIBS ON)
+include(FindGLEW)
+
+
+
 add_subdirectory(ThirdParty)
 
 #################################################

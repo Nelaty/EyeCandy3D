@@ -1,10 +1,13 @@
-
 add_library(${PROJECT_NAME} STATIC 
     #src/Common/
     #src/Graphics/
     #src/Gui/
     #src/Input/
-    #src/Utilities/
+
+    src/Utilities/Profiler.cpp
+    src/Utilities/Random.cpp
+    src/Utilities/Timer.cpp
+
     #src/Window/
 
     src/Transform3D.cpp
@@ -14,7 +17,7 @@ target_link_libraries(${PROJECT_NAME}
     PUBLIC
         opengl32
         #agui
-        #glfw
+        glfw
         #GLU
         #GL
         #X11
@@ -28,7 +31,7 @@ target_link_libraries(${PROJECT_NAME}
         #freetype
 
         glm
-        #GLEW::glew_s
+        libglew_static
         SimpleIni
         spdlog::spdlog
         stb

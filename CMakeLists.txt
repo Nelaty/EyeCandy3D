@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project("EyeCandy3D")
+project(EyeCandy3D)
 
 # Project options
 option(EYECANDY3D_BUILD_SAMPLES "Build all sample projects?" ON)
@@ -14,7 +14,6 @@ message("-------------------------------------------------")
 
 # Setup cmake
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-
 
 # Setup compiler options
 set(CMAKE_LEGACY_CYGWIN_WIN32 0)
@@ -43,17 +42,11 @@ endif()
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${warnings}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${warnings}")
 
-# Find packages
+# Setup dependencies
 set(GLEW_USE_STATIC_LIBS ON)
 include(FindGLEW)
 
-
-
 add_subdirectory(ThirdParty)
-
-#################################################
-# BUILD
-#################################################
 
 # Build library
 add_subdirectory(EyeCandy3D)

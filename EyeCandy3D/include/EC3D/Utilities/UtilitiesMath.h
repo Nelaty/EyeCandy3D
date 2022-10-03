@@ -1,8 +1,6 @@
 #pragma once
 #include "EC3D/Common/Common.h"
 
-
-
 namespace ec
 {
 	/**

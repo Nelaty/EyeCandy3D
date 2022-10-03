@@ -1,39 +1,14 @@
-cmake_minimum_required(VERSION 3.8.1)
-set(CMAKE_LEGACY_CYGWIN_WIN32 0)
+cmake_minimum_required(VERSION 3.14)
 project("EyeCandy3D")
-set(PROJECT_SHORT_NAME "EC3D")
 
-set(CMAKE_CXX_STANDARD 20)
-
-#################################################
-# OPTIONS
-#################################################
-
+# Project options
 option(EYECANDY3D_BUILD_SAMPLES "Build all sample projects?" ON)
 option(EYECANDY3D_BUILD_TESTS "Build unit tests?" ON)
-
 option(EYECANDY3D_ALL_WARNINGS "Enable all compiler warnings?" OFF)
 
-#################################################
-# GENERAL
-#################################################
-
-# Configure install paths
-set(EYECANDY3D_INCLUDE_DIRECTORY EyeCandy3D/include/)
-set(EYECANDY3D_LIBRARY_INSTALL_PATH lib)
-set(EYECANDY3D_INCLUDE_INSTALL_PATH include/)
-
-# Configure output paths
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-
-set(EYECANDY3D_TEST_NAME "Test")
-set(EYECANDY3D_SAMPLE_PREFIX "ec_sample_")
-
-#################################################
-# COMPILER OPTIONS
-#################################################
+# Setup compiler options
+set(CMAKE_LEGACY_CYGWIN_WIN32 0)
+set(CMAKE_CXX_STANDARD 20)
 
 # Build configuration types
 SET(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE)
@@ -104,6 +79,7 @@ add_subdirectory(EyeCandy3D)
 
 # Build samples
 if(${EYECANDY3D_BUILD_SAMPLES})
+set(EYECANDY3D_SAMPLE_PREFIX "ec_sample_")
 add_subdirectory(Samples)
 endif()
 
@@ -111,19 +87,8 @@ endif()
 if(${EYECANDY3D_BUILD_TESTS})
 enable_testing()
 add_subdirectory(Test)
-add_test(NAME ${EYECANDY3D_TEST_NAME}
-		COMMAND ${EYECANDY3D_TEST_NAME} --config $<CONFIGURATION>
-		--exe $<TARGET_FILE:${EYECANDY3D_TEST_NAME}>)
+add_test(NAME ${PROJECT_NAME}_unittests
+		COMMAND ${PROJECT_NAME}_unittests --config $<CONFIGURATION>
+		--exe $<TARGET_FILE:${PROJECT_NAME}_unittests>)
 endif()
-
-#################################################
-# INSTALLATION
-#################################################
-
-# Install library and header files
-install(TARGETS ${PROJECT_NAME}
-		LIBRARY	DESTINATION ${EYECANDY3D_LIBRARY_INSTALL_PATH})
-
-install(DIRECTORY include/EC3D
-		DESTINATION include)
 

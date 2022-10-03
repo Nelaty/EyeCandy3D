@@ -14,7 +14,11 @@
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/out/build/RelWithDebInfo",
       "installDir": "${sourceDir}/out/install/RelWithDebInfo",
-      "cacheVariables": {},
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "EYECANDY3D_BUILD_SAMPLES": "OFF",
+        "EYECANDY3D_BUILD_TESTS": "OFF"
+      },
       "environment": {},
       "vendor": {}
     }

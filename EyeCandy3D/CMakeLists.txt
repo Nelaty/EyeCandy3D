@@ -9,10 +9,31 @@ set(all_target_files
 
 add_library(${PROJECT_NAME} STATIC ${all_target_files})
 
-#target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/EyeCandy3D/include)
-#target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/ThirdParty/include)
+target_link_libraries(${PROJECT_NAME} 
+    PUBLIC
+        opengl32
+        agui
+        glfw
+        GLEW
+        GLU
+        GL
+        X11
+        Xrandr
+        Xinerama
+        Xi
+        Xxf86vm
+        Xcursor
+        pthread
+        dl
+        freetype
+        glm
 
-target_link_libraries(${PROJECT_NAME} ${EYECANDY3D_ALL_DEPENDENCIES})
+        SimpleIni
+)
+target_include_directories(${PROJECT_NAME} 
+    PUBLIC 
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
 
 # Install resources
 add_custom_command(

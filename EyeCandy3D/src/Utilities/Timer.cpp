@@ -1,6 +1,6 @@
 #include "EC3D/Utilities/Timer.h"
 
-
+#include "GLFW/glfw3.h"
 
 namespace ec
 {
@@ -54,13 +54,12 @@ namespace ec
 
 	double Timer::getTime()
 	{
-        return 0.0;
-		//return glfwGetTime();
+		return glfwGetTime();
 	}
 
 	void Timer::setTime(const double time)
 	{
-		//glfwSetTime(time);
+		glfwSetTime(time);
 	}
 
 	double Timer::getTimeDelta()

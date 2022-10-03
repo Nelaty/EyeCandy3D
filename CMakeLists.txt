@@ -43,9 +43,6 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${warnings}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${warnings}")
 
 # Setup dependencies
-set(GLEW_USE_STATIC_LIBS ON)
-include(FindGLEW)
-
 add_subdirectory(ThirdParty)
 
 # Build library
@@ -60,9 +57,7 @@ endif()
 # Test
 if(${EYECANDY3D_BUILD_TESTS})
 	enable_testing()
+    add_custom_target(CTest ${PROJECT_NAME}_unittests "-v")
 	add_subdirectory(Test)
-	add_test(NAME ${PROJECT_NAME}_unittests
-			COMMAND ${PROJECT_NAME}_unittests --config $<CONFIGURATION>
-			--exe $<TARGET_FILE:${PROJECT_NAME}_unittests>)
 endif()
 

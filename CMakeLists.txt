@@ -45,7 +45,7 @@ set(CMAKE_CXX_FLAGS "${warnings}" CACHE STRING "Flags used by the compiler durin
 #################################################
 
 # Find packages
-find_package(Freetype REQUIRED)
+add_subdirectory(ThirdParty)
 
 # Dependency variables
 set(EYECANDY3D_DEPENDENCIES

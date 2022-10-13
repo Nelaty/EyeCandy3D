@@ -5,13 +5,11 @@
 #include "EC3D/Frame.h"
 #include "EC3D/Graphics/Camera.h"
 
-namespace ec
-{
+namespace ec {
 	Renderer::Renderer()
         : m_activeRenderer{nullptr},
         m_lastRenderer{nullptr}
 	{
-		m_guiRenderer = std::make_unique<GuiRenderer>();
 	}
 
 	Renderer::~Renderer()
@@ -19,7 +17,6 @@ namespace ec
 
 	void Renderer::init(Shader* guiShader, Shader* textShader) const
 	{
-		m_guiRenderer->init(guiShader, textShader);
 	}
 
 	void Renderer::tick()
@@ -85,10 +82,6 @@ namespace ec
 
 	void Renderer::renderGui() const
 	{
-		const auto& cameras = m_activeRenderer->getFrame().getCameras();
-		for(auto& it : cameras)
-		{
-			m_guiRenderer->render(it->getGuiSystem());
-		}
+
 	}
 }

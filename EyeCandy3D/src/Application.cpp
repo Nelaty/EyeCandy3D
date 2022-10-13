@@ -4,8 +4,6 @@
 #include "EC3D/Gui/MiniAgui.h"
 
 #include <EC3D/Common/EyeCandy3dInitializer.h>
-#include <EC3D/ThirdParty/easyloggingpp/easylogging++.h>
-INITIALIZE_EASYLOGGINGPP
 
 #include <glm/glm.hpp>
 
@@ -52,19 +50,16 @@ namespace ec
 
 	void Application::closeDeadWindows()
 	{
-		for (auto it = m_windows.begin(); it != m_windows.end();)
-		{
-			auto* window = it->second.get();
-			if (window->shouldClose())
-			{
-				window->destroy();
-				it = m_windows.erase(it);
-			}
-			else
-			{
-				++it;
-			}
-		}
+        for(auto it = m_windows.begin(); it != m_windows.end();)
+        {
+            if(!it->second->shouldClose())
+            {
+                ++it;
+                continue;
+            }
+            it->second->destroy();
+            it = m_windows.erase(it);
+        }
 	}
 
 	void Application::monitorCallback(GLFWmonitor* monitor, const int event)
@@ -76,7 +71,7 @@ namespace ec
 				s_monitorConnectedCallback(monitor);
 			}			
 		}
-		else
+		else if(event == GLFW_DISCONNECTED)
 		{
 			if(s_monitorDisconnectedCallback)
 			{

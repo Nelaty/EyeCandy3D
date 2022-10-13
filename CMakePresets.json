@@ -15,10 +15,12 @@
       "binaryDir": "${sourceDir}/out/build/RelWithDebInfo",
       "installDir": "${sourceDir}/out/install/RelWithDebInfo",
       "cacheVariables": {
-        "EYECANDY3D_BUILD_SAMPLES": "OFF",
+        "EYECANDY3D_BUILD_SAMPLES": "ON",
         "EYECANDY3D_BUILD_TESTS": "OFF"
       },
-      "environment": {},
+      "environment": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      },
       "vendor": {}
     }
   ],

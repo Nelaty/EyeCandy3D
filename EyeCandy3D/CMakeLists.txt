@@ -106,7 +106,7 @@ target_link_libraries(${PROJECT_NAME}
         #Xcursor
         #pthread
         #dl
-        #freetype
+        freetype
 
         glm
         libglew_static

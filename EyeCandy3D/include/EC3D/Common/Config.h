@@ -51,19 +51,21 @@ namespace ec
         bool isInitialized() const;
 
         /** Read a bool value from the configuration file. */
-        bool readBool(std::string_view key, std::string_view section) const;
+        bool readBool(std::string_view key, std::string_view section, bool defaultValue = false);
         /** Read a int value from the configuration file. */
-        int readInt(std::string_view key, std::string_view section) const;
+        int readInt(std::string_view key, std::string_view section, int defaultValue = 0);
         /** Read a float value from the configuration file. */
-        float readFloat(std::string_view key, std::string_view section) const;
+        float readFloat(std::string_view key, std::string_view section, float defaultValue = 0.0f);
         /** Read a double value from the configuration file. */
-        double readDouble(std::string_view key, std::string_view section) const;
+        double readDouble(std::string_view key, std::string_view section, double defaultValue = 0.0);
         /** Read a string from the configuration file. */
-        std::string_view readString(std::string_view key, std::string_view section) const;
+        std::string readString(std::string_view key, std::string_view section, std::string_view defaultValue = "");
 
+/*
         glm::vec2 getVec2(std::string_view key, std::string_view section) const;
         glm::vec3 getVec3(std::string_view key, std::string_view section) const;
         glm::vec4 getVec4(std::string_view key, std::string_view section) const;
+*/
 
     private:
         explicit Config();

@@ -5,12 +5,9 @@
 
 #include <utility>
 
-namespace ec
-{
-    namespace
-    {
-        static el::Logger* s_logger = Logging::getDefaultLogger();
-    }
+using namespace std::string_literals;
+
+namespace ec {
 
 	void ShaderManager::update(const float time, const float timeDelta)
 	{
@@ -51,16 +48,16 @@ namespace ec
 	{
 		using pair_type = std::pair<std::string, std::unique_ptr<Shader>>;
 
-        s_logger->info("(START) Adding shader: %v", shaderName);
+        Logger::info("(START) Adding shader: "s + shaderName);
 		std::unique_ptr<Shader> shader = std::make_unique<Shader>(
 			vertPath, fragPath, geomPath, tessCtrlPath, tessEvalPath);
 		if(!shader)
 		{
-            s_logger->error("(END) Adding shader: Error");
+            Logger::error("(END) Adding shader: Error");
 			return false;
 		}
 		m_shader.insert(pair_type(shaderName, std::move(shader)));
-        s_logger->info("(END) Adding shader: Success");
+        Logger::info("(END) Adding shader: Success");
 		return true;
 	}
 

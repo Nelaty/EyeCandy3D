@@ -1,20 +1,14 @@
-#include <EC3D/Window/WindowCallbacks.h>
-#include <EC3D/Window/Window.h>
-#include <EC3D/Common/Logging.h>
+#include "EC3D/Window/WindowCallbacks.h"
+#include "EC3D/Window/Window.h"
+#include "EC3D/Common/Logging.h"
 
-namespace ec
-{
-    namespace
-    {
-        static el::Logger* s_logger = Logging::getDefaultLogger();
-    }
-
+namespace ec {
     void WindowCallbacks::init(GLFWwindow* glfwWindow, Window* window)
     {
         m_glfwWindow = glfwWindow;
         m_window = window;
 
-        s_logger->info("(...) callback initialization");
+        Logger::info("(...) callback initialization");
         glfwSetWindowUserPointer(m_glfwWindow, m_window);
 
         // Error callback

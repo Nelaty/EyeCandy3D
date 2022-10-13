@@ -1,6 +1,7 @@
 #include "EC3D/Window/Window.h"
 #include "EC3D/Common/Config.h"
 #include "EC3D/Input/InputEvent.h"
+#include "EC3D/Graphics/Shader/Shader.h"
 
 #include "EC3D/Utilities/Profiler.h"
 
@@ -10,23 +11,19 @@
 #include <utility>
 #include <stdexcept>
 
-namespace ec
-{
-    namespace
-    {
-        static el::Logger* s_logger = Logging::getDefaultLogger();
-    }
+using namespace std::string_literals;
 
+namespace ec {
 	Window::Window(const unsigned int windowWidth,
 				   const unsigned int windowHeight,
 				   std::string windowTitle)
-		: m_windowWidth{windowWidth},
-		m_windowHeight{windowHeight},
-		m_windowTitle{std::move(windowTitle)},
-		m_sceneSystem{this},
-		m_eventSystem{this},
-		m_clearColor{0.5,0.5,0.5,1.0},
-		m_initSuccessful{false}
+		: m_windowWidth{windowWidth}
+        , m_windowHeight{windowHeight}
+        , m_windowTitle{std::move(windowTitle)}
+		, m_sceneSystem{this}
+		, m_eventSystem{this}
+		, m_clearColor{0.5,0.5,0.5,1.0}
+		, m_initSuccessful{false}
 	{
 		m_renderer = std::make_unique<Renderer>();
 
@@ -39,20 +36,23 @@ namespace ec
 	}
 
 	Window::~Window()
-	= default;
+    {
+    }
 
 	void Window::init()
 	{
-        s_logger->info("(START) Window Initialization");
+        Logger::info("(START) Window Initialization");
 
 		m_initSuccessful = initImpl();
 		
-		if(m_initSuccessful) s_logger->info("(END) Window initialization: Success");
-		else s_logger->error("(END) Window initialization: Error");
+		if(m_initSuccessful) 
+            Logger::info("(END) Window initialization: Success");
+		else 
+            Logger::error("(END) Window initialization: Error");
 
 		if(!m_initSuccessful)
 		{
-			throw(std::runtime_error("Error: Couldn't initialize window!\n"));
+			throw std::runtime_error("Error: Couldn't initialize window!\n");
 		}
 	}
 
@@ -105,7 +105,7 @@ namespace ec
 
 	void Window::errorCallback(const int error, const char* description)
 	{
-		printf("ERROR: (%d) %s\n", error, description);
+		Logger::error("Window callback: "s + std::to_string(error) + " " + description + "\n");
 	}
 
 	void Window::resizeWindow(GLFWwindow* window, const int width, const int height)
@@ -163,11 +163,11 @@ namespace ec
 		m_initSuccessful = true;
 		glewExperimental = GL_TRUE;
 		/* Init GLFW */
-		s_logger->info("(...) GLFW initialization");
+		Logger::info("(...) GLFW initialization");
         glfwSetErrorCallback(Window::errorCallback);
 		if(!glfwInit())
 		{
-            s_logger->info("(...) GLFW initialization: Error");
+            Logger::info("(...) GLFW initialization: Error");
 			m_initSuccessful = false;
 			return m_initSuccessful;
 		}
@@ -176,13 +176,13 @@ namespace ec
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 		/* Create a windowed mode window and its OpenGL context */
-        s_logger->info("(...) Window creation");
+        Logger::info("(...) Window creation");
 		m_window = glfwCreateWindow(m_windowWidth,
 									m_windowHeight,
 									m_windowTitle.c_str(), nullptr, nullptr);
 		if(!m_window)
 		{
-            s_logger->info("(...) Window creation: Error");
+            Logger::info("(...) Window creation: Error");
 			m_initSuccessful = false;
 			glfwTerminate();
 			return m_initSuccessful;
@@ -192,14 +192,12 @@ namespace ec
 		makeContextCurrent();
 
 		/* Init GLEW */
-		s_logger->info("(...) GLEW initialization");
+		Logger::info("(...) GLEW initialization");
 		const GLenum glewError = glewInit();
 		if(glewError != GLEW_OK)
 		{
-		    s_logger->info("(...) GLEW initialization: Error (%d: %s)",
-		        glewError,
-		        glewGetErrorString(glewError));
-
+		    Logger::info("(...) GLEW initialization: Error "s + std::to_string(static_cast<int>(glewError)) + ": " 
+                         + reinterpret_cast<const char*>(glewGetErrorString(glewError)));
 			m_initSuccessful = false;
 			return m_initSuccessful;
 		}

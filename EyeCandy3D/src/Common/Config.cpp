@@ -5,22 +5,6 @@
 
 namespace ec
 {
-    namespace
-    {
-        template<class T, int count>
-        T strIt2vecf(const CSimpleIniA::TNamesDepend& data)
-        {
-            T result(0);
-            auto it = data.begin();
-            for(int i = 0; i < count; ++i)
-            {
-                result[i] = atof(it->pItem);
-                ++it;
-            }
-            return result;
-        }
-    }
-
     Config::Config()
     {
         loadDefaultConfig();
@@ -30,46 +14,45 @@ namespace ec
 
     bool Config::loadDefaultConfig()
     {
-        return loadConfig(s_configPath);
+        return loadConfig(Config::s_configPath);
     }
 
     bool Config::loadConfig(std::string_view path)
     {
-        SI_Error rc = m_ini.LoadFile(path.data());
-        m_initialized = rc >= 0;
-        return m_initialized;
+        m_initialized = m_ini.Load(path.data());
     }
     bool Config::isInitialized() const
     {
         return m_initialized;
     }
 
-    int Config::readInt(std::string_view key, std::string_view section) const
+    int Config::readInt(std::string_view key, std::string_view section, int defaultValue)
     {
-        return m_ini.GetLongValue(section.data(), key.data());
+        return defaultValue;
     }
 
-    double Config::readDouble(std::string_view key, std::string_view section) const
+    double Config::readDouble(std::string_view key, std::string_view section, double defaultValue)
     {
-        return m_ini.GetDoubleValue(section.data(), key.data());
+        return defaultValue;
     }
 
-    float Config::readFloat(std::string_view key, std::string_view section) const
+    float Config::readFloat(std::string_view key, std::string_view section, float defaultValue)
     {
-        return static_cast<float>(m_ini.GetDoubleValue(section.data(), key.data()));
+        return defaultValue;
     }
 
-    std::string_view Config::readString(std::string_view key, std::string_view section) const
+    std::string Config::readString(std::string_view key, std::string_view section, std::string_view defaultValue)
     {
-        return m_ini.GetValue(section.data(), key.data());
+        return defaultValue.data();
     }
 
-    bool Config::readBool(std::string_view key, std::string_view section) const
+    bool Config::readBool(std::string_view key, std::string_view section, bool defaultValue)
     {
-        return m_ini.GetBoolValue(section.data(), key.data());
+        return defaultValue;
     }
 
-    glm::vec2 Config::getVec2(std::string_view key, std::string_view section) const
+    /*
+        glm::vec2 Config::getVec2(std::string_view key, std::string_view section) const
     {
         CSimpleIniA::TNamesDepend values;
 
@@ -105,4 +88,5 @@ namespace ec
         }
         return strIt2vecf<glm::vec4, 4>(values);
     }
+    */
 }

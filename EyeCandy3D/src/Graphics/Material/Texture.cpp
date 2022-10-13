@@ -2,14 +2,11 @@
 #include "EC3D/Common/Logging.h"
 
 #define STB_IMAGE_IMPLEMENTATION  
-#include "EC3D/ThirdParty/stb_image.h"
+#include "stb/stb_image.h"
 
-namespace ec
-{
-    namespace
-    {
-        static el::Logger* s_logger = Logging::getDefaultLogger();
-    }
+using namespace std::string_literals;
+
+namespace ec {
 
 	Texture::Texture()
 		: m_initialized{false},
@@ -118,7 +115,7 @@ namespace ec
 
 		if(!result)
 		{
-            s_logger->error("Texture failed to load: %v", path.data());
+            Logger::error("Texture failed to load: "s + path.data());
 		}
 		return result;
 	}
@@ -162,7 +159,7 @@ namespace ec
 
 		if(!result)
 		{
-            s_logger->error("Texture failed to load: %v", path.data());
+            Logger::error("Texture failed to load: "s + path.data());
 		}
 		return result;
 	}

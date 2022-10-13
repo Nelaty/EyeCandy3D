@@ -49,13 +49,13 @@ add_subdirectory(ThirdParty)
 add_subdirectory(EyeCandy3D)
 
 # Build samples
-if(${EYECANDY3D_BUILD_SAMPLES})
+if(EYECANDY3D_BUILD_SAMPLES)
 	set(EYECANDY3D_SAMPLE_PREFIX "ec_sample_")
 	add_subdirectory(Samples)
 endif()
 
 # Test
-if(${EYECANDY3D_BUILD_TESTS})
+if(EYECANDY3D_BUILD_TESTS)
 	enable_testing()
     add_custom_target(CTest ${PROJECT_NAME}_unittests "-v")
 	add_subdirectory(Test)

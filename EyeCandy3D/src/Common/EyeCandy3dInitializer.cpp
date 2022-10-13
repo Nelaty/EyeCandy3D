@@ -1,5 +1,5 @@
 #include "EC3D/Common/EyeCandy3dInitializer.h"
-#include "EC3D/Gui/MiniAgui.h"
+
 
 #include "spdlog/spdlog.h"
 
@@ -20,10 +20,6 @@ EyeCandy3dInitializer::InitializationResult EyeCandy3dInitializer::initEyeCandy3
         s_initializationMutex.unlock();
         return InitializationResult::already_initialized;
     }
-
-    // Initialize components
-    // ...
-    ec::MiniAgui::init();
 
     // Set init state and unlock resource
     s_initializationSuccessful = true;

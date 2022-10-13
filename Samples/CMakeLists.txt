@@ -1,2 +1,2 @@
 #add_subdirectory(geometry)
-add_subdirectory(sample_0815)
+add_subdirectory(basic)

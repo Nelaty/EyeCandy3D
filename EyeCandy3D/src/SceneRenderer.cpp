@@ -10,8 +10,6 @@
 #include "EC3D/Graphics/Shader/Shader.h"
 #include "EC3D/Graphics/Shader/ShaderManager.h"
 
-#include "Agui/Agui.hpp"
-
 namespace ec
 {
 	SceneRenderer::SceneRenderer()
@@ -26,7 +24,7 @@ namespace ec
 		auto& cameras = m_frame.getCameras();
 		for(auto& it : cameras)
 		{
-			it->getGuiSystem().getModel()->logic();
+			//it->getGuiSystem().getModel()->logic();
 		}
 	}
 

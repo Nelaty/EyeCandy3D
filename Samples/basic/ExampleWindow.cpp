@@ -1,6 +1,5 @@
 #include "ExampleWindow.h"
 #include "ExampleScene.h"
-#include "ExampleGui.h"
 
 #include "EC3D/Scene.h"
 #include "EC3D/Node.h"
@@ -13,9 +12,6 @@
 
 #include "EC3D/SceneRenderer.h"
 #include "EC3D/Graphics/Shader/Shader.h"
-
-#include "EC3D/Gui/Backend/OpenGLGraphics.h"
-#include "EC3D/Gui/Backend/OpenGLInput.h"
 
 #include <memory>
 
@@ -76,15 +72,17 @@ void ExampleWindow::initCameras()
 	m_camera2->setViewport(Viewport(glm::vec2(0.75, 0.5), glm::vec2(0.25f, 0.5f)));
 	m_camera3->setViewport(Viewport(glm::vec2(0.75, 0.0), glm::vec2(0.25f, 0.5f)));
 
+
 	// Init gui
-	const auto& guiSystem = m_camera->getGuiSystem();
+    /*
+    	const auto& guiSystem = m_camera->getGuiSystem();
 
 	auto gui = std::make_unique<ExampleGui>();
 	gui->setGraphics(guiSystem.getGraphicsHandler());
 	gui->setInput(guiSystem.getInputHandler());
 	gui->init();
 	m_camera->getGuiSystem().setModel(std::move(gui));
-	
+	*/
 
 	// Init frame, which is a collection of the previously created cameras
 	Frame exampleFrame;

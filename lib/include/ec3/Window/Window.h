@@ -29,87 +29,75 @@
 
 namespace ec
 {
-	/**
-	* \brief A window is responsible for one os specific window, which
-	* can receive input events.
-	*/
+	/// A window is responsible for one os specific window, which
+    /// can receive input events.
 	class EC3D_DECLSPEC Window
 	{
 	public:
-		/**
-		 * \brief Window constructor
-		 * \param windowWidth Width of this window in pixels.
-		 * \param windowHeight Height of this window in pixels.
-		 * \param windowTitle Title of this window.
-		 */
 		explicit Window(unsigned int windowWidth,
 						unsigned int windowHeight,
 		                std::string windowTitle);
 		virtual ~Window();
 
-		/** Update the window */
+		/// Update the window
 		void tickMeta();
 		virtual void tick(float timeDelta);
-		/** Render to the window */
+		/// Render to the window
 		virtual void render();
 
 		virtual void setFrameRate(double fps);
 
-		/** Error callback */
+		/// GLFW window error callback
 		static void errorCallback(int error, const char* description);
-		/** Window resize callback */
+		/// GLFW window resize callback
 		virtual void resizeWindow(GLFWwindow* window, int width, int height);
 
-		/** Get this window's event system. */
 		EventSystem& getEventSystem();
-		/** Access to the shader manager */
 		ShaderManager& getShaderManager();
-		/** Access to the scene system */
 		SceneSystem& getSceneSystem();
 
-		/* Switch between face, wire frame and point mode */
+		/// Render faces
 		void switchToFaceMode() const;
+        /// Render lines only
 		void switchToWireFrameMode() const;
+		/// Render vertices only
 		void switchToPointMode() const;
 
-		/** Switch to windowed mode. */
+		/// Switch to windowed mode.
 		void goWindowed() const;
-		/** Switch to fullscreen mode. */
-		void goFullscreen();		
+		/// Switch to fullscreen mode.
+		void goFullscreen();
 
-		/** Set the current clear color. */
+		/// Set the current clear color.
 		void setClearColor(const glm::vec4& clearColor);
-		/** Get the current clear color. */
+		/// Get the current clear color.
 		const glm::vec4& getClearColor() const;
 
-		/** Access to window */
+		/// Get the window backend
 		GLFWwindow* getWindow() const;
 
-		/** Access to the window associated with the currently active context. */
+		/// Access to the window associated with the currently active context.
 		static Window* getCurrentWindow();
 
-		/** Get the current resolution of this window. */
+		/// Get the current resolution of this window.
 		glm::ivec2 getResolution() const;
-		/** Enforce a certain aspect ratio. */
+		/// Enforce a certain aspect ratio.
 		void setAspectRatio(int numerator, int denominator) const;
-		/**
-		 * \brief Specify a min/max width and height of this window to be enforced. 
-		 * If a certain minimum/maximum should not be enforced, set the relevant 
-		 * parameters to a negative value.
-		 */
+
+		/// Specify a min/max width and height of this window to be enforced. 
+		/// If a certain minimum/maximum should not be enforced, set the relevant 
+		/// parameters to a negative value.
 		void setSizeLimits(int widthMin, int heightMin, int widthMax, int heightMax) const;
-		/** Get the current position of this window. */
+		/// Get the current position of this window.
 		glm::ivec2 getPosition() const;
-		/** Set the current position of this window. */
+		/// Set the current position of this window.
 		void setPosition(int x, int y) const;
-		/** Get the current size of the window. */
+		/// Get the current size of the window.
 		glm::ivec2 getSize() const;
-		/** Set the size of the window. */
+		/// Set the size of the window.
 		void setSize(int width, int height);
-		/** 
-		 * Get the dimensions of the window (decorations included).
-		 * \return Frame dimensions: (x, y, z, w) = (left, top, right, bottom)
-		 */
+		/// Get the dimensions of the window (decorations included).
+		/// \return Frame dimensions: (x, y, z, w) = (left, top, right, bottom)
 		glm::ivec4 getFrameSize() const;
 		/** Get the current size of this window's frame buffer. */
 		glm::ivec2 getFrameBufferSize() const;

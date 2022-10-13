@@ -46,7 +46,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${warnings}")
 add_subdirectory(ThirdParty)
 
 # Build library
-add_subdirectory(EyeCandy3D)
+add_subdirectory(lib)
 
 # Build samples
 if(EYECANDY3D_BUILD_SAMPLES)

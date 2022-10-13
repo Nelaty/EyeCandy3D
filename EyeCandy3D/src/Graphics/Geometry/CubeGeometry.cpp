@@ -1,5 +1,5 @@
-#include "EC3D/Graphics/Geometry/CubeGeometry.h"
-#include "EC3D/Graphics/Geometry/Vertex.h"
+#include "ec3/Graphics/Geometry/CubeGeometry.h"
+#include "ec3/Graphics/Geometry/Vertex.h"
 
 #include <vector>
 #include <stdexcept>

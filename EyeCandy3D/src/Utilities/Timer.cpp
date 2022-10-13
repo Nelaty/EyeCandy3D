@@ -1,4 +1,4 @@
-#include "EC3D/Utilities/Timer.h"
+#include "ec3/Utilities/Timer.h"
 
 #include "GLFW/glfw3.h"
 

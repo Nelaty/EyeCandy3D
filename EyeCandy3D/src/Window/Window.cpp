@@ -1,12 +1,12 @@
-#include "EC3D/Window/Window.h"
-#include "EC3D/Common/Config.h"
-#include "EC3D/Input/InputEvent.h"
-#include "EC3D/Graphics/Shader/Shader.h"
+#include "ec3/Window/Window.h"
+#include "ec3/Common/Config.h"
+#include "ec3/Input/InputEvent.h"
+#include "ec3/Graphics/Shader/Shader.h"
 
-#include "EC3D/Utilities/Profiler.h"
+#include "ec3/Utilities/Profiler.h"
 
 #include "stb/stb_image.h"
-#include "EC3D/Common/Logging.h"
+#include "ec3/Common/Logging.h"
 
 #include <utility>
 #include <stdexcept>

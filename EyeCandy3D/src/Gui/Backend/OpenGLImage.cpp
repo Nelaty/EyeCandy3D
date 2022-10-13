@@ -1,4 +1,4 @@
-#include "EC3D/Gui/Backend/OpenGLImage.h"
+#include "ec3/Gui/Backend/OpenGLImage.h"
 
 namespace ec
 {

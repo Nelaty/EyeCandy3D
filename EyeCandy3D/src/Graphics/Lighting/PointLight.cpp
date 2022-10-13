@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Lighting/PointLight.h"
+#include "ec3/Graphics/Lighting/PointLight.h"
 
 namespace ec
 {

@@ -1,14 +1,14 @@
-#include "EC3D/Common/Config.h"
+#include "ec3/Common/Config.h"
 
-#include "EC3D/SceneRenderer.h"
-#include "EC3D/Scene.h"
-#include "EC3D/Node.h"
-#include "EC3D/Graphics/Camera.h"
-#include "EC3D/Graphics/Drawable.h"
-#include "EC3D/Window/Window.h"
+#include "ec3/SceneRenderer.h"
+#include "ec3/Scene.h"
+#include "ec3/Node.h"
+#include "ec3/Graphics/Camera.h"
+#include "ec3/Graphics/Drawable.h"
+#include "ec3/Window/Window.h"
 
-#include "EC3D/Graphics/Shader/Shader.h"
-#include "EC3D/Graphics/Shader/ShaderManager.h"
+#include "ec3/Graphics/Shader/Shader.h"
+#include "ec3/Graphics/Shader/ShaderManager.h"
 
 namespace ec
 {

@@ -1,5 +1,5 @@
 #include <utility>
-#include "EC3D/Input/SceneController.h"
+#include "ec3/Input/SceneController.h"
 
 namespace ec
 {

@@ -1,4 +1,4 @@
-#include "EC3D/Gui/Backend/OpenGLCursorProvider.h"
+#include "ec3/Gui/Backend/OpenGLCursorProvider.h"
 
 #include <stdio.h>
 

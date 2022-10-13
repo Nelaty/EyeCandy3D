@@ -1,9 +1,9 @@
-#include "EC3D/Gui/Backend/OpenGLInput.h"
+#include "ec3/Gui/Backend/OpenGLInput.h"
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include "EC3D/Input/Mouse.h"
-#include "EC3D/Input/Keyboard.h"
+#include "ec3/Input/Mouse.h"
+#include "ec3/Input/Keyboard.h"
 
 namespace ec
 {

@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Geometry/DynamicGeometry.h"
+#include "ec3/Graphics/Geometry/DynamicGeometry.h"
 
 namespace ec
 {

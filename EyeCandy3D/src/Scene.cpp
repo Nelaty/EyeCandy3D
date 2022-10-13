@@ -1,8 +1,8 @@
 #include <utility>
-#include "EC3D/Scene.h"
-#include "EC3D/Node.h"
-#include "EC3D/SceneSystem.h"
-#include "EC3D/Window/Window.h"
+#include "ec3/Scene.h"
+#include "ec3/Node.h"
+#include "ec3/SceneSystem.h"
+#include "ec3/Window/Window.h"
 
 namespace ec
 {

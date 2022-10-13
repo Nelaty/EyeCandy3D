@@ -1,4 +1,4 @@
-#include "EC3D/Window/Viewport.h"
+#include "ec3/Window/Viewport.h"
 
 #include <cassert>
 

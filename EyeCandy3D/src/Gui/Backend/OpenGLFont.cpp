@@ -1,5 +1,5 @@
-#include "EC3D/Gui/Backend/OpenGLFont.h"
-#include "EC3D/Graphics/Text/FontTextureAtlas.h"
+#include "ec3/Gui/Backend/OpenGLFont.h"
+#include "ec3/Graphics/Text/FontTextureAtlas.h"
 
 
 namespace ec

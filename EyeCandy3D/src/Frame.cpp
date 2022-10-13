@@ -1,5 +1,5 @@
-#include "EC3D/Frame.h"
-#include "EC3D/Graphics/Camera.h"
+#include "ec3/Frame.h"
+#include "ec3/Graphics/Camera.h"
 
 #include <algorithm>
 

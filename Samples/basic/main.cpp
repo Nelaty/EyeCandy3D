@@ -1,5 +1,5 @@
 #include "ExampleWindow.h"
-#include "EC3D/Application.h"
+#include "ec3/Application.h"
 
 #include <iostream>
 

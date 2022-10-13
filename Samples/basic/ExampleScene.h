@@ -1,5 +1,5 @@
 #pragma once
-#include "EC3D/Scene.h"
+#include "ec3/Scene.h"
 
 #include <string>
 #include <glm/glm.hpp>

@@ -1,6 +1,6 @@
-#include "EC3D/Window/WindowCallbacks.h"
-#include "EC3D/Window/Window.h"
-#include "EC3D/Common/Logging.h"
+#include "ec3/Window/WindowCallbacks.h"
+#include "ec3/Window/Window.h"
+#include "ec3/Common/Logging.h"
 
 namespace ec {
     void WindowCallbacks::init(GLFWwindow* glfwWindow, Window* window)

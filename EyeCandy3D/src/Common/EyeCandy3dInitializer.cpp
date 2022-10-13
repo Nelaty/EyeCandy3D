@@ -1,4 +1,4 @@
-#include "EC3D/Common/EyeCandy3dInitializer.h"
+#include "ec3/Common/EyeCandy3dInitializer.h"
 
 
 #include "spdlog/spdlog.h"

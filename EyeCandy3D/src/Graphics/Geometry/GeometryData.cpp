@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Geometry/GeometryData.h"
+#include "ec3/Graphics/Geometry/GeometryData.h"
 
 namespace ec
 {

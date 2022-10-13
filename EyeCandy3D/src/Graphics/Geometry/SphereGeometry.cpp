@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Geometry/SphereGeometry.h"
+#include "ec3/Graphics/Geometry/SphereGeometry.h"
 
 #include <stdio.h>
 

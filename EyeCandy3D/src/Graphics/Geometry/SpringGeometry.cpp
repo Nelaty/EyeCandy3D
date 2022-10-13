@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Geometry/SpringGeometry.h"
+#include "ec3/Graphics/Geometry/SpringGeometry.h"
 
 namespace ec
 {

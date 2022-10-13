@@ -1,6 +1,6 @@
-#include "EC3D/Input/Mouse.h"
-#include "EC3D/Input/InputEvent.h"
-#include "EC3D/Window/Window.h"
+#include "ec3/Input/Mouse.h"
+#include "ec3/Input/InputEvent.h"
+#include "ec3/Window/Window.h"
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>

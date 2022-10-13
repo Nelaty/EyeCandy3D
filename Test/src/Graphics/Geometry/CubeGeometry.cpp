@@ -1,8 +1,8 @@
 #include "catch2/catch.hpp"
 
-#include <EC3D/Application.h>
-#include <EC3D/Window/Window.h>
-#include <EC3D/Graphics/Geometry/CubeGeometry.h>
+#include <ec3/Application.h>
+#include <ec3/Window/Window.h>
+#include <ec3/Graphics/Geometry/CubeGeometry.h>
 
 #include <stdexcept>
 

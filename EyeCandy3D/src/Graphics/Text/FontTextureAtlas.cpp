@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Text/FontTextureAtlas.h"
+#include "ec3/Graphics/Text/FontTextureAtlas.h"
 
 #include <iostream>
 #include <cassert>

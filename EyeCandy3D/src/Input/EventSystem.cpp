@@ -1,4 +1,4 @@
-#include "EC3D/Input/EventSystem.h"
+#include "ec3/Input/EventSystem.h"
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>

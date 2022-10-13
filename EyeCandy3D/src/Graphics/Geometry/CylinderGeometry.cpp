@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Geometry/CylinderGeometry.h"
+#include "ec3/Graphics/Geometry/CylinderGeometry.h"
 
 #include <cmath>
 #include <stdexcept>

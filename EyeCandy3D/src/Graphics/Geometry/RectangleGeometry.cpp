@@ -1,5 +1,5 @@
-#include "EC3D/Graphics/Geometry/RectangleGeometry.h"
-#include "EC3D/Graphics/Shader/Shader.h"
+#include "ec3/Graphics/Geometry/RectangleGeometry.h"
+#include "ec3/Graphics/Shader/Shader.h"
 
 #include <stdexcept>
 

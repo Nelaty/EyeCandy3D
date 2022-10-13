@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Geometry/StaticGeometry.h"
+#include "ec3/Graphics/Geometry/StaticGeometry.h"
 
 namespace ec
 {

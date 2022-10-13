@@ -1,4 +1,4 @@
-#include "EC3D/Common/Config.h"
+#include "ec3/Common/Config.h"
 
 #include "spdlog/spdlog.h"
 #include "SimpleIni.h"

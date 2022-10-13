@@ -1,4 +1,4 @@
-#include "EC3D/Gui/Listener/GenericLabelListener.h"
+#include "ec3/Gui/Listener/GenericLabelListener.h"
 
 namespace ec
 {

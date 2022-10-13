@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Geometry/LineStripGeometry.h"
+#include "ec3/Graphics/Geometry/LineStripGeometry.h"
 
 namespace ec
 {

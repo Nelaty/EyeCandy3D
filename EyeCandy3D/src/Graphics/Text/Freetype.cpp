@@ -1,6 +1,6 @@
-#include "EC3D/Graphics/Text/Freetype.h"
-#include "EC3D/Graphics/Shader/Shader.h"
-#include "EC3D/Graphics/Text/FontTextureAtlas.h"
+#include "ec3/Graphics/Text/Freetype.h"
+#include "ec3/Graphics/Shader/Shader.h"
+#include "ec3/Graphics/Text/FontTextureAtlas.h"
 
 #include <glm/glm.hpp>
 

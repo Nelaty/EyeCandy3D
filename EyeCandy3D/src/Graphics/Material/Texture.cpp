@@ -1,5 +1,5 @@
-#include "EC3D/Graphics/Material/Texture.h"
-#include "EC3D/Common/Logging.h"
+#include "ec3/Graphics/Material/Texture.h"
+#include "ec3/Common/Logging.h"
 
 #define STB_IMAGE_IMPLEMENTATION  
 #include "stb/stb_image.h"

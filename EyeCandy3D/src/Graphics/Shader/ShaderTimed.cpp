@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Shader/ShaderTimed.h"
+#include "ec3/Graphics/Shader/ShaderTimed.h"
 
 namespace ec
 {

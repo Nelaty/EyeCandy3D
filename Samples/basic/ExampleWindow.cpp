@@ -1,17 +1,17 @@
 #include "ExampleWindow.h"
 #include "ExampleScene.h"
 
-#include "EC3D/Scene.h"
-#include "EC3D/Node.h"
-#include "EC3D/Graphics/Drawable.h"
-#include "EC3D/Graphics/Geometry/CubeGeometry.h"
-#include "EC3D/Graphics/Material/Material.h"
-#include "EC3D/Graphics/Camera.h"
-#include "EC3D/Frame.h"
-#include "EC3D/Graphics/Geometry/DynamicLineGeometry.h"
+#include "ec3/Scene.h"
+#include "ec3/Node.h"
+#include "ec3/Graphics/Drawable.h"
+#include "ec3/Graphics/Geometry/CubeGeometry.h"
+#include "ec3/Graphics/Material/Material.h"
+#include "ec3/Graphics/Camera.h"
+#include "ec3/Frame.h"
+#include "ec3/Graphics/Geometry/DynamicLineGeometry.h"
 
-#include "EC3D/SceneRenderer.h"
-#include "EC3D/Graphics/Shader/Shader.h"
+#include "ec3/SceneRenderer.h"
+#include "ec3/Graphics/Shader/Shader.h"
 
 #include <memory>
 

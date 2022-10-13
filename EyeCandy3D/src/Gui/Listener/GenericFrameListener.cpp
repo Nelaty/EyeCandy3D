@@ -1,4 +1,4 @@
-#include "EC3D/Gui/Listener/GenericFrameListener.h"
+#include "ec3/Gui/Listener/GenericFrameListener.h"
 
 namespace ec
 {

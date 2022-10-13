@@ -1,9 +1,9 @@
-#include "EC3D/Graphics/Render/Renderer.h"
-#include "EC3D/Window/Window.h"
-#include "EC3D/Graphics/Shader/ShaderManager.h"
+#include "ec3/Graphics/Render/Renderer.h"
+#include "ec3/Window/Window.h"
+#include "ec3/Graphics/Shader/ShaderManager.h"
 
-#include "EC3D/Frame.h"
-#include "EC3D/Graphics/Camera.h"
+#include "ec3/Frame.h"
+#include "ec3/Graphics/Camera.h"
 
 namespace ec {
 	Renderer::Renderer()

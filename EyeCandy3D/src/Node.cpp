@@ -1,6 +1,6 @@
-#include "EC3D/Node.h"
-#include "EC3D/SceneRenderer.h"
-#include "EC3D/Graphics/Geometry/IGeometryAccess.h"
+#include "ec3/Node.h"
+#include "ec3/SceneRenderer.h"
+#include "ec3/Graphics/Geometry/IGeometryAccess.h"
 
 #include <algorithm>
 

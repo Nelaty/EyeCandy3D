@@ -1,5 +1,5 @@
-#include "EC3D/Input/DeviceRegistry.h"
-#include "EC3D/Window/Window.h"
+#include "ec3/Input/DeviceRegistry.h"
+#include "ec3/Window/Window.h"
 
 namespace ec
 {

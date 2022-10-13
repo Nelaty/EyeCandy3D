@@ -1,5 +1,5 @@
-#include "EC3D/Cursor.h"
-#include "EC3D/Window/Window.h"
+#include "ec3/Cursor.h"
+#include "ec3/Window/Window.h"
 
 namespace ec
 {

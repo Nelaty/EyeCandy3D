@@ -1,5 +1,5 @@
-#include "EC3D/Graphics/Geometry/IGeometryAccess.h"
-#include "EC3D/Graphics/Shader/Shader.h"
+#include "ec3/Graphics/Geometry/IGeometryAccess.h"
+#include "ec3/Graphics/Shader/Shader.h"
 
 namespace ec
 {

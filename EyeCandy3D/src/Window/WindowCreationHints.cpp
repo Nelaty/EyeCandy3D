@@ -1,4 +1,4 @@
-#include "EC3D/Window/WindowCreationHints.h"
+#include "ec3/Window/WindowCreationHints.h"
 
 namespace ec
 {

@@ -1,4 +1,4 @@
-#include "EC3D/Gui/Listener/GenericWidgetListener.h"
+#include "ec3/Gui/Listener/GenericWidgetListener.h"
 
 namespace ec
 {

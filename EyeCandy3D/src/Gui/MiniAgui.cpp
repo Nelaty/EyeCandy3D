@@ -1,12 +1,12 @@
-#include "EC3D/Gui/MiniAgui.h"
+#include "ec3/Gui/MiniAgui.h"
 
 #include <Agui/Image.hpp>
 #include <Agui/Font.hpp>
 #include <Agui/Widget.hpp>
-#include "EC3D/Gui/Backend/OpenGLImageLoader.h"
-#include "EC3D/Gui/Backend/OpenGLFontLoader.h"
-#include "EC3D/Gui/Backend/OpenGLInput.h"
-#include "EC3D/Gui/Backend/OpenGLGraphics.h"
+#include "ec3/Gui/Backend/OpenGLImageLoader.h"
+#include "ec3/Gui/Backend/OpenGLFontLoader.h"
+#include "ec3/Gui/Backend/OpenGLInput.h"
+#include "ec3/Gui/Backend/OpenGLGraphics.h"
 
 namespace ec
 {

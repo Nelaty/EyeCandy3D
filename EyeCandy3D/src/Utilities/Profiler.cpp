@@ -1,4 +1,4 @@
-#include "EC3D/Utilities/Profiler.h"
+#include "ec3/Utilities/Profiler.h"
 
 #include <chrono>
 

@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Geometry/LineGeometry.h"
+#include "ec3/Graphics/Geometry/LineGeometry.h"
 
 #include <stdexcept>
 

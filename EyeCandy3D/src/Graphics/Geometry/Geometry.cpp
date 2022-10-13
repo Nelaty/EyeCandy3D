@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Geometry/Geometry.h"
+#include "ec3/Graphics/Geometry/Geometry.h"
 
 #include <glm/glm.hpp>
 

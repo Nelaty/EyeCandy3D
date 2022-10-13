@@ -1,6 +1,6 @@
-#include "EC3D/Graphics/Lighting/LightSystem.h"
-#include "EC3D/Graphics/Lighting/Light.h"
-#include "EC3D/Graphics/Shader/Shader.h"
+#include "ec3/Graphics/Lighting/LightSystem.h"
+#include "ec3/Graphics/Lighting/Light.h"
+#include "ec3/Graphics/Shader/Shader.h"
 
 #include <algorithm>
 

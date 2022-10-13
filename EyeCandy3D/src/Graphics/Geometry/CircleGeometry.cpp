@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Geometry/CircleGeometry.h"
+#include "ec3/Graphics/Geometry/CircleGeometry.h"
 
 #include <stdexcept>
 

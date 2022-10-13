@@ -12,6 +12,9 @@
 # CMake
 cmake-build-*/
 
+# Visual Studio Code temporary files
+.vscode/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

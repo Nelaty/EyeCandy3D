@@ -1,5 +1,5 @@
-#include "EC3D/Graphics/CameraController.h"
-#include "EC3D/Graphics/Camera.h"
+#include "ec3/Graphics/CameraController.h"
+#include "ec3/Graphics/Camera.h"
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>

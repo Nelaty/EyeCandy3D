@@ -1,19 +1,19 @@
 #include "ExampleScene.h"
 
-#include "EC3D/Window/Window.h"
-#include "EC3D/Scene.h"
-#include "EC3D/Node.h"
-#include "EC3D/Graphics/Drawable.h"
-#include "EC3D/Graphics/Geometry/CubeGeometry.h"
-#include "EC3D/Graphics/Geometry/SphereGeometry.h"
-#include "EC3D/Graphics/Geometry/CylinderGeometry.h"
-#include "EC3D/Graphics/Geometry/RectangleGeometry.h"
+#include "ec3/Window/Window.h"
+#include "ec3/Scene.h"
+#include "ec3/Node.h"
+#include "ec3/Graphics/Drawable.h"
+#include "ec3/Graphics/Geometry/CubeGeometry.h"
+#include "ec3/Graphics/Geometry/SphereGeometry.h"
+#include "ec3/Graphics/Geometry/CylinderGeometry.h"
+#include "ec3/Graphics/Geometry/RectangleGeometry.h"
 
-#include "EC3D/Graphics/Material/Material.h"
-#include "EC3D/Graphics/Shader/Shader.h"
-#include "EC3D/Graphics/Shader/ShaderManager.h"
-#include "EC3D/Utilities/Random.h"
-#include "EC3D/Graphics/Geometry/CircleGeometry.h"
+#include "ec3/Graphics/Material/Material.h"
+#include "ec3/Graphics/Shader/Shader.h"
+#include "ec3/Graphics/Shader/ShaderManager.h"
+#include "ec3/Utilities/Random.h"
+#include "ec3/Graphics/Geometry/CircleGeometry.h"
 
 using namespace ec;
 

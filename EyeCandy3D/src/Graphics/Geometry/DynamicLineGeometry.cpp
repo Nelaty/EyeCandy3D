@@ -1,5 +1,5 @@
-#include "EC3D/Graphics/Geometry/DynamicLineGeometry.h"
-#include "EC3D/Node.h"
+#include "ec3/Graphics/Geometry/DynamicLineGeometry.h"
+#include "ec3/Node.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>

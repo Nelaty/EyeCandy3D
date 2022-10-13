@@ -1,9 +1,9 @@
-#include "EC3D/Application.h"
-#include "EC3D/Window/Window.h"
-#include "EC3D/Utilities/Random.h"
-#include "EC3D/Gui/MiniAgui.h"
+#include "ec3/Application.h"
+#include "ec3/Window/Window.h"
+#include "ec3/Utilities/Random.h"
+#include "ec3/Gui/MiniAgui.h"
 
-#include <EC3D/Common/EyeCandy3dInitializer.h>
+#include <ec3/Common/EyeCandy3dInitializer.h>
 
 #include <glm/glm.hpp>
 

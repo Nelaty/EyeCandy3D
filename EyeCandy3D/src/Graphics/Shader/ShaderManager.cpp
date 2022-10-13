@@ -1,7 +1,7 @@
-#include "EC3D/Graphics/Shader/ShaderManager.h"
-#include "EC3D/Graphics/Shader/Shader.h"
-#include "EC3D/Graphics/Shader/ShaderTimed.h"
-#include "EC3D/Common/Logging.h"
+#include "ec3/Graphics/Shader/ShaderManager.h"
+#include "ec3/Graphics/Shader/Shader.h"
+#include "ec3/Graphics/Shader/ShaderTimed.h"
+#include "ec3/Common/Logging.h"
 
 #include <utility>
 

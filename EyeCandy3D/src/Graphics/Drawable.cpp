@@ -1,9 +1,9 @@
-#include "EC3D/Common/Config.h"
+#include "ec3/Common/Config.h"
 
-#include "EC3D/Graphics/Drawable.h"
-#include "EC3D/Graphics/Shader/Shader.h"
-#include "EC3D/Graphics/Geometry/IGeometryAccess.h"
-#include "EC3D/Graphics/Material/Material.h"
+#include "ec3/Graphics/Drawable.h"
+#include "ec3/Graphics/Shader/Shader.h"
+#include "ec3/Graphics/Geometry/IGeometryAccess.h"
+#include "ec3/Graphics/Material/Material.h"
 
 #include <string>
 #include <sstream>

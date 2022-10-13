@@ -1,14 +1,14 @@
-#include "EC3D/Gui/GuiSystem.h"
-#include "EC3D/Graphics/Camera.h"
-#include "EC3D/Scene.h"
-#include "EC3D/Window/Window.h"
-#include "EC3D/Input/EventSystem.h"
-#include "EC3D/Input/InputObservable.h"
+#include "ec3/Gui/GuiSystem.h"
+#include "ec3/Graphics/Camera.h"
+#include "ec3/Scene.h"
+#include "ec3/Window/Window.h"
+#include "ec3/Input/EventSystem.h"
+#include "ec3/Input/InputObservable.h"
 
-#include "EC3D/Gui/Backend/OpenGLInput.h"
-#include "EC3D/Gui/Backend/OpenGLGraphics.h"
+#include "ec3/Gui/Backend/OpenGLInput.h"
+#include "ec3/Gui/Backend/OpenGLGraphics.h"
 
-#include "EC3D/Gui/GuiRenderContext.h"
+#include "ec3/Gui/GuiRenderContext.h"
 
 #include "Agui/Gui.hpp"
 

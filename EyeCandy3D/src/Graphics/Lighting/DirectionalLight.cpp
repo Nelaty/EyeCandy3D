@@ -1,4 +1,4 @@
-#include "EC3D/Graphics/Lighting/DirectionalLight.h"
+#include "ec3/Graphics/Lighting/DirectionalLight.h"
 
 namespace ec
 {
@@ -8,11 +8,8 @@ namespace ec
 	}
 
 	DirectionalLight::~DirectionalLight()
-	= default;
-
-	const glm::vec3& DirectionalLight::getDirection() const
 	{
-		/// \todo: implement -> get direction from node
-		return {};
-	}
+    }
+
+
 }

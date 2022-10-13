@@ -1,5 +1,5 @@
-#include "EC3D/Input/InputObservable.h"
-#include "EC3D/Input/InputListener.h"
+#include "ec3/Input/InputObservable.h"
+#include "ec3/Input/InputListener.h"
 
 #include <algorithm>
 #include <GLFW/glfw3.h>

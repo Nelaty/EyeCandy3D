@@ -1,4 +1,4 @@
-#include "EC3D/Gui/Listener/GenericTabbedPaneListener.h"
+#include "ec3/Gui/Listener/GenericTabbedPaneListener.h"
 
 namespace ec
 {

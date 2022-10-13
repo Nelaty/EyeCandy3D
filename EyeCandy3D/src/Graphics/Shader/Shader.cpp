@@ -1,5 +1,5 @@
-#include "EC3D/Graphics/Shader/Shader.h"
-#include "EC3D/Common/Logging.h"
+#include "ec3/Graphics/Shader/Shader.h"
+#include "ec3/Common/Logging.h"
 
 #include <glm/gtc/type_ptr.hpp>
 

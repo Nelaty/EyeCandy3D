@@ -1,4 +1,4 @@
-#include "EC3D/Gui/Listener/GenericSliderListener.h"
+#include "ec3/Gui/Listener/GenericSliderListener.h"
 
 namespace ec
 {

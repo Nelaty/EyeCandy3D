@@ -1,4 +1,4 @@
-#include "EC3D/Utilities/Random.h"
+#include "ec3/Utilities/Random.h"
 
 #include <cassert>
 #include <utility>

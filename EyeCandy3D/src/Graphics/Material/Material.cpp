@@ -1,7 +1,7 @@
-#include "EC3D/Graphics/Material/Material.h"
-#include "EC3D/Graphics/Shader/Shader.h"
+#include "ec3/Graphics/Material/Material.h"
+#include "ec3/Graphics/Shader/Shader.h"
 
-#include "EC3D/Common/Config.h"
+#include "ec3/Common/Config.h"
 
 #include <algorithm>
 

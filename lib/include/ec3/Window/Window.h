@@ -99,17 +99,15 @@ namespace ec
 		/// Get the dimensions of the window (decorations included).
 		/// \return Frame dimensions: (x, y, z, w) = (left, top, right, bottom)
 		glm::ivec4 getFrameSize() const;
-		/** Get the current size of this window's frame buffer. */
+		/// Get the current size of this window's frame buffer.
 		glm::ivec2 getFrameBufferSize() const;
 
-		/**
-		 * \brief Set the icon for this window. 
-		 * The resolution of the icons should preferably be one of 16x16, 32x32,
-		 * 48x48, but can be any other. If no path is being provided, a default
-		 * window icon will be loaded.
-		 * \param iconPath File path to the icon image
-		 * \param iconPathSmall File path to a small version of the icon image
-		 */
+		/// Set the icon for this window. 
+		/// The resolution of the icons should preferably be one of 16x16, 32x32,
+		/// 48x48, but can be any other. If no path is being provided, a default
+		/// window icon will be loaded.
+		/// \param iconPath File path to the icon image
+		/// \param iconPathSmall File path to a small version of the icon image
 		void setIcon(const char* iconPath = "", const char* iconPathSmall = "") const;
 		/** Set the current title of this window. */
 		void setTitle(const char* title) const;

@@ -325,7 +325,7 @@ namespace ec
 		glGetProgramiv(m_program, GL_INFO_LOG_LENGTH, &logLength);
 		std::vector<GLchar> programError((logLength > 1) ? logLength : 1);
 		glGetProgramInfoLog(m_program, logLength, nullptr, &programError[0]);
-		if(logLength > 1) Logger::error(&programError[0]);
+		if(logLength > 1) Logger::error(std::string(programError.data()));
 
 		glDeleteShader(vertShader);
 		glDeleteShader(fragShader);

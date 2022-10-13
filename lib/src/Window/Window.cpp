@@ -10,6 +10,7 @@
 
 #include <utility>
 #include <stdexcept>
+#include <cstring>
 
 using namespace std::string_literals;
 
@@ -52,7 +53,7 @@ namespace ec {
 
 		if(!m_initSuccessful)
 		{
-			throw std::runtime_error("Error: Couldn't initialize window!\n");
+			throw std::runtime_error("Error: Couldn't initialize window!");
 		}
 	}
 
@@ -105,7 +106,7 @@ namespace ec {
 
 	void Window::errorCallback(const int error, const char* description)
 	{
-		Logger::error("Window callback: "s + std::to_string(error) + " " + description + "\n");
+		Logger::error("Window callback: "s + std::to_string(error) + " " + description);
 	}
 
 	void Window::resizeWindow(GLFWwindow* window, const int width, const int height)

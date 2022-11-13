@@ -1,4 +1,4 @@
-#include "TestConfig.h"
+#include "test-config.h"
 
 const std::string TestConfig::s_resourceDir =
     "./TestResources/";

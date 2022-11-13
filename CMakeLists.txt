@@ -61,7 +61,7 @@ endif()
 # Test
 if(EYECANDY3D_BUILD_TESTS)
 	enable_testing()
-    add_subdirectory(test)
-	add_custom_target(CTest ${PROJECT_NAME}_unittests "-v")
+	add_custom_target(CTest "-v")
+	add_subdirectory(tests)
 endif()
 

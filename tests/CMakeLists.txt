@@ -13,11 +13,19 @@ add_executable(${PROJECT_NAME}_unittests
     src/main.cpp
 )
 
-target_include_directories(${PROJECT_NAME}_unittests include)
+target_include_directories(${PROJECT_NAME}_unittests 
+    PUBLIC
+        include
+)
 target_link_libraries(${PROJECT_NAME}_unittests
         ${PROJECT_NAME}
         ${EYECANDY3D_ALL_DEPENDENCIES})
 
+# Add tests to CTest
+add_test(${PROJECT_NAME}_unittests COMMAND 
+    ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_unittests
+)
+add_dependencies(CTest ${PROJECT_NAME}_unittests)
 
 # Install resource files
 ec3_install_dir(${PROJECT_NAME}_unittests

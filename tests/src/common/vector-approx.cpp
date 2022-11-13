@@ -1,4 +1,5 @@
-#include <VectorApprox.h>
+#include "vector-approx.h"
+
 #include <catch2/catch.hpp>
 
 namespace test

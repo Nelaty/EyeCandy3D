@@ -16,7 +16,7 @@
       "installDir": "${sourceDir}/out/install/RelWithDebInfo",
       "cacheVariables": {
         "EYECANDY3D_BUILD_SAMPLES": "ON",
-        "EYECANDY3D_BUILD_TESTS": "OFF"
+        "EYECANDY3D_BUILD_TESTS": "ON"
       },
       "environment": {
         "CMAKE_BUILD_TYPE": "RelWithDebInfo"

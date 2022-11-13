@@ -1,8 +1,8 @@
 #include "catch2/catch.hpp"
 
-#include "ec3/application.h>
-#include "ec3/graphics/geometry/cylinder-geometry.h>
-#include "ec3/window/window.h>
+#include "ec3/application.h"
+#include "ec3/graphics/geometry/cylinder-geometry.h"
+#include "ec3/window/window.h"
 
 #include <stdexcept>
 

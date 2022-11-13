@@ -1,9 +1,9 @@
 #include "catch2/catch.hpp"
-#include "VectorApprox.h"
+#include "vector-approx.h"
 
-#include <ec3/application.h>
-#include <ec3/graphics/geometry/line-geometry.h>
-#include <ec3/window/window.h>
+#include "ec3/application.h"
+#include "ec3/graphics/geometry/line-geometry.h"
+#include "ec3/window/window.h"
 
 #include <glm/glm.hpp>
 

@@ -105,14 +105,6 @@ target_link_libraries(${PROJECT_NAME}
         ${OPENGL_LIBRARIES}
         #agui
         glfw
-        #X11
-        #Xrandr
-        #Xinerama
-        #Xi
-        #Xxf86vm
-        #Xcursor
-        #pthread
-        #dl
         freetype
 
         glm
@@ -127,4 +119,6 @@ target_include_directories(${PROJECT_NAME}
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-ec3_install_resources(${PROJECT_NAME} ${CMAKE_CURRENT_BINARY_DIR}/bin/Resources/)
+ec3_install_resources(${PROJECT_NAME} 
+    ${CMAKE_CURRENT_BINARY_DIR}/bin/Resources/
+)

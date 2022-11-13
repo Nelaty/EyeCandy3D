@@ -13,6 +13,6 @@ int main(int argc, char** argv)
 
 	ec::Application app;
 	app.createWindow<ExampleWindow>(width, height, "Samples Window", "example");
-	//app.createWindow<ExampleWindow>(width, height, "Samples Window 2", "example2");
+	app.createWindow<ExampleWindow>(width, height, "Samples Window 2", "example2");
 	app.startMainLoop();
 }

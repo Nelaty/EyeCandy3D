@@ -1,11 +1,12 @@
 #include "catch2/catch.hpp"
-#include <ec3/Application.h>
-#include "ec3/window/window.h"
 
+#include "ec3/application.h"
+#include "ec3/common/config.h"
 #include "ec3/graphics/material/material.h"
 #include "ec3/graphics/material/texture.h"
-#include "ec3/common/config.h"
-#include "TestConfig.h"
+#include "ec3/window/window.h"
+
+#include "test-config.h"
 
 #include <string>
 #include <filesystem>

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(EyeCandy3D)
+project(EyeCandy3d)
 
 # Project options
 option(EYECANDY3D_BUILD_SAMPLES "Build all sample projects?" ON)
@@ -13,7 +13,11 @@ message("Extra warnings: ${EYECANDY3D_ALL_WARNINGS}")
 message("-------------------------------------------------")
 
 # Setup cmake
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+include(ec3_utils)
+
+# Setup paths
+set(EYECANDY3D_DEFAULT_RESOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Resources)
 
 # Setup compiler options
 set(CMAKE_LEGACY_CYGWIN_WIN32 0)
@@ -51,7 +55,7 @@ add_subdirectory(lib)
 # Build samples
 if(EYECANDY3D_BUILD_SAMPLES)
 	set(EYECANDY3D_SAMPLE_PREFIX "ec_sample_")
-	add_subdirectory(Samples)
+	add_subdirectory(samples)
 endif()
 
 # Test

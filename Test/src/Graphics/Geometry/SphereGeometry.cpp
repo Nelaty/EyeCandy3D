@@ -1,8 +1,8 @@
 #include "catch2/catch.hpp"
 
-#include <ec3/Application.h>
-#include <ec3/Window/Window.h>
-#include <ec3/Graphics/Geometry/SphereGeometry.h>
+#include "ec3/application.h"
+#include "ec3/graphics/geometry/sphere-geometry.h"
+#include "ec3/window/window.h"
 
 #include <stdexcept>
 

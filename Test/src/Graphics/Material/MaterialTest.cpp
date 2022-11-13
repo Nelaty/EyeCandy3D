@@ -1,10 +1,10 @@
 #include "catch2/catch.hpp"
 #include <ec3/Application.h>
-#include "ec3/Window/Window.h"
+#include "ec3/window/window.h"
 
-#include "ec3/Graphics/Material/Material.h"
-#include "ec3/Graphics/Material/Texture.h"
-#include "ec3/Common/Config.h"
+#include "ec3/graphics/material/material.h"
+#include "ec3/graphics/material/texture.h"
+#include "ec3/common/config.h"
 #include "TestConfig.h"
 
 #include <string>

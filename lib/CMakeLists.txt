@@ -1,49 +1,49 @@
 add_library(${PROJECT_NAME} STATIC 
-    src/Application.cpp
-    src/Cursor.cpp
-    src/Frame.cpp
-    src/Node.cpp
-    src/Scene.cpp
-    src/SceneRenderer.cpp
-    src/SceneSystem.cpp
-    src/Transform3D.cpp
+    src/application.cpp
+    src/cursor.cpp
+    src/frame.cpp
+    src/node.cpp
+    src/scene.cpp
+    src/scene-renderer.cpp
+    src/scene-system.cpp
+    src/transform-3d.cpp
 
-    src/Common/Config.cpp
-    src/Common/EyeCandy3dInitializer.cpp
-    src/Common/Logging.cpp
+    src/common/config.cpp
+    src/common/initializer.cpp
+    src/common/logging.cpp
 
-    src/Graphics/Camera.cpp
-    src/Graphics/CameraController.cpp
-    src/Graphics/Drawable.cpp
-    src/Graphics/Geometry/CircleGeometry.cpp
-    src/Graphics/Geometry/CubeGeometry.cpp
-    src/Graphics/Geometry/CylinderGeometry.cpp
-    src/Graphics/Geometry/DynamicGeometry.cpp
-    src/Graphics/Geometry/DynamicLineGeometry.cpp
-    src/Graphics/Geometry/Geometry.cpp
-    src/Graphics/Geometry/GeometryData.cpp
-    src/Graphics/Geometry/IGeometryAccess.cpp
-    src/Graphics/Geometry/LineGeometry.cpp
-    src/Graphics/Geometry/LineGeometryFactory.cpp
-    src/Graphics/Geometry/LineStripGeometry.cpp
-    src/Graphics/Geometry/RectangleGeometry.cpp
-    src/Graphics/Geometry/SphereGeometry.cpp
-    src/Graphics/Geometry/SpringGeometry.cpp
-    src/Graphics/Geometry/StaticGeometry.cpp
-    src/Graphics/Lighting/DirectionalLight.cpp
-    src/Graphics/Lighting/Light.cpp
-    src/Graphics/Lighting/LightSystem.cpp
-    src/Graphics/Lighting/OmniLight.cpp
-    src/Graphics/Lighting/PointLight.cpp
-    src/Graphics/Lighting/SpotLight.cpp
-    src/Graphics/Material/Material.cpp
-    src/Graphics/Material/Texture.cpp
-    src/Graphics/Render/Renderer.cpp
-    src/Graphics/Shader/Shader.cpp
-    src/Graphics/Shader/ShaderManager.cpp
-    src/Graphics/Shader/ShaderTimed.cpp
-    src/Graphics/Text/FontTextureAtlas.cpp
-    src/Graphics/Text/Freetype.cpp
+    src/graphics/camera.cpp
+    src/graphics/camera-controller.cpp
+    src/graphics/drawable.cpp
+    src/graphics/geometry/circle-geometry.cpp
+    src/graphics/geometry/cube-geometry.cpp
+    src/graphics/geometry/cylinder-geometry.cpp
+    src/graphics/geometry/dynamic-geometry.cpp
+    src/graphics/geometry/dynamic-line-geometry.cpp
+    src/graphics/geometry/geometry.cpp
+    src/graphics/geometry/geometry-data.cpp
+    src/graphics/geometry/geometry-access.cpp
+    src/graphics/geometry/line-geometry.cpp
+    src/graphics/geometry/line-geometry-factory.cpp
+    src/graphics/geometry/linestrip-geometry.cpp
+    src/graphics/geometry/rectangle-geometry.cpp
+    src/graphics/geometry/sphere-geometry.cpp
+    src/graphics/geometry/spring-geometry.cpp
+    src/graphics/geometry/static-geometry.cpp
+    src/graphics/lighting/directional-light.cpp
+    src/graphics/lighting/light.cpp
+    src/graphics/lighting/light-system.cpp
+    src/graphics/lighting/omni-light.cpp
+    src/graphics/lighting/point-light.cpp
+    src/graphics/lighting/spot-light.cpp
+    src/graphics/material/material.cpp
+    src/graphics/material/texture.cpp
+    src/graphics/render/renderer.cpp
+    src/graphics/shader/shader.cpp
+    src/graphics/shader/shader-manager.cpp
+    src/graphics/shader/shader-timed.cpp
+    src/graphics/text/font-texture-atlas.cpp
+    src/graphics/text/freetype.cpp
 
     #src/Gui/GuiPrimitiveRenderer.cpp
     #src/Gui/GuiRenderer.cpp
@@ -72,32 +72,39 @@ add_library(${PROJECT_NAME} STATIC
     #src/Gui/Listener/GenericVScrollBarListener.cpp
     #src/Gui/Listener/GenericWidgetListener.cpp
 
-    src/Input/DeviceRegistry.cpp
-    src/Input/EventSystem.cpp
-    src/Input/InputEvent.cpp
-    src/Input/InputListener.cpp
-    src/Input/InputObservable.cpp
-    src/Input/Keyboard.cpp
-    src/Input/Mouse.cpp
-    src/Input/SceneController.cpp
+    src/input/device-registry.cpp
+    src/input/event-system.cpp
+    src/input/input-event.cpp
+    src/input/input-listener.cpp
+    src/input/input-observable.cpp
+    src/input/keyboard.cpp
+    src/input/mouse.cpp
+    src/input/scene-controller.cpp
 
-    src/Utilities/Profiler.cpp
-    src/Utilities/Random.cpp
-    src/Utilities/Timer.cpp
+    src/utilities/profiler.cpp
+    src/utilities/random.cpp
+    src/utilities/timer.cpp
 
-    src/Window/Viewport.cpp
-    src/Window/Window.cpp
-    src/Window/WindowCallbacks.cpp
-    src/Window/WindowCreationHints.cpp
+    src/window/viewport.cpp
+    src/window/window.cpp
+    src/window/window-callbacks.cpp
+    src/window/window-creation-hints.cpp
 )
+
+find_package(OpenGL REQUIRED)
+message("------------ OpenGL libraries ------------")
+message("GL found: ${OPENGL_FOUND}")
+message("GLU found: ${OPENGL_GLU_FOUND}")
+message("GLX found: ${OPENGL_GLX_FOUND}")
+message("Libraries: ${OPENGL_LIBRARIES}")
+message("------------------------------------------")
+
 
 target_link_libraries(${PROJECT_NAME} 
     PUBLIC
-        opengl32
+        ${OPENGL_LIBRARIES}
         #agui
         glfw
-        #GLU
-        #GL
         #X11
         #Xrandr
         #Xinerama
@@ -120,9 +127,4 @@ target_include_directories(${PROJECT_NAME}
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-# Install resources
-add_custom_command(
-        TARGET ${PROJECT_NAME} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${CMAKE_SOURCE_DIR}/Resources/
-        ${CMAKE_BINARY_DIR}/bin/Resources/)
+ec3_install_resources(${PROJECT_NAME} ${CMAKE_CURRENT_BINARY_DIR}/bin/Resources/)
